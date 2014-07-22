@@ -11,7 +11,11 @@
 #include "broadcast_dmb_drv_ifdef.h"
 
 #define BROADCAST_DMB_NUM_DEVS 	1 /**< support this many devices */
+<<<<<<< HEAD
 #define DEVICE_NAME "broadcast1"
+=======
+#define DEVICE_NAME "broadcast_isdbt"
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 static struct class *broadcast_dmb_class;
 static dev_t broadcast_dmb_dev;
@@ -165,14 +169,22 @@ static int broadcast_dmb_detect_sync(void __user *arg)
 static int broadcast_dmb_get_sig_info(void __user *arg)
 {
 	int rc = ERROR;
+<<<<<<< HEAD
 	struct broadcast_dmb_sig_info udata;
+=======
+	struct broadcast_dmb_control_info udata;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 	if(arg==NULL) {
 		printk(KERN_ERR"broadcast_dmb_get_sig_info arg is Null\n");
 		return ERROR;
 	}
 	
+<<<<<<< HEAD
 	if(copy_from_user(&udata, arg, sizeof(struct broadcast_dmb_sig_info)))
+=======
+	if(copy_from_user(&udata, arg, sizeof(struct broadcast_dmb_control_info)))
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	{
 		printk(KERN_ERR"[1seg]broadcast_dmb_get_sig_info copy_from_user fail!!! \n");
 		rc = ERROR;
@@ -187,7 +199,11 @@ static int broadcast_dmb_get_sig_info(void __user *arg)
 		return ERROR;
 	}
 
+<<<<<<< HEAD
 	if(copy_to_user((void *)arg, &udata, sizeof(struct broadcast_dmb_sig_info)))
+=======
+	if(copy_to_user((void *)arg, &udata, sizeof(struct broadcast_dmb_control_info)))
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	{
 		printk(KERN_ERR"[1seg]broadcast_dmb_get_sig_info copy_to_user error!!! \n");
 		rc = ERROR;

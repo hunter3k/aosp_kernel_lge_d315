@@ -1,10 +1,19 @@
 
+<<<<<<< HEAD
 /* LGE_CHANGE_S
  *
  * do read/mmap profiling during booting
  * in order to use the data as readahead args
  *
  * matia.kim@lge.com 20130403
+=======
+/*             
+  
+                                        
+                                             
+  
+                             
+>>>>>>> 0093d79... Overlay of LG soruce drop
  */
 #include <linux/semaphore.h>
 #include <linux/pagemap.h>
@@ -59,4 +68,8 @@ struct sreadahead_prof {
 };
 
 int sreadahead_prof(struct file *filp, size_t len, loff_t pos);
+<<<<<<< HEAD
 /* LGE_CHANGE_E */
+=======
+/*              */
+>>>>>>> 0093d79... Overlay of LG soruce drop

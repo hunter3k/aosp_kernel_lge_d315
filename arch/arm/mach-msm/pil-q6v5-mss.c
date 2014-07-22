@@ -44,11 +44,14 @@
 #define MAX_SSR_REASON_LEN	81U
 #define STOP_ACK_TIMEOUT_MS	1000
 
+<<<<<<< HEAD
 #ifdef CONFIG_WCNSS_REGISTER_DUMP_ON_BITE
 extern void wcnss_log_debug_regs_on_bite(void);
 extern void wcnss_reset_intr(void);
 #endif
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /* START : subsys_modem_restart : testmode */
 bool ignore_errors_by_subsys_modem_restart = false;
 /* END : subsys_modem_restart : testmode */
@@ -67,9 +70,15 @@ struct modem_data {
 
 #define subsys_to_drv(d) container_of(d, struct modem_data, subsys_desc)
 
+<<<<<<< HEAD
 // [START] jin.park@lge.com, SSR FEATURE
 char ssr_noti[MAX_SSR_REASON_LEN];
 // [END] jin.park@lge.com, SSR FEATURE
+=======
+//                                      
+char ssr_noti[MAX_SSR_REASON_LEN];
+//                                    
+>>>>>>> 0093d79... Overlay of LG soruce drop
 static void log_modem_sfr(void)
 {
 	u32 size;
@@ -88,6 +97,7 @@ static void log_modem_sfr(void)
 	strlcpy(reason, smem_reason, min(size, sizeof(reason)));
 	pr_err("modem subsystem failure reason: %s.\n", reason);
 
+<<<<<<< HEAD
 #ifdef CONFIG_WCNSS_REGISTER_DUMP_ON_BITE
 	if (strstr(reason, "Coex assertion QMI_CSI_NO_ERR")) {
 		pr_err("causing wcnss crash\n");
@@ -99,6 +109,11 @@ static void log_modem_sfr(void)
 // [START] jin.park@lge.com, SSR FEATURE
 	strlcpy(ssr_noti, smem_reason, min(size, sizeof(ssr_noti)));
 // [END] jin.park@lge.com, SSR FEATURE
+=======
+//                                      
+	strlcpy(ssr_noti, smem_reason, min(size, sizeof(ssr_noti)));
+//                                    
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	smem_reason[0] = '\0';
 	wmb();
 }
@@ -274,11 +289,14 @@ static irqreturn_t modem_wdog_bite_intr_handler(int irq, void *dev_id)
 	}
 	/* END : subsys_modem_restart : testmode */
 
+<<<<<<< HEAD
 	if (check_modem_reset(drv) == 0) {
 		pr_err("IGNORE watchdog bite received from modem software during check_modem_reset!\n");		
 		return IRQ_HANDLED;
 	}
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	pr_err("Watchdog bite received from modem software!\n");
 	subsys_set_crash_status(drv->subsys, true);
 	restart_modem(drv);

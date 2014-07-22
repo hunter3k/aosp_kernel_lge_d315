@@ -288,6 +288,7 @@ config SND_LGE_MABL
     default y
     help
      To support LGE DSP MABL
+<<<<<<< HEAD
 
 config LGE_STEREO_SPEAKER
 	bool "LGE STEREO SPEAKER"
@@ -300,4 +301,6 @@ config LGE_SW_IRRC_MUTE_SPEAKER
 	depends on (MACH_MSM8226_E9WIFI_OPEN_KR && LGE_STEREO_SPEAKER)
 	help
 	 To support mute stereo speaker for msm8x26
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 endmenu

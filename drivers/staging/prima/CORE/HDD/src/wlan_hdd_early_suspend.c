@@ -479,7 +479,11 @@ void hdd_conf_hostoffload(hdd_adapter_t *pAdapter, v_BOOL_t fenable)
         return;
     }
 
+<<<<<<< HEAD
 /* LGE_UPDATE, 20131031, real-wifi@lge.com by beaver, restore the configuredMcastBcastFilter value */
+=======
+/*                                                                                                 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #if 1
         hddLog (VOS_TRACE_LEVEL_INFO,
         "%s: with configuredMcastBcastFilter %d", __func__, pHddCtx->configuredMcastBcastFilter);
@@ -970,7 +974,11 @@ static void hdd_conf_resume_ind(hdd_adapter_t *pAdapter)
                   pHddCtx->configuredMcastBcastFilter);
 
 
+<<<<<<< HEAD
 /* LGE_UPDATE, 20131031, real-wifi@lge.com by beaver, restore the configuredMcastBcastFilter value */
+=======
+/*                                                                                                 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #if 1
     if (pHddCtx->configuredMcastBcastFilter != pHddCtx->cfg_ini->mcastBcastFilterSetting)
     {

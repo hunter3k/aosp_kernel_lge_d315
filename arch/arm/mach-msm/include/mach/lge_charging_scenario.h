@@ -25,7 +25,11 @@
 #endif
 
 #define DC_IUSB_VOLTUV   4000000
+<<<<<<< HEAD
 #ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
+=======
+#ifdef CONFIG_MACH_MSM8926_X5_VZW
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #define DC_IUSB_CURRENT  400
 #else
 #define DC_IUSB_CURRENT  450
@@ -38,17 +42,25 @@ enum lge_battemp_states {
 	CHG_BATTEMP_M10_M5,
 	CHG_BATTEMP_M4_41,
 	CHG_BATTEMP_42_45,
+<<<<<<< HEAD
 #ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
 	CHG_BATTEMP_46_52,
 	CHG_BATTEMP_53_OT,
 #else
 	CHG_BATTEMP_46_OT,
 #endif
+=======
+	CHG_BATTEMP_46_OT,
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	CHG_BATTEMP_AB_OT,
 
 };
 
+<<<<<<< HEAD
 /* LGE charging states */
+=======
+/*                     */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 enum lge_charging_states {
 	CHG_BATT_NORMAL_STATE,
 	CHG_BATT_DECCUR_STATE,
@@ -56,7 +68,11 @@ enum lge_charging_states {
 	CHG_BATT_STPCHG_STATE,
 };
 
+<<<<<<< HEAD
 /* LGE charging states change */
+=======
+/*                            */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 enum lge_states_changes {
 	STS_CHE_NONE,
 	STS_CHE_NORMAL_TO_DECCUR,
@@ -64,9 +80,12 @@ enum lge_states_changes {
 	STS_CHE_DECCUR_TO_NORAML,
 	STS_CHE_DECCUR_TO_STPCHG,
 	STS_CHE_STPCHG_TO_NORMAL,
+<<<<<<< HEAD
 #ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
 	STS_CHE_STPCHG_TO_DECCUR
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 };
 
 /* BTM status */
@@ -106,5 +125,9 @@ struct batt_temp_table {
 extern void
 lge_monitor_batt_temp(struct charging_info req, struct charging_rsp *res);
 #endif
+<<<<<<< HEAD
 /* __LGE_CHARGING_SCENARIO_H_ */
+=======
+/*                            */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 

@@ -173,7 +173,11 @@ static CountryInfoTable_t countryInfoTable =
       {REGDOMAIN_ETSI, {'D', 'E'}}, //GERMANY
       {REGDOMAIN_ETSI, {'D', 'K'}}, //DENMARK
       {REGDOMAIN_FCC, {'D', 'O'}}, //DOMINICAN REPUBLIC
+<<<<<<< HEAD
       {REGDOMAIN_ETSI, {'D', 'Z'}}, //ALGERIA
+=======
+      {REGDOMAIN_ETSI, {'D', 'Z'}}, //       
+>>>>>>> 0093d79... Overlay of LG soruce drop
       {REGDOMAIN_ETSI, {'E', 'C'}}, //ECUADOR
       {REGDOMAIN_ETSI, {'E', 'E'}}, //ESTONIA
       {REGDOMAIN_ETSI, {'E', 'G'}}, //EGYPT
@@ -345,7 +349,11 @@ static CountryInfoTable_t countryInfoTable =
         { REGDOMAIN_ETSI,    {'D', 'K'}},  //DENMARK
         { REGDOMAIN_WORLD,   {'D', 'M'}},  //DOMINICA
         { REGDOMAIN_WORLD,    {'D', 'O'}},  //DOMINICAN REPUBLIC
+<<<<<<< HEAD
         { REGDOMAIN_ETSI, {'D', 'Z'}},  //ALGERIA
+=======
+        { REGDOMAIN_ETSI, {'D', 'Z'}},  //       
+>>>>>>> 0093d79... Overlay of LG soruce drop
         { REGDOMAIN_WORLD,    {'E', 'C'}},  //ECUADOR
         { REGDOMAIN_ETSI,    {'E', 'E'}},  //ESTONIA
         { REGDOMAIN_N_AMER_EXC_FCC, {'E', 'G'}},  //EGYPT
@@ -737,11 +745,19 @@ VOS_STATUS vos_nv_open(void)
     v_SIZE_t bufSize;
     v_SIZE_t nvReadBufSize;
     v_BOOL_t itemIsValid = VOS_FALSE;
+<<<<<<< HEAD
 /* 2013.07.11 moon-wifi@lge.com[formmh.kim] Add CountryCode [START] */
 #ifdef CUSTOMER_LGE
     hdd_context_t *pHddCtx = NULL;
 #endif
 /* 2013.07.11 moon-wifi@lge.com[formmh.kim] Add CountryCode [END] */
+=======
+/*                                                                  */
+#ifdef CUSTOMER_LGE
+    hdd_context_t *pHddCtx = NULL;
+#endif
+/*                                                                */
+>>>>>>> 0093d79... Overlay of LG soruce drop
     v_U32_t dataOffset;
     sHalNv *pnvData = NULL;
 
@@ -939,7 +955,11 @@ VOS_STATUS vos_nv_open(void)
                 NULL, sizeof(sDefaultCountry) ) !=  VOS_STATUS_SUCCESS)
                     goto error;
             }
+<<<<<<< HEAD
 /* 2013.07.16 moon-wifi@lge.com[formmh.kim] Add CountryCode [START] */
+=======
+/*                                                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #ifdef CUSTOMER_LGE
             pHddCtx = vos_get_context(VOS_MODULE_ID_HDD, pVosContext);
             if (NULL != pHddCtx) {
@@ -951,7 +971,11 @@ VOS_STATUS vos_nv_open(void)
                 VOS_TRACE( VOS_MODULE_ID_VOSS, VOS_TRACE_LEVEL_ERROR, ("Invalid pHddCtx pointer"));
             }
 #endif
+<<<<<<< HEAD
 /* 2013.07.16 moon-wifi@lge.com[formmh.kim] Add CountryCode [END] */
+=======
+/*                                                                */
+>>>>>>> 0093d79... Overlay of LG soruce drop
         }
 
 

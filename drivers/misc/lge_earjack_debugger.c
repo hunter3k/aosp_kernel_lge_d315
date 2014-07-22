@@ -58,12 +58,21 @@ static irqreturn_t earjack_debugger_irq_handler(int irq, void *_dev)
 	unsigned int um = lge_get_uart_mode();
 	int detect;
 
+<<<<<<< HEAD
 	/* LGE_CHANGE_S
 	 * add debounce time because accure earjack popup noise
 	 * sangwoo2.park@lge.com 2012/12/20
 	 */
 	msleep(400);
 	/* LGE_CHANGE_E */
+=======
+	/*             
+                                                        
+                                    
+  */
+	msleep(400);
+	/*              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 	detect = earjack_debugger_detected(adev);
 

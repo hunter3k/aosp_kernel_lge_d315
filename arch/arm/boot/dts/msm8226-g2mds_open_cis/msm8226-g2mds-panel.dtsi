@@ -14,6 +14,7 @@
 	qcom,dsi-pref-prim-pan = <&dsi_tianma_vid_dsv>;
 };
 
+<<<<<<< HEAD
 &dsi_tovis_vid_dsv {
 	qcom,cont-splash-enabled;
 	qcom,enable-gpio = <&msmgpio 111 0>;
@@ -63,6 +64,8 @@
 
 };
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 &dsi_tianma_vid_dsv {
 	qcom,cont-splash-enabled;
 	qcom,enable-gpio = <&msmgpio 111 0>;

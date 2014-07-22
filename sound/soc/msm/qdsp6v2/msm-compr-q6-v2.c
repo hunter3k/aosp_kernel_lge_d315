@@ -709,7 +709,11 @@ static int compressed_set_volume(struct msm_audio *prtd, uint32_t volume)
 	return rc;
 }
 
+<<<<<<< HEAD
 #if 0//def CONFIG_SND_LGE_EFFECT
+=======
+#if 0//                         
+>>>>>>> 0093d79... Overlay of LG soruce drop
 int lgesoundeffect_set_enable(int enable)
 {
 	int rc = 0;

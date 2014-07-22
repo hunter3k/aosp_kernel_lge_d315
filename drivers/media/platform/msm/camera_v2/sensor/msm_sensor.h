@@ -73,7 +73,11 @@ struct msm_sensor_ctrl_t {
 	uint16_t clk_info_size;
 	void *misc_regulator;
 	enum msm_sensor_state_t sensor_state;
+<<<<<<< HEAD
 	uint16_t isFirstStream;	//LGE_CHANGE, mipi end packet issue, 2013-10-15, kwangsik83.kim@lge.com
+=======
+	uint16_t isFirstStream;	//                                                                     
+>>>>>>> 0093d79... Overlay of LG soruce drop
 };
 
 int32_t msm_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,

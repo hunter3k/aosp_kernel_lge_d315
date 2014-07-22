@@ -20,7 +20,11 @@
 			status = "ok";
 		};
 		lp5521@32{
+<<<<<<< HEAD
 			status = "ok";
+=======
+			status = "disable";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			ti,led_en = <&msmgpio 6 0x0>;
 		};
 	};

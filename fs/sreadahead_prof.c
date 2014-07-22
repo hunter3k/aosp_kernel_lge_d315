@@ -1,10 +1,19 @@
 
+<<<<<<< HEAD
 /* LGE_CHANGE_S
  *
  * do read/mmap profiling during booting
  * in order to use the data as readahead args
  *
  * matia.kim@lge.com 20130403
+=======
+/*             
+  
+                                        
+                                             
+  
+                             
+>>>>>>> 0093d79... Overlay of LG soruce drop
  */
 #include "mount.h"
 #include "ext4/ext4.h"
@@ -185,7 +194,11 @@ static int get_absolute_path(unsigned char* buf, int buflen, struct file *filp)
 		tmpoldmnt = tmpmnt;
 		while (!IS_ROOT(tmpdentry)) {
 			strcpy(tmpstr, buf);
+<<<<<<< HEAD
 			// byungchul.park@lge.com
+=======
+			//                       
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			// make codes robust
 			strncpy(buf, tmpdentry->d_name.name, buflen - 1);
 			buf[buflen - 1] = '\0';
@@ -206,7 +219,11 @@ static int get_absolute_path(unsigned char* buf, int buflen, struct file *filp)
 	} while (tmpmnt != tmpoldmnt);
 	strcpy(tmpstr, buf);
 	strcpy(buf, "/");
+<<<<<<< HEAD
 	// byungchul.park@lge.com
+=======
+	//                       
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	// make codes robust
 	if (strlen(buf) + strlen(tmpstr) > buflen -1)
 		return -1;
@@ -304,4 +321,8 @@ int sreadahead_prof(struct file *filp, size_t len, loff_t pos)
 	}
 	return 0;
 }
+<<<<<<< HEAD
 /* LGE_CHANGE_E */
+=======
+/*              */
+>>>>>>> 0093d79... Overlay of LG soruce drop

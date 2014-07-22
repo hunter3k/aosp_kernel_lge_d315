@@ -39,7 +39,10 @@ unsigned char F54_TxToGndReport(void)
    int shift;
 
    unsigned char command;
+<<<<<<< HEAD
    int read_count = 0;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 #ifdef F54_Porting
 	char buf[512] = {0};
@@ -69,10 +72,13 @@ unsigned char F54_TxToGndReport(void)
 
    // Wait until the command is completed
    do {
+<<<<<<< HEAD
    	if(++read_count > 10) {
 		TOUCH_INFO_MSG("%s[%d], command = %d\n", __func__, __LINE__, command);
 		return 0;
 	}
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
       delayMS(1); //wait 1ms
       readRMI(F54_Command_Base, &command, 1);
    } while (command != 0x00);

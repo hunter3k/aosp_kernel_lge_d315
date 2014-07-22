@@ -118,7 +118,11 @@ void __init msm8610_add_drivers(void)
 	rpm_regulator_smd_driver_init();
 	qpnp_regulator_init();
 	tsens_tm_init_driver();
+<<<<<<< HEAD
 /* LGE do not use msm_thermal. LGE use thermal-engine only */
+=======
+/*                                                         */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 	msm_thermal_device_init();
 

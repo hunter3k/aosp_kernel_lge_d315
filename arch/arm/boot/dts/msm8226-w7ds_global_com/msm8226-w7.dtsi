@@ -18,6 +18,10 @@
 /include/ "msm8226-w7-pm.dtsi"
 /include/ "msm8226-w7-camera.dtsi"
 /include/ "msm8226-w7-input.dtsi"
+<<<<<<< HEAD
+=======
+/include/ "msm8226-w7-nfc.dtsi"
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 &soc {
 	serial@f991f000 {

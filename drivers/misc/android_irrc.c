@@ -163,12 +163,20 @@ static void android_irrc_enable_pwm(struct timed_irrc_data *irrc, int PWM_CLK, i
 		return;
 	}
 
+<<<<<<< HEAD
 	if (irrc->vreg != NULL) {
+=======
+	if (!(regulator_is_enabled(irrc->vreg) > 0)) {
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		rc = regulator_enable(irrc->vreg);
 		if (rc < 0)
 			ERR_MSG("regulator_enable failed\n");
 	}
+<<<<<<< HEAD
 	if (irrc->vreg2 != NULL) {
+=======
+	if (irrc->vreg2 != NULL && !(regulator_is_enabled(irrc->vreg2) > 0)) {
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		rc = regulator_enable(irrc->vreg2);
         ERR_MSG("irrc->vreg2 set!!\n");
 		if (rc < 0)
@@ -205,10 +213,13 @@ static void android_irrc_disable_pwm(struct work_struct *work)
 
 	INFO_MSG("bk gpio_high_flag = %d\n", gpio_high_flag);
 
+<<<<<<< HEAD
 	if(g_pwm_enabled == false) {
 		INFO_MSG("pwm already disabled !!!\n");
 		return;
 	}
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	if (irrc->vreg != NULL && regulator_is_enabled(irrc->vreg) > 0) {
 		rc = regulator_disable(irrc->vreg);
 		if (rc < 0)
@@ -248,10 +259,13 @@ static ssize_t android_irrc_write(struct file *file, const char __user *buf, siz
 	return 0;
 }
 
+<<<<<<< HEAD
 #ifdef CONFIG_LGE_SW_IRRC_MUTE_SPEAKER
 extern void mute_spk_for_swirrc (int enable);
 #endif //CONFIG_LGE_SW_IRRC_MUTE_SPEAKER
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 static long android_irrc_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
 {
 	struct timed_irrc_data *irrc = file->private_data;
@@ -264,18 +278,24 @@ static long android_irrc_ioctl(struct file *file, unsigned int cmd, unsigned lon
 
 		INFO_MSG("IRRC_START: freq:%d, duty:%d\n", test.frequency/1000, test.duty);
 		android_irrc_enable_pwm(irrc, test.frequency/1000, test.duty);
+<<<<<<< HEAD
 #ifdef CONFIG_LGE_SW_IRRC_MUTE_SPEAKER
 		mute_spk_for_swirrc (1);
 #endif //CONFIG_LGE_SW_IRRC_MUTE_SPEAKER
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		break;
 
 	case IRRC_STOP:
 		INFO_MSG("IRRC_STOP\n");
 		cancel_delayed_work_sync(&irrc->gpio_off_work); //android_irrc_disable_pwm
 		queue_delayed_work(irrc->workqueue, &irrc->gpio_off_work, msecs_to_jiffies(1500));
+<<<<<<< HEAD
 #ifdef CONFIG_LGE_SW_IRRC_MUTE_SPEAKER
 		mute_spk_for_swirrc (0);
 #endif //CONFIG_LGE_SW_IRRC_MUTE_SPEAKER
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		break;
 	default:
 	    INFO_MSG("CMD ERROR: cmd:%d\n", cmd);
@@ -305,7 +325,11 @@ struct miscdevice irrc_misc = {
 	.fops	= &IRRC_pcm_fops,
 };
 
+<<<<<<< HEAD
 #ifdef CONFIG_DEBUG_FS //2013-07-08 beekay.lee@lge.com
+=======
+#ifdef CONFIG_DEBUG_FS //                             
+>>>>>>> 0093d79... Overlay of LG soruce drop
 static struct dentry *debugfs_wcd9xxx_dent;
 static struct dentry *debugfs_poke;
 

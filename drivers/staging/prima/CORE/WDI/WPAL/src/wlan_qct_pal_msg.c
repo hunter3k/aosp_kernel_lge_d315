@@ -79,6 +79,7 @@ wpt_status wpalPostCtrlMsg(void *pPalContext, wpt_msg *pMsg)
       return status;
    }
 
+<<<<<<< HEAD
    if ((WPAL_MC_MSG_SMD_NOTIF_OPEN_SIG == pMsg->type) ||
        (WPAL_MC_MSG_SMD_NOTIF_DATA_SIG == pMsg->type))
    {
@@ -93,6 +94,9 @@ wpt_status wpalPostCtrlMsg(void *pPalContext, wpt_msg *pMsg)
        * VOS MC MSG flush procedure will free MSG body */
       msg.type = 0;
    }
+=======
+   msg.type = 0;  //This field is not used because VOSS doesn't check it.
+>>>>>>> 0093d79... Overlay of LG soruce drop
    msg.reserved = 0;
    msg.bodyval = 0;
    msg.bodyptr = pMsg;

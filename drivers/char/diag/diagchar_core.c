@@ -1440,11 +1440,19 @@ static int diagchar_write(struct file *file, const char __user *buf,
 	int err, ret = 0, pkt_type, token_offset = 0;
 	int remote_proc = 0;
 	uint8_t index;
+<<<<<<< HEAD
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [START]
 #ifdef CONFIG_LGE_DM_DEV
 	char *buf_dev;
 #endif /*CONFIG_LGE_DM_DEV*/
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [END]
+=======
+//                                                                             
+#ifdef CONFIG_LGE_DM_DEV
+	char *buf_dev;
+#endif /*                 */
+//                                                                           
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 #ifdef CONFIG_LGE_DM_APP
 	char *buf_cmp;
@@ -1492,7 +1500,11 @@ static int diagchar_write(struct file *file, const char __user *buf,
 	}
 #endif
 
+<<<<<<< HEAD
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [START]
+=======
+//                                                                             
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #ifdef CONFIG_LGE_DM_DEV
 	if (driver->logging_mode == DM_DEV_MODE) {
 		/* only diag cmd #250 for supporting testmode tool */
@@ -1501,7 +1513,11 @@ static int diagchar_write(struct file *file, const char __user *buf,
 			return 0;
 	}
 #endif
+<<<<<<< HEAD
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [END]
+=======
+//                                                                           
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	if (pkt_type == DCI_DATA_TYPE) {
 		user_space_data = diagmem_alloc(driver, payload_size,
 								POOL_TYPE_USER);

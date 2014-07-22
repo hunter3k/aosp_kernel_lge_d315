@@ -574,7 +574,11 @@ struct device_node *of_find_compatible_node(struct device_node *from,
 
 EXPORT_SYMBOL(of_find_compatible_node);
 
+<<<<<<< HEAD
 //2013-09-24, seungkyu.joo@lge.com, WX_MAXIM modified [Start]
+=======
+//                                                           
+>>>>>>> 0093d79... Overlay of LG soruce drop
 struct device_node *of_find_compatible_node_with_rev_lge(struct device_node *from,
 	const char *type, const char *compatible)
 {
@@ -598,7 +602,11 @@ struct device_node *of_find_compatible_node_with_rev_lge(struct device_node *fro
 }
 
 EXPORT_SYMBOL(of_find_compatible_node_with_rev_lge);
+<<<<<<< HEAD
 //2013-09-24, seungkyu.joo@lge.com, WX_MAXIM modified [End]
+=======
+//                                                         
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 
 /**

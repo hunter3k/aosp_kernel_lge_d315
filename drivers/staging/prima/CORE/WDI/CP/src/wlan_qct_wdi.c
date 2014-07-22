@@ -21526,7 +21526,10 @@ WDI_DequeuePendingReq
 
   /*Save the global state as we need it on the other side*/
   palMsg->val      = pWDICtx->uGlobalState;
+<<<<<<< HEAD
   palMsg->type     = 0;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
   /*Transition back to BUSY as we need to handle a queued request*/
   WDI_STATE_TRANSITION( pWDICtx, WDI_BUSY_ST);

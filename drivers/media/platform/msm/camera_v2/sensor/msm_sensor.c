@@ -261,13 +261,21 @@ static int32_t msm_sensor_get_dt_vreg_data(struct device_node *of_node,
 	struct msm_camera_sensor_board_info *sensordata)
 {
 	int32_t rc = 0, i = 0;
+<<<<<<< HEAD
 	int32_t count = 0;  /* LGE_CHANGE, HI543 bring up, 2013-08-07, hyungtae.lee@lge.com */
+=======
+	int32_t count = 0;  /*                                                              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	uint32_t *vreg_array = NULL;
 
 	count = of_property_count_strings(of_node, "qcom,cam-vreg-name");
 	CDBG("%s qcom,cam-vreg-name count %d\n", __func__, count);
 
+<<<<<<< HEAD
 /* LGE_CHANGE_S, HI543 bring up, 2013-08-07, hyungtae.lee@lge.com */
+=======
+/*                                                                */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	#if 0 // QCT original
 	if (!count)
 		return 0;
@@ -275,7 +283,11 @@ static int32_t msm_sensor_get_dt_vreg_data(struct device_node *of_node,
 	if (count <= 0)
 		return 0;
 	#endif
+<<<<<<< HEAD
 /* LGE_CHANGE_E, HI543 bring up, 2013-08-07, hyungtae.lee@lge.com */
+=======
+/*                                                                */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 	sensordata->cam_vreg = kzalloc(sizeof(struct camera_vreg_t) * count,
 		GFP_KERNEL);
@@ -1098,10 +1110,17 @@ int32_t msm_sensor_power_up(struct msm_sensor_ctrl_t *s_ctrl)
 		goto power_up_failed;
 	}
 
+<<<<<<< HEAD
 	/*LGE_CHANGE_S, mipi end packet issue, 2013-10-15, kwangsik83.kim@lge.com*/
 	if(strncmp(s_ctrl->sensordata->sensor_name, "hi707", strlen("hi707")) == 0)
 		s_ctrl->isFirstStream = TRUE;
 	/*LGE_CHANGE_E, mipi end packet issue, 2013-10-15, kwangsik83.kim@lge.com*/
+=======
+	/*                                                                       */
+	if(strncmp(s_ctrl->sensordata->sensor_name, "hi707", strlen("hi707")) == 0)
+		s_ctrl->isFirstStream = TRUE;
+	/*                                                                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 	CDBG("%s exit\n", __func__);
 	return 0;
@@ -1229,10 +1248,17 @@ int32_t msm_sensor_power_down(struct msm_sensor_ctrl_t *s_ctrl)
 		data->gpio_conf->cam_gpio_req_tbl,
 		data->gpio_conf->cam_gpio_req_tbl_size, 0);
 
+<<<<<<< HEAD
 	/*LGE_CHANGE_S, mipi end packet issue, 2013-10-15, kwangsik83.kim@lge.com*/
 	if(strncmp(s_ctrl->sensordata->sensor_name, "hi707", strlen("hi707")) == 0)
 		s_ctrl->isFirstStream = FALSE;
 	/*LGE_CHANGE_E, mipi end packet issue, 2013-10-15, kwangsik83.kim@lge.com*/
+=======
+	/*                                                                       */
+	if(strncmp(s_ctrl->sensordata->sensor_name, "hi707", strlen("hi707")) == 0)
+		s_ctrl->isFirstStream = FALSE;
+	/*                                                                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 	pr_err("%s exit\n", __func__);
 	return 0;
@@ -1245,7 +1271,11 @@ int32_t msm_sensor_match_id(struct msm_sensor_ctrl_t *s_ctrl)
 	rc = s_ctrl->sensor_i2c_client->i2c_func_tbl->i2c_read(
 			s_ctrl->sensor_i2c_client,
 			s_ctrl->sensordata->slave_info->sensor_id_reg_addr,
+<<<<<<< HEAD
 			&chipid, MSM_CAMERA_I2C_WORD_DATA);   /* LGE_CHANGE, Changed to WORD unit */
+=======
+			&chipid, MSM_CAMERA_I2C_WORD_DATA);   /*                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	if (rc < 0) {
 		pr_err("%s: %s: read id failed\n", __func__,
 			s_ctrl->sensordata->sensor_name);

@@ -594,6 +594,7 @@ config LGE_TOVIS_540P_PANEL_CABC
 config LGE_TOVIS_ILI9806E_WVGA_PANEL_CABC
 	bool "MIPI TOVIS ILI9806E VIDEO WVGA PANEL CABC ON"
 	default n
+<<<<<<< HEAD
 
 config LGE_X10_VZW_LED
 	bool "LGE X10 VZW LED Enable"
@@ -602,3 +603,5 @@ config LGE_X10_VZW_LED
 config LGE_JAG_LED
 	bool "LGE JAG LED Enable"
 	default n
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop

@@ -2539,7 +2539,11 @@ eHalStatus hdd_smeRoamCallback( void *pContext, tCsrRoamInfo *pRoamInfo, tANI_U3
                            pHddCtx->configuredMcastBcastFilter);
                     hddLog(VOS_TRACE_LEVEL_INFO,
                            "offload: already called mcastbcast filter");
+<<<<<<< HEAD
 /* LGE_UPDATE, 20131107, real-wifi@lge.com by beaver, add the checking function for the configuredMcastBcastFilter value */
+=======
+/*                                                                                                                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #if 1
                     if (pHddCtx->configuredMcastBcastFilter != pHddCtx->cfg_ini->mcastBcastFilterSetting)
                     {

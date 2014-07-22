@@ -97,5 +97,9 @@ struct pn544_gpio {
 #define dprintk(fmt, args...) printk(fmt, ##args)
 
 
+<<<<<<< HEAD
 #endif /* _PN544_LGE_H_ */
+=======
+#endif /*               */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 

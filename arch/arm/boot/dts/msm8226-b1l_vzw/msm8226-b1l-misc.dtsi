@@ -16,12 +16,21 @@
     };
 
     hall-bu52033nvx-carkit {
+<<<<<<< HEAD
         status = "disable";
+=======
+        status = "ok";
+        revision = "rev_a...";
+>>>>>>> 0093d79... Overlay of LG soruce drop
     };
 
     i2c@f9925000 {
     	lp5521@32 {
+<<<<<<< HEAD
     		status = "disable";
+=======
+    		status = "ok";
+>>>>>>> 0093d79... Overlay of LG soruce drop
     		ti,led_en = <&msmgpio 112 0x0>;
     	};
     };

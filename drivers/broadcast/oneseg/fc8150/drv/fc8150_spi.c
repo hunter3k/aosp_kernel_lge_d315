@@ -411,7 +411,11 @@ int fc8150_spi_dataread(HANDLE hDevice, u16 addr, u8* data, u32 length)
 
 int fc8150_spi_deinit(HANDLE hDevice)
 {
+<<<<<<< HEAD
 	spi_unregister_driver(&fc8150_spi_driver);
+=======
+	//spi_unregister_driver(&fc8150_spi_driver);
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	return BBM_OK;
 }
 

@@ -1469,7 +1469,11 @@ void vos_sched_flush_mc_mqs ( pVosSchedContext pSchedContext )
   while( NULL != (pMsgWrapper = vos_mq_get(&pSchedContext->sysMcMq) ))
   {
     VOS_TRACE( VOS_MODULE_ID_VOSS,
+<<<<<<< HEAD
                VOS_TRACE_LEVEL_ERROR,
+=======
+               VOS_TRACE_LEVEL_INFO,
+>>>>>>> 0093d79... Overlay of LG soruce drop
                "%s: Freeing MC SYS message type %d ",__func__,
                pMsgWrapper->pVosMsg->type );
     sysMcFreeMsg(pSchedContext->pVContext, pMsgWrapper->pVosMsg);
@@ -1480,7 +1484,11 @@ void vos_sched_flush_mc_mqs ( pVosSchedContext pSchedContext )
   {
     if(pMsgWrapper->pVosMsg != NULL) 
     {
+<<<<<<< HEAD
         VOS_TRACE( VOS_MODULE_ID_VOSS, VOS_TRACE_LEVEL_ERROR,
+=======
+        VOS_TRACE( VOS_MODULE_ID_VOSS, VOS_TRACE_LEVEL_INFO,
+>>>>>>> 0093d79... Overlay of LG soruce drop
                    "%s: Freeing MC WDA MSG message type %d",
                    __func__, pMsgWrapper->pVosMsg->type );
         if (pMsgWrapper->pVosMsg->bodyptr) {
@@ -1499,6 +1507,7 @@ void vos_sched_flush_mc_mqs ( pVosSchedContext pSchedContext )
   {
     if(pMsgWrapper->pVosMsg != NULL)
     {
+<<<<<<< HEAD
         VOS_TRACE( VOS_MODULE_ID_VOSS, VOS_TRACE_LEVEL_ERROR,
                    "%s: Freeing MC WDI MSG message type %d",
                    __func__, pMsgWrapper->pVosMsg->type );
@@ -1521,6 +1530,15 @@ void vos_sched_flush_mc_mqs ( pVosSchedContext pSchedContext )
                        "%s: SMD NOTIFY MSG, do not free body",
                        __func__);
         }
+=======
+        VOS_TRACE( VOS_MODULE_ID_VOSS, VOS_TRACE_LEVEL_INFO,
+                   "%s: Freeing MC WDI MSG message type %d",
+                   __func__, pMsgWrapper->pVosMsg->type );
+        if (pMsgWrapper->pVosMsg->bodyptr) {
+            vos_mem_free((v_VOID_t*)pMsgWrapper->pVosMsg->bodyptr);
+        }
+
+>>>>>>> 0093d79... Overlay of LG soruce drop
         pMsgWrapper->pVosMsg->bodyptr = NULL;
         pMsgWrapper->pVosMsg->bodyval = 0;
         pMsgWrapper->pVosMsg->type = 0;
@@ -1532,7 +1550,11 @@ void vos_sched_flush_mc_mqs ( pVosSchedContext pSchedContext )
   while( NULL != (pMsgWrapper = vos_mq_get(&pSchedContext->peMcMq) ))
   {
     VOS_TRACE( VOS_MODULE_ID_VOSS,
+<<<<<<< HEAD
                VOS_TRACE_LEVEL_ERROR,
+=======
+               VOS_TRACE_LEVEL_INFO,
+>>>>>>> 0093d79... Overlay of LG soruce drop
                "%s: Freeing MC PE MSG message type %d",__func__,
                pMsgWrapper->pVosMsg->type );
     peFreeMsg(vosCtx->pMACContext, (tSirMsgQ*)pMsgWrapper->pVosMsg);
@@ -1542,7 +1564,11 @@ void vos_sched_flush_mc_mqs ( pVosSchedContext pSchedContext )
   while( NULL != (pMsgWrapper = vos_mq_get(&pSchedContext->smeMcMq) ))
   {
     VOS_TRACE( VOS_MODULE_ID_VOSS,
+<<<<<<< HEAD
                VOS_TRACE_LEVEL_ERROR,
+=======
+               VOS_TRACE_LEVEL_INFO,
+>>>>>>> 0093d79... Overlay of LG soruce drop
                "%s: Freeing MC SME MSG message type %d", __func__,
                pMsgWrapper->pVosMsg->type );
     sme_FreeMsg(vosCtx->pMACContext, pMsgWrapper->pVosMsg);
@@ -1552,7 +1578,11 @@ void vos_sched_flush_mc_mqs ( pVosSchedContext pSchedContext )
   while( NULL != (pMsgWrapper = vos_mq_get(&pSchedContext->tlMcMq) ))
   {
     VOS_TRACE( VOS_MODULE_ID_VOSS,
+<<<<<<< HEAD
                VOS_TRACE_LEVEL_ERROR,
+=======
+               VOS_TRACE_LEVEL_INFO,
+>>>>>>> 0093d79... Overlay of LG soruce drop
                "%s: Freeing MC TL message type %d",__func__,
                pMsgWrapper->pVosMsg->type );
     WLANTL_McFreeMsg(pSchedContext->pVContext, pMsgWrapper->pVosMsg);

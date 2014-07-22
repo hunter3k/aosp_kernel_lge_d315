@@ -28,6 +28,7 @@
 			status = "disable";
 		};
 	};
+<<<<<<< HEAD
 	lge_sw_irrc { /* LGE_UPDATE 20110107 euna.jo@lge.com WX_IRRC */
 		compatible = "lge,sw_irrc";
 		vreg_irrc-supply = <&pm8226_l19>;
@@ -40,6 +41,8 @@
 		revision = "rev_a...";
 		vreg2_irrc-supply = <&pm8226_l6>;
 	};
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 };
 
 &sdcc1 {
@@ -164,9 +167,12 @@
     qcom,min-fcc-learning-samples = <5>;
     qcom,fcc-resolution = <10>;
 };
+<<<<<<< HEAD
 
 &slim_msm {
 	tapan_codec {
 			qcom,cdc-micbias1-ext-cap;
 	};
 };
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop

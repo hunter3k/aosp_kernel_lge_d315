@@ -51,7 +51,10 @@ unsigned char F54_FullRawCap(int mode)
 	unsigned char command = 0;
 #ifdef F54_Porting
 	int ret = 0;
+<<<<<<< HEAD
 	int read_count = 0;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	//unsigned char product_id[11] = {0};
 #endif
 
@@ -139,10 +142,13 @@ unsigned char F54_FullRawCap(int mode)
 		command = 0x04;
 		writeRMI(F54_Command_Base, &command, 1);
 		do {
+<<<<<<< HEAD
 			if(++read_count > 10) {
 				TOUCH_INFO_MSG("%s[%d], command = %d\n", __func__, __LINE__, command);
 				return 0;
 			}
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			delayMS(1); //wait 1ms
 			readRMI(F54_Command_Base, &command, 1);
 		} while (command != 0x00);
@@ -150,12 +156,16 @@ unsigned char F54_FullRawCap(int mode)
 		// Force calibrate
 		command = 0x02;
 		writeRMI(F54_Command_Base, &command, 1);
+<<<<<<< HEAD
 		read_count = 0;
 		do {
 			if(++read_count > 10) {
 				TOUCH_INFO_MSG("%s[%d], command = %d\n", __func__, __LINE__, command);
 				return 0;
 			}
+=======
+		do {
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			delayMS(1); //wait 1ms
 			readRMI(F54_Command_Base, &command, 1);
 		} while (command != 0x00);
@@ -175,6 +185,7 @@ unsigned char F54_FullRawCap(int mode)
 	writeRMI(F54_Command_Base, &command, 1);
  
 	// Wait until the command is completed
+<<<<<<< HEAD
 	read_count = 0;
 	do {
 		if(++read_count > 10) {
@@ -184,6 +195,12 @@ unsigned char F54_FullRawCap(int mode)
 		delayMS(1); //wait 1ms
 		readRMI(F54_Command_Base, &command, 1);
 	} while (command != 0x00);
+=======
+	do {
+	 delayMS(1); //wait 1ms
+		readRMI(F54_Command_Base, &command, 1);
+   } while (command != 0x00);
+>>>>>>> 0093d79... Overlay of LG soruce drop
  
 	readRMI(F54_Data_Buffer, &ImageBuffer[0], length);
 

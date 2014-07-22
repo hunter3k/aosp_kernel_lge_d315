@@ -22,7 +22,10 @@
 #include <asm/unaligned.h>
 
 #ifdef CONFIG_LGE_PM_VZW_FAST_CHG
+<<<<<<< HEAD
 extern bool usb_connected_flag;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 extern bool usb_configured_flag;
 extern struct delayed_work usb_detect_w;
 extern void set_vzw_usb_charging_state(int state);

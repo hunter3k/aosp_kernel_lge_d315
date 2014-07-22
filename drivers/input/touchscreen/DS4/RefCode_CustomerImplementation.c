@@ -125,7 +125,11 @@ int waitATTN(int code, int time)
 void write_log(char *data)
 {
 	int fd;
+<<<<<<< HEAD
 	char *fname = "/mnt/sdcard/touch_self_test.txt";
+=======
+	char *fname = "/data/touch_self_test.txt";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 	mm_segment_t old_fs = get_fs();  
 	set_fs(KERNEL_DS);  

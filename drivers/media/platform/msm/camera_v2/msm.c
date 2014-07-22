@@ -160,7 +160,11 @@ static void msm_enqueue(struct msm_queue_head *qhead,
 {
 	unsigned long flags;
 
+<<<<<<< HEAD
 	BUG_ON(!qhead);  /* LGE_CHANGE, soojong.jin, 2013.11.25, Fixed WBT*/ 
+=======
+	BUG_ON(!qhead);  /*                                               */ 
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	
 	spin_lock_irqsave(&qhead->lock, flags);
 	qhead->len++;
@@ -699,11 +703,19 @@ int msm_post_event(struct v4l2_event *event, int timeout)
 		if (rc < 0) {
 			pr_err("%s: rc = %d\n", __func__, rc);
 			mutex_unlock(&session->lock);
+<<<<<<< HEAD
 /* LGE_CHANGE_S, Camera Recovery Code, 2013-08-20, jungki.kim@lge.com */
 			pr_err("%s: ===== Camera Recovery Start! ===== \n", __func__);
 			dump_stack();
 			send_sig(SIGKILL, current, 0);
 /* LGE_CHANGE_E, Camera Recovery Code, 2013-08-20, jungki.kim@lge.com */
+=======
+/*                                                                    */
+			pr_err("%s: ===== Camera Recovery Start! ===== \n", __func__);
+			dump_stack();
+			send_sig(SIGKILL, current, 0);
+/*                                                                    */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			return rc;
 		}
 	}
