@@ -32,7 +32,10 @@ unsigned char F54_HighResistance(void)
 	int i, Result=0;
 	unsigned char command;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	int read_count = 0;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
@@ -62,10 +65,13 @@ unsigned char F54_HighResistance(void)
 
 	do {
 <<<<<<< HEAD
+<<<<<<< HEAD
 		if(++read_count > 10) {
 			TOUCH_INFO_MSG("%s[%d], command = %d\n", __func__, __LINE__, command);
 			return 0;
 		}
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		delayMS(1); //wait 1ms
@@ -76,12 +82,16 @@ unsigned char F54_HighResistance(void)
 	writeRMI(F54_Command_Base, &command, 1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	read_count = 0;
 	do {
 		if(++read_count > 10) {
 			TOUCH_INFO_MSG("%s[%d], command = %d\n", __func__, __LINE__, command);
 			return 0;
 		}
+=======
+	do {
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	do {
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -99,12 +109,16 @@ unsigned char F54_HighResistance(void)
 
    // Wait until the command is completed
 <<<<<<< HEAD
+<<<<<<< HEAD
    	read_count = 0;
 	do {
 		if(++read_count > 10) {
 			TOUCH_INFO_MSG("%s[%d], command = %d\n", __func__, __LINE__, command);
 			return 0;
 		}
+=======
+	do {
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	do {
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -171,12 +185,16 @@ unsigned char F54_HighResistance(void)
 	writeRMI(F54_Command_Base, &command, 1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	read_count = 0;
 	do {
 		if(++read_count > 10) {
 			TOUCH_INFO_MSG("%s[%d], command = %d\n", __func__, __LINE__, command);
 			return 0;
 		}
+=======
+	do {
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	do {
 >>>>>>> 0093d79... Overlay of LG soruce drop

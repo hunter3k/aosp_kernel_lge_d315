@@ -1800,6 +1800,7 @@ mms136_chstatus_show(struct device *dev, struct device_attribute *attr, char *bu
 		len += snprintf(buf + len, PAGE_SIZE - len, "\n");
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if (ts->pdata->key_num) {
 		len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 		write_buf[0] = UNIVERSAL_CMD;
@@ -1838,6 +1839,8 @@ mms136_chstatus_show(struct device *dev, struct device_attribute *attr, char *bu
 		}
 	}
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 	len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 	write_buf[0] = UNIVERSAL_CMD;
@@ -1875,6 +1878,9 @@ mms136_chstatus_show(struct device *dev, struct device_attribute *attr, char *bu
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", data);
 	}
 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	len += snprintf(buf + len, PAGE_SIZE - len, "\n===============================================");
 	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
@@ -2130,6 +2136,7 @@ mms136_rawdata_show(struct device *dev, struct device_attribute *attr, char *buf
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if (ts->pdata->key_num) {
 		len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 		write_buf[0] = UNIVERSAL_CMD;
@@ -2169,6 +2176,8 @@ mms136_rawdata_show(struct device *dev, struct device_attribute *attr, char *buf
 		}
 	}
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 	write_buf[0] = UNIVERSAL_CMD;
 	write_buf[1] = UNIVCMD_KEY_RAW_DATA;
@@ -2206,6 +2215,9 @@ mms136_rawdata_show(struct device *dev, struct device_attribute *attr, char *buf
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", data);
 	}
 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	len += snprintf(buf + len, PAGE_SIZE - len, "\n===============================================");
 	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
@@ -2454,6 +2466,7 @@ mms136_jitter_show(struct device *dev, struct device_attribute *attr, char *buf)
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if (ts->pdata->key_num) {
 		len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 		write_buf[0] = UNIVERSAL_CMD;
@@ -2493,6 +2506,8 @@ mms136_jitter_show(struct device *dev, struct device_attribute *attr, char *buf)
 		}
 	}
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 	write_buf[0] = UNIVERSAL_CMD;
 	write_buf[1] = UNIVCMD_KEY_JITTER;
@@ -2530,6 +2545,9 @@ mms136_jitter_show(struct device *dev, struct device_attribute *attr, char *buf)
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", data);
 	}
 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	len += snprintf(buf + len, PAGE_SIZE - len, "\n===============================================");
 	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
@@ -2696,6 +2714,7 @@ mms136_delta_show(struct device *dev, struct device_attribute *attr, char *buf)
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if (ts->pdata->key_num) {
 		len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 		for (j = 0; j<ts->pdata->key_num; j++) {
@@ -2729,6 +2748,8 @@ mms136_delta_show(struct device *dev, struct device_attribute *attr, char *buf)
 		}
 	}
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 	for (j = 0; j<ts->pdata->key_num; j++) {
 		write_buf[0] = UNIVERSAL_CMD;
@@ -2760,6 +2781,9 @@ mms136_delta_show(struct device *dev, struct device_attribute *attr, char *buf)
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", data);
 	}
 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	len += snprintf(buf + len, PAGE_SIZE - len, "\n===============================================");
 	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");

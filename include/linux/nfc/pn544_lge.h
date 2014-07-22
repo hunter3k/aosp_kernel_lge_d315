@@ -98,7 +98,11 @@ struct pn544_gpio {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* _PN544_LGE_H_ */
+=======
+#endif /*               */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*               */
 >>>>>>> 0093d79... Overlay of LG soruce drop

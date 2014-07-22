@@ -46,9 +46,13 @@
 			synaptics,fw_version_info = <0x32 0x04 0x51>;
 			lge,knock_on_type = <1>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 			synaptics,fw_image = "synaptics/w5c_acg_us/PLG317-T015-PR1592889-DS4.3.5.1.16-3204510F.img";
 			synaptics,panel_spec = "synaptics/w5c_acg_us/w5c_acg_us_limit.txt";
 			synaptics,global_access_pixel = <10>;
+=======
+			synaptics,fw_image = "synaptics/w5c_acg_us/PLG317-T005-PR1581873_DS4.3.5.1.16_32045109.img";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			synaptics,fw_image = "synaptics/w5c_acg_us/PLG317-T005-PR1581873_DS4.3.5.1.16_32045109.img";
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -64,7 +68,10 @@
 				y_max = <1600>;
 				gpio_vdd_en = <82>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 				use_vio_regulator = <1>;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 				lcd_x = <480>;
@@ -81,7 +88,11 @@
 			lge,knock_on_type = <1>;
 			vdd-supply = <&pm8110_l22>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 			synaptics,fw_image = "synaptics/w5c_acg_us/PLG317-T015-PR1592889-DS4.3.5.1.16-3204510F.img";
+=======
+			synaptics,fw_image = "synaptics/w5c_acg_us/PLG317-T005-PR1581873_DS4.3.5.1.16_32045109.img";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			synaptics,fw_image = "synaptics/w5c_acg_us/PLG317-T005-PR1581873_DS4.3.5.1.16_32045109.img";
 >>>>>>> 0093d79... Overlay of LG soruce drop

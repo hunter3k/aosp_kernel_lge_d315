@@ -895,7 +895,11 @@ static struct rcg_clk ce1_clk_src = {
 static struct clk_freq_tbl ftbl_gcc_gp1_3_clk[] = {
 #if defined(CONFIG_ANDROID_SW_IRRC)	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	F(96000,gcc_xo,4,1,50), //LGE_UPDATE 20130626 beekay.lee@lge.com WX_IRRC For value of div 4.
+=======
+	F(96000,gcc_xo,4,1,50), //                                                                  
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	F(96000,gcc_xo,4,1,50), //                                                                  
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1585,15 +1589,21 @@ static struct dsi_pll_vco_clk dsi_vco  = {
 	.vco_clk_min =  600000000,
 	.vco_clk_max = 1200000000,
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE
 * to calculate a right value for more detailed, changed divide ratio
 * this value got from test many times, user can change anytime
 * 2013-06-08, kyeongdon.kim@lge.com
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*           
                                                                     
                                                               
                                    
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 */
 #if CONFIG_MACH_LGE
@@ -2961,7 +2971,11 @@ static struct clk_lookup msm_clocks_8610[] = {
 	CLK_LOOKUP("core_clk",                  gcc_gp2_clk.c, ""),
 #if defined(CONFIG_ANDROID_SW_IRRC)	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	CLK_LOOKUP("core_clk",				   gcc_gp2_clk.c, "irrc"), //LGE_UPDATE 20130626 beekay.lee@lge.com WX_IRRC
+=======
+	CLK_LOOKUP("core_clk",				   gcc_gp2_clk.c, "irrc"), //                                              
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	CLK_LOOKUP("core_clk",				   gcc_gp2_clk.c, "irrc"), //                                              
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -3063,7 +3077,11 @@ static struct clk_lookup msm_clocks_8610[] = {
 
 	/* MM sensor clocks */
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, camera mclk setting, 2013-08-28, yt.jeon@lge.com */
+=======
+/*                                                                */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -3084,6 +3102,7 @@ static struct clk_lookup msm_clocks_8610[] = {
         CLK_LOOKUP("cam_clk", mclk0_clk.c, "6-006a"),
 #else
 <<<<<<< HEAD
+<<<<<<< HEAD
 	CLK_LOOKUP("cam_src_clk", mclk0_clk_src.c, "6-0020"),
 	CLK_LOOKUP("cam_src_clk", mclk0_clk_src.c, "6-0034"),
 	CLK_LOOKUP("cam_src_clk", mclk0_clk_src.c, "6-0040"),
@@ -3097,6 +3116,8 @@ static struct clk_lookup msm_clocks_8610[] = {
 #endif
 /* LGE_CHANGE_E, camera mclk setting, 2013-08-28, yt.jeon@lge.com */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	CLK_LOOKUP("cam_src_clk", mclk0_clk_src.c, "6-0034"),
 	CLK_LOOKUP("cam_src_clk", mclk0_clk_src.c, "6-0040"),
 	CLK_LOOKUP("cam_src_clk", mclk1_clk_src.c, "6-0060"),
@@ -3105,6 +3126,9 @@ static struct clk_lookup msm_clocks_8610[] = {
 	CLK_LOOKUP("cam_clk", mclk1_clk.c, "6-0060"),
 #endif
 /*                                                                */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 

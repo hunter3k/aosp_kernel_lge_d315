@@ -315,9 +315,15 @@ static const char fsg_string_interface[] = "Mass Storage";
 
 #ifdef CONFIG_USB_G_LGE_ANDROID_AUTORUN
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Belows are LGE-customized SCSI cmd and
  * sub-cmd for autorun processing.
  * 2011-03-09, hyunhui.park@lge.com
+=======
+/*                                       
+                                  
+                                   
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                       
                                   
@@ -358,7 +364,11 @@ static const char fsg_string_interface[] = "Mass Storage";
 #define SUB_ACK_STATUS_TET      0x05
 #define SUB_ACK_STATUS_PTP      0x06
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_USB_G_LGE_ANDROID_AUTORUN */
+=======
+#endif /*                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -376,9 +386,15 @@ struct fsg_common;
 
 #ifdef CONFIG_USB_G_LGE_ANDROID_AUTORUN
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Belows are uevent string to communicate with
  * android framework and application.
  * 2011-03-09, hyunhui.park@lge.com
+=======
+/*                                             
+                                     
+                                   
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                             
                                      
@@ -537,7 +553,11 @@ struct fsg_common {
 
 #ifdef CONFIG_USB_G_LGE_ANDROID_AUTORUN
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE-customized USB mode */
+=======
+	/*                         */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                         */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1459,8 +1479,13 @@ static int do_inquiry(struct fsg_common *common, struct fsg_buffhd *bh)
 
 #ifdef CONFIG_USB_G_LGE_ANDROID_AUTORUN
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Add function which handles LGE-customized command from PC.
  * 2011-03-09, hyunhui.park@lge.com
+=======
+/*                                                           
+                                   
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                           
                                    
@@ -2519,7 +2544,11 @@ static int do_scsi_command(struct fsg_common *common)
 		} /* switch (common->cmnd[1]) */
 		break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_USB_G_LGE_ANDROID_AUTORUN */
+=======
+#endif /*                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop

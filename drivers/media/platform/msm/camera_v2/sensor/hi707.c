@@ -41,6 +41,7 @@
 #define AEC_ROI_DY (192) // (128) // (96)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 static int PREV_SOC_AEC_LOCK = -1;	/*LGE_CHANGE, to prevent duplicated setting, 2013-01-07, kwangsik83.kim@lge.com*/
 static int PREV_SOC_AWB_LOCK = -1;  /*LGE_CHANGE, to prevent duplicated setting, 2013-01-07, kwangsik83.kim@lge.com*/
 static int mCurrentFpsMode = 4;  /* LGE_CHANGE, check current fps mode to avoid setting. , 2014-02-11, hyunuk.park@lge.com */
@@ -54,6 +55,10 @@ typedef enum {
 
 static int vt_cam_id_value = HI707_COWELL;
 /* LGE_CHANGE_E, Fix for Dual Camera Module of HI707, 2014-02-28, dongsu.bag@lge.com */
+=======
+static int PREV_SOC_AEC_LOCK = -1;	/*                                                                             */
+static int PREV_SOC_AWB_LOCK = -1;  /*                                                                             */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 static int PREV_SOC_AEC_LOCK = -1;	/*                                                                             */
 static int PREV_SOC_AWB_LOCK = -1;  /*                                                                             */
@@ -84,6 +89,7 @@ static struct msm_sensor_power_setting hi707_power_setting[] = {
 		.delay = 1,
 	},
 #endif
+<<<<<<< HEAD
 <<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W5C_SPR_US)
 	{
@@ -660,6 +666,28 @@ static struct msm_camera_i2c_reg_conf hi707_cowell_recommend_settings[] = {
 	//BLC indoor 0x42 -> 0x44
 	//ÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ∆Æ : 20130315
 =======
+=======
+	{
+		.seq_type = SENSOR_GPIO,
+		.seq_val = SENSOR_GPIO_VANA,
+		.config_val = GPIO_OUT_HIGH,
+		.delay = 1,
+	},
+#if defined(CONFIG_MACH_MSM8X10_W5) || defined(CONFIG_MACH_MSM8X10_W6)
+#else
+	{
+		.seq_type = SENSOR_GPIO,
+		.seq_val = SENSOR_GPIO_VDIG,
+		.config_val = GPIO_OUT_HIGH,
+		.delay = 1,
+	},
+#endif
+	{
+		.seq_type = SENSOR_CLK,
+		.seq_val = SENSOR_CAM_MCLK,
+		.config_val = 0,
+		.delay = 1,
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	},
 	{
 		.seq_type = SENSOR_GPIO,
@@ -721,6 +749,9 @@ static struct msm_camera_i2c_reg_conf hi707_recommend_settings[] = {
 	//AG max 0xa0 -> 0xb0
 	//BLC indoor 0x42 -> 0x44
 	//√÷¡æ æ˜µ•¿Ã∆Æ : 20130315
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 		{0x03, 0x00},
@@ -1187,6 +1218,7 @@ static struct msm_camera_i2c_reg_conf hi707_recommend_settings[] = {
 
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* LGE_CHANGE_S, Fix for Dual Camera Module of HI707, 2014-02-28, dongsu.bag@lge.com */
 static struct msm_camera_i2c_reg_conf hi707_lgit_recommend_vt_settings[] = {
@@ -2102,6 +2134,8 @@ static struct msm_camera_i2c_reg_conf hi707_cowell_recommend_vt_settings[] = {
 
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 static struct msm_camera_i2c_reg_conf hi707_reg_effect_off[] = {
 	/* OFF */
 	{0x03, 0x10},
@@ -2212,6 +2246,7 @@ static struct msm_camera_i2c_reg_conf hi707_reg_exposure_compensation[13][2] = {
 static struct msm_camera_i2c_reg_conf hi707_reg_scene_auto[] = {
 	/* SCENE_auto: 10~30fps */
 <<<<<<< HEAD
+<<<<<<< HEAD
 	{0x03, 0x00},
 	{0x09, 0x01}, //SLEEP ON	
 	
@@ -2230,10 +2265,15 @@ static struct msm_camera_i2c_reg_conf hi707_reg_scene_auto[] = {
 	{0x2a, 0xf0},
 	{0x2b, 0x34}, 
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	{0x03, 0x20},
 	{0x10, 0x0c},
 	{0x18, 0x38}, //AE Reset ON
 	{0x03, 0x20},
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	{0x83, 0x01}, //EXP Normal 20.00 fps
 	{0x84, 0x24},
@@ -2250,6 +2290,7 @@ static struct msm_camera_i2c_reg_conf hi707_reg_scene_auto[] = {
 	{0x92, 0xa8}, //98}, //BLC_AG_TH_ON
 	{0x93, 0xa0}, //90}, //BLC_AG_TH_OFF
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 	{0x03, 0x20},
 	{0x10, 0xec}, //cc},
@@ -2257,6 +2298,11 @@ static struct msm_camera_i2c_reg_conf hi707_reg_scene_auto[] = {
 	
 	{0x03, 0x00},
 	{0x09, 0x00}, //SLEEP Off
+=======
+	{0x03, 0x20},
+	{0x10, 0xec}, //cc},
+	{0x18, 0x30}, //AE Reset OFF
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	{0x03, 0x20},
 	{0x10, 0xec}, //cc},
@@ -2405,6 +2451,7 @@ static const struct i2c_device_id hi707_i2c_id[] = {
 	{ }
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /*LGE_CHANGE_S, fixed Fps setting of soc sensor for VT mode, 2014-01-27, dongsu.bag@lge.com*/
 static struct msm_camera_i2c_reg_conf hi707_reg_7fps_fixed[] = {
@@ -2609,6 +2656,8 @@ static struct msm_camera_i2c_reg_conf hi707_reg_20fps_fixed[] = {
 /*LGE_CHANGE_E, fixed Fps setting of soc sensor for VT mode, 2014-01-27, dongsu.bag@lge.com*/
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 static int32_t msm_hi707_i2c_probe(struct i2c_client *client,
 	const struct i2c_device_id *id)
 {
@@ -2673,7 +2722,11 @@ static int32_t hi707_platform_probe(struct platform_device *pdev)
 	const struct of_device_id *match;
 	match = of_match_device(hi707_dt_match, &pdev->dev);
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, WBT issue fix, 2013-11-25, hyunuk.park@lge.com */
+=======
+/*                                                              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                              */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -2683,7 +2736,11 @@ static int32_t hi707_platform_probe(struct platform_device *pdev)
 		  return -ENODEV;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, WBT issue fix, 2013-11-25, hyunuk.park@lge.com */
+=======
+/*                                                              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                              */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -2720,7 +2777,10 @@ int32_t hi707_sensor_match_id(struct msm_sensor_ctrl_t *s_ctrl)
 	int32_t rc = 0;
 	uint16_t chipid = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	int maker_gpio = 0;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
@@ -2746,6 +2806,7 @@ int32_t hi707_sensor_match_id(struct msm_sensor_ctrl_t *s_ctrl)
 		return -ENODEV;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 /* LGE_CHANGE_S, Fix for Dual Camera Module of HI707, 2014-02-28, dongsu.bag@lge.com */
 	maker_gpio = s_ctrl->sensordata->sensor_init_params->maker_gpio;
@@ -2762,6 +2823,9 @@ int32_t hi707_sensor_match_id(struct msm_sensor_ctrl_t *s_ctrl)
 			 }else pr_err("Invalid gpio %d\n", maker_gpio);
 			}
 /* LGE_CHANGE_E, Fix for Dual Camera Module of HI707, 2014-03-04, dongsu.bag@lge.com */
+=======
+
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -3057,6 +3121,7 @@ static int32_t hi707_set_aec_lock_mode(struct msm_sensor_ctrl_t *s_ctrl,
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //LGE_CHANGE_S,  This Function has been added only for fps of VIDEO Recording from SoC Camera Module. youngwook.song@lge.com 2013-11-04
 static void hi707_set_framerate_for_soc(struct msm_sensor_ctrl_t *s_ctrl, struct msm_fps_range_setting *framerate)
 {
@@ -3119,6 +3184,8 @@ static void hi707_set_framerate_for_soc(struct msm_sensor_ctrl_t *s_ctrl, struct
 //LGE_CHANGE_E,  This Function has been added only for fps of VIDEO Recording from SoC Camera Module. youngwook.song@lge.com 2013-11-04
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 int32_t hi707_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 	void __user *argp)
 {
@@ -3153,6 +3220,7 @@ int32_t hi707_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		break;
 	case CFG_SET_INIT_SETTING:
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, Fix for Dual Camera Module of HI707, 2014-02-28, dongsu.bag@lge.com */
 		if( vt_cam_id_value == HI707_LGIT )
 			{
@@ -3169,10 +3237,15 @@ int32_t hi707_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 /* LGE_CHANGE_E, Fix for Dual Camera Module of HI707, 2014-02-28, dongsu.bag@lge.com */
 
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		CDBG("init setting");
 		hi707_i2c_write_table(s_ctrl,
 				&hi707_recommend_settings[0],
 				ARRAY_SIZE(hi707_recommend_settings));
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		CDBG("init setting X");
 		break;
@@ -3181,7 +3254,10 @@ int32_t hi707_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 
 	case CFG_SET_STOP_STREAM:
 <<<<<<< HEAD
+<<<<<<< HEAD
 		pr_err("%s - stop stream",__func__);
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		CDBG("STOP_STREAM\n");
@@ -3192,9 +3268,14 @@ int32_t hi707_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		break;
 	case CFG_SET_START_STREAM:
 <<<<<<< HEAD
+<<<<<<< HEAD
 		pr_err("%s - start stream",__func__);
 		CDBG("START_STREAM\n");
 /*LGE_CHANGE_S, mipi end packet issue, 2013-10-15, kwangsik83.kim@lge.com*/
+=======
+		CDBG("START_STREAM\n");
+/*                                                                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		CDBG("START_STREAM\n");
 /*                                                                       */
@@ -3209,7 +3290,11 @@ int32_t hi707_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 			pr_err("[WX] %s : normal start stream\n", __func__);
 		}
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*LGE_CHANGE_E, mipi end packet issue, 2013-10-15, kwangsik83.kim@lge.com*/
+=======
+/*                                                                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                       */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -3362,7 +3447,11 @@ int32_t hi707_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		break;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*LGE_CHANGE_S, add soc exif, 2013-10-04, kwangsik83.kim@lge.com*/
+=======
+/*                                                              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                              */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -3461,8 +3550,13 @@ int32_t hi707_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		break;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*LGE_CHANGE_E, add soc exif, 2013-10-04, kwangsik83.kim@lge.com*/
 /*LGE_CHANGE_S, modified power-up/down status for recovery, 2013-12-27, hyungtae.lee@lge.com*/
+=======
+/*                                                              */
+/*                                                                                          */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                              */
 /*                                                                                          */
@@ -3519,7 +3613,11 @@ int32_t hi707_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		break;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*LGE_CHANGE_E, modified power-up/down status for recovery, 2013-12-27, hyungtae.lee@lge.com*/
+=======
+/*                                                                                          */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                          */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -3654,6 +3752,7 @@ int32_t hi707_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		break;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*LGE_CHANGE_S, fixed Fps setting of soc sensor for VT mode, 2014-01-27, dongsu.bag@lge.com*/
 	case CFG_SET_INIT_SETTING_VT:{
 		mCurrentFpsMode = 4; /* LGE_CHANGE, init current fps mode for vt setting , 2014-02-17, dongsu.bag@lge.com */
@@ -3685,6 +3784,8 @@ int32_t hi707_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		break;
 	}
 /*LGE_CHANGE_E, fixed Fps setting of soc sensor for VT mode, 2014-01-27, dongsu.bag@lge.com*/
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	default:
@@ -3719,7 +3820,10 @@ module_exit(hi707_exit_module);
 MODULE_DESCRIPTION("Hynix VGA YUV sensor driver");
 MODULE_LICENSE("GPL v2");
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop

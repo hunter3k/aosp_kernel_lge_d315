@@ -57,15 +57,21 @@
 #define MAX_ERR_CNT             (100)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* sukkyoon.hong@lge.com */
 #define ON			1
 #define OFF			0
 /* sukkyoon.hong@lge.com */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                       */
 #define ON			1
 #define OFF			0
 /*                       */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #if IST30XX_USE_KEY
 #if 0
@@ -113,7 +119,11 @@ extern TKEY_INFO ist30xx_tkey_info;
 #endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* sukkyoon.hong@lge.com */
+=======
+/*                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                       */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -126,9 +136,15 @@ extern TKEY_INFO ist30xx_tkey_info;
 };
 struct ist30xx_ts_device ist30xx_ts_dev; */
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* sukkyoon.hong@lge.com */
 
 /* sukkyoon.hong@lge.com */
+=======
+/*                       */
+
+/*                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                       */
 
@@ -152,7 +168,11 @@ void Send_Touch(unsigned int x, unsigned int y)
 EXPORT_SYMBOL(Send_Touch);
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* sukkyoon.hong@lge.com */
+=======
+/*                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                       */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -607,7 +627,11 @@ static void report_input_data(struct ist30xx_data *data, int finger_counts, int 
 	memset(data->prev_fingers, 0, sizeof(data->prev_fingers));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if 1   // for LGE scenario
+=======
+#if 1   //                 
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if 1   //                 
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1075,7 +1099,11 @@ static void ist30xx_late_resume(struct early_suspend *h)
 #endif // CONFIG_HAS_EARLYSUSPEND
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* sukkyoon.hong@lge.com */
+=======
+/*                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                       */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1149,7 +1177,11 @@ err_power_failed:
 #endif
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* sukkyoon.hong@lge.com */
+=======
+/*                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                       */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1448,7 +1480,11 @@ static int __devinit ist30xx_probe(struct i2c_client *		client,
 
 #if 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* sukkyoon.hong@lge.com */
+=======
+	/*                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                       */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1458,7 +1494,11 @@ static int __devinit ist30xx_probe(struct i2c_client *		client,
 	ts_pdata = client->dev.platform_data;
 //	dev = &ist30xx_ts_dev;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* sukkyoon.hong@lge.com */
+=======
+	/*                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                       */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1526,9 +1566,15 @@ static int __devinit ist30xx_probe(struct i2c_client *		client,
 	data->input_dev = input_dev;
 #if 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* sukkyoon.hong@lge.com */
 	data->power = ts_pdata->power;
 	/* sukkyoon.hong@lge.com */
+=======
+	/*                       */
+	data->power = ts_pdata->power;
+	/*                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                       */
 	data->power = ts_pdata->power;

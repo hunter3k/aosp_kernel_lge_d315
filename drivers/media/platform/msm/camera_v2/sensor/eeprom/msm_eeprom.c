@@ -25,7 +25,11 @@
 #endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [LGE_UPDATE] [yt.jeon@lge.com] [2014-01-06] use cmdline info (lge.camera)
+=======
+//                                                                          
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                          
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -225,7 +229,11 @@ int32_t read_eeprom_memory(struct msm_eeprom_ctrl_t *e_ctrl)
 			memptr += emap[j].mem.valid_size;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [LGE_UPDATE_S] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
+=======
+//                                                                                
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                                
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -240,7 +248,11 @@ int32_t read_eeprom_memory(struct msm_eeprom_ctrl_t *e_ctrl)
 				#endif
 			#else
 <<<<<<< HEAD
+<<<<<<< HEAD
 				#if defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
+=======
+				#if defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 				#if defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -258,7 +270,11 @@ int32_t read_eeprom_memory(struct msm_eeprom_ctrl_t *e_ctrl)
 				#endif
 			#endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [LGE_UPDATE_E] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
+=======
+//                                                                                
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                                
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -446,9 +462,15 @@ static struct msm_cam_clk_info cam_8960_clk_info[] = {
 
 static struct msm_cam_clk_info cam_8974_clk_info[] = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [LGE_UPDATE_S] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
 	[SENSOR_CAM_MCLK] = {"cam_src_clk", 24000000},
 // [LGE_UPDATE_E] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
+=======
+//                                                                                
+	[SENSOR_CAM_MCLK] = {"cam_src_clk", 24000000},
+//                                                                                
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                                
 	[SENSOR_CAM_MCLK] = {"cam_src_clk", 24000000},
@@ -466,8 +488,13 @@ static struct v4l2_subdev_ops msm_eeprom_subdev_ops = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [LGE_UPDATE_S] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
 #if defined(CONFIG_IMX111)|| defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
+=======
+//                                                                                
+#if defined(CONFIG_IMX111)|| defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                                
 #if defined(CONFIG_IMX111)|| defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
@@ -516,8 +543,13 @@ static int msm_eeprom_check_CRC(struct msm_eeprom_ctrl_t *e_ctrl)
 }
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [LGE_UPDATE_E] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
 // [LGE_UPDATE_S] [yt.jeon@lge.com] [2014-01-06] use cmdline info (lge.camera)
+=======
+//                                                                                
+//                                                                            
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                                
 //                                                                            
@@ -530,7 +562,11 @@ static int __init camera_information_setup(char *cam_info)
 }
 __setup("lge.camera=", camera_information_setup);
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [LGE_UPDATE_E] [yt.jeon@lge.com] [2014-01-06] use cmdline info (lge.camera)
+=======
+//                                                                            
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                            
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -579,7 +615,11 @@ int32_t msm_eeprom_i2c_probe(struct i2c_client *client,
 
 	power_info = &e_ctrl->eboard_info->power_info;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	e_ctrl->eboard_info->i2c_slaveaddr = temp<<1; //LGE_UPDATE makes 8bit for i2c driver 2013-11-26 yt.jeon@lge.com
+=======
+	e_ctrl->eboard_info->i2c_slaveaddr = temp<<1; //                                                               
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	e_ctrl->eboard_info->i2c_slaveaddr = temp<<1; //                                                               
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -630,8 +670,13 @@ int32_t msm_eeprom_i2c_probe(struct i2c_client *client,
 		CDBG("memory_data[%d] = 0x%X\n", j, e_ctrl->memory_data[j]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// [LGE_UPDATE_S] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
 #if defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
+=======
+	//                                                                                
+#if defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	//                                                                                
 #if defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
@@ -657,7 +702,11 @@ int32_t msm_eeprom_i2c_probe(struct i2c_client *client,
 	#endif
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// [LGE_UPDATE_E] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
+=======
+	//                                                                                
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	//                                                                                
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1079,7 +1128,11 @@ static int32_t msm_eeprom_platform_probe(struct platform_device *pdev)
 		CDBG("memory_data[%d] = 0x%X\n", j, e_ctrl->memory_data[j]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// [LGE_UPDATE_S] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
+=======
+	//                                                                                
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	//                                                                                
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1091,7 +1144,11 @@ static int32_t msm_eeprom_platform_probe(struct platform_device *pdev)
 	}
 	#endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// [LGE_UPDATE_E] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
+=======
+	//                                                                                
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	//                                                                                
 >>>>>>> 0093d79... Overlay of LG soruce drop

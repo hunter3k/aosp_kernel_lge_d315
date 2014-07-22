@@ -28,9 +28,13 @@
 #include <mach/board_lge.h>
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef CONFIG_LGE_WIRELESS_CHARGER_RT9536
 #include <linux/power/rt9536_charger.h>
 #endif
+=======
+
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -382,7 +386,11 @@ qpnp_pon_input_dispatch(struct qpnp_pon *pon, u32 pon_type)
     if(lge_get_boot_mode() == LGE_BOOT_MODE_CHARGERLOGO)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         pr_info("=========== [CHG LOGO MODE] =========== Keycode : %d PON_RT_STS : %d PON_RT_BIT :%d \n",cfg->key_code,pon_rt_sts,pon_rt_bit);
+=======
+        pr_info("=========== [CHG LOGO MODE] ===========\n");
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
         pr_info("=========== [CHG LOGO MODE] ===========\n");
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1258,7 +1266,11 @@ static int __devinit qpnp_pon_probe(struct spmi_device *spmi)
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S [jiwon.seo@lge.com] 20140102 : Change SMPL Enable Position */
+=======
+/*                                                                         */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                         */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1271,7 +1283,11 @@ static int __devinit qpnp_pon_probe(struct spmi_device *spmi)
    } 
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E [jiwon.seo@lge.com] 20140102 : Change SMPL Enable Position */
+=======
+/*                                                                         */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                         */
 >>>>>>> 0093d79... Overlay of LG soruce drop

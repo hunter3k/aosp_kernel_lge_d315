@@ -113,7 +113,11 @@ static struct ear_3button_info_table max1462x_ear_3button_type_data[]={
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //2013-09-24, seungkyu.joo@lge.com, WX_MAXIM modified [Start]
+=======
+//                                                           
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                           
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -148,7 +152,11 @@ static struct ear_3button_info_table max1462x_ear_3button_type_data[]={
 		},
 	};
 <<<<<<< HEAD
+<<<<<<< HEAD
 //2013-09-24, seungkyu.joo@lge.com, WX_MAXIM modified [End]
+=======
+//                                                         
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                         
 >>>>>>> 0093d79... Overlay of LG soruce drop

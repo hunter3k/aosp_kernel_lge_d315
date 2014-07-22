@@ -21527,7 +21527,10 @@ WDI_DequeuePendingReq
   /*Save the global state as we need it on the other side*/
   palMsg->val      = pWDICtx->uGlobalState;
 <<<<<<< HEAD
+<<<<<<< HEAD
   palMsg->type     = 0;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 

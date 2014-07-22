@@ -70,9 +70,15 @@ enum msm_camera_i2c_data_type {
 	MSM_CAMERA_I2C_UNSET_WORD_MASK,
 	MSM_CAMERA_I2C_SET_BYTE_WRITE_MASK_DATA,
 <<<<<<< HEAD
+<<<<<<< HEAD
 //LGE_CHANGE_S: V3 HI351 Camera Bringup I2C speed up burst mode - hong.junki@lge.com 2012/10/05
         MSM_CAMERA_I2C_BURST_DATA,
 //LGE_CHANGE_E: V3 HI351 Camera Bringup I2C speed up burst mode - hong.junki@lge.com 2012/10/05
+=======
+//                                                                                             
+        MSM_CAMERA_I2C_BURST_DATA,
+//                                                                                             
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                                             
         MSM_CAMERA_I2C_BURST_DATA,
@@ -256,10 +262,17 @@ struct msm_camera_i2c_reg_setting {
 	enum msm_camera_i2c_data_type data_type;
 	uint16_t delay;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	uint16_t *value;	/*LGE_CHANGE, add soc exif, 2013-10-04, kwangsik83.kim@lge.com*/
 };
 
 /*LGE_CHANGE_E, this is for sending fps variables via Hal to Kernel as of integer, 2013-10-04, youngwook.song@lge.com*/
+=======
+	uint16_t *value;	/*                                                            */
+};
+
+/*                                                                                                                   */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	uint16_t *value;	/*                                                            */
 };
@@ -271,7 +284,11 @@ struct msm_fps_range_setting{
    int32_t max_fps;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*LGE_CHANGE_X, this is for sending fps variables via Hal to Kernel as of interger, 2013-10-04, youngwook.song@lge.com*/
+=======
+/*                                                                                                                    */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                                                    */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -465,6 +482,7 @@ enum msm_sensor_cfg_type_t {
 	CFG_SET_AUTOFOCUS,
 	CFG_CANCEL_AUTOFOCUS,
 <<<<<<< HEAD
+<<<<<<< HEAD
 	CFG_PAGE_MODE_READ_I2C_ARRAY,	/*LGE_CHANGE, add soc exif, 2013-10-04, kwangsik83.kim@lge.com*/
 	CFG_SET_FRAMERATE_FOR_SOC,		/*LGE_CHANGE, add Framerate for SoC, 2013-10-27, youngwook.song@lge.com*/
 /* LGE_CHANGE_S, Enable touch AE in soc sensor , 2013-11-12, dongsu.bag@lge.com */
@@ -474,6 +492,8 @@ enum msm_sensor_cfg_type_t {
 	CFG_SET_INIT_SETTING_VT,
 /* LGE_CHANGE_E, Enable touch AE in soc sensor , 2013-11-12, dongsu.bag@lge.com */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	CFG_PAGE_MODE_READ_I2C_ARRAY,	/*                                                            */
 	CFG_SET_FRAMERATE_FOR_SOC,		/*                                                                     */
 /*                                                                              */
@@ -481,6 +501,9 @@ enum msm_sensor_cfg_type_t {
 	CFG_SET_AWB_LOCK,
 	CFG_SET_AEC_LOCK,
 /*                                                                              */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 };
 

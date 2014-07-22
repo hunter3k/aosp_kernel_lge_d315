@@ -65,7 +65,11 @@
 
 /// SD_CARD_DET polarity change.
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8226_W7_GLOBAL_COM) || defined(CONFIG_MACH_MSM8226_W7_GLOBAL_SCA) || defined(CONFIG_MACH_MSM8226_W7N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8226_W7N_GLOBAL_SCA) || defined(CONFIG_MACH_MSM8226_G2MDS_OPEN_CIS) || defined(CONFIG_MACH_MSM8226_G2MDS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8226_G2MSS_GLOBAL_COM)
+=======
+#if defined(CONFIG_MACH_MSM8226_W7_OPEN_CIS) || defined(CONFIG_MACH_MSM8226_W7_OPEN_EU) || defined(CONFIG_MACH_MSM8226_W7_GLOBAL_COM) || defined(CONFIG_MACH_MSM8226_W7_GLOBAL_SCA) || defined(CONFIG_MACH_MSM8226_G2MDS_OPEN_CIS) || defined(CONFIG_MACH_MSM8226_G2MDS_GLOBAL_COM)|| defined(CONFIG_MACH_MSM8226_G2MSS_GLOBAL_COM)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8226_W7_OPEN_CIS) || defined(CONFIG_MACH_MSM8226_W7_OPEN_EU) || defined(CONFIG_MACH_MSM8226_W7_GLOBAL_COM) || defined(CONFIG_MACH_MSM8226_W7_GLOBAL_SCA) || defined(CONFIG_MACH_MSM8226_G2MDS_OPEN_CIS) || defined(CONFIG_MACH_MSM8226_G2MDS_GLOBAL_COM)|| defined(CONFIG_MACH_MSM8226_G2MSS_GLOBAL_COM)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -5582,7 +5586,11 @@ static void msmsdcc_dt_get_cd_wp_gpio(struct device *dev,
 
 /// SD_CARD_DET polarity change.
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8226_W7_GLOBAL_COM) || defined(CONFIG_MACH_MSM8226_W7_GLOBAL_SCA) || defined(CONFIG_MACH_MSM8226_W7N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8226_W7N_GLOBAL_SCA)
+=======
+#if defined(CONFIG_MACH_MSM8226_W7_OPEN_CIS) || defined(CONFIG_MACH_MSM8226_W7_OPEN_EU) || defined(CONFIG_MACH_MSM8226_W7_GLOBAL_COM) || defined(CONFIG_MACH_MSM8226_W7_GLOBAL_SCA)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8226_W7_OPEN_CIS) || defined(CONFIG_MACH_MSM8226_W7_OPEN_EU) || defined(CONFIG_MACH_MSM8226_W7_GLOBAL_COM) || defined(CONFIG_MACH_MSM8226_W7_GLOBAL_SCA)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -5595,7 +5603,11 @@ static void msmsdcc_dt_get_cd_wp_gpio(struct device *dev,
 
 /// SD_CARD_DET polarity change.
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8226_W7_GLOBAL_COM) || defined(CONFIG_MACH_MSM8226_W7_GLOBAL_SCA) || defined(CONFIG_MACH_MSM8226_W7N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8226_W7N_GLOBAL_SCA)
+=======
+#if defined(CONFIG_MACH_MSM8226_W7_OPEN_CIS) || defined(CONFIG_MACH_MSM8226_W7_OPEN_EU) || defined(CONFIG_MACH_MSM8226_W7_GLOBAL_COM) || defined(CONFIG_MACH_MSM8226_W7_GLOBAL_SCA)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8226_W7_OPEN_CIS) || defined(CONFIG_MACH_MSM8226_W7_OPEN_EU) || defined(CONFIG_MACH_MSM8226_W7_GLOBAL_COM) || defined(CONFIG_MACH_MSM8226_W7_GLOBAL_SCA)
 >>>>>>> 0093d79... Overlay of LG soruce drop

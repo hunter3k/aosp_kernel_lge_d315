@@ -1888,7 +1888,11 @@ static int bma2x2_get_slope_sign(struct i2c_client *client, unsigned char
 	return comres;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_SENSOR_LGE_DT */
+=======
+#endif /*                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                      */
 >>>>>>> 0093d79... Overlay of LG soruce drop

@@ -29,6 +29,7 @@
 		};
 	};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     i2c@0 {
         lm3530@38 {
@@ -41,6 +42,8 @@
         };
     };
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	i2c@0 {
 		lm3530@38 {
 			status = "ok";
@@ -59,5 +62,8 @@
 			status = "disable";
 		};
 	};
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 };

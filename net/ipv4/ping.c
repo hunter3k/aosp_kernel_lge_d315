@@ -52,8 +52,13 @@
 #include <net/ipv6.h>
 #include <net/transp_v6.h>
 #endif
+<<<<<<< HEAD
 
 
+=======
+
+
+>>>>>>> 0093d79... Overlay of LG soruce drop
 struct ping_table ping_table;
 struct pingv6_ops pingv6_ops;
 EXPORT_SYMBOL_GPL(pingv6_ops);
@@ -300,6 +305,7 @@ int ping_check_bind_addr(struct sock *sk, struct inet_sock *isk,
 		if (addr->sin_addr.s_addr == htonl(INADDR_ANY))
 			chk_addr_ret = RTN_LOCAL;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		if ((sysctl_ip_nonlocal_bind == 0 &&
 		    isk->freebind == 0 && isk->transparent == 0 &&
@@ -367,6 +373,22 @@ int ping_check_bind_addr(struct sock *sk, struct inet_sock *isk,
 		int addr_type, scoped, has_addr;
 		struct net_device *dev = NULL;
 
+=======
+
+		if ((sysctl_ip_nonlocal_bind == 0 &&
+		    isk->freebind == 0 && isk->transparent == 0 &&
+		     chk_addr_ret != RTN_LOCAL) ||
+		    chk_addr_ret == RTN_MULTICAST ||
+		    chk_addr_ret == RTN_BROADCAST)
+			return -EADDRNOTAVAIL;
+
+#if IS_ENABLED(CONFIG_IPV6)
+	} else if (sk->sk_family == AF_INET6) {
+		struct sockaddr_in6 *addr = (struct sockaddr_in6 *) uaddr;
+		int addr_type, scoped, has_addr;
+		struct net_device *dev = NULL;
+
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		if (addr_len < sizeof(*addr))
 			return -EINVAL;
 
@@ -405,6 +427,9 @@ int ping_check_bind_addr(struct sock *sk, struct inet_sock *isk,
 	return 0;
 }
 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 void ping_set_saddr(struct sock *sk, struct sockaddr *saddr)
 {
@@ -935,6 +960,7 @@ int ping_recvmsg(struct kiocb *iocb, struct sock *sk, struct msghdr *msg,
 	if (family == AF_INET) {
 		sin = (struct sockaddr_in *) msg->msg_name;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		if (sin) {
 			sin->sin_family = AF_INET;
 			sin->sin_port = 0 /* skb->h.uh->source */;
@@ -942,10 +968,15 @@ int ping_recvmsg(struct kiocb *iocb, struct sock *sk, struct msghdr *msg,
 			memset(sin->sin_zero, 0, sizeof(sin->sin_zero));
 		}
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		sin->sin_family = AF_INET;
 		sin->sin_port = 0 /* skb->h.uh->source */;
 		sin->sin_addr.s_addr = ip_hdr(skb)->saddr;
 		memset(sin->sin_zero, 0, sizeof(sin->sin_zero));
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 		if (isk->cmsg_flags)
@@ -956,6 +987,7 @@ int ping_recvmsg(struct kiocb *iocb, struct sock *sk, struct msghdr *msg,
 		struct ipv6_pinfo *np = inet6_sk(sk);
 		struct ipv6hdr *ip6 = ipv6_hdr(skb);
 		sin6 = (struct sockaddr_in6 *) msg->msg_name;
+<<<<<<< HEAD
 <<<<<<< HEAD
 		if (sin6) {
 			sin6->sin6_family = AF_INET6;
@@ -972,6 +1004,8 @@ int ping_recvmsg(struct kiocb *iocb, struct sock *sk, struct msghdr *msg,
 				sin6->sin6_scope_id = IP6CB(skb)->iif;
 		}
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		sin6->sin6_family = AF_INET6;
 		sin6->sin6_port = 0;
 		sin6->sin6_addr = ip6->saddr;
@@ -983,6 +1017,9 @@ int ping_recvmsg(struct kiocb *iocb, struct sock *sk, struct msghdr *msg,
 		if (__ipv6_addr_needs_scope_id(
 		    ipv6_addr_type(&sin6->sin6_addr)))
 			sin6->sin6_scope_id = IP6CB(skb)->iif;
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 		if (inet6_sk(sk)->rxopt.all)

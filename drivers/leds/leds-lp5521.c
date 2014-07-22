@@ -193,7 +193,11 @@ static struct lp5521_led_config lp5521_led_config[] = {
 		.name = "R",
 		.chan_nr	= 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)|| defined(CONFIG_MACH_MSM8926_JAGC_SPR) //UX requirment for X5 Model - default current 55%
+=======
+#if defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) //UX requirment for X5 Model - default current 55%
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) //UX requirment for X5 Model - default current 55%
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -208,7 +212,11 @@ static struct lp5521_led_config lp5521_led_config[] = {
 		.name = "G",
 		.chan_nr	= 1,
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)|| defined(CONFIG_MACH_MSM8926_JAGC_SPR) //UX requirment for X5 Model - default current 55%
+=======
+#if defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) //UX requirment for X5 Model - default current 55%
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) //UX requirment for X5 Model - default current 55%
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -223,7 +231,11 @@ static struct lp5521_led_config lp5521_led_config[] = {
 		.name = "B",
 		.chan_nr	= 2,
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)|| defined(CONFIG_MACH_MSM8926_JAGC_SPR) //UX requirment for X5 Model - default current 55%
+=======
+#if defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) //UX requirment for X5 Model - default current 55%
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) //UX requirment for X5 Model - default current 55%
 >>>>>>> 0093d79... Overlay of LG soruce drop

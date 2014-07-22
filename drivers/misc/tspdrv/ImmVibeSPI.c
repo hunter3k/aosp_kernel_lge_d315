@@ -457,6 +457,7 @@ IMMVIBESPIAPI VibeStatus ImmVibeSPI_ForceOut_SetSamples(VibeUInt8 nActuatorIndex
 	        sm100_pwm_set(1, nForce); //MSM GP CLK update bit issue.
 		} else {
 <<<<<<< HEAD
+<<<<<<< HEAD
 			if(vib_dev != NULL) {
 #ifdef CONFIG_TSPDRV_3_0V_VIBRATOR
 				qpnp_vib_set_with_vtglevel(vib_dev, (nForce * 31) / 128 + 1, true);
@@ -464,6 +465,10 @@ IMMVIBESPIAPI VibeStatus ImmVibeSPI_ForceOut_SetSamples(VibeUInt8 nActuatorIndex
 				qpnp_vib_set_with_vtglevel(vib_dev, (nForce * 31) / 128 + 3, true);
 #endif
 			}
+=======
+			if(vib_dev != NULL)
+				qpnp_vib_set_with_vtglevel(vib_dev, (nForce * 31) / 128 + 3, true);
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			if(vib_dev != NULL)
 				qpnp_vib_set_with_vtglevel(vib_dev, (nForce * 31) / 128 + 3, true);

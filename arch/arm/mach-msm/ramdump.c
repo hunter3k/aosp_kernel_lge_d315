@@ -28,15 +28,21 @@
 #include <mach/ramdump.h>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [START] jin.park@lge.com, SSR FEATURE
 #include <mach/msm_smsm.h>
 #include <linux/delay.h>
 // [END] jin.park@lge.com, SSR FEATURE
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 //                                      
 #include <mach/msm_smsm.h>
 #include <linux/delay.h>
 //                                    
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #define RAMDUMP_WAIT_MSECS	120000
 
@@ -202,7 +208,11 @@ static unsigned int ramdump_poll(struct file *filep,
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [START] jin.park@lge.com, SSR FEATURE
+=======
+//                                      
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                      
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -236,7 +246,11 @@ long ramdump_ioctl(struct file *filp, unsigned int cmd,
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [END] jin.park@lge.com, SSR FEATURE
+=======
+//                                    
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                    
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -245,7 +259,11 @@ static const struct file_operations ramdump_file_ops = {
 	.release = ramdump_release,
 	.read = ramdump_read,
 <<<<<<< HEAD
+<<<<<<< HEAD
 	.unlocked_ioctl = ramdump_ioctl,// [ADD] jin.park@lge.com, SSR FEATURE
+=======
+	.unlocked_ioctl = ramdump_ioctl,//                                    
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	.unlocked_ioctl = ramdump_ioctl,//                                    
 >>>>>>> 0093d79... Overlay of LG soruce drop

@@ -1019,6 +1019,7 @@ int wlan_hdd_cfg80211_alloc_new_beacon(hdd_adapter_t *pAdapter,
         return -EINVAL;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, yeonho.park, 2014-01-08, SoftAP b mode patch by QCT Case No. 01350976 */
 #if 0
     if (params->tail && !params->tail_len)
@@ -1026,6 +1027,10 @@ int wlan_hdd_cfg80211_alloc_new_beacon(hdd_adapter_t *pAdapter,
 #endif
 /* LGE_CHANGE_E, yeonho.park, 2014-01-08, SoftAP b mode patch by QCT Case No. 01350976 */
 
+=======
+    if (params->tail && !params->tail_len)
+        return -EINVAL;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
     if (params->tail && !params->tail_len)
         return -EINVAL;
@@ -6685,9 +6690,13 @@ static int wlan_hdd_cfg80211_get_station(struct wiphy *wiphy, struct net_device 
            rates or if we are always reporting max speed or if we have
            good rssi */
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*LGE_CHANGE_S, [WiFi][jaeoh.oh@lge.com], 2014-01-28, 11N link speed update */
         if ((0 == rssidx) || (eHDD_LINK_SPEED_REPORT_MAX == pCfg->reportMaxLinkSpeed))//&& !(rate_flags & eHAL_TX_RATE_LEGACY))
 /*LGE_CHANGE_E, [WiFi][jaeoh.oh@lge.com], 2014-01-28, 11N link speed update */
+=======
+        if ((0 == rssidx) && !(rate_flags & eHAL_TX_RATE_LEGACY))
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
         if ((0 == rssidx) && !(rate_flags & eHAL_TX_RATE_LEGACY))
 >>>>>>> 0093d79... Overlay of LG soruce drop

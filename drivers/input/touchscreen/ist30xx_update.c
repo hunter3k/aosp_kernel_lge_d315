@@ -917,7 +917,11 @@ int ist30xx_auto_fw_update(struct ist30xx_data *data)
 
 #if 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* REV_C use HW_I2C, HW_I2C use not ISP_MODE. sukkyoon.hong@lge.com */
+=======
+	/*                                                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                                                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -926,7 +930,11 @@ int ist30xx_auto_fw_update(struct ist30xx_data *data)
 	else
 		isp_mode = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* REV_C use HW_I2C, HW_I2C use not ISP_MODE. sukkyoon.hong@lge.com */
+=======
+	/*                                                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                                                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1012,7 +1020,11 @@ int ist30xx_check_fw(struct ist30xx_data *data, const u8 *buf)
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if 1 // LGE - L39C
+=======
+#if 1 //           
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if 1 //           
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1039,7 +1051,11 @@ int ist30xx_check_auto_update(struct ist30xx_data *data)
 	return -EAGAIN;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif // LGE - L39C
+=======
+#endif //           
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif //           
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1053,7 +1069,11 @@ int ist30xx_auto_bin_update(struct ist30xx_data *data)
 
 #if 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* REV_C use HW_I2C, HW_I2C use not ISP_MODE. sukkyoon.hong@lge.com */
+=======
+	/*                                                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                                                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1062,7 +1082,11 @@ int ist30xx_auto_bin_update(struct ist30xx_data *data)
 	else
 		isp_mode = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* REV_C use HW_I2C, HW_I2C use not ISP_MODE. sukkyoon.hong@lge.com */
+=======
+	/*                                                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                                                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop

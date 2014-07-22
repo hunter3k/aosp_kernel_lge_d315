@@ -16,7 +16,10 @@
 /include/ "msm8610-w3-usb.dtsi"
 /include/ "msm8610-w3-input.dtsi"
 <<<<<<< HEAD
+<<<<<<< HEAD
 /include/ "msm8610-w3-1seg-spi.dtsi" /*Oneseg*/
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 /include/ "msm8610-w3-misc.dtsi"

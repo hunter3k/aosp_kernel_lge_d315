@@ -144,6 +144,7 @@
 #define FLASH_PAGE						(ts->flash_fc.function_page)
 #define DEFAULT_PAGE					0x00
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define LPWG_CTRL_PAGE					0x04
 
 /* Double-tap & Multi-tap(N-Func) */
@@ -152,10 +153,15 @@
 #define MAX_INTERTAP_TIME_REG			0x49
 #define INTERTAP_DISTANCE_REG			0x4B
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 /* Double-tap */
 #define II_D_REPORT_MODE_REG			(ts->finger_fc.dsc.control_base)
 #define LPWG_CONTROL_REG				(ts->finger_fc.dsc.control_base+44)
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 /* Get user-finger-data from register.
@@ -182,6 +188,10 @@
  * These Macro will prevent it.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+#if 1
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if 1
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -190,7 +200,10 @@
 		(_finger_status_reg[0] & 0x40)>>3 | (_finger_status_reg[0] & 0x10)>>2 | \
 		(_finger_status_reg[0] & 0x04)>>1 | (_finger_status_reg[0] & 0x01)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #else
 #define GET_BIT_MASK(_finger_status_reg)	\
 		(_finger_status_reg[2] & 0x04)<<7 | (_finger_status_reg[2] & 0x01)<<8 |	\
@@ -199,6 +212,9 @@
 		(_finger_status_reg[0] & 0x40)>>3 | (_finger_status_reg[0] & 0x10)>>2 | \
 		(_finger_status_reg[0] & 0x04)>>1 | (_finger_status_reg[0] & 0x01)
 #endif
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 #define GET_INDEX_FROM_MASK(_index, _bit_mask, _max_finger)	\
@@ -227,6 +243,7 @@ bool touch_irq_mask = 1;
 void touch_enable_irq(unsigned int irq)
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if(!touch_irq_mask){
 		touch_irq_mask = 1;
 		enable_irq(irq);
@@ -243,6 +260,8 @@ void touch_disable_irq(unsigned int irq)
 }
 
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	//TOUCH_INFO_MSG("enable touch irq(%d)\n", touch_irq_mask);
 
 	if(!touch_irq_mask){
@@ -250,6 +269,9 @@ void touch_disable_irq(unsigned int irq)
 		enable_irq(irq);
 	}
 }
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 void write_time_log(void)
 {
@@ -278,7 +300,10 @@ void write_time_log(void)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 void touch_disable_irq(unsigned int irq)
 {
 	//TOUCH_INFO_MSG("disable touch irq(%d)\n", touch_irq_mask);
@@ -289,6 +314,9 @@ void touch_disable_irq(unsigned int irq)
 	}
 }
 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #define MS_TO_NS(x)	(x * 1E6L)
 struct workqueue_struct*	touch_palm_wq;
@@ -310,7 +338,11 @@ static void touch_palm_work(struct work_struct *palm_work)
 	static bool detected = false;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if (unlikely(touch_i2c_read(ts->client, TWO_D_EXTEND_STATUS, 1, &buf) < 0)) {
+=======
+	if (unlikely(touch_i2c_read(ts->client, TWO_D_EXTEND_STATUS, 1, &buf) < 0)){
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	if (unlikely(touch_i2c_read(ts->client, TWO_D_EXTEND_STATUS, 1, &buf) < 0)){
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -322,7 +354,11 @@ static void touch_palm_work(struct work_struct *palm_work)
 	ts->lge_touch_ts->ts_data.palm = palm = buf & 0x2;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if (palm) {
+=======
+	if(palm) {
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	if(palm) {
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -339,6 +375,7 @@ static void touch_palm_work(struct work_struct *palm_work)
 	ts->lge_touch_ts->ts_data.prev_palm = ts->lge_touch_ts->ts_data.palm;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 struct workqueue_struct*	touch_multi_tap_wq;
 
@@ -380,6 +417,8 @@ static void touch_multi_tap_work(struct work_struct *multi_tap_work)
 		send_uevent_lpwg(ts->client, LPWG_MULTI_TAP);
 }
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 int synaptics_ts_page_data_read(struct i2c_client *client, u8 page, u8 reg, int size, u8 *data)
@@ -443,7 +482,10 @@ int synaptics_ts_page_data_write_byte(struct i2c_client *client, u8 page, u8 reg
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 static u8 lpwg_data[MAX_POINT_SIZE_FOR_LPWG*4] = {0};
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 int synaptics_ts_get_data(struct i2c_client *client, struct touch_data* data)
@@ -464,11 +506,17 @@ int synaptics_ts_get_data(struct i2c_client *client, struct touch_data* data)
 	u16 aim = 0;
 	u8 num_of_finger_status_regs = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	u8 lpwg_status_reg = 0;
 	u8 multitap_lpwg = 0;
 	int i = 0;
 
 	data->total_num = 0;
+=======
+        u8 lpwg_status_reg = 0;
+
+        data->total_num = 0;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
         u8 lpwg_status_reg = 0;
 
@@ -510,7 +558,10 @@ int synaptics_ts_get_data(struct i2c_client *client, struct touch_data* data)
 		TOUCH_INFO_MSG("Interrupt_status : 0x%x\n", ts->ts_data.interrupt_status_reg);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #if 0
 	/* IC bug Exception handling - Interrupt status reg is 0 when interrupt occur */
 	if (ts->ts_data.interrupt_status_reg < 0) {
@@ -519,6 +570,9 @@ int synaptics_ts_get_data(struct i2c_client *client, struct touch_data* data)
 	}
 #endif
 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	/* Because of ESD damage... */
 	if (unlikely(ts->ts_data.interrupt_status_reg & INTERRUPT_MASK_FLASH)){
@@ -526,7 +580,11 @@ int synaptics_ts_get_data(struct i2c_client *client, struct touch_data* data)
 		goto err_synaptics_device_damage;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+#if 1//def CUST_G_TOUCH
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if 1//def CUST_G_TOUCH
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -535,6 +593,10 @@ int synaptics_ts_get_data(struct i2c_client *client, struct touch_data* data)
 		goto ignore_interrupt;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+#endif
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -557,9 +619,15 @@ int synaptics_ts_get_data(struct i2c_client *client, struct touch_data* data)
 
        /*check doubletap status*/
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if (unlikely(touch_i2c_read(client,
 			ts->finger_fc.dsc.data_base + num_of_finger_status_regs + (NUM_OF_EACH_FINGER_DATA_REG * ts->num_of_data_points) + 1 /*LPWG_STATUS_REG */,
 			1, &lpwg_status_reg) < 0)) {
+=======
+	if (unlikely(touch_i2c_read(client,  ts->finger_fc.dsc.data_base + num_of_finger_status_regs + (NUM_OF_EACH_FINGER_DATA_REG * ts->num_of_data_points) +1 /*LPWG_STATUS_REG */,
+			1,
+			&lpwg_status_reg) < 0)) {
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	if (unlikely(touch_i2c_read(client,  ts->finger_fc.dsc.data_base + num_of_finger_status_regs + (NUM_OF_EACH_FINGER_DATA_REG * ts->num_of_data_points) +1 /*LPWG_STATUS_REG */,
 			1,
@@ -576,7 +644,11 @@ int synaptics_ts_get_data(struct i2c_client *client, struct touch_data* data)
 #if 1
 //do nothing
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/*
+=======
+	/* 
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/* 
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -589,6 +661,7 @@ int synaptics_ts_get_data(struct i2c_client *client, struct touch_data* data)
 	if (likely(ts->ts_data.interrupt_status_reg & INTERRUPT_MASK_ABS0))
 #endif
 	{
+<<<<<<< HEAD
 <<<<<<< HEAD
 		if (ts->double_tap_enable)  {
 			if (unlikely(touch_i2c_write_byte(client, PAGE_SELECT_REG, LPWG_CTRL_PAGE) < 0)) {
@@ -665,6 +738,8 @@ int synaptics_ts_get_data(struct i2c_client *client, struct touch_data* data)
 		num_of_finger_status_regs = (ts->num_of_data_points + 3) / 4;
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		if (unlikely(touch_i2c_read(client, FINGER_STATE_REG,
 				num_of_finger_status_regs,
 				ts->ts_data.finger.finger_status_reg) < 0)) {
@@ -703,9 +778,15 @@ int synaptics_ts_get_data(struct i2c_client *client, struct touch_data* data)
 			data->curr_data[finger_index].status = FINGER_PRESSED;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 			if(ts->pdata->role->ghost_detection_enable) {
 				if(data->curr_data[finger_index].pressure == 0) pressure_zero = 1;
 			}
+=======
+						if(ts->pdata->role->ghost_detection_enable) {
+							if(data->curr_data[finger_index].pressure == 0) pressure_zero = 1;
+						}
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 						if(ts->pdata->role->ghost_detection_enable) {
 							if(data->curr_data[finger_index].pressure == 0) pressure_zero = 1;
@@ -717,6 +798,10 @@ int synaptics_ts_get_data(struct i2c_client *client, struct touch_data* data)
 								data->curr_data[finger_index].width_major, data->curr_data[finger_index].width_minor,
 								data->curr_data[finger_index].width_orientation, data->curr_data[finger_index].pressure);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -879,7 +964,11 @@ static int read_page_description_table(struct i2c_client* client)
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if (unlikely(touch_i2c_write_byte(client, PAGE_SELECT_REG, DEFAULT_PAGE) < 0)) {
+=======
+	if (unlikely(touch_i2c_write_byte(client, PAGE_SELECT_REG, 0x00) < 0)) {
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	if (unlikely(touch_i2c_write_byte(client, PAGE_SELECT_REG, 0x00) < 0)) {
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -922,6 +1011,7 @@ static int read_page_description_table(struct i2c_client* client)
 	return 0;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 static int synaptics_get_panel_id(struct synaptics_ts_data* ts)
 {
@@ -1025,6 +1115,8 @@ static int synaptics_get_panel_spec(struct synaptics_ts_data* ts, int panel_id){
 
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 int get_ic_info(struct synaptics_ts_data* ts, struct touch_fw_info* fw_info)
 {
 #if defined(ARRAYED_TOUCH_FW_BIN)
@@ -1034,12 +1126,17 @@ int get_ic_info(struct synaptics_ts_data* ts, struct touch_fw_info* fw_info)
 	u8 device_status = 0;
 	u8 flash_control = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	int panel_id = 0;
 
 	if(unlikely(read_page_description_table(ts->client) < 0)) {
 		TOUCH_ERR_MSG("read page description table fail\n");
 		return -EIO;
 	}
+=======
+
+	read_page_description_table(ts->client);
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 
 	read_page_description_table(ts->client);
@@ -1079,6 +1176,7 @@ int get_ic_info(struct synaptics_ts_data* ts, struct touch_fw_info* fw_info)
 			"%s", ts->fw_info.config_id);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if (ts->pdata->caps->maker_id) {
 		panel_id = synaptics_get_panel_id(ts);
 		if (panel_id == 0xFF) {
@@ -1092,11 +1190,16 @@ int get_ic_info(struct synaptics_ts_data* ts, struct touch_fw_info* fw_info)
 			synaptics_get_inbuilt_fw_path(ts, panel_id);
 			synaptics_get_panel_spec(ts, panel_id);
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	if(ts->pdata->caps->maker_id){
 		if(gpio_get_value(ts->pdata->caps->maker_id_gpio)){
 			TOUCH_INFO_MSG("MAKER_ID : High\n");
 		}else{
 			TOUCH_INFO_MSG("MAKER_ID : Low\n");
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		}
 	}
@@ -1128,7 +1231,10 @@ int get_ic_info(struct synaptics_ts_data* ts, struct touch_fw_info* fw_info)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 static int lpwg_tap_control(struct synaptics_ts_data *ts, int on);
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 int synaptics_ts_init(struct i2c_client* client, struct touch_fw_info* fw_info)
@@ -1145,8 +1251,11 @@ int synaptics_ts_init(struct i2c_client* client, struct touch_fw_info* fw_info)
 		if (unlikely(get_ic_info(ts, fw_info) < 0))
 			return -EIO;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #if 0//def CUST_G_TOUCH
 		if(ts_charger_plug==0){
 			if (unlikely(touch_i2c_write_byte(client, DEVICE_CONTROL_REG,
@@ -1168,6 +1277,9 @@ int synaptics_ts_init(struct i2c_client* client, struct touch_fw_info* fw_info)
 		}
 		TOUCH_INFO_MSG("DEVICE CONTROL_REG = %x\n", buf);
 #else
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	if (unlikely(touch_i2c_write_byte(client, DEVICE_CONTROL_REG,
 			DEVICE_CONTROL_NOSLEEP | DEVICE_CONTROL_CONFIGURED) < 0)) {
@@ -1175,7 +1287,11 @@ int synaptics_ts_init(struct i2c_client* client, struct touch_fw_info* fw_info)
 		return -EIO;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+#endif
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1231,6 +1347,7 @@ int synaptics_ts_init(struct i2c_client* client, struct touch_fw_info* fw_info)
 	ts->is_probed = 1;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	DO_SAFE(lpwg_tap_control(ts, 0), error);
 	ts->double_tap_enable = 0;
 	ts->multi_tap_enable = 0;
@@ -1240,6 +1357,9 @@ int synaptics_ts_init(struct i2c_client* client, struct touch_fw_info* fw_info)
 	return 0;
 error:
 	return -EIO;
+=======
+	return 0;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	return 0;
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1263,8 +1383,11 @@ int synaptics_ts_power(struct i2c_client* client, int power_ctrl)
 			hrtimer_cancel(&ts->palm_timer);
 		}
 <<<<<<< HEAD
+<<<<<<< HEAD
 		cancel_work_sync(&ts->multi_tap_work);
 		hrtimer_cancel(&ts->multi_tap_timer);
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
@@ -1298,6 +1421,7 @@ int synaptics_ts_power(struct i2c_client* client, int power_ctrl)
 		break;
 	case POWER_SLEEP:
 <<<<<<< HEAD
+<<<<<<< HEAD
 		if (ts->pdata->role->palm_detect_mode) {
 			cancel_work_sync(&ts->palm_work);
 			hrtimer_cancel(&ts->palm_timer);
@@ -1330,6 +1454,8 @@ int synaptics_ts_power(struct i2c_client* client, int power_ctrl)
 				TOUCH_INFO_MSG("SOFT RESET \n");
 			}
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		if (unlikely(touch_i2c_write_byte(client, DEVICE_CONTROL_REG,
 				DEVICE_CONTROL_SLEEP | DEVICE_CONTROL_CONFIGURED) < 0)) {
 			TOUCH_ERR_MSG("DEVICE_CONTROL_REG write fail\n");
@@ -1341,6 +1467,9 @@ int synaptics_ts_power(struct i2c_client* client, int power_ctrl)
 				DEVICE_CONTROL_NORMAL_OP | DEVICE_CONTROL_CONFIGURED) < 0)) {
 			TOUCH_ERR_MSG("DEVICE_CONTROL_REG write fail\n");
 			return -EIO;
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		}
 		break;
@@ -1376,7 +1505,10 @@ int synaptics_ts_probe(struct lge_touch_data *lge_touch_ts)
 	ds4_i2c_client = client;
 	ts->pdata = lge_touch_ts->pdata;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	if (ts->pdata->pwr->use_regulator) {
@@ -1410,17 +1542,23 @@ int synaptics_ts_probe(struct lge_touch_data *lge_touch_ts)
 		}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 		if (ts->pdata->pwr->vio_voltage > 0) {
 			ret = regulator_set_voltage(ts->regulator_vio, ts->pdata->pwr->vio_voltage, ts->pdata->pwr->vio_voltage);	
 			if (ret < 0)
 				TOUCH_ERR_MSG("FAIL: VIO voltage setting - (%duV)\n",ts->pdata->pwr->vio_voltage);	
 		}
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		if (ts->pdata->pwr->vio_voltage > 0) {	
 			ret = regulator_set_voltage(ts->regulator_vio, ts->pdata->pwr->vio_voltage, ts->pdata->pwr->vio_voltage);	
 			if (ret < 0)
 				TOUCH_ERR_MSG("FAIL: VIO voltage setting - (%duV)\n",ts->pdata->pwr->vio_voltage);	
 			}
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	}
 
@@ -1436,6 +1574,7 @@ int synaptics_ts_probe(struct lge_touch_data *lge_touch_ts)
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	touch_multi_tap_wq = create_singlethread_workqueue("touch_multi_tap_wq");
 	if(touch_multi_tap_wq) {
 		ts->lge_touch_ts = lge_touch_ts;
@@ -1446,6 +1585,8 @@ int synaptics_ts_probe(struct lge_touch_data *lge_touch_ts)
 
 	atomic_set(&ts->is_suspend, 0);
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	return ret;
@@ -1462,7 +1603,10 @@ err_alloc_data_failed:
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #if 0//def CUST_G_TOUCH
 int synaptics_ts_resolution(struct i2c_client* client) {
 	struct synaptics_ts_data* ts =
@@ -1491,6 +1635,9 @@ int synaptics_ts_resolution(struct i2c_client* client) {
 }
 #endif
 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 void synaptics_ts_remove(struct i2c_client* client)
 {
@@ -1517,6 +1664,7 @@ int compare_fw_version(struct i2c_client* client, struct touch_fw_info* fw_info)
 	for(i = 0; i < FW_VER_INFO_NUM; i++){
 		if(ts->pdata->fw_version[i] != fw_info->update_fw_version[i] && i < FW_VER_INFO_NUM-1){
 <<<<<<< HEAD
+<<<<<<< HEAD
 			if (i == 0 && ts->pdata->fw_version[0] & 0x80) {
 				if((ts->pdata->fw_version[i] & 0x0F) != (fw_info->update_fw_version[i] & 0x0F)) {
 					TOUCH_INFO_MSG("firmware is not matching with device. ic_fw_ver_info[%d]:0x%02X != fw_version[%d]:0x%02X\n",
@@ -1533,6 +1681,11 @@ int compare_fw_version(struct i2c_client* client, struct touch_fw_info* fw_info)
 			i, ts->pdata->fw_version[i], i, fw_info->update_fw_version[i]);
 			return -1;
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+			TOUCH_INFO_MSG("firmware is not matching with device. ic_fw_ver_info[%d]:0x%02X != fw_version[%d]:0x%02X\n",
+			i, ts->pdata->fw_version[i], i, fw_info->update_fw_version[i]);
+			return -1;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		}else{
 			if(fw_info->ic_fw_version[i] != fw_info->update_fw_version[i]){
 				TOUCH_INFO_MSG("fw version mismatch. ic_fw_version[%d]:0x%02X != fw_version[%d]:0x%02X\n",
@@ -1542,7 +1695,11 @@ int compare_fw_version(struct i2c_client* client, struct touch_fw_info* fw_info)
 		}
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	TOUCH_INFO_MSG("fw version match\n")
+=======
+	TOUCH_INFO_MSG("fw version match")
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	TOUCH_INFO_MSG("fw version match")
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1565,7 +1722,11 @@ int synaptics_ts_fw_upgrade(struct i2c_client* client, struct touch_fw_info* fw_
 		fw_path = ts->pdata->inbuilt_fw_name;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	TOUCH_INFO_MSG("synaptics_ts_fw_upgrade, fw_path : %s \n", fw_path);
+=======
+	TOUCH_INFO_MSG("synaptics_ts_fw_upgrade, fw_path : %s ", fw_path);
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	TOUCH_INFO_MSG("synaptics_ts_fw_upgrade, fw_path : %s ", fw_path);
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1637,7 +1798,10 @@ out:
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 err_t synaptics_ts_lpwg(struct i2c_client* client, u32 code, u32 value, struct point *data);
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 int synaptics_ts_ic_ctrl(struct i2c_client *client, u8 code, u32 value)
@@ -1647,6 +1811,7 @@ int synaptics_ts_ic_ctrl(struct i2c_client *client, u8 code, u32 value)
 	u8 buf = 0;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	switch (code){
 	case IC_CTRL_BASELINE:
 		switch (value){
@@ -1655,6 +1820,8 @@ int synaptics_ts_ic_ctrl(struct i2c_client *client, u8 code, u32 value)
 			break;
 
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	switch (code)
 	{
 	case IC_CTRL_BASELINE:
@@ -1664,6 +1831,9 @@ int synaptics_ts_ic_ctrl(struct i2c_client *client, u8 code, u32 value)
 #if 1//def CUST_G_TOUCH
 						break;
 #endif
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 			if (unlikely(synaptics_ts_page_data_write_byte(client, ANALOG_PAGE,
 					ANALOG_CONTROL_REG, FORCE_FAST_RELAXATION) < 0)) {
@@ -1685,9 +1855,15 @@ int synaptics_ts_ic_ctrl(struct i2c_client *client, u8 code, u32 value)
 			break;
 		case BASELINE_FIX:
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 			break;
 
+=======
+#if 1//def CUST_G_TOUCH
+						break;
+#endif
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if 1//def CUST_G_TOUCH
 						break;
@@ -1725,8 +1901,13 @@ int synaptics_ts_ic_ctrl(struct i2c_client *client, u8 code, u32 value)
 		}
 		break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	case IC_CTRL_READ:
+=======
+	case IC_CTRL_READ:
+#if 1//def CUST_G_TOUCH
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	case IC_CTRL_READ:
 #if 1//def CUST_G_TOUCH
@@ -1742,6 +1923,7 @@ int synaptics_ts_ic_ctrl(struct i2c_client *client, u8 code, u32 value)
 		}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 		if (unlikely(touch_i2c_write_byte(client, PAGE_SELECT_REG, DEFAULT_PAGE) < 0)) {
 			TOUCH_ERR_MSG("PAGE_SELECT_REG write fail\n");
 			return -EIO;
@@ -1755,6 +1937,8 @@ int synaptics_ts_ic_ctrl(struct i2c_client *client, u8 code, u32 value)
 		}
 
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		if (unlikely(touch_i2c_write_byte(client, PAGE_SELECT_REG, 0x00) < 0)) {
 			TOUCH_ERR_MSG("PAGE_SELECT_REG write fail\n");
 			return -EIO;
@@ -1783,11 +1967,15 @@ int synaptics_ts_ic_ctrl(struct i2c_client *client, u8 code, u32 value)
 					return -EIO;
 				}
 #else
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		if (touch_i2c_write_byte(client, ((value & 0xFF00) >> 8), (value & 0xFF)) < 0) {
 			TOUCH_ERR_MSG("IC register write fail\n");
 			return -EIO;
 		}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 		if (unlikely(touch_i2c_write_byte(client, PAGE_SELECT_REG, DEFAULT_PAGE) < 0)) {
@@ -1796,6 +1984,10 @@ int synaptics_ts_ic_ctrl(struct i2c_client *client, u8 code, u32 value)
 		}
 		break;
 
+=======
+#endif
+		break;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif
 		break;
@@ -1809,6 +2001,7 @@ int synaptics_ts_ic_ctrl(struct i2c_client *client, u8 code, u32 value)
 
 	case IC_CTRL_REPORT_MODE:
 <<<<<<< HEAD
+<<<<<<< HEAD
 		switch (value) {
 			case 0:   // continuous mode
 				if (unlikely(touch_i2c_write_byte(client, TWO_D_REPORTING_MODE,
@@ -1819,6 +2012,8 @@ int synaptics_ts_ic_ctrl(struct i2c_client *client, u8 code, u32 value)
 				break;
 			case 1:  // reduced mode
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			switch (value)
 			{
 				case 0:   // continuous mode
@@ -1838,12 +2033,16 @@ int synaptics_ts_ic_ctrl(struct i2c_client *client, u8 code, u32 value)
 					break;
 				case 1:  // reduced mode
 #if 1//def CUST_G_TOUCH
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 				if (unlikely(touch_i2c_write_byte(client, TWO_D_REPORTING_MODE,
 						REPORT_BEYOND_CLIP | ABS_FILTER | REPORT_MODE_REDUCED) < 0)) {
 					TOUCH_ERR_MSG("TWO_D_REPORTING_MODE write fail\n");
 					return -EIO;
 				}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 				break;
@@ -2016,6 +2215,8 @@ int synaptics_ts_ic_ctrl(struct i2c_client *client, u8 code, u32 value)
 				break;
 		}
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #else
 				if (unlikely(touch_i2c_write_byte(client, TWO_D_REPORTING_MODE,
 						REPORT_MODE_REDUCED) < 0)) {
@@ -2083,6 +2284,9 @@ int synaptics_ts_ic_ctrl(struct i2c_client *client, u8 code, u32 value)
 			break;
 		}
 		break;
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	default:
 		break;
@@ -2090,14 +2294,18 @@ int synaptics_ts_ic_ctrl(struct i2c_client *client, u8 code, u32 value)
 
 	return buf;
 <<<<<<< HEAD
+<<<<<<< HEAD
 error:
 	return -EIO;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 }
 
 static char *productcode_parse(unsigned char *product)
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 	static char str[128] ={0};
 	int len = 0;
@@ -2173,6 +2381,8 @@ static char *productcode_parse(unsigned char *product)
 
 	return str;
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
          static char str[128] ={0};
          int len = 0;
          char inch[2] = {0};
@@ -2246,6 +2456,9 @@ static char *productcode_parse(unsigned char *product)
          len += sprintf(str+len, "v%d.%02d\n ", version[0], version[1]);
 
          return str;
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
  }
 
@@ -2257,6 +2470,7 @@ static char *productcode_parse_short(unsigned char *product)
 	char paneltype = 0;
 
 	switch((product[0] & 0xF0) >> 4) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 		case 0 :
 			len += sprintf(str+len, "E");
@@ -2301,6 +2515,8 @@ static char *productcode_parse_short(unsigned char *product)
 			len += sprintf(str+len, "Unknown ");
 			break;
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	case 0 :
 		len += sprintf(str+len, "E");
 		break;
@@ -2343,6 +2559,9 @@ static char *productcode_parse_short(unsigned char *product)
 	default :
 		len += sprintf(str+len, "Unknown ");
 		break;
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	}
 
@@ -2363,8 +2582,11 @@ static ssize_t synaptics_fw_info_show(struct synaptics_ts_data* ts, char *buf, s
 	ret = sprintf(buf, "\n======== Firmware Info ========\n");
 	ret += sprintf(buf+ret, "ic_fw_identifier  = %s\n", fw_info->ic_fw_identifier);
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if (ts->pdata->panel_id != 0xFF)
 		ret += sprintf(buf+ret, "Panel id			= %d \n",  ts->pdata->panel_id);
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	if(fw_info->ic_fw_version[0] > 0x40){
@@ -2396,15 +2618,21 @@ static ssize_t synaptics_fw_ver_show(struct synaptics_ts_data* ts, char *buf, st
 {
 	int ret = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if (fw_info->ic_fw_version[0] > 0x40) {
 		ret += sprintf(buf+ret, "Firmware Version	= %s\n", fw_info->ic_fw_version);
 	} else {
 		ret += sprintf(buf+ret, "Firmware Version	= V%d.%02d (0x%02X, 0x%02X, 0x%02X, 0x%02X)\n",
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	if(fw_info->ic_fw_version[0] > 0x40){
 		ret += sprintf(buf+ret, "Firmware Version	= %s\n", fw_info->ic_fw_version);
 	}else{
 		ret += sprintf(buf, "Firmware Version	= V%d.%02d (0x%02X, 0x%02X, 0x%02X, 0x%02X)\n",
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 			(fw_info->ic_fw_version[3]&0x80 ? 1:0), fw_info->ic_fw_version[3]&0x7F,
 			fw_info->ic_fw_version[0], fw_info->ic_fw_version[1],
@@ -2441,7 +2669,10 @@ static ssize_t show_sd_(struct synaptics_ts_data* ts, char *buf, struct touch_fw
 
 		touch_disable_irq(ts->client->irq);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		rx_to_rx = F54_RxToRxReport();
@@ -2449,11 +2680,14 @@ static ssize_t show_sd_(struct synaptics_ts_data* ts, char *buf, struct touch_fw
 		if(rx_to_rx == 2) {
 			ret = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 			ret += sprintf(buf+ret, "\nRxToRxReport read RMI fail!! \n");
 			write_log(buf);
 		}
 
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			ret += sprintf(buf+ret, "\nRxToRxReport fail!! try again\n");
 			write_log(buf);
 			synaptics_ts_init(ts->client, NULL);
@@ -2461,6 +2695,9 @@ static ssize_t show_sd_(struct synaptics_ts_data* ts, char *buf, struct touch_fw
 
 			return ret;
 		}
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		tx_to_tx = F54_TxToTxReport();
 		tx_to_gnd = F54_TxToGndReport();
@@ -2475,7 +2712,11 @@ static ssize_t show_sd_(struct synaptics_ts_data* ts, char *buf, struct touch_fw
 
 		ret += sprintf(buf+ret, "=======RESULT========\n");
 <<<<<<< HEAD
+<<<<<<< HEAD
 		ret += sprintf(buf+ret, "Channel Status : %s\n", (tx_to_tx && tx_to_gnd && high_registance) ? "Pass" : "Fail" );
+=======
+		ret += sprintf(buf+ret, "Channel Status : %s\n", (rx_to_rx && tx_to_tx && tx_to_gnd && high_registance) ? "Pass" : "Fail" );
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		ret += sprintf(buf+ret, "Channel Status : %s\n", (rx_to_rx && tx_to_tx && tx_to_gnd && high_registance) ? "Pass" : "Fail" );
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -2582,11 +2823,17 @@ int synaptics_ts_sysfs(struct i2c_client *client, char *buf, u8 code, struct tou
 			(struct synaptics_ts_data*)get_touch_handle(client);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	//power_lock_(POWER_SYSFS_LOCK);
 	//synaptics_ts_power(client,POWER_ON);
 	//msleep(300);
 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	switch (code) {
 		case SYSFS_SYNAPTICS_VERSION_SHOW :
@@ -2612,6 +2859,7 @@ int synaptics_ts_sysfs(struct i2c_client *client, char *buf, u8 code, struct tou
 			break;
 
 	}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 	return ret;
@@ -2850,6 +3098,8 @@ error:
 struct touch_device_driver synaptics_ts_driver = {
 	.probe 	= synaptics_ts_probe,
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	//power_unlock_(POWER_SYSFS_LOCK);
 	return ret;
 }
@@ -2860,6 +3110,9 @@ struct touch_device_driver synaptics_ts_driver = {
 #if 0//def CUST_G_TOUCH
 	.resolution = synaptics_ts_resolution,
 #endif
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	.remove	= synaptics_ts_remove,
 	.init  	= synaptics_ts_init,
@@ -2869,10 +3122,13 @@ struct touch_device_driver synaptics_ts_driver = {
 	.ic_ctrl	= synaptics_ts_ic_ctrl,
 	.sysfs = synaptics_ts_sysfs,
 <<<<<<< HEAD
+<<<<<<< HEAD
 	.suspend    = synaptics_ts_suspend,
 	.resume     = synaptics_ts_resume,
 	.lpwg       = synaptics_ts_lpwg,
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 };
@@ -2890,8 +3146,12 @@ static void __exit touch_exit(void)
 	if (touch_debug_mask & DEBUG_TRACE)
 		TOUCH_DEBUG_MSG("\n");
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if (touch_multi_tap_wq)
 		destroy_workqueue(touch_multi_tap_wq);
+=======
+
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 
 >>>>>>> 0093d79... Overlay of LG soruce drop

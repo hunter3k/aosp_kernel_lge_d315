@@ -432,7 +432,11 @@ static tCsrCountryInfo gCsrCountryInfo[eCSR_NUM_COUNTRY_INDEX] =
     {REG_DOMAIN_WORLD, {'D', 'M', ' '}},     //DOMINICA
     {REG_DOMAIN_WORLD, {'D', 'O', ' '}},       //DOMINICAN REPUBLIC
 <<<<<<< HEAD
+<<<<<<< HEAD
     {REG_DOMAIN_WORLD, {'D', 'Z', ' '}},     //ALGERIA
+=======
+    {REG_DOMAIN_WORLD, {'D', 'Z', ' '}},     //       
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
     {REG_DOMAIN_WORLD, {'D', 'Z', ' '}},     //       
 >>>>>>> 0093d79... Overlay of LG soruce drop

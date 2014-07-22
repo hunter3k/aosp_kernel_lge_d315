@@ -1235,8 +1235,12 @@ static void mmc_sd_detect(struct mmc_host *host)
 	}
 	if (!retries) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3DS_OPEN_SCA) || defined(CONFIG_MACH_MSM8X10_W3_GLOBAL_SCA) || defined(CONFIG_LGE_REINIT_SDCARD_FOR_DETECT_FAIL) || defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W55DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W55_GLOBAL_COM)
 	// Try re-init the card when card detection is failed.
+=======
+#ifdef CONFIG_MACH_MSM8X10_W3DS_OPEN_SCA // Try re-init the card when card detection is failed. 
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #ifdef CONFIG_MACH_MSM8X10_W3DS_OPEN_SCA // Try re-init the card when card detection is failed. 
 >>>>>>> 0093d79... Overlay of LG soruce drop

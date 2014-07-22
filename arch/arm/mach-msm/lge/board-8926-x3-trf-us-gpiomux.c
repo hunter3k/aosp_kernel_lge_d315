@@ -88,7 +88,11 @@ static struct gpiomux_setting touch_misc_cfg = {
 	.dir = GPIOMUX_IN,
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_TOUCHSCREEN_LGE_TS_MISC */
+=======
+#endif /*                                */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                                */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -109,7 +113,11 @@ static struct gpiomux_setting synaptics_reset_cfg = {
 	.dir = GPIOMUX_OUT_HIGH,
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_LGE_TOUCHSCREEN_SYNAPTIC || CONFIG_TOUCHSCREEN_SYNAPTICS_I2C_RMI4 */
+=======
+#endif /*                                                                          */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                                                                          */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -265,7 +273,11 @@ static struct msm_gpiomux_config msm_blsp_configs[] __initdata = {
 		},
 	},
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef CONFIG_MACH_LGE  /* LGE_CHANGE_S,  Added for COMMON_I2C */
+=======
+#ifdef CONFIG_MACH_LGE  /*                                     */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #ifdef CONFIG_MACH_LGE  /*                                     */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -373,7 +385,11 @@ static struct msm_gpiomux_config msm_touch_configs_rev_b[] __initdata = {
 	},
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_LGE_TOUCHSCREEN_SYNAPTIC || CONFIG_TOUCHSCREEN_SYNAPTICS_I2C_RMI4 */
+=======
+#endif /*                                                                          */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                                                                          */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -403,7 +419,11 @@ static struct msm_gpiomux_config msm_touch_configs_rev_a2[] __initdata = {
 	},
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_TOUCHSCREEN_LGE_TS_MISC */
+=======
+#endif /*                                */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                                */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -423,7 +443,11 @@ static struct gpiomux_setting sd_card_det_sleep_config = {
 	.dir = GPIOMUX_IN,
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 #else // not CONFIG_MACH_LGE
+=======
+#else //                    
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #else //                    
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -434,7 +458,11 @@ static struct gpiomux_setting sd_card_det_sleep_config = {
 	.dir = GPIOMUX_IN,
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif // CONFIG_MACH_LGE
+=======
+#endif //                
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif //                
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -655,7 +683,11 @@ static struct msm_gpiomux_config usb_otg_sw_configs[] __initdata = {
 #endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*  LGE_CHANGE_S, [NFC][garam.kim@lge.com], NFC Bring up*/
+=======
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                      */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -737,7 +769,11 @@ static struct msm_gpiomux_config msm_nfc_configs[] __initdata = {
 };
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*  LGE_CHANGE_E, [NFC][garam.kim@lge.com], NFC Bring up*/
+=======
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                      */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -759,6 +795,7 @@ static struct msm_gpiomux_config msm_hall_ic_configs[] __initdata = {
 #endif
 };
 #endif /* CONFIG_BU52061NVX */
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 #ifdef CONFIG_MACH_LGE
@@ -815,15 +852,23 @@ static struct msm_gpiomux_config main_cam_id_gpio[] __initdata = {
 
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 void __init msm8226_init_gpiomux(void)
 {
 	int rc;
 #ifdef CONFIG_MACH_LGE
 <<<<<<< HEAD
+<<<<<<< HEAD
 	int gpio_index = 0;
 	hw_rev_type hw_rev;
 	hw_rev = lge_get_board_revno();
 #endif /* CONFIG_MACH_LGE */
+=======
+	hw_rev_type hw_rev;
+	hw_rev = lge_get_board_revno();
+#endif /*                 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	hw_rev_type hw_rev;
 	hw_rev = lge_get_board_revno();
@@ -847,6 +892,7 @@ void __init msm8226_init_gpiomux(void)
 
 	msm_gpiomux_install(&sd_card_det, 1);
 #ifdef CONFIG_MACH_LGE
+<<<<<<< HEAD
 <<<<<<< HEAD
 	switch ( hw_rev ){
 		case HW_REV_0 :
@@ -880,6 +926,8 @@ void __init msm8226_init_gpiomux(void)
 	
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	if(hw_rev < HW_REV_A2) {
 		msm_gpiomux_install(msm_touch_configs, ARRAY_SIZE(msm_touch_configs));
 		printk(KERN_ERR "[Touch] HW_REV_A configs \n");
@@ -887,6 +935,7 @@ void __init msm8226_init_gpiomux(void)
 #if defined(CONFIG_TOUCHSCREEN_LGE_TS_MISC)
 		msm_gpiomux_install(msm_touch_configs_rev_a2, ARRAY_SIZE(msm_touch_configs_rev_a2));
 		printk(KERN_ERR "[Touch] HW_REV_A2 configs \n");
+<<<<<<< HEAD
 <<<<<<< HEAD
 #endif /* CONFIG_TOUCHSCREEN_LGE_TS_MISC */
 	} else if(hw_rev >= HW_REV_B) {
@@ -901,6 +950,8 @@ void __init msm8226_init_gpiomux(void)
 	} else {}
 #endif /* CONFIG_MACH_LGE */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #endif /*                                */
 	} else if(hw_rev >= HW_REV_B) {
 #if defined (CONFIG_LGE_TOUCHSCREEN_SYNAPTIC) || defined(CONFIG_TOUCHSCREEN_SYNAPTICS_I2C_RMI4)
@@ -909,6 +960,9 @@ void __init msm8226_init_gpiomux(void)
 #endif /*                                                                          */
 	} else {}
 #endif /*                 */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #if defined(CONFIG_BU52061NVX)
 	msm_gpiomux_install(msm_hall_ic_configs, ARRAY_SIZE(msm_hall_ic_configs));
@@ -926,17 +980,23 @@ void __init msm8226_init_gpiomux(void)
 #endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*  LGE_CHANGE_S, [NFC][garam.kim@lge.com], NFC Bring up */
 #ifdef CONFIG_LGE_NFC_PN547
 	msm_gpiomux_install(msm_nfc_configs, ARRAY_SIZE(msm_nfc_configs));
 #endif
 /*  LGE_CHANGE_E, [NFC][garam.kim@lge.com], NFC Bring up */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                                                       */
 #ifdef CONFIG_LGE_NFC_PN547
 	msm_gpiomux_install(msm_nfc_configs, ARRAY_SIZE(msm_nfc_configs));
 #endif
 /*                                                       */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 }
 

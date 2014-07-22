@@ -606,7 +606,11 @@ MODULE_DESCRIPTION("LGE DM DEV TTY");
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Seongmook Yim <seongmook.yim@lge.com>");
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /*CONFIG_LGE_DM_DEV*/
+=======
+#endif /*                 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                 */
 >>>>>>> 0093d79... Overlay of LG soruce drop

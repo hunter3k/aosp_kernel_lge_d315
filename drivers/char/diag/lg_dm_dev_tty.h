@@ -22,8 +22,13 @@ struct dm_dev_tty {
 extern struct dm_dev_tty *lge_dm_dev_tty;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_LGE_DM_DEV */
 #endif /*TTY_LGE_DM_H_ */
+=======
+#endif /*                   */
+#endif /*              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                   */
 #endif /*              */

@@ -2540,7 +2540,11 @@ eHalStatus hdd_smeRoamCallback( void *pContext, tCsrRoamInfo *pRoamInfo, tANI_U3
                     hddLog(VOS_TRACE_LEVEL_INFO,
                            "offload: already called mcastbcast filter");
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_UPDATE, 20131107, real-wifi@lge.com by beaver, add the checking function for the configuredMcastBcastFilter value */
+=======
+/*                                                                                                                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                                                       */
 >>>>>>> 0093d79... Overlay of LG soruce drop

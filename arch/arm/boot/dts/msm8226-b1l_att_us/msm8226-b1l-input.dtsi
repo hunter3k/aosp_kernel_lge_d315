@@ -48,6 +48,7 @@
 			status = "ok";
 		};
 <<<<<<< HEAD
+<<<<<<< HEAD
 		lge_ts_misc {
 			revision = "rev_a";
 			vdd_on = <1>;
@@ -65,6 +66,8 @@
 			status ="okay";
 			revision = "rev_0";
 		};
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	};

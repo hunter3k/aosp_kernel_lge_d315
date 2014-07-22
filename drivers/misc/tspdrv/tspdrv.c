@@ -185,9 +185,15 @@ MODULE_LICENSE("GPL v2");
 
 #if defined(CONFIG_MACH_MSM8226_G2MDS_OPEN_CIS) || defined(CONFIG_MACH_MSM8226_G2MDS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8226_G2MSS_GLOBAL_COM)
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGED_START
   * Vibrator on/off device file is added(vib_enable)
   * 2012.11.11, sehwan.lee@lge.com
+=======
+/*                  
+                                                    
+                                  
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                  
                                                     
@@ -234,7 +240,11 @@ static struct device_attribute immersion_device_attrs[] = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGED_END 2012.11.11, sehwan.lee@lge.com */
+=======
+/*                                                */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -281,9 +291,15 @@ static int __init tspdrv_init(void)
     }
 #if defined(CONFIG_MACH_MSM8226_G2MDS_OPEN_CIS) || defined(CONFIG_MACH_MSM8226_G2MDS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8226_G2MSS_GLOBAL_COM)
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGED_START
   * Vibrator on/off device file is added(vib_enable)
   * 2012.11.11, sehwan.lee@lge.com
+=======
+/*                  
+                                                    
+                                  
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                  
                                                     
@@ -297,7 +313,11 @@ static int __init tspdrv_init(void)
 	}
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGED_END 2012.11.11, sehwan.lee@lge.com */
+=======
+/*                                                */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                */
 >>>>>>> 0093d79... Overlay of LG soruce drop

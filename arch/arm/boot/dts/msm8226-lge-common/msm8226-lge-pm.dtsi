@@ -63,6 +63,7 @@
 	};
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 &soc {
 	qcom,msm-thermal {
@@ -70,5 +71,7 @@
 		qcom,vdd-restriction-temp-hysteresis;
 	};
 };
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop

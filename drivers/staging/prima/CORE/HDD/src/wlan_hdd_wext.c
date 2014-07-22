@@ -5556,7 +5556,11 @@ static int iw_set_dynamic_mcbc_filter(struct net_device *dev,
         pHddCtx->configuredMcastBcastFilter = pRequest->mcastBcastFilterSetting;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_UPDATE, 20131031, real-wifi@lge.com by beaver, store the configuredMcastBcastFilter value */
+=======
+/*                                                                                               */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                               */
 >>>>>>> 0093d79... Overlay of LG soruce drop

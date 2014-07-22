@@ -82,7 +82,11 @@
                         Avago,ppcount = <8>;
                         Avago,pdrive = <0>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                         Avago,near_offset = <200>;
+=======
+                        Avago,near_offset = <150>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
                         Avago,near_offset = <150>;
 >>>>>>> 0093d79... Overlay of LG soruce drop

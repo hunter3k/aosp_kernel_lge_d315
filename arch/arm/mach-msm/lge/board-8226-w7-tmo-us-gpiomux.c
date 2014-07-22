@@ -89,7 +89,11 @@ static struct msm_gpiomux_config msm_blsp_configs[] __initdata = {
 		},
 	},
 <<<<<<< HEAD
+<<<<<<< HEAD
 //#ifdef CONFIG_MACH_LGE  /* LGE_CHANGE_S,  Added for COMMON_I2C */
+=======
+//                                                                 
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                 
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -468,7 +472,11 @@ static struct msm_gpiomux_config msm_atmel_configs_rev_e[] __initdata = {
 //Need to set GPIO[021] NFC_IRQ
 //Need to set GPIO[022] NFC_MODE
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*  LGE_CHANGE_S, [NFC][garam.kim@lge.com], NFC Bring up*/
+=======
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                      */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -550,7 +558,11 @@ static struct msm_gpiomux_config msm_nfc_configs[] __initdata = {
 };
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*  LGE_CHANGE_E, [NFC][garam.kim@lge.com], NFC Bring up*/
+=======
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                      */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -826,7 +838,11 @@ static struct gpiomux_setting sd_card_det_sleep_config = {
 	.dir = GPIOMUX_IN,
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 #else // not CONFIG_MACH_LGE
+=======
+#else //                    
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #else //                    
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -837,7 +853,11 @@ static struct gpiomux_setting sd_card_det_sleep_config = {
 	.dir = GPIOMUX_IN,
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif // CONFIG_MACH_LGE
+=======
+#endif //                
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif //                
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1147,17 +1167,23 @@ void __init msm8226_init_gpiomux(void)
 
 	// GPIO related function <<5.NFC>>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/*	LGE_CHANGE_S, [NFC][garam.kim@lge.com], NFC Bring up */
 #ifdef CONFIG_LGE_NFC_PN547
 	msm_gpiomux_install(msm_nfc_configs, ARRAY_SIZE(msm_nfc_configs));
 #endif
 	/*	LGE_CHANGE_E, [NFC][garam.kim@lge.com], NFC Bring up */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	/*                                                      */
 #ifdef CONFIG_LGE_NFC_PN547
 	msm_gpiomux_install(msm_nfc_configs, ARRAY_SIZE(msm_nfc_configs));
 #endif
 	/*                                                      */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 

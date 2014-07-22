@@ -506,12 +506,15 @@ config LGE_PM
 	  with battery FET and fuel gauge.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 config EXTERNAL_FUELGAUGE
 	tristate "extenal fuel gauging external driver"
 	depends on I2C && LGE_PM
 	default n
 	help
 	  Say Y here to enable support for external fuel gauge chip lge feature.
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 config MAX17048_FUELGAUGE
@@ -566,12 +569,15 @@ config LGE_PM_CHARGING_TEMP_SCENARIO
 	  Say Y here to enable LGE Charging Temp Scenario
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 config LGE_PM_VZW_CHARGING_TEMP_SCENARIO
 	bool "VZW Charging Temp Scenario"
 	depends on LGE_PM
 	help
 	  Say Y here to enable LGE Charging Temp Scenario
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 config LGE_PM_BATTERY_PROFILE_DATA
@@ -645,13 +651,19 @@ config LGE_PM_VZW_FAST_CHG
 	  Say Y here to meet VZW requirement.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 config LGE_PM_VZW_HIGH_TEMP_PWR_OFF
 	bool "Notify power-off due to high temperature in chargerlogo"
 	depends on LGE_PM
 	help
 	  Say Y here to notify in chargerlogo when occurring power-off due to high temperature
 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 config LGE_PM_VZW_LLK
 	bool "VZW store mode"
@@ -677,6 +689,7 @@ config LGE_PM_WORKAROUND_PORT_OPEN_FAIL_IN_FACTORY_TEST
 	help
 	  This code is workaround code for OVD detection by USBIN Voltage in factory test
 <<<<<<< HEAD
+<<<<<<< HEAD
 	  
 config LGE_PM_BMS_FACTORY_TEST
 	bool "Workaround code for fuel gauge fail in factory test"
@@ -701,6 +714,9 @@ config LGE_WIRELESS_CHARGER_RT9536
 	default n
 	help
 	   Say Y here to support rt9536 wireless charger
+=======
+
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 
 >>>>>>> 0093d79... Overlay of LG soruce drop

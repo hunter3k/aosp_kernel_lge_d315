@@ -397,7 +397,11 @@ static void audit_printk_skb(struct sk_buff *skb)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //jaejyn.shin@lge.com
+=======
+//                   
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                   
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -428,7 +432,11 @@ static void kauditd_send_skb(struct sk_buff *skb)
 		audit_hold_skb(skb);
 	} else{
 <<<<<<< HEAD
+<<<<<<< HEAD
 		audit_printk_skb_without_drop(skb); //jaejyn.shin@lge.com
+=======
+		audit_printk_skb_without_drop(skb); //                   
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		audit_printk_skb_without_drop(skb); //                   
 >>>>>>> 0093d79... Overlay of LG soruce drop

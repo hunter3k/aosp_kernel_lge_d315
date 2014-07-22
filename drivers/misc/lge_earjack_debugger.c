@@ -59,6 +59,7 @@ static irqreturn_t earjack_debugger_irq_handler(int irq, void *_dev)
 	int detect;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE_S
 	 * add debounce time because accure earjack popup noise
 	 * sangwoo2.park@lge.com 2012/12/20
@@ -66,12 +67,17 @@ static irqreturn_t earjack_debugger_irq_handler(int irq, void *_dev)
 	msleep(400);
 	/* LGE_CHANGE_E */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	/*             
                                                         
                                     
   */
 	msleep(400);
 	/*              */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 	detect = earjack_debugger_detected(adev);

@@ -103,6 +103,7 @@
 		qcom,mem3  = <0xC6 0x00 1 0 1 0>;
 	};
 <<<<<<< HEAD
+<<<<<<< HEAD
 	eeprom2: qcom,eeprom@a0 {
 		cell-index = <0>;
 		reg = <0xa0 0x0>;
@@ -133,11 +134,16 @@
 		reg = <0x20 0x0>;
 		qcom,slave-id = <0x20 0x0 0x111>;
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	/* Rev 0 */
 	qcom,camera_rev_0@34 {
 		compatible = "qcom,imx111";
 		reg = <0x34 0x0>;
 		qcom,slave-id = <0x34 0x0 0x111>;
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		qcom,csiphy-sd-index = <0>;
 		qcom,csid-sd-index = <0>;
@@ -211,15 +217,21 @@
 
 	/* Rev A */
 <<<<<<< HEAD
+<<<<<<< HEAD
 		qcom,camera_rev_a@20 {
 		compatible = "qcom,imx111";
 		reg = <0x20 0x0>;
 		qcom,slave-id = <0x20 0x0 0x111>;
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	qcom,camera_rev_a@34 {
 		compatible = "qcom,imx111";
 		reg = <0x34 0x0>;
 		qcom,slave-id = <0x34 0x0 0x111>;
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		qcom,csiphy-sd-index = <0>;
 		qcom,csid-sd-index = <0>;
@@ -253,6 +265,7 @@
 		qcom,sensor-mode = <1>;
 		qcom,cci-master = <0>;
 		status = "okay";
+<<<<<<< HEAD
 <<<<<<< HEAD
 		revision = "rev_a";
 	};
@@ -296,6 +309,9 @@
 =======
 		revision = "rev_a...";
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+		revision = "rev_a...";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	};
 	qcom,camera_rev_a@6e {
 		compatible = "qcom,imx119";
@@ -330,6 +346,7 @@
 		qcom,sensor-mode = <1>;
 		qcom,cci-master = <0>;
 		status = "ok";
+<<<<<<< HEAD
 <<<<<<< HEAD
 		revision = "rev_a";
 	};
@@ -444,6 +461,9 @@
 		qcom,cci-master = <0>;
 		status = "ok";
 		revision = "rev_b...";
+=======
+		revision = "rev_a...";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		revision = "rev_a...";
 >>>>>>> 0093d79... Overlay of LG soruce drop

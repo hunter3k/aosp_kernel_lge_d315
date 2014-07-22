@@ -92,7 +92,10 @@
 				maker_id = <0>;
 				maker_id_gpio = <0>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 				maker_id2_gpio = <0>;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 				finger_reg_offset=<0>; /*s2202 : 0, s2200 : 1*/
@@ -123,6 +126,7 @@
 				reset_delay = <20>;
 				suspend_pwr = <0>;
 				resume_pwr = <1>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 				jitter_filter_enable = <0>;
 				jitter_curr_ratio = <26>;
@@ -195,6 +199,11 @@
 				jitter_filter_enable = <0>;
 				jitter_curr_ratio = <26>;
 				accuracy_filter_enable = <0>;
+=======
+				jitter_filter_enable = <1>;
+				jitter_curr_ratio = <26>;
+				accuracy_filter_enable = <1>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 				jitter_filter_enable = <1>;
 				jitter_curr_ratio = <26>;
@@ -362,15 +371,21 @@
 			atmel,irq-gpio = <&msmgpio 17 0x00>;
 			atmel,numtouch = <8>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 			atmel,t15_key_state = <1 2>;
 			atmel,t15_key_map = <158 139>;
 			atmel,accuracy_filter_enable = <0>;
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			atmel,irqflags = <0x00000002>;
 			atmel,t15_key_state = <1 2>;
 			atmel,t15_key_map = <158 139>;
 			atmel,accuracy_filter_enable = <0>;
 			atmel,ghost_detection_enable = <0>;
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 			atmel,knock_on_type = <1>;
 			atmel,auto_fw_update = <1>;
@@ -379,6 +394,7 @@
 			atmel,t15_extra_key_state = <0 0>;
 			atmel,extra_fw_name = "atmel/xxx.fw";
 			atmel,global_access_pixel = <5>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 			atmel,use_mfts = <0>; // Enable for CoF type only
 			atmel,lcd_x = <540>;
@@ -390,6 +406,8 @@
 			atmel,ghost_detection_enable = <0>;
 			atmel,ghost_detection_value = <10 10 100 25 250 10 0>;
 			atmel,error_check_count = <1 3 3 5 10>;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		};
@@ -613,6 +631,7 @@
 			vdd_on = <0>;
 			vio_l19_on = <0>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 			vio_l6_on = <0>;
 			vio_lvs1_on = <0>;
 			vdd-supply = <&pm8226_l28>;
@@ -640,6 +659,14 @@
 			vio_lvs1-supply = <&pm8226_lvs1>;
 			vdd_voltage = <2850000>;
 			vio_l19_voltage = <2850000>;
+=======
+			vio_lvs1_on = <0>;
+			vdd-supply = <&pm8226_l28>;
+			vio_l19-supply = <&pm8226_l19>;
+			vio_lvs1-supply = <&pm8226_lvs1>;
+			vdd_voltage = <2950000>;
+			vio_l19_voltage = <2850000>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			vio_lvs1_voltage = <0>; // Not control
 			interrupt-parent = <&msmgpio>;
 			interrupts = <66 0x2004>;
@@ -647,6 +674,7 @@
 			irq_wake = <0>;
 			status ="disable";
 		};
+<<<<<<< HEAD
 
 		/* X3 models use only */
 		lge_ts_misc_revb {
@@ -682,6 +710,8 @@
 
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		atmel_s540@4a {
 			compatible = "atmel,s540";
 			status = "disable";
@@ -706,7 +736,11 @@
 					00 00 00 00 00 00 00		];	/* 	0 RESET, 1 BACKUP, 2 CAL, 3 REPORT, 4 Reserved, 5 DIAG, 6 Reserved	 */
 				atmel,config_t38 = [	26			/* 	[SPT_USERDATA_T38 INSTANCE 0]	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 					01			/* 	0 1 DATA[0]	 */
+=======
+					00			/* 	0 1 DATA[0]	 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 					00			/* 	0 1 DATA[0]	 */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -719,9 +753,15 @@
 					00		];	/* 	7 1 DATA[7]	 */
 				atmel,config_t71 = [	47			/* 	[SPT_DYNAMICCONFIGURATIONCONTAINER_T71 INSTANCE 0]	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 					00			/* 	0 1 DATA[0]	 */
 					00			/* 	1 1 DATA[1]	 */
 					00			/* 	2 1 DATA[2]	 */
+=======
+					64			/* 	0 1 DATA[0]	 */
+					17			/* 	1 1 DATA[1]	 */
+					23			/* 	2 1 DATA[2]	 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 					64			/* 	0 1 DATA[0]	 */
 					17			/* 	1 1 DATA[1]	 */
@@ -838,6 +878,7 @@
 					00		];	/* 	111 1 DATA[111]	 */
 				atmel,config_t7 = [	07			/* 	[GEN_POWERCONFIG_T7 INSTANCE 0]	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 					20			/* 	0 1 IDLEACQINT	 */
 					07			/* 	1 1 ACTVACQINT	 */
 					19			/* 	2 1 ACTV2IDLETO	 */
@@ -852,6 +893,8 @@
 					00			/* 	5 1 SYNC	 */
 					FE			/* 	6 1 ATCHCALST	 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 					30			/* 	0 1 IDLEACQINT	 */
 					07			/* 	1 1 ACTVACQINT	 */
 					05			/* 	2 1 ACTV2IDLETO	 */
@@ -865,6 +908,9 @@
 					00			/* 	4 1 TCHAUTOCAL	 */
 					00			/* 	5 1 SYNC	 */
 					FF			/* 	6 1 ATCHCALST	 */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 					01			/* 	7 1 ATCHCALSTHR	 */
 					00			/* 	8 1 ATCHFRCCALTHR	 */
@@ -879,17 +925,23 @@
 					00			/* 	1 1 XORIGIN	 */
 					00			/* 	2 1 YORIGIN	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 					00			/* 	3 1 XSIZE	 */
 					00			/* 	4 1 YSIZE	 */
 					00			/* 	5 1 AKSCFG	 */
 					00			/* 	6 1 BLEN	 */
 					00			/* 	7 1 TCHTHR	 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 					04			/* 	3 1 XSIZE	 */
 					02			/* 	4 1 YSIZE	 */
 					00			/* 	5 1 AKSCFG	 */
 					00			/* 	6 1 BLEN	 */
 					1E			/* 	7 1 TCHTHR	 */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 					00			/* 	8 1 TCHDI	 */
 					00			/* 	9 1 TCHHYST	 */
@@ -899,9 +951,15 @@
 					00		];	/* 	1 1 COMMAND	 */
 				atmel,config_t19 = [	13			/* 	[SPT_GPIOPWM_T19 INSTANCE 0]	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 					00			/* 	0 1 CTRL	 */
 					00			/* 	1 1 REPORTMASK	 */
 					00			/* 	2 1 DIR	 */
+=======
+					01			/* 	0 1 CTRL	 */
+					00			/* 	1 1 REPORTMASK	 */
+					3C			/* 	2 1 DIR	 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 					01			/* 	0 1 CTRL	 */
 					00			/* 	1 1 REPORTMASK	 */
@@ -926,7 +984,11 @@
 					00		];	/* 	15 1 CFG	 */
 				atmel,config_t24 = [	18			/* 	[PROCI_ONETOUCHGESTUREPROCESSOR_T24 INSTANCE 0]	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 					02			/* 	0 1 CTRL	 */
+=======
+					0F			/* 	0 1 CTRL	 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 					0F			/* 	0 1 CTRL	 */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -942,7 +1004,11 @@
 					00	00		/* 	11 2 FLICKTHR	 */
 					00	00		/* 	13 2 DRAGTHR	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 					D8	00		/* 	15 2 TAPTHR	 */
+=======
+					90	01		/* 	15 2 TAPTHR	 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 					90	01		/* 	15 2 TAPTHR	 */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -952,22 +1018,29 @@
 					00			/* 	1 1 CMD	 */
 					30	75		/* 	2 2 SIGLIM[0].UPSIGLIM	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 					08	52		/* 	4 2 SIGLIM[0].LOSIGLIM	 */
 					30	75		/* 	6 2 SIGLIM[1].UPSIGLIM	 */
 					08	52		/* 	8 2 SIGLIM[1].LOSIGLIM	 */
 					30	75		/* 	10 2 SIGLIM[2].UPSIGLIM	 */
 					08	52		/* 	12 2 SIGLIM[2].LOSIGLIM	 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 					F0	55		/* 	4 2 SIGLIM[0].LOSIGLIM	 */
 					30	75		/* 	6 2 SIGLIM[1].UPSIGLIM	 */
 					F0	55		/* 	8 2 SIGLIM[1].LOSIGLIM	 */
 					30	75		/* 	10 2 SIGLIM[2].UPSIGLIM	 */
 					F0	55		/* 	12 2 SIGLIM[2].LOSIGLIM	 */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 					C8			/* 	14 1 PINDWELLUS	 */
 					A0	0F		/* 	15 2 SIGRANGELIM[0]	 */
 					A0	0F		/* 	17 2 SIGRANGELIM[1]	 */
 					A0	0F	];	/* 	19 2 SIGRANGELIM[2]	 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 				atmel,config_t40 = [	28			/* 	[PROCI_GRIPSUPPRESSION_T40 INSTANCE 0]	 */
 					00			/* 	0 1 CTRL	 */
@@ -987,6 +1060,8 @@
 					00			/* 	8 1 SUPDIST	 */
 					00			/* 	9 1 DISTHYST	 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 				atmel,config_t35 = [	23			/* 	[SPT_PROTOTYPE_T35 INSTANCE 0 ADDRESS 589 SIZE 128]	 */
 					00			/* 	0 1 PROTOTYPE_DATA[0]	 */
 					00			/* 	1 1 PROTOTYPE_DATA[1]	 */
@@ -1133,13 +1208,20 @@
 					19			/* 	7 1 SHAPESTRENGTH	 */
 					01			/* 	8 1 SUPDIST	 */
 					01			/* 	9 1 DISTHYST	 */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 					00			/* 	10 1 MAXSCRNAREA	 */
 					04			/* 	11 1 CFG	 */
 					00		];	/* 	12 1 UNKNOWN[12]	 */
 				atmel,config_t46 = [	2E			/* 	[SPT_CTECONFIG_T46 INSTANCE 0]	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 					04			/* 	0 1 CTRL	 */
+=======
+					0C			/* 	0 1 CTRL	 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 					0C			/* 	0 1 CTRL	 */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1153,6 +1235,7 @@
 					01		];	/* 	9 1 XVOLTAGE	 */
 				atmel,config_t47 = [	2F			/* 	[PROCI_STYLUS_T47 INSTANCE 0]	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 					19			/* 	0 1 CTRL	 */
 					00			/* 	1 1 CONTMIN	 */
 					FF			/* 	2 1 CONTMAX	 */
@@ -1164,6 +1247,8 @@
 					03			/* 	8 1 CONFTHR	 */
 					20			/* 	9 1 SYNCSPERX	 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 					09			/* 	0 1 CTRL	 */
 					14			/* 	1 1 CONTMIN	 */
 					3C			/* 	2 1 CONTMAX	 */
@@ -1174,6 +1259,9 @@
 					96			/* 	7 1 HOVERSUP	 */
 					01			/* 	8 1 CONFTHR	 */
 					10			/* 	9 1 SYNCSPERX	 */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 					E0			/* 	10 1 XPOSADJ	 */
 					E0			/* 	11 1 YPOSADJ	 */
@@ -1188,15 +1276,21 @@
 					00			/* 	20 1 SUPSTYTO	 */
 					00			/* 	21 1 MAXNUMSTY	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 					8E			/* 	22 1 XEDGECTRL	 */
 					2A			/* 	23 1 XEDGEDIST	 */
 					82			/* 	24 1 YEDGECTRL	 */
 					2D		];	/* 	25 1 YEDGEDIST	 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 					9E			/* 	22 1 XEDGECTRL	 */
 					23			/* 	23 1 XEDGEDIST	 */
 					AA			/* 	24 1 YEDGECTRL	 */
 					3C		];	/* 	25 1 YEDGEDIST	 */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 				atmel,config_t55 = [	37			/* 	[PROCI_ADAPTIVETHRESHOLD_T55 INSTANCE 0]	 */
 					00			/* 	0 1 CTRL	 */
@@ -1207,6 +1301,7 @@
 					00			/* 	5 1 FORCECHGTIME	 */
 					00		];	/* 	6 1 LOWESTTHR	 */
 				atmel,config_t56 = [	38			/* 	[PROCI_SHIELDLESS_T56 INSTANCE 0]	 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 					03			/* 	0 1 CTRL	 */
 					00			/* 	1 1 COMMAND	 */
@@ -1243,6 +1338,8 @@
 					05			/* 	32 1 INTDELAY[28]	 */
 					05			/* 	33 1 INTDELAY[29]	 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 					00			/* 	0 1 CTRL	 */
 					00			/* 	1 1 COMMAND	 */
 					01			/* 	2 1 OPTINT	 */
@@ -1277,6 +1374,9 @@
 					08			/* 	31 1 INTDELAY[27]	 */
 					08			/* 	32 1 INTDELAY[28]	 */
 					00			/* 	33 1 INTDELAY[29]	 */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 					00			/* 	34 1 MULTICUTGC	 */
 					00		];	/* 	35 1 GCLIMIT	 */
@@ -1285,7 +1385,11 @@
 					00			/* 	1 1 CMD	 */
 					00			/* 	2 1 MODE	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 					96	00		/* 	3 2 PERIOD	 */
+=======
+					00	00		/* 	3 2 PERIOD	 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 					00	00		/* 	3 2 PERIOD	 */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1296,7 +1400,11 @@
 					00	00	];	/* 	3 2 PERIOD	 */
 				atmel,config_t65 = [	41			/* 	[PROCI_LENSBENDING_T65 INSTANCE 0]	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 					01			/* 	0 1 CTRL	 */
+=======
+					00			/* 	0 1 CTRL	 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 					00			/* 	0 1 CTRL	 */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1329,6 +1437,7 @@
 					00		];	/* 	8 1 AREATHRTO	 */
 				atmel,config_t70 = [	46			/* 	[SPT_DYNAMICCONFIGURATIONCONTROLLER_T70 INSTANCE 0]	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 					00			/* 	0 1 CTRL	 */
 					19	00		/* 	1 2 EVENT	 */
 					64			/* 	3 1 OBJTYPE	 */
@@ -1340,6 +1449,8 @@
 								/* 	[SPT_DYNAMICCONFIGURATIONCONTROLLER_T70 INSTANCE 1]	 */
 					00		/* 	0 1 CTRL	 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 					02			/* 	0 1 CTRL	 */
 					17	00		/* 	1 2 EVENT	 */
 					64			/* 	3 1 OBJTYPE	 */
@@ -1350,11 +1461,15 @@
 					00			/* 	9 1 LENGTH	 */
 								/* 	[SPT_DYNAMICCONFIGURATIONCONTROLLER_T70 INSTANCE 1]	 */
 					02		/* 	0 1 CTRL	 */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 					15	00		/* 	1 2 EVENT	 */
 					64			/* 	3 1 OBJTYPE	 */
 					00			/* 	4 1 RESERVED[0]	 */
 					00			/* 	5 1 OBJINST	 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 					27			/* 	6 1 DSTOFFSET	 */
 					02	00		/* 	7 2 SRCOFFSET	 */
@@ -1378,6 +1493,8 @@
 					00	00		/* 	7 2 SRCOFFSET	 */
 					00			/* 	9 1 LENGTH	 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 					20			/* 	6 1 DSTOFFSET	 */
 					01	00		/* 	7 2 SRCOFFSET	 */
 					00			/* 	9 1 LENGTH	 */
@@ -1399,6 +1516,9 @@
 					0C			/* 	6 1 DSTOFFSET	 */
 					0B	00		/* 	7 2 SRCOFFSET	 */
 					08			/* 	9 1 LENGTH	 */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 								/* 	[SPT_DYNAMICCONFIGURATIONCONTROLLER_T70 INSTANCE 4]	 */
 					00			/* 	0 1 CTRL	 */
@@ -1443,23 +1563,34 @@
 					11			/* 	3 1 CFG2	 */
 					00			/* 	4 1 DEBUGCFG	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 					05			/* 	5 1 HOPCNT	 */
 					0A			/* 	6 1 HOPCNTPER	 */
 					05			/* 	7 1 HOPEVALTO	 */
 					05			/* 	8 1 HOPST	 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 					01			/* 	5 1 HOPCNT	 */
 					01			/* 	6 1 HOPCNTPER	 */
 					05			/* 	7 1 HOPEVALTO	 */
 					02			/* 	8 1 HOPST	 */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 					40			/* 	9 1 NLGAINDUALX	 */
 					0A			/* 	10 1 MINNLTHR	 */
 					0A			/* 	11 1 INCNLTHR	 */
 					08			/* 	12 1 FALLNLTHR	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 					0A			/* 	13 1 NLTHRMARGIN	 */
 					20			/* 	14 1 MINTHRADJ	 */
+=======
+					05			/* 	13 1 NLTHRMARGIN	 */
+					10			/* 	14 1 MINTHRADJ	 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 					05			/* 	13 1 NLTHRMARGIN	 */
 					10			/* 	14 1 MINTHRADJ	 */
@@ -1470,6 +1601,7 @@
 					78			/* 	18 1 BLKNLTHR	 */
 					00			/* 	19 1 CFG3	 */
 					00			/* 	20 1 STATE[0]_CTRL	 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 					01			/* 	21 1 STATE[0]_FREQ[0]	 */
 					02			/* 	22 1 STATE[0]_FREQ[1]	 */
@@ -1497,6 +1629,8 @@
 					02			/* 	44 1 STATE[1]_FREQ[3]	 */
 					01			/* 	45 1 STATE[1]_FREQ[4]	 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 					02			/* 	21 1 STATE[0]_FREQ[0]	 */
 					03			/* 	22 1 STATE[0]_FREQ[1]	 */
 					02			/* 	23 1 STATE[0]_FREQ[2]	 */
@@ -1522,6 +1656,9 @@
 					02			/* 	43 1 STATE[1]_FREQ[2]	 */
 					0E			/* 	44 1 STATE[1]_FREQ[3]	 */
 					10			/* 	45 1 STATE[1]_FREQ[4]	 */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 					30			/* 	46 1 STATE[1]_TCHAPX[0]	 */
 					30			/* 	47 1 STATE[1]_TCHAPX[1]	 */
@@ -1534,6 +1671,7 @@
 					30			/* 	54 1 STATE[1]_NOTCHAPX[3]	 */
 					30			/* 	55 1 STATE[1]_NOTCHAPX[4]	 */
 					00			/* 	56 1 STATE[1]_PC	 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 					07			/* 	57 1 STATE[1]_LOWNLTHR	 */
 					0F			/* 	58 1 STATE[1]_HIGHNLTHR	 */
@@ -1559,6 +1697,8 @@
 					00			/* 	78 1 STATE[2]_HIGHNLTHR	 */
 					11		];	/* 	79 1 STATE[2]_CNT	 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 					06			/* 	57 1 STATE[1]_LOWNLTHR	 */
 					11			/* 	58 1 STATE[1]_HIGHNLTHR	 */
 					14			/* 	59 1 STATE[1]_CNT	 */
@@ -1582,6 +1722,9 @@
 					0F			/* 	77 1 STATE[2]_LOWNLTHR	 */
 					00			/* 	78 1 STATE[2]_HIGHNLTHR	 */
 					00		];	/* 	79 1 STATE[2]_CNT	 */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 				atmel,config_t78 = [	4E			/* 	[PROCI_GLOVEDETECTION_T78 INSTANCE 0]	 */
 					00			/* 	0 1 CTRL	 */
@@ -1601,6 +1744,7 @@
 					00			/* 	4 1 ATCHTHR	 */
 					00			/* 	5 1 MOISTCFG	 */
 					00		];	/* 	6 1 MOISTDTO	 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 				atmel,config_t92 = [	5C			/* 	[UNKNOWN_T92 INSTANCE 0]	 */
 					00			/* 	0 1 UNKNOWN[0]	 */
@@ -1753,11 +1897,16 @@
 					2C			/* 	16 1 UNKNOWN[16]	 */
 					00		];	/* 	17 1 UNKNOWN[17]	 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 				atmel,config_t84 = [	54			/* 	[PROCI_GESTUREPROCESSOR_T84 INSTANCE 0]	 */
 					00			/* 	0 1 CTRL	 */
 					00			/* 	1 1 ZONETHR	 */
 					00			/* 	2 1 DIREL	 */
 					00		];	/* 	3 1 DTO	 */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 				atmel,config_t100 = [	64			/* 	[TOUCH_MULTITOUCHSCREEN_T100 INSTANCE 0]	 */
 					83			/* 	0 1 CTRL	 */
@@ -1789,6 +1938,7 @@
 					06			/* 	28 1 GAIN	 */
 					03			/* 	29 1 DXGAIN	 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 					55			/* 	30 1 TCHTHR	 */
 					15			/* 	31 1 TCHHYST	 */
 					19			/* 	32 1 INTTHR	 */
@@ -1812,6 +1962,8 @@
 					00			/* 	52 1 SCRAREAHYST	 */
 					06		];	/* 	53 1 INTTHRHYST	 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 					3C			/* 	30 1 TCHTHR	 */
 					0A			/* 	31 1 TCHHYST	 */
 					17			/* 	32 1 INTTHR	 */
@@ -1834,6 +1986,9 @@
 					00			/* 	51 1 AMPLHYST	 */
 					00			/* 	52 1 SCRAREAHYST	 */
 					0A		];	/* 	53 1 INTTHRHYST	 */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 				atmel,config_t101 = [	65			/* 	[SPT_TOUCHSCREENHOVER_T101 INSTANCE 0]	 */
 					00			/* 	0 1 CTRL	 */

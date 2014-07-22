@@ -76,7 +76,11 @@ const char *hw_platform[] = {
 
 #ifdef CONFIG_MACH_LGE
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE platform id */
+=======
+/*                 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                 */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -89,9 +93,12 @@ enum {
         HW_PLATFORM_LG_X3      = 103,
         HW_PLATFORM_LG_W3      = 121,
 <<<<<<< HEAD
+<<<<<<< HEAD
         HW_PLATFORM_LG_E7WIFI  = 161,
         HW_PLATFORM_LG_E7LTE   = 162,
         HW_PLATFORM_LG_E9      = 171,
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		HW_PLATFORM_LGE_INVALID= 200
@@ -103,10 +110,14 @@ const char *hw_platform_lge[] = {
         [HW_PLATFORM_LG_X5 - HW_PLATFORM_LGE_START]    = "X5",
         [HW_PLATFORM_LG_X3 - HW_PLATFORM_LGE_START]    = "X3",
 <<<<<<< HEAD
+<<<<<<< HEAD
         [HW_PLATFORM_LG_W3 - HW_PLATFORM_LGE_START]    = "W3",
         [HW_PLATFORM_LG_E7WIFI - HW_PLATFORM_LGE_START] = "E7WIFI",
         [HW_PLATFORM_LG_E7LTE - HW_PLATFORM_LGE_START] = "E7LTE",
         [HW_PLATFORM_LG_E9 - HW_PLATFORM_LGE_START]    = "E9",
+=======
+        [HW_PLATFORM_LG_W3 - HW_PLATFORM_LGE_START]    = "W3"
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
         [HW_PLATFORM_LG_W3 - HW_PLATFORM_LGE_START]    = "W3"
 >>>>>>> 0093d79... Overlay of LG soruce drop

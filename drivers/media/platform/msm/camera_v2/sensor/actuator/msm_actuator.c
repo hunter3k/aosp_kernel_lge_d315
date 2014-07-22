@@ -28,9 +28,15 @@ DEFINE_MSM_MUTEX(msm_actuator_mutex);
 #endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S Lens Pos Default Infinity, sungmin.woo@lge.com, 2013-06-20 */
 #define PLACE_LENS_INF_POS_WHEN_ENTER_CAMERA
 /* LGE_CHANGE_E Lens Pos Default Infinity, sungmin.woo@lge.com, 2013-06-20 */
+=======
+/*                                                                         */
+#define PLACE_LENS_INF_POS_WHEN_ENTER_CAMERA
+/*                                                                         */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                         */
 #define PLACE_LENS_INF_POS_WHEN_ENTER_CAMERA
@@ -113,6 +119,7 @@ static void msm_actuator_parse_i2c_params(struct msm_actuator_ctrl_t *a_ctrl,
 				i2c_byte1 = write_arr[i].reg_addr;
 				i2c_byte2 = value;
 <<<<<<< HEAD
+<<<<<<< HEAD
 				/* LGE_CHANGE_S, jaehan.jeong, 2014.2.13, To apply  the change I2C order for DW9718, [STARTS HERE] */
 				switch (actuator_name) {
 				case ACTUATOR_MAIN_CAM_2:
@@ -135,6 +142,27 @@ static void msm_actuator_parse_i2c_params(struct msm_actuator_ctrl_t *a_ctrl,
 #ifdef CONFIG_IMX179 /*                                                                 */ 
 				if (size != (i+1)) {
 					i2c_byte2 = (value & 0xFF00) >> 8;
+=======
+#ifdef CONFIG_IMX179 /*                                                                 */ 
+				if (size != (i+1)) {
+					i2c_byte2 = (value & 0xFF00) >> 8;
+					CDBG("byte1:0x%x, byte2:0x%x\n",
+						i2c_byte1, i2c_byte2);
+					i2c_tbl[a_ctrl->i2c_tbl_index].
+						reg_addr = i2c_byte1;
+					i2c_tbl[a_ctrl->i2c_tbl_index].
+						reg_data = i2c_byte2;
+					i2c_tbl[a_ctrl->i2c_tbl_index].
+						delay = 0;
+					a_ctrl->i2c_tbl_index++;
+					i++;
+					i2c_byte1 = write_arr[i].reg_addr;
+					i2c_byte2 = (value & 0x00FF);
+				}
+#else
+					if (size != (i+1)) {
+					i2c_byte2 = value & 0xFF;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 					CDBG("byte1:0x%x, byte2:0x%x\n",
 						i2c_byte1, i2c_byte2);
 					i2c_tbl[a_ctrl->i2c_tbl_index].
@@ -164,7 +192,11 @@ static void msm_actuator_parse_i2c_params(struct msm_actuator_ctrl_t *a_ctrl,
 					break;
 				}
 <<<<<<< HEAD
+<<<<<<< HEAD
 				/* LGE_CHANGE_E, jaehan.jeong, 2014.2.13, To apply  the change I2C order for DW9718,  [ENDS HERE] */
+=======
+#endif
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -315,9 +347,15 @@ static int32_t msm_actuator_move_focus(
 	struct msm_camera_i2c_reg_setting reg_setting;
 #if 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, fix kernel sometimes crash while AF, 2013.11.4, yousung.kang@lge.com */
    struct damping_params_t damping_param, *usr_damping_param ;
 /* LGE_CHANGE_E, fix kernel sometimes crash while AF, 2013.11.4, yousung.kang@lge.com  */
+=======
+/*                                                                                    */
+   struct damping_params_t damping_param, *usr_damping_param ;
+/*                                                                                     */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                    */
    struct damping_params_t damping_param, *usr_damping_param ;
@@ -401,7 +439,11 @@ static int32_t msm_actuator_init_step_table(struct msm_actuator_ctrl_t *a_ctrl,
 	uint32_t max_code_size = 1;
 	uint16_t data_size = set_info->actuator_params.data_size;
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S Lens Pos Default Infinity, sungmin.woo@lge.com, 2013-06-20 */
+=======
+/*                                                                         */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                         */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -410,7 +452,11 @@ static int32_t msm_actuator_init_step_table(struct msm_actuator_ctrl_t *a_ctrl,
 	uint16_t inf_pos= 0;
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E Lens Pos Default Infinity, sungmin.woo@lge.com, 2013-06-20 */
+=======
+/*                                                                         */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                         */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -459,17 +505,23 @@ static int32_t msm_actuator_init_step_table(struct msm_actuator_ctrl_t *a_ctrl,
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE_S, Set EEPROM, kyungjin.min@lge.com, 2013-04-29 */
 	for (step_index = 0;
 		step_index < set_info->af_tuning_params.total_steps;
 		step_index++)
 	/* LGE_CHANGE_S, Remove log for reducing current, seongjo.kim@lge.com, 2013-06-26 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	/*                                                            */
 	for (step_index = 0;
 		step_index < set_info->af_tuning_params.total_steps;
 		step_index++)
 	/*                                                                                */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	{
 		if (current_moment == CAMERA_ENTER_MOMENT)
@@ -480,15 +532,21 @@ static int32_t msm_actuator_init_step_table(struct msm_actuator_ctrl_t *a_ctrl,
 		}
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE_E, Remove log for reducing current, seongjo.kim@lge.com, 2013-06-26 */
 	/* LGE_CHANGE_E, Set EEPROM, kyungjin.min@lge.com, 2013-04-29 */
 
 /* LGE_CHANGE_S Lens Pos Default Infinity, sungmin.woo@lge.com, 2013-06-20 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	/*                                                                                */
 	/*                                                            */
 
 /*                                                                         */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #ifdef PLACE_LENS_INF_POS_WHEN_ENTER_CAMERA
 	inf_pos = a_ctrl->step_position_table[15];
@@ -497,7 +555,11 @@ static int32_t msm_actuator_init_step_table(struct msm_actuator_ctrl_t *a_ctrl,
 	wdata[1] = ((inf_pos & 0x000F)<<4) | 0b0100 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE_S Exception Lens Pos Default Infinity only enter moment, seongjo.kim@lge.com, 2013-06-23 */
+=======
+	/*                                                                                                     */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                                                                                                     */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -511,9 +573,15 @@ static int32_t msm_actuator_init_step_table(struct msm_actuator_ctrl_t *a_ctrl,
 		pr_err("Place lens on INF pos!\n");
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE_E Exception Lens Pos Default Infinity only enter moment, seongjo.kim@lge.com, 2013-06-23 */
 #endif
 /* LGE_CHANGE_E Lens Pos Default Infinity, sungmin.woo@lge.com, 2013-06-20 */
+=======
+	/*                                                                                                     */
+#endif
+/*                                                                         */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                                                                                                     */
 #endif
@@ -536,15 +604,21 @@ static int32_t msm_actuator_set_default_focus(
 		rc = a_ctrl->func_tbl->actuator_move_focus(a_ctrl, move_params);
 #else
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHAGNE_S, change actuator default position, 2013-06-14, hyungmoo.huh@lge.com */
 	if (a_ctrl->curr_step_pos != move_params->dest_step_pos)
 		rc = a_ctrl->func_tbl->actuator_move_focus(a_ctrl, move_params);
 /* LGE_CHAGNE_E, change actuator default position, 2013-06-14, hyungmoo.huh@lge.com */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                                                                                  */
 	if (a_ctrl->curr_step_pos != move_params->dest_step_pos)
 		rc = a_ctrl->func_tbl->actuator_move_focus(a_ctrl, move_params);
 /*                                                                                  */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #endif
 	CDBG("Exit\n");
@@ -781,9 +855,15 @@ static int msm_actuator_open(struct v4l2_subdev *sd,
 	struct msm_actuator_ctrl_t *a_ctrl =  v4l2_get_subdevdata(sd);
 	CDBG("Enter\n");
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE_S Exception Lens Pos Default Infinity only enter moment, seongjo.kim@lge.com, 2013-06-23 */
 	current_moment = CAMERA_ENTER_MOMENT;
 	/* LGE_CHANGE_E Exception Lens Pos Default Infinity only enter moment, seongjo.kim@lge.com, 2013-06-23 */
+=======
+	/*                                                                                                     */
+	current_moment = CAMERA_ENTER_MOMENT;
+	/*                                                                                                     */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                                                                                                     */
 	current_moment = CAMERA_ENTER_MOMENT;
@@ -794,7 +874,11 @@ static int msm_actuator_open(struct v4l2_subdev *sd,
 		return -EINVAL;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	#ifndef CONFIG_HI543  /* LGE_CHANGE, HI543 bring up, 2013-07-26, hyungtae.lee@lge.com */
+=======
+	#ifndef CONFIG_HI543  /*                                                              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	#ifndef CONFIG_HI543  /*                                                              */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -805,7 +889,11 @@ static int msm_actuator_open(struct v4l2_subdev *sd,
 			pr_err("cci_init failed\n");
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	#endif  /* LGE_CHANGE, HI543 bring up, 2013-07-26, hyungtae.lee@lge.com */
+=======
+	#endif  /*                                                              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	#endif  /*                                                              */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -959,11 +1047,15 @@ static int msm_actuator_close(struct v4l2_subdev *sd,
 		return -EINVAL;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 #ifdef CONFIG_IMX179
 	msm_actuator_StablePosition(a_ctrl);
 #endif
 	#ifndef CONFIG_HI543  /* LGE_CHANGE, HI543 bring up, 2013-07-31, hyungtae.lee@lge.com */
+=======
+	#ifndef CONFIG_HI543  /*                                                              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	#ifndef CONFIG_HI543  /*                                                              */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -974,7 +1066,11 @@ static int msm_actuator_close(struct v4l2_subdev *sd,
 			pr_err("cci_init failed\n");
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	#endif  /* LGE_CHANGE, HI543 bring up, 2013-07-31, hyungtae.lee@lge.com */
+=======
+	#endif  /*                                                              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	#endif  /*                                                              */
 >>>>>>> 0093d79... Overlay of LG soruce drop

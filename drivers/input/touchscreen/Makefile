@@ -99,11 +99,14 @@ obj-$(CONFIG_TOUCHSCREEN_LGE_TS_MISC)		+= lge_ts_misc.o
 obj-$(CONFIG_TOUCHSCREEN_ATMEL_S336)	+= atmel_s336.o
 obj-$(CONFIG_TOUCHSCREEN_ATMEL_S336)	+= atmel_s336_patch.o
 <<<<<<< HEAD
+<<<<<<< HEAD
 obj-$(CONFIG_TOUCHSCREEN_ATMEL_1188S)	+= atmel_mxt1188S.o
 obj-$(CONFIG_TOUCHSCREEN_ATMEL_T641)	+= atmel_t641.o
 obj-$(CONFIG_TOUCHSCREEN_ATMEL_T641)	+= atmel_t641_patch.o
 obj-$(CONFIG_TOUCHSCREEN_ATMEL_T1664)	+= atmel_t1664.o
 obj-$(CONFIG_TOUCHSCREEN_ATMEL_T1664)	+= atmel_t1664_patch.o
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 obj-$(CONFIG_TOUCHSCREEN_MELFAS_MMS100S)	+= mms100s_ts.o

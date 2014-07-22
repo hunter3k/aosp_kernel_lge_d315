@@ -2,8 +2,13 @@
 #define __ASM_ARCH_MSM_BOARD_LGE_H
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8926_X3N_OPEN_EU) || defined(CONFIG_MACH_MSM8926_X3N_GLOBAL_SCA) || defined(CONFIG_MACH_MSM8926_X3N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_F70N_GLOBAL_COM) || \
 	defined(CONFIG_MACH_MSM8926_X3_TRF_US) || defined(CONFIG_MACH_MSM8926_X3N_KR) || defined(CONFIG_MACH_MSM8926_F70N_KR)
+=======
+#if defined(CONFIG_MACH_MSM8926_X3N_OPEN_EU) || defined(CONFIG_MACH_MSM8926_X3N_GLOBAL_SCA) || defined(CONFIG_MACH_MSM8926_X3N_GLOBAL_COM) || \
+	defined(CONFIG_MACH_MSM8926_X3_TRF_US) || defined(CONFIG_MACH_MSM8926_X3_KR)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8926_X3N_OPEN_EU) || defined(CONFIG_MACH_MSM8926_X3N_GLOBAL_SCA) || defined(CONFIG_MACH_MSM8926_X3N_GLOBAL_COM) || \
 	defined(CONFIG_MACH_MSM8926_X3_TRF_US) || defined(CONFIG_MACH_MSM8926_X3_KR)
@@ -14,8 +19,13 @@ typedef enum {
 	HW_REV_A2,
 	HW_REV_B,
 <<<<<<< HEAD
+<<<<<<< HEAD
 	HW_REV_B2,
 	HW_REV_C,
+=======
+	HW_REV_C,
+	HW_REV_D,
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	HW_REV_C,
 	HW_REV_D,

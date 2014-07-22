@@ -43,7 +43,11 @@ enum lge_android_usb_type {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* __LGE_ANDROID_USB_H__ */
+=======
+#endif /*                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                       */
 >>>>>>> 0093d79... Overlay of LG soruce drop

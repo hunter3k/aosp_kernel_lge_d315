@@ -63,7 +63,11 @@ typedef struct
 
 #define LGE_BROADCAST_DMB_IOCTL_OPEN \
 <<<<<<< HEAD
+<<<<<<< HEAD
 	_IOW(LGE_BROADCAST_DMB_IOCTL_MAGIC, 32, struct broadcast_dmb_init_info*)
+=======
+	_IO(LGE_BROADCAST_DMB_IOCTL_MAGIC, 32)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	_IO(LGE_BROADCAST_DMB_IOCTL_MAGIC, 32)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -76,15 +80,21 @@ typedef struct
 
 #define LGE_BROADCAST_DMB_IOCTL_RESYNC \
 <<<<<<< HEAD
+<<<<<<< HEAD
 	_IOW(LGE_BROADCAST_DMB_IOCTL_MAGIC, 36, int*)
 
 #define LGE_BROADCAST_DMB_IOCTL_DETECT_SYNC \
 	_IOR(LGE_BROADCAST_DMB_IOCTL_MAGIC, 37, struct broadcast_dmb_sync_info*)
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	_IOW(LGE_BROADCAST_DMB_IOCTL_MAGIC, 36, int)
 
 #define LGE_BROADCAST_DMB_IOCTL_DETECT_SYNC \
 	_IOR(LGE_BROADCAST_DMB_IOCTL_MAGIC, 37, int*)
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 #define LGE_BROADCAST_DMB_IOCTL_GET_SIG_INFO \
@@ -110,6 +120,7 @@ struct broadcast_dmb_set_ch_info
 {
 	unsigned int	mode;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	unsigned int	rf_band;
 	unsigned int	channel;
 	unsigned int	subchannel;
@@ -119,6 +130,10 @@ struct broadcast_dmb_init_info
 {
 	unsigned int rf_band;
 	unsigned int segment;
+=======
+	unsigned int	ch_num;
+	unsigned int	sub_ch_id;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	unsigned int	ch_num;
 	unsigned int	sub_ch_id;
@@ -160,11 +175,14 @@ typedef struct
 }oneseg_sig_info;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 struct broadcast_dmb_sync_info
 {
 	unsigned int sync_status;
 	unsigned int sync_ext_status;
 };
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 struct broadcast_dmb_sig_info
@@ -215,7 +233,11 @@ enum
 	LGE_BROADCAST_OPMODE_VISUAL =3,
 	LGE_BROADCAST_OPMODE_DATA,
 <<<<<<< HEAD
+<<<<<<< HEAD
 	LGE_BROADCAST_OPMODE_ENSQUERY = 6,	/* LGE Added */
+=======
+	LGE_BROADCAST_OPMODE_ENSQUERY = 6,	/*           */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	LGE_BROADCAST_OPMODE_ENSQUERY = 6,	/*           */
 >>>>>>> 0093d79... Overlay of LG soruce drop

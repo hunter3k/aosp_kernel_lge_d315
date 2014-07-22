@@ -33,6 +33,7 @@
 #define CDBG(fmt, args...) do { } while (0)
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, yt.jeon@lge.com, Flash driver B/U 2013-10-04*/
 unsigned char strobe_ctrl;
 unsigned char  flash_ctrl;
@@ -42,6 +43,8 @@ extern void rt8542_led_enable(void);
 extern void rt8542_led_disable(void);
 /* LGE_CHANGE_E, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                                                           */
 unsigned char strobe_ctrl;
 unsigned char  flash_ctrl;
@@ -50,6 +53,9 @@ unsigned char  flash_ctrl;
 extern void rt8542_led_enable(void);
 extern void rt8542_led_disable(void);
 /*                                                                          */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 static int flash_read_reg(struct msm_camera_i2c_client *client, unsigned char reg, unsigned char *data)
 {
@@ -88,7 +94,11 @@ static int flash_write_reg(struct msm_camera_i2c_client *client, unsigned char r
 	return 0;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, yt.jeon@lge.com, Flash driver B/U 2013-10-04*/
+=======
+/*                                                           */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                           */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -127,7 +137,11 @@ int32_t msm_led_i2c_trigger_config(struct msm_led_flash_ctrl_t *fctrl,
 
 	case MSM_CAMERA_LED_RELEASE:
 <<<<<<< HEAD
+<<<<<<< HEAD
 		rt8542_led_disable();/* LGE_CHANGE, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
+=======
+		rt8542_led_disable();/*                                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		rt8542_led_disable();/*                                                                        */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -138,7 +152,11 @@ int32_t msm_led_i2c_trigger_config(struct msm_led_flash_ctrl_t *fctrl,
 
 	case MSM_CAMERA_LED_OFF:
 <<<<<<< HEAD
+<<<<<<< HEAD
 		rt8542_led_disable();/* LGE_CHANGE, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
+=======
+		rt8542_led_disable();/*                                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		rt8542_led_disable();/*                                                                        */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -148,7 +166,11 @@ int32_t msm_led_i2c_trigger_config(struct msm_led_flash_ctrl_t *fctrl,
 
 	case MSM_CAMERA_LED_LOW:
 <<<<<<< HEAD
+<<<<<<< HEAD
 		rt8542_led_enable();/* LGE_CHANGE, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
+=======
+		rt8542_led_enable();/*                                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		rt8542_led_enable();/*                                                                        */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -158,7 +180,11 @@ int32_t msm_led_i2c_trigger_config(struct msm_led_flash_ctrl_t *fctrl,
 
 	case MSM_CAMERA_LED_HIGH:
 <<<<<<< HEAD
+<<<<<<< HEAD
 		rt8542_led_enable();/* LGE_CHANGE, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
+=======
+		rt8542_led_enable();/*                                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		rt8542_led_enable();/*                                                                        */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -177,7 +203,11 @@ int msm_flash_led_init(struct msm_led_flash_ctrl_t *fctrl)
 {
 	int rc = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, yt.jeon@lge.com, refine flash driver and enable torch 2013-10-22*/
+=======
+/*                                                                               */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                               */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -208,9 +238,15 @@ int msm_flash_led_init(struct msm_led_flash_ctrl_t *fctrl)
 		GPIO_OUT_HIGH);
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, yt.jeon@lge.com, refine flash driver and enable torch 2013-10-22*/
 
 #if 0 /* LGE_CHANGE, yt.jeon@lge.com, Flash driver B/U 2013-10-04*/
+=======
+/*                                                                               */
+
+#if 0 /*                                                         */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                               */
 
@@ -231,7 +267,11 @@ int msm_flash_led_release(struct msm_led_flash_ctrl_t *fctrl)
 {
 	int rc = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, yt.jeon@lge.com, refine flash driver and enable torch 2013-10-22*/
+=======
+/*                                                                               */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                               */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -250,17 +290,23 @@ int msm_flash_led_release(struct msm_led_flash_ctrl_t *fctrl)
 		flashdata->gpio_conf->gpio_num_info->gpio_num[0],
 		GPIO_OUT_LOW);
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, yt.jeon@lge.com, Flash driver B/U 2013-10-04*/
 	//gpio_set_value_cansleep(
 	//	flashdata->gpio_conf->gpio_num_info->gpio_num[1],
 	//	GPIO_OUT_LOW);
 /* LGE_CHANGE_E, yt.jeon@lge.com, Flash driver B/U 2013-10-04*/
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                                                           */
 	//gpio_set_value_cansleep(
 	//	flashdata->gpio_conf->gpio_num_info->gpio_num[1],
 	//	GPIO_OUT_LOW);
 /*                                                           */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	rc = msm_camera_request_gpio_table(
 		flashdata->gpio_conf->cam_gpio_req_tbl,
@@ -275,10 +321,13 @@ int msm_flash_led_release(struct msm_led_flash_ctrl_t *fctrl)
 			if (rc < 0)
 				pr_err("%s:%d failed\n", __func__, __LINE__);
 <<<<<<< HEAD
+<<<<<<< HEAD
 	}
 #endif
 /* LGE_CHANGE_E, yt.jeon@lge.com, refine flash driver and enable torch 2013-10-22*/
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #ifdef CONFIG_MACH_MSM8X10_W5
 #ifndef CONFIG_MACH_MSM8X10_W55   /* Disable only w55 device for camera flash issue, hanyoung.kim 140114 */
 			rc =flash_write_reg(fctrl->flash_i2c_client, 0x09, 0x5D);
@@ -289,6 +338,9 @@ int msm_flash_led_release(struct msm_led_flash_ctrl_t *fctrl)
 	}
 #endif
 /*                                                                               */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 	return 0;
@@ -298,7 +350,11 @@ int msm_flash_led_off(struct msm_led_flash_ctrl_t *fctrl)
 {
 	int rc = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, yt.jeon@lge.com, refine flash driver and enable torch 2013-10-22*/
+=======
+/*                                                                               */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                               */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -314,9 +370,15 @@ int msm_flash_led_off(struct msm_led_flash_ctrl_t *fctrl)
 	}
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, yt.jeon@lge.com, refine flash driver and enable torch 2013-10-22*/
 
 #if 0/* LGE_CHANGE, yt.jeon@lge.com, Flash driver B/U 2013-10-04*/
+=======
+/*                                                                               */
+
+#if 0/*                                                         */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                               */
 
@@ -331,7 +393,11 @@ int msm_flash_led_off(struct msm_led_flash_ctrl_t *fctrl)
 	}
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, yt.jeon@lge.com, Flash driver B/U 2013-10-04*/
+=======
+/*                                                           */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                           */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -341,7 +407,11 @@ int msm_flash_led_off(struct msm_led_flash_ctrl_t *fctrl)
 		GPIO_OUT_LOW);
 #else
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, WBT issue fix, 2013-11-25, hyunuk.park@lge.com */
+=======
+/*                                                              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                              */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -350,7 +420,11 @@ int msm_flash_led_off(struct msm_led_flash_ctrl_t *fctrl)
 		return -EINVAL;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, WBT issue fix, 2013-11-25, hyunuk.park@lge.com */
+=======
+/*                                                              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                              */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -359,7 +433,10 @@ int msm_flash_led_off(struct msm_led_flash_ctrl_t *fctrl)
 			if (rc < 0)
 				pr_err("%s:%d failed\n", __func__, __LINE__);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #ifdef CONFIG_MACH_MSM8X10_W5
 #ifndef CONFIG_MACH_MSM8X10_W55    /* Disable only w55 device for camera flash issue, hanyoung.kim 140114 */
 			rc =flash_write_reg(fctrl->flash_i2c_client, 0x09, 0x5D);
@@ -367,6 +444,9 @@ int msm_flash_led_off(struct msm_led_flash_ctrl_t *fctrl)
 				pr_err("%s:%d failed\n", __func__, __LINE__);
 #endif
 #endif
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	}
 	//gpio_set_value_cansleep(
@@ -374,7 +454,11 @@ int msm_flash_led_off(struct msm_led_flash_ctrl_t *fctrl)
 	//	GPIO_OUT_LOW);
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, yt.jeon@lge.com, Flash driver B/U 2013-10-04*/
+=======
+/*                                                           */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                           */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -385,6 +469,7 @@ int msm_flash_led_off(struct msm_led_flash_ctrl_t *fctrl)
 int msm_flash_led_low(struct msm_led_flash_ctrl_t *fctrl)
 {
 	int rc = 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* LGE_CHANGE_S, yt.jeon@lge.com, refine flash driver and enable torch 2013-10-22*/
 	CDBG("%s:%d called\n", __func__, __LINE__);
@@ -401,12 +486,27 @@ int msm_flash_led_low(struct msm_led_flash_ctrl_t *fctrl)
 		return -EINVAL;
     }
 
+=======
+/*                                                                               */
+	CDBG("%s:%d called\n", __func__, __LINE__);
+
+/*                                                              */
+    if(fctrl == NULL) {
+        pr_err("%s:%d fctrl\n", __func__, __LINE__);
+		return -EINVAL;
+    }
+
+>>>>>>> 0093d79... Overlay of LG soruce drop
     if(fctrl->flash_i2c_client == NULL) {
         pr_err("%s:%d fctrl->flash_i2c_client NULL\n", __func__, __LINE__);
 		return -EINVAL;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, WBT issue fix, 2013-11-25, hyunuk.park@lge.com */
+=======
+/*                                                              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                              */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -415,9 +515,15 @@ int msm_flash_led_low(struct msm_led_flash_ctrl_t *fctrl)
 	struct msm_camera_sensor_board_info *flashdata = NULL;
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, yt.jeon@lge.com, refine flash driver and enable torch 2013-10-22*/
 
 /* LGE_CHANGE_S, yt.jeon@lge.com, Flash driver B/U 2013-10-04*/
+=======
+/*                                                                               */
+
+/*                                                           */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                               */
 
@@ -487,7 +593,11 @@ int msm_flash_led_low(struct msm_led_flash_ctrl_t *fctrl)
 	flash_ctrl &= 0xFB; /* 1111 1011 */
 	flash_ctrl |= 0x62; /* 0100 0010 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 	//jongho3.lee@lge.com[2013-06-05] : Since default is FLASH(0x04) mode after rt8542 power on,
+=======
+	//                                                                                          
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	//                                                                                          
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -499,7 +609,11 @@ int msm_flash_led_low(struct msm_led_flash_ctrl_t *fctrl)
 	}
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, yt.jeon@lge.com, Flash driver B/U 2013-10-04*/
+=======
+/*                                                           */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                           */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -510,7 +624,11 @@ int msm_flash_led_high(struct msm_led_flash_ctrl_t *fctrl)
 {
 	int rc = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, yt.jeon@lge.com, refine flash driver and enable torch 2013-10-22*/
+=======
+/*                                                                               */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                               */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -519,8 +637,13 @@ int msm_flash_led_high(struct msm_led_flash_ctrl_t *fctrl)
 	struct msm_camera_sensor_board_info *flashdata = NULL;
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, yt.jeon@lge.com, refine flash driver and enable torch 2013-10-22*/
    /* LGE_CHANGE_S, WBT issue fix, 2013-11-25, hyunuk.park@lge.com */
+=======
+/*                                                                               */
+   /*                                                              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                               */
    /*                                                              */
@@ -535,8 +658,13 @@ int msm_flash_led_high(struct msm_led_flash_ctrl_t *fctrl)
 		return -EINVAL;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, WBT issue fix, 2013-11-25, hyunuk.park@lge.com */
 /* LGE_CHANGE_S, yt.jeon@lge.com, Flash driver B/U 2013-10-04*/
+=======
+/*                                                              */
+/*                                                           */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                              */
 /*                                                           */
@@ -545,6 +673,7 @@ int msm_flash_led_high(struct msm_led_flash_ctrl_t *fctrl)
 	//gpio_set_value_cansleep(
 	//	flashdata->gpio_conf->gpio_num_info->gpio_num[1],
 	//	GPIO_OUT_HIGH);
+<<<<<<< HEAD
 
 	if (fctrl->flash_i2c_client && fctrl->reg_setting) {
 		rc = fctrl->flash_i2c_client->i2c_func_tbl->i2c_write_table(
@@ -571,6 +700,32 @@ int msm_flash_led_high(struct msm_led_flash_ctrl_t *fctrl)
 <<<<<<< HEAD
 /* LGE_CHANGE_S, yt.jeon@lge.com, refine flash driver and enable torch 2013-10-22*/
 =======
+/*                                                                               */
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+
+	if (fctrl->flash_i2c_client && fctrl->reg_setting) {
+		rc = fctrl->flash_i2c_client->i2c_func_tbl->i2c_write_table(
+			fctrl->flash_i2c_client,
+			fctrl->reg_setting->high_setting);
+		if (rc < 0)
+			pr_err("%s:%d failed\n", __func__, __LINE__);
+	}
+#else
+	if (fctrl->flash_i2c_client) {
+		/* Configuration of frequency, current limit and timeout, default 2Mhz, 2.5A, 1024ms */
+		rc =flash_write_reg(fctrl->flash_i2c_client,	0x07, 0x1F);
+		if (rc < 0)
+			pr_err("%s:%d failed\n", __func__, __LINE__);
+	}
+	if (fctrl->flash_i2c_client) {
+		/* Configuration of current, torch : 56.25mA, strobe : 384.375mA */
+		rc =flash_write_reg(fctrl->flash_i2c_client,	0x06, 0x17);
+		if (rc < 0)
+			pr_err("%s:%d failed\n", __func__, __LINE__);
+	}
+#endif
+
 /*                                                                               */
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #ifdef USE_GPIO
@@ -621,8 +776,13 @@ int msm_flash_led_high(struct msm_led_flash_ctrl_t *fctrl)
 	}
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, yt.jeon@lge.com, refine flash driver and enable torch 2013-10-22*/
 /* LGE_CHANGE_E, yt.jeon@lge.com, Flash driver B/U 2013-10-04*/
+=======
+/*                                                                               */
+/*                                                           */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                               */
 /*                                                           */
@@ -661,7 +821,11 @@ static int32_t msm_flash_init_gpio_pin_tbl(struct device_node *of_node,
 	CDBG("%s qcom,gpio-flash-en %d\n", __func__,
 		gconf->gpio_num_info->gpio_num[0]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if 0/* LGE_CHANGE, yt.jeon@lge.com, Flash driver B/U 2013-10-04*/
+=======
+#if 0/*                                                         */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if 0/*                                                         */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -931,7 +1095,11 @@ int msm_flash_i2c_probe(struct i2c_client *client,
 
 	fctrl = (struct msm_led_flash_ctrl_t *)(id->driver_data);
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE_S, WBT issue fix, 2013-11-25, hyunuk.park@lge.com */
+=======
+	/*                                                              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                                                              */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -945,7 +1113,11 @@ int msm_flash_i2c_probe(struct i2c_client *client,
 		goto probe_failure;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     /* LGE_CHANGE_E, WBT issue fix, 2013-11-25, hyunuk.park@lge.com */
+=======
+    /*                                                              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
     /*                                                              */
 >>>>>>> 0093d79... Overlay of LG soruce drop

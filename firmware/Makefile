@@ -41,6 +41,7 @@ touch_fw_list := $(subst .ihex, , $(notdir $(wildcard $(srctree)/firmware/melfas
 touch_fw_files := $(foreach var, $(touch_fw_list), melfas/$(TARGET_PRODUCT)/$(var))
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # LGE_CHANGE - START
 # X3N KR only for same DTS usage,  2013-11-28 kyle.jeon@lge.com
 ifdef CONFIG_MACH_MSM8926_X3N_KR
@@ -59,6 +60,8 @@ $(shell objcopy -I binary -O ihex $(touch_limit_txt) $(touch_limit_txt).ihex)
 touch_fw_list := $(subst .ihex, , $(notdir $(wildcard $(srctree)/firmware/melfas/f70n_kr/*.ihex)))
 touch_fw_files := $(foreach var, $(touch_fw_list), melfas/f70n_kr/$(var))
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 touch_synap_limit_txt := $(wildcard $(srctree)/firmware/synaptics/$(TARGET_PRODUCT)/*.txt)
 $(shell objcopy -I binary -O ihex $(touch_synap_limit_txt) $(touch_synap_limit_txt).ihex)
@@ -70,6 +73,9 @@ touch_limit_txt := $(wildcard $(srctree)/firmware/melfas/x3_kr/*.txt)
 $(shell objcopy -I binary -O ihex $(touch_limit_txt) $(touch_limit_txt).ihex)
 touch_fw_list := $(subst .ihex, , $(notdir $(wildcard $(srctree)/firmware/melfas/x3_kr/*.ihex)))
 touch_fw_files := $(foreach var, $(touch_fw_list), melfas/x3_kr/$(var))
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 endif
 # LGE_CHANGE - END
@@ -81,8 +87,11 @@ atmel_ihex_files := $(foreach var, $(atmel_ihex_list), atmel/$(var))
 
 fw-shipped-$(CONFIG_TOUCHSCREEN_ATMEL_S336) += $(atmel_ihex_files)
 <<<<<<< HEAD
+<<<<<<< HEAD
 fw-shipped-$(CONFIG_TOUCHSCREEN_ATMEL_T641) += $(atmel_ihex_files)
 fw-shipped-$(CONFIG_TOUCHSCREEN_ATMEL_T1664) += $(atmel_ihex_files)
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
@@ -100,6 +109,7 @@ synaptics_img_file := $(wildcard $(srctree)/firmware/synaptics/$(TARGET_PRODUCT)
 $(foreach var, $(synaptics_img_file),  $(shell objcopy -I binary -O ihex $(var) $(var).ihex))
 synaptics_fw_list := $(subst .ihex, , $(notdir $(wildcard $(srctree)/firmware/synaptics/$(TARGET_PRODUCT)/*.ihex)))
 synaptics_fw_files := $(foreach var, $(synaptics_fw_list), synaptics/$(TARGET_PRODUCT)/$(var))
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 touch_synap_limit_txt := $(wildcard $(srctree)/firmware/synaptics/$(TARGET_PRODUCT)/*.txt)
@@ -129,6 +139,8 @@ synaptics_fw_files := $(foreach var, $(synaptics_fw_list), synaptics/f70_kr/$(va
 endif
 # LGE_CHANGE - END
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 fw-shipped-$(CONFIG_LGE_TOUCH_SYNAPTICS) += $(synaptics_fw_files)

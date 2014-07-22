@@ -45,7 +45,11 @@
 #include <linux/bitops.h>
 #include <linux/termios.h>
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, Configuration bluesleep for A1 LPM */
+=======
+/*                                                                                            */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                            */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -54,10 +58,17 @@
 #include <linux/of_gpio.h>
 #include <linux/wakelock.h>
 <<<<<<< HEAD
+<<<<<<< HEAD
 #else  /* CONFIG_LGE_BLUESLEEP */
 #include <mach/gpio.h>
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LGE_CHANGE_E, [BT][younghyun.kwon@lge.com], 2013-04-10 */
+=======
+#else  /*                      */
+#include <mach/gpio.h>
+#endif /*                      */
+/*                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #else  /*                      */
 #include <mach/gpio.h>
@@ -71,7 +82,11 @@
 #include "hci_uart.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, Configuration bluesleep for A1 LPM */
+=======
+/*                                                                                            */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                            */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -85,8 +100,13 @@
 
 #define BT_PORT_ID	99
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LGE_CHANGE_E, [BT][younghyun.kwon@lge.com], 2013-04-10 */
+=======
+#endif /*                      */
+/*                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                      */
 /*                                                        */
@@ -124,6 +144,7 @@ struct bluesleep_info {
 	int dma_qos_request;
 #endif /* BT_DMA_QOS_REQUEST */
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, Configuration bluesleep for A1 LPM */
 #ifdef CONFIG_LGE_BLUESLEEP
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
@@ -132,6 +153,8 @@ struct bluesleep_info {
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LGE_CHANGE_E, [BT][younghyun.kwon@lge.com], 2013-04-10 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                                                                                            */
 #ifdef CONFIG_LGE_BLUESLEEP
 /*                                                      */
@@ -139,6 +162,9 @@ struct bluesleep_info {
 /*                                                      */
 #endif /*                      */
 /*                                                        */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 };
 
@@ -155,7 +181,11 @@ DECLARE_DELAYED_WORK(sleep_workqueue, bluesleep_sleep_work);
 #define bluesleep_tx_idle()     schedule_delayed_work(&sleep_workqueue, 0)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
+=======
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                      */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -164,17 +194,23 @@ DECLARE_DELAYED_WORK(sleep_workqueue, bluesleep_sleep_work);
 /* 5 second timeout */
 #define TX_TIMER_INTERVAL	5
 <<<<<<< HEAD
+<<<<<<< HEAD
 #else /* CONFIG_LGE_BLUESLEEP */
 /* 1 second timeout */
 #define TX_TIMER_INTERVAL	1
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #else /*                      */
 /* 1 second timeout */
 #define TX_TIMER_INTERVAL	1
 #endif /*                      */
 /*                                                      */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 /* state variable names and bit positions */
@@ -191,7 +227,11 @@ static struct bluesleep_info *bsi;
 static atomic_t open_count = ATOMIC_INIT(1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, Configuration bluesleep for A1 LPM */
+=======
+/*                                                                                            */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                            */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -200,6 +240,7 @@ static atomic_t open_count = ATOMIC_INIT(1);
 #define EDGE_FALLING		1
 #define LEVEL_HIGH		2
 #define LEVEL_LOW		3
+<<<<<<< HEAD
 <<<<<<< HEAD
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LGE_CHANGE_E, [BT][younghyun.kwon@lge.com], 2013-04-10 */
@@ -212,6 +253,19 @@ static int bluesleep_hci_event(struct notifier_block *this,
 			    unsigned long event, void *data);
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
+=======
+#endif /*                      */
+/*                                                        */
+/*
+ * Local function prototypes
+ */
+/*                                                      */
+#ifndef CONFIG_LGE_BLUESLEEP
+static int bluesleep_hci_event(struct notifier_block *this,
+			    unsigned long event, void *data);
+#endif /*                      */
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                      */
 /*                                                        */
@@ -231,7 +285,11 @@ static int bluesleep_hci_event(struct notifier_block *this,
  */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, Configuration bluesleep for A1 LPM */
+=======
+/*                                                                                            */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                            */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -242,8 +300,13 @@ static struct of_device_id bluesleep_match_table[] = {
 	{}
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LGE_CHANGE_E, [BT][younghyun.kwon@lge.com], 2013-04-10 */
+=======
+#endif /*                      */
+/*                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                      */
 /*                                                        */
@@ -262,7 +325,11 @@ static struct timer_list tx_timer;
 static spinlock_t rw_lock;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
+=======
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                      */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -272,8 +339,13 @@ struct notifier_block hci_event_nblock = {
 	.notifier_call = bluesleep_hci_event,
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
+=======
+#endif /*                      */
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                      */
 /*                                                      */
@@ -316,6 +388,7 @@ void bluesleep_sleep_wakeup(void)
 	if (test_bit(BT_ASLEEP, &flags)) {
 		BT_DBG("waking up...");
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
 #ifdef CONFIG_LGE_BLUESLEEP
 		wake_lock(&bsi->wake_lock);
@@ -326,6 +399,8 @@ void bluesleep_sleep_wakeup(void)
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                                                      */
 #ifdef CONFIG_LGE_BLUESLEEP
 		wake_lock(&bsi->wake_lock);
@@ -335,6 +410,9 @@ void bluesleep_sleep_wakeup(void)
 		gpio_set_value(bsi->ext_wake, 0);
 #endif /*                      */
 /*                                                      */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 		clear_bit(BT_ASLEEP, &flags);
@@ -349,7 +427,11 @@ void bluesleep_sleep_wakeup(void)
 		hsuart_power(1);
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
+=======
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                      */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -370,8 +452,13 @@ void bluesleep_sleep_wakeup(void)
 		}
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
+=======
+#endif /*                      */
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                      */
 /*                                                      */
@@ -394,11 +481,19 @@ static void bluesleep_sleep_work(struct work_struct *work)
 			return;
 		}
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
 #ifndef CONFIG_LGE_BLUESLEEP
 		if (msm_hs_tx_empty(bsi->uport)) {
 #endif /*CONFIG_LGE_BLUESLEEP*/			
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
+=======
+/*                                                      */
+#ifndef CONFIG_LGE_BLUESLEEP
+		if (msm_hs_tx_empty(bsi->uport)) {
+#endif /*                    */			
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                      */
 #ifndef CONFIG_LGE_BLUESLEEP
@@ -418,6 +513,7 @@ static void bluesleep_sleep_work(struct work_struct *work)
 #endif /* BT_DMA_QOS_REQUEST */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
 #ifdef CONFIG_LGE_BLUESLEEP
 			wake_lock_timeout(&bsi->wake_lock, HZ / 2);
@@ -428,6 +524,8 @@ static void bluesleep_sleep_work(struct work_struct *work)
 #endif /*CONFIG_LGE_BLUESLEEP*/
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                                                      */
 #ifdef CONFIG_LGE_BLUESLEEP
 			wake_lock_timeout(&bsi->wake_lock, HZ / 2);
@@ -437,6 +535,9 @@ static void bluesleep_sleep_work(struct work_struct *work)
 		}
 #endif /*                    */
 /*                                                      */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #ifndef CONFIG_LGE_BLUESLEEP
 		else {
@@ -444,8 +545,13 @@ static void bluesleep_sleep_work(struct work_struct *work)
 			return;
 		}
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
+=======
+#endif /*                      */
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                      */
 /*                                                      */
@@ -469,7 +575,11 @@ static void bluesleep_hostwake_task(unsigned long data)
 	spin_lock(&rw_lock);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
+=======
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                      */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -484,7 +594,11 @@ static void bluesleep_hostwake_task(unsigned long data)
 		BT_DBG("hostwake GPIO High");
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 #else /* CONFIG_LGE_BLUESLEEP */
+=======
+#else /*                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #else /*                      */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -493,8 +607,13 @@ static void bluesleep_hostwake_task(unsigned long data)
 	else
 		bluesleep_rx_idle();
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
+=======
+#endif /*                      */
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                      */
 /*                                                      */
@@ -504,7 +623,11 @@ static void bluesleep_hostwake_task(unsigned long data)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
+=======
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                      */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -570,8 +693,13 @@ static int bluesleep_hci_event(struct notifier_block *this,
 	return NOTIFY_DONE;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
+=======
+#endif /*                      */
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                      */
 /*                                                      */
@@ -590,7 +718,11 @@ static void bluesleep_tx_timer_expire(unsigned long data)
 	BT_DBG("Tx timer expired");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
+=======
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                      */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -604,7 +736,11 @@ static void bluesleep_tx_timer_expire(unsigned long data)
 
 	bluesleep_tx_idle();
 <<<<<<< HEAD
+<<<<<<< HEAD
 #else/*CONFIG_LGE_BLUESLEEP*/
+=======
+#else/*                    */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #else/*                    */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -621,8 +757,13 @@ static void bluesleep_tx_timer_expire(unsigned long data)
 	/* clear the incoming data flag */
 	clear_bit(BT_TXDATA, &flags);
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
+=======
+#endif /*                      */
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                      */
 /*                                                      */
@@ -640,7 +781,11 @@ static void bluesleep_tx_timer_expire(unsigned long data)
 static irqreturn_t bluesleep_hostwake_isr(int irq, void *dev_id)
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* BEGIN: 0019639 chanha.park@lge.com 2012-09-09 */
+=======
+/*                                               */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                               */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -662,10 +807,17 @@ static irqreturn_t bluesleep_hostwake_isr(int irq, void *dev_id)
 		tasklet_schedule(&hostwake_task);
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 #else /* CONFIG_LGE_BLUESLEEP */
 	tasklet_schedule(&hostwake_task);
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* END: 0019639 chanha.park@lge.com 2012-09-09 */
+=======
+#else /*                      */
+	tasklet_schedule(&hostwake_task);
+#endif /*                      */
+/*                                             */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #else /*                      */
 	tasklet_schedule(&hostwake_task);
@@ -703,7 +855,11 @@ static int bluesleep_start(void)
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
+=======
+/*                                               */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                               */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -715,8 +871,13 @@ static int bluesleep_start(void)
 	/* assert BT_WAKE */
 	gpio_set_value(bsi->ext_wake, 0);
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* END: 0019639 chanha.park@lge.com 2012-06-16 */
+=======
+#endif /*                      */
+/*                                             */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                      */
 /*                                             */
@@ -730,7 +891,11 @@ static int bluesleep_start(void)
 #endif /* BT_DMA_QOS_REQUEST */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
+=======
+/*                                               */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                               */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -739,15 +904,21 @@ static int bluesleep_start(void)
 	BT_DBG("bluesleep_start");
 	hsuart_power(1);
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* END: 0019639 chanha.park@lge.com 2012-06-16 */
 
 /* BEGIN: 0019639 chanha.park@lge.com 2012-09-09 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #endif /*                      */
 /*                                             */
 
 /*                                               */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 /* MOD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifdef CONFIG_LGE_BLUESLEEP
@@ -755,12 +926,21 @@ static int bluesleep_start(void)
 				IRQF_DISABLED | IRQF_TRIGGER_LOW,
 				"bluetooth hostwake", NULL);
 <<<<<<< HEAD
+<<<<<<< HEAD
 #else /* CONFIG_LGE_BLUESLEEP */
 	retval = request_irq(bsi->host_wake_irq, bluesleep_hostwake_isr,
 				IRQF_DISABLED | IRQF_TRIGGER_FALLING,
 				"bluetooth hostwake", NULL);
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* END: 0019639 chanha.park@lge.com 2012-09-09 */
+=======
+#else /*                      */
+	retval = request_irq(bsi->host_wake_irq, bluesleep_hostwake_isr,
+				IRQF_DISABLED | IRQF_TRIGGER_FALLING,
+				"bluetooth hostwake", NULL);
+#endif /*                      */
+/*                                             */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #else /*                      */
 	retval = request_irq(bsi->host_wake_irq, bluesleep_hostwake_isr,
@@ -785,6 +965,7 @@ static int bluesleep_start(void)
 	set_bit(BT_PROTO, &flags);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifdef CONFIG_LGE_BLUESLEEP
@@ -800,6 +981,8 @@ fail:
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* END: 0019639 chanha.park@lge.com 2012-06-16 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                                               */
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifdef CONFIG_LGE_BLUESLEEP
@@ -814,6 +997,9 @@ fail:
 	del_timer(&tx_timer);
 #endif /*                      */
 /*                                             */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	atomic_inc(&open_count);
 
@@ -837,6 +1023,7 @@ static void bluesleep_stop(void)
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
 #ifdef CONFIG_LGE_BLUESLEEP
 	del_timer(&tx_timer);
@@ -857,11 +1044,23 @@ static void bluesleep_stop(void)
 #endif /*                      */
 /*                                                      */
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+/*                                                      */
+#ifdef CONFIG_LGE_BLUESLEEP
+	del_timer(&tx_timer);
+#else /*                      */
+	/* assert BT_WAKE */
+	gpio_set_value(bsi->ext_wake, 0);
+	del_timer(&tx_timer);
+#endif /*                      */
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 	clear_bit(BT_PROTO, &flags);
 
 	if (test_bit(BT_ASLEEP, &flags)) {
 		clear_bit(BT_ASLEEP, &flags);
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
@@ -875,12 +1074,15 @@ static void bluesleep_stop(void)
 #if 0
 /* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                                               */
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifndef CONFIG_LGE_BLUESLEEP
 		hsuart_power(1);
 #endif /*                      */
 /*                                             */
+<<<<<<< HEAD
 	}
 /*                                                                                            */
 /* To avoid L2 error crash that occurs when 'msm_hs_tx_empty'is executed in clock_off state. */
@@ -900,10 +1102,27 @@ static void bluesleep_stop(void)
 #endif
 /* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-12 */
 =======
+=======
+	}
+/*                                                                                            */
+/* To avoid L2 error crash that occurs when 'msm_hs_tx_empty'is executed in clock_off state. */
+#if 0
+/*                                               */
+/* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
+#ifdef CONFIG_LGE_BLUESLEEP	
+	else
+	{
+		//set_bit(BT_ASLEEP, &flags);
+		hsuart_power(0);
+	}
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #endif /*                    */
 /*                                             */
 #endif
 /*                                                        */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 	atomic_inc(&open_count);
@@ -921,6 +1140,7 @@ static void bluesleep_stop(void)
 #endif /* BT_DMA_QOS_REQUEST */
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifdef CONFIG_LGE_BLUESLEEP
@@ -928,12 +1148,17 @@ static void bluesleep_stop(void)
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* END: 0019639 chanha.park@lge.com 2012-06-16 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                                               */
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifdef CONFIG_LGE_BLUESLEEP
 	wake_lock_timeout(&bsi->wake_lock, HZ / 2);
 #endif /*                      */
 /*                                             */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 }
 /**
@@ -988,6 +1213,7 @@ static int bluepower_write_proc_btwake(struct file *file, const char *buffer,
 		BT_DBG("BT WAKE Set to Wake");
 		gpio_set_value(bsi->ext_wake, 0);
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifdef CONFIG_LGE_BLUESLEEP
@@ -1004,6 +1230,8 @@ static int bluepower_write_proc_btwake(struct file *file, const char *buffer,
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* END: 0019639 chanha.park@lge.com 2012-06-16 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                                               */
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifdef CONFIG_LGE_BLUESLEEP
@@ -1019,6 +1247,9 @@ static int bluepower_write_proc_btwake(struct file *file, const char *buffer,
 		bluesleep_tx_idle();
 #endif /*                      */
 /*                                             */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	} else {
 		kfree(buf);
@@ -1130,7 +1361,11 @@ static int bluesleep_write_proc_proto(struct file *file, const char *buffer,
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, Configuration bluesleep for A1 LPM */
+=======
+/*                                                                                            */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                            */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1256,7 +1491,11 @@ static int __init bluesleep_probe(struct platform_device *pdev)
 	BT_DBG("host_wake_irq: %d", bsi->host_wake_irq);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
+=======
+/*                                               */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                               */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1265,8 +1504,13 @@ static int __init bluesleep_probe(struct platform_device *pdev)
 	bsi->uport= msm_hs_get_bt_uport(BT_PORT_ID);
 	wake_lock_init(&bsi->wake_lock, WAKE_LOCK_SUSPEND, "bluesleep");
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* END: 0019639 chanha.park@lge.com 2012-06-16 */
+=======
+#endif /*                      */
+/*                                             */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                      */
 /*                                             */
@@ -1291,7 +1535,11 @@ free_bsi:
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #else /* CONFIG_LGE_BLUESLEEP */
+=======
+#else /*                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #else /*                      */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1357,8 +1605,13 @@ free_bsi:
 	return ret;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LGE_CHANGE_E, [BT][younghyun.kwon@lge.com], 2013-04-10 */
+=======
+#endif /*                      */
+/*                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                      */
 /*                                                        */
@@ -1382,6 +1635,7 @@ static int bluesleep_remove(struct platform_device *pdev)
 	gpio_free(bsi->host_wake);
 	gpio_free(bsi->ext_wake);
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifdef CONFIG_LGE_BLUESLEEP
@@ -1389,12 +1643,17 @@ static int bluesleep_remove(struct platform_device *pdev)
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* END: 0019639 chanha.park@lge.com 2012-06-16 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                                               */
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifdef CONFIG_LGE_BLUESLEEP
 	wake_lock_destroy(&bsi->wake_lock);
 #endif /*                      */
 /*                                             */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	kfree(bsi);
 	return 0;
@@ -1406,17 +1665,23 @@ static struct platform_driver bluesleep_driver = {
 		.name = "bluesleep",
 		.owner = THIS_MODULE,
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, Configuration bluesleep for A1 LPM */
 #ifdef CONFIG_LGE_BLUESLEEP
 		.of_match_table = bluesleep_match_table,
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LGE_CHANGE_E, [BT][younghyun.kwon@lge.com], 2013-04-10 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                                                                                            */
 #ifdef CONFIG_LGE_BLUESLEEP
 		.of_match_table = bluesleep_match_table,
 #endif /*                      */
 /*                                                        */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	},
 };
@@ -1501,6 +1766,7 @@ static int __init bluesleep_init(void)
 	tasklet_init(&hostwake_task, bluesleep_hostwake_task, 0);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifndef CONFIG_LGE_BLUESLEEP
@@ -1508,12 +1774,17 @@ static int __init bluesleep_init(void)
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* END: 0019639 chanha.park@lge.com 2012-06-16 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                                               */
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifndef CONFIG_LGE_BLUESLEEP
 	hci_register_notifier(&hci_event_nblock);
 #endif /*                      */
 /*                                             */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 	return 0;
@@ -1536,6 +1807,7 @@ static void __exit bluesleep_exit(void)
 	BT_INFO("");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifndef CONFIG_LGE_BLUESLEEP
@@ -1543,12 +1815,17 @@ static void __exit bluesleep_exit(void)
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* END: 0019639 chanha.park@lge.com 2012-06-16 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                                               */
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifndef CONFIG_LGE_BLUESLEEP
 	hci_unregister_notifier(&hci_event_nblock);
 #endif /*                      */
 /*                                             */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	platform_driver_unregister(&bluesleep_driver);
 

@@ -12,7 +12,11 @@
 
 #define BROADCAST_DMB_NUM_DEVS 	1 /**< support this many devices */
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define DEVICE_NAME "broadcast1"
+=======
+#define DEVICE_NAME "broadcast_isdbt"
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #define DEVICE_NAME "broadcast_isdbt"
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -170,7 +174,11 @@ static int broadcast_dmb_get_sig_info(void __user *arg)
 {
 	int rc = ERROR;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	struct broadcast_dmb_sig_info udata;
+=======
+	struct broadcast_dmb_control_info udata;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	struct broadcast_dmb_control_info udata;
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -181,7 +189,11 @@ static int broadcast_dmb_get_sig_info(void __user *arg)
 	}
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if(copy_from_user(&udata, arg, sizeof(struct broadcast_dmb_sig_info)))
+=======
+	if(copy_from_user(&udata, arg, sizeof(struct broadcast_dmb_control_info)))
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	if(copy_from_user(&udata, arg, sizeof(struct broadcast_dmb_control_info)))
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -200,7 +212,11 @@ static int broadcast_dmb_get_sig_info(void __user *arg)
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if(copy_to_user((void *)arg, &udata, sizeof(struct broadcast_dmb_sig_info)))
+=======
+	if(copy_to_user((void *)arg, &udata, sizeof(struct broadcast_dmb_control_info)))
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	if(copy_to_user((void *)arg, &udata, sizeof(struct broadcast_dmb_control_info)))
 >>>>>>> 0093d79... Overlay of LG soruce drop

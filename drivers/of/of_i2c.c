@@ -39,9 +39,15 @@ void of_i2c_register_devices(struct i2c_adapter *adap)
 
 #ifdef CONFIG_MACH_LGE
 <<<<<<< HEAD
+<<<<<<< HEAD
 		/* LGE_CHANGE: check status=okay for i2c child node
 		 * 2012-11-07, bongkyu.kim@lge.com
 		 */
+=======
+		/*                                                 
+                                    
+   */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		/*                                                 
                                     

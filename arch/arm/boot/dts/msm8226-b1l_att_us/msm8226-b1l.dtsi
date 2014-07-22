@@ -29,7 +29,11 @@
 	syncoam_sm100_rev_a {
 		compatible = "syncoam,sm100";
 <<<<<<< HEAD
+<<<<<<< HEAD
 		status = "disable";
+=======
+		status = "ok";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		status = "ok";
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -46,7 +50,11 @@
 	syncoam_sm100_rev_b {
 		compatible = "syncoam,sm100";
 <<<<<<< HEAD
+<<<<<<< HEAD
 		status = "disable";
+=======
+		status = "ok";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		status = "ok";
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -67,7 +75,11 @@
 		};
 		lp5521@32 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 			status = "disable";
+=======
+			status = "ok";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			status = "ok";
 >>>>>>> 0093d79... Overlay of LG soruce drop

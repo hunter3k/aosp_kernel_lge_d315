@@ -15,9 +15,15 @@
 
 /* 
 <<<<<<< HEAD
+<<<<<<< HEAD
  * DGMS MC-C05702-7 : Apply Autorun
  * CONFIG_USB_G_LGE_ANDROID_AUTORUN
  * CONFIG_USB_G_LGE_ANDROID_AUTORUN_LGE
+=======
+                                   
+                                   
+                                       
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
                                    
                                    

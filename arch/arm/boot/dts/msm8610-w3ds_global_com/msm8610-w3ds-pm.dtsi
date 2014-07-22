@@ -111,9 +111,15 @@
 &pm8110_chg {
 	status = "ok";
 <<<<<<< HEAD
+<<<<<<< HEAD
 	qcom,vddmax-mv = <4200>;
 	qcom,vddsafe-mv = <4230>;
 	qcom,vbatdet-mv = <4150>;
+=======
+	qcom,vddmax-mv = <4350>;
+	qcom,vddsafe-mv = <4380>;
+	qcom,vbatdet-mv = <4300>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	qcom,vddmax-mv = <4350>;
 	qcom,vddsafe-mv = <4380>;
@@ -254,7 +260,11 @@
 	qcom,r-sense-uohm = <10000>;
 	qcom,v-cutoff-uv = <3400000>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	qcom,max-voltage-uv = <4200000>;
+=======
+	qcom,max-voltage-uv = <4350000>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	qcom,max-voltage-uv = <4350000>;
 >>>>>>> 0093d79... Overlay of LG soruce drop

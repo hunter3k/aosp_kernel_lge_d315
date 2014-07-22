@@ -18,7 +18,11 @@ DEFINE_MSM_MUTEX(imx119_mut);
 static struct msm_sensor_ctrl_t imx119_s_ctrl;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, jaehan.jeong, 2013.7.30, To separate power settings depending on HW revisions, [STARTS HERE] */
+=======
+/*                                                                                                            */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                                            */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -170,6 +174,7 @@ static struct msm_sensor_power_setting imx119_power_setting_rev_c[] = {
 
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 #elif defined(CONFIG_MACH_MSM8926_B2L_ATT) || defined(CONFIG_MACH_MSM8926_B2LN_LGU) || defined(CONFIG_MACH_MSM8926_B2LN_SKT) || defined(CONFIG_MACH_MSM8926_B2LN_KT) || defined(CONFIG_MACH_MSM8926_X10_VZW) || defined(CONFIG_MACH_MSM8926_JAGNM_ATT) || defined(CONFIG_MACH_MSM8926_JAGNM_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_JAGDSNM_CMCC_CN)
 static struct msm_sensor_power_setting imx119_power_setting_b1l[] = {
 	 /* Set GPIO_RESET to low to disable power on reset*/
@@ -269,6 +274,8 @@ static struct msm_sensor_power_setting imx119_power_setting_w5[] = {
 
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #else
 static struct msm_sensor_power_setting imx119_power_setting_rev_0[] = {
 
@@ -366,7 +373,11 @@ static struct msm_sensor_power_setting imx119_power_setting_rev_a[] = {
 #endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, jaehan.jeong, 2013.7.30, To separate power settings depending on HW revisions,  [ENDS HERE] */
+=======
+/*                                                                                                           */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                                           */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -430,7 +441,11 @@ static int32_t imx119_platform_probe(struct platform_device *pdev)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8226_G2MDS_OPEN_CIS) || defined(CONFIG_MACH_MSM8226_G2MDS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_G2M_OPEN) || defined(CONFIG_MACH_MSM8926_G2M_VDF) || defined(CONFIG_MACH_MSM8926_G2M_GLOBAL) || defined(CONFIG_MACH_MSM8926_G2M_KR) || defined(CONFIG_MACH_MSM8226_G2MSS_GLOBAL_COM)
+=======
+#if defined(CONFIG_MACH_MSM8226_G2MDS_OPEN_CIS) || defined(CONFIG_MACH_MSM8226_G2MDS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_G2M_OPEN) || defined(CONFIG_MACH_MSM8926_G2M_VDF) || defined(CONFIG_MACH_MSM8926_G2M_GLOBAL) || defined(CONFIG_MACH_MSM8926_G2M_KR)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8226_G2MDS_OPEN_CIS) || defined(CONFIG_MACH_MSM8226_G2MDS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_G2M_OPEN) || defined(CONFIG_MACH_MSM8926_G2M_VDF) || defined(CONFIG_MACH_MSM8926_G2M_GLOBAL) || defined(CONFIG_MACH_MSM8926_G2M_KR)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -465,6 +480,7 @@ static void imx119_power_setting(void)
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #elif defined(CONFIG_MACH_MSM8926_B2L_ATT) || defined(CONFIG_MACH_MSM8926_B2LN_LGU) || defined(CONFIG_MACH_MSM8926_B2LN_SKT) || defined(CONFIG_MACH_MSM8926_B2LN_KT) || defined(CONFIG_MACH_MSM8926_X10_VZW) || defined(CONFIG_MACH_MSM8926_JAGNM_ATT) || defined(CONFIG_MACH_MSM8926_JAGNM_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_JAGDSNM_CMCC_CN)
 static void imx119_power_setting(void)
 {
@@ -479,6 +495,8 @@ static void imx119_power_setting(void)
 	imx119_s_ctrl.power_setting_array.power_setting = imx119_power_setting_w5;
 	imx119_s_ctrl.power_setting_array.size = ARRAY_SIZE(imx119_power_setting_w5);
 }
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #else
@@ -535,7 +553,11 @@ static void __exit imx119_exit_module(void)
 static struct msm_sensor_ctrl_t imx119_s_ctrl = {
 	.sensor_i2c_client = &imx119_sensor_i2c_client,
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, jaehan.jeong, 2013.7.30, To separate power settings depending on HW revisions, [STARTS HERE] */
+=======
+/*                                                                                                            */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                                            */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -544,7 +566,11 @@ static struct msm_sensor_ctrl_t imx119_s_ctrl = {
 	.power_setting_array.size = ARRAY_SIZE(imx119_power_setting),
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, jaehan.jeong, 2013.7.30, To separate power settings depending on HW revisions,  [ENDS HERE] */
+=======
+/*                                                                                                           */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                                           */
 >>>>>>> 0093d79... Overlay of LG soruce drop

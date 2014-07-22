@@ -877,7 +877,11 @@ static void __ref do_core_control(long temp)
 }
 #ifndef CONFIG_LGE_PM
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE do not use hotplug func in KTM */
+=======
+/*                                    */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                    */
 >>>>>>> 0093d79... Overlay of LG soruce drop

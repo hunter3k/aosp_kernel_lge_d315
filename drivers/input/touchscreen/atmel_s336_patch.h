@@ -31,7 +31,11 @@
 #define MXT_PATCH_MAX_EVENT		255
 #define MXT_PATCH_MAX_MSG_SIZE		10
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define MXT_PATCH_T71_DATA_MAX		112
+=======
+#define MXT_PATCH_T71_DATA_MAX		70
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #define MXT_PATCH_T71_DATA_MAX		70
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -119,8 +123,11 @@ enum {
 	MXT_PATCH_ITEM_USER4,
 	MXT_PATCH_ITEM_USER5,
 <<<<<<< HEAD
+<<<<<<< HEAD
 	MXT_PATCH_ITEM_USER6,
 	MXT_PATCH_ITEM_USER7,
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	//...
@@ -258,8 +265,11 @@ struct test_src{
 	int	user4;
 	int	user5;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	int	user6;
 	int	user7;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 };

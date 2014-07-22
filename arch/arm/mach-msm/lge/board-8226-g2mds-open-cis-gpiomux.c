@@ -89,7 +89,11 @@ static struct msm_gpiomux_config msm_blsp_configs[] __initdata = {
 		},
 	},
 <<<<<<< HEAD
+<<<<<<< HEAD
 //#ifdef CONFIG_MACH_LGE  /* LGE_CHANGE_S,  Added for COMMON_I2C */
+=======
+//                                                                 
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                 
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -217,6 +221,7 @@ static int gpio_reserved_pin_rev_A[] = {
 	};
 // Rev A +5, +17, +31, -62, +88, -89, -90, +92, -109, -111, -112, -113
 <<<<<<< HEAD
+<<<<<<< HEAD
 static int gpio_reserved_pin_rev_B[] = {
 	0, 1, 2, 3, 5, 12, 13, 14, 15, 16, 20, 21, 22, 31, 49, 50, 51, 52, 56, 63, 64, 65, 67, 73, 74, 80, 88, 89, 90.91, 92, 93, 94, 97, 98, 103, 104, 107, 109,
 	MSM8x26_GPIO_END // This is included to notify the end of reserved GPIO configuration.
@@ -225,6 +230,8 @@ static int gpio_reserved_pin_rev_C[] = {
 	0, 1, 2, 3, 5, 12, 13, 14, 15, 16, 20, 21, 22, 31, 49, 50, 51, 52, 56, 63, 64, 65, 67, 73, 74, 88, 89, 90.91, 92, 93, 94, 97, 98, 103, 104, 107, 109, 110,
 	MSM8x26_GPIO_END // This is included to notify the end of reserved GPIO configuration.
 	};
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 static struct gpiomux_setting reserved_pin_cfg = {
@@ -336,7 +343,10 @@ static struct gpiomux_setting touch_misc_cfg = {
 	.dir = GPIOMUX_IN,
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 static struct gpiomux_setting atmel_chg_cfg = {
@@ -384,7 +394,10 @@ static struct msm_gpiomux_config msm_melfas_configs[] __initdata = {
 	},
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 static struct msm_gpiomux_config msm_atmel_configs[] __initdata = {
@@ -411,7 +424,11 @@ static struct msm_gpiomux_config msm_atmel_configs[] __initdata = {
 //Need to set GPIO[021] NFC_IRQ
 //Need to set GPIO[022] NFC_MODE
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*  LGE_CHANGE_S, [NFC][garam.kim@lge.com], NFC Bring up*/
+=======
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                      */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -493,7 +510,11 @@ static struct msm_gpiomux_config msm_nfc_configs[] __initdata = {
 };
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*  LGE_CHANGE_E, [NFC][garam.kim@lge.com], NFC Bring up*/
+=======
+/*                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                      */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -523,7 +544,11 @@ static struct gpiomux_setting vibrator_suspend_cfg = {
 
 static struct gpiomux_setting vibrator_active_cfg_gpio_pwm = {
 <<<<<<< HEAD
+<<<<<<< HEAD
        .func = GPIOMUX_FUNC_3, //2013-08-22 beekay.lee@lge.com For WX(MSM8x26). GPIO34 has alternative function 3(=GP1_CLK)
+=======
+       .func = GPIOMUX_FUNC_3, //                                                                                          
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
        .func = GPIOMUX_FUNC_3, //                                                                                          
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -631,7 +656,11 @@ static struct gpiomux_setting gpio_suspend_config[] = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, Add gpiomux for ex-ldo used gpio, 2013-09-04, hyungtae.lee@lge.com */
+=======
+/*                                                                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -825,7 +854,11 @@ static struct msm_gpiomux_config msm_sensor_configs_rev_b[] __initdata = {
 	},
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, Add gpiomux for ex-ldo used gpio, 2013-09-04, hyungtae.lee@lge.com */
+=======
+/*                                                                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -865,7 +898,11 @@ static struct gpiomux_setting sd_card_det_sleep_config = {
 	.dir = GPIOMUX_IN,
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 #else // not CONFIG_MACH_LGE
+=======
+#else //                    
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #else //                    
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -876,7 +913,11 @@ static struct gpiomux_setting sd_card_det_sleep_config = {
 	.dir = GPIOMUX_IN,
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif // CONFIG_MACH_LGE
+=======
+#endif //                
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif //                
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1138,6 +1179,7 @@ void __init msm8226_init_gpiomux(void)
 			break;
 		case HW_REV_A :
 <<<<<<< HEAD
+<<<<<<< HEAD
                        for ( gpio_index = 0 ; gpio_reserved_pin_rev_A[gpio_index] < MSM8x26_GPIO_END ; gpio_index++ ){
 				gpio_func_reserved_pin_config.gpio = gpio_reserved_pin_rev_A[gpio_index];
 				msm_gpiomux_install(&gpio_func_reserved_pin_config, 1);
@@ -1159,14 +1201,23 @@ void __init msm8226_init_gpiomux(void)
 		case HW_REV_B :
 		case HW_REV_C :
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+		case HW_REV_B :
+		case HW_REV_C :
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		case HW_REV_D :
 		case HW_REV_E :
 		case HW_REV_1_0 :
 		case HW_REV_1_1 :
 		default :
 <<<<<<< HEAD
+<<<<<<< HEAD
 			for ( gpio_index = 0 ; gpio_reserved_pin_rev_C[gpio_index] < MSM8x26_GPIO_END ; gpio_index++ ){
 				gpio_func_reserved_pin_config.gpio = gpio_reserved_pin_rev_C[gpio_index];
+=======
+			for ( gpio_index = 0 ; gpio_reserved_pin_rev_A[gpio_index] < MSM8x26_GPIO_END ; gpio_index++ ){
+				gpio_func_reserved_pin_config.gpio = gpio_reserved_pin_rev_A[gpio_index];
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			for ( gpio_index = 0 ; gpio_reserved_pin_rev_A[gpio_index] < MSM8x26_GPIO_END ; gpio_index++ ){
 				gpio_func_reserved_pin_config.gpio = gpio_reserved_pin_rev_A[gpio_index];
@@ -1193,7 +1244,10 @@ void __init msm8226_init_gpiomux(void)
 
 	// GPIO related function <<4.TOUCH>>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	if (hw_rev <= HW_REV_B) {
@@ -1204,6 +1258,7 @@ void __init msm8226_init_gpiomux(void)
 		printk(KERN_ERR "[Touch] msm_atmel_configs \n");
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	// GPIO related function <<5.NFC>>
 	/*	LGE_CHANGE_S, [NFC][garam.kim@lge.com], NFC Bring up */
@@ -1212,12 +1267,17 @@ void __init msm8226_init_gpiomux(void)
 #endif
 	/*	LGE_CHANGE_E, [NFC][garam.kim@lge.com], NFC Bring up */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	// GPIO related function <<5.NFC>>
 	/*                                                      */
 #ifdef CONFIG_LGE_NFC_PN547
 	msm_gpiomux_install(msm_nfc_configs, ARRAY_SIZE(msm_nfc_configs));
 #endif
 	/*                                                      */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 
@@ -1230,7 +1290,11 @@ void __init msm8226_init_gpiomux(void)
 
 	// GPIO related function <<7.CAMERA>>
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, Add gpiomux for ex-ldo used gpio, 2013-09-04, hyungtae.lee@lge.com */
+=======
+/*                                                                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1247,7 +1311,11 @@ void __init msm8226_init_gpiomux(void)
 		printk(KERN_ERR " [Camera] In greater than HW_REV_B, MAIN_CAM0_RESET_N has been changed from GPIO_98 to GPIO_114\n");
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, Add gpiomux for ex-ldo used gpio, 2013-09-04, hyungtae.lee@lge.com */
+=======
+/*                                                                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop

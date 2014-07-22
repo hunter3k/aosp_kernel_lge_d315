@@ -22,7 +22,11 @@
 &soc {
 	serial@f991f000 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 		status = "disable";
+=======
+		status = "ok";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		status = "ok";
 >>>>>>> 0093d79... Overlay of LG soruce drop

@@ -15,6 +15,7 @@
 	i2c@f9925000 {
 		/* Acceleration sensor */
 <<<<<<< HEAD
+<<<<<<< HEAD
 		STM_lis2dh@19{
 			compatible = "STM,lis2dh";
 			reg = <0x19>;
@@ -77,6 +78,11 @@
 			compatible = "Bosch,bma2x2";
 			revision = "...rev_b";
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+		Bosch_bma2x2@18_rev_b {
+			compatible = "Bosch,bma2x2";
+			revision = "...rev_b";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			status = "ok";
 			reg = <0x18>;
 			interrupt-parent = <&msmgpio>;
@@ -97,7 +103,11 @@
 			place = <7>;
 		};
 <<<<<<< HEAD
+<<<<<<< HEAD
 		Bosch_bma2x2@18_rev_c{
+=======
+		Bosch_bma2x2@18_rev_c {
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		Bosch_bma2x2@18_rev_c {
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -123,7 +133,11 @@
 			place = <5>;
 		};
 <<<<<<< HEAD
+<<<<<<< HEAD
 		Bosch_bma2x2@18_rev_d{
+=======
+		Bosch_bma2x2@18_rev_d {
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		Bosch_bma2x2@18_rev_d {
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -149,7 +163,11 @@
 			place = <7>;
 		};
 <<<<<<< HEAD
+<<<<<<< HEAD
 		Bosch_bma2x2@18_rev_e...{
+=======
+		Bosch_bma2x2@18_rev_e... {
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		Bosch_bma2x2@18_rev_e... {
 >>>>>>> 0093d79... Overlay of LG soruce drop

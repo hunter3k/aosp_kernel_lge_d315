@@ -45,7 +45,11 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE  - To turn backlight on by setting default brightness while kernel booting */
+=======
+/*                                                                                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                       */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -116,7 +120,11 @@ static void lm3630_hw_reset(void)
 {
 	int gpio = main_lm3630_dev->gpio;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE - Fix GPIO Setting Warning*/
+=======
+	/*                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                                      */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -245,6 +253,7 @@ void lm3630_backlight_on(int level)
 		lm3630_hw_reset();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined( CONFIG_MACH_MSM8226_E7WIFI_OPEN_KR ) || defined ( CONFIG_MACH_MSM8926_E7LTE_ATT_US)
 		lm3630_write_reg(main_lm3630_dev->client, 0x02, 0x50); //OVP 32V, OCP 1.0A Boost Freq. 500Khz
 
@@ -263,6 +272,10 @@ void lm3630_backlight_on(int level)
 
 		/*  OVP(24V),OCP(1.0A) , Boost Frequency(500khz) */
 #if !defined(CONFIG_MACH_MSM8926_X10_VZW) && !defined(CONFIG_MACH_MSM8926_B2L_ATT) && !defined(CONFIG_MACH_MSM8926_B2LN_LGU) && !defined(CONFIG_MACH_MSM8926_B2LN_SKT) && !defined(CONFIG_MACH_MSM8926_B2LN_KT) || defined(CONFIG_MACH_MSM8926_JAGNM_ATT) || defined(CONFIG_MACH_MSM8926_JAGNM_GLOBAL_COM)
+=======
+		/*  OVP(24V),OCP(1.0A) , Boost Frequency(500khz) */
+#if !defined(CONFIG_MACH_MSM8926_B1L_VZW) && !defined(CONFIG_MACH_MSM8926_B1L_ATT)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		/*  OVP(24V),OCP(1.0A) , Boost Frequency(500khz) */
 #if !defined(CONFIG_MACH_MSM8926_B1L_VZW) && !defined(CONFIG_MACH_MSM8926_B1L_ATT)
@@ -288,7 +301,11 @@ void lm3630_backlight_on(int level)
 
 		/* Enable LED A to Exponential, LED2 is connected to BANK_A */
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if !defined(CONFIG_MACH_MSM8926_X10_VZW) && !defined(CONFIG_MACH_MSM8926_B2L_ATT) && !defined(CONFIG_MACH_MSM8926_B2LN_LGU) && !defined(CONFIG_MACH_MSM8926_B2LN_SKT) && !defined(CONFIG_MACH_MSM8926_B2LN_KT) || defined(CONFIG_MACH_MSM8926_JAGNM_ATT) || defined(CONFIG_MACH_MSM8926_JAGNM_GLOBAL_COM)
+=======
+#if !defined(CONFIG_MACH_MSM8926_B1L_VZW) && !defined(CONFIG_MACH_MSM8926_B1L_ATT)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if !defined(CONFIG_MACH_MSM8926_B1L_VZW) && !defined(CONFIG_MACH_MSM8926_B1L_ATT)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -306,8 +323,11 @@ void lm3630_backlight_on(int level)
 		}
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif//defined( CONFIG_MACH_MSM8226_E7WIFI_OPEN_KR ) || defined ( CONFIG_MACH_MSM8926_E7LTE)
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	}
@@ -360,7 +380,11 @@ static int bl_set_intensity(struct backlight_device *bd)
 	struct i2c_client *client = to_i2c_client(bd->dev.parent);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE - if it's trying to set same backlight value, skip it.*/
+=======
+	/*                                                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                                                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop

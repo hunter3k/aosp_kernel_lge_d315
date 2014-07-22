@@ -56,8 +56,13 @@ void msm_hs_set_mctrl(struct uart_port *uport,
 				    unsigned int mctrl);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, For G2 LPM */
 /* LG_BTUI : chanha.park@lge.com : Added bluesleep interface - [S] */
+=======
+/*                                                                    */
+/*                                                                 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                    */
 /*                                                                 */
@@ -68,9 +73,15 @@ void msm_hs_set_mctrl(struct uart_port *uport,
 struct uart_port * msm_hs_get_bt_uport(unsigned int line);
 int msm_hs_get_bt_uport_clock_state(struct uart_port *uport);
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LG_BTUI : chanha.park@lge.com : Added bluesleep interface - [E] */
 /* LGE_CHANGE_E, [BT][younghyun.kwon@lge.com], 2013-04-10 */
+=======
+#endif /*                      */
+/*                                                                 */
+/*                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                      */
 /*                                                                 */

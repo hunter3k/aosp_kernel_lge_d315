@@ -91,8 +91,11 @@
 #ifndef CONFIG_MACH_MSM8926_X3_TRF_US
 #ifndef CONFIG_MACH_MSM8X10_W3C_TRF_US
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifndef CONFIG_MACH_MSM8X10_W5_TRF_US
 #ifndef CONFIG_MACH_MSM8X10_W5C_TRF_US
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #include "f_ecm.c"
@@ -100,8 +103,11 @@
 #endif
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #include "f_qc_rndis.c"
@@ -289,10 +295,13 @@ static char serial_string[256];
 static char charge_only_string[256];
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef CONFIG_USB_G_LGE_SERIALNO_REDIRECTION
 #define STRING_SERIAL_REDI_IDX      4
 static char serial_string_redi[256];
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
@@ -305,9 +314,12 @@ static struct usb_string strings_dev[] = {
     [CHARGE_ONLY_STRING_IDX].s = charge_only_string,
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef CONFIG_USB_G_LGE_SERIALNO_REDIRECTION
     [STRING_SERIAL_REDI_IDX].s = serial_string_redi,
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	{  }			/* end of list */
@@ -1078,8 +1090,11 @@ static struct android_usb_function ncm_function = {
 #ifndef CONFIG_MACH_MSM8926_X3_TRF_US
 #ifndef CONFIG_MACH_MSM8X10_W3C_TRF_US
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifndef CONFIG_MACH_MSM8X10_W5_TRF_US
 #ifndef CONFIG_MACH_MSM8X10_W5C_TRF_US
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 /* ecm transport string */
@@ -1205,8 +1220,11 @@ static struct android_usb_function ecm_qc_function = {
 #endif
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 /* MBIM - used with BAM */
@@ -1879,8 +1897,11 @@ static struct android_usb_function rndis_qc_function = {
 #ifndef CONFIG_MACH_MSM8926_X3_TRF_US
 #ifndef CONFIG_MACH_MSM8X10_W3C_TRF_US
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifndef CONFIG_MACH_MSM8X10_W5_TRF_US
 #ifndef CONFIG_MACH_MSM8X10_W5C_TRF_US
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 static int ecm_function_bind_config(struct android_usb_function *f,
@@ -1949,8 +1970,11 @@ static struct android_usb_function ecm_function = {
 #endif
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
@@ -1975,7 +1999,11 @@ static int mass_storage_function_init(struct android_usb_function *f,
 		return -ENOMEM;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef CONFIG_USB_G_LGE_ANDROID	/* by mo2chunghan.lee@lge.com, 09/20/2012 */
+=======
+#ifdef CONFIG_USB_G_LGE_ANDROID	/*                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #ifdef CONFIG_USB_G_LGE_ANDROID	/*                                        */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -2190,7 +2218,11 @@ static struct android_usb_function cdrom_storage_function = {
 	.attributes	= cdrom_storage_function_attributes,
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_USB_G_LGE_ANDROID_AUTORUN */
+=======
+#endif /*                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -2219,7 +2251,11 @@ static struct android_usb_function charge_only_function = {
    .bind_config    = charge_only_function_bind_config,
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_USB_G_LGE_ANDROID */
+=======
+#endif /*                          */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                          */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -2372,8 +2408,11 @@ static struct android_usb_function *supported_functions[] = {
 #ifndef CONFIG_MACH_MSM8926_X3_TRF_US
 #ifndef CONFIG_MACH_MSM8X10_W3C_TRF_US
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifndef CONFIG_MACH_MSM8X10_W5_TRF_US
 #ifndef CONFIG_MACH_MSM8X10_W5C_TRF_US
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	&ecm_qc_function,
@@ -2381,8 +2420,11 @@ static struct android_usb_function *supported_functions[] = {
 #endif
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #ifdef CONFIG_SND_PCM
@@ -2410,8 +2452,11 @@ static struct android_usb_function *supported_functions[] = {
 #ifndef CONFIG_MACH_MSM8926_X3_TRF_US
 #ifndef CONFIG_MACH_MSM8X10_W3C_TRF_US
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifndef CONFIG_MACH_MSM8X10_W5_TRF_US
 #ifndef CONFIG_MACH_MSM8X10_W5C_TRF_US
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	&ecm_function,
@@ -2419,8 +2464,11 @@ static struct android_usb_function *supported_functions[] = {
 #endif
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	&ncm_function,
@@ -3136,7 +3184,11 @@ static void android_lge_factory_bind(struct usb_composite_dev *cdev)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_USB_G_LGE_ANDROID && CONFIG_LGE_PM */
+=======
+#endif /*                                           */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                                           */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -3212,7 +3264,11 @@ static int android_bind(struct usb_composite_dev *cdev)
 	/* Default strings - should be updated by userspace */
 #ifdef CONFIG_USB_G_LGE_ANDROID
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* Default string as LGE products */
+=======
+	/*                                */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                                */
 >>>>>>> 0093d79... Overlay of LG soruce drop

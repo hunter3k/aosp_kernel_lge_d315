@@ -43,17 +43,23 @@
 #include "diag_masks.h"
 #include "diagfwd_bridge.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [START]
 #ifdef CONFIG_LGE_DM_DEV
 #include "lg_dm_dev_tty.h"
 #endif /*CONFIG_LGE_DM_DEV*/
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [END]
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 //                                                                             
 #ifdef CONFIG_LGE_DM_DEV
 #include "lg_dm_dev_tty.h"
 #endif /*                 */
 //                                                                           
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 #ifdef CONFIG_LGE_DM_APP
@@ -90,11 +96,15 @@
 
 #ifdef CONFIG_LGE_DIAG_ENABLE
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W5C_TRF_US) || defined(CONFIG_MACH_MSM8X10_W5C_TRF_US)
 #define DIAG_ENABLE_DEBUG 1
 #else
 #define DIAG_ENABLE_DEBUG 0
 #endif
+=======
+#define DIAG_ENALBE_DEBUG 0
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #define DIAG_ENALBE_DEBUG 0
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -118,7 +128,11 @@ int lge_diag_get_smem_value(void)
 	//pr_info("cable type: %d", lge_hw_smem_id1_ptr->cable_type);
 	//pr_info("QEM: %d", lge_hw_smem_id1_ptr->qem); 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if DIAG_ENABLE_DEBUG
+=======
+#if DIAG_ENALBE_DEBUG
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if DIAG_ENALBE_DEBUG
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -136,7 +150,11 @@ int lge_diag_get_smem_value(void)
 int set_diag_enable_status(int enable) 
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if DIAG_ENABLE_DEBUG
+=======
+#if DIAG_ENALBE_DEBUG
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if DIAG_ENALBE_DEBUG
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -152,7 +170,11 @@ int set_diag_enable_status(int enable)
 #endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // skip crc check because of MITS Test - WX-BSP-Factory@lge.com
+=======
+//                                                             
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                             
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1155,7 +1177,11 @@ int diag_device_write(void *buf, int data_type, struct diag_request *write_ptr)
 #endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [START]
+=======
+//                                                                             
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                             
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1184,8 +1210,13 @@ int diag_device_write(void *buf, int data_type, struct diag_request *write_ptr)
 
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /*CONFIG_LGE_DM_DEV*/
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [END]
+=======
+#endif /*                 */
+//                                                                           
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                 */
 //                                                                           
@@ -1416,6 +1447,7 @@ int diag_process_apps_pkt(unsigned char *buf, int len)
 #ifdef CONFIG_LGE_DIAG_ENABLE
     if (diag_enable_status != 1 && buf[0] != 0xA1 && buf[0]!=0xA0 ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if DIAG_ENABLE_DEBUG
         pr_info("%s: diag_enable_status = %d \n",__func__,diag_enable_status);
 #endif
@@ -1427,12 +1459,17 @@ int diag_process_apps_pkt(unsigned char *buf, int len)
 #endif
 
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #if DIAG_ENALBE_DEBUG
         pr_info("%s: diag_enable_status = %d \n",__func__,diag_enable_status);
 #endif
         driver->apps_rsp_buf[0] = 24;
         encode_rsp_and_send(0);
         return 0;
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
     }
 #endif
@@ -1949,7 +1986,11 @@ void diag_process_hdlc(void *data, unsigned len)
 	ret = diag_hdlc_decode(&hdlc);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // skip crc check because of MITS Test - WX-BSP-Factory@lge.com
+=======
+//                                                             
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                             
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -2091,7 +2132,11 @@ int diagfwd_connect(void)
 	int i;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [START]
+=======
+//                                                                             
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                             
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -2110,8 +2155,13 @@ int diagfwd_connect(void)
 		return 0;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /*CONFIG_LGE_DM_DEV*/
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [END]
+=======
+#endif /*                 */
+//                                                                           
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                 */
 //                                                                           
@@ -2169,7 +2219,11 @@ int diagfwd_disconnect(void)
 	int i;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [START]
+=======
+//                                                                             
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                             
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -2182,8 +2236,13 @@ int diagfwd_disconnect(void)
 		return 0;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /*CONFIG_LGE_DM_DEV*/
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [END]
+=======
+#endif /*                 */
+//                                                                           
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                 */
 //                                                                           
@@ -2321,7 +2380,11 @@ int diagfwd_read_complete(struct diag_request *diag_read_ptr)
 		}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [START]
+=======
+//                                                                             
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                             
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -2335,8 +2398,13 @@ int diagfwd_read_complete(struct diag_request *diag_read_ptr)
 						 &(driver->diag_read_work));
 		}
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /*CONFIG_LGE_DM_DEV*/
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [END]
+=======
+#endif /*                 */
+//                                                                           
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                 */
 //                                                                           
@@ -2937,7 +3005,11 @@ void diagfwd_init(void)
 	driver->diag_wq = create_singlethread_workqueue("diag_wq");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // skip crc check because of MITS Test - WX-BSP-Factory@lge.com
+=======
+//                                                             
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                             
 >>>>>>> 0093d79... Overlay of LG soruce drop

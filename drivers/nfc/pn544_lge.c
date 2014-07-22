@@ -4,17 +4,23 @@
  
 #include <linux/nfc/pn544_lge.h>
 <<<<<<< HEAD
+<<<<<<< HEAD
 // seokmin.hong@lge.com    header file added for removing depedency of platform and managing LGE modification
 #include "pn544_lge_hwadapter.h"
 /*  LGE_CHANGE_S, [NFC][minwoo.kwon@lge.com], 2013-03-07, NFC Bring up */
 #include <linux/of_gpio.h>
 /*  LGE_CHANGE_E, [NFC][minwoo.kwon@lge.com], 2013-03-07, NFC Bring up */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 //                                                                                                           
 #include "pn544_lge_hwadapter.h"
 /*                                                                     */
 #include <linux/of_gpio.h>
 /*                                                                     */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 
@@ -22,7 +28,11 @@
 #include <linux/kthread.h>
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E */
+=======
+/*              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*              */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -32,17 +42,23 @@
 #define PN544_DOWNLOAD_CMD	1
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // LGE_START byunggu.kang@lge.com 2013-11-11 Modify for Balanced IRQ Reg/Dereg
 #ifdef CONFIG_LGE_NFC_SET_IRQ_WAKEUP
 static bool sIrqState = false;
 #endif
 // LGE_END byunggu.kang@lge.com 2013-07-21 Modify for Balanced IRQ Reg/Dereg
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 //                                                                            
 #ifdef CONFIG_LGE_NFC_SET_IRQ_WAKEUP
 static bool sIrqState = false;
 #endif
 //                                                                          
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 
@@ -76,7 +92,11 @@ static void pn544_disable_irq(struct pn544_dev *pn544_dev)
 	if (pn544_dev->irq_enabled) {
 		disable_irq_nosync(pn544_get_irq_pin(pn544_dev));
 <<<<<<< HEAD
+<<<<<<< HEAD
 // 20120831, jh.heo@lge.com Fix to irq interrupt in sleep mode.
+=======
+//                                                             
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                             
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -120,6 +140,7 @@ void pn544_factory_standby_set(void)
     // 1. Go To Dnld mode 2
             
 <<<<<<< HEAD
+<<<<<<< HEAD
     gpio_set_value(pn544_dev->ven_gpio, 1);
     gpio_set_value(pn544_dev->firm_gpio, 1);
     msleep(10);
@@ -127,12 +148,17 @@ void pn544_factory_standby_set(void)
     msleep(10);
     gpio_set_value(pn544_dev->ven_gpio, 1);
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
     gpio_set_value(pn544_pData.ven_gpio, 1);
     gpio_set_value(pn544_pData.firm_gpio, 1);
     msleep(10);
     gpio_set_value(pn544_pData.ven_gpio, 0);
     msleep(10);
     gpio_set_value(pn544_pData.ven_gpio, 1);
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
     msleep(10);
 
@@ -150,6 +176,7 @@ void pn544_factory_standby_set(void)
            
     //--> # reset 1
 <<<<<<< HEAD
+<<<<<<< HEAD
     gpio_set_value(pn544_dev->firm_gpio, 0);
     gpio_set_value(pn544_dev->ven_gpio, 1);
     msleep(10);
@@ -163,6 +190,8 @@ void pn544_factory_standby_set(void)
     gpio_set_value(pn544_dev->firm_gpio, 0);
     gpio_set_value(pn544_dev->ven_gpio, 1);
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
     gpio_set_value(pn544_pData.firm_gpio, 0);
     gpio_set_value(pn544_pData.ven_gpio, 1);
     msleep(10);
@@ -175,6 +204,9 @@ void pn544_factory_standby_set(void)
     //--> # reset 1                              
     gpio_set_value(pn544_pData.firm_gpio, 0);
     gpio_set_value(pn544_pData.ven_gpio, 1);
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
     msleep(10);
 
@@ -182,8 +214,13 @@ void pn544_factory_standby_set(void)
     // 4. power off
     dprintk(PN544_DRV_NAME ":%s power off\n", __func__);
 <<<<<<< HEAD
+<<<<<<< HEAD
     gpio_set_value(pn544_dev->firm_gpio, 0);
     gpio_set_value(pn544_dev->ven_gpio, 0);
+=======
+    gpio_set_value(pn544_pData.firm_gpio, 0);
+    gpio_set_value(pn544_pData.ven_gpio, 0);
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
     gpio_set_value(pn544_pData.firm_gpio, 0);
     gpio_set_value(pn544_pData.ven_gpio, 0);
@@ -241,7 +278,11 @@ static int __pn544_kread(void *dev, unsigned int length)
     if (irq_gpio_val == 0) {
         pn544_dev->irq_enabled = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef LGE_NFC_READ_IRQ_MODIFY
+=======
+#ifdef READ_IRQ_MODIFY
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #ifdef READ_IRQ_MODIFY
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -250,7 +291,11 @@ static int __pn544_kread(void *dev, unsigned int length)
         enable_irq_wake(pn544_get_irq_pin(pn544_dev));
         enable_irq(pn544_get_irq_pin(pn544_dev));
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef LGE_NFC_READ_IRQ_MODIFY
+=======
+#ifdef READ_IRQ_MODIFY
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #ifdef READ_IRQ_MODIFY
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -297,15 +342,21 @@ void pn544_factory_standby_set(void)
     // 1. Go To Dnld mode 2
     dprintk("%s Go To Dnld mode 2\n", __func__);
 <<<<<<< HEAD
+<<<<<<< HEAD
     gpio_set_value(pn544_dev->ven_gpio, 0);
     gpio_set_value(pn544_dev->firm_gpio, 0);
     msleep(10);
     gpio_set_value(pn544_dev->ven_gpio, 1);
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
     gpio_set_value(pn544_pData.ven_gpio, 0);
     gpio_set_value(pn544_pData.firm_gpio, 0);
     msleep(10);
     gpio_set_value(pn544_pData.ven_gpio, 1);
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
     msleep(10);
 
@@ -348,6 +399,7 @@ void pn544_factory_standby_set(void)
     return;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_LGE_NFC_PN544_C2 & CONFIG_LGE_NFC_PN544_C3 */
 #endif /* CONFIG_LGE_NFC_PRESTANDBY */
 
@@ -359,6 +411,8 @@ void pn544_factory_standby_set(void)
  * 
  * byungchul.park@lge.com 20120328
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #endif /*                                                   */
 #endif /*                           */
 
@@ -369,6 +423,9 @@ void pn544_factory_standby_set(void)
                                    
    
                                   
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
  */
 #if defined(CONFIG_LGE_NFC_MULTICORE_FASTBOOT)&&defined(CONFIG_LGE_NFC_PRESTANDBY)
@@ -379,8 +436,13 @@ static int pn544_factory_standby_set_thread(void *arg)
 	return 0;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* defined(CONFIG_LGE_NFC_MULTICORE_FASTBOOT)&&defined(CONFIG_LGE_NFC_PRESTANDBY) */
 /* LGE_CHANGE_E */
+=======
+#endif /*                                                                                */
+/*              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                                                                                */
 /*              */
@@ -416,7 +478,11 @@ static ssize_t pn544_dev_read(struct file *filp, char __user *buf,
 		do_reading=0;//DY_TEST
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 // 20120831, jh.heo@lge.com Fix to irq interrupt in sleep mode.
+=======
+//                                                             
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                             
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -691,6 +757,7 @@ static int pn544_probe(struct i2c_client *client,
     i2c_set_clientdata(client, pn544_dev);
     dprintk(PN544_DRV_NAME ": pn544_probe() end\n");
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S
  *
  * do device driver initialization
@@ -699,6 +766,8 @@ static int pn544_probe(struct i2c_client *client,
  *
  * byungchul.park@lge.com 20120328
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*             
   
                                   
@@ -706,6 +775,9 @@ static int pn544_probe(struct i2c_client *client,
                                    
   
                                   
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
  */
 #ifdef CONFIG_LGE_NFC_PRESTANDBY
@@ -725,7 +797,11 @@ static int pn544_probe(struct i2c_client *client,
         pn544_factory_standby_set();
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E */
+=======
+/*              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*              */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -857,9 +933,15 @@ static void __exit pn544_dev_exit(void)
 module_exit(pn544_dev_exit);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, [NFC][minwoo.kwon@lge.com], 2013-03-07, NFC Bring up */
 MODULE_DEVICE_TABLE(i2c, pn544_id);
 /* LGE_CHANGE_E, [NFC][minwoo.kwon@lge.com], 2013-03-07, NFC Bring up */
+=======
+/*                                                                    */
+MODULE_DEVICE_TABLE(i2c, pn544_id);
+/*                                                                    */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                    */
 MODULE_DEVICE_TABLE(i2c, pn544_id);

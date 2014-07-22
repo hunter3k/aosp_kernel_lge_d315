@@ -254,17 +254,23 @@ int ist30xx_power_off(void);
 int ist30xx_reset(void);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* sukkyoon.hong@lge.com */
 int ist30xx_ts_off(void);
 int ist30xx_ts_on(void);
 void ist30xx_ts_reset(void);
 /* sukkyoon.hong@lge.com */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                       */
 int ist30xx_ts_off(void);
 int ist30xx_ts_on(void);
 void ist30xx_ts_reset(void);
 /*                       */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 int ist30xx_internal_suspend(struct ist30xx_data *data);
 int ist30xx_internal_resume(struct ist30xx_data *data);

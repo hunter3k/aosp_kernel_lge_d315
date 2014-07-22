@@ -14,7 +14,11 @@
 	i2c@f9923000{
 		mms100s@48 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 			melfas,product = "T4S35A";
+=======
+			melfas,product = "T2S35A";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			melfas,product = "T2S35A";
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -23,17 +27,23 @@
 			melfas,use_vdd_i2c = <1>;
 			melfas,gpio-vdd-en = <62>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 			melfas,key-map = <158 172 139 249>;
 			melfas,fw-image-name = "melfas/w3_global_sca/w3_global_sca_rev_a_v103.mfsb";
 			melfas,panel-spec-name = "melfas/w3_global_sca/w3_global_sca_limit.txt";
 			status = "disable";
 			revision = "rev_a...";
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			melfas,key-map = <158 172>;
 			melfas,fw-image-name = "melfas/w3_global_sca/w3_global_sca_rev_a_v103.mfsb";
 			melfas,panel-spec-name = "melfas/w3_global_sca/w3_global_sca_limit.txt";
 			status = "disable";
 			revision = "rev_a";
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		};
 
@@ -49,6 +59,7 @@
 			imagis,panel-y = <480>;
 			imagis,i2c-pull-up = <1>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 			status = "ok";
 			revision = "rev_0";
 		};
@@ -58,6 +69,8 @@
 			status = "ok";
 			lge,product = "T4S35A";
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			status = "disable";
 			revision = "rev_0";
 		};
@@ -65,6 +78,9 @@
 			revision = "rev_a...rev_d";
 			status = "ok";
 			lge,product = "T2S35A";
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 			lge,fw_image = "melfas/w3_global_sca/w3_global_sca_rev_a_v103.mfsb";
 			lge,panel_spec = "melfas/w3_global_sca/w3_global_sca_limit.txt";
@@ -73,12 +89,15 @@
 			vdd_value0 = <62>;
 			vdd_type1 = <2>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		};
 
 		synaptics_red@20 {
 			status = "disable";
 			revision = "rev_e...";
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			button_name = <158 172 139 249>;
 		};
 		
@@ -88,6 +107,9 @@
 			synaptics,button-map = <158 172 139 249>;
 			synaptics,i2c-pull-up = <0>;
 			synaptics,power-down  = <1>;
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 			synaptics,gpio_vdd_en  = <62>;
 		};
@@ -95,6 +117,7 @@
 		synaptics_s220x@20 {
 			status = "ok";
 			revision = "rev_e...";
+<<<<<<< HEAD
 <<<<<<< HEAD
 			synaptics,fw_version_info = <0x24 0x03 0x51>;
 			synaptics,fw_image = "synaptics/w3_global_sca/PLG312_V1.05_PR1585854_DS4.3.5.1.16_24035185.img";
@@ -105,6 +128,8 @@
 			    /* 0: No image(default), 1: W3DS(TIM BR)(PLG312_T001), 2: W3S(VDF)(PLG311_T001), ... */
 				panel_type = <1>;
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			synaptics,fw_version_info = <0x22 0x03 0x51>;
 			synaptics,fw_image = "synaptics/w3_global_sca/PLG312_V0.16_PR1581672_DS4.3.5.1.16_24035110.img";
                         lge,knock_on_type = <1>;
@@ -114,6 +139,9 @@
 			    /* firmware image depends on this value, temporarily used */
 			    /* 0: No image(default), 1: W3DS(TIM BR)(PLG312_T001), 2: W3S(VDF)(PLG311_T001), ... */
 				panel_type = <2>;
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 				/*maker_id  disable(0), enable(1)*/
 				maker_id = <0>;
@@ -121,7 +149,11 @@
 				palm_detect_mode = <1>;
 				ghost_detection_enable = <1>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 				ghost_detection_value = <200 50 8 6 11 5 10 500 100 6 5>;
+=======
+				ghost_detection_jitter_value = <8>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 				ghost_detection_jitter_value = <8>;
 >>>>>>> 0093d79... Overlay of LG soruce drop

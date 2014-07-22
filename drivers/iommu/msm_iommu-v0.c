@@ -1362,7 +1362,11 @@ irqreturn_t msm_iommu_fault_handler(int irq, void *dev_id)
 			pr_err("Interesting registers:\n");
 			__print_ctx_regs(base, num);
 <<<<<<< HEAD
+<<<<<<< HEAD
 			/* [LGE_UPDATE_START] Adding temporary panic code for debugging 14-01-05 */
+=======
+			/*                                                                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			/*                                                                       */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1371,7 +1375,11 @@ irqreturn_t msm_iommu_fault_handler(int irq, void *dev_id)
 				panic("Msm_iommu-v0.c panic at msm_iommu_fault_handler func. Contact WX-BSP-Audio@lge.com");
 			}
 <<<<<<< HEAD
+<<<<<<< HEAD
 			/* [LGE_UPDATE_END] Adding temporary panic code for debugging 14-01-05 */
+=======
+			/*                                                                     */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			/*                                                                     */
 >>>>>>> 0093d79... Overlay of LG soruce drop

@@ -142,10 +142,13 @@ struct bms_battery_data {
 	defined(CONFIG_QPNP_BMS)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_LGE_PM_BATTERY_CAPACITY_2100mAh) && defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 #define CONFIG_LGE_PM_BATTERY_HITACI_2100mAh
 #endif
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #ifdef CONFIG_LGE_PM_BATTERY_PROFILE_DATA
@@ -169,6 +172,7 @@ extern struct bms_battery_data LGE_BL_64SH_3000mAh_Technohill_data;
 extern struct bms_battery_data LGE_LGC_2040mAH_data;
 extern struct bms_battery_data LGE_Tocad_2040mAh_data;
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef CONFIG_LGE_PM_BATTERY_HITACI_2100mAh
 extern struct bms_battery_data LGE_Hitaci_2040mAh_data;
 #endif
@@ -177,6 +181,8 @@ extern struct bms_battery_data LGE_BL_47TH_3200mAh_LG_Chem_data;
 extern struct bms_battery_data LGE_BL_47TH_3200mAh_Tocad_data;
 #elif defined(CONFIG_LGE_PM_BATTERY_CAPACITY_4600mAh)
 extern struct bms_battery_data LGE_LGC_4600mAH_data;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #else

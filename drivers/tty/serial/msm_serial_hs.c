@@ -3039,8 +3039,13 @@ deregister_bam:
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, For G2 LPM */
 /* LG_BTUI : chanha.park@lge.com : Added bluesleep interface - [S] */
+=======
+/*                                                                    */
+/*                                                                 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                    */
 /*                                                                 */
@@ -3082,9 +3087,15 @@ int msm_hs_get_bt_uport_clock_state(struct uart_port *uport)
 }
 EXPORT_SYMBOL(msm_hs_get_bt_uport_clock_state);
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LG_BTUI : chanha.park@lge.com : Added bluesleep interface - [E] */
 /* LGE_CHANGE_E, [BT][younghyun.kwon@lge.com], 2013-04-10 */
+=======
+#endif /*                      */
+/*                                                                 */
+/*                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                      */
 /*                                                                 */
@@ -3170,7 +3181,11 @@ static int __devinit msm_hs_probe(struct platform_device *pdev)
 		core_irqres = platform_get_irq_byname(pdev, "core_irq");
 		bam_irqres = platform_get_irq_byname(pdev, "bam_irq");
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if 0  // suhui.kim@lge.com  BT Bring-up, wakeup_irq is not used
+=======
+#if 0  //                                                       
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if 0  //                                                       
 >>>>>>> 0093d79... Overlay of LG soruce drop

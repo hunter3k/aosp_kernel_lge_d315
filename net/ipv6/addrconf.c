@@ -93,15 +93,21 @@
 
 /* Set to 3 to get tracing... */
 <<<<<<< HEAD
+<<<<<<< HEAD
 // LGE_CHANGE_S, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
 #define ACONF_DEBUG 2 // The original value.
 //#define ACONF_DEBUG 3 // To debug...
 // LGE_CHANGE_E, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 //                                                                                                        
 //#define ACONF_DEBUG 2 // The original value.
 #define ACONF_DEBUG 3 // To debug...
 //                                                                                                        
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 #if ACONF_DEBUG >= 3
@@ -112,7 +118,11 @@
 
 #define	INFINITY_LIFE_TIME	0xFFFFFFFF
 <<<<<<< HEAD
+<<<<<<< HEAD
 // LGE_CHANGE_S, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
+=======
+//                                                                                                        
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                                                        
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -128,7 +138,11 @@
 #define LGE_DATA_WAITING_TIME_FOR_DAD_OF_LGU 5
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 // LGE_CHANGE_E, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
+=======
+//                                                                                                        
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                                                        
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1875,17 +1889,23 @@ void addrconf_prefix_rcv(struct net_device *dev, u8 *opt, int len, bool sllao)
 	struct net *net = dev_net(dev);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // LGE_CHANGE_S, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
 #ifdef CONFIG_LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER
 	ADBG((KERN_DEBUG "[LGE_DATA][%s()] The prefix is received now !", __func__));
 #endif
 // LGE_CHANGE_E, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 //                                                                                                        
 #ifdef CONFIG_LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER
 	printk(KERN_DEBUG "[LGE_DATA][%s()] The prefix is received now !", __func__);
 #endif
 //                                                                                                        
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 	pinfo = (struct prefix_info *) opt;
@@ -2964,6 +2984,7 @@ static void addrconf_rs_timer(unsigned long data)
 
 	/* Announcement received after solicitation was sent */
 <<<<<<< HEAD
+<<<<<<< HEAD
 // LGE_CHANGE_S, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
 	if (idev->if_flags & IF_RA_RCVD){
 #ifdef CONFIG_LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER
@@ -2972,6 +2993,16 @@ static void addrconf_rs_timer(unsigned long data)
 		goto out;
     }
 // LGE_CHANGE_E, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
+=======
+//                                                                                                        
+	if (idev->if_flags & IF_RA_RCVD){
+#ifdef CONFIG_LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER
+printk(KERN_DEBUG "[LGE_DATA][%s()] The RA msg had been received!", __func__);
+#endif
+		goto out;
+    }
+//                                                                                                        
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                                                        
 	if (idev->if_flags & IF_RA_RCVD){
@@ -2991,17 +3022,23 @@ printk(KERN_DEBUG "[LGE_DATA][%s()] The RA msg had been received!", __func__);
 				   idev->cnf.rtr_solicit_interval);
 		spin_unlock(&ifp->lock);
 <<<<<<< HEAD
+<<<<<<< HEAD
 // LGE_CHANGE_S, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
 #ifdef CONFIG_LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER
         ADBG((KERN_DEBUG "[LGE_DATA][%s()][stage 2] rs is sent now!", __func__));
 #endif
 // LGE_CHANGE_E, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 //                                                                                                        
 #ifdef CONFIG_LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER
         printk(KERN_DEBUG "[LGE_DATA][%s()][stage 2] rs is sent now!", __func__);
 #endif
 //                                                                                                        
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		ndisc_send_rs(idev->dev, &ifp->addr, &in6addr_linklocal_allrouters);
 	} else {
@@ -3034,17 +3071,23 @@ static void addrconf_dad_kick(struct inet6_ifaddr *ifp)
 
 	ifp->probes = idev->cnf.dad_transmits;
 <<<<<<< HEAD
+<<<<<<< HEAD
 // LGE_CHANGE_S, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
 #ifdef CONFIG_LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER
     ADBG((KERN_DEBUG "[LGE_DATA][%s()] dad_transmits == %d, ramd_num == %lu", __func__, idev->cnf.dad_transmits, rand_num));
 #endif
 // LGE_CHANGE_E, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 //                                                                                                        
 #ifdef CONFIG_LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER
     printk(KERN_DEBUG "[LGE_DATA][%s()] dad_transmits == %d, ramd_num == %lu", __func__, idev->cnf.dad_transmits, rand_num);
 #endif
 //                                                                                                        
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	addrconf_mod_timer(ifp, AC_DAD, rand_num);
 }
@@ -3054,7 +3097,11 @@ static void addrconf_dad_start(struct inet6_ifaddr *ifp, u32 flags)
 	struct inet6_dev *idev = ifp->idev;
 	struct net_device *dev = idev->dev;
 <<<<<<< HEAD
+<<<<<<< HEAD
 // LGE_CHANGE_S, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-07-02
+=======
+//                                                                                                        
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                                                        
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -3065,6 +3112,7 @@ static void addrconf_dad_start(struct inet6_ifaddr *ifp, u32 flags)
     char CurrentInterfaceName[6]={0};//initializing
     ipv6AddrType = ipv6_addr_type(&ifp->addr);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     ADBG((KERN_DEBUG "[LGE_DATA][%s()] dad_start! dev_name == %s", __func__, dev->name));
     ADBG((KERN_DEBUG "[LGE_DATA][%s()] ipv6_addr_type == %d", __func__, ipv6AddrType));
@@ -3077,6 +3125,8 @@ static void addrconf_dad_start(struct inet6_ifaddr *ifp, u32 flags)
 #endif
 // LGE_CHANGE_E, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-07-02
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
     printk(KERN_DEBUG "[LGE_DATA][%s()] dad_start! dev_name == %s", __func__, dev->name);
     printk(KERN_DEBUG "[LGE_DATA][%s()] ipv6_addr_type == %d", __func__, ipv6AddrType);
 
@@ -3087,6 +3137,9 @@ static void addrconf_dad_start(struct inet6_ifaddr *ifp, u32 flags)
     }
 #endif
 //                                                                                                        
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	addrconf_join_solict(dev, &ifp->addr);
 
@@ -3098,7 +3151,11 @@ static void addrconf_dad_start(struct inet6_ifaddr *ifp, u32 flags)
 		goto out;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // LGE_CHANGE_S, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-07-02
+=======
+//                                                                                                        
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                                                        
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -3117,7 +3174,11 @@ static void addrconf_dad_start(struct inet6_ifaddr *ifp, u32 flags)
 // Kernel Original implemenatation END
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 // LGE_CHANGE_E, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-07-02
+=======
+//                                                                                                        
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                                                        
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -3126,17 +3187,23 @@ static void addrconf_dad_start(struct inet6_ifaddr *ifp, u32 flags)
 		spin_unlock(&ifp->lock);
 		read_unlock_bh(&idev->lock);
 <<<<<<< HEAD
+<<<<<<< HEAD
 // LGE_CHANGE_S, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-07-02
 #ifdef CONFIG_LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER
         ADBG((KERN_DEBUG "[LGE_DATA][%s()] ipv6_addr_type == %d, Because the IPv6 type is Global Scope, we will immediately finish the DAD process for Global Scope.", __func__, ipv6AddrType));
 #endif
 // LGE_CHANGE_E, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-07-02
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 //                                                                                                        
 #ifdef CONFIG_LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER
         printk(KERN_DEBUG "[LGE_DATA][%s()] ipv6_addr_type == %d, Because the IPv6 type is Global Scope, we will immediately finish the DAD process for Global Scope.", __func__, ipv6AddrType);
 #endif
 //                                                                                                        
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		addrconf_dad_completed(ifp);
 		return;
@@ -3174,7 +3241,11 @@ static void addrconf_dad_timer(unsigned long data)
 	struct inet6_dev *idev = ifp->idev;
 	struct in6_addr mcaddr;
 <<<<<<< HEAD
+<<<<<<< HEAD
 // LGE_CHANGE_S, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
+=======
+//                                                                                                        
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                                                        
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -3184,7 +3255,11 @@ static void addrconf_dad_timer(unsigned long data)
     char CurrentInterfaceName[6]={0};//initializing
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 // LGE_CHANGE_E, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
+=======
+//                                                                                                        
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                                                        
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -3209,17 +3284,23 @@ static void addrconf_dad_timer(unsigned long data)
 		 * DAD was successful
 		 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 // LGE_CHANGE_S, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
 #ifdef CONFIG_LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER
         ADBG((KERN_DEBUG "[LGE_DATA][%s()] DAD was successful!", __func__));
 #endif
 // LGE_CHANGE_E, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 //                                                                                                        
 #ifdef CONFIG_LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER
         printk(KERN_DEBUG "[LGE_DATA][%s()] DAD was successful!", __func__);
 #endif
 //                                                                                                        
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		ifp->flags &= ~(IFA_F_TENTATIVE|IFA_F_OPTIMISTIC|IFA_F_DADFAILED);
 		spin_unlock(&ifp->lock);
@@ -3232,21 +3313,28 @@ static void addrconf_dad_timer(unsigned long data)
 
 	ifp->probes--;
 <<<<<<< HEAD
+<<<<<<< HEAD
 // LGE_CHANGE_S, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
 #ifdef CONFIG_LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER
     ADBG((KERN_DEBUG "[LGE_DATA][%s()], ifp->idev->nd_parms->retrans_time == %d", __func__, ifp->idev->nd_parms->retrans_time));
 	ADBG((KERN_DEBUG "[LGE_DATA][%s()] dev_name == %s", __func__, dev->name));
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 //                                                                                                        
 #ifdef CONFIG_LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER
     printk(KERN_DEBUG "[LGE_DATA][%s()], ifp->idev->nd_parms->retrans_time == %d", __func__, ifp->idev->nd_parms->retrans_time);
 	printk(KERN_DEBUG "[LGE_DATA][%s()] dev_name == %s", __func__, dev->name);
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
     strncpy(CurrentInterfaceName,dev->name,5);
     if(CurrentInterfaceName == NULL){
         spin_unlock(&ifp->lock);
         read_unlock(&idev->lock);
+<<<<<<< HEAD
 <<<<<<< HEAD
         ADBG(KERN_DEBUG "[LGE_DATA] CurrentInterfaceName is NULL !\n");
 		goto out;
@@ -3258,6 +3346,8 @@ static void addrconf_dad_timer(unsigned long data)
 	    addrconf_mod_timer(ifp, AC_DAD, LGE_DATA_WAITING_TIME_FOR_DAD_OF_LGU);
         ADBG((KERN_DEBUG "[LGE_DATA][%s()] The waiting time for link-local DAD is set as [%d] milli-seconds in case of only rmnet interface !", __func__, LGE_DATA_WAITING_TIME_FOR_DAD_OF_LGU*10));
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
         printk(KERN_DEBUG "[LGE_DATA] CurrentInterfaceName is NULL !\n");
 		goto out;
     }
@@ -3267,6 +3357,9 @@ static void addrconf_dad_timer(unsigned long data)
     if(strcmp(InterfaceNameToApply, CurrentInterfaceName) == 0){//In case of rmnet, this patch will be applied bacause We should not impact to the Wi-Fi and so on.
 	    addrconf_mod_timer(ifp, AC_DAD, LGE_DATA_WAITING_TIME_FOR_DAD_OF_LGU);
         printk(KERN_DEBUG "[LGE_DATA][%s()] The waiting time for link-local DAD is set as [%d] milli-seconds in case of only rmnet interface !", __func__, LGE_DATA_WAITING_TIME_FOR_DAD_OF_LGU*10);
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
     }else{
 //kernel original code -- START
@@ -3277,7 +3370,11 @@ static void addrconf_dad_timer(unsigned long data)
     addrconf_mod_timer(ifp, AC_DAD, ifp->idev->nd_parms->retrans_time);
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 // LGE_CHANGE_E, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
+=======
+//                                                                                                        
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                                                        
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -3286,17 +3383,23 @@ static void addrconf_dad_timer(unsigned long data)
 
 	/* send a neighbour solicitation for our addr */
 <<<<<<< HEAD
+<<<<<<< HEAD
 // LGE_CHANGE_S, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
 #ifdef CONFIG_LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER
     ADBG((KERN_DEBUG "[LGE_DATA][%s()] send a neighbour solicitation for our addr !", __func__));
 #endif
 // LGE_CHANGE_E, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 //                                                                                                        
 #ifdef CONFIG_LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER
     printk(KERN_DEBUG "[LGE_DATA][%s()] send a neighbour solicitation for our addr !", __func__);
 #endif
 //                                                                                                        
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	addrconf_addr_solict_mult(&ifp->addr, &mcaddr);
 	ndisc_send_ns(ifp->idev->dev, NULL, &ifp->addr, &mcaddr, &in6addr_any);
@@ -3314,17 +3417,23 @@ static void addrconf_dad_completed(struct inet6_ifaddr *ifp)
 
 	ipv6_ifa_notify(RTM_NEWADDR, ifp);
 <<<<<<< HEAD
+<<<<<<< HEAD
 // LGE_CHANGE_S, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
 #ifdef CONFIG_LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER
     ADBG((KERN_DEBUG "[LGE_DATA][%s()] dad_is_completed!", __func__));
 #endif
 // LGE_CHANGE_E, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 //                                                                                                        
 #ifdef CONFIG_LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER
     printk(KERN_DEBUG "[LGE_DATA][%s()] dad_is_completed!", __func__);
 #endif
 //                                                                                                        
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	/* If added prefix is link local and we are prepared to process
 	   router advertisements, start sending router solicitations.
@@ -3341,17 +3450,23 @@ static void addrconf_dad_completed(struct inet6_ifaddr *ifp)
 		 *	to delay again before sending the first RS
 		 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 // LGE_CHANGE_S, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
 #ifdef CONFIG_LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER
         ADBG((KERN_DEBUG "[LGE_DATA][%s()][stage 1] rs is sent now!", __func__));
 #endif
 // LGE_CHANGE_E, [LGE_DATA][LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER], heeyeon.nah@lge.com, 2013-05-21
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 //                                                                                                        
 #ifdef CONFIG_LGP_DATA_TCPIP_SLAAC_IPV6_ALLOCATION_BOOSTER
         printk(KERN_DEBUG "[LGE_DATA][%s()][stage 1] rs is sent now!", __func__);
 #endif
 //                                                                                                        
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		ndisc_send_rs(ifp->idev->dev, &ifp->addr, &in6addr_linklocal_allrouters);
 

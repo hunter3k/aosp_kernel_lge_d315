@@ -11,6 +11,7 @@ config MACH_MSM8X26_LGPS14
 	  Support for the Qualcomm MSM8X26 LGPS14 device.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 config MACH_MSM8226_W7_GLOBAL_COM
         depends on ARCH_MSM8226
         select MACH_LGE
@@ -25,12 +26,17 @@ config MACH_MSM8226_W7_GLOBAL_SCA
         help
           Support for the Qualcomm MSM8226 W7 Single Sim device.
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 config MACH_MSM8226_W7DS_OPEN_CIS
         depends on ARCH_MSM8226
         select MACH_LGE
         bool "MSM8226 W7DS OPEN CIS"
         help
           Support for the Qualcomm MSM8226 W7 Dual Sim Open device.
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 config MACH_MSM8226_W7DS_GLOBAL_COM
@@ -40,6 +46,7 @@ config MACH_MSM8226_W7DS_GLOBAL_COM
         help
           Support for the Qualcomm MSM8226 W7 Dual Sim Global Common device.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 config MACH_MSM8226_W7N_GLOBAL_COM
         depends on ARCH_MSM8226
@@ -69,12 +76,17 @@ config MACH_MSM8226_W7_TMO_US
         help
           Support for the Qualcomm MSM8226 W7 Single Sim device.
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 config MACH_MSM8226_W7DS_GLOBAL_SCA
         depends on ARCH_MSM8226
         select MACH_LGE
         bool "MSM8226 W7DS GLOBAL SCA"
         help
           Support for the Qualcomm MSM8226 W7 Dual Sim Open device.
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 config MACH_MSM8226_G2MDS_OPEN_CIS
@@ -98,6 +110,7 @@ config MACH_MSM8226_G2MSS_GLOBAL_COM
         help
           Support for the Qualcomm MSM8226 G2M Single Sim GLOBAL device.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 config MACH_MSM8226_E9WIFI_OPEN_KR
         depends on ARCH_MSM8226
@@ -134,6 +147,8 @@ config MACH_MSM8926_X5_LRA
         help
           Support for the Qualcomm MSM8926 X5 LRA device.
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 config MACH_MSM8226_W7_OPEN_CIS
         depends on ARCH_MSM8226
         select MACH_LGE
@@ -175,6 +190,9 @@ config MACH_MSM8926_X5_VZW
         bool "MSM8926 X5 VZW"
         help
           Support for the Qualcomm MSM8926 X5 VZW device.
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 config MACH_MSM8926_X3C_TRF_US
@@ -192,6 +210,7 @@ config MACH_MSM8926_X3N_GLOBAL_COM
           Support for the Qualcomm MSM8926 X3N GLOBAL COM device.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 config MACH_MSM8926_F70N_GLOBAL_COM
         depends on ARCH_MSM8226
         select MACH_LGE
@@ -199,6 +218,8 @@ config MACH_MSM8926_F70N_GLOBAL_COM
         help
           Support for the Qualcomm MSM8926 X3N GLOBAL COM device.
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 config MACH_MSM8926_X3N_GLOBAL_SCA
@@ -216,6 +237,7 @@ config MACH_MSM8926_X3_TRF_US
           Support for the Qualcomm MSM8926 X3 TRF US device.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 config MACH_MSM8926_F70N_KR
         depends on ARCH_MSM8226
         select MACH_LGE
@@ -230,12 +252,17 @@ config MACH_MSM8926_X3N_KR
         help
           Support for the Qualcomm MSM8926 X3N KR device.
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 config MACH_MSM8926_X3_KR
         depends on ARCH_MSM8226
         select MACH_LGE
         bool "MSM8926 X3 KR"
         help
           Support for the Qualcomm MSM8926 X3 KR device.
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 config MACH_MSM8926_X5_SPR
@@ -246,6 +273,7 @@ config MACH_MSM8926_X5_SPR
           Support for the Qualcomm MSM8926 X5 SPR device.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 config MACH_MSM8926_JAGC_SPR
         depends on ARCH_MSM8226
         select MACH_LGE
@@ -253,6 +281,8 @@ config MACH_MSM8926_JAGC_SPR
         help
           Support for the Qualcomm MSM8926 JAGC SPR device.
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 config MACH_MSM8926_G2M_VDF
@@ -304,6 +334,7 @@ config MACH_MSM8926_B1L_VZW
         help
           Support for the Qualcomm MSM8926 B1L VZW device.
 <<<<<<< HEAD
+<<<<<<< HEAD
           
 config MACH_MSM8926_X10_VZW
         depends on ARCH_MSM8226
@@ -311,6 +342,8 @@ config MACH_MSM8926_X10_VZW
         bool "MSM8926 X10 VZW"
         help
           Support for the Qualcomm MSM8926 X10 VZW device.
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
@@ -321,6 +354,7 @@ config MACH_MSM8926_B1L_ATT
         help
           Support for the Qualcomm MSM8926 B1L ATT device.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 config MACH_MSM8926_B2L_ATT
         depends on ARCH_MSM8226
@@ -350,6 +384,8 @@ config MACH_MSM8926_JAGNM_GLOBAL_COM
         help
           Support for the Qualcomm MSM8926 Jaguar Global device.
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 config MACH_MSM8X10_LGPS15
@@ -409,6 +445,7 @@ config MACH_MSM8X10_W3DS_OPEN_SCA
           Support for the Qualcomm MSM8610 W3DS OPEN SCA device.		  
 		  
 <<<<<<< HEAD
+<<<<<<< HEAD
 config MACH_MSM8X10_W3_GLOBAL_SCA
         depends on ARCH_MSM8610
         select MACH_LGE
@@ -416,6 +453,8 @@ config MACH_MSM8X10_W3_GLOBAL_SCA
         help
           Support for the Qualcomm MSM8610 W3 GLOBAL SCA device.		  
 		  
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 config MACH_MSM8X10_W3DS_GLOBAL_COM
@@ -439,6 +478,7 @@ config MACH_MSM8X10_W3TS_OPEN_SCA
         help
           Support for the Qualcomm MSM8610 W3TS OPEN SCA device.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 config MACH_MSM8X10_W3TS_GLOBAL_SCA
         depends on ARCH_MSM8610
@@ -468,6 +508,8 @@ config MACH_MSM8X10_W35DS_GLOBAL_SCA
         help
           Support for the Qualcomm MSM8610 W35DS GLOBAL SCA device.
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 config MACH_MSM8X10_W5
@@ -506,6 +548,7 @@ config MACH_MSM8X10_W5_GLOBAL_COM
           Support for the Qualcomm MSM8610 W5 Global Common device.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 config MACH_MSM8X10_W55_GLOBAL_COM
         depends on ARCH_MSM8610
         select MACH_LGE
@@ -520,6 +563,8 @@ config MACH_MSM8X10_W55N_GLOBAL_COM
         help
           Support for the Qualcomm MSM8610 W55N Global Common device.
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 config MACH_MSM8X10_W5DS_GLOBAL_COM
@@ -565,6 +610,7 @@ config MACH_MSM8X10_W5_MPCS_US
 	  Support for the Qualcomm MSM8610 W5 MPCS US device.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 config MACH_MSM8X10_W5_CCA_US
 	depends on ARCH_MSM8610
 	select MACH_LGE
@@ -572,6 +618,8 @@ config MACH_MSM8X10_W5_CCA_US
 	help
 	  Support for the Qualcomm MSM8610 W5 CCA US device.
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 config MACH_MSM8X10_W5C_VZW
@@ -588,6 +636,7 @@ config MACH_MSM8X10_W5_AIO_US
           Support for the Qualcomm MSM8610 W5 AIO US device.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 config MACH_MSM8X10_W5_TRF_US
     depends on ARCH_MSM8610
     select MACH_LGE
@@ -595,6 +644,8 @@ config MACH_MSM8X10_W5_TRF_US
     help
         Support for the Qualcomm MSM8610 W5 TRF US device.
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 config MACH_MSM8X10_W5C_ACG_US
@@ -625,6 +676,7 @@ config MACH_MSM8X10_W6
         help
           Support for the Qualcomm MSM8610 W6 Series device.
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 config MACH_MSM8X10_W65
         depends on ARCH_MSM8610
@@ -635,6 +687,8 @@ config MACH_MSM8X10_W65
 
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 config MACH_MSM8X10_W6_GLOBAL_COM
         depends on ARCH_MSM8610
         select MACH_LGE
@@ -642,6 +696,7 @@ config MACH_MSM8X10_W6_GLOBAL_COM
         help
           Support for the Qualcomm MSM8610 W6 Global Common device.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 config MACH_MSM8X10_W65_GLOBAL_COM
         depends on ARCH_MSM8610
@@ -652,6 +707,8 @@ config MACH_MSM8X10_W65_GLOBAL_COM
 
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 config MACH_MSM8X10_W6_TCL_MX
         depends on ARCH_MSM8610
         select MACH_LGE
@@ -659,6 +716,7 @@ config MACH_MSM8X10_W6_TCL_MX
         help
           Support for the Qualcomm MSM8610 W6 Tcl Mx device.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 config MACH_MSM8X10_W6_GLOBAL_AME
         depends on ARCH_MSM8610
@@ -669,6 +727,8 @@ config MACH_MSM8X10_W6_GLOBAL_AME
 
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 config MACH_MSM8X10_W6DS_GLOBAL_COM
         depends on ARCH_MSM8610
         select MACH_LGE
@@ -677,6 +737,7 @@ config MACH_MSM8X10_W6DS_GLOBAL_COM
           Support for the Qualcomm MSM8610 W6DS Global Common device.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 config MACH_MSM8X10_W65DS_GLOBAL_COM
         depends on ARCH_MSM8610
         select MACH_LGE
@@ -684,6 +745,8 @@ config MACH_MSM8X10_W65DS_GLOBAL_COM
         help
           Support for the Qualcomm MSM8610 W65DS Global Common device.
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 config MACH_MSM8X10_W6DS_GLOBAL_SCA
@@ -700,6 +763,7 @@ config MACH_MSM8X10_W6DS_TIM_BR
         help
           Support for the Qualcomm MSM8610 W6DS Tim Brazil device.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 config MACH_MSM8926_JAGDSNM_CMCC_CN
         depends on ARCH_MSM8226
@@ -722,6 +786,8 @@ config MACH_MSM8926_JAGDSNM_CTC_CN
         help
           Support for the Qualcomm MSM8926 JAGDSNM CTC device.
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 config LCD_LGIT_VIDEO_WXGA
@@ -825,6 +891,7 @@ config LGE_PM_BATTERY_CAPACITY_3000mAh
 	  LGE battery capacity for 3000mAh
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 config LGE_PM_BATTERY_CAPACITY_3200mAh
 	bool "Support Battery Capacity"
 	depends on LGE_PM_BATTERY_PROFILE_DATA
@@ -836,6 +903,8 @@ config LGE_PM_BATTERY_CAPACITY_4600mAh
 	help
 	  LGE battery capacity for 4600mAh
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 config LGE_CRASH_FOOTPRINT

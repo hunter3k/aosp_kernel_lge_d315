@@ -244,7 +244,11 @@ int mms_100a_fw_upgrade(struct mms_data *ts, struct touch_fw_info *info);
 int mms_set_gpio_mode(struct touch_platform_data *pdata, int mode);
 int mms_power_ctrl(struct i2c_client* client, int power_ctrl);
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif // LGE_TS_MELFAS_H
+=======
+#endif //                
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif //                
 >>>>>>> 0093d79... Overlay of LG soruce drop

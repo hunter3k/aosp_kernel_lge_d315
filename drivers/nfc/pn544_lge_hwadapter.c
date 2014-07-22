@@ -2,6 +2,7 @@
 #include "pn544_lge_hwadapter.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 bool pn544_validate_boot_mode(void) {
     enum lge_boot_mode_type boot_mode;
     boot_mode = lge_get_boot_mode();
@@ -13,6 +14,8 @@ bool pn544_validate_boot_mode(void) {
     return true;
 }
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 int pn544_get_hw_revision(void)

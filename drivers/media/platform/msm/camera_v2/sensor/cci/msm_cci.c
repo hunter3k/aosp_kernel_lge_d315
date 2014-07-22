@@ -659,7 +659,11 @@ static int32_t msm_cci_init(struct v4l2_subdev *sd,
 		return rc;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
       pr_err("%s: E cci_dev(0x%p) ref_count(%d)\n", __func__, sd, cci_dev->ref_count); /* LGE_CHANGE, jaehan.jeong, 2013.12.2, Log for debugging */
+=======
+      pr_err("%s: E cci_dev(0x%p) ref_count(%d)\n", __func__, sd, cci_dev->ref_count); /*                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
       pr_err("%s: E cci_dev(0x%p) ref_count(%d)\n", __func__, sd, cci_dev->ref_count); /*                                                        */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -704,7 +708,11 @@ static int32_t msm_cci_init(struct v4l2_subdev *sd,
 	if (rc < 0) {
 		cci_dev->ref_count--;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		pr_err("%s: clk enable failed\n", __func__); /* LGE_CHANGE, jaehan.jeong, 2013.12.2, Log for debugging */
+=======
+		pr_err("%s: clk enable failed\n", __func__); /*                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		pr_err("%s: clk enable failed\n", __func__); /*                                                        */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -735,7 +743,11 @@ static int32_t msm_cci_init(struct v4l2_subdev *sd,
 	msm_camera_io_w(0x1, cci_dev->base + CCI_IRQ_GLOBAL_CLEAR_CMD_ADDR);
 	cci_dev->cci_state = CCI_STATE_ENABLED;
 <<<<<<< HEAD
+<<<<<<< HEAD
       pr_err("%s X: exited \n", __func__);  /* LGE_CHANGE, jaehan.jeong, 2013.12.2, Log for debugging */
+=======
+      pr_err("%s X: exited \n", __func__);  /*                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
       pr_err("%s X: exited \n", __func__);  /*                                                        */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -759,7 +771,11 @@ static int32_t msm_cci_release(struct v4l2_subdev *sd)
 	cci_dev = v4l2_get_subdevdata(sd);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       pr_err("%s: E cci_dev(0x%p) ref_count(%d)\n", __func__, sd, cci_dev->ref_count); /* LGE_CHANGE, jaehan.jeong, 2013.12.2, Log for debugging */
+=======
+      pr_err("%s: E cci_dev(0x%p) ref_count(%d)\n", __func__, sd, cci_dev->ref_count); /*                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
       pr_err("%s: E cci_dev(0x%p) ref_count(%d)\n", __func__, sd, cci_dev->ref_count); /*                                                        */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -785,7 +801,11 @@ static int32_t msm_cci_release(struct v4l2_subdev *sd)
 
 	cci_dev->cci_state = CCI_STATE_DISABLED;
 <<<<<<< HEAD
+<<<<<<< HEAD
       pr_err("%s X: exited \n", __func__);  /* LGE_CHANGE, jaehan.jeong, 2013.12.2, Log for debugging */
+=======
+      pr_err("%s X: exited \n", __func__);  /*                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
       pr_err("%s X: exited \n", __func__);  /*                                                        */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -797,7 +817,11 @@ static int32_t msm_cci_config(struct v4l2_subdev *sd,
 {
 	int32_t rc = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
        int32_t trialCnt = 3;  /*QCT_PATCH, add the retrial code only in msm_cci_config() function , 2013-12-09, yousung.kang@lge.com */
+=======
+       int32_t trialCnt = 3;  /*                                                                                                     */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
        int32_t trialCnt = 3;  /*                                                                                                     */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -815,7 +839,11 @@ static int32_t msm_cci_config(struct v4l2_subdev *sd,
 		break;
 	case MSM_CCI_I2C_WRITE:
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*QCT_PATCH E, add the retrial code only in msm_cci_config() function , 2013-12-09, yousung.kang@lge.com */
+=======
+/*                                                                                                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                                       */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -830,7 +858,11 @@ static int32_t msm_cci_config(struct v4l2_subdev *sd,
              rc = msm_cci_i2c_write(sd, cci_ctrl);
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*QCT_PATCH E, add the retrial code only in msm_cci_config() function , 2013-12-09, yousung.kang@lge.com */
+=======
+/*                                                                                                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                                       */
 >>>>>>> 0093d79... Overlay of LG soruce drop

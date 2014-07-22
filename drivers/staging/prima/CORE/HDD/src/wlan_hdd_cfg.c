@@ -2417,7 +2417,11 @@ REG_TABLE_ENTRY g_registry_table[] =
               CFG_ENABLE_RX_STBC_MIN,
               CFG_ENABLE_RX_STBC_MAX ),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 2013.07.11 moon-wifi@lge.com[formmh.kim] Add CountryCode [START] */
+=======
+/*                                                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -2428,7 +2432,11 @@ REG_TABLE_ENTRY g_registry_table[] =
               (void *)CFG_OVERRIDE_COUNTRY_CODE_DEFAULT),
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 2013.07.11 moon-wifi@lge.com[formmh.kim] Add CountryCode [END] */
+=======
+/*                                                                */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -3167,17 +3175,23 @@ static void print_hdd_cfg(hdd_context_t *pHddCtx)
   VOS_TRACE(VOS_MODULE_ID_HDD, VOS_TRACE_LEVEL_INFO_HIGH, "Name = [ignoreDynamicDtimInP2pMode] Value = [%u] ",pHddCtx->cfg_ini->ignoreDynamicDtimInP2pMode);
   VOS_TRACE(VOS_MODULE_ID_HDD, VOS_TRACE_LEVEL_INFO_HIGH, "Name = [enableRxSTBC] Value = [%u] ",pHddCtx->cfg_ini->enableRxSTBC);
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 2013.07.16 moon-wifi@lge.com[formmh.kim] Add CountryCode [START] */
 #ifdef CUSTOMER_LGE
   VOS_TRACE(VOS_MODULE_ID_HDD, VOS_TRACE_LEVEL_INFO_HIGH, "Name = [overrideCountryCode] Value = [%s] ",pHddCtx->cfg_ini->overrideCountryCode);
 #endif
 /* 2013.07.16 moon-wifi@lge.com[formmh.kim] Add CountryCode [END] */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                                                                  */
 #ifdef CUSTOMER_LGE
   VOS_TRACE(VOS_MODULE_ID_HDD, VOS_TRACE_LEVEL_INFO_HIGH, "Name = [overrideCountryCode] Value = [%s] ",pHddCtx->cfg_ini->overrideCountryCode);
 #endif
 /*                                                                */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
   VOS_TRACE(VOS_MODULE_ID_HDD, VOS_TRACE_LEVEL_INFO_HIGH, "Name = [gEnableLpwrImgTransition] Value = [%u] ",pHddCtx->cfg_ini->enableLpwrImgTransition);
   VOS_TRACE(VOS_MODULE_ID_HDD, VOS_TRACE_LEVEL_INFO_HIGH, "Name = [gEnableSSR] Value = [%u] ",pHddCtx->cfg_ini->enableSSR);

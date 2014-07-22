@@ -43,7 +43,11 @@
 			melfas,button-map = <0>;
 			melfas,enalbe_active_mode = <0>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 			revision = "rev_a";
+=======
+			revision = "rev_a...";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			revision = "rev_a...";
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -55,7 +59,11 @@
 			lge,fw_image = "melfas/g2m_lgu_kr/g2m_lgu_kr_rev_0_v101.mfsb";
 			lge,panel_spec = "melfas/g2m_lgu_kr/g2m_lgu_kr_limit.txt";
 <<<<<<< HEAD
+<<<<<<< HEAD
 			revision = "rev_0...rev_a";
+=======
+			revision = "rev_0...";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			revision = "rev_0...";
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -68,10 +76,15 @@
 			atmel,t15_key_state = <0>;
 			atmel,t15_key_map = <0>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 			atmel,fw_name = "atmel/S0A47P1_2_07.fw";
 			atmel,panel_check = <0>;
 			atmel,use_mfts = <1>;
 			atmel,ghost_detection_enable = <1>;
+=======
+			atmel,fw_name = "atmel/S0A47P1_1_03.fw";
+			atmel,panel_check = <0>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			atmel,fw_name = "atmel/S0A47P1_1_03.fw";
 			atmel,panel_check = <0>;

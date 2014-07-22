@@ -40,7 +40,10 @@ unsigned char F54_TxToGndReport(void)
 
    unsigned char command;
 <<<<<<< HEAD
+<<<<<<< HEAD
    int read_count = 0;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
@@ -73,10 +76,13 @@ unsigned char F54_TxToGndReport(void)
    // Wait until the command is completed
    do {
 <<<<<<< HEAD
+<<<<<<< HEAD
    	if(++read_count > 10) {
 		TOUCH_INFO_MSG("%s[%d], command = %d\n", __func__, __LINE__, command);
 		return 0;
 	}
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
       delayMS(1); //wait 1ms

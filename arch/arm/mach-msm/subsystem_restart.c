@@ -855,7 +855,11 @@ int subsys_modem_restart(void)
 	dev->restart_level = RESET_SUBSYS_COUPLED;
 	subsys_set_crash_status(dev, true);
 <<<<<<< HEAD
+<<<<<<< HEAD
 	ignore_errors_by_subsys_modem_restart = true; //dj.seo@lge.com , temp add
+=======
+	ignore_errors_by_subsys_modem_restart = true; //                         
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	ignore_errors_by_subsys_modem_restart = true; //                         
 >>>>>>> 0093d79... Overlay of LG soruce drop

@@ -78,15 +78,21 @@ struct qfprom_blow_data {
             { QFPROM_OEM_CONFIG,        0x00310221,     0x0000000F},        /* OEM ID + ProductID + Anti-Rollback */
             { QFPROM_SECURE_BOOT_ENABLE,    0x00202020,     0x00000000},        /* SECURE ENABLE */
 <<<<<<< HEAD
+<<<<<<< HEAD
             { QFPROM_DEBUG_DISABLE,     0x3FC000C0,     0x002401FE},        /* JTAG DISABLE   */
             { QFPROM_CHECK_HW_KEY,      0x0,            0x0   },
             { QFPROM_RD_PERMISSION,     0x00000000,     0x0000FC00},            /* READ WRITE PERMISSION */
             { QFPROM_WR_PERMISSION,     0x00300000,     0x00CFC030},            /* READ WRITE PERMISSION */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
             { QFPROM_DEBUG_DISABLE,     0x3FC000C0,     0x000401FE},        /* JTAG DISABLE   */
             { QFPROM_CHECK_HW_KEY,      0x0,            0x0   },
             { QFPROM_RD_PERMISSION,     0x00000000,     0x0000FC00},            /* READ WRITE PERMISSION */
             { QFPROM_WR_PERMISSION,     0x00300000,     0x00F3C030},            /* READ WRITE PERMISSION */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
         };
     #elif defined(CONFIG_MACH_MSM8X10_W5_MPCS_US)
@@ -112,7 +118,11 @@ struct qfprom_blow_data {
             { QFPROM_CHECK_HW_KEY,      0x0,            0x0   },
             { QFPROM_RD_PERMISSION,     0x00000000,     0x0000FC00},            /* READ WRITE PERMISSION */
 <<<<<<< HEAD
+<<<<<<< HEAD
             { QFPROM_WR_PERMISSION,     0x00300000,     0x00CFC030},            /* READ WRITE PERMISSION */
+=======
+            { QFPROM_WR_PERMISSION,     0x00300000,     0x00F3C030},            /* READ WRITE PERMISSION */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
             { QFPROM_WR_PERMISSION,     0x00300000,     0x00F3C030},            /* READ WRITE PERMISSION */
 >>>>>>> 0093d79... Overlay of LG soruce drop

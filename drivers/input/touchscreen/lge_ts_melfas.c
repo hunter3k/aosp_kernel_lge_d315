@@ -1480,6 +1480,7 @@ static ssize_t mms_chstatus_show(struct i2c_client *client, char *buf)
 		len += snprintf(buf + len, PAGE_SIZE - len, "\n");
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	if (ts->dev.key_num) {
 		/* read touch key chstatus */
@@ -1519,6 +1520,8 @@ static ssize_t mms_chstatus_show(struct i2c_client *client, char *buf)
 		}
 	}
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	/* read touch key chstatus */
 	len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 
@@ -1555,6 +1558,9 @@ static ssize_t mms_chstatus_show(struct i2c_client *client, char *buf)
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", chstatus);
 	}
 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	len += snprintf(buf + len, PAGE_SIZE - len, "\n===============================================");
 	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
@@ -1802,6 +1808,7 @@ static ssize_t mms_rawdata_show(struct i2c_client *client, char *buf)
 		len += snprintf(buf + len, PAGE_SIZE - len, "\n");
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	if (ts->dev.key_num) {
 		/* read touch key rawdata */
@@ -1838,6 +1845,8 @@ static ssize_t mms_rawdata_show(struct i2c_client *client, char *buf)
 			len += snprintf(buf + len, PAGE_SIZE - len, "%5d", rawdata);
 		}
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	/* read touch key rawdata */
 	len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 
@@ -1870,6 +1879,9 @@ static ssize_t mms_rawdata_show(struct i2c_client *client, char *buf)
 			ts->pdata->selfdiagnostic_state[1] = 0;
 		}
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", rawdata);
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	}
 
@@ -2032,6 +2044,7 @@ static ssize_t mms_delta_show(struct i2c_client *client, char *buf)
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if (ts->dev.key_num) {
 		len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 		for(j = 0; j<ts->dev.key_num; j++){
@@ -2057,6 +2070,8 @@ static ssize_t mms_delta_show(struct i2c_client *client, char *buf)
 			len += snprintf(buf + len, PAGE_SIZE - len, "%5d", delta);
 		}
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 	for(j = 0; j<ts->dev.key_num; j++){
 		write_buf[0] = MMS_UNIVERSAL_CMD;
@@ -2079,6 +2094,9 @@ static ssize_t mms_delta_show(struct i2c_client *client, char *buf)
 		delta = read_buf[1];
 		delta = ((delta<<8)|read_buf[0]);
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", delta);
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	}
 	len += snprintf(buf + len, PAGE_SIZE - len, "\n=============================================");
@@ -2239,6 +2257,7 @@ static ssize_t mms_jitter_show(struct i2c_client *client, char *buf)
 		len += snprintf(buf + len, PAGE_SIZE - len, "\n");
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	if (ts->dev.key_num) {
 		/* read touch key jitter */
@@ -2277,6 +2296,8 @@ static ssize_t mms_jitter_show(struct i2c_client *client, char *buf)
 		}
 	}
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	/* read touch key jitter */
 	len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 
@@ -2312,6 +2333,9 @@ static ssize_t mms_jitter_show(struct i2c_client *client, char *buf)
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", jitter);
 	}
 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	len += snprintf(buf + len, PAGE_SIZE - len, "\n===============================================");
 	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");

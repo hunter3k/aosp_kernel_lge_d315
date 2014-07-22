@@ -67,6 +67,7 @@
 
 	/* Rev A */
 <<<<<<< HEAD
+<<<<<<< HEAD
 	qcom,camera_rev_a@20 {
 		compatible = "qcom,imx111";
 		reg = <0x20 0x0>;
@@ -110,10 +111,15 @@
 		reg = <0x34 0x0>;
 		qcom,slave-id = <0x34 0x0 0x219>;
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	qcom,camera_rev_a@34 {
 		compatible = "qcom,imx111";
 		reg = <0x34 0x0>;
 		qcom,slave-id = <0x34 0x0 0x111>;
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		qcom,csiphy-sd-index = <0>;
 		qcom,csid-sd-index = <0>;
@@ -122,7 +128,11 @@
 		qcom,eeprom-src = <&eeprom>;
 		qcom,mount-angle = <90>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		qcom,sensor-name = "imx219";
+=======
+		qcom,sensor-name = "imx111";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		qcom,sensor-name = "imx111";
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -190,6 +200,7 @@
 	};
 	/* Rev B */
 <<<<<<< HEAD
+<<<<<<< HEAD
 	qcom,camera_rev_b@20 {
 		compatible = "qcom,imx111";
 		reg = <0x20 0x0>;
@@ -233,10 +244,15 @@
 		reg = <0x34 0x0>;
 		qcom,slave-id = <0x34 0x0 0x219>;
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	qcom,camera_rev_b@34 {
 		compatible = "qcom,imx111";
 		reg = <0x34 0x0>;
 		qcom,slave-id = <0x34 0x0 0x111>;
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		qcom,csiphy-sd-index = <0>;
 		qcom,csid-sd-index = <0>;
@@ -245,7 +261,11 @@
 		qcom,eeprom-src = <&eeprom>;
 		qcom,mount-angle = <90>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		qcom,sensor-name = "imx219";
+=======
+		qcom,sensor-name = "imx111";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		qcom,sensor-name = "imx111";
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -313,6 +333,7 @@
 	};
 	/* Rev C */
 <<<<<<< HEAD
+<<<<<<< HEAD
 	qcom,camera_rev_c@20 {
 		compatible = "qcom,imx111";
 		reg = <0x20 0x0>;
@@ -356,10 +377,15 @@
 		reg = <0x34 0x0>;
 		qcom,slave-id = <0x34 0x0 0x219>;
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	qcom,camera_rev_c@34 {
 		compatible = "qcom,imx111";
 		reg = <0x34 0x0>;
 		qcom,slave-id = <0x34 0x0 0x111>;
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		qcom,csiphy-sd-index = <0>;
 		qcom,csid-sd-index = <0>;
@@ -368,7 +394,11 @@
 		qcom,eeprom-src = <&eeprom>;
 		qcom,mount-angle = <90>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		qcom,sensor-name = "imx219";
+=======
+		qcom,sensor-name = "imx111";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		qcom,sensor-name = "imx111";
 >>>>>>> 0093d79... Overlay of LG soruce drop

@@ -17,8 +17,13 @@
 
 / {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	model = "Qualcomm MSM 8610v1 w3globalsca";
 	compatible = "qcom,msm8610-w3globalsca", "qcom,msm8610";
+=======
+	model = "Qualcomm MSM 8610v1 w3globalcom";
+	compatible = "qcom,msm8610-w3globalcom", "qcom,msm8610";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	model = "Qualcomm MSM 8610v1 w3globalcom";
 	compatible = "qcom,msm8610-w3globalcom", "qcom,msm8610";
@@ -33,8 +38,12 @@
 		MSM8812   = 166,
 	*/
 <<<<<<< HEAD
+<<<<<<< HEAD
 	qcom,msm-id = <147 121 0>, <165 121 0>, <161 121 0>, <162 121 0>,
 		      <163 121 0>, <164 121 0>, <166 121 0>;
+=======
+	qcom,board-id = <121 0>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	qcom,board-id = <121 0>;
 >>>>>>> 0093d79... Overlay of LG soruce drop

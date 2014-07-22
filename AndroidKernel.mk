@@ -107,6 +107,7 @@ $(KERNEL_CONFIG): $(KERNEL_OUT)
 ifneq ($(TARGET_BUILD_VARIANT), user)
 	echo "CONFIG_LGE_RSSI_DEBUG=y" >> $(KERNEL_CONFIG)
 <<<<<<< HEAD
+<<<<<<< HEAD
 endif
 # LGE_CHANGE_END
 endif
@@ -119,10 +120,15 @@ ifeq ($(strip $(USES_VMWARE_VIRTUALIZATION)), true)
 endif
 # VMware_E
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 endif 
 # LGE_CHANGE_END
 endif
 # porting bootchart2 to android
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 $(KERNEL_OUT)/piggy : $(TARGET_PREBUILT_INT_KERNEL)

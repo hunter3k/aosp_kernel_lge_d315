@@ -32,8 +32,11 @@
 
 #include <linux/earlysuspend.h>
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <mach/board_lge.h>
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #define RT8542_FLED_EN
@@ -43,22 +46,32 @@
 #define MIN_BRIGHTNESS_RT8542                    0x04
 #define DEFAULT_BRIGHTNESS                       0x66
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define DEFAULT_FTM_BRIGHTNESS                   0x02
 #define UI_MAX_BRIGHTNESS                        0xFF
 
 /* LGE_CHANGE_S, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #define DEFAULT_FTM_BRIGHTNESS                   0x0F
 #define UI_MAX_BRIGHTNESS                        0xFF
 
 /*                                                                          */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #define POWER_OFF		0x00
 #define POWER_ON_TEST	0xFF
 #define BL_ON			0xF0
 #define FLASH_ON		0x0F
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
+=======
+/*                                                                          */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                          */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -119,7 +132,11 @@ static int cur_main_lcd_level = DEFAULT_BRIGHTNESS;
 static int saved_main_lcd_level = DEFAULT_BRIGHTNESS;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
+=======
+/*                                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                        */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -143,17 +160,23 @@ static void rt8542_hw_reset(void)
 {
 	int gpio = main_rt8542_dev->gpio;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE */
 	if (gpio_is_valid(gpio)) {
 		gpio_direction_output(gpio, 1);
 		gpio_set_value_cansleep(gpio, 1);
 		mdelay(2);
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	/*            */
 	if (gpio_is_valid(gpio)) {
 		gpio_direction_output(gpio, 1);
 		gpio_set_value_cansleep(gpio, 1);
 		mdelay(10);
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	}
 	else
@@ -197,7 +220,11 @@ static int rt8542_write_reg(struct i2c_client *client, unsigned char reg, unsign
 static int exp_min_value = 150;
 static int cal_value;
 <<<<<<< HEAD
+<<<<<<< HEAD
 static unsigned char bl_ctrl;/* LGE_CHANGE, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
+=======
+static unsigned char bl_ctrl;/*                                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 static unsigned char bl_ctrl;/*                                                                        */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -236,7 +263,11 @@ static void rt8542_set_main_current_level(struct i2c_client *client, int level)
 			rt8542_write_reg(client, 0x05, cal_value);
 		}
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
+=======
+/*                                                                          */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                          */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -248,7 +279,11 @@ static void rt8542_set_main_current_level(struct i2c_client *client, int level)
 		rt8542_write_reg(main_rt8542_dev->client, 0x0A, bl_ctrl);
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
+=======
+/*                                                                          */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                          */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -283,6 +318,7 @@ static void rt8542_set_main_current_level_no_mapping(
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 void rt8542_backlight_on(int level)
 {
 	if (backlight_status != BL_ON){/* LGE_CHANGE, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
@@ -294,6 +330,8 @@ void rt8542_backlight_on(int level)
 		rt8542_write_reg(main_rt8542_dev->client, 0x02, 0x52);
 		/* LGE_CHANGE_S, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/ 
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 extern unsigned char strobe_ctrl;
 
 void rt8542_backlight_on(int level)
@@ -320,13 +358,20 @@ void rt8542_backlight_on(int level)
 #endif
 		}
 		/*                                                                          */ 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		bl_ctrl = 0;
 		rt8542_read_reg(main_rt8542_dev->client, 0x0A, &bl_ctrl);
 		bl_ctrl |= 0x19;
 		rt8542_write_reg(main_rt8542_dev->client, 0x0A, bl_ctrl);
 <<<<<<< HEAD
+<<<<<<< HEAD
 		/* LGE_CHANGE_E, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/ 
+=======
+		/*                                                                          */ 
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		/*                                                                          */ 
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -335,7 +380,11 @@ void rt8542_backlight_on(int level)
 	mdelay(1);
 	rt8542_set_main_current_level(main_rt8542_dev->client, level);
 <<<<<<< HEAD
+<<<<<<< HEAD
 	backlight_status |= BL_ON; /* LGE_CHANGE_E, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/ 
+=======
+	backlight_status |= BL_ON; /*                                                                          */ 
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	backlight_status |= BL_ON; /*                                                                          */ 
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -348,6 +397,7 @@ void rt8542_backlight_off(void)
 	int gpio = main_rt8542_dev->gpio;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if (!(backlight_status & BL_ON))/* LGE_CHANGE, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
 	{
 		return;
@@ -358,6 +408,8 @@ void rt8542_backlight_off(void)
 
 	if(backlight_status == POWER_OFF)/* LGE_CHANGE, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	if (!(backlight_status & BL_ON))/*                                                                        */
 	{
 		return;
@@ -372,6 +424,9 @@ void rt8542_backlight_off(void)
 	backlight_status &= ~BL_ON;/*                                                                        */
 
 	if(backlight_status == POWER_OFF)/*                                                                        */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	{
 		gpio_direction_output(gpio, 0);
@@ -382,7 +437,11 @@ void rt8542_backlight_off(void)
 	return;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
+=======
+/*                                                                          */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                          */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -421,7 +480,11 @@ void rt8542_led_disable(void){
 	pr_err("%s: Exit\n", __func__);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
+=======
+/*                                                                          */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                          */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -453,7 +516,11 @@ static int bl_set_intensity(struct backlight_device *bd)
 	struct i2c_client *client = to_i2c_client(bd->dev.parent);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE */
+=======
+	/*            */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*            */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -644,8 +711,11 @@ static int rt8542_parse_dt(struct device *dev,
 	rc = of_property_read_u32(np, "rt8542,factory_brightness",
 			&pdata->factory_brightness);
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if (rc)
 		pdata->factory_brightness = DEFAULT_FTM_BRIGHTNESS;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	rc = of_property_read_u32(np, "rt8542,max_brightness",
@@ -766,7 +836,10 @@ static int rt8542_probe(struct i2c_client *i2c_dev,
 	dev->max_brightness = pdata->max_brightness;
 	dev->blmap_size = pdata->blmap_size;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	dev->factory_brightness = pdata->factory_brightness;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
@@ -785,11 +858,14 @@ static int rt8542_probe(struct i2c_client *i2c_dev,
 		backlight_status = BL_ON;
 	else
 <<<<<<< HEAD
+<<<<<<< HEAD
 		backlight_status = POWER_OFF;/* LGE_CHANGE, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
 
 	i2c_set_clientdata(i2c_dev, dev);
 
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		backlight_status = POWER_OFF;/*                                                                        */
 
 	i2c_set_clientdata(i2c_dev, dev);
@@ -799,6 +875,9 @@ static int rt8542_probe(struct i2c_client *i2c_dev,
 	else
 		dev->factory_brightness = pdata->factory_brightness;
 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	mutex_init(&dev->bl_mutex);
 
@@ -813,12 +892,15 @@ static int rt8542_probe(struct i2c_client *i2c_dev,
 			&dev_attr_rt8542_pwm);
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	/* To reduce current consumption during booting,
 	  decrease the backlight level to boot well. */
 	if (lge_get_boot_mode() >= LGE_BOOT_MODE_QEM_56K)
 		dev->default_brightness = dev->factory_brightness;
 	
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	rt8542_backlight_on(dev->default_brightness);

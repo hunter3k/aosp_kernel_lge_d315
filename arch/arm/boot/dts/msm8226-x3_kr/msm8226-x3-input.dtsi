@@ -44,10 +44,16 @@
 
 		lge_ts_misc {
 <<<<<<< HEAD
+<<<<<<< HEAD
 			revision = "rev_a2";
 			vdd_on = <1>;
 			vio_l19_on = <0>;
 			vio_l6_on = <0>;
+=======
+			revision = "rev_a2...rev_b";
+			vdd_on = <1>;
+			vio_l19_on = <1>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			revision = "rev_a2...rev_b";
 			vdd_on = <1>;
@@ -59,6 +65,7 @@
 			status ="ok";
 		};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 		lge_ts_misc_revb {
 			revision = "rev_b";
@@ -78,12 +85,17 @@
 		synaptics_red@20 {
 			status = "disable";
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+		synaptics_red@20 {
+			status = "disable";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			revision = "rev_b...";
 		};
 
 		synaptics_s220x@20 {
 			status = "ok";
 			revision = "rev_b";
+<<<<<<< HEAD
 <<<<<<< HEAD
 			vdd_i2c-supply = <&pm8226_l6>;
 			vdd_int-supply = <&pm8226_l6>;
@@ -96,18 +108,24 @@
 				/* firmware image depends on this value, temporarily used */
 				/* 0: No image(default), 1: W3DS(TIM BR)(PLG312_T001), 2: W3S(VDF)(PLG311_T001), 3: X3(GLOBAL_COM, TRF_ATT, GLOBAL_SCA, KR)... */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			synaptics,fw_version_info = <0x32 0x04 0x51>;
 			synaptics,fw_image = "synaptics/x3_kr/PLG319_T003_PR1578888_DS4.3.5.1.16_32045103.img";
 			lge,knock_on_type = <1>;
 			synaptics,platform_data	{
 				/* firmware image depends on this value, temporarily used */
 				/* 0: No image(default), 1: W3DS(TIM BR)(PLG312_T001), 2: W3S(VDF)(PLG311_T001), 3: X3(GLOBAL_COM, TRF_ATT)... */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 				panel_type = <3>;
 				use_regulator = <0>;
 				suspend_pwr = <2>;
 				resume_pwr = <3>;
 				palm_detect_mode = <1>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 				ghost_detection_enable = <0>;
 				ghost_detection_button_enable = <0>;
@@ -138,6 +156,10 @@
 				ghost_detection_button_enable = <0>;
 				/* booting time, duration, jitter, finger diff, subtraction time, finger-subtraction-cnt, force-cont-mode,long press cnt, buttobtraction time, finger-subtraction-cnt, force-cont-mode,long press cnt, button duration, button int num, time after rebase */
 				ghost_detection_value = <200 50 10 6 11 5 10 500 100 6 5>;
+=======
+				ghost_detection_enable = <1>;
+				ghost_detection_jitter_value = <8>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 				ghost_detection_enable = <1>;
 				ghost_detection_jitter_value = <8>;

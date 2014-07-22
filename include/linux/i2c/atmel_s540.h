@@ -23,6 +23,7 @@
 #define TSP_PATCH
 #define I2C_SUSPEND_WORKAROUND 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define MXT_LPWG
 #define ALPHA_FW
 #define T100_AREA_REPLACE_AMPLITUDE
@@ -48,10 +49,15 @@
 #define MXT_LATEST_FW_BUILD         0xE2
 #endif
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 #ifdef MXT_GESTURE_RECOGNIZE
 #define MXT_LATEST_FW_VERSION       0x10
 #define MXT_LATEST_FW_BUILD         0xE2
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #else
 #define MXT_LATEST_FW_VERSION       0x30
@@ -64,6 +70,7 @@
 #define MXT_INFO_CHECKSUM_SIZE	3
 #define MXT_MAX_BLOCK_WRITE	256
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* Diagnostic command defines  */
 #define MXT_DIAG_PAGE_UP		0x01
@@ -83,6 +90,10 @@
 /* Object types */
 #define MXT_DEBUG_DIAGNOSTIC_T37	37
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+/* Object types */
+#define MXT_DEBUG_DIAGNOSTIC_T37	37
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #define MXT_GEN_MESSAGE_T5		5
 #define MXT_GEN_MESSAGEPROCESSOR_T5	5
 #define MXT_GEN_COMMAND_T6		6
@@ -90,6 +101,7 @@
 #define MXT_GEN_POWER_T7		7
 #define MXT_GEN_ACQUIRE_T8		8
 #define MXT_TOUCH_KEYARRAY_T15		15
+<<<<<<< HEAD
 <<<<<<< HEAD
 #define MXT_SPT_COMMSCONFIG_T18		18
 #define MXT_SPT_GPIOPWM_T19		19
@@ -105,15 +117,21 @@
 #define MXT_SPT_MESSAGECOUNT_T44	44
 #define MXT_SPT_CTECONFIG_T46		46
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #define MXT_TOUCH_PROXIMITY_T23		23
 #define MXT_TOUCH_MULTITOUCHSCREEN_T100 100
 #define MXT_PROCI_GRIPSUPPRESSION_T40		40
 #define MXT_PROCI_TOUCHSUPPRESSION_T42	42
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #define MXT_PROCI_STYLUS_T47		47
 #define MXT_PROCI_ADAPTIVETHRESHOLD_T55			55
 #define MXT_PROCI_SHIELDLESS_T56				56
 #define MXT_PROCI_EXTRATOUCHSCREENDATA_T57		57
+<<<<<<< HEAD
 <<<<<<< HEAD
 #define MXT_SPT_TIMER_T61			61
 #define MXT_PROCI_LENSBENDING_T65				65
@@ -125,10 +143,15 @@
 #define MXT_PROCI_LENSBENDING_T65				65
 #define MXT_PROCI_PALMGESTUREPROCESSOR_T69		69
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+#define MXT_PROCI_LENSBENDING_T65				65
+#define MXT_PROCI_PALMGESTUREPROCESSOR_T69		69
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #define MXT_PROCG_NOISESUPPRESSION_T72	72
 #define MXT_GLOVEDETECTION_T78				78
 #define MXT_RETRANSMISSIONCOMPENSATION_T80		80
 #define MXT_PROCI_GESTUREPROCESSOR_T84			84
+<<<<<<< HEAD
 <<<<<<< HEAD
 #define MXT_T92_NEW	92
 #define MXT_T93_NEW	93
@@ -140,6 +163,8 @@
 #define MXT_SPT_DRIVENPLATEHOVERCONFIG_T105	105
 #define MXT_RESERVED_T255 255
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #define MXT_PROCI_SCHNOISESUPPRESSION_T103	103
 #define MXT_SPT_COMMSCONFIG_T18		18
 #define MXT_SPT_GPIOPWM_T19		19
@@ -159,6 +184,9 @@
 #define MXT_PROCI_ONETOUCH_T24		24
 #define MXT_SPT_PROTOTYPE_T35		35
 #endif
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 /* Not for ATMEL S540 */
@@ -176,6 +204,10 @@
 #define MXT_SPT_NOISESUPPRESSION_T48	48
 #define MXT_PROCI_ACTIVE_STYLUS_T63	63
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+#define MXT_RESERVED_T255 255
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #define MXT_RESERVED_T255 255
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -264,10 +296,15 @@
 #define MXT_T100_TCHAUX_AMPL	(1 << 1)
 #define MXT_T100_TCHAUX_AREA	(1 << 2)
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define MXT_T100_TCHAUX_RESV	(1 << 3)
 
 #define MXT_T100_DETECT		(1 << 7)
 #define MXT_T100_FRIST_ID_SUPPRESSION	(1 << 6)
+=======
+
+#define MXT_T100_DETECT		(1 << 7)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 
 #define MXT_T100_DETECT		(1 << 7)
@@ -282,6 +319,7 @@
 #define MXT_T100_RELEASE	0x05
 #define MXT_T100_MOVE		0x01
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define MXT_T100_SUPPRESSION		0x03
 
 #ifdef T100_AREA_W_H_IN_2BYTES
@@ -290,6 +328,8 @@
 #define MXT_T100_WIDTH_LSB_MASK		0xE0
 #define MXT_T100_HEIGHT_MASK		0x1F
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
@@ -326,6 +366,7 @@
 #define MXT_PIXELS_PER_MM	20
 
 #ifdef CUST_B_TOUCH
+<<<<<<< HEAD
 <<<<<<< HEAD
 // LGE_CHANGE_S [naomi.kim@lge.com] 13.06.17, set data format
 #define TOUCHEVENTFILTER	1
@@ -395,12 +436,17 @@ typedef enum error_type {
 #define POWERLOCK_FW_UP		(0x01 << 1)
 #define POWERLOCK_SYSFS		(0x01 << 2)
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 //                                                           
 #define TOUCHEVENTFILTER	1
 //                                                           
 #endif
 
 #define MXT_MAX_FW_PATH				64
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 enum{
@@ -413,8 +459,11 @@ enum{
 	TIME_START_TIME,
 	TIME_CURR_TIME,
 <<<<<<< HEAD
+<<<<<<< HEAD
 	TIME_RESUME_END,
 	TIME_TA_DETECT,
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	TIME_EX_PROFILE_MAX
@@ -442,6 +491,12 @@ enum { MXT_T6 = 0,
 #endif
 	MXT_T25,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+#ifdef MXT_GESTURE_RECOGNIZE
+	MXT_T35,
+#endif
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #ifdef MXT_GESTURE_RECOGNIZE
 	MXT_T35,
@@ -462,6 +517,7 @@ enum { MXT_T6 = 0,
 	MXT_T78,
 	MXT_T80,
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifndef ALPHA_FW
 	MXT_T84,
 #endif
@@ -469,6 +525,9 @@ enum { MXT_T6 = 0,
 	MXT_T92,
 	MXT_T93,
 #endif
+=======
+	MXT_T84,
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	MXT_T84,
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -482,12 +541,15 @@ enum { MXT_T6 = 0,
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 enum {
 	POWER_OFF = 0,
 	POWER_ON,
 	POWER_SLEEP,
 	POWER_WAKE
 };
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 /* Config data for a given maXTouch controller with a specific firmware */
@@ -511,7 +573,10 @@ struct mxt_platform_data {
 	unsigned long gpio_reset;
 	unsigned long gpio_int;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	unsigned char panel_on;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	const char *cfg_name;
@@ -547,6 +612,7 @@ struct mxt_object {
 } __packed;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 struct mxt_raw_data {
 	u8 num_xnode;
 	u8 num_ynode;
@@ -555,6 +621,8 @@ struct mxt_raw_data {
 	s16 *delta;
 };
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #ifdef CUST_B_TOUCH
@@ -624,7 +692,10 @@ struct mxt_patch {
 	u8 cal_flag; //1107
 	u32 date;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	u32 stage_timestamp;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 };
@@ -634,7 +705,11 @@ struct mxt_message {
     u8 message[8];
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif
+=======
+
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -645,6 +720,12 @@ struct mxt_reportid {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+#endif
+
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 
 #endif
@@ -662,7 +743,10 @@ struct mxt_anti_info{
 	u16 touch_area;
 	u16 inter_area;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	int fcnt0_msg_cnt;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 };
@@ -681,6 +765,7 @@ struct mxt_data {
 #ifdef TSP_PATCH
 	struct mxt_patch patch;
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif
 	struct mxt_reportid *reportids;
 #ifdef MXT_LPWG
@@ -688,6 +773,9 @@ struct mxt_data {
 	u8 mxt_password_enable;
 	u8 lpwg_mode;
 	struct quickcover_size *qwindow_size;
+=======
+	struct mxt_reportid *reportids;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	struct mxt_reportid *reportids;
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -702,7 +790,10 @@ struct mxt_data {
 	u8 t100_aux_area;
 	u8 t100_aux_vect;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	u8 t100_aux_resv;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	struct bin_attribute mem_access_attr;
@@ -728,7 +819,10 @@ struct mxt_data {
 	int ta_status;
 	bool charging_mode;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	bool charging_wireless;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	char *fw_name;
@@ -741,6 +835,10 @@ struct mxt_data {
 	u16 T5_address;
 	u8 T5_msg_size;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	u8 T6_reportid;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	u8 T6_reportid;
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -752,6 +850,7 @@ struct mxt_data {
 	u8 T15_reportid_min;
 	u8 T15_reportid_max;
 	u16 T18_address;
+<<<<<<< HEAD
 <<<<<<< HEAD
 	u16 T25_address;
 	u16 T42_address;
@@ -766,6 +865,8 @@ struct mxt_data {
 #endif
 	u8 T100_reportid_min;
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	u8 T19_reportid;
 #ifdef MXT_GESTURE_RECOGNIZE
 	u8 T24_reportid;
@@ -788,6 +889,9 @@ struct mxt_data {
 	u16 T72_address;
 	u8 T100_reportid_min;
 	u8 T100_reportid_max;
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	u16 T100_address;
 
@@ -809,7 +913,10 @@ struct mxt_data {
 	/* Indicates whether device is in suspend */
 	bool suspended;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	struct mxt_raw_data *rawdata;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #ifdef I2C_SUSPEND_WORKAROUND
@@ -829,10 +936,13 @@ struct mxt_data {
 	bool self_test_result;
 	u8 self_test_status[4];
 <<<<<<< HEAD
+<<<<<<< HEAD
 	u8 self_test_result_status;
 #ifdef T100_AREA_REPLACE_AMPLITUDE
 	u8 T100_palm_threshold;
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 };
@@ -848,6 +958,7 @@ extern int mxt_patch_init(struct mxt_data *data, u8* ppatch);
 #ifdef I2C_SUSPEND_WORKAROUND
 extern bool i2c_suspended;
 #endif
+<<<<<<< HEAD
 <<<<<<< HEAD
 #define	REPORT_ID_TO_OBJECT(rid, data)			\
 	(((rid) == 0xff) ? 0 : data->reportids[rid].type)
@@ -877,6 +988,8 @@ do {												\
 #define TOUCH_PATCH_ERRMSG(fmt, args...) \
 		;//printk(KERN_ERR "[mxts_patch] " fmt, ##args);
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #endif /* __LINUX_ATMEL_MXT_TS_H */

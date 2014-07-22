@@ -1646,7 +1646,11 @@ typedef enum
 #define CFG_ENABLE_RX_STBC_DEFAULT               ( 1 )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 2013.07.11 moon-wifi@lge.com[formmh.kim] Add CountryCode [START] */
+=======
+/*                                                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1657,7 +1661,11 @@ typedef enum
 #define CFG_OVERRIDE_COUNTRY_CODE_DEFAULT		"000"
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 2013.07.11 moon-wifi@lge.com[formmh.kim] Add CountryCode [END] */
+=======
+/*                                                                */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -2278,17 +2286,23 @@ typedef struct
    v_U32_t                     numBuffAdvert;
    v_BOOL_t                    enableRxSTBC;
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 2013.07.16 moon-wifi@lge.com[formmh.kim] Add CountryCode [START] */
  #ifdef CUSTOMER_LGE
    char                        overrideCountryCode[4];
 #endif
 /* 2013.07.16 moon-wifi@lge.com[formmh.kim] Add CountryCode [END] */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                                                                  */
  #ifdef CUSTOMER_LGE
    char                        overrideCountryCode[4];
 #endif
 /*                                                                */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #ifdef FEATURE_WLAN_TDLS       
    v_BOOL_t                    fEnableTDLSSupport;

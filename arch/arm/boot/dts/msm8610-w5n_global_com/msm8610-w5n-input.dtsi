@@ -34,7 +34,11 @@
 			melfas,fw-image-name = "melfas/w5n_global_com/w5n_global_com_rev_b_v101.mfsb";
 			status = "ok";
 <<<<<<< HEAD
+<<<<<<< HEAD
 			revision = "rev_c";
+=======
+			revision = "rev_c...";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			revision = "rev_c...";
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -49,6 +53,7 @@
 			status = "ok";
 			revision = "rev_a";
 		};
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 		synaptics_red@20 {
@@ -83,6 +88,8 @@
 				ghost_detection_value = <200 5 4 6 5 5 10 500 100 6 5>;
 			};				
 		};
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	};

@@ -47,7 +47,10 @@ static void wunlock_w(struct work_struct *w)
 #ifdef CONFIG_LGE_PM_VZW_FAST_CHG
 int lge_usb_config_finish = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 bool usb_connecting_flag = false;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 bool usb_connected_flag = false;
@@ -61,8 +64,12 @@ extern int get_vzw_usb_charging_state(void);
 static void usb_detect_work(struct work_struct *w)
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (!usb_connected_flag) {
         set_vzw_usb_charging_state(0 /* IS_OPEN_TA */);
+=======
+    if (get_vzw_usb_charging_state() == 0 /* IS_OPEN_TA */) {
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
     if (get_vzw_usb_charging_state() == 0 /* IS_OPEN_TA */) {
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -76,7 +83,10 @@ static void usb_detect_work(struct work_struct *w)
         pr_info("%s: USB DRIVER_UNINSTALLED\n", __func__);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     usb_connecting_flag = false;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
     usb_connected_flag = false;
@@ -249,6 +259,7 @@ static void ci13xxx_msm_notify_event(struct ci13xxx *udc, unsigned event)
         case CI13XXX_CONTROLLER_CONNECT_EVENT:
         case CI13XXX_CONTROLLER_RESUME_EVENT:
 <<<<<<< HEAD
+<<<<<<< HEAD
             pr_info("%s: [USB_DRV] CONNECTING\n", __func__);
             if (usb_connecting_flag) {
                 cancel_delayed_work_sync(&usb_detect_w);
@@ -257,12 +268,17 @@ static void ci13xxx_msm_notify_event(struct ci13xxx *udc, unsigned event)
             }
             usb_connected_flag = false;
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
             pr_info("%s: [USB_DRV] CONNECTED or RESUME\n", __func__);
             if (usb_connected_flag) {
                 cancel_delayed_work_sync(&usb_detect_w);
             } else {
                 usb_connected_flag = true;
             }
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
             usb_configured_flag = false;
             lge_usb_config_finish = 0;
@@ -272,7 +288,10 @@ static void ci13xxx_msm_notify_event(struct ci13xxx *udc, unsigned event)
             cancel_delayed_work_sync(&usb_detect_w);
             lge_usb_config_finish = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
             usb_connecting_flag = false;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
             usb_connected_flag = false;

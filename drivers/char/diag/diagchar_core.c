@@ -1441,17 +1441,23 @@ static int diagchar_write(struct file *file, const char __user *buf,
 	int remote_proc = 0;
 	uint8_t index;
 <<<<<<< HEAD
+<<<<<<< HEAD
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [START]
 #ifdef CONFIG_LGE_DM_DEV
 	char *buf_dev;
 #endif /*CONFIG_LGE_DM_DEV*/
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [END]
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 //                                                                             
 #ifdef CONFIG_LGE_DM_DEV
 	char *buf_dev;
 #endif /*                 */
 //                                                                           
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 #ifdef CONFIG_LGE_DM_APP
@@ -1501,7 +1507,11 @@ static int diagchar_write(struct file *file, const char __user *buf,
 #endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [START]
+=======
+//                                                                             
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                             
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1514,7 +1524,11 @@ static int diagchar_write(struct file *file, const char __user *buf,
 	}
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [END]
+=======
+//                                                                           
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                           
 >>>>>>> 0093d79... Overlay of LG soruce drop

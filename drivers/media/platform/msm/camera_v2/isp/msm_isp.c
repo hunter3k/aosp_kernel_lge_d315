@@ -83,7 +83,11 @@ static int __devinit vfe_probe(struct platform_device *pdev)
 			"cell-index", &pdev->id);
 		match_dev = of_match_device(msm_vfe_dt_match, &pdev->dev);
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*LGE_CHANGE_E, beacuse of WBT.517790, it may casue Kernel Panic or Fatal Error with NULL of Match_dev, youngwook.song@lge.com, 2013-10-17 */
+=======
+/*                                                                                                                                         */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                                                                         */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -92,7 +96,11 @@ static int __devinit vfe_probe(struct platform_device *pdev)
 			return -EINVAL;
 		}
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*LGE_CHANGE_X, beacuse of WBT.517790, it may casue Kernel Panic or Fatal Error with NULL of Match_dev, youngwook.song@lge.com, 2013-10-17 */
+=======
+/*                                                                                                                                         */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                                                                         */
 >>>>>>> 0093d79... Overlay of LG soruce drop

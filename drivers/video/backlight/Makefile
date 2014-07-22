@@ -44,8 +44,12 @@ obj-$(CONFIG_BACKLIGHT_AAT2870) += aat2870_bl.o
 obj-$(CONFIG_BACKLIGHT_OT200) += ot200_bl.o
 obj-$(CONFIG_BACKLIGHT_LM3630) += lm3630.o
 <<<<<<< HEAD
+<<<<<<< HEAD
 obj-$(CONFIG_BACKLIGHT_LM3530) += lm3530_bl.o
 obj-$(CONFIG_BACKLIGHT_RT8555) += rt8555.o
+=======
+obj-$(CONFIG_BACKLIGHT_LM3530) += lm3530_bl.o
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 obj-$(CONFIG_BACKLIGHT_LM3530) += lm3530_bl.o
 >>>>>>> 0093d79... Overlay of LG soruce drop

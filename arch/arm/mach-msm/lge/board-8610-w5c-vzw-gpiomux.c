@@ -274,8 +274,13 @@ static struct gpiomux_setting cam_settings[] = {
 
 /*
 <<<<<<< HEAD
+<<<<<<< HEAD
  * This source has changed to match at lgps15 HDK board
  * changed by junil0814.lee@lge.com 2013-06-05
+=======
+                                                       
+                                              
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
                                                        
                                               
@@ -494,7 +499,11 @@ static struct gpiomux_setting synaptics_ts_int_act_cfg = {
 	.func = GPIOMUX_FUNC_GPIO,
 	.drv = GPIOMUX_DRV_2MA,
 <<<<<<< HEAD
+<<<<<<< HEAD
 	.pull = GPIOMUX_PULL_NONE,
+=======
+	.pull = GPIOMUX_PULL_UP,
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	.pull = GPIOMUX_PULL_UP,
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -528,7 +537,11 @@ static struct gpiomux_setting synaptics_ts_makerid_act_cfg = {
 	.func = GPIOMUX_FUNC_GPIO,
 	.drv = GPIOMUX_DRV_2MA,
 <<<<<<< HEAD
+<<<<<<< HEAD
 	.pull = GPIOMUX_PULL_NONE,
+=======
+	.pull = GPIOMUX_PULL_UP,
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	.pull = GPIOMUX_PULL_UP,
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -539,7 +552,11 @@ static struct gpiomux_setting synaptics_ts_makerid_sus_cfg = {
 	.func = GPIOMUX_FUNC_GPIO,
 	.drv = GPIOMUX_DRV_2MA,
 <<<<<<< HEAD
+<<<<<<< HEAD
 	.pull = GPIOMUX_PULL_NONE,
+=======
+	.pull = GPIOMUX_PULL_UP,
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	.pull = GPIOMUX_PULL_UP,
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -697,7 +714,11 @@ void __init msm8610_init_gpiomux(void)
 				ARRAY_SIZE(msm_keypad_configs));
 	msm_gpiomux_install(sd_card_det, ARRAY_SIZE(sd_card_det));
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE_S, Add gpiomux for ex-ldo used gpio, 2013-09-04, hyungtae.lee@lge.com */
+=======
+	/*                                                                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                                                                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -714,7 +735,11 @@ void __init msm8610_init_gpiomux(void)
 		printk(KERN_ERR " [Camera] greater than HW_REV_C is using power source from PM.\n");
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, Add gpiomux for ex-ldo used gpio, 2013-09-04, hyungtae.lee@lge.com */
+=======
+/*                                                                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop

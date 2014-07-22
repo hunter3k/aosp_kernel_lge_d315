@@ -103,7 +103,11 @@ void lge_set_restart_reason(unsigned int reason)
 EXPORT_SYMBOL(lge_set_restart_reason);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //[START] LGE Ram teset module .. p1_fs@lge.com 
+=======
+//                                              
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                              
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -118,7 +122,11 @@ static int set_ram_test(const char *val, struct kernel_param *kp)
 }
 module_param_call(set_ram_test, set_ram_test, param_get_bool, &dummy_arg,	S_IWUSR | S_IRUGO);
 <<<<<<< HEAD
+<<<<<<< HEAD
 //[END]LGE Ram teset module .. p1_fs@lge.com 
+=======
+//                                           
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                           
 >>>>>>> 0093d79... Overlay of LG soruce drop

@@ -173,7 +173,11 @@ static const u8 mode3_red[] = {0x40, 0x1a, 0x42, 0x18, 0x12, 0x65, 0x12, 0x65, 0
 
 /*[pattern_id : 4, Charging100]*/
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -232,7 +236,11 @@ static const u8 mode6_blue[] = {0xE0, 0x80, 0x40, 0x00, 0x12, 0xFE, 0x40, 0xC0, 
 static const u8 mode7_red[]={};
 static const u8 mode7_green[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0xff, 0x02, 0xd4, 0x02, 0xd4, 0x02, 0xd4, 0x48, 0x00, 0x40, 0xff, 0x02, 0xd4, 0x02, 0xd4, 0x02, 0xd4, 0x25, 0xfe
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -244,7 +252,11 @@ static const u8 mode7_blue[]={};
 /*[pattern_id : 14, MissedNoti(favorite)]*/
 static const u8 mode8_red[]={0x40, 0x00, 0x10, 0xFE, 0x40, 0xFF, 0x4F, 0x00, 0x05, 0xE5, 0xE0, 0x0C, 0x05, 0xE5, 0xE0, 0x0C, 0x40, 0xFF, 0x4F, 0x00, 0x04, 0xFF, 0xE0, 0x0C, 0x04, 0xFE, 0xE0, 0x0C, 0x1A, 0xFE
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -253,7 +265,11 @@ static const u8 mode8_red[]={0x40, 0x00, 0x10, 0xFE, 0x40, 0xFF, 0x4F, 0x00, 0x0
 };
 static const u8 mode8_green[]={0x40, 0x00, 0x10, 0xFE, 0x40, 0x66, 0x4F, 0x00, 0x0B, 0xA8, 0xE0, 0x80, 0x0B, 0xA8, 0xE0, 0x80, 0x40, 0x66, 0x4F, 0x00, 0x09, 0xB2, 0xE0, 0x80, 0x09, 0xB2, 0xE0, 0x80, 0x1A, 0xFE
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -262,7 +278,11 @@ static const u8 mode8_green[]={0x40, 0x00, 0x10, 0xFE, 0x40, 0x66, 0x4F, 0x00, 0
 };
 static const u8 mode8_blue[]={0x40, 0x00, 0x10, 0xFE, 0x40, 0x73, 0x4F, 0x00, 0x08, 0xBC, 0xE0, 0x80, 0x0F, 0x9E, 0xE0, 0x80, 0x40, 0x73, 0x4F, 0x00, 0x05, 0xD5, 0xE0, 0x80, 0x10, 0x9C, 0xE0, 0x80, 0x1A, 0xFE
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -283,7 +303,11 @@ static const u8 mode3_red_50[]={0x40, 0x0d, 0x44, 0x0c, 0x23, 0x33, 0x24, 0x32, 
 /*[pattern_id : 17, MissedNoti(pink)]*/
 static const u8 mode9_red[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0xff, 0x02, 0xff, 0xe2, 0x00, 0x02, 0xfe, 0xe2, 0x00, 0x48, 0x00, 0x40, 0xff, 0x02, 0xff, 0xe2, 0x00, 0x02, 0xfe, 0xe2, 0x00, 0x25, 0xfe
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -292,7 +316,11 @@ static const u8 mode9_red[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0xff, 0x02, 0xff, 0xe
 };
 static const u8 mode9_green[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0x66, 0x06, 0xb2, 0xe2, 0x00, 0x06, 0xb2, 0xe2, 0x00, 0x48, 0x00, 0x40, 0x66, 0x06, 0xb2, 0xe2, 0x00, 0x06, 0xb2, 0xe2, 0x00, 0x25, 0xfe
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -301,7 +329,11 @@ static const u8 mode9_green[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0x66, 0x06, 0xb2, 0
 };
 static const u8 mode9_blue[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0x73, 0x04, 0xd5, 0xe0, 0x06, 0x0b, 0x9c, 0xe0, 0x06, 0x48, 0x00, 0x40, 0x73, 0x04, 0xd5, 0xe0, 0x06, 0x0b, 0x9c, 0xe0, 0x06, 0x25, 0xfe
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -313,7 +345,11 @@ static const u8 mode9_blue[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0x73, 0x04, 0xd5, 0x
 static const u8 mode10_red[]={};
 static const u8 mode10_green[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0xff, 0x02, 0xd4, 0x02, 0xd4, 0x02, 0xd4, 0x48, 0x00, 0x40, 0xff, 0x02, 0xd4, 0x02, 0xd4, 0x02, 0xd4, 0x25, 0xfe
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -322,7 +358,11 @@ static const u8 mode10_green[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0xff, 0x02, 0xd4, 
 };
 static const u8 mode10_blue[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0xff, 0x02, 0xd4, 0x02, 0xd4, 0x02, 0xd4, 0x48, 0x00, 0x40, 0xff, 0x02, 0xd4, 0x02, 0xd4, 0x02, 0xd4, 0x25, 0xfe
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -333,7 +373,11 @@ static const u8 mode10_blue[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0xff, 0x02, 0xd4, 0
 /*[pattern_id : 19, MissedNoti(orange)]*/
 static const u8 mode11_red[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0xff, 0x02, 0xff, 0xe1, 0x00, 0x02, 0xfe, 0xe1, 0x00, 0x48, 0x00, 0x40, 0xff, 0x02, 0xff, 0xe1, 0x00, 0x02, 0xfe, 0xe1, 0x00, 0x25, 0xfe
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -342,7 +386,11 @@ static const u8 mode11_red[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0xff, 0x02, 0xff, 0x
 };
 static const u8 mode11_green[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0x66, 0x06, 0xb2, 0xe0, 0x02, 0x06, 0xb2, 0xe0, 0x02, 0x48, 0x00, 0x40, 0x66, 0x06, 0xb2, 0xe0, 0x02, 0x06, 0xb2, 0xe0, 0x02, 0x25, 0xfe
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -354,7 +402,11 @@ static const u8 mode11_blue[]={};
 /*[pattern_id : 20, MissedNoti(yellow)]*/
 static const u8 mode12_red[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0xff, 0x02, 0xff, 0xe1, 0x00, 0x02, 0xfe, 0xe1, 0x00, 0x48, 0x00, 0x40, 0xff, 0x02, 0xff, 0xe1, 0x00, 0x02, 0xfe, 0xe1, 0x00, 0x25, 0xfe
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -363,7 +415,11 @@ static const u8 mode12_red[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0xff, 0x02, 0xff, 0x
 };
 static const u8 mode12_green[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0xe6, 0x02, 0xff, 0x3d, 0x00, 0xe0, 0x02, 0x02, 0xff, 0xe0, 0x02, 0x48, 0x00, 0x40, 0xe6, 0x02, 0xff, 0x3d, 0x00, 0xe0, 0x02, 0x02, 0xff, 0xe0, 0x02, 0x25, 0xfe
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -376,7 +432,11 @@ static const u8 mode12_blue[]={};
 static const u8 mode13_red[]={};
 static const u8 mode13_green[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0xff, 0x02, 0xfe, 0xe2, 0x00, 0x02, 0xfe, 0xe2, 0x00, 0x48, 0x00, 0x40, 0xff, 0x02, 0xff, 0xe2, 0x00, 0x02, 0xfe, 0xe2, 0x00, 0x25, 0xfe
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -385,7 +445,11 @@ static const u8 mode13_green[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0xff, 0x02, 0xfe, 
 };
 static const u8 mode13_blue[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0x7a, 0x06, 0xb2, 0xe0, 0x06, 0x06, 0xb2, 0xe0, 0x06, 0x48, 0x00, 0x40, 0x7a, 0x06, 0xb2, 0xe0, 0x06, 0x06, 0xb2, 0xe0, 0x06, 0x25, 0xfe
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -396,7 +460,11 @@ static const u8 mode13_blue[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0x7a, 0x06, 0xb2, 0
 /*[pattern_id : 30, MissedNoti(purple)]*/
 static const u8 mode14_red[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0xb3, 0x06, 0xb2, 0xe1, 0x00, 0x02, 0xff, 0xe1, 0x00, 0x48, 0x00, 0x40, 0xb3, 0x06, 0xb2, 0xe1, 0x00, 0x02, 0xff, 0xe1, 0x00, 0x25, 0xfe
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -405,7 +473,11 @@ static const u8 mode14_red[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0xb3, 0x06, 0xb2, 0x
 };
 static const u8 mode14_green[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0x19, 0x06, 0xb2, 0xe0, 0x0a, 0x02, 0xff, 0xe0, 0x0a, 0x48, 0x00, 0x40, 0x19, 0x06, 0xb2, 0xe0, 0x0a, 0x02, 0xff, 0xe0, 0x0a, 0x25, 0xfe
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -414,7 +486,11 @@ static const u8 mode14_green[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0x19, 0x06, 0xb2, 
 };
 static const u8 mode14_blue[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0xff, 0x02, 0xff, 0xe1, 0x00, 0x02, 0xff, 0xe1, 0x00, 0x48, 0x00, 0x40, 0xff, 0x02, 0xff, 0xe1, 0x00, 0x02, 0xff, 0xe1, 0x00, 0x25, 0xfe
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -425,7 +501,11 @@ static const u8 mode14_blue[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0xff, 0x02, 0xff, 0
 /*[pattern_id : 31, MissedNoti(red)]*/
 static const u8 mode15_red[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0xff, 0x02, 0xd4, 0x02, 0xd4, 0x02, 0xd4, 0x48, 0x00, 0x40, 0xff, 0x02, 0xd4, 0x02, 0xd4, 0x02, 0xd4, 0x25, 0xfe
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -438,7 +518,11 @@ static const u8 mode15_blue[]={};
 /*[pattern_id : 32, MissedNoti(lime)]*/
 static const u8 mode16_red[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0x99, 0x06, 0xb2, 0xe0, 0x04, 0x02, 0xff, 0xe0, 0x04, 0x48, 0x00, 0x40, 0x99, 0x06, 0xb2, 0xe0, 0x04, 0x02, 0xff, 0xe0, 0x04, 0x25, 0xfe
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -447,7 +531,11 @@ static const u8 mode16_red[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0x99, 0x06, 0xb2, 0x
 };
 static const u8 mode16_green[]={0x40, 0x00, 0x10, 0xfe, 0x40, 0xff, 0x02, 0xff, 0xe0, 0x80, 0x02, 0xff, 0xe0, 0x80, 0x48, 0x00, 0x40, 0xff, 0x02, 0xff, 0xe0, 0x80, 0x02, 0xff, 0xe0, 0x80, 0x25, 0xfe
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -479,7 +567,11 @@ static const u8 mode9_blue[]={0x40, 0x00, 0x08, 0x7E, 0x08, 0x7F, 0x08, 0xFE, 0x
 #endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8X10_W5C_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR) //UX requirment for X5 Model - default current 55%
+=======
+#if defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) //UX requirment for X5 Model - default current 55%
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X5_SPR) //UX requirment for X5 Model - default current 55%
 >>>>>>> 0093d79... Overlay of LG soruce drop

@@ -508,12 +508,18 @@ static int msm_isp_send_hw_cmd(struct vfe_device *vfe_dev,
 		break;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, jaehan.jeong, 2013.11.8, Applied QCT patch CN#01252253 - page fault in case of 64BIT_DMI, [STARTS HERE] */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	case GET_MAX_CLK_RATE: { //Quarx we need it?
 		break;
 	}
 /*                                                                                                                       */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #if 0 //QCT Original
 	case VFE_WRITE_DMI_16BIT:
@@ -630,7 +636,11 @@ static int msm_isp_send_hw_cmd(struct vfe_device *vfe_dev,
 	}
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, jaehan.jeong, 2013.11.8, Applied QCT patch CN#01252253 - page fault in case of 64BIT_DMI,  [ENDS HERE] */
+=======
+/*                                                                                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                                                      */
 >>>>>>> 0093d79... Overlay of LG soruce drop

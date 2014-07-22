@@ -18,8 +18,11 @@
 		qcom,mdss-dsi-panel-type = "dsi_video_mode";
 		qcom,mdss-dsi-panel-destination = "display_1";
 <<<<<<< HEAD
+<<<<<<< HEAD
     qcom,mdss-pan-physical-width-dimension = <68>;
     qcom,mdss-pan-physical-height-dimension = <109>;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		qcom,mdss-dsi-panel-width = <480>;
@@ -87,6 +90,7 @@
 				  C6 41 63 03
 				39 01 00 00 00 00 0A
 <<<<<<< HEAD
+<<<<<<< HEAD
 				  D0 00 55 67 02 01 00 31 02 02
 				39 01 00 00 00 00 0A
 				  D1 00 55 67 02 01 00 31 02 02
@@ -99,6 +103,8 @@
 				39 01 00 00 00 00 0A
 				  D5 00 55 67 02 01 00 31 02 02
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 				  D0 00 66 77 02 00 00 20 01 02
 				39 01 00 00 00 00 0A
 				  D1 00 66 77 02 00 00 20 01 02
@@ -110,6 +116,9 @@
 				  D4 00 66 77 02 00 00 20 01 02
 				39 01 00 00 00 00 0A
 				  D5 00 66 77 02 00 00 20 01 02
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 				05 01 00 00 78 00 01
 				  11
@@ -129,8 +138,11 @@
 		qcom,mdss-dsi-panel-type = "dsi_video_mode";
 		qcom,mdss-dsi-panel-destination = "display_1";
 <<<<<<< HEAD
+<<<<<<< HEAD
 		qcom,mdss-pan-physical-width-dimension = <56>;
 		qcom,mdss-pan-physical-height-dimension = <94>;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		qcom,mdss-dsi-panel-width = <480>;
@@ -160,8 +172,13 @@
 		qcom,mdss-dsi-lane-1-state;
 		qcom,mdss-dsi-lane-map = "lane_map_3012";
 <<<<<<< HEAD
+<<<<<<< HEAD
 		qcom,mdss-dsi-t-clk-pre = <0x2D>;
 		qcom,mdss-dsi-t-clk-post = <0x19>;
+=======
+		qcom,mdss-dsi-t-clk-pre = <0x17>;
+		qcom,mdss-dsi-t-clk-post = <0x04>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		qcom,mdss-dsi-t-clk-pre = <0x17>;
 		qcom,mdss-dsi-t-clk-post = <0x04>;
@@ -171,7 +188,11 @@
 		qcom,mdss-dsi-dma-trigger = "trigger_sw";
 		qcom,mdss-dsi-panel-framerate = <60>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		qcom,mdss-dsi-panel-timings = [A5 89 15 00 8F 8F 18 8B 0F 03 04 00];
+=======
+		qcom,mdss-dsi-panel-timings = [A6 89 15 00 90 8F 18 8B 0F 03 04 00];
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		qcom,mdss-dsi-panel-timings = [A6 89 15 00 90 8F 18 8B 0F 03 04 00];
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -192,7 +213,11 @@
 				  B3 02
 				39 01 00 00 00 00 02
 <<<<<<< HEAD
+<<<<<<< HEAD
 				  B4 04
+=======
+				  B4 00
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 				  B4 00
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -205,6 +230,7 @@
 				39 01 00 00 00 00 07
 				  C4 12 24 18 18 02 49
 				39 01 00 00 00 00 02
+<<<<<<< HEAD
 <<<<<<< HEAD
 				  C5 6D
 				39 01 00 00 00 00 04
@@ -222,6 +248,8 @@
 				39 01 00 00 00 00 0A
 				  D5 22 05 65 03 00 04 21 00 02
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 				  C5 69
 				39 01 00 00 00 00 04
 				  C6 41 63 03
@@ -237,6 +265,9 @@
 				  D4 00 24 67 02 00 00 20 00 02
 				39 01 00 00 00 00 0A
 				  D5 00 24 67 02 00 00 20 00 02
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 				05 01 00 00 78 00 01
 				  11
@@ -551,6 +582,7 @@
 				];
 	};
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 	//W35 Display
 	dsi_w35_tovis_hvga_cmd: qcom,dsi_v2_w35_tovis_hvga_cmd {
@@ -653,6 +685,9 @@
 				];
 	};
 	
+=======
+
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -801,8 +836,11 @@
 				15 01 00 00 05 00 02
 				  55 01
 <<<<<<< HEAD
+<<<<<<< HEAD
 				15 01 00 00 00 00 02
 				  CC 00
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 				29 01 00 00 00 00 03
@@ -829,24 +867,34 @@
 				  F8 21 06
 				29 01 00 00 00 00 10
 <<<<<<< HEAD
+<<<<<<< HEAD
 				  E0 00 09 0F 03 0D 05 33 36 4C 0E 1B 0F 24 23 0F
 				29 01 00 00 00 00 10
 				  E1 00 14 1C 00 0F 07 37 44 53 09 0D 0C 35 37 0F
 				29 01 00 00 00 00 11
 				  E2 A0 A0 A0 A0 A0 A0 A0 A0 A0 A0 A0 A0 A0 A0 A0 C0
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 				  E0 00 05 08 00 06 04 31 49 4B 0C 16 0E 23 24 0F
 				29 01 00 00 00 00 10
 				  E1 00 13 1C 02 10 06 3A 41 56 0B 15 0F 3E 3B 0F
 				29 01 00 00 00 00 11
 				  E2 A0 A0 A0 A0 A0 A0 A0 A0 A0 A0 A0 A0 A0 A0 A0 A0
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 				29 01 00 00 00 00 41
 				  E3 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 				  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 				  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 <<<<<<< HEAD
+<<<<<<< HEAD
 				  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 30
+=======
+				  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 				  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -956,6 +1004,7 @@
 				];
 	};
 <<<<<<< HEAD
+<<<<<<< HEAD
 	dsi_lgd_lg4577_wvga_video: qcom,dsi_v2_lgd_lg4577_wvga_video {
 		qcom,mdss-dsi-panel-name = "LGD LG4577 WVGA video mode dsi panel";
 		qcom,mdss-dsi-panel-controller = <&mdss_dsi0>;
@@ -1050,6 +1099,8 @@
 	};
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	/* W5DS Shrink display - TOVIS */
 	dsi_tovis_shrink_wvga_video: qcom,dsi_v2_tovis_shrink_wvga_video {
 		qcom,mdss-dsi-panel-name = "TOVIS ILI9806E WVGA video mode dsi panel";
@@ -1133,17 +1184,23 @@
 					52 00 
 				15 01 00 00 00 00 02 /* VCOM Control 1~2 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 					53 47 
 				15 01 00 00 00 00 02 /* VCOM Control 3~4 */
 					54 00 
 				15 01 00 00 00 00 02 /* VCOM Control 3~4 */
 					55 47 
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 					53 2E 
 				15 01 00 00 00 00 02 /* VCOM Control 3~4 */
 					54 00 
 				15 01 00 00 00 00 02 /* VCOM Control 3~4 */
 					55 2E 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 				15 01 00 00 00 00 02 /* VCOM Control 5 */
 					56 00 
@@ -1152,6 +1209,7 @@
 				15 01 00 00 00 00 02 
 					A1 00 
 				15 01 00 00 00 00 02 
+<<<<<<< HEAD
 <<<<<<< HEAD
 					A2 0C 
 				15 01 00 00 00 00 02 
@@ -1173,6 +1231,8 @@
 				15 01 00 00 00 00 02 
 					AB 08
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 					A2 09 
 				15 01 00 00 00 00 02 
 					A3 07 
@@ -1192,6 +1252,9 @@
 					AA 16
 				15 01 00 00 00 00 02 
 					AB 0C
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 				15 01 00 00 00 00 02 
 					AC 11 
@@ -1207,7 +1270,11 @@
 					C1 00
 				15 01 00 00 00 00 02 
 <<<<<<< HEAD
+<<<<<<< HEAD
 					C2 08
+=======
+					C2 07
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 					C2 07
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1218,6 +1285,7 @@
 				15 01 00 00 00 00 02 
 					C5 07
 				15 01 00 00 00 00 02 
+<<<<<<< HEAD
 <<<<<<< HEAD
 					C6 05
 				15 01 00 00 00 00 02 
@@ -1231,6 +1299,8 @@
 				15 01 00 00 00 00 02 
 					CB 08
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 					C6 09
 				15 01 00 00 00 00 02 
 					C7 07
@@ -1242,6 +1312,9 @@
 					CA 15
 				15 01 00 00 00 00 02 
 					CB 09
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 				15 01 00 00 00 00 02 
 					CC 11
@@ -1385,6 +1458,7 @@
 					01 00
 				15 01 00 00 00 00 02 /* Digital gamma control 1 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 					02 02
 				15 01 00 00 00 00 02 /* Digital gamma control 1 */
 					03 02
@@ -1507,6 +1581,8 @@
 				15 01 00 00 00 00 02 /* Digital gamma control 1 */
 					3E 00
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 					02 00
 				15 01 00 00 00 00 02 /* Digital gamma control 1 */
 					03 00
@@ -1628,6 +1704,9 @@
 					3D 10
 				15 01 00 00 00 00 02 /* Digital gamma control 1 */
 					3E 10
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 				15 01 00 00 00 00 02 /* Digital gamma control 1 */
 					3F 00
@@ -1666,6 +1745,7 @@
 				15 01 00 00 00 00 02 /* Digital gamma control 1 */
 					0F 00
 				15 01 00 00 00 00 02 /* Digital gamma control 1 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 					10 02
 				15 01 00 00 00 00 02 /* Digital gamma control 1 */
@@ -2156,6 +2236,47 @@
 					22 00
 				15 01 00 00 00 00 02 /* Digital gamma control 1 */
 					23 00
+=======
+					10 00
+				15 01 00 00 00 00 02 /* Digital gamma control 1 */
+					11 00
+				15 01 00 00 00 00 02 /* Digital gamma control 1 */
+					12 00
+				15 01 00 00 00 00 02 /* Digital gamma control 1 */
+					13 00
+				15 01 00 00 00 00 02 /* Digital gamma control 1 */
+					14 00
+				15 01 00 00 00 00 02 /* Digital gamma control 1 */
+					15 00
+				15 01 00 00 00 00 02 /* Digital gamma control 1 */
+					16 00
+				15 01 00 00 00 00 02 /* Digital gamma control 1 */
+					17 00
+				15 01 00 00 00 00 02 /* Digital gamma control 1 */
+					18 00
+				15 01 00 00 00 00 02 /* Digital gamma control 1 */
+					19 00
+				15 01 00 00 00 00 02 /* Digital gamma control 1 */
+					1A 00
+				15 01 00 00 00 00 02 /* Digital gamma control 1 */
+					1B 00
+				15 01 00 00 00 00 02 /* Digital gamma control 1 */
+					1C 00
+				15 01 00 00 00 00 02 /* Digital gamma control 1 */
+					1D 00
+				15 01 00 00 00 00 02 /* Digital gamma control 1 */
+					1E 00
+				15 01 00 00 00 00 02 /* Digital gamma control 1 */
+					1F 00
+				15 01 00 00 00 00 02 /* Digital gamma control 1 */
+					20 00
+				15 01 00 00 00 00 02 /* Digital gamma control 1 */
+					21 00
+				15 01 00 00 00 00 02 /* Digital gamma control 1 */
+					22 00
+				15 01 00 00 00 00 02 /* Digital gamma control 1 */
+					23 00
+>>>>>>> 0093d79... Overlay of LG soruce drop
 				15 01 00 00 00 00 02 /* Digital gamma control 1 */
 					24 00
 				15 01 00 00 00 00 02 /* Digital gamma control 1 */
@@ -2598,6 +2719,9 @@
 					6E 00
 				15 01 00 00 00 00 02 /* Digital gamma control 1 */
 					6F 00
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 				15 01 00 00 00 00 02 /* Digital gamma control 1 */
 					70 00
@@ -2643,7 +2767,11 @@
 					51 FF
 				15 01 00 00 00 00 02 /* White CTRL Display Value*/
 <<<<<<< HEAD
+<<<<<<< HEAD
 					53 00
+=======
+					53 2C
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 					53 2C
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -2662,6 +2790,7 @@
 		];
 		qcom,off-cmds-dsi-state = "DSI_HS_MODE";
 	};
+<<<<<<< HEAD
 <<<<<<< HEAD
 	/* W65 Shrink display - TOVIS */
 	dsi_w65_tovis_shrink_wvga_video: qcom,dsi_v2_w65_tovis_shrink_wvga_video {
@@ -2943,6 +3072,8 @@
 		];
 		qcom,off-cmds-dsi-state = "DSI_HS_MODE";
 	};
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	/* W5 display - LGD Incell */

@@ -174,7 +174,11 @@ static CountryInfoTable_t countryInfoTable =
       {REGDOMAIN_ETSI, {'D', 'K'}}, //DENMARK
       {REGDOMAIN_FCC, {'D', 'O'}}, //DOMINICAN REPUBLIC
 <<<<<<< HEAD
+<<<<<<< HEAD
       {REGDOMAIN_ETSI, {'D', 'Z'}}, //ALGERIA
+=======
+      {REGDOMAIN_ETSI, {'D', 'Z'}}, //       
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
       {REGDOMAIN_ETSI, {'D', 'Z'}}, //       
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -350,7 +354,11 @@ static CountryInfoTable_t countryInfoTable =
         { REGDOMAIN_WORLD,   {'D', 'M'}},  //DOMINICA
         { REGDOMAIN_WORLD,    {'D', 'O'}},  //DOMINICAN REPUBLIC
 <<<<<<< HEAD
+<<<<<<< HEAD
         { REGDOMAIN_ETSI, {'D', 'Z'}},  //ALGERIA
+=======
+        { REGDOMAIN_ETSI, {'D', 'Z'}},  //       
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
         { REGDOMAIN_ETSI, {'D', 'Z'}},  //       
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -746,17 +754,23 @@ VOS_STATUS vos_nv_open(void)
     v_SIZE_t nvReadBufSize;
     v_BOOL_t itemIsValid = VOS_FALSE;
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 2013.07.11 moon-wifi@lge.com[formmh.kim] Add CountryCode [START] */
 #ifdef CUSTOMER_LGE
     hdd_context_t *pHddCtx = NULL;
 #endif
 /* 2013.07.11 moon-wifi@lge.com[formmh.kim] Add CountryCode [END] */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                                                                  */
 #ifdef CUSTOMER_LGE
     hdd_context_t *pHddCtx = NULL;
 #endif
 /*                                                                */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
     v_U32_t dataOffset;
     sHalNv *pnvData = NULL;
@@ -956,7 +970,11 @@ VOS_STATUS vos_nv_open(void)
                     goto error;
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 2013.07.16 moon-wifi@lge.com[formmh.kim] Add CountryCode [START] */
+=======
+/*                                                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -972,7 +990,11 @@ VOS_STATUS vos_nv_open(void)
             }
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 2013.07.16 moon-wifi@lge.com[formmh.kim] Add CountryCode [END] */
+=======
+/*                                                                */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                */
 >>>>>>> 0093d79... Overlay of LG soruce drop

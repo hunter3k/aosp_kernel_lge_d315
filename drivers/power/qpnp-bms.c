@@ -297,10 +297,13 @@ struct qpnp_bms_chip {
 	int				last_uuc_uah;
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef CONFIG_MAX17048_FUELGAUGE
 	//bool use_external_fuelgauge;
 	struct power_supply *maxim17048;
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 };
@@ -345,6 +348,7 @@ extern int32_t vzw_llk_enable_charging(bool enable);
 #endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef CONFIG_MAX17048_FUELGAUGE
 static int check_use_external_fuelgauge(struct qpnp_bms_chip *chip)
 {
@@ -380,6 +384,8 @@ static int set_use_external_fuelgauge(struct qpnp_bms_chip *chip, int val)
 
 #endif
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 static bool bms_reset;
@@ -1939,7 +1945,11 @@ int cal_rnd_avg(int *soc_value, int unit_num)
 
 #ifdef CONFIG_LGE_PM_BATTERY_SOC_RESCALING
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define SOC_RESCALING_FACTOR	100/94
+=======
+#define SOC_RESCALING_FACTOR      100/94
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #define SOC_RESCALING_FACTOR      100/94
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -3991,6 +4001,10 @@ static int64_t read_battery_id(struct qpnp_bms_chip *chip)
 	return result.physical;
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -4115,6 +4129,7 @@ static int set_battery_data(struct qpnp_bms_chip *chip)
 		case BATT_ID_ISL6296_N : // FALL THROUGH
 		case BATT_ID_ISL6296_L : // FALL THROUGH
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef CONFIG_LGE_PM_BATTERY_HITACI_2100mAh
             batt_data = &LGE_Hitaci_2040mAh_data;
 			pr_err("[BATTERY PROFILE] Using default profile - Hitaci_2100mAh for id(%d)\n",battery_id);
@@ -4126,6 +4141,10 @@ static int set_battery_data(struct qpnp_bms_chip *chip)
             batt_data = &LGE_Tocad_2040mAh_data;
 			pr_err("[BATTERY PROFILE] Using default profile - Tocad_2100mAh for id(%d)\n",battery_id);
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+            batt_data = &LGE_Tocad_2040mAh_data;
+			pr_err("[BATTERY PROFILE] Using default profile - Tocad_2100mAh for id(%d)\n",battery_id);
+>>>>>>> 0093d79... Overlay of LG soruce drop
             break;
 		case BATT_ID_ISL6296_C : // FALL THROUGH
 		default : 
@@ -4133,6 +4152,7 @@ static int set_battery_data(struct qpnp_bms_chip *chip)
 			pr_err("[BATTERY PROFILE] No battery ID matching\nUsing default profile - LGChem_2100mAh for id(%d)\n",battery_id);
 			break;
 	}
+<<<<<<< HEAD
 <<<<<<< HEAD
 #elif defined(CONFIG_LGE_PM_BATTERY_CAPACITY_3200mAh)
 	switch ( battery_id ){
@@ -4153,6 +4173,8 @@ static int set_battery_data(struct qpnp_bms_chip *chip)
 	}
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #else
 	batt_data = &LGE_BL_54SH_2540mAh_LG_Chem_data;
 	pr_err("[BATTERY PROFILE] No battery capacity defconfig\nUsing default profile - LGChem_2540mAh for id(%d)\n",battery_id);
@@ -4161,6 +4183,7 @@ static int set_battery_data(struct qpnp_bms_chip *chip)
 #else // Not PM battery ID checker
 	// Set Default Battery Profile
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8226_E9WIFI_OPEN_KR) || defined(CONFIG_MACH_MSM8226_E7WIFI_OPEN_KR) || defined(CONFIG_MACH_MSM8226_E7LTE_OPEN_KR)
         batt_data = &LGE_LGC_4600mAH_data;
         pr_err("[BATTERY PROFILE] Using default profile - LGChem_4600mAh\n");
@@ -4168,6 +4191,11 @@ static int set_battery_data(struct qpnp_bms_chip *chip)
 	batt_data = &LGE_BL_54SH_2540mAh_LG_Chem_data;
 	pr_err("[BATTERY PROFILE] This version doesn't support BATTERY ID CHECKER\nUsing default profile-LGChem_2540mAh\n");
 #endif
+=======
+	batt_data = &LGE_BL_54SH_2540mAh_LG_Chem_data;
+	pr_err("[BATTERY PROFILE] This version doesn't support BATTERY ID CHECKER\nUsing default profile-LGChem_2540mAh\n");
+
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	batt_data = &LGE_BL_54SH_2540mAh_LG_Chem_data;
 	pr_err("[BATTERY PROFILE] This version doesn't support BATTERY ID CHECKER\nUsing default profile-LGChem_2540mAh\n");
@@ -4265,6 +4293,9 @@ assign_data:
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #ifndef CONFIG_LGE_PM_BATTERY_PROFILE_DATA
 	/* Override battery properties if specified in the battery profile */

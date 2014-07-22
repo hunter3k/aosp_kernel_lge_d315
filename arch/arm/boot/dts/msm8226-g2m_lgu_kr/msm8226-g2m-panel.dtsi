@@ -15,6 +15,7 @@
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 &dsi_tovis_vid_dsv {
 	qcom,cont-splash-enabled;
 	qcom,enable-gpio = <&msmgpio 111 0>;
@@ -77,6 +78,11 @@
 	qcom,mdss-dsi-panel-timings = [8E 2C 21 00 40 39 26 2E 39 03 04 00];
 	qcom,mdss-dsi-t-clk-post = <0x1F>;
 	qcom,mdss-dsi-t-clk-pre = <0x2F>;
+=======
+&dsi_tianma_vid_dsv {
+	qcom,cont-splash-enabled;
+	qcom,enable-gpio = <&msmgpio 111 0>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 &dsi_tianma_vid_dsv {
 	qcom,cont-splash-enabled;

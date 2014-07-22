@@ -783,15 +783,21 @@ static enum flash_area fwu_go_nogo(void)
 	deviceFirmwareID = extract_uint(firmware_id);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE
  * fix read data length method : sizeof -> strlen
  * strnstr compare to string with length not a size
  * 2013-04-29 kenneth.kang@lge.com */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*           
                                                  
                                                    
                                    */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	/* .img firmware id */
 	if (img->is_contain_build_info) {
@@ -839,15 +845,21 @@ static enum flash_area fwu_go_nogo(void)
 		flash_area = UI_FIRMWARE;
 		goto exit;
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE
  * fix Firmware version compare method
  * if firmware version is same then it couldn't need update.
  * 2013-04-29 kenneth.kang@lge.com */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*           
                                       
                                                             
                                    */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	} else if (imageFirmwareID <= deviceFirmwareID) {
 		flash_area = NONE;

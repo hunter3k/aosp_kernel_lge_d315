@@ -48,7 +48,11 @@
 			revision = "rev_d...";
 			synaptics,fw_version_info = <0x34 0x04 0x31>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 			synaptics,fw_image = "synaptics/w55ds_global_com/PLG333-V0.03-PR1597031-DS4.3.5.1.16_34043103.img";
+=======
+			synaptics,fw_image = "synaptics/w55ds_global_com/PLG333-V0.02-PR1581873-DS4.3.5.1.16_34043102.img";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			synaptics,fw_image = "synaptics/w55ds_global_com/PLG333-V0.02-PR1581873-DS4.3.5.1.16_34043102.img";
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -64,12 +68,15 @@
 				use_vio_regulator = <1>;
 				gpio_vdd_en = <82>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 			    	/*maker_id  disable(0), enable(1)*/
 				maker_id = <0>;
 				maker_id_gpio = <76>;
 				palm_detect_mode = <1>;
 				ghost_detection_enable = <0>;
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			    /* firmware image depends on this value, temporarily used */
 			    /* 0: No image(default), 1: W3DS(TIM BR)(PLG312_T001), 2: W3S(VDF)(PLG311_T001), 3:X3, 4:w55DS, 5:w55S ... */
 				panel_type = <4>;
@@ -78,6 +85,9 @@
 				maker_id_gpio = <76>;
 				palm_detect_mode = <1>;
 				ghost_detection_enable = <1>;
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 				ghost_detection_jitter_value = <8>;
 			};				

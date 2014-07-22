@@ -9,9 +9,12 @@
 #define MXT_PATCH_SUPP_CHECK		1
 #define MXT_PATCH_T9STATUS_CHK		1
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define MXT_PATCH_STAGE_RESET		1
 #define MXT_PATCH_TOUCH_SLOT		1
 #define MXT_PATCH_540S_AREA			1
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
@@ -53,6 +56,7 @@
 #define MXT_XML_SRC_T9STATUS	"T9STATUS"	//10
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if MXT_PATCH_TOUCH_SLOT
 #define MXT_XML_SRC_SCNT		"SCNT"		//11
 #define MXT_XML_SRC_LCNT		"LCNT"		//12 //20131227
@@ -60,6 +64,8 @@
 #if MXT_PATCH_540S_AREA
 #define MXT_XML_SRC_AREA2		"AR2"		//13
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
@@ -77,6 +83,7 @@
 
 /* Tool types of T100 object */
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define MXT_T100_TYPE_RESERVED				0
 #define MXT_T100_TYPE_PATCH_FINGER			1
 #define MXT_T100_TYPE_PASSIVE_STYLUS		2
@@ -85,11 +92,16 @@
 #define MXT_T100_TYPE_GLOVE_TOUCH			5
 #define MXT_T100_TYPE_LARGE_TOUCH			6 //20131227
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #define MXT_T100_TYPE_RESERVED                                0
 #define MXT_T100_TYPE_PATCH_FINGER                          1
 #define MXT_T100_TYPE_PASSIVE_STYLUS        2
 #define MXT_T100_TYPE_ACTIVE_STYLUS                      3
 #define MXT_T100_TYPE_HOVERING_FINGER    4
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 enum{
@@ -121,6 +133,7 @@ enum {
 	MXT_PATCH_ITEM_T9STATUS,	//10
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if MXT_PATCH_TOUCH_SLOT
 	MXT_PATCH_ITEM_SCNT,		//11
 	MXT_PATCH_ITEM_LCNT,		//12 //20131227
@@ -128,6 +141,8 @@ enum {
 #if MXT_PATCH_540S_AREA
 	MXT_PATCH_ITEM_AREA2,		//13
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	//...
@@ -164,9 +179,13 @@ struct stage_def{	// 8b
 	u8	cfg_cnt;
 	u8	test_cnt;
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if MXT_PATCH_STAGE_RESET
 	u16	reset_period;
 #endif
+=======
+	u8	reserved[2];
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	u8	reserved[2];
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -257,6 +276,7 @@ struct event_cfg{	// 4b
 	Source
 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if MXT_PATCH_TOUCH_SLOT
 struct touch_slot{
 	u8 detect[MXT_MAX_NUM_TOUCHES];
@@ -265,6 +285,8 @@ struct touch_slot{
 };
 struct touch_slot tch_slot;
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
@@ -282,6 +304,7 @@ struct test_src{
 	int status;
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if MXT_PATCH_TOUCH_SLOT
 	int stylus_cnt;
 	int large_cnt; //20131227
@@ -289,6 +312,8 @@ struct test_src{
 #if MXT_PATCH_540S_AREA
 	int area2;
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 };
@@ -320,8 +345,12 @@ extern struct mxt_object *mxt_get_object(struct mxt_data *data, u8 type);
 #ifndef __mxt_patch_debug
 #define __mxt_patch_debug(_data, ...)	if(data->patch.debug) \
 <<<<<<< HEAD
+<<<<<<< HEAD
 	TOUCH_PATCH_MSG(__VA_ARGS__);
 /*	dev_dbg(&(_data)->client->dev, __VA_ARGS__);*/
+=======
+	dev_info(&(_data)->client->dev, __VA_ARGS__);
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	dev_info(&(_data)->client->dev, __VA_ARGS__);
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -330,8 +359,12 @@ extern struct mxt_object *mxt_get_object(struct mxt_data *data, u8 type);
 #ifndef __mxt_patch_ddebug
 #define __mxt_patch_ddebug(_data, ...)	if(data->patch.debug>1) \
 <<<<<<< HEAD
+<<<<<<< HEAD
 	TOUCH_PATCH_MSG(__VA_ARGS__);
 /*	dev_info(&(_data)->client->dev, __VA_ARGS__);*/
+=======
+	dev_info(&(_data)->client->dev, __VA_ARGS__);
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	dev_info(&(_data)->client->dev, __VA_ARGS__);
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -464,8 +497,13 @@ static int mxt_patch_write_event_cfg(struct mxt_data *data,
 {
 	if(do_action){
 <<<<<<< HEAD
+<<<<<<< HEAD
 		/*__mxt_patch_debug(data, "|-- ECFG_WRITE: OBJECT_TYPE:%d OFFSET:%d VAL:%d\n",
 			pecfg->obj_type, pecfg->offset, pecfg->val);*/
+=======
+		__mxt_patch_debug(data, "|-- ECFG_WRITE: OBJECT_TYPE:%d OFFSET:%d VAL:%d\n",
+			pecfg->obj_type, pecfg->offset, pecfg->val);
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		__mxt_patch_debug(data, "|-- ECFG_WRITE: OBJECT_TYPE:%d OFFSET:%d VAL:%d\n",
 			pecfg->obj_type, pecfg->offset, pecfg->val);
@@ -773,6 +811,7 @@ const char* mxt_patch_src_item_name(u8 src_id)
 		MXT_XML_SRC_T9STATUS,   //MXT_PATCH_ITEM_T9STATUS   10
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if MXT_PATCH_TOUCH_SLOT
 		MXT_XML_SRC_SCNT,	//MXT_PATCH_ITEM_SCNT		11
 		MXT_XML_SRC_LCNT,	//MXT_PATCH_ITEM_LCNT		12 //20131227
@@ -780,6 +819,8 @@ const char* mxt_patch_src_item_name(u8 src_id)
 #if MXT_PATCH_540S_AREA
 		MXT_XML_SRC_AREA2,	//MXT_PATCH_ITEM_AREA2		13
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	};
@@ -923,6 +964,7 @@ static void mxt_patch_dump_source(struct mxt_data *data,
 				bool do_action)
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	struct device *dev = &data->client->dev;
 	if(do_action){
 		dev_info(dev, "TA:%d FC:%d AR:%d AP:%d"
@@ -941,15 +983,23 @@ static void mxt_patch_dump_source(struct mxt_data *data,
 	if(do_action){
 		__mxt_patch_debug(data, "TA:%d FCNT:%d AREA:%d AMP:%d SUM:%d TCH:%d ATCH:%d KCNT:%d KVAL:%d\n",
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+	if(do_action){
+		__mxt_patch_debug(data, "TA:%d FCNT:%d AREA:%d AMP:%d SUM:%d TCH:%d ATCH:%d KCNT:%d KVAL:%d\n",
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			data->patch.src_item[1], data->patch.src_item[2],
 			data->patch.src_item[3], data->patch.src_item[4],
 			data->patch.src_item[5], data->patch.src_item[6],
 			data->patch.src_item[7], data->patch.src_item[8],
 <<<<<<< HEAD
+<<<<<<< HEAD
 			data->patch.src_item[9], data->patch.src_item[10],
 			data->patch.src_item[11],data->patch.src_item[12],
 			data->patch.src_item[13]);	//20131227
 #endif
+=======
+			data->patch.src_item[9]);
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			data->patch.src_item[9]);
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -960,7 +1010,10 @@ static int mxt_patch_parse_test_line(struct mxt_data *data,
 		u8* ppatch, u16* psrc_item, u16* check_cnt, bool do_action)
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	struct device *dev = &data->client->dev;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	struct test_line*	ptline;
@@ -995,12 +1048,17 @@ static int mxt_patch_parse_test_line(struct mxt_data *data,
 					if(*check_cnt == ptline->check_cnt){
 						test_action = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
 						dev_info(dev, "STAGE:%d TEST %d MATCHED",
 							data->patch.cur_stage, ptline->test_id);
 #if 0
 						__mxt_patch_debug(data, "STAGE:%d TEST %d MATCHED",
 							data->patch.cur_stage, ptline->test_id);
 #endif
+=======
+						__mxt_patch_debug(data, "STAGE:%d TEST %d MATCHED",
+							data->patch.cur_stage, ptline->test_id);
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 						__mxt_patch_debug(data, "STAGE:%d TEST %d MATCHED",
 							data->patch.cur_stage, ptline->test_id);
@@ -1016,6 +1074,7 @@ static int mxt_patch_parse_test_line(struct mxt_data *data,
 			}
 		}
 <<<<<<< HEAD
+<<<<<<< HEAD
 		else{
 			if(data->patch.option&0x04){
 			    if(do_action&&psrc_item){// Skip if any item was failed
@@ -1024,6 +1083,8 @@ static int mxt_patch_parse_test_line(struct mxt_data *data,
 			    }
 			}
 		}
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		ulpos += sizeof(struct test_item);
@@ -1057,9 +1118,15 @@ static int mxt_patch_parse_stage(struct mxt_data *data,
 	if(!do_action){
 		__mxt_patch_debug(data,
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"STAGE_ID:%d OPT:%d PERIOD:%d CFG_CNT:%d TST_CNT:%d RESET:%d\n",
 			psdef->stage_id, psdef->option, psdef->stage_period,
 			psdef->cfg_cnt, psdef->test_cnt, psdef->reset_period);//MXT_PATCH_STAGE_RESET
+=======
+			"STAGE_ID:%d OPT:%d PERIOD:%d CFG_CNT:%d TEST_CNT:%d\n",
+			psdef->stage_id, psdef->option, psdef->stage_period,
+			psdef->cfg_cnt, psdef->test_cnt);
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			"STAGE_ID:%d OPT:%d PERIOD:%d CFG_CNT:%d TEST_CNT:%d\n",
 			psdef->stage_id, psdef->option, psdef->stage_period,
@@ -1352,11 +1419,14 @@ static int mxt_patch_run_stage(struct mxt_data *data)
 	data->patch.run_stage = 1;
 	data->patch.skip_test = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if MXT_PATCH_STAGE_RESET
 	data->patch.stage_timestamp = jiffies_to_msecs(jiffies);
 	__mxt_patch_ddebug(data, "Stage[%d] %d\n",
 		cur_stage, data->patch.stage_timestamp);
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
@@ -1370,11 +1440,14 @@ static int mxt_patch_test_source(struct mxt_data *data, u16* psrc_item)
 	u16* pstage_addr = data->patch.stage_addr;
 	u8	cur_stage = data->patch.cur_stage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if MXT_PATCH_STAGE_RESET
 	u32 curr_time = jiffies_to_msecs(jiffies);
 	u32 time_diff = TIME_WRAP_AROUND(data->patch.stage_timestamp, curr_time);
 	struct stage_def* psdef=NULL;
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
@@ -1399,6 +1472,7 @@ static int mxt_patch_test_source(struct mxt_data *data, u16* psrc_item)
 				ppatch+pstage_addr[cur_stage]+ptline_addr[i],
 				psrc_item, &pcheck_cnt[i], true);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 #if MXT_PATCH_STAGE_RESET
 			psdef = (struct stage_def*)(ppatch+pstage_addr[cur_stage]);
@@ -1416,6 +1490,8 @@ static int mxt_patch_test_source(struct mxt_data *data, u16* psrc_item)
 
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			if(data->patch.skip_test){
 				__mxt_patch_debug(data, "REMAINED TEST SKIP\n");
 				return 0;
@@ -1426,6 +1502,7 @@ static int mxt_patch_test_source(struct mxt_data *data, u16* psrc_item)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if MXT_PATCH_TOUCH_SLOT
 static void mxt_patch_init_tslot(void)
 {
@@ -1433,6 +1510,8 @@ static void mxt_patch_init_tslot(void)
 }
 #endif
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 static void mxt_patch_init_tsrc(struct test_src* tsrc)
@@ -1447,6 +1526,7 @@ static void mxt_patch_init_tsrc(struct test_src* tsrc)
 	tsrc->key_cnt=-1;
 	tsrc->key_val=-1;
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef MXT_PATCH_T9STATUS_CHK
 	tsrc->status=-1;
 #endif
@@ -1458,10 +1538,15 @@ static void mxt_patch_init_tsrc(struct test_src* tsrc)
 	tsrc->area2=-1;
 #endif
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	//tsrc->test_src=-1;
 #ifdef MXT_PATCH_T9STATUS_CHK
 	tsrc->status=-1;
 #endif
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 }
 
@@ -1491,6 +1576,7 @@ static int mxt_patch_make_source(struct mxt_data *data,
 		data->patch.src_item[MXT_PATCH_ITEM_T9STATUS]= tsrc->status;
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if MXT_PATCH_TOUCH_SLOT
 	if(tsrc->stylus_cnt >= 0) //MXT_PATCH_TOUCH_SLOT
 		data->patch.src_item[MXT_PATCH_ITEM_SCNT]= tsrc->stylus_cnt;
@@ -1501,6 +1587,8 @@ static int mxt_patch_make_source(struct mxt_data *data,
 	if(tsrc->area2 >= 0)
 		data->patch.src_item[MXT_PATCH_ITEM_AREA2]= tsrc->area2;
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	//mxt_patch_dump_source(data, true);
@@ -1528,9 +1616,12 @@ static int mxt_patch_start_stage(struct mxt_data *data)
 		mxt_patch_init_supp(data, &tsupp_data);
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if MXT_PATCH_TOUCH_SLOT
 		mxt_patch_init_tslot();
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		return 0;
@@ -1789,7 +1880,10 @@ static void mxt_patch_T100_object(struct mxt_data *data,
 
 	if(index >= MXT_T100_SCREEN_MESSAGE_NUM_RPT_ID){
 <<<<<<< HEAD
+<<<<<<< HEAD
 		u8 i=0, stylus_cnt=0, large_cnt=0;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
@@ -1799,6 +1893,7 @@ static void mxt_patch_T100_object(struct mxt_data *data,
 		touch_type = (msg[0] & 0x70) >> 4;
 		touch_event = msg[0] & 0x0F;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 #if MXT_PATCH_TOUCH_SLOT
 		tch_slot.detect[id] = touch_detect;
@@ -1829,13 +1924,22 @@ static void mxt_patch_T100_object(struct mxt_data *data,
 			case MXT_T100_TYPE_PATCH_FINGER:
 			case MXT_T100_TYPE_PASSIVE_STYLUS:
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+		switch (touch_type)	{
+			case MXT_T100_TYPE_PATCH_FINGER:
+			case MXT_T100_TYPE_PASSIVE_STYLUS:
+>>>>>>> 0093d79... Overlay of LG soruce drop
 				x = msg[1] | (msg[2] << 8);
 				y = msg[3] | (msg[4] << 8);			
 
 				tsrc.amp = msg[5];
 <<<<<<< HEAD
+<<<<<<< HEAD
 				tsrc.area2 = msg[6]&0x3f;
 				tsrc.area = msg[7]&0x1f;
+=======
+				tsrc.area = msg[6];
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 				tsrc.area = msg[6];
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1982,6 +2086,7 @@ int mxt_patch_init(struct mxt_data *data, u8* ppatch)
 	return 0;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 static int mxt_patch_goto_stage(struct mxt_data *data, u16 stage_num)
 {
@@ -1990,5 +2095,7 @@ static int mxt_patch_goto_stage(struct mxt_data *data, u16 stage_num)
 	data->patch.run_stage = false;
 	return 0;
 }
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop

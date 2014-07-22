@@ -32,11 +32,14 @@
 				};
 		};
 <<<<<<< HEAD
+<<<<<<< HEAD
 		qcom,power-on@800 {
 				qcom,pon_3 {
 					qcom,support-reset = <0>;
 				};
 		};
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	};

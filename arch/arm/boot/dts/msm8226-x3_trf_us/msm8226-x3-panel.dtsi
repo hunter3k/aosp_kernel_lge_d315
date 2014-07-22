@@ -12,8 +12,12 @@
 
 &mdss_dsi0{
 <<<<<<< HEAD
+<<<<<<< HEAD
 	qcom,dsi-pref-prim-pan = <&dsi_lgd_lg4577_vid>;
 	qcom,dsi-pref-secondary-pan  =  <&dsi_tovis_ili9806e_vid>;
+=======
+	qcom,dsi-pref-prim-pan = <&dsi_tovis_ili9806e_vid>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	qcom,dsi-pref-prim-pan = <&dsi_tovis_ili9806e_vid>;
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -26,7 +30,10 @@
 &dsi_tovis_ili9806e_vid{
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 &dsi_lgd_lg4577_vid{
 };
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop

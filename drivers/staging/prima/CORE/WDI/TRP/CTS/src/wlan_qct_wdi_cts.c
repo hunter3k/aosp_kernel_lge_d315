@@ -735,11 +735,17 @@ WCTS_OpenTransport
    pWCTSCb->wctsOpenMsg.callback = WCTS_PALOpenCallback;
    pWCTSCb->wctsOpenMsg.pContext = pWCTSCb;
 <<<<<<< HEAD
+<<<<<<< HEAD
    pWCTSCb->wctsOpenMsg.type= WPAL_MC_MSG_SMD_NOTIF_OPEN_SIG;
 
    pWCTSCb->wctsDataMsg.callback = WCTS_PALDataCallback;
    pWCTSCb->wctsDataMsg.pContext = pWCTSCb;
    pWCTSCb-> wctsDataMsg.type= WPAL_MC_MSG_SMD_NOTIF_DATA_SIG;
+=======
+
+   pWCTSCb->wctsDataMsg.callback = WCTS_PALDataCallback;
+   pWCTSCb->wctsDataMsg.pContext = pWCTSCb;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 
    pWCTSCb->wctsDataMsg.callback = WCTS_PALDataCallback;

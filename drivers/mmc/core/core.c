@@ -66,9 +66,15 @@ static void mmc_clk_scaling(struct mmc_host *host, bool from_wq);
 
 /*
 <<<<<<< HEAD
+<<<<<<< HEAD
  * LGE_CHANGE_S
  * Comment : FMBT porting
  * 2013-11-22, p1-fs@lge.com
+=======
+               
+                         
+                            
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
                
                          
@@ -213,9 +219,15 @@ void mmc_request_done(struct mmc_host *host, struct mmc_request *mrq)
 	struct mmc_command *cmd = mrq->cmd;
 /*
 <<<<<<< HEAD
+<<<<<<< HEAD
  * LGE_CHANGE_S
  * FMBT porting
  * 2013-11-22, p1-fs@lge.com
+=======
+               
+               
+                            
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
                
                
@@ -227,7 +239,11 @@ void mmc_request_done(struct mmc_host *host, struct mmc_request *mrq)
 	int i;
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E */
+=======
+/*              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*              */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -285,9 +301,15 @@ void mmc_request_done(struct mmc_host *host, struct mmc_request *mrq)
 				mrq->data->bytes_xfered, mrq->data->error);
 /*
 <<<<<<< HEAD
+<<<<<<< HEAD
  * LGE_CHANGE_S
  * Comment : FMBT porting
  * 2013-11-22, p1-fs@lge.com
+=======
+               
+                         
+                            
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
                
                          
@@ -312,7 +334,22 @@ void mmc_request_done(struct mmc_host *host, struct mmc_request *mrq)
 				}
 			}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+		}
+		else {
+			if(!strncmp(mmc_hostname(host), "mmc0",4))
+			{
+				if(mrq->cmd->opcode != MMC_SEND_STATUS)
+				{
+					currentTime = sched_clock();
+					memlog_emmc_add(mrq, currentTime, currentTime - glTimeGap1);
+				}
+			}
+#endif
+/*              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		}
 		else {
 			if(!strncmp(mmc_hostname(host), "mmc0",4))
@@ -341,6 +378,8 @@ void mmc_request_done(struct mmc_host *host, struct mmc_request *mrq)
 		}
 
 /* LGE_CHANGE_E */
+
+/*              */
 
 /*              */
 
@@ -425,9 +464,15 @@ mmc_start_request(struct mmc_host *host, struct mmc_request *mrq)
 #endif
 /* 
 <<<<<<< HEAD
+<<<<<<< HEAD
  * LGE_CHANGE_S
  * Comment : FMBT porting
  * 2013-11-22, p1-fs@lge.com
+=======
+               
+                         
+                            
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
                
                          
@@ -443,7 +488,11 @@ mmc_start_request(struct mmc_host *host, struct mmc_request *mrq)
 		glTimeGap1 = sched_clock();
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E */
+=======
+/*              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*              */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1394,6 +1443,7 @@ void mmc_set_data_timeout(struct mmc_data *data, const struct mmc_card *card)
 		else
 			#ifdef CONFIG_MACH_LGE
 <<<<<<< HEAD
+<<<<<<< HEAD
 			/* LGE_CHANGE
 			 * Although we already applied enough time,
 			 * timeout-error occurs until now with several-ultimate-crappy-memory.
@@ -1401,12 +1451,17 @@ void mmc_set_data_timeout(struct mmc_data *data, const struct mmc_card *card)
 			 * 2013-03-09, G2-FS@lge.com
 			 */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			/*           
                                               
                                                                          
                                         
                                
     */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 			limit_us = 300000;
 			#else
@@ -2038,15 +2093,21 @@ void mmc_power_up(struct mmc_host *host)
 	 */
 	#ifdef CONFIG_MACH_LGE
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE
 	* Augmenting delay-time for some crappy card.
 	* 2013-03-09, G2-FS@lge.com
 	*/
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	/*           
                                               
                             
  */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	mmc_delay(20);
 	#else
@@ -2064,15 +2125,21 @@ void mmc_power_up(struct mmc_host *host)
 	 */
 #ifdef CONFIG_MACH_LGE
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE
 	* Augmenting delay-time for some crappy card.
 	* 2013-03-09, G2-FS@lge.com
 	*/
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	/*           
                                               
                             
  */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	mmc_delay(20);
 #else
@@ -3942,9 +4009,15 @@ static int __init mmc_init(void)
 		goto unregister_host_class;
 /*
 <<<<<<< HEAD
+<<<<<<< HEAD
  * LGE_CHANGE_S
  * Comment : FMBT porting
  * 2013-11-22, p1-fs@lge.com
+=======
+               
+                         
+                            
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
                
                          
@@ -3955,7 +4028,11 @@ static int __init mmc_init(void)
 	init_memLog();
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E */
+=======
+/*              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*              */
 >>>>>>> 0093d79... Overlay of LG soruce drop

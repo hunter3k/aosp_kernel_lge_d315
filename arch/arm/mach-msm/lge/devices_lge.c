@@ -440,8 +440,13 @@ void lge_pm_set_usb_cable_to_minimum(void){
 
 #if defined(CONFIG_MACH_MSM8926_X5_VZW) || defined(CONFIG_MACH_MSM8926_X3C_TRF_US) || \
 <<<<<<< HEAD
+<<<<<<< HEAD
 	defined(CONFIG_MACH_MSM8926_X3N_OPEN_EU) || defined(CONFIG_MACH_MSM8926_X3N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_F70N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_X3N_GLOBAL_SCA) || \
 	defined(CONFIG_MACH_MSM8926_X3_TRF_US) || defined(CONFIG_MACH_MSM8926_X3N_KR) || defined(CONFIG_MACH_MSM8926_F70N_KR)
+=======
+	defined(CONFIG_MACH_MSM8926_X3N_OPEN_EU) || defined(CONFIG_MACH_MSM8926_X3N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_X3N_GLOBAL_SCA) || \
+	defined(CONFIG_MACH_MSM8926_X3_TRF_US) || defined(CONFIG_MACH_MSM8926_X3_KR)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	defined(CONFIG_MACH_MSM8926_X3N_OPEN_EU) || defined(CONFIG_MACH_MSM8926_X3N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_X3N_GLOBAL_SCA) || \
 	defined(CONFIG_MACH_MSM8926_X3_TRF_US) || defined(CONFIG_MACH_MSM8926_X3_KR)
@@ -454,7 +459,11 @@ int lge_battery_info = BATT_ID_UNKNOWN;
 bool is_lge_battery_valid(void)
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8926_JAGNM_ATT) || defined(CONFIG_MACH_MSM8926_JAGNM_GLOBAL_COM)  // temp just only Rev 0
+=======
+#ifdef CONFIG_MACH_MSM8926_B1L_ATT  // temp just only Rev 0
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #ifdef CONFIG_MACH_MSM8926_B1L_ATT  // temp just only Rev 0
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -486,7 +495,11 @@ bool is_lge_battery_valid(void)
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif //CONFIG_LGE_PM_BATTERY_4_2VOLT
+=======
+#endif //                             
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif //                             
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -617,15 +630,21 @@ static hw_rev_type lge_bd_rev = HW_REV_A;
 
 /* CAUTION: These strings are come from LK. */
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8926_X3N_OPEN_EU) || defined(CONFIG_MACH_MSM8926_X3N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_F70N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_X3N_GLOBAL_SCA) || \
 	defined(CONFIG_MACH_MSM8926_X3_TRF_US) || defined(CONFIG_MACH_MSM8926_X3N_KR) || defined(CONFIG_MACH_MSM8926_F70N_KR)
 char *rev_str[] = {"rev_0", "rev_a", "rev_a2", "rev_b", "rev_b2",
 	"rev_c", "rev_10", "rev_11", "revserved"};
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #if defined(CONFIG_MACH_MSM8926_X3N_OPEN_EU) || defined(CONFIG_MACH_MSM8926_X3N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_X3N_GLOBAL_SCA) || \
 	defined(CONFIG_MACH_MSM8926_X3_TRF_US) || defined(CONFIG_MACH_MSM8926_X3_KR)
 char *rev_str[] = {"rev_0", "rev_a", "rev_a2", "rev_b", "rev_c",
 	"rev_d", "rev_10", "rev_11", "revserved"};
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #else
 char *rev_str[] = {"rev_0", "rev_a", "rev_b", "rev_c", "rev_d",
@@ -746,7 +765,11 @@ void __init lge_android_usb_init(void)
     platform_device_register(&lge_android_usb_device);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_USB_G_LGE_ANDROID */
+=======
+#endif /*                          */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                          */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -772,7 +795,11 @@ unsigned long int lge_get_crash_footprint(void)
 #endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W5) || defined(CONFIG_MACH_MSM8X10_W65)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W5)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W5)
 >>>>>>> 0093d79... Overlay of LG soruce drop

@@ -14,7 +14,11 @@
 &cci {
 	actuator0: qcom,actuator@18 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 		cell-index = <2>;//Use Af_main_2 of dw9718
+=======
+		cell-index = <0>;	//Use Af_main_0 of dw9716 with HI543
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		cell-index = <0>;	//Use Af_main_0 of dw9716 with HI543
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -30,6 +34,7 @@
 		qcom,flash-source = <&pm8226_flash0>;
                 qcom,torch-source = <&pm8226_torch>;
 	};
+<<<<<<< HEAD
 <<<<<<< HEAD
 /*
 	eeprom0: qcom,eeprom@a6 {
@@ -62,6 +67,8 @@
 		reg = <0x20 0x0>;
 		qcom,slave-id = <0x20 0x00 0x0219>;
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 	eeprom0: qcom,eeprom@28 { //EEPROM READ
 		cell-index = <1>;
@@ -93,6 +100,9 @@
 		compatible = "qcom,hi543";
 		reg = <0x40 0x0>;
 		qcom,slave-id = <0x40 0x0 0x1F3C>;
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		qcom,csiphy-sd-index = <0>;
 		qcom,csid-sd-index = <0>;
@@ -100,6 +110,7 @@
 		qcom,led-flash-src = <&led_flash0>;
 		//qcom,eeprom-src = <&eeprom0>;
 		qcom,mount-angle = <90>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 		qcom,sensor-name = "imx219";
 		cam_vdig-supply = <&pm8226_l5>;		//CAM_DVDD_1V8_1V2
@@ -157,6 +168,8 @@
 		qcom,gpio-req-tbl-flags = <1 0 0 0 0>;
 		qcom,gpio-req-tbl-label = "CAMIF_MCLK2", "CAM_RESET2", "CAM_STANDBY", "CAM_AVDD", "CAM_IOVDD";
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		qcom,sensor-name = "hi543";
 		qcom,gpio-no-mux = <0>;
 		gpios = <&msmgpio 26 0>,
@@ -276,6 +289,9 @@
 		qcom,gpio-req-tbl-num = <0 1 2 3 4 5>;
 		qcom,gpio-req-tbl-flags = <1 0 0 0 0 0>;
 		qcom,gpio-req-tbl-label = "CAMIF_MCLK2", "CAM_RESET2", "CAM_STANDBY2", "MAIN_VDIG_EN2", "MAIN_VANA_EN2", "MAIN_VIO_EN2";
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		qcom,csi-lane-assign = <0x4320>;
 		qcom,csi-lane-mask = <0x3>;
@@ -284,7 +300,13 @@
 		qcom,cci-master = <0>;
 		status = "ok";
 <<<<<<< HEAD
+<<<<<<< HEAD
 	};
+=======
+		revision = "rev_b...";
+	};
+
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		revision = "rev_b...";
 	};

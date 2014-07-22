@@ -36,8 +36,11 @@
 #define DATA_PER_NODE		2
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define MS_TO_NS(x)		(x * 1E6L)
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 /* Diagnostic command defines  */
@@ -85,7 +88,10 @@
 #define MXT_RETRANSMISSIONCOMPENSATION_T80		80
 #define MXT_PROCI_GESTUREPROCESSOR_T84			84
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define MXT_PROCI_TOUCH_SEQUENCE_LOGGER_T93		93
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #define MXT_PROCI_SCHNOISESUPPRESSION_T103	103
@@ -144,10 +150,15 @@
 
 /* MXT_TOUCH_MULTI_T9 field */
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define MXT_T9_TCHDI		8
 #define MXT_T9_ORIENT		9
 #define MXT_T9_RANGE		18
 #define MXT_T9_JUMPLIMIT	30
+=======
+#define MXT_T9_ORIENT		9
+#define MXT_T9_RANGE		18
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #define MXT_T9_ORIENT		9
 #define MXT_T9_RANGE		18
@@ -181,10 +192,13 @@
 #define MXT_T42_MSG_TCHSUP	(1 << 0)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define UDF_MESSAGE_COMMAND 50
 #define MAX_POINT_SIZE_FOR_LPWG 10
 #define MAX_T37_MSG_SIZE	9
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 /* Delay times */
@@ -199,7 +213,10 @@
 #define MXT_POWERON_DELAY	150	/* msec */
 #define MXT_SELFTEST_TIME	3000	/* msec */
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define MXT_WAITED_UDF_TIME 200 /* msec */
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
@@ -230,7 +247,11 @@
 
 #define MXT_MAX_KEY			4
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define MXT_MAX_FINGER			8
+=======
+#define MXT_MAX_FINGER			10
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #define MXT_MAX_FINGER			10
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -239,6 +260,7 @@
 
 #define TOUCHEVENTFILTER	0
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 #if defined(CONFIG_TOUCHSCREEN_LGE_LPWG)
 #define CHARGER_PLUGGED             0
@@ -254,6 +276,8 @@
 #else
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /* patch Event */
 #define CHARGER_PLUGGED             0
 #define CHARGER_UNplugged            1
@@ -263,7 +287,10 @@
 #define NOCHARGER_KNOCKON_WAKEUP	5
 #define DEEP_SLEEP_WAKEUP			6
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
@@ -277,7 +304,11 @@
 #define POWERLOCK_SYSFS		(0x01 << 2)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define SELF_DIAGNOSTIC_FILE_PATH "/mnt/sdcard/touch_self_test.txt"
+=======
+#define SELF_DIAGNOSTIC_FILE_PATH "/data/touch_self_test.txt"
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #define SELF_DIAGNOSTIC_FILE_PATH "/data/touch_self_test.txt"
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -302,6 +333,7 @@ enum {
 	POWER_WAKE
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 enum{
@@ -377,6 +409,8 @@ enum{
 
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /* The platform data for the Atmel maXTouch touchscreen driver */
 struct mxt_platform_data {
 	size_t config_array_size;
@@ -384,6 +418,7 @@ struct mxt_platform_data {
 	int   max_x;    /* The default reported X range   */
 	int   max_y;    /* The default reported Y range   */
 	bool i2c_pull_up;
+<<<<<<< HEAD
 <<<<<<< HEAD
 	int t15_num_keys;
 	unsigned int t15_keystate[MXT_MAX_KEY];
@@ -393,10 +428,15 @@ struct mxt_platform_data {
 	unsigned int t15_extra_key_array_x[MXT_MAX_KEY];
 	unsigned int t15_extra_key_array_y[MXT_MAX_KEY];
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	unsigned long irqflags;
 	int t15_num_keys;
 	unsigned int t15_keystate[MXT_MAX_KEY];
 	unsigned int t15_extra_keystate[MXT_MAX_KEY];
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	unsigned int t15_keymap[MXT_MAX_KEY];
 	unsigned long gpio_reset;
@@ -407,6 +447,7 @@ struct mxt_platform_data {
 	const char *extra_fw_name;
 	unsigned char auto_fw_update;
 	char knock_on_type;
+<<<<<<< HEAD
 <<<<<<< HEAD
 	unsigned int lcd_x;
 	unsigned int lcd_y;
@@ -422,6 +463,11 @@ struct mxt_platform_data {
 	unsigned int ref_reg_weight_val;
 	unsigned int butt_check_enable;
 	u8 error_check_count[5];
+=======
+	int global_access_pixel;
+	u8 fw_ver[2];
+	u8 product[10];
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	int global_access_pixel;
 	u8 fw_ver[2];
@@ -517,6 +563,7 @@ struct mxt_fw_info {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*Reference Check*/
 struct mxt_channel_size{
 	u8 start_x;
@@ -540,6 +587,8 @@ struct mxt_ref_limit{
 	u8 diff_scaling;
 };
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 struct mxt_patch{
@@ -579,6 +628,7 @@ struct mxt_reportid {
 	u8 index;
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 struct t_data
 {
@@ -630,6 +680,8 @@ struct hw_reset_data
 
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /* Each client has this additional data */
 struct mxt_data {
 	struct i2c_client *client;
@@ -640,7 +692,10 @@ struct mxt_data {
 	struct mxt_reportid *reportids;
 	struct mxt_info *info;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	struct mxt_fw_info fw_info;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	void *raw_info_block;
@@ -648,7 +703,10 @@ struct mxt_data {
 	unsigned int max_x;
 	unsigned int max_y;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	unsigned int bad_sample;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	bool in_bootloader;
@@ -669,6 +727,10 @@ struct mxt_data {
 	u8 num_touchids;
 	unsigned long t15_keystatus;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	bool use_retrigen_workaround;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	bool use_retrigen_workaround;
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -711,6 +773,7 @@ struct mxt_data {
 	u16 T72_address;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	u16 T93_address;
     u8 T93_reportid;
 	u8 g_tap_cnt;
@@ -719,6 +782,8 @@ struct mxt_data {
 	struct mxt_ref_limit ref_limit;
 	u8 ref_chk;
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	/* for fw update in bootloader */
@@ -737,8 +802,11 @@ struct mxt_data {
 	bool enable_reporting;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	struct touch_data			ts_data;
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	/* Indicates whether device is in suspend */
@@ -746,6 +814,10 @@ struct mxt_data {
 	struct mxt_raw_data *rawdata;
 	bool mxt_knock_on_enable;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	bool mxt_character_enable;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	bool mxt_character_enable;
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -757,6 +829,7 @@ struct mxt_data {
 	struct mxt_finger fingers[MXT_MAX_FINGER];
 	bool	button_lock;
 	struct delayed_work	work_button_lock;
+<<<<<<< HEAD
 <<<<<<< HEAD
 	struct delayed_work	work_palm_unlock;
 	struct delayed_work	work_deepsleep;
@@ -796,10 +869,15 @@ struct tci_abs {
 #define TOUCH_INFO_MSG(fmt, args...) 	printk(KERN_ERR "[Touch] " fmt, ##args)
 #define TOUCH_ERR_MSG(fmt, args...) printk(KERN_ERR "[Touch E] [%s %d] " fmt, __FUNCTION__, __LINE__, ##args)
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	u8 charging_mode; /*Charger mode in patch*/
 };
 
 #define TOUCH_INFO_MSG(fmt, args...) 	printk(KERN_ERR "[Touch] " fmt, ##args)
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #define TOUCH_PATCH_INFO_MSG(fmt, args...) 	printk(KERN_ERR "[Touch Patch] " fmt, ##args)
 
@@ -813,7 +891,10 @@ struct mxt_object *mxt_get_object(struct mxt_data *data, u8 type);
 int mxt_read_object(struct mxt_data *data, u8 type, u8 offset, u8 *val);
 int mxt_update_firmware(struct mxt_data *data, const char *fwname);
 <<<<<<< HEAD
+<<<<<<< HEAD
 int mxt_get_reference_chk(struct mxt_data *data);
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 

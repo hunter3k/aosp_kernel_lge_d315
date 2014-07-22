@@ -50,7 +50,11 @@
 #include <mach/rpm-regulator.h>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S: Cable Detection */
+=======
+/*                               */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                               */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -59,7 +63,11 @@
 #include    <linux/power_supply.h>
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E */
+=======
+/*              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*              */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1102,7 +1110,11 @@ static int msm_otg_suspend(struct msm_otg *motg)
 		msm_hsusb_ldo_enable(motg, USB_PHY_REG_OFF);
 #endif // (defined (CONFIG_MACH_MSM8X10_W3DS_TIM_BR) || defined (CONFIG_MACH_MSM8X10_W3DS_GLOBAL_COM) || defined (CONFIG_MACH_MSM8X10_W3C_VZW))
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif // CONFIG_USB_G_LGE_ANDROID
+=======
+#endif //                         
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif //                         
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1213,7 +1225,11 @@ static int msm_otg_resume(struct msm_otg *motg)
 		msm_hsusb_ldo_enable(motg, USB_PHY_REG_ON);
 #endif // (defined (CONFIG_MACH_MSM8X10_W3DS_TIM_BR) || defined (CONFIG_MACH_MSM8X10_W3DS_GLOBAL_COM) || defined (CONFIG_MACH_MSM8X10_W3C_VZW))
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif // CONFIG_USB_G_LGE_ANDROID
+=======
+#endif //                         
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif //                         
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1396,7 +1412,11 @@ static int msm_otg_notify_power_supply(struct msm_otg *motg, unsigned mA)
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S: Cable Detect & Current Set */
+=======
+/*                                          */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                          */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1428,7 +1448,11 @@ static int msm_otg_notify_power_supply(struct msm_otg *motg, unsigned mA)
 	pr_debug("[LGE] motg->cur_power: %d mA: %d\n", motg->cur_power, mA);
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E */
+=======
+/*              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*              */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1500,17 +1524,23 @@ static int msm_otg_notify_power_supply(struct msm_otg *motg, unsigned mA)
 #endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         /* LGE_CHANGE_S */
         /* Below line comes from 'msm_otg_sm_work' because of AC(TA) removal detection*/
         if(mA == 0)
             motg->chg_type = USB_INVALID_CHARGER;
         /* LGE_CHANGE_E */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
         /*              */
         /* Below line comes from 'msm_otg_sm_work' because of AC(TA) removal detection*/
         if(mA == 0)
             motg->chg_type = USB_INVALID_CHARGER;
         /*              */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	}
 	// Suspend Mode
@@ -1600,7 +1630,11 @@ static void msm_otg_notify_charger(struct msm_otg *motg, unsigned mA)
 	struct usb_gadget *g = motg->phy.otg->gadget;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined (CONFIG_LGE_PM) && ( defined (CONFIG_MACH_MSM8X10_W3C_VZW) || defined (CONFIG_MACH_MSM8X10_W5C_VZW) )
+=======
+#if defined (CONFIG_LGE_PM) && defined (CONFIG_MACH_MSM8X10_W3C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined (CONFIG_LGE_PM) && defined (CONFIG_MACH_MSM8X10_W3C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1623,8 +1657,13 @@ static void msm_otg_notify_charger(struct msm_otg *motg, unsigned mA)
 							motg->chg_type);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S: Cable Detection */
 #if defined (CONFIG_LGE_PM) && ( !defined (CONFIG_MACH_MSM8X10_W3C_VZW) && !defined (CONFIG_MACH_MSM8X10_W5C_VZW) )
+=======
+/*                               */
+#if defined (CONFIG_LGE_PM) && !defined (CONFIG_MACH_MSM8X10_W3C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                               */
 #if defined (CONFIG_LGE_PM) && !defined (CONFIG_MACH_MSM8X10_W3C_VZW)
@@ -1637,7 +1676,11 @@ static void msm_otg_notify_charger(struct msm_otg *motg, unsigned mA)
             mA  = lge_pm_get_ta_current();
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 #elif defined (CONFIG_LGE_PM) && ( defined (CONFIG_MACH_MSM8X10_W3C_VZW) || defined (CONFIG_MACH_MSM8X10_W5C_VZW) )
+=======
+#elif defined (CONFIG_LGE_PM) && defined (CONFIG_MACH_MSM8X10_W3C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #elif defined (CONFIG_LGE_PM) && defined (CONFIG_MACH_MSM8X10_W3C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1651,7 +1694,11 @@ static void msm_otg_notify_charger(struct msm_otg *motg, unsigned mA)
     }
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E */
+=======
+/*              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*              */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -2573,6 +2620,7 @@ int32_t lge_pm_get_cable_usb_id_adc(struct msm_otg *motg)
 			rc = qpnp_vadc_read(motg->vadc_dev,P_MUX3_1_1, &result);
 #else
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8226_W7_GLOBAL_COM) \
 	|| defined(CONFIG_MACH_MSM8226_W7_GLOBAL_SCA) \
 	|| defined(CONFIG_MACH_MSM8226_W7DS_GLOBAL_COM) \
@@ -2580,6 +2628,8 @@ int32_t lge_pm_get_cable_usb_id_adc(struct msm_otg *motg)
 	|| defined(CONFIG_MACH_MSM8226_W7N_GLOBAL_SCA) \
 	|| defined(CONFIG_MACH_MSM8226_W7DSN_GLOBAL_COM)
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #if defined(CONFIG_MACH_MSM8226_W7DS_OPEN_CIS)	\
 	|| defined(CONFIG_MACH_MSM8226_W7_OPEN_CIS) \
 	|| defined(CONFIG_MACH_MSM8226_W7_OPEN_EU) \
@@ -2587,6 +2637,9 @@ int32_t lge_pm_get_cable_usb_id_adc(struct msm_otg *motg)
 	|| defined(CONFIG_MACH_MSM8226_W7_GLOBAL_SCA) \
 	|| defined(CONFIG_MACH_MSM8226_W7DS_GLOBAL_SCA)\
 	|| defined(CONFIG_MACH_MSM8226_W7DS_GLOBAL_COM)
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 			if(lge_get_board_revno() == HW_REV_0)
 				rc = qpnp_vadc_read(motg->vadc_dev,P_MUX8_1_1, &result);
@@ -2895,9 +2948,13 @@ static void msm_otg_wait_for_ext_chg_done(struct msm_otg *motg)
 extern void trigger_usb_state_from_otg(int usb_type);
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef CONFIG_TOUCHSCREEN_ATMEL_S540
 extern void trigger_baseline_state_machine(int plug_in, int type);
 #endif
+=======
+
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -2909,6 +2966,7 @@ static void msm_otg_sm_work(struct work_struct *w)
 #ifdef CONFIG_USB_G_LGE_ANDROID
 	struct msm_otg_platform_data *pdata = motg->pdata;
 #endif
+<<<<<<< HEAD
 
 #if ( defined(CONFIG_MACH_MSM8X10_W3C_VZW) || defined(CONFIG_MACH_MSM8X10_W5C_VZW))
     bool invalid;
@@ -2916,6 +2974,8 @@ static void msm_otg_sm_work(struct work_struct *w)
 #ifdef CONFIG_USB_G_LGE_ANDROID
 	struct msm_otg_platform_data *pdata = motg->pdata;
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 	pm_runtime_resume(otg->phy->dev);
 
@@ -2974,9 +3034,12 @@ static void msm_otg_sm_work(struct work_struct *w)
 					trigger_usb_state_from_otg(USB_DCP_CHARGER);
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef CONFIG_TOUCHSCREEN_ATMEL_S540
 					trigger_baseline_state_machine(1, 1);
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 					/* Enable VDP_SRC */
@@ -2989,7 +3052,11 @@ static void msm_otg_sm_work(struct work_struct *w)
 					/* fall through */
 				case USB_PROPRIETARY_CHARGER:
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if ( defined (CONFIG_MACH_MSM8X10_W3C_VZW) || defined (CONFIG_MACH_MSM8X10_W5C_VZW) )
+=======
+#if defined (CONFIG_MACH_MSM8X10_W3C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined (CONFIG_MACH_MSM8X10_W3C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -3015,7 +3082,11 @@ static void msm_otg_sm_work(struct work_struct *w)
 					break;
 				case USB_CDP_CHARGER:
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if ( defined (CONFIG_MACH_MSM8X10_W3C_VZW) || defined (CONFIG_MACH_MSM8X10_W5C_VZW) )
+=======
+#if defined (CONFIG_MACH_MSM8x10_W3C_VZW)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined (CONFIG_MACH_MSM8x10_W3C_VZW)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -3032,9 +3103,12 @@ static void msm_otg_sm_work(struct work_struct *w)
 					trigger_usb_state_from_otg(USB_CDP_CHARGER);
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef CONFIG_TOUCHSCREEN_ATMEL_S540
 					trigger_baseline_state_machine(1, 0);
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 					break;
@@ -3047,8 +3121,11 @@ static void msm_otg_sm_work(struct work_struct *w)
 					break;
 				case USB_SDP_CHARGER:
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if ( defined (CONFIG_MACH_MSM8X10_W3C_VZW) || defined (CONFIG_MACH_MSM8X10_W5C_VZW) )
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #ifdef CONFIG_LGE_PM_VZW_FAST_CHG
 					{
 						bool tmout = motg->dcd_time >= MSM_CHG_DCD_TIMEOUT;
@@ -3059,6 +3136,9 @@ static void msm_otg_sm_work(struct work_struct *w)
 					}
 #endif
 #if defined (CONFIG_MACH_MSM8X10_W3C_VZW)
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 					msm_otg_notify_charger(motg, IUNIT);
 #elif defined(CONFIG_LGE_PM)
@@ -3068,6 +3148,7 @@ static void msm_otg_sm_work(struct work_struct *w)
 #if defined (CONFIG_TOUCHSCREEN_ATMEL_S336) || defined (CONFIG_LGE_TOUCHSCREEN_SYNAPTIC)
 					trigger_usb_state_from_otg(USB_SDP_CHARGER);
 #endif
+<<<<<<< HEAD
 <<<<<<< HEAD
 #ifdef CONFIG_TOUCHSCREEN_ATMEL_S540
 					trigger_baseline_state_machine(1, 0);
@@ -3088,6 +3169,8 @@ static void msm_otg_sm_work(struct work_struct *w)
                         }
                     }
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 					msm_otg_start_peripheral(otg, 1);
@@ -3125,7 +3208,11 @@ static void msm_otg_sm_work(struct work_struct *w)
 			dcp = (motg->chg_type == USB_DCP_CHARGER);
 			motg->chg_state = USB_CHG_STATE_UNDEFINED;
 <<<<<<< HEAD
+<<<<<<< HEAD
             /* LGE_CHANGE_S */
+=======
+            /*              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
             /*              */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -3135,6 +3222,7 @@ static void msm_otg_sm_work(struct work_struct *w)
             #ifndef CONFIG_LGE_PM
 			motg->chg_type = USB_INVALID_CHARGER;
             #endif
+<<<<<<< HEAD
 <<<<<<< HEAD
             /* LGE_CHANGE_E */
 #if defined (CONFIG_TOUCHSCREEN_ATMEL_S336) || defined (CONFIG_LGE_TOUCHSCREEN_SYNAPTIC)
@@ -3146,10 +3234,15 @@ static void msm_otg_sm_work(struct work_struct *w)
 #endif
 
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
             /*              */
 #if defined (CONFIG_TOUCHSCREEN_ATMEL_S336) || defined (CONFIG_LGE_TOUCHSCREEN_SYNAPTIC)
 			trigger_usb_state_from_otg(0);
 #endif
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 			msm_otg_notify_charger(motg, 0);
 			if (dcp) {
@@ -3194,6 +3287,9 @@ static void msm_otg_sm_work(struct work_struct *w)
 				break;
 			}
 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #ifdef CONFIG_MACH_MSM8926_X5_VZW /* Detecting Cradle for VZW */
 			if (carkit_get_deskdock()) {

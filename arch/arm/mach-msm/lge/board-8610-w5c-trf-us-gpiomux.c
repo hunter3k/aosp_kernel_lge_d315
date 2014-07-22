@@ -274,8 +274,13 @@ static struct gpiomux_setting cam_settings[] = {
 
 /*
 <<<<<<< HEAD
+<<<<<<< HEAD
  * This source has changed to match at lgps15 HDK board
  * changed by junil0814.lee@lge.com 2013-06-05
+=======
+                                                       
+                                              
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
                                                        
                                               
@@ -427,7 +432,11 @@ static struct gpiomux_setting synaptics_ts_int_act_cfg = {
 	.func = GPIOMUX_FUNC_GPIO,
 	.drv = GPIOMUX_DRV_2MA,
 <<<<<<< HEAD
+<<<<<<< HEAD
 	.pull = GPIOMUX_PULL_NONE,
+=======
+	.pull = GPIOMUX_PULL_UP,
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	.pull = GPIOMUX_PULL_UP,
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -445,7 +454,11 @@ static struct gpiomux_setting synaptics_ts_makerid_act_cfg = {
 	.func = GPIOMUX_FUNC_GPIO,
 	.drv = GPIOMUX_DRV_2MA,
 <<<<<<< HEAD
+<<<<<<< HEAD
 	.pull = GPIOMUX_PULL_NONE,
+=======
+	.pull = GPIOMUX_PULL_UP,
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	.pull = GPIOMUX_PULL_UP,
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -456,7 +469,11 @@ static struct gpiomux_setting synaptics_ts_makerid_sus_cfg = {
 	.func = GPIOMUX_FUNC_GPIO,
 	.drv = GPIOMUX_DRV_2MA,
 <<<<<<< HEAD
+<<<<<<< HEAD
 	.pull = GPIOMUX_PULL_NONE,
+=======
+	.pull = GPIOMUX_PULL_UP,
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	.pull = GPIOMUX_PULL_UP,
 >>>>>>> 0093d79... Overlay of LG soruce drop

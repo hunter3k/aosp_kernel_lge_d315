@@ -119,7 +119,11 @@ void __init msm8610_add_drivers(void)
 	qpnp_regulator_init();
 	tsens_tm_init_driver();
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE do not use msm_thermal. LGE use thermal-engine only */
+=======
+/*                                                         */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                         */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -138,9 +142,12 @@ void __init msm8610_add_drivers(void)
 #endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef CONFIG_LGE_QFPROM_INTERFACE
 	lge_add_qfprom_devices();
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #ifdef CONFIG_LGE_ENABLE_MMC_STRENGTH_CONTROL

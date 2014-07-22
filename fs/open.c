@@ -34,6 +34,7 @@
 #include "internal.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S
  *
  * do read/mmap profiling during booting
@@ -44,6 +45,8 @@
 #include "sreadahead_prof.h"
 /* LGE_CHAGE_E */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*             
   
                                         
@@ -53,6 +56,9 @@
  */
 #include "sreadahead_prof.h"
 /*             */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 int do_truncate(struct dentry *dentry, loff_t length, unsigned int time_attrs,
@@ -1010,6 +1016,7 @@ long do_sys_open(int dfd, const char __user *filename, int flags, umode_t mode)
 				fsnotify_open(f);
 				fd_install(fd, f);
 <<<<<<< HEAD
+<<<<<<< HEAD
                 /* LGE_CHANGE_S
                  *
                  * do read/mmap profiling during booting
@@ -1020,6 +1027,8 @@ long do_sys_open(int dfd, const char __user *filename, int flags, umode_t mode)
                 sreadahead_prof( f, 0, 0);
                 /* LGE_CHANGE_E */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
                 /*             
                   
                                                         
@@ -1029,6 +1038,9 @@ long do_sys_open(int dfd, const char __user *filename, int flags, umode_t mode)
                  */
                 sreadahead_prof( f, 0, 0);
                 /*              */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 			}

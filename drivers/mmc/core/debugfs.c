@@ -307,9 +307,15 @@ DEFINE_SIMPLE_ATTRIBUTE(mmc_dbg_card_status_fops, mmc_dbg_card_status_get,
 
 #ifdef CONFIG_MACH_LGE
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE
 * http://www.mail-archive.com/linux-mmc@vger.kernel.org/msg10669.html
 * 2012-07-09, J1-FS@lge.com
+=======
+/*           
+                                                                     
+                           
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*           
                                                                      
@@ -325,15 +331,21 @@ static int mmc_ext_csd_open(struct inode *inode, struct file *filp)
 {
 #ifdef CONFIG_MACH_LGE
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE
 	* http://www.mail-archive.com/linux-mmc@vger.kernel.org/msg10669.html
 	* 2012-07-09, J1-FS@lge.com
 	*/
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	/*           
                                                                       
                             
  */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	struct mmc_card *card = s->private;
 #else
@@ -344,15 +356,21 @@ static int mmc_ext_csd_open(struct inode *inode, struct file *filp)
 	u8 *ext_csd;
 #ifdef CONFIG_MACH_LGE
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE
 	* http://www.mail-archive.com/linux-mmc@vger.kernel.org/msg10669.html
 	* 2012-07-09, J1-FS@lge.com
 	*/
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	/*           
                                                                       
                             
  */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	u8 ext_csd_rev;
 	int err;
@@ -383,15 +401,21 @@ static int mmc_ext_csd_open(struct inode *inode, struct file *filp)
 		goto out_free;
 #ifdef CONFIG_MACH_LGE
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE
 	* http://www.mail-archive.com/linux-mmc@vger.kernel.org/msg10669.html
 	* 2012-07-09, J1-FS@lge.com
 	*/
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	/*           
                                                                       
                             
  */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	ext_csd_rev = ext_csd[192];
 #else
@@ -405,6 +429,7 @@ static int mmc_ext_csd_open(struct inode *inode, struct file *filp)
 	return 0;
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 #ifdef CONFIG_MACH_LGE
 	/* LGE_CHANGE
@@ -413,6 +438,8 @@ static int mmc_ext_csd_open(struct inode *inode, struct file *filp)
 	*/
 
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 #ifdef CONFIG_MACH_LGE
 	/*           
@@ -420,6 +447,9 @@ static int mmc_ext_csd_open(struct inode *inode, struct file *filp)
                             
  */
 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	switch (ext_csd_rev) {
 	case 7:
@@ -667,15 +697,21 @@ static int mmc_ext_csd_open(struct inode *inode, struct file *filp)
 out_free:
 #ifndef CONFIG_MACH_LGE
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE
 	* http://www.mail-archive.com/linux-mmc@vger.kernel.org/msg10669.html
 	* 2012-07-09, J1-FS@lge.com
 	*/
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	/*           
                                                                       
                             
  */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	kfree(buf);
 #endif
@@ -685,9 +721,15 @@ out_free:
 
 #ifdef CONFIG_MACH_LGE
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE
 * http://www.mail-archive.com/linux-mmc@vger.kernel.org/msg10669.html
 * 2012-07-09, J1-FS@lge.com
+=======
+/*           
+                                                                     
+                           
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*           
                                                                      
@@ -702,15 +744,21 @@ static ssize_t mmc_ext_csd_read(struct file *filp, char __user *ubuf,
 {
 #ifdef CONFIG_MACH_LGE
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE
 	* http://www.mail-archive.com/linux-mmc@vger.kernel.org/msg10669.html
 	* 2012-07-09, J1-FS@lge.com
 	*/
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	/*           
                                                                       
                             
  */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	return single_open(file, mmc_ext_csd_read, inode->i_private);
 #else
@@ -731,15 +779,21 @@ static const struct file_operations mmc_dbg_ext_csd_fops = {
 	.open		= mmc_ext_csd_open,
 #ifdef CONFIG_MACH_LGE
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE
 	* http://www.mail-archive.com/linux-mmc@vger.kernel.org/msg10669.html
 	* 2012-07-09, J1-FS@lge.com
 	*/
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	/*           
                                                                       
                             
  */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	.read		   = seq_read,
 	.llseek 		= seq_lseek,

@@ -54,7 +54,11 @@
 			status = "okay";
 			qcom,vib-timeout-ms = <15000>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 			qcom,vib-vtg-level-mV = <3000>;
+=======
+			qcom,vib-vtg-level-mV = <3100>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			qcom,vib-vtg-level-mV = <3100>;
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -85,6 +89,7 @@
 			lge,cable-100k = <239000 500 500>;
 			lge,cable-130k = <340000 1500 1500>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 			lge,cable-180k = <400000 800 500>;
 			lge,cable-200k = <430000 800 500>;
 			lge,cable-220k = <485000 800 500>;
@@ -94,6 +99,8 @@
 			lge,cable-910k = <1140000 1500 1500>;
 			lge,cable-none = <1900000 800  500>;
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			lge,cable-180k = <400000 700 500>;
 			lge,cable-200k = <430000 700 500>;
 			lge,cable-220k = <485000 700 500>;
@@ -102,6 +109,9 @@
 			lge,cable-620k = <955000 500 500>;
 			lge,cable-910k = <1140000 1500 1500>;
 			lge,cable-none = <1900000 700  500>;
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		};
 		usb_adc_table@200{
@@ -112,6 +122,7 @@
 			lge,cable-100k = <654545 500 500>;
 			lge,cable-130k = <780861 1500 1500>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 			lge,cable-180k = <876316 800 500>;
 			lge,cable-200k = <921429 800 500>;
 			lge,cable-220k = <988450 800 500>;
@@ -121,6 +132,8 @@
 			lge,cable-910k = <1637838 1500 1500>;
 			lge,cable-none = <1900000 800  500>;
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			lge,cable-180k = <876316 700 500>;
 			lge,cable-200k = <921429 700 500>;
 			lge,cable-220k = <988450 700 500>;
@@ -129,6 +142,9 @@
 			lge,cable-620k = <1418326 500 500>;
 			lge,cable-910k = <1637838 1500 1500>;
 			lge,cable-none = <1900000 700  500>;
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		};
 	};

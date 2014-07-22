@@ -13,7 +13,11 @@
 #define __MACH_LGE_HANDLE_PANIC_H
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE reboot reason for crash handler */
+=======
+/*                                     */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                     */
 >>>>>>> 0093d79... Overlay of LG soruce drop

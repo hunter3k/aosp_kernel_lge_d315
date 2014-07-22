@@ -3192,11 +3192,14 @@ eHalStatus sme_RoamDelPMKIDfromCache( tHalHandle hHal, tANI_U8 sessionId, tANI_U
       sme_ReleaseGlobalLock( &pMac->sme );
    }
 <<<<<<< HEAD
+<<<<<<< HEAD
    // 20140210 real-wifi@lge.com, jinseok.oh, Supplicant pending when PMKID status return 1  [START]
    if ( status > 0 ) {
       status = -1;
    }
    // 20140210 real-wifi@lge.com, jinseok.oh, Supplicant pending when PMKID status return 1 [END]
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
    return (status);

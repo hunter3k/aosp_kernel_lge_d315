@@ -71,7 +71,11 @@
 #ifdef CONFIG_MACH_LGE
 #define WLED1_LED1_CABC_EN(base)			(base + 0x66) //CABC
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif //CONFIG_MACH_LGE
+=======
+#endif //               
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif //               
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -86,7 +90,11 @@
 #define WLED_CABC_EN_MASK		0x80
 #define WLED_CABC_EN_ON			0x80
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif //CONFIG_MACH_LGE
+=======
+#endif //               
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif //               
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -122,7 +130,11 @@
 #define FLASH_PERIPHERAL_SUBTYPE(base)	(base + 0x05)
 #define FLASH_CURRENT_RAMP(base)	(base + 0x54)
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define FLASH_VPH_PWR_DROOP(base) (base + 0x5A)  /* LGE_CHANGE, Modified VDROOP for flash current on low voltage, 2013-11-24, hyungtae.lee@lge.com */
+=======
+#define FLASH_VPH_PWR_DROOP(base) (base + 0x5A)  /*                                                                                                */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #define FLASH_VPH_PWR_DROOP(base) (base + 0x5A)  /*                                                                                                */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -142,10 +154,17 @@
 #define FLASH_TMR_SAFETY		0x00
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* [LGE_UPDATE_S] FOR FLASH LED */
 #define FLASH_FAULT_DETECT_MASK		0X80
 #define FLASH_HW_VREG_OK		0x40
 /* [LGE_UPDATE_E] */
+=======
+/*                              */
+#define FLASH_FAULT_DETECT_MASK		0X80
+#define FLASH_HW_VREG_OK		0x40
+/*                */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                              */
 #define FLASH_FAULT_DETECT_MASK		0X80
@@ -194,7 +213,11 @@
 #define FLASH_RAMP_DN_DELAY_US		2160
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define FLASH_VPH_PWR_DROOP_MASK 0xF3  /* LGE_CHANGE, Modified VDROOP for flash current on low voltage, 2013-11-24, hyungtae.lee@lge.com */
+=======
+#define FLASH_VPH_PWR_DROOP_MASK 0xF3  /*                                                                                                */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #define FLASH_VPH_PWR_DROOP_MASK 0xF3  /*                                                                                                */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -963,6 +986,10 @@ static int qpnp_flash_set(struct qpnp_led_data *led)
 		if (led->flash_cfg->torch_enable) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+			usleep(FLASH_RAMP_UP_DELAY_US);  /*                                                                                                */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			usleep(FLASH_RAMP_UP_DELAY_US);  /*                                                                                                */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1661,6 +1688,12 @@ static int __devinit qpnp_wled_init(struct qpnp_led_data *led)
 	}
 #if defined(CONFIG_LGE_TOVIS_540P_PANEL_CABC)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+#ifndef CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL
+if(!gpio_get_value(23)){
+#endif
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #ifndef CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL
 if(!gpio_get_value(23)){
@@ -1675,11 +1708,17 @@ if(!gpio_get_value(23)){
 		return rc;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #ifndef CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL
 }else
 	pr_info("%s:cabc not write. lcd maker id: %d",__func__, gpio_get_value(23));
 #endif
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 #elif defined(CONFIG_LGE_TOVIS_ILI9806E_WVGA_PANEL_CABC)
 	rc = qpnp_led_masked_write(led, WLED1_LED1_CABC_EN(led->base),
@@ -2434,7 +2473,11 @@ static int __devinit qpnp_flash_init(struct qpnp_led_data *led)
 	int rc;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* [LGE_UPDATE_S] For FLASH LED */
+=======
+	/*                              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                              */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -2442,6 +2485,7 @@ static int __devinit qpnp_flash_init(struct qpnp_led_data *led)
 	u8 buf = 0x01;
 
 	spmi_ext_register_writel(ctrl, 0, 0x1544, &buf, 1);
+<<<<<<< HEAD
 <<<<<<< HEAD
 	/* [LGE_UPDATE_E] */
 	led->flash_cfg->flash_on = false;
@@ -2451,6 +2495,8 @@ static int __devinit qpnp_flash_init(struct qpnp_led_data *led)
 		FLASH_VPH_PWR_DROOP_MASK, 0xC3);
 /* LGE_CHANGE_E, Modified VDROOP for flash current on low voltage, 2013-11-24, hyungtae.lee@lge.com */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	/*                */
 	led->flash_cfg->flash_on = false;
 
@@ -2458,6 +2504,9 @@ static int __devinit qpnp_flash_init(struct qpnp_led_data *led)
 	rc = qpnp_led_masked_write(led, FLASH_VPH_PWR_DROOP(led->base),
 		FLASH_VPH_PWR_DROOP_MASK, 0xC3);
 /*                                                                                                  */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
 	rc = qpnp_led_masked_write(led,
@@ -3684,7 +3733,11 @@ static int __init qpnp_led_init(void)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, fix flash-boost failure on probe, 2013-10-27, hyungtae.lee@lge.com */
+=======
+/*                                                                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -3694,7 +3747,11 @@ module_init(qpnp_led_init);
 late_initcall(qpnp_led_init);
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, fix flash-boost failure on probe, 2013-10-27, hyungtae.lee@lge.com */
+=======
+/*                                                                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop

@@ -2841,7 +2841,11 @@ __acquires(udc->lock)
 					err = 0;
 					break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif //CONFIG_USB_G_LGE_ANDROID_OTG
+=======
+#endif //                            
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif //                            
 >>>>>>> 0093d79... Overlay of LG soruce drop

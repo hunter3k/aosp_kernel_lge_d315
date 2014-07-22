@@ -1470,7 +1470,11 @@ void vos_sched_flush_mc_mqs ( pVosSchedContext pSchedContext )
   {
     VOS_TRACE( VOS_MODULE_ID_VOSS,
 <<<<<<< HEAD
+<<<<<<< HEAD
                VOS_TRACE_LEVEL_ERROR,
+=======
+               VOS_TRACE_LEVEL_INFO,
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
                VOS_TRACE_LEVEL_INFO,
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1485,7 +1489,11 @@ void vos_sched_flush_mc_mqs ( pVosSchedContext pSchedContext )
     if(pMsgWrapper->pVosMsg != NULL) 
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         VOS_TRACE( VOS_MODULE_ID_VOSS, VOS_TRACE_LEVEL_ERROR,
+=======
+        VOS_TRACE( VOS_MODULE_ID_VOSS, VOS_TRACE_LEVEL_INFO,
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
         VOS_TRACE( VOS_MODULE_ID_VOSS, VOS_TRACE_LEVEL_INFO,
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1507,6 +1515,7 @@ void vos_sched_flush_mc_mqs ( pVosSchedContext pSchedContext )
   {
     if(pMsgWrapper->pVosMsg != NULL)
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         VOS_TRACE( VOS_MODULE_ID_VOSS, VOS_TRACE_LEVEL_ERROR,
                    "%s: Freeing MC WDI MSG message type %d",
@@ -1531,6 +1540,8 @@ void vos_sched_flush_mc_mqs ( pVosSchedContext pSchedContext )
                        __func__);
         }
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
         VOS_TRACE( VOS_MODULE_ID_VOSS, VOS_TRACE_LEVEL_INFO,
                    "%s: Freeing MC WDI MSG message type %d",
                    __func__, pMsgWrapper->pVosMsg->type );
@@ -1538,6 +1549,9 @@ void vos_sched_flush_mc_mqs ( pVosSchedContext pSchedContext )
             vos_mem_free((v_VOID_t*)pMsgWrapper->pVosMsg->bodyptr);
         }
 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
         pMsgWrapper->pVosMsg->bodyptr = NULL;
         pMsgWrapper->pVosMsg->bodyval = 0;
@@ -1551,7 +1565,11 @@ void vos_sched_flush_mc_mqs ( pVosSchedContext pSchedContext )
   {
     VOS_TRACE( VOS_MODULE_ID_VOSS,
 <<<<<<< HEAD
+<<<<<<< HEAD
                VOS_TRACE_LEVEL_ERROR,
+=======
+               VOS_TRACE_LEVEL_INFO,
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
                VOS_TRACE_LEVEL_INFO,
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1565,7 +1583,11 @@ void vos_sched_flush_mc_mqs ( pVosSchedContext pSchedContext )
   {
     VOS_TRACE( VOS_MODULE_ID_VOSS,
 <<<<<<< HEAD
+<<<<<<< HEAD
                VOS_TRACE_LEVEL_ERROR,
+=======
+               VOS_TRACE_LEVEL_INFO,
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
                VOS_TRACE_LEVEL_INFO,
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1579,7 +1601,11 @@ void vos_sched_flush_mc_mqs ( pVosSchedContext pSchedContext )
   {
     VOS_TRACE( VOS_MODULE_ID_VOSS,
 <<<<<<< HEAD
+<<<<<<< HEAD
                VOS_TRACE_LEVEL_ERROR,
+=======
+               VOS_TRACE_LEVEL_INFO,
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
                VOS_TRACE_LEVEL_INFO,
 >>>>>>> 0093d79... Overlay of LG soruce drop

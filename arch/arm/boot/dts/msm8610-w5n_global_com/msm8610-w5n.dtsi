@@ -47,8 +47,11 @@
 		compatible = "maxim,max1462x";
 		status = "disable";          //"ok" or "disable"
 <<<<<<< HEAD
+<<<<<<< HEAD
 		revision = "rev_c...";
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		revision = "rev_c";
 	};
 
@@ -62,6 +65,9 @@
 		compatible = "maxim,max1462x";
 		status = "ok";          //"ok" or "disable"
 		revision = "rev_e...";
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	};
 

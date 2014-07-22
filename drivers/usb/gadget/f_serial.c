@@ -95,7 +95,11 @@ static inline struct f_gser *port_to_gser(struct gserial *p)
 #define GS_LOG2_NOTIFY_INTERVAL		5	/* 1 << 5 == 32 msec */
 #ifdef CONFIG_USB_G_LGE_ANDROID
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define GS_NOTIFY_MAXPACKET		16	/* by mo2chunghan.lee@lge.com, 09/20/2012 */
+=======
+#define GS_NOTIFY_MAXPACKET		16	/*                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #define GS_NOTIFY_MAXPACKET		16	/*                                        */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -155,7 +159,11 @@ static struct usb_interface_descriptor gser_interface_desc = {
 	/* .iInterface = DYNAMIC */
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif	/* by mo2chunghan.lee@lge.com, 09/20/2012 */
+=======
+#endif	/*                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif	/*                                        */
 >>>>>>> 0093d79... Overlay of LG soruce drop

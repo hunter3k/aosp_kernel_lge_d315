@@ -29,11 +29,14 @@ static u8 use_pm8941_xo_a2_192000;
 extern struct clk *fc8150_spi_get_clk(void);
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 #if defined(CONFIG_MACH_MSM8X10_W6DS_TIM_BR) || defined(CONFIG_MACH_MSM8X10_W6DS_GLOBAL_SCA)
 u8 module_init_flag;
 #endif
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 u32 bbm_xtal_freq;
@@ -46,7 +49,10 @@ unsigned char ch_num = 0;
 
 u8 scan_mode;
 <<<<<<< HEAD
+<<<<<<< HEAD
 static u8 drv_open_state = 0;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
@@ -67,12 +73,15 @@ static wait_queue_head_t isdbt_isr_wait;
 #define GPIO_ISDBT_IRQ 82
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define IS_INVALID_ADDR_VALUE(x) unlikely((x) < (unsigned long)0xC0000000)
 static inline long __must_check IS_INVALID_ADDR(const void *ptr)
 {
        return IS_INVALID_ADDR_VALUE((unsigned long)ptr);
 }
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 int gpio_isdbt_pwr_en;
@@ -83,8 +92,11 @@ static DEFINE_MUTEX(ringbuffer_lock);
 void isdbt_hw_setting(void)
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W6DS_TIM_BR) || defined(CONFIG_MACH_MSM8X10_W6DS_GLOBAL_SCA)
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #if defined(CONFIG_MACH_MSM8X10_W6DS_GLOBAL_SCA)
 	if (lge_get_board_revno() >= HW_REV_A)
 	{
@@ -111,6 +123,9 @@ void isdbt_hw_setting(void)
 #endif
 
 #if defined(CONFIG_MACH_MSM8X10_W6DS_TIM_BR)
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	if (lge_get_board_revno() >= HW_REV_A)
 	{
@@ -268,8 +283,13 @@ static irqreturn_t isdbt_irq(int irq, void *dev_id)
 int data_callback(u32 hDevice, u8 *data, int len)
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	ISDBT_INIT_INFO_T *hInit=NULL;
 	struct list_head *temp=NULL;
+=======
+	ISDBT_INIT_INFO_T *hInit;
+	struct list_head *temp;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	ISDBT_INIT_INFO_T *hInit;
 	struct list_head *temp;
@@ -285,7 +305,10 @@ int data_callback(u32 hDevice, u8 *data, int len)
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	mutex_lock(&ringbuffer_lock);
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	hInit = (ISDBT_INIT_INFO_T *)hDevice;
@@ -294,6 +317,7 @@ int data_callback(u32 hDevice, u8 *data, int len)
 	{
 		ISDBT_OPEN_INFO_T *hOpen;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 		if(IS_INVALID_ADDR(temp)||(temp==NULL)) 
 		{
@@ -315,11 +339,16 @@ int data_callback(u32 hDevice, u8 *data, int len)
 		{
 
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		hOpen = list_entry(temp, ISDBT_OPEN_INFO_T, hList);
 
 		if(hOpen->isdbttype == TS_TYPE)
 		{
 			mutex_lock(&ringbuffer_lock);
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 			if(fci_ringbuffer_free(&hOpen->RingBuffer) < len )
 			{
@@ -332,15 +361,21 @@ int data_callback(u32 hDevice, u8 *data, int len)
 			wake_up_interruptible(&(hOpen->RingBuffer.queue));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 		}
 	}
 
 	mutex_unlock(&ringbuffer_lock);
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			mutex_unlock(&ringbuffer_lock);
 		}
 	}
 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	return 0;
 }
@@ -409,11 +444,15 @@ int isdbt_open (struct inode *inode, struct file *filp)
 	PRINTF(hInit, "isdbt open\n");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if(drv_open_state == 0)
 	{
 		mutex_lock(&ringbuffer_lock);
 		
 		hOpen = (ISDBT_OPEN_INFO_T *)kmalloc(sizeof(ISDBT_OPEN_INFO_T), GFP_KERNEL);
+=======
+	hOpen = (ISDBT_OPEN_INFO_T *)kmalloc(sizeof(ISDBT_OPEN_INFO_T), GFP_KERNEL);
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	hOpen = (ISDBT_OPEN_INFO_T *)kmalloc(sizeof(ISDBT_OPEN_INFO_T), GFP_KERNEL);
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -435,12 +474,16 @@ int isdbt_open (struct inode *inode, struct file *filp)
 	fci_ringbuffer_init(&hOpen->RingBuffer, hOpen->buf, RING_BUFFER_SIZE);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 		filp->private_data = hOpen;
 
 		drv_open_state = 1;
 
 		mutex_unlock(&ringbuffer_lock);
 	}
+=======
+	filp->private_data = hOpen;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	filp->private_data = hOpen;
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -490,6 +533,7 @@ static  ssize_t ioctl_isdbt_read(ISDBT_OPEN_INFO_T *hOpen  ,void __user *arg)
 	int ret = -ENODEV;
 	size_t count;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	char *buf;
 
 #if 0
@@ -501,11 +545,17 @@ static  ssize_t ioctl_isdbt_read(ISDBT_OPEN_INFO_T *hOpen  ,void __user *arg)
 	static int read_count = 0;
 	char *buf;
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+	DMB_BB_HEADER_TYPE dmb_header;
+	static int read_count = 0;
+	char *buf;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 	s32 avail;
 	struct fci_ringbuffer *cibuf = &hOpen->RingBuffer;
 	ssize_t len, total_len = 0;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 #if 0
 	buf = puserdata->data_buf + sizeof(DMB_BB_HEADER_TYPE);
@@ -516,6 +566,11 @@ static  ssize_t ioctl_isdbt_read(ISDBT_OPEN_INFO_T *hOpen  ,void __user *arg)
 	buf = puserdata->data_buf;
 	count = puserdata->data_buf_size;
 	count = (count/188)*188;
+=======
+	buf = puserdata->data_buf + sizeof(DMB_BB_HEADER_TYPE);
+	count = puserdata->data_buf_size - sizeof(DMB_BB_HEADER_TYPE);
+	count = (count/188)*188;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	buf = puserdata->data_buf + sizeof(DMB_BB_HEADER_TYPE);
 	count = puserdata->data_buf_size - sizeof(DMB_BB_HEADER_TYPE);
@@ -546,7 +601,10 @@ static  ssize_t ioctl_isdbt_read(ISDBT_OPEN_INFO_T *hOpen  ,void __user *arg)
 	mutex_unlock(&ringbuffer_lock);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if 0
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	dmb_header.data_type = DMB_BB_DATA_TS;
@@ -556,6 +614,7 @@ static  ssize_t ioctl_isdbt_read(ISDBT_OPEN_INFO_T *hOpen  ,void __user *arg)
 
 	ret = copy_to_user(puserdata->data_buf, &dmb_header, sizeof(DMB_BB_HEADER_TYPE));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 	puserdata->copied_size = total_len; //+ sizeof(DMB_BB_HEADER_TYPE);
 #endif
@@ -568,6 +627,9 @@ static  ssize_t ioctl_isdbt_read(ISDBT_OPEN_INFO_T *hOpen  ,void __user *arg)
 =======
 	puserdata->copied_size = total_len + sizeof(DMB_BB_HEADER_TYPE);
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+	puserdata->copied_size = total_len + sizeof(DMB_BB_HEADER_TYPE);
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 	return ret;
 }
@@ -576,6 +638,7 @@ int isdbt_release (struct inode *inode, struct file *filp)
 {
 	ISDBT_OPEN_INFO_T *hOpen;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 	if(drv_open_state == 1)
 	{
@@ -587,11 +650,15 @@ int isdbt_release (struct inode *inode, struct file *filp)
 =======
 	hOpen = filp->private_data;
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+	hOpen = filp->private_data;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 	hOpen->isdbttype = 0;
 
 	list_del(&(hOpen->hList));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 	//	kfree(hOpen->buf);
 		kfree(hOpen);
@@ -602,6 +669,10 @@ int isdbt_release (struct inode *inode, struct file *filp)
 
 		mutex_unlock(&ringbuffer_lock);
 	}
+=======
+//	kfree(hOpen->buf);
+	kfree(hOpen);
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //	kfree(hOpen->buf);
 	kfree(hOpen);
@@ -943,7 +1014,11 @@ long isdbt_ioctl (struct file *filp, unsigned int cmd, unsigned long arg)
 				struct broadcast_dmb_set_ch_info udata;
 				u32 f_rf;
 <<<<<<< HEAD
+<<<<<<< HEAD
 				//PRINTF(0, "LGE_BROADCAST_DMB_IOCTL_SET_CH \n");
+=======
+				//                                               
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 				//                                               
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -957,9 +1032,15 @@ long isdbt_ioctl (struct file *filp, unsigned int cmd, unsigned long arg)
 				{
 				#ifdef CONFIG_LGE_BROADCAST_BRAZIL_FREQ					
 <<<<<<< HEAD
+<<<<<<< HEAD
 					f_rf = (udata.channel- 14) * 6000 + 473143;
 				#else
 					f_rf = (udata.channel- 13) * 6000 + 473143;
+=======
+					f_rf = (udata.ch_num- 14) * 6000 + 473143;
+				#else
+					f_rf = (udata.ch_num- 13) * 6000 + 473143;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 					f_rf = (udata.ch_num- 14) * 6000 + 473143;
 				#else
@@ -991,7 +1072,11 @@ long isdbt_ioctl (struct file *filp, unsigned int cmd, unsigned long arg)
 					totalTS=0;
 					totalErrTS=0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 					ch_num = udata.channel;
+=======
+					ch_num = udata.ch_num;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 					ch_num = udata.ch_num;
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1006,7 +1091,11 @@ long isdbt_ioctl (struct file *filp, unsigned int cmd, unsigned long arg)
 			{
 				struct broadcast_dmb_sig_info udata;
 <<<<<<< HEAD
+<<<<<<< HEAD
 				//PRINTF(0, "LGE_BROADCAST_DMB_IOCTL_GET_SIG_INFO \n");
+=======
+				//                                                     
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 				//                                                     
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1049,7 +1138,11 @@ long isdbt_ioctl (struct file *filp, unsigned int cmd, unsigned long arg)
 
 		case LGE_BROADCAST_DMB_IOCTL_GET_DMB_DATA:
 <<<<<<< HEAD
+<<<<<<< HEAD
 			//PRINTF(0, "LGE_BROADCAST_DMB_IOCTL_GET_DMB_DATA \n");
+=======
+			//                                                     
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			//                                                     
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1081,6 +1174,7 @@ long isdbt_ioctl (struct file *filp, unsigned int cmd, unsigned long arg)
 
 int isdbt_init(void)
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 	s32 res = 0;
 
@@ -1153,6 +1247,9 @@ int isdbt_init(void)
 =======
 	s32 res;
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+	s32 res;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 	PRINTF(hInit, "isdbt_init DRV V1p12 20130701\n");
 
@@ -1191,9 +1288,13 @@ int isdbt_init(void)
 	INIT_LIST_HEAD(&(hInit->hHead));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	drv_open_state = 0;
 	return 0;
 #endif
+=======
+	return 0;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	return 0;
 >>>>>>> 0093d79... Overlay of LG soruce drop

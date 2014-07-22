@@ -31,6 +31,7 @@
 static unsigned char *mdss_dsi_base;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) ||defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL) ||defined(CONFIG_FB_MSM_MIPI_LGD_LH500WX9_VIDEO_HD_PT_PANEL) || defined(CONFIG_LGE_MIPI_DSI_LGD_NT35521_WXGA)
 int has_dsv_f;
 
@@ -61,6 +62,10 @@ int mdss_dsi_lane_config(struct mdss_panel_data *pdata, int enable)
 	return 0;
 }
 EXPORT_SYMBOL(mdss_dsi_lane_config);
+=======
+#if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
+int has_dsv_f;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
 int has_dsv_f;
@@ -108,6 +113,7 @@ static int mdss_dsi_panel_power_on(struct mdss_panel_data *pdata, int enable)
 	if (enable) {
 #ifdef CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8926_X10_VZW) || defined(CONFIG_MACH_MSM8926_B2L_ATT) || defined(CONFIG_MACH_MSM8926_B2LN_LGU) || defined(CONFIG_MACH_MSM8926_B2LN_SKT) || defined(CONFIG_MACH_MSM8926_B2LN_KT) || defined(CONFIG_MACH_MSM8926_JAGNM_ATT) || defined(CONFIG_MACH_MSM8926_JAGNM_GLOBAL_COM)
 		if(HW_REV_0 == hw_rev)
 #endif		
@@ -117,11 +123,16 @@ static int mdss_dsi_panel_power_on(struct mdss_panel_data *pdata, int enable)
 				if(gpio_get_value(ctrl_pdata->rst_gpio)) {
 					printk("mdss_dsi_panel_reset called \n");
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		if(HW_REV_0 == hw_rev)
     	{
 			if (!has_dsv_f && pdata->panel_info.panel_power_on == 0)//          
 			{
 				if(gpio_get_value(ctrl_pdata->rst_gpio)) {
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 					mdss_dsi_panel_reset(pdata, 0);
 					mdelay(10);
@@ -130,8 +141,11 @@ static int mdss_dsi_panel_power_on(struct mdss_panel_data *pdata, int enable)
 		}
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		printk("power_data.num_gpio=%x,power_data.num_vreg=%x\n",ctrl_pdata->power_data.num_gpio, ctrl_pdata->power_data.num_vreg);
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		ret = msm_dss_enable_vreg(
@@ -142,6 +156,7 @@ static int mdss_dsi_panel_power_on(struct mdss_panel_data *pdata, int enable)
 				__func__, ret);
 			goto error;
 		}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 #if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) ||defined(CONFIG_FB_MSM_MIPI_LGD_LH500WX9_VIDEO_HD_PT_PANEL)
@@ -161,11 +176,17 @@ static int mdss_dsi_panel_power_on(struct mdss_panel_data *pdata, int enable)
 		if (!has_dsv_f && pdata->panel_info.panel_power_on == 0)//          
 			mdss_dsi_panel_reset(pdata, 1);
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+#if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL)
+		if (!has_dsv_f && pdata->panel_info.panel_power_on == 0)//          
+			mdss_dsi_panel_reset(pdata, 1);
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #else
 		if(pdata->panel_info.panel_power_on ==0) //qct original
 			mdss_dsi_panel_reset(pdata, 1);
 #endif
 	} else {
+<<<<<<< HEAD
 <<<<<<< HEAD
 #if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGD_LH500WX9_VIDEO_HD_PT_PANEL)
 		if (!has_dsv_f) //LGE Change
@@ -185,6 +206,11 @@ static int mdss_dsi_panel_power_on(struct mdss_panel_data *pdata, int enable)
 			pr_err("%s:Failed to disable lge_lvds_panel_power!\n",__func__);
 				return 0;
 		}
+=======
+#if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
+		if (!has_dsv_f) //          
+			mdss_dsi_panel_reset(pdata, 0);
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
 		if (!has_dsv_f) //          
@@ -589,9 +615,13 @@ int mdss_dsi_on(struct mdss_panel_data *pdata)
 	#if defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8926_X10_VZW) || defined(CONFIG_MACH_MSM8926_B2L_ATT) || defined(CONFIG_MACH_MSM8926_B2LN_LGU) || defined(CONFIG_MACH_MSM8926_B2LN_SKT) || defined(CONFIG_MACH_MSM8926_B2LN_KT) || defined(CONFIG_MACH_MSM8926_JAGNM_ATT) || defined(CONFIG_MACH_MSM8926_JAGNM_GLOBAL_COM)
 		if(HW_REV_0 != lge_get_board_revno())
 #endif		
+=======
+		if(HW_REV_0 != lge_get_board_revno())
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		if(HW_REV_0 != lge_get_board_revno())
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -632,7 +662,11 @@ int mdss_dsi_on(struct mdss_panel_data *pdata)
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGD_LH500WX9_VIDEO_HD_PT_PANEL)
+=======
+	#if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	#if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -883,7 +917,11 @@ static int mdss_dsi_event_handler(struct mdss_panel_data *pdata,
 	ctrl_pdata = container_of(pdata, struct mdss_dsi_ctrl_pdata,
 				panel_data);
 <<<<<<< HEAD
+<<<<<<< HEAD
 	printk("%s+:event=%d\n", __func__, event);
+=======
+	pr_info("%s+:event=%d\n", __func__, event);
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	pr_info("%s+:event=%d\n", __func__, event);
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -1525,7 +1563,11 @@ int dsi_panel_device_register(struct device_node *pan_node,
 	ctrl_pdata->ctrl_state = CTRL_STATE_UNKNOWN;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   #if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGD_LH500WX9_VIDEO_HD_PT_PANEL)
+=======
+  #if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
   #if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
 >>>>>>> 0093d79... Overlay of LG soruce drop

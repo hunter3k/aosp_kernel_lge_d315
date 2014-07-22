@@ -111,6 +111,7 @@
 &pm8110_chg {
 	status = "ok";
 <<<<<<< HEAD
+<<<<<<< HEAD
 	qcom,vddmax-mv = <4350>;
 	qcom,vddsafe-mv = <4380>;
 	qcom,vbatdet-mv = <4300>;
@@ -119,11 +120,16 @@
 	qcom,ibatterm-ma = <100>;
 	qcom,ibatsafe-ma = <800>;
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	qcom,vddmax-mv = <4200>;
 	qcom,vddsafe-mv = <4230>;
 	qcom,vbatdet-mv = <4150>;
 	qcom,vinmin-mv = <4350>;
 	qcom,ibatterm-ma = <100>;
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 	qcom,vbatdet-delta-mv = <100>;
 	qcom,tchg-mins = <480>;	
@@ -181,7 +187,11 @@
 		qcom,src-select = <0>;      /* QPNP_PIN_SEL_FUNC_CONSTANT */
 		qcom,master-en = <1>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		revision = "rev_b...";
+=======
+		revision = "rev_b...rev_d";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		revision = "rev_b...rev_d";
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -190,7 +200,11 @@
 	};
 /* 2013-09-13, sungbo0.jung@lge.com, changed EAR_MIC_EN for rev.B [END] */
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+/* 2013-11-30, yoonsin.woo@lge.com, not used EAR_MIC_EN for rev.E [END] */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /* 2013-11-30, yoonsin.woo@lge.com, not used EAR_MIC_EN for rev.E [END] */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -266,7 +280,11 @@
 	qcom,r-sense-uohm = <10000>;
 	qcom,v-cutoff-uv = <3400000>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	qcom,max-voltage-uv = <4350000>;
+=======
+	qcom,max-voltage-uv = <4200000>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	qcom,max-voltage-uv = <4200000>;
 >>>>>>> 0093d79... Overlay of LG soruce drop

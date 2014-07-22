@@ -54,7 +54,11 @@
 			status = "okay";
 			qcom,vib-timeout-ms = <15000>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 			qcom,vib-vtg-level-mV = <3000>;
+=======
+			qcom,vib-vtg-level-mV = <3100>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			qcom,vib-vtg-level-mV = <3100>;
 >>>>>>> 0093d79... Overlay of LG soruce drop

@@ -23,7 +23,10 @@
 
 #ifdef CONFIG_LGE_PM_VZW_FAST_CHG
 <<<<<<< HEAD
+<<<<<<< HEAD
 extern bool usb_connected_flag;
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 extern bool usb_configured_flag;

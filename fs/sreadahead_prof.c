@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S
  *
  * do read/mmap profiling during booting
@@ -7,12 +8,17 @@
  *
  * matia.kim@lge.com 20130403
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*             
   
                                         
                                              
   
                              
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
  */
 #include "mount.h"
@@ -195,7 +201,11 @@ static int get_absolute_path(unsigned char* buf, int buflen, struct file *filp)
 		while (!IS_ROOT(tmpdentry)) {
 			strcpy(tmpstr, buf);
 <<<<<<< HEAD
+<<<<<<< HEAD
 			// byungchul.park@lge.com
+=======
+			//                       
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			//                       
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -220,7 +230,11 @@ static int get_absolute_path(unsigned char* buf, int buflen, struct file *filp)
 	strcpy(tmpstr, buf);
 	strcpy(buf, "/");
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// byungchul.park@lge.com
+=======
+	//                       
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	//                       
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -322,7 +336,11 @@ int sreadahead_prof(struct file *filp, size_t len, loff_t pos)
 	return 0;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E */
+=======
+/*              */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*              */
 >>>>>>> 0093d79... Overlay of LG soruce drop

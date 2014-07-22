@@ -112,15 +112,21 @@ int msm_camera_get_dt_power_setting_data(struct device_node *of_node,
 			else if (!strcmp(seq_name, "sensor_gpio_standby"))
 				ps[i].seq_val = SENSOR_GPIO_STANDBY;
 <<<<<<< HEAD
+<<<<<<< HEAD
 			/* LGE_CHANGE_S, EEPROM ( of Camera Module ) bring-up, 2013-08-05, hyungtae.lee@lge.com */
 			else if (!strcmp(seq_name, "sensor_gpio_vio"))
 				ps[i].seq_val = SENSOR_GPIO_VIO;
 			/* LGE_CHANGE_E, EEPROM ( of Camera Module ) bring-up, 2013-08-05, hyungtae.lee@lge.com */
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			/*                                                                                      */
 			else if (!strcmp(seq_name, "sensor_gpio_vio"))
 				ps[i].seq_val = SENSOR_GPIO_VIO;
 			/*                                                                                      */
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 			else if (!strcmp(seq_name, "sensor_gpio_vdig"))
 				ps[i].seq_val = SENSOR_GPIO_VDIG;
@@ -349,7 +355,11 @@ int32_t msm_camera_init_gpio_pin_tbl(struct device_node *of_node,
 			gconf->gpio_num_info->gpio_num[SENSOR_GPIO_STANDBY]);
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_S, EEPROM ( of Camera Module ) bring-up, 2013-08-05, hyungtae.lee@lge.com */
+=======
+/*                                                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                      */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -370,7 +380,11 @@ int32_t msm_camera_init_gpio_pin_tbl(struct device_node *of_node,
 			gconf->gpio_num_info->gpio_num[SENSOR_GPIO_VIO]);
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, EEPROM ( of Camera Module ) bring-up, 2013-08-05, hyungtae.lee@lge.com */
+=======
+/*                                                                                      */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                      */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -387,7 +401,11 @@ int msm_camera_get_dt_vreg_data(struct device_node *of_node,
 {
 	int rc = 0, i = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	int32_t count = 0; /* LGE_CHANGE, EEPROM bring-up, 2013-10-02, hyungtae.lee@lge.com */
+=======
+	int32_t count = 0; /*                                                               */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	int32_t count = 0; /*                                                               */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -398,7 +416,11 @@ int msm_camera_get_dt_vreg_data(struct device_node *of_node,
 	CDBG("%s qcom,cam-vreg-name count %d\n", __func__, count);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE_S, EEPROM bring-up, 2013-10-02, hyungtae.lee@lge.com */
+=======
+	/*                                                                 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                                                                 */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -410,7 +432,11 @@ int msm_camera_get_dt_vreg_data(struct device_node *of_node,
 		return 0;
 	#endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE_E, EEPROM bring-up, 2013-10-02, hyungtae.lee@lge.com */
+=======
+	/*                                                                 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                                                                 */
 >>>>>>> 0093d79... Overlay of LG soruce drop

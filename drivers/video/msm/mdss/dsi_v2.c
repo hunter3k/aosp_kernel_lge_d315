@@ -23,7 +23,11 @@
 static struct dsi_interface dsi_intf;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(CONFIG_MACH_MSM8X10_W5) || defined(CONFIG_MACH_MSM8X10_W65)
+=======
+#if defined(CONFIG_MACH_MSM8X10_W5)
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #if defined(CONFIG_MACH_MSM8X10_W5)
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -73,6 +77,7 @@ static int dsi_panel_handler(struct mdss_panel_data *pdata, int enable)
 
 	if (enable) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if !(defined (CONFIG_MACH_MSM8X10_W6) || defined(CONFIG_MACH_MSM8X10_W55))
 #if defined (CONFIG_MACH_MSM8X10_W5)
 		if(lge_lcd_id == 1){				// W5 Tovis LCD
@@ -88,10 +93,15 @@ static int dsi_panel_handler(struct mdss_panel_data *pdata, int enable)
 		mdss_dsi_panel_reset(pdata, 1);
 #endif
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #if !(defined (CONFIG_MACH_MSM8X10_W6) || defined(CONFIG_MACH_MSM8X10_W55DS_GLOBAL_COM))
 		dsi_ctrl_gpio_request(ctrl_pdata);
 		mdss_dsi_panel_reset(pdata, 1);
 #endif 
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		rc = ctrl_pdata->on(pdata);
 		if (rc)

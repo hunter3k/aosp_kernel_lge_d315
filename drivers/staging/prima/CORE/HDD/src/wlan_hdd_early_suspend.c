@@ -480,7 +480,11 @@ void hdd_conf_hostoffload(hdd_adapter_t *pAdapter, v_BOOL_t fenable)
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_UPDATE, 20131031, real-wifi@lge.com by beaver, restore the configuredMcastBcastFilter value */
+=======
+/*                                                                                                 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                                 */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -975,7 +979,11 @@ static void hdd_conf_resume_ind(hdd_adapter_t *pAdapter)
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_UPDATE, 20131031, real-wifi@lge.com by beaver, restore the configuredMcastBcastFilter value */
+=======
+/*                                                                                                 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                                 */
 >>>>>>> 0093d79... Overlay of LG soruce drop

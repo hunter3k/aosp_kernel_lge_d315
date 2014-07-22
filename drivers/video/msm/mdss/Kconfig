@@ -49,10 +49,13 @@ config LGE_MIPI_TOVIS_VIDEO_540P_PANEL
         default n
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 config FB_MSM_MIPI_LGD_LH500WX9_VIDEO_HD_PT_PANEL
 	bool "MIPI LGD Display HD PT Panel"
 	default n
 
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 config LGE_MIPI_NT35521_VIDEO_720P_PANEL
@@ -74,6 +77,7 @@ config FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL
 	---help---
 	Support for TOVIS LM570HN1A  VIDEO HD PT panel
 <<<<<<< HEAD
+<<<<<<< HEAD
 config LGE_MIPI_DSI_LGD_LVDS_WXGA
 	bool "MIPI LGD LVDS WXGA PANEL"
     default n
@@ -81,5 +85,7 @@ config LGE_MIPI_DSI_LGD_LVDS_WXGA
 config LGE_MIPI_DSI_LGD_NT35521_WXGA 
 	bool "MIPI LGD NT35521 WXGA PANEL"
     default n
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop

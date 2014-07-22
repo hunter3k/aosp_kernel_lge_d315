@@ -2795,7 +2795,11 @@ static struct rtable *ip_route_output_slow(struct net *net, struct flowi4 *fl4)
 
 	dev_out = FIB_RES_DEV(res);
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 2012-06-16 jewon.lee@lge.com LGP_DATA_KERNEL_BUGFIX_ROUTE [START] */
+=======
+/*                                                                   */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                   */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -2805,7 +2809,11 @@ static struct rtable *ip_route_output_slow(struct net *net, struct flowi4 *fl4)
         goto out;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 2012-06-16 jewon.lee@lge.com LGP_DATA_KERNEL_BUGFIX_ROUTE [END] */
+=======
+/*                                                                 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                 */
 >>>>>>> 0093d79... Overlay of LG soruce drop
