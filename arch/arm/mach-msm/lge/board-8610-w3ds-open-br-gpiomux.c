@@ -542,8 +542,13 @@ static struct gpiomux_setting cam_settings[] = {
 /*
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  * This source has changed to match at lgps15 HDK board
  * changed by junil0814.lee@lge.com 2013-06-05
+=======
+                                                       
+                                              
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
                                                        
                                               
@@ -613,7 +618,11 @@ static struct msm_gpiomux_config msm_sensor_configs_revA[] __initdata = {
 	{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		.gpio = 91, /* VDIG_LDO_EN_Port. this will start 2ex-ldo for vdig and vana at the same time., youngwook.song@lge.com, 2013.08.26 */
+=======
+		.gpio = 91, /*                                                                                                                   */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		.gpio = 91, /*                                                                                                                   */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -687,7 +696,11 @@ static struct msm_gpiomux_config msm_sensor_configs_revB[] __initdata = {
 	{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		.gpio = 85, /* VDIG_LDO_EN_Port. this will start 2ex-ldo for vdig and vana at the same time., youngwook.song@lge.com, 2013.08.26 */
+=======
+		.gpio = 85, /*                                                                                                                   */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		.gpio = 85, /*                                                                                                                   */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -702,7 +715,11 @@ static struct msm_gpiomux_config msm_sensor_configs_revB[] __initdata = {
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_X, Code modifying by revision for revA and revB, youngwook.song@lge.com 2013-09-21 */
+=======
+/*                                                                                               */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                               */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -770,7 +787,11 @@ static struct msm_gpiomux_config sd_card_det[] __initdata = {
 #if defined(CONFIG_MACH_LGE) && defined(CONFIG_SWITCH_SPK_RCV)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // sangman.park@lge.com(SOUND) 2013_7_17 added speaker switch mixer control  
+=======
+//                                                                           
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 //                                                                           
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -795,6 +816,7 @@ static struct msm_gpiomux_config msm_spk_rcv_det[] __initdata = {
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif/*CONFIG_MACH_LGE&&CONFIG_SWITCH_SPK_RCV*/
 
 #ifdef CONFIG_FMR_INTENNA
@@ -802,11 +824,16 @@ static struct msm_gpiomux_config msm_spk_rcv_det[] __initdata = {
 =======
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #endif/*                                      */
 
 #ifdef CONFIG_FMR_INTENNA
 //                                                              
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -853,7 +880,11 @@ static struct msm_gpiomux_config main_cam_id_gpio[] __initdata = {
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif /* CONFIG_MACH_LGE */
+=======
+#endif /*                 */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif /*                 */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -911,6 +942,7 @@ void __init msm8610_init_gpiomux(void)
 				}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			msm_gpiomux_install(msm_sensor_configs_revA, ARRAY_SIZE(msm_sensor_configs_revA)); // LGE_CHANGE, Code modifying by revision, youngwook.song@lge.com 2013-09-21
 			}
 			break;
@@ -923,6 +955,8 @@ void __init msm8610_init_gpiomux(void)
 =======
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			msm_gpiomux_install(msm_sensor_configs_revA, ARRAY_SIZE(msm_sensor_configs_revA)); //                                                                          
 			}
 			break;
@@ -933,6 +967,9 @@ void __init msm8610_init_gpiomux(void)
 		case HW_REV_C :
             msm_gpiomux_install(msm_sensor_configs_revB, ARRAY_SIZE(msm_sensor_configs_revB)); //                                                                          
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -948,7 +985,11 @@ void __init msm8610_init_gpiomux(void)
 				}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			msm_gpiomux_install(msm_sensor_configs_revB, ARRAY_SIZE(msm_sensor_configs_revB)); // LGE_CHANGE, Code modifying by revision, youngwook.song@lge.com 2013-09-21
+=======
+			msm_gpiomux_install(msm_sensor_configs_revB, ARRAY_SIZE(msm_sensor_configs_revB)); //                                                                          
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			msm_gpiomux_install(msm_sensor_configs_revB, ARRAY_SIZE(msm_sensor_configs_revB)); //                                                                          
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -982,6 +1023,7 @@ void __init msm8610_init_gpiomux(void)
     msm_gpiomux_install(lge_1seg_blsp_configs, ARRAY_SIZE(lge_1seg_blsp_configs));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif  /* CONFIG_LGE_BROADCAST_ONESEG */
 
 #if defined(CONFIG_MACH_LGE) && defined(CONFIG_SWITCH_SPK_RCV)
@@ -995,6 +1037,8 @@ void __init msm8610_init_gpiomux(void)
 =======
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 #endif  /*                             */
 
 #if defined(CONFIG_MACH_LGE) && defined(CONFIG_SWITCH_SPK_RCV)
@@ -1006,6 +1050,9 @@ void __init msm8610_init_gpiomux(void)
 #ifdef CONFIG_FMR_INTENNA
 //                                                              
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop

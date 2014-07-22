@@ -1001,12 +1001,12 @@ mms136_version_show(struct device *dev, struct device_attribute *attr, char *buf
 	i2c_master_send(ts->client, &chbuf[0], 1);
 	i2c_master_recv(ts->client, &chbuf[0], 3);
 
-	len += snprintf(buf + len, PAGE_SIZE - len, "\n====================================\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "\n=\n");
 	len += snprintf(buf + len, PAGE_SIZE - len, "Firmware Version : %d.%02d \n", (verbuf[2]&0x80?1:0), verbuf[2]&0x7F);
 	len += snprintf(buf + len, PAGE_SIZE - len, "Boot:0x%X  Core:0x%X  Config:0x%X \n", verbuf[0], verbuf[1], verbuf[2]);
 	len += snprintf(buf + len, PAGE_SIZE - len, "FW Product : %s \n", product);
 	len += snprintf(buf + len, PAGE_SIZE - len, "Num of Channel. TX:%d RX:%d KEY:%d\n", chbuf[0], chbuf[1], chbuf[2]);
-	len += snprintf(buf + len, PAGE_SIZE - len, "\n====================================\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "\n=\n");
 
 	power_unlock(POWER_SYSFS_LOCK);
 
@@ -1051,12 +1051,12 @@ mms136_status_show(struct device *dev, struct device_attribute *attr, char *buf)
 	int len = 0;
 
 	len = snprintf(buf, PAGE_SIZE, "\nMMS-136 Device Status\n");
-	len += snprintf(buf + len, PAGE_SIZE - len, "=============================\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=\n");
 	len += snprintf(buf + len, PAGE_SIZE - len, "irq num       is %d\n", ts->client->irq);
 	len += snprintf(buf + len, PAGE_SIZE - len, "gpio_irq num  is %d(level=%d)\n", ts->pdata->i2c_int_gpio, gpio_get_value(ts->pdata->i2c_int_gpio));
 	len += snprintf(buf + len, PAGE_SIZE - len, "gpio_scl num  is %d\n", 19 /*ts->pdata->gpio_scl*/);
 	len += snprintf(buf + len, PAGE_SIZE - len, "gpio_sda num  is %d\n", 18 /*ts->pdata->gpio_sda*/);
-	len += snprintf(buf + len, PAGE_SIZE - len, "=============================\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=\n");
 	return len;
 }
 
@@ -1751,9 +1751,9 @@ mms136_chstatus_show(struct device *dev, struct device_attribute *attr, char *bu
 		len += snprintf(buf + len, PAGE_SIZE - len, "*** LCD STATUS : ON ***\n");
 		len += snprintf(buf + len, PAGE_SIZE - len, "************************\n");
 	}
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====\n");
 	len += snprintf(buf + len, PAGE_SIZE - len, "%5c", c);
 	for (j = 0; j < ts->pdata->tx_num; j++)
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", j);
@@ -1799,8 +1799,9 @@ mms136_chstatus_show(struct device *dev, struct device_attribute *attr, char *bu
 		}
 		len += snprintf(buf + len, PAGE_SIZE - len, "\n");
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (ts->pdata->key_num) {
 		len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 		write_buf[0] = UNIVERSAL_CMD;
@@ -1838,9 +1839,11 @@ mms136_chstatus_show(struct device *dev, struct device_attribute *attr, char *bu
 			len += snprintf(buf + len, PAGE_SIZE - len, "%5d", data);
 		}
 	}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 
 	len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 	write_buf[0] = UNIVERSAL_CMD;
@@ -1878,13 +1881,16 @@ mms136_chstatus_show(struct device *dev, struct device_attribute *attr, char *bu
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", data);
 	}
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-	len += snprintf(buf + len, PAGE_SIZE - len, "\n===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+
+
+
+
+
+
+
+	len += snprintf(buf + len, PAGE_SIZE - len, "\n=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 	if (alloc_flag == -1) {
 		len += snprintf(buf + len, PAGE_SIZE - len, "<<No spec examination>>");
 	} else if (ret == -1) {
@@ -1896,9 +1902,9 @@ mms136_chstatus_show(struct device *dev, struct device_attribute *attr, char *bu
 	} else {
 		len += snprintf(buf + len, PAGE_SIZE - len, "Result = %s\n", ts->pdata->self_diagnostic[0] == 1  ? "PASS" : "FAIL");
 		if (ts->pdata->self_diagnostic[0] == 0) {
-			len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-			len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-			len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+			len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+			len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+			len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 			len += snprintf(buf + len, PAGE_SIZE - len, "%5c", c);
 			for (j = 0; j < ts->pdata->tx_num; j++)
 				len += snprintf(buf + len, PAGE_SIZE - len, "%5d", j);
@@ -1927,9 +1933,9 @@ mms136_chstatus_show(struct device *dev, struct device_attribute *attr, char *bu
 			}
 		}
 	}
-	len += snprintf(buf + len, PAGE_SIZE - len, "\n===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "\n=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 
 	write_buf[0] = UNIVERSAL_CMD;
 	write_buf[1] = UNIVERSAL_CMD_EXIT;
@@ -2086,9 +2092,9 @@ mms136_rawdata_show(struct device *dev, struct device_attribute *attr, char *buf
 		len += snprintf(buf + len, PAGE_SIZE - len, "*** LCD STATUS : ON ***\n");
 		len += snprintf(buf + len, PAGE_SIZE - len, "************************\n");
 	}
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====\n");
 	len += snprintf(buf + len, PAGE_SIZE - len, "%5c", c);
 	for (j = 0; j < ts->pdata->tx_num; j++)
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", j);
@@ -2135,8 +2141,9 @@ mms136_rawdata_show(struct device *dev, struct device_attribute *attr, char *buf
 		len += snprintf(buf + len, PAGE_SIZE - len, "\n");
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (ts->pdata->key_num) {
 		len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 		write_buf[0] = UNIVERSAL_CMD;
@@ -2175,9 +2182,11 @@ mms136_rawdata_show(struct device *dev, struct device_attribute *attr, char *buf
 			len += snprintf(buf + len, PAGE_SIZE - len, "%5d", data);
 		}
 	}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 	write_buf[0] = UNIVERSAL_CMD;
 	write_buf[1] = UNIVCMD_KEY_RAW_DATA;
@@ -2215,13 +2224,16 @@ mms136_rawdata_show(struct device *dev, struct device_attribute *attr, char *buf
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", data);
 	}
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-	len += snprintf(buf + len, PAGE_SIZE - len, "\n===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+
+
+
+
+
+
+
+	len += snprintf(buf + len, PAGE_SIZE - len, "\n=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 
 	if (alloc_flag == -1) {
 		len += snprintf(buf + len, PAGE_SIZE - len, "<<No spec examination>>");
@@ -2234,9 +2246,9 @@ mms136_rawdata_show(struct device *dev, struct device_attribute *attr, char *buf
 	} else {
 		len += snprintf(buf + len, PAGE_SIZE - len, "Result = %s\n", ts->pdata->self_diagnostic[1] == 1 ? "PASS" : "FAIL");
 		if (ts->pdata->self_diagnostic[1] == 0) {
-			len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-			len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-			len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+			len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+			len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+			len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 			len += snprintf(buf + len, PAGE_SIZE - len, "%5c", c);
 			for (j = 0; j < ts->pdata->tx_num; j++)
 				len += snprintf(buf + len, PAGE_SIZE - len, "%5d", j);
@@ -2266,9 +2278,9 @@ mms136_rawdata_show(struct device *dev, struct device_attribute *attr, char *buf
 			}
 		}
 	}
-	len += snprintf(buf + len, PAGE_SIZE - len, "\n===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "\n=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 
 	write_buf[0] = UNIVERSAL_CMD;
 	write_buf[1] = UNIVERSAL_CMD_EXIT;
@@ -2416,9 +2428,9 @@ mms136_jitter_show(struct device *dev, struct device_attribute *attr, char *buf)
 		len += snprintf(buf + len, PAGE_SIZE - len, "*** LCD STATUS : ON ***\n");
 		len += snprintf(buf + len, PAGE_SIZE - len, "************************\n");
 	}
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 	len += snprintf(buf + len, PAGE_SIZE - len, "%5c", c);
 	for (j = 0; j < ts->pdata->tx_num; j++)
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", j);
@@ -2465,8 +2477,9 @@ mms136_jitter_show(struct device *dev, struct device_attribute *attr, char *buf)
 		len += snprintf(buf + len, PAGE_SIZE - len, "\n");
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (ts->pdata->key_num) {
 		len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 		write_buf[0] = UNIVERSAL_CMD;
@@ -2505,9 +2518,11 @@ mms136_jitter_show(struct device *dev, struct device_attribute *attr, char *buf)
 			len += snprintf(buf + len, PAGE_SIZE - len, "%5d", data);
 		}
 	}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 	write_buf[0] = UNIVERSAL_CMD;
 	write_buf[1] = UNIVCMD_KEY_JITTER;
@@ -2545,13 +2560,16 @@ mms136_jitter_show(struct device *dev, struct device_attribute *attr, char *buf)
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", data);
 	}
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-	len += snprintf(buf + len, PAGE_SIZE - len, "\n===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+
+
+
+
+
+
+
+	len += snprintf(buf + len, PAGE_SIZE - len, "\n=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 
 	if (alloc_flag == -1) {
 		len += snprintf(buf + len, PAGE_SIZE - len, "<<No spec examination>>");
@@ -2560,9 +2578,9 @@ mms136_jitter_show(struct device *dev, struct device_attribute *attr, char *buf)
 	} else {
 		len += snprintf(buf + len, PAGE_SIZE - len, "Result = %s\n", ts->pdata->self_diagnostic[2] == 1 ? "PASS" : "FAIL");
 		if (ts->pdata->self_diagnostic[2] == 0) {
-			len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-			len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-			len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+			len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+			len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+			len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 			len += snprintf(buf + len, PAGE_SIZE - len, "%5c", c);
 			for (j = 0; j < ts->pdata->tx_num; j++)
 				len += snprintf(buf + len, PAGE_SIZE - len, "%5d", j);
@@ -2591,9 +2609,9 @@ mms136_jitter_show(struct device *dev, struct device_attribute *attr, char *buf)
 			}
 		}
 	}
-	len += snprintf(buf + len, PAGE_SIZE - len, "\n===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "\n=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 
 	write_buf[0] = UNIVERSAL_CMD;
 	write_buf[1] = UNIVERSAL_CMD_EXIT;
@@ -2666,9 +2684,9 @@ mms136_delta_show(struct device *dev, struct device_attribute *attr, char *buf)
 	}
 
 	len = snprintf(buf, PAGE_SIZE, "\n<< SHOW DELTA >>\n");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 	len += snprintf(buf + len, PAGE_SIZE - len, "%5c", c);
 	for (j = 0; j < ts->pdata->tx_num; j++)
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", j);
@@ -2713,8 +2731,9 @@ mms136_delta_show(struct device *dev, struct device_attribute *attr, char *buf)
 		len += snprintf(buf + len, PAGE_SIZE - len, "\n");
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (ts->pdata->key_num) {
 		len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 		for (j = 0; j<ts->pdata->key_num; j++) {
@@ -2747,9 +2766,11 @@ mms136_delta_show(struct device *dev, struct device_attribute *attr, char *buf)
 			len += snprintf(buf + len, PAGE_SIZE - len, "%5d", data);
 		}
 	}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 	for (j = 0; j<ts->pdata->key_num; j++) {
 		write_buf[0] = UNIVERSAL_CMD;
@@ -2781,13 +2802,16 @@ mms136_delta_show(struct device *dev, struct device_attribute *attr, char *buf)
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", data);
 	}
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-	len += snprintf(buf + len, PAGE_SIZE - len, "\n===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+
+
+
+
+
+
+
+	len += snprintf(buf + len, PAGE_SIZE - len, "\n=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 
 	if (irq_flag == 1) {
 		TOUCH_INFO_MSG("enable_irq\n");
@@ -2947,7 +2971,7 @@ mms136_self_diagnostic_show(struct device *dev, struct device_attribute *attr, c
 	len += snprintf(buf + len, PAGE_SIZE - len, "Firmware Version : %d.%02d \n", (verbuf[2]&0x80?1:0), verbuf[2]&0x7F);
 	len += snprintf(buf + len, PAGE_SIZE - len, "Boot:0x%X Core:0x%X Config:0x%X \n", verbuf[0], verbuf[1], verbuf[2]);
 	len += snprintf(buf + len, PAGE_SIZE - len, "FW Product : %s \n", product);
-	len += snprintf(buf + len, PAGE_SIZE - len, "=======RESULT========\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "RESULT=\n");
 	len += snprintf(buf + len, PAGE_SIZE - len, "Channel Status : %s\n", ts->pdata->self_diagnostic[0] == 1 ? "Pass" : "Fail");
 	len += snprintf(buf + len, PAGE_SIZE - len, "Raw Data : %s\n", ts->pdata->self_diagnostic[1] == 1 ? "Pass" : "Fail");
 	//len += snprintf(buf + len, PAGE_SIZE - len, "Jitter : %s\n", ts->pdata->self_diagnostic[2] == 1 ? "Pass" : "Fail");

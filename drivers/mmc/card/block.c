@@ -2175,23 +2175,29 @@ static u8 mmc_blk_prep_packed_list(struct mmc_queue *mq, struct request *req)
 	if (max_packed_rw == 0)
 		goto no_packed;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE_UPDATE_S by p1-fs@lge.com Toshiba recommend packed number no over 8 */
 	else if(max_packed_rw > 8)
 		max_packed_rw = 8;
 /* LGE_UPDATE_E by p1-fs@lge.com */
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 /*                                                                         */
 	else if(max_packed_rw > 8)
 		max_packed_rw = 8;
 /*                               */
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 	if (mmc_req_rel_wr(cur) &&
 			(md->flags & MMC_BLK_REL_WR) &&

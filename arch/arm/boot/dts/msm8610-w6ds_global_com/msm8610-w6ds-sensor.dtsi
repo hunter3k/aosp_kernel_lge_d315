@@ -80,7 +80,11 @@
             /*add*/
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             Avago,ppcount = <9>;
+=======
+            Avago,ppcount = <8>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
             Avago,ppcount = <8>;
 >>>>>>> 0093d79... Overlay of LG soruce drop

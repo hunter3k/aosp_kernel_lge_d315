@@ -19,7 +19,7 @@
   * PERFORMANCE OF THIS SOFTWARE.
 */
 
-/**========================================================================
+/**==
 
   \file  wlan_hdd_cfg80211.c
 
@@ -29,9 +29,9 @@
 
   Qualcomm Technologies Confidential and Proprietary.
 
-  ========================================================================*/
+  ==*/
 
-/**=========================================================================
+/**===
 
   EDIT HISTORY FOR FILE
 
@@ -49,7 +49,7 @@
 
  07/06/10     Kumar Deepak   Implemented cfg80211 callbacks for ANDROID
               Ganesh K
-  ==========================================================================*/
+  ====*/
 
 
 #include <linux/version.h>
@@ -1018,8 +1018,9 @@ int wlan_hdd_cfg80211_alloc_new_beacon(hdd_adapter_t *pAdapter,
     if (!params->head && !old)
         return -EINVAL;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE_CHANGE_S, yeonho.park, 2014-01-08, SoftAP b mode patch by QCT Case No. 01350976 */
 #if 0
     if (params->tail && !params->tail_len)
@@ -1027,14 +1028,18 @@ int wlan_hdd_cfg80211_alloc_new_beacon(hdd_adapter_t *pAdapter,
 #endif
 /* LGE_CHANGE_E, yeonho.park, 2014-01-08, SoftAP b mode patch by QCT Case No. 01350976 */
 
-=======
+
     if (params->tail && !params->tail_len)
         return -EINVAL;
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
     if (params->tail && !params->tail_len)
         return -EINVAL;
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+    if (params->tail && !params->tail_len)
+        return -EINVAL;
+
 
 #if (LINUX_VERSION_CODE <= KERNEL_VERSION(2,6,38))
     /* Kernel 3.0 is not updating dtim_period for set beacon */
@@ -6689,17 +6694,21 @@ static int wlan_hdd_cfg80211_get_station(struct wiphy *wiphy, struct net_device 
         /* Get MCS Rate Set -- but only if we are connected at MCS
            rates or if we are always reporting max speed or if we have
            good rssi */
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /*LGE_CHANGE_S, [WiFi][jaeoh.oh@lge.com], 2014-01-28, 11N link speed update */
         if ((0 == rssidx) || (eHDD_LINK_SPEED_REPORT_MAX == pCfg->reportMaxLinkSpeed))//&& !(rate_flags & eHAL_TX_RATE_LEGACY))
 /*LGE_CHANGE_E, [WiFi][jaeoh.oh@lge.com], 2014-01-28, 11N link speed update */
-=======
+
         if ((0 == rssidx) && !(rate_flags & eHAL_TX_RATE_LEGACY))
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
         if ((0 == rssidx) && !(rate_flags & eHAL_TX_RATE_LEGACY))
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+        if ((0 == rssidx) && !(rate_flags & eHAL_TX_RATE_LEGACY))
+
         {
             if (0 != ccmCfgGetStr(WLAN_HDD_GET_HAL_CTX(pAdapter), WNI_CFG_CURRENT_MCS_SET,
                                  MCSRates, &MCSLeng))

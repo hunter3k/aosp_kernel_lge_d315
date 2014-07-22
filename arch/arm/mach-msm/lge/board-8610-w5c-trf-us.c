@@ -100,9 +100,12 @@ static void __init msm8610_reserve(void)
 	of_scan_flat_dt(dt_scan_for_memory_reserve, msm8610_reserve_table);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef CONFIG_MACH_LGE
 	of_scan_flat_dt(lge_init_dt_scan_chosen, NULL);
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
@@ -138,9 +141,12 @@ void __init msm8610_add_drivers(void)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef CONFIG_LGE_QFPROM_INTERFACE
 	lge_add_qfprom_devices();
 #endif
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======

@@ -230,7 +230,11 @@ static struct msm_gpiomux_config msm_blsp_configs[] __initdata = {
 	},
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #ifdef CONFIG_MACH_LGE  /* LGE_CHANGE_S,  Added for COMMON_I2C */
+=======
+#ifdef CONFIG_MACH_LGE  /*                                     */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #ifdef CONFIG_MACH_LGE  /*                                     */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -372,7 +376,11 @@ static struct gpiomux_setting sd_card_det_sleep_config = {
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #else // not CONFIG_MACH_LGE
+=======
+#else //                    
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #else //                    
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -387,7 +395,11 @@ static struct gpiomux_setting sd_card_det_sleep_config = {
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif // CONFIG_MACH_LGE
+=======
+#endif //                
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 #endif //                
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -528,7 +540,11 @@ static struct msm_gpiomux_config msm_sensor_configs[] __initdata = {
 	{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		.gpio = 114, /* CAM1_RST_N */
+=======
+		.gpio = 37, /* CAM1_RST_N */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		.gpio = 37, /* CAM1_RST_N */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -629,12 +645,16 @@ static int gpio_reserved_pin_rev_B[] = {
 	};
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 static int gpio_reserved_pin_rev_D[] = {
 	0, 1, 2, 3, 5, 12, 13, 14, 15, 31, 34, 49, 50, 51, 52, 53, 54, 55, 56, 63, 64, 65, 67, 73, 74, 75, 76, 78, 79, 80, 82, 83, 84, 88, 90, 94, 95, 96, 97, 98, 103, 104, 109, 115, 116, 117, 118,
 	MSM8x26_GPIO_END // This is included to notify the end of reserved GPIO configuration.
 	};
 	
+=======
+
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -664,7 +684,11 @@ static struct msm_gpiomux_config gpio_func_reserved_pin_config __initdata = {
 //Need to set GPIO[022] NFC_MODE
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*  LGE_CHANGE_S, [NFC][minwoo.kwon@lge.com], NFC Bring up*/
+=======
+/*                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                        */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -750,7 +774,11 @@ static struct msm_gpiomux_config msm_nfc_configs[] __initdata = {
 #endif
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*  LGE_CHANGE_E, [NFC][minwoo.kwon@lge.com], NFC Bring up*/
+=======
+/*                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                        */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -809,6 +837,7 @@ void __init msm8226_init_gpiomux(void)
 				msm_gpiomux_install(&gpio_func_reserved_pin_config, 1);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			}
 			break;
 		case HW_REV_C :
@@ -821,11 +850,16 @@ void __init msm8226_init_gpiomux(void)
 =======
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 				}
 			break;
 		case HW_REV_C :
 		case HW_REV_D :
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -835,6 +869,7 @@ void __init msm8226_init_gpiomux(void)
 		default :
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		    for ( gpio_index = 0 ; gpio_reserved_pin_rev_D[gpio_index] < MSM8x26_GPIO_END ; gpio_index++ ){
 				gpio_func_reserved_pin_config.gpio = gpio_reserved_pin_rev_D[gpio_index];
 				msm_gpiomux_install(&gpio_func_reserved_pin_config, 1);
@@ -842,11 +877,16 @@ void __init msm8226_init_gpiomux(void)
 =======
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 			for ( gpio_index = 0 ; gpio_reserved_pin_rev_B[gpio_index] < MSM8x26_GPIO_END ; gpio_index++ ){
 				gpio_func_reserved_pin_config.gpio = gpio_reserved_pin_rev_B[gpio_index];
 				msm_gpiomux_install(&gpio_func_reserved_pin_config, 1);
 				}
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -893,6 +933,7 @@ void __init msm8226_init_gpiomux(void)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*  LGE_CHANGE_S, [NFC][minwoo.kwon@lge.com], NFC Bring up */
 #ifdef CONFIG_LGE_NFC_PN544_C3
 	msm_gpiomux_install(msm_nfc_configs, ARRAY_SIZE(msm_nfc_configs));
@@ -901,12 +942,17 @@ void __init msm8226_init_gpiomux(void)
 =======
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 /*                                                         */
 #ifdef CONFIG_LGE_NFC_PN544_C3
 	msm_gpiomux_install(msm_nfc_configs, ARRAY_SIZE(msm_nfc_configs));
 #endif
 /*                                                         */
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop

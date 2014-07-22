@@ -3,8 +3,9 @@
 
 #include "msm_sensor.h"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 static struct msm_camera_i2c_reg_conf hi351_start_settings_in_case_of_init[] = {
 	{ 0x03, 0x00},
 	{ 0x01, 0xf0},
@@ -17,10 +18,12 @@ static struct msm_camera_i2c_reg_conf hi351_start_settings_in_case_of_init[] = {
 	{ 0x32, 0x01}, //DMA On
 };
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 static struct msm_camera_i2c_reg_conf hi351_start_settings[] = {
 	{ 0x03, 0x00},
 	{ 0x01, 0xf0},
@@ -33,21 +36,25 @@ static struct msm_camera_i2c_reg_conf hi351_start_settings[] = {
 //	{ 0x32, 0x01}, //DMA On
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
+
 static struct msm_camera_i2c_reg_conf hi351_stop_settings[] = {
 	{ 0x03, 0x00},
 //	{ 0x01, 0xf1},
 	{ 0x0C, 0xf1},
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 static struct msm_camera_i2c_reg_conf hi351_prev_settings_in_case_of_init[2][144] = {
 	{//60hz
 //		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
@@ -58,9 +65,11 @@ static struct msm_camera_i2c_reg_conf hi351_prev_settings_in_case_of_init[2][144
 //		{0x36, 0xa3, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0xFE, 0x14, MSM_CAMERA_I2C_BYTE_DATA}, //Delay 20ms
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 /*                                                                                                  */
 /*static struct msm_camera_i2c_reg_conf hi351_sleep_settings[] = {
 	{0x03, 0x00},
@@ -83,10 +92,11 @@ static struct msm_camera_i2c_reg_conf hi351_prev_settings[2][160] = {
 		{0x36, 0xa3, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xFE, 0x14, MSM_CAMERA_I2C_BYTE_DATA}, //Delay 20ms
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 		{0x03, 0xc4, MSM_CAMERA_I2C_BYTE_DATA}, //AE off
 #if 0	//Flicker 50Hz
 		{0x10, 0x68, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE OFF   (50Hz : 0x68, 60hz : 0x60)
@@ -237,8 +247,8 @@ static struct msm_camera_i2c_reg_conf hi351_prev_settings[2][160] = {
 		{0xFE, 0x14, MSM_CAMERA_I2C_BYTE_DATA}, //Delay 20ms
 		{0x03, 0xc5, MSM_CAMERA_I2C_BYTE_DATA}, //AWB en
 		{0x10, 0xb1, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 //		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},	//f
 //		{0x0c, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
 //		{0x01, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
@@ -247,9 +257,9 @@ static struct msm_camera_i2c_reg_conf hi351_prev_settings[2][160] = {
 //		{0x03, 0xc0, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x33, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x32, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, //DMA On ~f
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},	//f
 		{0x0c, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
 		{0x01, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
@@ -258,17 +268,17 @@ static struct msm_camera_i2c_reg_conf hi351_prev_settings[2][160] = {
 		{0x03, 0xc0, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x33, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x32, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, //DMA On ~f
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
 		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xFE, 0x1E, MSM_CAMERA_I2C_BYTE_DATA}, //Delay 30ms
 	},
 	//50hz
 	{
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 //		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0xFE, 0x1E, MSM_CAMERA_I2C_BYTE_DATA}, //Delay 30ms
 //		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -277,9 +287,9 @@ static struct msm_camera_i2c_reg_conf hi351_prev_settings[2][160] = {
 //		{0x36, 0xa3, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0xFE, 0x14, MSM_CAMERA_I2C_BYTE_DATA}, //Delay 20ms
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
 		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xFE, 0x1E, MSM_CAMERA_I2C_BYTE_DATA}, //Delay 30ms
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -288,10 +298,10 @@ static struct msm_camera_i2c_reg_conf hi351_prev_settings[2][160] = {
 		{0x36, 0xa3, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xFE, 0x14, MSM_CAMERA_I2C_BYTE_DATA}, //Delay 20ms
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
 		{0x03, 0xc4, MSM_CAMERA_I2C_BYTE_DATA}, //AE off
 #if 1	//Flicker 50Hz
 		{0x10, 0x68, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE OFF   (50Hz : 0x68, 60hz : 0x60)
@@ -446,8 +456,8 @@ static struct msm_camera_i2c_reg_conf hi351_prev_settings[2][160] = {
 		{0x10, 0xb1, MSM_CAMERA_I2C_BYTE_DATA},
 
 	//f
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 //		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x0c, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
 //		{0x01, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
@@ -456,9 +466,9 @@ static struct msm_camera_i2c_reg_conf hi351_prev_settings[2][160] = {
 //		{0x03, 0xc0, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x33, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x32, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, //DMA On
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x0c, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
 		{0x01, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
@@ -468,18 +478,18 @@ static struct msm_camera_i2c_reg_conf hi351_prev_settings[2][160] = {
 		{0x03, 0xc0, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x33, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x32, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, //DMA On
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
 		//~f
 		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xFE, 0x1E, MSM_CAMERA_I2C_BYTE_DATA}, //Delay 30ms
 	}
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 static struct msm_camera_i2c_reg_conf hi351_prev_settings[2][160] = {
 	{//60hz
 		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
@@ -490,6 +500,8 @@ static struct msm_camera_i2c_reg_conf hi351_prev_settings[2][160] = {
 		{0x36, 0xa3, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xFE, 0x14, MSM_CAMERA_I2C_BYTE_DATA}, //Delay 20ms
+
+
 		{0x03, 0xc4, MSM_CAMERA_I2C_BYTE_DATA}, //AE off
 #if 0	//Flicker 50Hz
 		{0x10, 0x68, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE OFF   (50Hz : 0x68, 60hz : 0x60)
@@ -831,6 +843,7 @@ static struct msm_camera_i2c_reg_conf hi351_prev_settings[2][160] = {
 };
 
 
+
 static struct msm_camera_i2c_reg_conf hi351_snap_settings[2][61] = {
 	//60hz
 	{
@@ -841,7 +854,7 @@ static struct msm_camera_i2c_reg_conf hi351_snap_settings[2][61] = {
 	//	{0x01, 0xf1, MSM_CAMERA_I2C_BYTE_DATA}, //Sleep on
 		{0x0c, 0xf1, MSM_CAMERA_I2C_BYTE_DATA}, //Sleep on
 
-=======
+
 static struct msm_camera_i2c_reg_conf hi351_snap_settings[2][61] = {
 	//60hz
 	{
@@ -860,7 +873,9 @@ static struct msm_camera_i2c_reg_conf hi351_snap_settings[2][61] = {
 	{0x10, 0x68, MSM_CAMERA_I2C_BYTE_DATA},  // STEVE AE OFF   (50Hz : 0x68, 60hz : 0x60)
 #else
 		{0x10, 0x60, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE OFF   (50Hz : 0x68, 60hz : 0x60)
-=======
+
+
+
 static struct msm_camera_i2c_reg_conf hi351_snap_settings[2][61] = {
 	//60hz
 	{
@@ -965,7 +980,10 @@ static struct msm_camera_i2c_reg_conf hi351_snap_settings[2][61] = {
 	{0x10, 0x68, MSM_CAMERA_I2C_BYTE_DATA},  // STEVE AE OFF   (50Hz : 0x68, 60hz : 0x60)
 #else
 	{0x10, 0x60, MSM_CAMERA_I2C_BYTE_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
 #endif
 		{0x03, 0xc5, MSM_CAMERA_I2C_BYTE_DATA}, //AWB off
 		{0x10, 0x30, MSM_CAMERA_I2C_BYTE_DATA},
@@ -1032,7 +1050,8 @@ static struct msm_camera_i2c_reg_conf hi351_snap_settings[2][61] = {
 
 	//	{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
 	//	{0xFE, 0x1E, MSM_CAMERA_I2C_BYTE_DATA}, //Delay 30ms	16 ms delay but actual delay in measurement is 20 ms
-<<<<<<< HEAD
+
+
 	},
 	//50hz
 	{
@@ -1045,22 +1064,22 @@ static struct msm_camera_i2c_reg_conf hi351_snap_settings[2][61] = {
 		{0x0c, 0xf1, MSM_CAMERA_I2C_BYTE_DATA}, //Sleep on
 		
 		
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 		{0x03, 0x30, MSM_CAMERA_I2C_BYTE_DATA}, //DMA&Adaptive Off
 		{0x36, 0xa3, MSM_CAMERA_I2C_BYTE_DATA},
 
 		{0x03, 0xc4, MSM_CAMERA_I2C_BYTE_DATA}, //AE off
-<<<<<<< HEAD
+
 #if 0	//Flicker 50Hz
 	{0x10, 0x68, MSM_CAMERA_I2C_BYTE_DATA},  // STEVE AE OFF   (50Hz : 0x68, 60hz : 0x60)
 #else
 		{0x10, 0x60, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE OFF   (50Hz : 0x68, 60hz : 0x60)
-=======
+
 #if 1	//Flicker 50Hz
 	{0x10, 0x68, MSM_CAMERA_I2C_BYTE_DATA},  // STEVE AE OFF   (50Hz : 0x68, 60hz : 0x60)
 #else
 	{0x10, 0x60, MSM_CAMERA_I2C_BYTE_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 #endif
 		{0x03, 0xc5, MSM_CAMERA_I2C_BYTE_DATA}, //AWB off
 		{0x10, 0x30, MSM_CAMERA_I2C_BYTE_DATA},
@@ -1127,7 +1146,7 @@ static struct msm_camera_i2c_reg_conf hi351_snap_settings[2][61] = {
 
 	//	{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
 	//	{0xFE, 0x1E, MSM_CAMERA_I2C_BYTE_DATA}, //Delay 30ms	16 ms delay but actual delay in measurement is 20 ms
-<<<<<<< HEAD
+
 	},
 	//50hz
 	{
@@ -1252,7 +1271,7 @@ static struct msm_camera_i2c_reg_conf hi351_reg_effect_black_white[] = {
 		{0x44, 0x80}, //cb_constant
 		{0x45, 0x80}, //cr_constant
 };	/*for special effect MONO*/
-=======
+
 	}
 };
 
@@ -1291,8 +1310,8 @@ static struct msm_camera_i2c_reg_conf hi351_reg_effect_black_white[] = {
 		{0x44, 0x80}, //cb_constant
 		{0x45, 0x80}, //cr_constant
 };	/*for special effect MONO*/
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	}
 };
 
@@ -1331,7 +1350,7 @@ static struct msm_camera_i2c_reg_conf hi351_reg_effect_black_white[] = {
 		{0x44, 0x80}, //cb_constant
 		{0x45, 0x80}, //cr_constant
 };	/*for special effect MONO*/
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 
 static struct msm_camera_i2c_reg_conf hi351_reg_effect_negative[] = {
 		//Negative
@@ -1349,6 +1368,62 @@ static struct msm_camera_i2c_reg_conf hi351_reg_effect_old_movie[] = {
 		{0x45, 0xA3}, //cr_constant},
 }; /*for sepia*/
 
+	}
+};
+
+//DONE
+static struct msm_camera_i2c_reg_conf hi351_reg_exposure_compensation[13][3] = {
+// need to check
+	{{0x03, 0x10}, {0x13, 0x0a}, {0x4A, 0x38},}, /*EXPOSURECOMPENSATIONN6*/
+	{{0x03, 0x10}, {0x13, 0x0a}, {0x4A, 0x48},}, /*EXPOSURECOMPENSATIONN5*/
+	{{0x03, 0x10}, {0x13, 0x0a}, {0x4A, 0x58},}, /*EXPOSURECOMPENSATIONN4*/
+	{{0x03, 0x10}, {0x13, 0x0a}, {0x4A, 0x68},}, /*EXPOSURECOMPENSATIONN3*/
+	{{0x03, 0x10}, {0x13, 0x0a}, {0x4A, 0x70},}, /*EXPOSURECOMPENSATIONN2*/
+	{{0x03, 0x10}, {0x13, 0x0a}, {0x4A, 0x78},}, /*EXPOSURECOMPENSATIONN1*/
+	{{0x03, 0x10}, {0x13, 0x0a}, {0x4A, 0x80},}, /*EXPOSURECOMPENSATIOND*/
+	{{0x03, 0x10}, {0x13, 0x0a}, {0x4A, 0x88},}, /*EXPOSURECOMPENSATIONp1*/
+	{{0x03, 0x10}, {0x13, 0x0a}, {0x4A, 0x90},}, /*EXPOSURECOMPENSATIONp2*/
+	{{0x03, 0x10}, {0x13, 0x0a}, {0x4A, 0x98},}, /*EXPOSURECOMPENSATIONp3*/
+	{{0x03, 0x10}, {0x13, 0x0a}, {0x4A, 0xa8},}, /*EXPOSURECOMPENSATIONp4*/
+	{{0x03, 0x10}, {0x13, 0x0a}, {0x4A, 0xb8},}, /*EXPOSURECOMPENSATIONp5*/
+	{{0x03, 0x10}, {0x13, 0x0a}, {0x4A, 0xc8},}, /*EXPOSURECOMPENSATIONp6*/
+};
+//DONE
+
+// need to check
+static struct msm_camera_i2c_reg_conf hi351_reg_effect_normal[] = {
+		//Filter OFF
+		{0x03, 0x10},
+		{0x12, 0x10}, //constant OFF
+		{0x44, 0x80}, //cb_constant
+		{0x45, 0x80}, //cr_constant
+};	/*for special effect OFF*/
+
+static struct msm_camera_i2c_reg_conf hi351_reg_effect_black_white[] = {
+		// Mono
+		{0x03, 0x10},
+		{0x12, 0x13}, //constant ON
+		{0x44, 0x80}, //cb_constant
+		{0x45, 0x80}, //cr_constant
+};	/*for special effect MONO*/
+
+static struct msm_camera_i2c_reg_conf hi351_reg_effect_negative[] = {
+		//Negative
+		{0x03, 0x10},
+		{0x12, 0x18}, //constant OFF
+		{0x44, 0x80}, //cb_constant
+		{0x45, 0x80}, //cr_constant
+};	/*for special efefct Negative*/
+
+static struct msm_camera_i2c_reg_conf hi351_reg_effect_old_movie[] = {
+		//Sepia
+		{0x03, 0x10},
+		{0x12, 0x13}, //constant ON
+		{0x44, 0x60}, //cb_constant
+		{0x45, 0xA3}, //cr_constant},
+}; /*for sepia*/
+
+
 static struct msm_camera_i2c_reg_conf hi351_reg_wb_auto[] = {
 	// need to check
 		{0x03, 0xc5},
@@ -1358,15 +1433,19 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_auto[] = {
     	{0xab, 0x14}, //aInRgTgtOfs_a01_n00
     	{0xac, 0x0a}, //aInRgTgtOfs_a02_n00
     	{0xad, 0x00}, //aInRgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
     	{0xae, 0x00}, //aInRgTgtOfs_a04_n00
-=======
+
     	{0xae, 0x81}, //aInRgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
     	{0xae, 0x81}, //aInRgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+    	{0xae, 0x81}, //aInRgTgtOfs_a04_n00
+
     	{0xaf, 0x81}, //aInRgTgtOfs_a05_n00
     	{0xb0, 0x84}, //aInRgTgtOfs_a06_n00
     	{0xb1, 0x85}, //aInRgTgtOfs_a07_n00
@@ -1376,15 +1455,19 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_auto[] = {
     	{0xb3, 0x94}, //aInBgTgtOfs_a01_n00
     	{0xb4, 0x8a}, //aInBgTgtOfs_a02_n00
     	{0xb5, 0x00}, //aInBgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
     	{0xb6, 0x00}, //aInBgTgtOfs_a04_n00
-=======
+
     	{0xb6, 0x81}, //aInBgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
     	{0xb6, 0x81}, //aInBgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+    	{0xb6, 0x81}, //aInBgTgtOfs_a04_n00
+
     	{0xb7, 0x01}, //aInBgTgtOfs_a05_n00
     	{0xb8, 0x04}, //aInBgTgtOfs_a06_n00
     	{0xb9, 0x05}, //aInBgTgtOfs_a07_n00
@@ -1398,15 +1481,19 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_auto[] = {
     	{0xb9, 0x60}, // steve OutRgainMin
     	{0xba, 0x88}, // steve OutRgainMax
     	{0xbb, 0x4c}, // steve OutBgainMin
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
     	{0xbc, 0x6c}, // steve OutBgainMax
-=======
+
     	{0xbc, 0x67}, // steve OutBgainMax
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
     	{0xbc, 0x67}, // steve OutBgainMax
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+    	{0xbc, 0x67}, // steve OutBgainMax
+
 	
 		{0x03, 0xc5},
 		{0x10, 0xb1},//AWB On
@@ -1533,15 +1620,19 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_office[] = {
     	{0xab, 0x14}, //aInRgTgtOfs_a01_n00
     	{0xac, 0x0a}, //aInRgTgtOfs_a02_n00
     	{0xad, 0x00}, //aInRgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
     	{0xae, 0x00}, //aInRgTgtOfs_a04_n00     
-=======
+
     	{0xae, 0x81}, //aInRgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
     	{0xae, 0x81}, //aInRgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+    	{0xae, 0x81}, //aInRgTgtOfs_a04_n00
+
     	{0xaf, 0x81}, //aInRgTgtOfs_a05_n00
     	{0xb0, 0x84}, //aInRgTgtOfs_a06_n00
     	{0xb1, 0x85}, //aInRgTgtOfs_a07_n00
@@ -1551,15 +1642,19 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_office[] = {
     	{0xb3, 0x94}, //aInBgTgtOfs_a01_n00
     	{0xb4, 0x8a}, //aInBgTgtOfs_a02_n00
     	{0xb5, 0x00}, //aInBgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
     	{0xb6, 0x00}, //aInBgTgtOfs_a04_n00     
-=======
+
     	{0xb6, 0x81}, //aInBgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
     	{0xb6, 0x81}, //aInBgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+    	{0xb6, 0x81}, //aInBgTgtOfs_a04_n00
+
     	{0xb7, 0x01}, //aInBgTgtOfs_a05_n00
     	{0xb8, 0x04}, //aInBgTgtOfs_a06_n00
     	{0xb9, 0x05}, //aInBgTgtOfs_a07_n00
@@ -1621,15 +1716,19 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_sunny[] = {
     	{0xab, 0x14}, //aInRgTgtOfs_a01_n00
     	{0xac, 0x0a}, //aInRgTgtOfs_a02_n00
     	{0xad, 0x00}, //aInRgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
     	{0xae, 0x00}, //aInRgTgtOfs_a04_n00
-=======
+
     	{0xae, 0x81}, //aInRgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
     	{0xae, 0x81}, //aInRgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+    	{0xae, 0x81}, //aInRgTgtOfs_a04_n00
+
     	{0xaf, 0x81}, //aInRgTgtOfs_a05_n00
     	{0xb0, 0x84}, //aInRgTgtOfs_a06_n00
     	{0xb1, 0x85}, //aInRgTgtOfs_a07_n00
@@ -1639,15 +1738,19 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_sunny[] = {
     	{0xb3, 0x94}, //aInBgTgtOfs_a01_n00
     	{0xb4, 0x8a}, //aInBgTgtOfs_a02_n00
     	{0xb5, 0x00}, //aInBgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
     	{0xb6, 0x00}, //aInBgTgtOfs_a04_n00
-=======
+
     	{0xb6, 0x81}, //aInBgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
     	{0xb6, 0x81}, //aInBgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+    	{0xb6, 0x81}, //aInBgTgtOfs_a04_n00
+
     	{0xb7, 0x01}, //aInBgTgtOfs_a05_n00
     	{0xb8, 0x04}, //aInBgTgtOfs_a06_n00
     	{0xb9, 0x05}, //aInBgTgtOfs_a07_n00
@@ -1711,15 +1814,19 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_cloudy[] = {
     	{0xab, 0x14}, //aInRgTgtOfs_a01_n00  
     	{0xac, 0x0a}, //aInRgTgtOfs_a02_n00  
     	{0xad, 0x00}, //aInRgTgtOfs_a03_n00  
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
     	{0xae, 0x00}, //aInRgTgtOfs_a04_n00  
-=======
+
     	{0xae, 0x81}, //aInRgTgtOfs_a04_n00  
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
     	{0xae, 0x81}, //aInRgTgtOfs_a04_n00  
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+    	{0xae, 0x81}, //aInRgTgtOfs_a04_n00  
+
     	{0xaf, 0x81}, //aInRgTgtOfs_a05_n00  
     	{0xb0, 0x84}, //aInRgTgtOfs_a06_n00  
     	{0xb1, 0x85}, //aInRgTgtOfs_a07_n00  
@@ -1729,15 +1836,19 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_cloudy[] = {
     	{0xb3, 0x94}, //aInBgTgtOfs_a01_n00  
     	{0xb4, 0x8a}, //aInBgTgtOfs_a02_n00  
     	{0xb5, 0x00}, //aInBgTgtOfs_a03_n00  
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
     	{0xb6, 0x00}, //aInBgTgtOfs_a04_n00  
-=======
+
     	{0xb6, 0x81}, //aInBgTgtOfs_a04_n00  
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
     	{0xb6, 0x81}, //aInBgTgtOfs_a04_n00  
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+    	{0xb6, 0x81}, //aInBgTgtOfs_a04_n00  
+
     	{0xb7, 0x01}, //aInBgTgtOfs_a05_n00  
     	{0xb8, 0x04}, //aInBgTgtOfs_a06_n00  
     	{0xb9, 0x05}, //aInBgTgtOfs_a07_n00  
@@ -1817,8 +1928,9 @@ static struct msm_camera_i2c_reg_conf hi351_reg_iso[][2] = {
 
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 static struct msm_camera_i2c_reg_conf hi351_auto_fps_settings_in_case_of_init[2][145] = {
 //60hz
 	{
@@ -1832,9 +1944,11 @@ static struct msm_camera_i2c_reg_conf hi351_auto_fps_settings_in_case_of_init[2]
 
 //		{0x03, 0x30, MSM_CAMERA_I2C_BYTE_DATA}, //DMA&Adaptive Off
 //		{0x36, 0xa3, MSM_CAMERA_I2C_BYTE_DATA},
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 static struct msm_camera_i2c_reg_conf hi351_auto_fps_settings[2][160] = {
 //60hz
 	{
@@ -1848,10 +1962,13 @@ static struct msm_camera_i2c_reg_conf hi351_auto_fps_settings[2][160] = {
 
 		{0x03, 0x30, MSM_CAMERA_I2C_BYTE_DATA}, //DMA&Adaptive Off
 		{0x36, 0xa3, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 		{0x03, 0xc4, MSM_CAMERA_I2C_BYTE_DATA}, //AE off
 #if 0	//Flicker 50Hz
@@ -1873,7 +1990,10 @@ static struct msm_camera_i2c_reg_conf hi351_auto_fps_settings[2][160] = {
 		{0x72, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x73, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x74, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
+
+
+
+
 		{0x75, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x76, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x77, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
@@ -1913,7 +2033,10 @@ static struct msm_camera_i2c_reg_conf hi351_auto_fps_settings[2][160] = {
 		{0x99, 0x12, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x9A, 0x21, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x9B, 0x44, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
+
+
+
+
 		{0x9C, 0x44, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x9D, 0x44, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x9E, 0x44, MSM_CAMERA_I2C_BYTE_DATA},
@@ -1980,7 +2103,11 @@ static struct msm_camera_i2c_reg_conf hi351_auto_fps_settings[2][160] = {
 
 		{0x03, 0x48},
 		{0x10, 0x1C}, //MIPI On
+
 //		{0x16, 0x04}, // STEVE  EOT - SOT - payload
+
+		{0x16, 0x04}, // STEVE  EOT - SOT - payload
+
 		{0x30, 0x00}, //640 * 2
 		{0x31, 0x08}, // STEVE for 1024x768 5-)8
 		
@@ -2043,6 +2170,7 @@ static struct msm_camera_i2c_reg_conf hi351_auto_fps_settings[2][160] = {
 		{0x03, 0xc5, MSM_CAMERA_I2C_BYTE_DATA}, //AWB en
 		{0x10, 0xb1, MSM_CAMERA_I2C_BYTE_DATA},
 
+
 //		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x01, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
 //		{0x0c, 0xf0}, // Sleep off with Frame Sync
@@ -2054,11 +2182,24 @@ static struct msm_camera_i2c_reg_conf hi351_auto_fps_settings[2][160] = {
 //		{0x33, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x32, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, //DMA On
 
+		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
+		{0x01, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
+	    {0x0c, 0xf0}, // Sleep off with Frame Sync
+
+		{0x03, 0xcf, MSM_CAMERA_I2C_BYTE_DATA}, //Adaptive On
+		{0x10, 0xaf, MSM_CAMERA_I2C_BYTE_DATA},  // STEVE all on
+
+		{0x03, 0xc0, MSM_CAMERA_I2C_BYTE_DATA},
+		{0x33, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
+		{0x32, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, //DMA On
+
+
 		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xFE, 0x1E, MSM_CAMERA_I2C_BYTE_DATA}, //Delay 30ms
 	},
 //50hz
 	{
+
 //		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0xFE, 0x1E, MSM_CAMERA_I2C_BYTE_DATA}, //Delay 30ms
 
@@ -2069,6 +2210,18 @@ static struct msm_camera_i2c_reg_conf hi351_auto_fps_settings[2][160] = {
 
 //		{0x03, 0x30, MSM_CAMERA_I2C_BYTE_DATA}, //DMA&Adaptive Off
 //		{0x36, 0xa3, MSM_CAMERA_I2C_BYTE_DATA},
+
+		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
+		{0xFE, 0x1E, MSM_CAMERA_I2C_BYTE_DATA}, //Delay 30ms
+
+		//30~8fps
+		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
+	//	{0x01, 0xf1}, //Sleep on
+		{0x0c, 0xf1, MSM_CAMERA_I2C_BYTE_DATA}, //Sleep on
+
+		{0x03, 0x30, MSM_CAMERA_I2C_BYTE_DATA}, //DMA&Adaptive Off
+		{0x36, 0xa3, MSM_CAMERA_I2C_BYTE_DATA},
+
 
 		{0x03, 0xc4, MSM_CAMERA_I2C_BYTE_DATA}, //AE off
 #if 1	//Flicker 50Hz
@@ -2195,6 +2348,7 @@ static struct msm_camera_i2c_reg_conf hi351_auto_fps_settings[2][160] = {
 
 		{0x03, 0x48},
 		{0x10, 0x1C}, //MIPI On
+
 //		{0x16, 0x04}, // STEVE  EOT - SOT - payload
 		{0x30, 0x00}, //640 * 2
 		{0x31, 0x08}, // STEVE for 1024x768 5-)8
@@ -3001,12 +3155,12 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings_in_case_of_init[2
 		{0x9D, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x9E, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x9F, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
-=======
+
 		{0x9C, 0x44, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x9D, 0x44, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x9E, 0x44, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x9F, 0x12, MSM_CAMERA_I2C_BYTE_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 		{0xA0, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xA1, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xA2, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3014,7 +3168,7 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings_in_case_of_init[2
 		{0xA4, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xA5, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 
-<<<<<<< HEAD
+
 		{0x03, 0xe4, MSM_CAMERA_I2C_BYTE_DATA}, //	For Camcording Spatial LPF design parameters
 		{0xae, 0x03, MSM_CAMERA_I2C_BYTE_DATA}, // dark2
 		{0xaf, 0x14, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3057,7 +3211,7 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings_in_case_of_init[2
 		{0x27, 0x08, MSM_CAMERA_I2C_BYTE_DATA}, 
 #endif
 
-=======
+
 		{0x03, 0xe4, MSM_CAMERA_I2C_BYTE_DATA}, //  For Camcording Spatial LPF design parameters 
 		{0xae, 0x03, MSM_CAMERA_I2C_BYTE_DATA}, //14 page
 		{0xaf, 0x14, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3098,7 +3252,7 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings_in_case_of_init[2
 		{0x26, 0xa3, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x27, 0x18, MSM_CAMERA_I2C_BYTE_DATA},
 #endif
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 		{0x28, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //EXPMin 25210.08 fps
 		{0x29, 0x0b, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x2a, 0x28, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3114,17 +3268,17 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings_in_case_of_init[2
 
 		{0x03, 0x48},
 		{0x10, 0x1C}, //MIPI On
-<<<<<<< HEAD
+
 //		{0x16, 0x04}, // STEVE	EOT - SOT - payload
 		{0x30, 0x00}, //640 * 2
 		{0x31, 0x08}, // STEVE for 1024x768 5-)8
 
-=======
+
 		{0x16, 0x04}, // STEVE  EOT - SOT - payload
 		{0x30, 0x00}, //640 * 2
 		{0x31, 0x08}, // STEVE for 1024x768 5-)8
 		
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 		{0x03, 0x30, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x36, 0x28, MSM_CAMERA_I2C_BYTE_DATA}, //preview function
 
@@ -3132,11 +3286,11 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings_in_case_of_init[2
 		{0xFE, 0x0A}, //Delay 10ms
 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
+
 		{0x10, 0x13, MSM_CAMERA_I2C_BYTE_DATA}, // scale
-=======
+
 		{0x10, 0x13, MSM_CAMERA_I2C_BYTE_DATA},  // scale
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 		{0x11, 0x83, MSM_CAMERA_I2C_BYTE_DATA}, //
 
 		{0x03, 0x18, MSM_CAMERA_I2C_BYTE_DATA}, //Page 18
@@ -3144,7 +3298,7 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings_in_case_of_init[2
 		{0xC5, 0x69, MSM_CAMERA_I2C_BYTE_DATA}, //FLK240
 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //PAGE 0
-<<<<<<< HEAD
+
 #if 1	//Flicker 50Hz
 		{0x90, 0x04, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_ON  // STEVE for 50hz
 		{0x91, 0x04, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_OFF // STEVE for 50hz
@@ -3165,7 +3319,7 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings_in_case_of_init[2
 	{0x03, 0x02, MSM_CAMERA_I2C_BYTE_DATA}, //PAGE 2
 	{0xd4, 0x05, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_ON
 	{0xd5, 0x05, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_OFF
-=======
+
 #if 0	//Flicker 50Hz
 	{0x90, 0x0c, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_ON  // STEVE for 50Hz
 	{0x91, 0x0c, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_OFF // STEVE for 50Hz
@@ -3185,13 +3339,13 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings_in_case_of_init[2
 		{0x03, 0x02, MSM_CAMERA_I2C_BYTE_DATA}, //PAGE 2
 		{0xd4, 0x0f, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_ON
 		{0xd5, 0x0f, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_OFF
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 #endif
 		{0xd6, 0xe8, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_AG_TH_ON
 		{0xd7, 0xe0, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_AG_TH_OFF
 
 		{0x03, 0xcf, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE : EV max -> 94 b6 b4 [fixed frame : not enough int. time]
-<<<<<<< HEAD
+
 		{0x13, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //Y_LUM_MAX 10fps, AG 0xA0
 		{0x14, 0xB0, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x15, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3205,7 +3359,7 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings_in_case_of_init[2
 	{0x10, 0xe9, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE ON    (50hz : 0xe9, 60hz : 0xe1)
 #else
 	{0x10, 0xe1, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE en
-=======
+
 		{0x13, 0x02, MSM_CAMERA_I2C_BYTE_DATA}, //Y_LUM_MAX 8fps, AG 0xF0
 		{0x14, 0x60, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x15, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3219,12 +3373,12 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings_in_case_of_init[2
 		{0x10, 0xe9, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE ON    (50hz : 0xe9, 60hz : 0xe1)
 #else
 		{0x10, 0xe1, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE ON    (50hz : 0xe9, 60hz : 0xe1)
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 #endif
 
 		{0x03, 0xFE},
 		{0xFE, 0x0A}, //Delay 10ms
-<<<<<<< HEAD
+
 
 		{0x03, 0xc5, MSM_CAMERA_I2C_BYTE_DATA}, //AWB en
 		{0x10, 0xb1, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3239,7 +3393,7 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings_in_case_of_init[2
 //		{0x03, 0xc0, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x33, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x32, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, //DMA On
-=======
+
 		{0x03, 0xc5, MSM_CAMERA_I2C_BYTE_DATA}, //AWB en
 		{0x10, 0xb1, MSM_CAMERA_I2C_BYTE_DATA},
 
@@ -3253,12 +3407,12 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings_in_case_of_init[2
 		{0x03, 0xc0, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x33, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x32, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, //DMA On
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 
 		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xFE, 0x1E, MSM_CAMERA_I2C_BYTE_DATA}, //Delay 30ms
 	},
-<<<<<<< HEAD
+
 };
 
 
@@ -3270,7 +3424,7 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 	// CAMCODER MODE : 30 ~ 22FPS
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		//{0x01, 0xf1}, //Sleep on
-=======
+
 //50hz
 	{
 		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3279,41 +3433,41 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		//30~8fps
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 	//	{0x01, 0xf1}, //Sleep on
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 		{0x0c, 0xf1, MSM_CAMERA_I2C_BYTE_DATA}, //Sleep on
 
 		{0x03, 0x30, MSM_CAMERA_I2C_BYTE_DATA}, //DMA&Adaptive Off
 		{0x36, 0xa3, MSM_CAMERA_I2C_BYTE_DATA},
 
 		{0x03, 0xc4, MSM_CAMERA_I2C_BYTE_DATA}, //AE off
-<<<<<<< HEAD
+
 #if 0	//Flicker 50Hz
 		{0x10, 0x68, MSM_CAMERA_I2C_BYTE_DATA},  // STEVE AE OFF	 (50Hz : 0x68, 60hz : 0x60)
 #else
 		{0x10, 0x60, MSM_CAMERA_I2C_BYTE_DATA},  // STEVE AE OFF	 (50Hz : 0x68, 60hz : 0x60)
-=======
+
 #if 1	//Flicker 50Hz
 	{0x10, 0x68, MSM_CAMERA_I2C_BYTE_DATA},  // STEVE AE OFF   (50Hz : 0x68, 60hz : 0x60)
 #else
 	{0x10, 0x60, MSM_CAMERA_I2C_BYTE_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 #endif
 		{0x03, 0xc5, MSM_CAMERA_I2C_BYTE_DATA}, //AWB off
 		{0x10, 0x30, MSM_CAMERA_I2C_BYTE_DATA},
 
-<<<<<<< HEAD
+
 		//Metering - Matrix
 		{0x03, 0xc3, MSM_CAMERA_I2C_BYTE_DATA},
 	    {0x10, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
     	{0x38, 0xFF, MSM_CAMERA_I2C_BYTE_DATA},
 	    {0x39, 0xFF, MSM_CAMERA_I2C_BYTE_DATA},
-=======
+
 		//Metering - Center
 		{0x03, 0xc3, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x10, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x38, 0xFF, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x39, 0xFF, MSM_CAMERA_I2C_BYTE_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 
 		{0x70, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x71, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3334,7 +3488,7 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x80, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x81, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x82, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
+
 		{0x83, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x84, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x85, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3364,8 +3518,8 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x9D, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x9E, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x9F, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
-=======
-=======
+
+
 		{0x75, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x76, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x77, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3380,7 +3534,7 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x80, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x81, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x82, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 		{0x83, 0x21, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x84, 0x44, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x85, 0x44, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3410,10 +3564,10 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x9D, 0x44, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x9E, 0x44, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x9F, 0x12, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
 		{0xA0, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xA1, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xA2, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3421,9 +3575,9 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0xA4, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xA5, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 
-<<<<<<< HEAD
+
 		{0x03, 0xe4, MSM_CAMERA_I2C_BYTE_DATA}, //  For Camcording Spatial LPF design parameters
-<<<<<<< HEAD
+
 		{0xae, 0x03, MSM_CAMERA_I2C_BYTE_DATA}, // dark2
 		{0xaf, 0x14, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xb0, 0x10, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3462,10 +3616,10 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x25, 0x16, MSM_CAMERA_I2C_BYTE_DATA}, 
 		{0x26, 0xe1, MSM_CAMERA_I2C_BYTE_DATA}, 
 		{0x27, 0x08, MSM_CAMERA_I2C_BYTE_DATA}, 
-=======
-=======
+
+
 		{0x03, 0xe4, MSM_CAMERA_I2C_BYTE_DATA}, //  For Camcording Spatial LPF design parameters 
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 		{0xae, 0x03, MSM_CAMERA_I2C_BYTE_DATA}, //14 page
 		{0xaf, 0x14, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xb0, 0x10, MSM_CAMERA_I2C_BYTE_DATA}, //Dark2 0x1410
@@ -3492,32 +3646,32 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0xc5, 0x33, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xc6, 0x20, MSM_CAMERA_I2C_BYTE_DATA}, //Dark2 0x1420
 		{0xc7, 0x80, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
+
 
 		{0x03, 0x20, MSM_CAMERA_I2C_BYTE_DATA}, //Page 20
 #if 1	//Flicker 50Hz
-=======
+
 	  	
 		{0x03, 0x20, MSM_CAMERA_I2C_BYTE_DATA}, //Page 20
 #if 0	//Flicker 50Hz
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 	{0x24, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //EXP Max 8.33 fps (STEVE FOR 50Hz)
 	{0x25, 0x41, MSM_CAMERA_I2C_BYTE_DATA},
 	{0x26, 0xe4, MSM_CAMERA_I2C_BYTE_DATA},
 	{0x27, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 #else
-<<<<<<< HEAD
+
 	{0x24, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //EXP Max 8.00 fps
 	{0x25, 0x44, MSM_CAMERA_I2C_BYTE_DATA},
 	{0x26, 0xa3, MSM_CAMERA_I2C_BYTE_DATA},
 	{0x27, 0x18, MSM_CAMERA_I2C_BYTE_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x24, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //EXP Max 8.00 fps
 		{0x25, 0x44, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x26, 0xa3, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x27, 0x18, MSM_CAMERA_I2C_BYTE_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 #endif
 		{0x28, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //EXPMin 25210.08 fps
 		{0x29, 0x0b, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3537,11 +3691,11 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x16, 0x04}, // STEVE  EOT - SOT - payload
 		{0x30, 0x00}, //640 * 2
 		{0x31, 0x08}, // STEVE for 1024x768 5-)8
-<<<<<<< HEAD
 
-=======
+
+
 		
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 		{0x03, 0x30, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x36, 0x28, MSM_CAMERA_I2C_BYTE_DATA}, //preview function
 
@@ -3549,15 +3703,15 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0xFE, 0x0A}, //Delay 10ms
 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 		{0x10, 0x13, MSM_CAMERA_I2C_BYTE_DATA}, // scale
-=======
+
 		{0x10, 0x13, MSM_CAMERA_I2C_BYTE_DATA},  // scale
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x10, 0x13, MSM_CAMERA_I2C_BYTE_DATA},  // scale
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 		{0x11, 0x83, MSM_CAMERA_I2C_BYTE_DATA}, //
 
 		{0x03, 0x18, MSM_CAMERA_I2C_BYTE_DATA}, //Page 18
@@ -3565,8 +3719,8 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0xC5, 0x69, MSM_CAMERA_I2C_BYTE_DATA}, //FLK240
 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //PAGE 0
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 #if 0	//Flicker 50Hz
 	{0x90, 0x04, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_ON  // STEVE for 50hz
 	{0x91, 0x04, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_OFF // STEVE for 50hz
@@ -3587,11 +3741,11 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x03, 0x02, MSM_CAMERA_I2C_BYTE_DATA}, //PAGE 2
 		{0xd4, 0x05, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_ON
 		{0xd5, 0x05, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_OFF
-=======
+
 #if 1	//Flicker 50Hz
-=======
+
 #if 0	//Flicker 50Hz
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 	{0x90, 0x0c, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_ON  // STEVE for 50Hz
 	{0x91, 0x0c, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_OFF // STEVE for 50Hz
 	{0x92, 0xe8, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_AG_TH_ON    //// STEVE fixed AGC 0xD0
@@ -3602,7 +3756,7 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 	{0xd4, 0x0c, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_ON  // STEVE for 50Hz
 	{0xd5, 0x0c, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_OFF // STEVE for 50Hz
 #else
-<<<<<<< HEAD
+
 	{0x90, 0x0f, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_ON  // STEVE fixed
 	{0x91, 0x0f, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_OFF // STEVE fixed
 	{0x92, 0xe8, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_AG_TH_ON    //// STEVE fixed AGC 0xD0
@@ -3612,8 +3766,8 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 	{0x03, 0x02, MSM_CAMERA_I2C_BYTE_DATA}, //PAGE 2
 	{0xd4, 0x0f, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_ON
 	{0xd5, 0x0f, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_OFF
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x90, 0x0f, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_ON  // STEVE fixed
 		{0x91, 0x0f, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_OFF // STEVE fixed
 		{0x92, 0xe8, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_AG_TH_ON    //// STEVE fixed AGC 0xD0
@@ -3622,14 +3776,14 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x03, 0x02, MSM_CAMERA_I2C_BYTE_DATA}, //PAGE 2
 		{0xd4, 0x0f, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_ON
 		{0xd5, 0x0f, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_OFF
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 #endif
 		{0xd6, 0xe8, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_AG_TH_ON
 		{0xd7, 0xe0, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_AG_TH_OFF
 
 		{0x03, 0xcf, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE : EV max -> 94 b6 b4 [fixed frame : not enough int. time]
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 		{0x13, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //Y_LUM_MAX 10fps, AG 0xA0
 		{0x14, 0xB0, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x15, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3643,9 +3797,9 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 	{0x10, 0xe9, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE ON    (50hz : 0xe9, 60hz : 0xe1)
 #else
 		{0x10, 0xe1, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE ON    (50hz : 0xe9, 60hz : 0xe1)
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
 		{0x13, 0x02, MSM_CAMERA_I2C_BYTE_DATA}, //Y_LUM_MAX 8fps, AG 0xF0
 		{0x14, 0x60, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x15, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3655,51 +3809,51 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x10, 0x84, MSM_CAMERA_I2C_BYTE_DATA},
 
 		{0x03, 0xc4, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
+
 #if 1 //Flicker 50Hz
 	{0x10, 0xe9, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE ON    (50hz : 0xe9, 60hz : 0xe1)
 #else
 	{0x10, 0xe1, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE ON    (50hz : 0xe9, 60hz : 0xe1)
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #if 0	//Flicker 50Hz
 		{0x10, 0xe9, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE ON    (50hz : 0xe9, 60hz : 0xe1)
 #else
 		{0x10, 0xe1, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE ON    (50hz : 0xe9, 60hz : 0xe1)
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 #endif
 
 		{0x03, 0xFE},
 		{0xFE, 0x0A}, //Delay 10ms
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 		{0x03, 0xc5, MSM_CAMERA_I2C_BYTE_DATA}, //AWB en
 		{0x10, 0xb1, MSM_CAMERA_I2C_BYTE_DATA},
 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x01, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 		{0x0c, 0xf0}, // Sleep off with Frame Sync
 
 		{0x03, 0xcf, MSM_CAMERA_I2C_BYTE_DATA}, //Adaptive On
 		{0x10, 0xaf, MSM_CAMERA_I2C_BYTE_DATA},
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
 	    {0x0c, 0xf0}, // Sleep off with Frame Sync
 
 		{0x03, 0xcf, MSM_CAMERA_I2C_BYTE_DATA}, //Adaptive On
 		{0x10, 0xaf, MSM_CAMERA_I2C_BYTE_DATA},  // STEVE all on
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
 
 		{0x03, 0xc0, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x33, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3707,15 +3861,15 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 
 		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xFE, 0x1E, MSM_CAMERA_I2C_BYTE_DATA}, //Delay 30ms
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 },
 //50hz,
 {
 		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xFE, 0x1E, MSM_CAMERA_I2C_BYTE_DATA}, //Delay 30ms
 		// CAMCODER MODE : 30 ~ 22FPS
-=======
+
 	},
 };
 
@@ -3725,10 +3879,10 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xFE, 0x1E, MSM_CAMERA_I2C_BYTE_DATA}, //Delay 30ms
 	// CAMCODER MODE : 30 ~ 22FPS
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		//{0x01, 0xf1}, //Sleep on
-=======
+
 	},
 //50hz
 	{
@@ -3738,54 +3892,54 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		//30~8fps
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 	//	{0x01, 0xf1}, //Sleep on
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 		{0x0c, 0xf1, MSM_CAMERA_I2C_BYTE_DATA}, //Sleep on
 
 		{0x03, 0x30, MSM_CAMERA_I2C_BYTE_DATA}, //DMA&Adaptive Off
 		{0x36, 0xa3, MSM_CAMERA_I2C_BYTE_DATA},
 
 		{0x03, 0xc4, MSM_CAMERA_I2C_BYTE_DATA}, //AE off
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 #if 1	//Flicker 50Hz
 		{0x10, 0x68, MSM_CAMERA_I2C_BYTE_DATA},  // STEVE AE OFF	 (50Hz : 0x68, 60hz : 0x60)
 #else
 		{0x10, 0x60, MSM_CAMERA_I2C_BYTE_DATA},
-=======
+
 #if 0	//Flicker 50Hz
 		{0x10, 0x68, MSM_CAMERA_I2C_BYTE_DATA},  // STEVE AE OFF	 (50Hz : 0x68, 60hz : 0x60)
 #else
 		{0x10, 0x60, MSM_CAMERA_I2C_BYTE_DATA},  // STEVE AE OFF	 (50Hz : 0x68, 60hz : 0x60)
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #if 1	//Flicker 50Hz
 	{0x10, 0x68, MSM_CAMERA_I2C_BYTE_DATA},  // STEVE AE OFF   (50Hz : 0x68, 60hz : 0x60)
 #else
 	{0x10, 0x60, MSM_CAMERA_I2C_BYTE_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 #endif
 		{0x03, 0xc5, MSM_CAMERA_I2C_BYTE_DATA}, //AWB off
 		{0x10, 0x30, MSM_CAMERA_I2C_BYTE_DATA},
 
-<<<<<<< HEAD
+
 		//Metering - Matrix
 		{0x03, 0xc3, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
+
 		{0x10, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x38, 0xFF, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x39, 0xFF, MSM_CAMERA_I2C_BYTE_DATA},
-=======
+
 	    {0x10, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
     	{0x38, 0xFF, MSM_CAMERA_I2C_BYTE_DATA},
 	    {0x39, 0xFF, MSM_CAMERA_I2C_BYTE_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		//Metering - Center
 		{0x03, 0xc3, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x10, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x38, 0xFF, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x39, 0xFF, MSM_CAMERA_I2C_BYTE_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 
 		{0x70, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x71, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3806,7 +3960,7 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x80, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x81, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x82, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
+
 		{0x83, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x84, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x85, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3836,7 +3990,7 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x9D, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x9E, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x9F, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
-=======
+
 		{0x83, 0x21, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x84, 0x44, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x85, 0x44, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3866,7 +4020,7 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x9D, 0x44, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x9E, 0x44, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x9F, 0x12, MSM_CAMERA_I2C_BYTE_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 		{0xA0, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xA1, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xA2, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3874,12 +4028,12 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0xA4, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xA5, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 		{0x03, 0xe4, MSM_CAMERA_I2C_BYTE_DATA}, //	For Camcording Spatial LPF design parameters
-=======
+
 		{0x03, 0xe4, MSM_CAMERA_I2C_BYTE_DATA}, //  For Camcording Spatial LPF design parameters
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 		{0xae, 0x03, MSM_CAMERA_I2C_BYTE_DATA}, // dark2
 		{0xaf, 0x14, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xb0, 0x10, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3908,7 +4062,7 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0xc7, 0x80, MSM_CAMERA_I2C_BYTE_DATA},
 
 		{0x03, 0x20, MSM_CAMERA_I2C_BYTE_DATA}, //Page 20
-<<<<<<< HEAD
+
 
 #if 1	//Flicker 50Hz
 	    {0x24, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //EXP Max 25.00 fps (50Hz)
@@ -3922,7 +4076,7 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x27, 0x08, MSM_CAMERA_I2C_BYTE_DATA}, 
 #endif
 
-=======
+
 		{0x03, 0xe4, MSM_CAMERA_I2C_BYTE_DATA}, //  For Camcording Spatial LPF design parameters
 		{0xae, 0x03, MSM_CAMERA_I2C_BYTE_DATA}, //14 page
 		{0xaf, 0x14, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3963,7 +4117,7 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 	{0x26, 0xa3, MSM_CAMERA_I2C_BYTE_DATA},
 	{0x27, 0x18, MSM_CAMERA_I2C_BYTE_DATA},
 #endif
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 		{0x28, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //EXPMin 25210.08 fps
 		{0x29, 0x0b, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x2a, 0x28, MSM_CAMERA_I2C_BYTE_DATA},
@@ -3979,11 +4133,14 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 
 		{0x03, 0x48},
 		{0x10, 0x1C}, //MIPI On
-<<<<<<< HEAD
+
 		{0x16, 0x04}, // STEVE	EOT - SOT - payload
-=======
+
 		{0x16, 0x04}, // STEVE  EOT - SOT - payload
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x16, 0x04}, // STEVE  EOT - SOT - payload
+
 		{0x30, 0x00}, //640 * 2
 		{0x31, 0x08}, // STEVE for 1024x768 5-)8
 
@@ -3994,11 +4151,15 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0xFE, 0x0A}, //Delay 10ms
 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
+
+
 		{0x10, 0x13, MSM_CAMERA_I2C_BYTE_DATA}, // scale
-=======
+
 		{0x10, 0x13, MSM_CAMERA_I2C_BYTE_DATA},  // scale
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x10, 0x13, MSM_CAMERA_I2C_BYTE_DATA},  // scale
+
 		{0x11, 0x83, MSM_CAMERA_I2C_BYTE_DATA}, //
 
 		{0x03, 0x18, MSM_CAMERA_I2C_BYTE_DATA}, //Page 18
@@ -4007,7 +4168,8 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //PAGE 0
 #if 1	//Flicker 50Hz
-<<<<<<< HEAD
+
+
 		{0x90, 0x04, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_ON  // STEVE for 50hz
 		{0x91, 0x04, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_OFF // STEVE for 50hz
 		{0x92, 0xe8, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_AG_TH_ON	//STEVE AGC OxD0
@@ -4027,7 +4189,9 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 	{0x03, 0x02, MSM_CAMERA_I2C_BYTE_DATA}, //PAGE 2
 	{0xd4, 0x05, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_ON
 	{0xd5, 0x05, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_OFF
-=======
+
+
+
 	{0x90, 0x0c, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_ON  // STEVE for 50Hz
 	{0x91, 0x0c, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_OFF // STEVE for 50Hz
 	{0x92, 0xe8, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_AG_TH_ON    //// STEVE fixed AGC 0xD0
@@ -4047,13 +4211,17 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 	{0x03, 0x02, MSM_CAMERA_I2C_BYTE_DATA}, //PAGE 2
 	{0xd4, 0x0f, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_ON
 	{0xd5, 0x0f, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_OFF
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
 #endif
 		{0xd6, 0xe8, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_AG_TH_ON
 		{0xd7, 0xe0, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_AG_TH_OFF
 
 		{0x03, 0xcf, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE : EV max -> 94 b6 b4 [fixed frame : not enough int. time]
-<<<<<<< HEAD
+
+
 		{0x13, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //Y_LUM_MAX 10fps, AG 0xA0
 		{0x14, 0xB0, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x15, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -4067,7 +4235,9 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 	{0x10, 0xe9, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE ON    (50hz : 0xe9, 60hz : 0xe1)
 #else
 	{0x10, 0xe1, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE en
-=======
+
+
+
 		{0x13, 0x02, MSM_CAMERA_I2C_BYTE_DATA}, //Y_LUM_MAX 8fps, AG 0xF0
 		{0x14, 0x60, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x15, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -4081,31 +4251,43 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 	{0x10, 0xe9, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE ON    (50hz : 0xe9, 60hz : 0xe1)
 #else
 	{0x10, 0xe1, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE ON    (50hz : 0xe9, 60hz : 0xe1)
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
 #endif
 
 		{0x03, 0xFE},
 		{0xFE, 0x0A}, //Delay 10ms
-<<<<<<< HEAD
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 		{0x03, 0xc5, MSM_CAMERA_I2C_BYTE_DATA}, //AWB en
 		{0x10, 0xb1, MSM_CAMERA_I2C_BYTE_DATA},
 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x01, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
-<<<<<<< HEAD
+
+
 		{0x0c, 0xf0}, // Sleep off with Frame Sync
 
 		{0x03, 0xcf, MSM_CAMERA_I2C_BYTE_DATA}, //Adaptive On
 		{0x10, 0xaf, MSM_CAMERA_I2C_BYTE_DATA},
-=======
+
+
+
 	    {0x0c, 0xf0}, // Sleep off with Frame Sync
 
 		{0x03, 0xcf, MSM_CAMERA_I2C_BYTE_DATA}, //Adaptive On
 		{0x10, 0xaf, MSM_CAMERA_I2C_BYTE_DATA},  // STEVE all on
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
 
 		{0x03, 0xc0, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x33, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -4116,7 +4298,8 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 	},
 };
 
-<<<<<<< HEAD
+
+
 static struct msm_camera_i2c_reg_conf hi351_attached_fps_settings_in_case_of_init[2][91] = {
 //60hz
 	{
@@ -4126,7 +4309,9 @@ static struct msm_camera_i2c_reg_conf hi351_attached_fps_settings_in_case_of_ini
 
 //		{0x03, 0x30, MSM_CAMERA_I2C_BYTE_DATA}, //DMA&Adaptive Off
 //		{0x36, 0xa3, MSM_CAMERA_I2C_BYTE_DATA},
-=======
+
+
+
 static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 //60hz
 	{
@@ -4139,7 +4324,10 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 
 		{0x03, 0x30, MSM_CAMERA_I2C_BYTE_DATA}, //DMA&Adaptive Off
 		{0x36, 0xa3, MSM_CAMERA_I2C_BYTE_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
 
 		{0x03, 0xc4, MSM_CAMERA_I2C_BYTE_DATA}, //AE off
 #if 0	//Flicker 50Hz
@@ -4150,9 +4338,12 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x03, 0xc5, MSM_CAMERA_I2C_BYTE_DATA}, //AWB off
 		{0x10, 0x30, MSM_CAMERA_I2C_BYTE_DATA},
 
-<<<<<<< HEAD
+
+
 		{0x03, 0xe3, MSM_CAMERA_I2C_BYTE_DATA}, //  For Camcording Spatial LPF design parameters
-=======
+
+
+
 		//Metering - Matrix
 		{0x03, 0xc3, MSM_CAMERA_I2C_BYTE_DATA},
 	    {0x10, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -4215,7 +4406,10 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0xA5, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 
 		{0x03, 0xe4, MSM_CAMERA_I2C_BYTE_DATA}, //  For Camcording Spatial LPF design parameters
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
 		{0xae, 0x03, MSM_CAMERA_I2C_BYTE_DATA}, // dark2
 		{0xaf, 0x14, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xb0, 0x10, MSM_CAMERA_I2C_BYTE_DATA},
@@ -4245,7 +4439,8 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 
 		{0x03, 0x20, MSM_CAMERA_I2C_BYTE_DATA}, //Page 20
 #if 0	//Flicker 50Hz
-<<<<<<< HEAD
+
+
 		{0x20, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //EXP Normal 33.33 fps (STEVE for 50Hz)
 		{0x21, 0x10, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x22, 0x79, MSM_CAMERA_I2C_BYTE_DATA},
@@ -4263,10 +4458,12 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x25, 0x12, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x26, 0x4d, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x27, 0xa0, MSM_CAMERA_I2C_BYTE_DATA},
-=======
+
 #if 0	//Flicker 50Hz
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
 	    {0x24, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //EXP Max 25.00 fps (50Hz)
 	    {0x25, 0x15, MSM_CAMERA_I2C_BYTE_DATA},
 	    {0x26, 0xf6, MSM_CAMERA_I2C_BYTE_DATA},
@@ -4276,10 +4473,13 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x25, 0x16, MSM_CAMERA_I2C_BYTE_DATA}, 
 		{0x26, 0xe1, MSM_CAMERA_I2C_BYTE_DATA}, 
 		{0x27, 0x08, MSM_CAMERA_I2C_BYTE_DATA}, 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 #endif
 		{0x28, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //EXPMin 25210.08 fps
 		{0x29, 0x0b, MSM_CAMERA_I2C_BYTE_DATA},
@@ -4290,40 +4490,49 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x33, 0x04, MSM_CAMERA_I2C_BYTE_DATA}, //EXP120
 		{0x34, 0x93, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x35, 0x68, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x3c, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //EXP Fix 15.01 fps
 		{0x3d, 0x23, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x3e, 0x6e, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x3f, 0x08, MSM_CAMERA_I2C_BYTE_DATA},
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 		{0x36, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //EXP Unit
 		{0x37, 0x05, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x38, 0x94, MSM_CAMERA_I2C_BYTE_DATA},
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x03, 0x48, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x10, 0x1C, MSM_CAMERA_I2C_BYTE_DATA}, //MIPI On
 //		{0x16, 0x04, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE  EOT - SOT - payload
 		{0x30, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //640 * 2
 		{0x31, 0x08, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE for 1024x768 5-)8
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 		{0x03, 0x48},
 		{0x10, 0x1C}, //MIPI On
 		{0x16, 0x04}, // STEVE  EOT - SOT - payload
 		{0x30, 0x00}, //640 * 2
 		{0x31, 0x08}, // STEVE for 1024x768 5-)8
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 		{0x03, 0x30, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x36, 0x28, MSM_CAMERA_I2C_BYTE_DATA}, //preview function
 
@@ -4332,15 +4541,19 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x10, 0x13, MSM_CAMERA_I2C_BYTE_DATA}, // scale
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x11, 0x87, MSM_CAMERA_I2C_BYTE_DATA}, //bit2 on
-=======
+
 		{0x11, 0x83, MSM_CAMERA_I2C_BYTE_DATA}, //
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x11, 0x83, MSM_CAMERA_I2C_BYTE_DATA}, //
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x11, 0x83, MSM_CAMERA_I2C_BYTE_DATA}, //
+
 
 		{0x03, 0x18, MSM_CAMERA_I2C_BYTE_DATA}, //Page 18
 		{0xC4, 0x7e, MSM_CAMERA_I2C_BYTE_DATA}, //FLK200
@@ -4348,8 +4561,9 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //PAGE 0
 #if 0	//Flicker 50Hz
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	{0x90, 0x03, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_ON  //STEVE for 50hz
 	{0x91, 0x03, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_OFF //STEVE for 50hz
 	{0x92, 0xe8, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_AG_TH_ON    STEVE fixed AGC 0xD0
@@ -4369,9 +4583,11 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x03, 0x02, MSM_CAMERA_I2C_BYTE_DATA}, //PAGE 2
 		{0xd4, 0x04, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_ON
 		{0xd5, 0x04, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_OFF
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	{0x90, 0x04, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_ON  // STEVE for 50hz
 	{0x91, 0x04, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_OFF // STEVE for 50hz
 	{0x92, 0xe8, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_AG_TH_ON  //STEVE AGC OxD0
@@ -4391,25 +4607,31 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x03, 0x02, MSM_CAMERA_I2C_BYTE_DATA}, //PAGE 2
 		{0xd4, 0x05, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_ON
 		{0xd5, 0x05, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_OFF
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 #endif
 		{0xd6, 0xe8, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_AG_TH_ON
 		{0xd7, 0xe0, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_AG_TH_OFF
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x03, 0xcf, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE : EV max -> 76f890 [fixed frame : not enough int. time]
 		{0x13, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //Y_LUM_MAX 10fps, AG 0xA0
 		{0x14, 0x88, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x15, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x16, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 		{0x03, 0xcf, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE : EV max -> 94 b6 b4 [fixed frame : not enough int. time]
 		{0x13, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //Y_LUM_MAX 10fps, AG 0xA0
 		{0x14, 0xB0, MSM_CAMERA_I2C_BYTE_DATA},
@@ -4419,10 +4641,13 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x03, 0xc3, MSM_CAMERA_I2C_BYTE_DATA}, //AE Static en
 		{0x10, 0x84, MSM_CAMERA_I2C_BYTE_DATA},
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 		{0x03, 0xc4, MSM_CAMERA_I2C_BYTE_DATA},
 #if 0	//Flicker 50Hz
 	{0x10, 0xe9, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE ON    (50hz : 0xe9, 60hz : 0xe1)
@@ -4436,8 +4661,9 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x03, 0xc5, MSM_CAMERA_I2C_BYTE_DATA}, //AWB en
 		{0x10, 0xb1, MSM_CAMERA_I2C_BYTE_DATA},
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x01, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
 //		{0x0c, 0xf0}, //Sleep on with Frame Sync
@@ -4457,9 +4683,11 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 
 //		{0x03, 0x30, MSM_CAMERA_I2C_BYTE_DATA}, //DMA&Adaptive Off
 //		{0x36, 0xa3, MSM_CAMERA_I2C_BYTE_DATA},
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x01, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
 		{0x0c, 0xf0}, // Sleep off with Frame Sync
@@ -4485,10 +4713,13 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 
 		{0x03, 0x30, MSM_CAMERA_I2C_BYTE_DATA}, //DMA&Adaptive Off
 		{0x36, 0xa3, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 		{0x03, 0xc4, MSM_CAMERA_I2C_BYTE_DATA}, //AE off
 #if 1	//Flicker 50Hz
@@ -4499,12 +4730,15 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x03, 0xc5, MSM_CAMERA_I2C_BYTE_DATA}, //AWB off
 		{0x10, 0x30, MSM_CAMERA_I2C_BYTE_DATA},
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x03, 0xe3, MSM_CAMERA_I2C_BYTE_DATA}, //  For Camcording Spatial LPF design parameters
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 		//Metering - Matrix
 		{0x03, 0xc3, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x10, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -4567,10 +4801,13 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0xA5, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 
 		{0x03, 0xe4, MSM_CAMERA_I2C_BYTE_DATA}, //	For Camcording Spatial LPF design parameters
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 		{0xae, 0x03, MSM_CAMERA_I2C_BYTE_DATA}, // dark2
 		{0xaf, 0x14, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xb0, 0x10, MSM_CAMERA_I2C_BYTE_DATA},
@@ -4599,8 +4836,9 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0xc7, 0x80, MSM_CAMERA_I2C_BYTE_DATA},
 
 		{0x03, 0x20, MSM_CAMERA_I2C_BYTE_DATA}, //Page 20
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if 1	//Flicker 50Hz
 		{0x20, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //EXP Normal 33.33 fps (STEVE for 50Hz)
 		{0x21, 0x10, MSM_CAMERA_I2C_BYTE_DATA},
@@ -4620,9 +4858,11 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x26, 0x4d, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x27, 0xa0, MSM_CAMERA_I2C_BYTE_DATA},
 #endif
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 
 #if 1	//Flicker 50Hz
 	    {0x24, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //EXP Max 25.00 fps (50Hz)
@@ -4636,10 +4876,13 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x27, 0x08, MSM_CAMERA_I2C_BYTE_DATA}, 
 #endif
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 		{0x28, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //EXPMin 25210.08 fps
 		{0x29, 0x0b, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x2a, 0x28, MSM_CAMERA_I2C_BYTE_DATA},
@@ -4649,40 +4892,49 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x33, 0x04, MSM_CAMERA_I2C_BYTE_DATA}, //EXP120
 		{0x34, 0x93, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x35, 0x68, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x3c, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //EXP Fix 15.01 fps
 		{0x3d, 0x23, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x3e, 0x6e, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x3f, 0x08, MSM_CAMERA_I2C_BYTE_DATA},
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 		{0x36, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //EXP Unit
 		{0x37, 0x05, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x38, 0x94, MSM_CAMERA_I2C_BYTE_DATA},
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x03, 0x48, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x10, 0x1C, MSM_CAMERA_I2C_BYTE_DATA}, //MIPI On
 //		{0x16, 0x04, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE  EOT - SOT - payload
 		{0x30, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //640 * 2
 		{0x31, 0x08, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE for 1024x768 5-)8
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 		{0x03, 0x48},
 		{0x10, 0x1C}, //MIPI On
 		{0x16, 0x04}, // STEVE	EOT - SOT - payload
 		{0x30, 0x00}, //640 * 2
 		{0x31, 0x08}, // STEVE for 1024x768 5-)8
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 		{0x03, 0x30, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x36, 0x28, MSM_CAMERA_I2C_BYTE_DATA}, //preview function
 
@@ -4691,15 +4943,19 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x10, 0x13, MSM_CAMERA_I2C_BYTE_DATA}, // scale
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x11, 0x87, MSM_CAMERA_I2C_BYTE_DATA}, //bit2 on
-=======
+
 		{0x11, 0x83, MSM_CAMERA_I2C_BYTE_DATA}, //
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x11, 0x83, MSM_CAMERA_I2C_BYTE_DATA}, //
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x11, 0x83, MSM_CAMERA_I2C_BYTE_DATA}, //
+
 
 		{0x03, 0x18, MSM_CAMERA_I2C_BYTE_DATA}, //Page 18
 		{0xC4, 0x7e, MSM_CAMERA_I2C_BYTE_DATA}, //FLK200
@@ -4707,8 +4963,9 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //PAGE 0
 #if 1	//Flicker 50Hz
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	{0x90, 0x03, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_ON  //STEVE for 50hz
 	{0x91, 0x03, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_OFF //STEVE for 50hz
 	{0x92, 0xe8, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_AG_TH_ON    STEVE fixed AGC 0xD0
@@ -4728,9 +4985,11 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 	{0x03, 0x02, MSM_CAMERA_I2C_BYTE_DATA}, //PAGE 2
 	{0xd4, 0x04, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_ON
 	{0xd5, 0x04, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_OFF
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 		{0x90, 0x04, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_ON  // STEVE for 50hz
 		{0x91, 0x04, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_TIME_TH_OFF // STEVE for 50hz
 		{0x92, 0xe8, MSM_CAMERA_I2C_BYTE_DATA}, //BLC_AG_TH_ON	//STEVE AGC OxD0
@@ -4750,25 +5009,31 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 	{0x03, 0x02, MSM_CAMERA_I2C_BYTE_DATA}, //PAGE 2
 	{0xd4, 0x05, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_ON
 	{0xd5, 0x05, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_TIME_TH_OFF
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 #endif
 		{0xd6, 0xe8, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_AG_TH_ON
 		{0xd7, 0xe0, MSM_CAMERA_I2C_BYTE_DATA}, //DCDC_AG_TH_OFF
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x03, 0xcf, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE : EV max -> 76f890 [fixed frame : not enough int. time]
 		{0x13, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //Y_LUM_MAX 10fps, AG 0xA0
 		{0x14, 0x88, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x15, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x16, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 		{0x03, 0xcf, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE : EV max -> 94 b6 b4 [fixed frame : not enough int. time]
 		{0x13, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, //Y_LUM_MAX 10fps, AG 0xA0
 		{0x14, 0xB0, MSM_CAMERA_I2C_BYTE_DATA},
@@ -4778,23 +5043,30 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x03, 0xc3, MSM_CAMERA_I2C_BYTE_DATA}, //AE Static en
 		{0x10, 0x84, MSM_CAMERA_I2C_BYTE_DATA},
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 		{0x03, 0xc4, MSM_CAMERA_I2C_BYTE_DATA},
 #if 1	//Flicker 50Hz
 	{0x10, 0xe9, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE ON    (50hz : 0xe9, 60hz : 0xe1)
 #else
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	{0x10, 0xe1, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE ON
-=======
+
 	{0x10, 0xe1, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE en
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	{0x10, 0xe1, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE en
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	{0x10, 0xe1, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE AE en
+
 #endif
 
 		{0x03, 0xFE},
@@ -4803,8 +5075,9 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 		{0x03, 0xc5, MSM_CAMERA_I2C_BYTE_DATA}, //AWB en
 		{0x10, 0xb1, MSM_CAMERA_I2C_BYTE_DATA},
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x01, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
 //		{0x0c, 0xf0}, //Sleep on with Frame Sync
@@ -4815,9 +5088,11 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 //		{0x03, 0xc0, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x33, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x32, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, //DMA On
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x01, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
 		{0x0c, 0xf0}, // Sleep off with Frame Sync
@@ -4831,10 +5106,13 @@ static struct msm_camera_i2c_reg_conf hi351_fixed_fps_settings[2][160] = {
 
 		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xFE, 0x1E, MSM_CAMERA_I2C_BYTE_DATA}, //Delay 30ms
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	},
 };
 
@@ -5267,15 +5545,19 @@ static struct msm_camera_i2c_reg_conf hi351_reg_scene_auto[2][115] = {
 		{0xb9, 0x60}, // steve OutRgainMin
 		{0xba, 0x88}, // steve OutRgainMax
 		{0xbb, 0x4c}, // steve OutBgainMin
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xbc, 0x6c}, // steve OutBgainMax
-=======
+
 		{0xbc, 0x67}, // steve OutBgainMax
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xbc, 0x67}, // steve OutBgainMax
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xbc, 0x67}, // steve OutBgainMax
+
 
 		//Saturation 0
 		{0x03, 0xd1}, //page D1(Adaptive)
@@ -5435,15 +5717,19 @@ static struct msm_camera_i2c_reg_conf hi351_reg_scene_auto[2][115] = {
 		{0xb9, 0x60}, // steve OutRgainMin
 		{0xba, 0x88}, // steve OutRgainMax
 		{0xbb, 0x4c}, // steve OutBgainMin
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xbc, 0x6c}, // steve OutBgainMax
-=======
+
 		{0xbc, 0x67}, // steve OutBgainMax
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xbc, 0x67}, // steve OutBgainMax
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xbc, 0x67}, // steve OutBgainMax
+
 
 		//Saturation 0
 		{0x03, 0xd1}, //page D1(Adaptive)
@@ -6919,15 +7205,19 @@ static struct msm_camera_i2c_reg_conf hi351_reg_scene_night[2][115] = {
 		{0xb9, 0x60}, // steve OutRgainMin
 		{0xba, 0x88}, // steve OutRgainMax
 		{0xbb, 0x4c}, // steve OutBgainMin
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xbc, 0x6c}, // steve OutBgainMax
-=======
+
 		{0xbc, 0x67}, // steve OutBgainMax
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xbc, 0x67}, // steve OutBgainMax
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xbc, 0x67}, // steve OutBgainMax
+
 
 		//Saturation 0
 		{0x03, 0xd1}, //page D1(Adaptive)
@@ -7080,15 +7370,19 @@ static struct msm_camera_i2c_reg_conf hi351_reg_scene_night[2][115] = {
 		{0xb9, 0x60}, // steve OutRgainMin
 		{0xba, 0x88}, // steve OutRgainMax
 		{0xbb, 0x4c}, // steve OutBgainMin
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xbc, 0x6c}, // steve OutBgainMax
-=======
+
 		{0xbc, 0x67}, // steve OutBgainMax
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xbc, 0x67}, // steve OutBgainMax
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xbc, 0x67}, // steve OutBgainMax
+
 
 		//Saturation 0
 		{0x03, 0xd1}, //page D1(Adaptive)
@@ -7149,18 +7443,23 @@ static struct msm_camera_i2c_reg_conf hi351_reg_scene_night[2][115] = {
 	},
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6262] = {
 	// Sunny_60hz, youngwook.song@lge.com
-=======
+
 static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = {
 	//                                   
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = {
 	//                                   
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = {
+	//                                   
+
 	{
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x01, 0xf1, MSM_CAMERA_I2C_BYTE_DATA}, //Initial_111221_AWB(EV)_target_ColorRatio_lsc75p_AGC_D0_50_deSat_Ysat
@@ -7178,28 +7477,36 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x07, 0xa5, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x07, 0xa5, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x09, 0xa2, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 		{0x0A, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, // MCU hardware reset
 		{0x0A, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x0A, 0x01, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x0A, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		///////////////////////////////////////////
 		// 20 Page OTP/ROM LSC download select setting
 		///////////////////////////////////////////
@@ -7780,15 +8087,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x62, 0x80, MSM_CAMERA_I2C_BYTE_DATA},
 		//Desat - Chroma
 		// STEVE for achromatic color
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 		{0x03, 0x10, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x70, 0x08, MSM_CAMERA_I2C_BURST_DATA},
 		{0x71, 0x00, MSM_CAMERA_I2C_BURST_DATA},
@@ -7820,15 +8131,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xf5, 0xfd, MSM_CAMERA_I2C_BURST_DATA},
 		{0xf6, 0x00, MSM_CAMERA_I2C_BURST_DATA},
 		{0xf7, 0x00, MSM_CAMERA_I2C_BURST_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		// STEVE Luminanace level setting (Add to DMA)
 		{0x32, 0x8b, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x33, 0x54, MSM_CAMERA_I2C_BYTE_DATA},
@@ -7945,7 +8260,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x13, 0x85, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x13, 0x05, MSM_CAMERA_I2C_BYTE_DATA},
 
-		//================ LSC set start
+		//== LSC set start
 		//start
 {0x37, 0x39, MSM_CAMERA_I2C_BYTE_DATA},
 {0x37, 0x38, MSM_CAMERA_I2C_BYTE_DATA},
@@ -8957,7 +9272,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 {0x37, 0x38, MSM_CAMERA_I2C_BYTE_DATA},
 		//END
 
-		//================ LSC set end
+		//== LSC set end
 
 		{0x12, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x13, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -9003,29 +9318,37 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xa6, 0xa0, MSM_CAMERA_I2C_BYTE_DATA}, //r max
 		{0xa8, 0xa0, MSM_CAMERA_I2C_BYTE_DATA}, //b max
 				// Pre WB gain setting(after AWB setting)
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 		{0xF0, 0x01, MSM_CAMERA_I2C_BYTE_DATA},//Pre WB gain enable Gain resolution_1x	STEVE LOW
 		{0xF1, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF2, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF3, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF4, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		///////////////////////////////////////////
 		// 17 Page Gamma
 		///////////////////////////////////////////
@@ -9216,15 +9539,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		///////////////////////////////////////////
 		// CD Page Adaptive Mode(Color ratio)
 		///////////////////////////////////////////
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 		{0x03, 0xCD, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x47, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x12, 0x40, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE LOW
@@ -9234,15 +9561,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x16, 0x46, MSM_CAMERA_I2C_BYTE_DATA}, //Ratio WB B gain max
 		{0x10, 0xB9, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE 38 -) b9 Enable
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		///////////////////////////////////////////
 		// 1F Page SSD
 		///////////////////////////////////////////
@@ -9568,15 +9899,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xa3, 0x41, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a01_n00
 		{0xa4, 0x46, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a02_n00
 		{0xa5, 0x4b, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xa6, 0x59, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
-=======
+
 		{0xa6, 0x5a, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xa6, 0x5a, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xa6, 0x5a, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
+
 		{0xa7, 0x69, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a05_n00
 		{0xa8, 0x6e, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a06_n00
 		{0xa9, 0x73, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a07_n00
@@ -9586,15 +9921,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xab, 0x14, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a01_n00
 		{0xac, 0x0a, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a02_n00
 		{0xad, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xae, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
-=======
+
 		{0xae, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xae, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xae, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
+
 		{0xaf, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a05_n00
 		{0xb0, 0x84, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a06_n00
 		{0xb1, 0x85, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a07_n00
@@ -9604,15 +9943,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xb3, 0x94, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a01_n00
 		{0xb4, 0x8a, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a02_n00
 		{0xb5, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xb6, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
-=======
+
 		{0xb6, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xb6, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xb6, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
+
 		{0xb7, 0x01, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a05_n00
 		{0xb8, 0x04, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a06_n00
 		{0xb9, 0x05, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a07_n00
@@ -9640,18 +9983,23 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xca, 0x00, MSM_CAMERA_I2C_BURST_DATA},
 		{0xcb, 0x00, MSM_CAMERA_I2C_BURST_DATA},
 		{0xcc, 0x00, MSM_CAMERA_I2C_BURST_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xcd, 0x22, MSM_CAMERA_I2C_BURST_DATA},
 		{0xce, 0x22, MSM_CAMERA_I2C_BURST_DATA},
-=======
+
 		{0xcd, 0x55, MSM_CAMERA_I2C_BURST_DATA},
 		{0xce, 0x55, MSM_CAMERA_I2C_BURST_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xcd, 0x55, MSM_CAMERA_I2C_BURST_DATA},
 		{0xce, 0x55, MSM_CAMERA_I2C_BURST_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xcd, 0x55, MSM_CAMERA_I2C_BURST_DATA},
+		{0xce, 0x55, MSM_CAMERA_I2C_BURST_DATA},
+
 		{0xcf, 0x00, MSM_CAMERA_I2C_BURST_DATA},
 
 		{0xd0, 0x00, MSM_CAMERA_I2C_BURST_DATA},
@@ -9794,18 +10142,23 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x5f, 0x81, MSM_CAMERA_I2C_BURST_DATA},
 
 		{0x60, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x61, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
 		{0x62, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
-=======
+
 		{0x61, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
 		{0x62, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x61, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
 		{0x62, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x61, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
+		{0x62, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
+
 		{0x63, 0x85, MSM_CAMERA_I2C_BURST_DATA},
 		{0x64, 0x8a, MSM_CAMERA_I2C_BURST_DATA},
 		{0x65, 0x8a, MSM_CAMERA_I2C_BURST_DATA},
@@ -9813,18 +10166,23 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x67, 0x81, MSM_CAMERA_I2C_BURST_DATA},
 
 		{0x68, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x69, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
 		{0x6a, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
-=======
+
 		{0x69, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
 		{0x6a, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x69, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
 		{0x6a, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x69, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
+		{0x6a, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
+
 		{0x6b, 0x05, MSM_CAMERA_I2C_BURST_DATA},
 		{0x6c, 0x0a, MSM_CAMERA_I2C_BURST_DATA},
 		{0x6d, 0x00, MSM_CAMERA_I2C_BURST_DATA},
@@ -9912,15 +10270,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xb9, 0x60, MSM_CAMERA_I2C_BURST_DATA}, // steve OutRgainMin
 		{0xba, 0x88, MSM_CAMERA_I2C_BURST_DATA}, // steve OutRgainMax
 		{0xbb, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMin
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xbc, 0x6c, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
-=======
+
 		{0xbc, 0x67, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xbc, 0x67, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xbc, 0x67, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
+
 
 		{0xbd, 0x04, MSM_CAMERA_I2C_BURST_DATA},
 		{0xbe, 0x00, MSM_CAMERA_I2C_BURST_DATA},
@@ -10048,15 +10410,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		/////////////MSM_CAMERA_I2C_BURST_DATA//////////////////////
 		// CF~D0~D1 PMSM_CAMERA_I2C_BURST_DATAtive GAMMA
 		/////////////MSM_CAMERA_I2C_BURST_DATA//////////////////////
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 
 		{0x63, 0x00, MSM_CAMERA_I2C_BURST_DATA},//GMA00
 		{0x64, 0x04, MSM_CAMERA_I2C_BURST_DATA},
@@ -10526,15 +10892,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x41, 0xa8, MSM_CAMERA_I2C_BURST_DATA},//SATR_10
 		{0x42, 0xa8, MSM_CAMERA_I2C_BURST_DATA},//SATR_11
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		///////////////////////////////////////////
 		// D1 Page Adaptive CMC
 		///////////////////////////////////////////
@@ -10673,15 +11043,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		///////////////////////////////////////////
 		// D1~D2~D3 Page Adaptive Multi-CMC
 		///////////////////////////////////////////
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 		//MCMC_00
 		{0xbb, 0x80, MSM_CAMERA_I2C_BURST_DATA},//GLB_GAIN
 		{0xbc, 0x00, MSM_CAMERA_I2C_BURST_DATA},//GLB_HUE
@@ -10777,15 +11151,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x22, 0x82, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0x23, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0x24, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x25, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0x25, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x25, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x25, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0x26, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x27, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0x28, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -10813,15 +11191,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x3c, 0x88, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0x3d, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0x3e, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x3f, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0x3f, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x3f, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x3f, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0x40, 0x08, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x41, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0x42, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -10849,15 +11231,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x56, 0x87, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0x57, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0x58, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x59, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0x59, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x59, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x59, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0x5a, 0x0b, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x5b, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0x5c, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -10885,15 +11271,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x70, 0x82, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0x71, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0x72, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x73, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0x73, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x73, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x73, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0x74, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x75, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0x76, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -10921,15 +11311,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x8a, 0x88, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0x8b, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0x8c, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x8d, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0x8d, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x8d, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x8d, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0x8e, 0x08, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x8f, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0x90, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -10957,15 +11351,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xa4, 0x87, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0xa5, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0xa6, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xa7, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0xa7, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xa7, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xa7, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0xa8, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xa9, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0xaa, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -10993,15 +11391,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xbe, 0x82, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0xbf, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0xc0, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xc1, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0xc1, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xc1, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xc1, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0xc2, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xc3, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0xc4, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -11029,15 +11431,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xd8, 0x82, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0xd9, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0xda, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xdb, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0xdb, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xdb, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xdb, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0xdc, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xdd, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0xde, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -11065,15 +11471,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xf2, 0x82, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0xf3, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0xf4, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xf5, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0xf5, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xf5, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xf5, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0xf6, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xf7, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0xf8, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -11207,15 +11617,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x75, 0x80, MSM_CAMERA_I2C_BURST_DATA}, //80 LSC 11 Gain R
 		{0x76, 0x80, MSM_CAMERA_I2C_BURST_DATA}, //78 LSC 11 Gain GR
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		///////////////////////////////////////////
 		// D3 Page OTP, ROM Select TH
 		///////////////////////////////////////////
@@ -12088,15 +12502,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 		// STEVE Saturation control
 		// CB/CR vs sat
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
 		{0x68, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //outdoor 0x1070
@@ -12169,15 +12587,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xA9, 0x7c, MSM_CAMERA_I2C_BURST_DATA}, //
 		{0xAA, 0x9a, MSM_CAMERA_I2C_BURST_DATA}, // outdoor 0x169a
 		{0xAB, 0x78, MSM_CAMERA_I2C_BURST_DATA}, //
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 		//////////////////
 		// dd Page (DMA Indoor)
@@ -12754,15 +13176,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 		// STEVE Saturation control
 		// CB/CR vs sat
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
 		{0x68, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //indoor 0x1070
@@ -12835,15 +13261,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xA9, 0x7c, MSM_CAMERA_I2C_BURST_DATA}, //
 		{0xAA, 0x9a, MSM_CAMERA_I2C_BURST_DATA}, // indoor 0x169a
 		{0xAB, 0x78, MSM_CAMERA_I2C_BURST_DATA}, //
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 		//////////////////
 		// e0 Page (DMA Dark1)
@@ -13422,15 +13852,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x65, 0x28, MSM_CAMERA_I2C_BURST_DATA},
 		// STEVE Saturation control
 		// CB/CR vs sat
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
@@ -13504,15 +13938,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xA9, 0x7c, MSM_CAMERA_I2C_BURST_DATA}, //
 		{0xAA, 0x9a, MSM_CAMERA_I2C_BURST_DATA}, // Dark1 0x169a
 		{0xAB, 0x78, MSM_CAMERA_I2C_BURST_DATA}, //
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 
 		//////////////////
@@ -14094,15 +14532,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 		// STEVE Saturation control
 		// CB/CR vs sat
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
@@ -14177,15 +14619,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xAA, 0x9a, MSM_CAMERA_I2C_BURST_DATA}, // Dark2 0x169a
 		{0xAB, 0x78, MSM_CAMERA_I2C_BURST_DATA}, //
 		// DMA END
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -14326,27 +14772,33 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x11, 0x83, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE 0 skip Fix Frame Off, XY Flip
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x01, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
 
 //		{0x03, 0xC0, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x33, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x32, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, //DMA on
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x01, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
 
 		{0x03, 0xC0, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x33, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x32, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, //DMA on
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 		//////////////////////////////////////////////
 		// Delay
 		//////////////////////////////////////////////
@@ -14361,15 +14813,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 	},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	// Sunny_50hz, youngwook.song@lge.com
-=======
+
 	//                                   
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                   
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                   
+
 	{
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x01, 0xf1, MSM_CAMERA_I2C_BYTE_DATA}, //Initial_111221_AWB(EV)_target_ColorRatio_lsc75p_AGC_D0_50_deSat_Ysat
@@ -14387,28 +14843,36 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x07, 0xa5, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x07, 0xa5, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x09, 0xa2, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 		{0x0A, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, // MCU hardware reset
 		{0x0A, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x0A, 0x01, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x0A, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		///////////////////////////////////////////
 		// 20 Page OTP/ROM LSC download select setting
 		///////////////////////////////////////////
@@ -14987,15 +15451,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x62, 0x80, MSM_CAMERA_I2C_BYTE_DATA},
 		//Desat - Chroma
 		// STEVE for achromatic color
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 		{0x03, 0x10, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x70, 0x08, MSM_CAMERA_I2C_BURST_DATA},
 		{0x71, 0x00, MSM_CAMERA_I2C_BURST_DATA},
@@ -15027,15 +15495,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xf5, 0xfd, MSM_CAMERA_I2C_BURST_DATA},
 		{0xf6, 0x00, MSM_CAMERA_I2C_BURST_DATA},
 		{0xf7, 0x00, MSM_CAMERA_I2C_BURST_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		// STEVE Luminanace level setting (Add to DMA)
 		{0x32, 0x8b, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x33, 0x54, MSM_CAMERA_I2C_BYTE_DATA},
@@ -15152,7 +15624,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x13, 0x85, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x13, 0x05, MSM_CAMERA_I2C_BYTE_DATA},
 
-	//================ LSC set start
+	//== LSC set start
 	//start
 {0x37, 0x39, MSM_CAMERA_I2C_BYTE_DATA},
 {0x37, 0x38, MSM_CAMERA_I2C_BYTE_DATA},
@@ -16164,7 +16636,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 {0x37, 0x38, MSM_CAMERA_I2C_BYTE_DATA},
 	//END
 
-		//================ LSC set end
+		//== LSC set end
 
 		{0x12, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x13, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -16210,29 +16682,37 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xa6, 0xa0, MSM_CAMERA_I2C_BYTE_DATA}, //r max
 		{0xa8, 0xa0, MSM_CAMERA_I2C_BYTE_DATA}, //b max
 				// Pre WB gain setting(after AWB setting)
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 		{0xF0, 0x01, MSM_CAMERA_I2C_BYTE_DATA},//Pre WB gain enable Gain resolution_1x	STEVE LOW
 		{0xF1, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF2, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF3, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF4, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		///////////////////////////////////////////
 		// 17 Page Gamma
 		///////////////////////////////////////////
@@ -16422,15 +16902,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		///////////////////////////////////////////
 		// CD Page Adaptive Mode(Color ratio)
 		///////////////////////////////////////////
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 		{0x03, 0xCD, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x47, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x12, 0x40, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE LOW
@@ -16440,15 +16924,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x16, 0x46, MSM_CAMERA_I2C_BYTE_DATA}, //Ratio WB B gain max
 		{0x10, 0xB9, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE 38 -) b9 Enable
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		///////////////////////////////////////////
 		// 1F Page SSD
 		///////////////////////////////////////////
@@ -16774,15 +17262,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xa3, 0x41, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a01_n00
 		{0xa4, 0x46, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a02_n00
 		{0xa5, 0x4b, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xa6, 0x59, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
-=======
+
 		{0xa6, 0x5a, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xa6, 0x5a, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xa6, 0x5a, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
+
 		{0xa7, 0x69, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a05_n00
 		{0xa8, 0x6e, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a06_n00
 		{0xa9, 0x73, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a07_n00
@@ -16792,15 +17284,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xab, 0x14, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a01_n00
 		{0xac, 0x0a, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a02_n00
 		{0xad, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xae, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
-=======
+
 		{0xae, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xae, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xae, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
+
 		{0xaf, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a05_n00
 		{0xb0, 0x84, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a06_n00
 		{0xb1, 0x85, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a07_n00
@@ -16810,15 +17306,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xb3, 0x94, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a01_n00
 		{0xb4, 0x8a, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a02_n00
 		{0xb5, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xb6, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
-=======
+
 		{0xb6, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xb6, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xb6, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
+
 		{0xb7, 0x01, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a05_n00
 		{0xb8, 0x04, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a06_n00
 		{0xb9, 0x05, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a07_n00
@@ -16847,18 +17347,23 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xca, 0x00, MSM_CAMERA_I2C_BURST_DATA},
 		{0xcb, 0x00, MSM_CAMERA_I2C_BURST_DATA},
 		{0xcc, 0x00, MSM_CAMERA_I2C_BURST_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xcd, 0x22, MSM_CAMERA_I2C_BURST_DATA},
 		{0xce, 0x22, MSM_CAMERA_I2C_BURST_DATA},
-=======
+
 		{0xcd, 0x55, MSM_CAMERA_I2C_BURST_DATA},
 		{0xce, 0x55, MSM_CAMERA_I2C_BURST_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xcd, 0x55, MSM_CAMERA_I2C_BURST_DATA},
 		{0xce, 0x55, MSM_CAMERA_I2C_BURST_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xcd, 0x55, MSM_CAMERA_I2C_BURST_DATA},
+		{0xce, 0x55, MSM_CAMERA_I2C_BURST_DATA},
+
 		{0xcf, 0x00, MSM_CAMERA_I2C_BURST_DATA},
 
 		{0xd0, 0x00, MSM_CAMERA_I2C_BURST_DATA},
@@ -17001,18 +17506,23 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x5f, 0x81, MSM_CAMERA_I2C_BURST_DATA},
 
 		{0x60, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x61, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
 		{0x62, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
-=======
+
 		{0x61, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
 		{0x62, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x61, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
 		{0x62, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x61, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
+		{0x62, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
+
 		{0x63, 0x85, MSM_CAMERA_I2C_BURST_DATA},
 		{0x64, 0x8a, MSM_CAMERA_I2C_BURST_DATA},
 		{0x65, 0x8a, MSM_CAMERA_I2C_BURST_DATA},
@@ -17020,18 +17530,23 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x67, 0x81, MSM_CAMERA_I2C_BURST_DATA},
 
 		{0x68, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x69, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
 		{0x6a, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
-=======
+
 		{0x69, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
 		{0x6a, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x69, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
 		{0x6a, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x69, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
+		{0x6a, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
+
 		{0x6b, 0x05, MSM_CAMERA_I2C_BURST_DATA},
 		{0x6c, 0x0a, MSM_CAMERA_I2C_BURST_DATA},
 		{0x6d, 0x00, MSM_CAMERA_I2C_BURST_DATA},
@@ -17119,15 +17634,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xb9, 0x60, MSM_CAMERA_I2C_BURST_DATA}, // steve OutRgainMin
 		{0xba, 0x88, MSM_CAMERA_I2C_BURST_DATA}, // steve OutRgainMax
 		{0xbb, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMin
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xbc, 0x6c, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
-=======
+
 		{0xbc, 0x67, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xbc, 0x67, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xbc, 0x67, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
+
 
 		{0xbd, 0x04, MSM_CAMERA_I2C_BURST_DATA},
 		{0xbe, 0x00, MSM_CAMERA_I2C_BURST_DATA},
@@ -17255,15 +17774,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		/////////////MSM_CAMERA_I2C_BURST_DATA//////////////////////
 		// CF~D0~D1 PMSM_CAMERA_I2C_BURST_DATAtive GAMMA
 		/////////////MSM_CAMERA_I2C_BURST_DATA//////////////////////
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 
 		{0x63, 0x00, MSM_CAMERA_I2C_BURST_DATA},//GMA00
 		{0x64, 0x04, MSM_CAMERA_I2C_BURST_DATA},
@@ -17733,15 +18256,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x41, 0xa8, MSM_CAMERA_I2C_BURST_DATA},//SATR_10
 		{0x42, 0xa8, MSM_CAMERA_I2C_BURST_DATA},//SATR_11
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		///////////////////////////////////////////
 		// D1 Page Adaptive CMC
 		///////////////////////////////////////////
@@ -17880,15 +18407,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		///////////////////////////////////////////
 		// D1~D2~D3 Page Adaptive Multi-CMC
 		///////////////////////////////////////////
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 		//MCMC_00
 		{0xbb, 0x80, MSM_CAMERA_I2C_BURST_DATA},//GLB_GAIN
 		{0xbc, 0x00, MSM_CAMERA_I2C_BURST_DATA},//GLB_HUE
@@ -17984,15 +18515,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x22, 0x82, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0x23, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0x24, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x25, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0x25, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x25, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x25, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0x26, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x27, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0x28, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -18020,15 +18555,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x3c, 0x88, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0x3d, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0x3e, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x3f, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0x3f, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x3f, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x3f, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0x40, 0x08, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x41, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0x42, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -18056,15 +18595,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x56, 0x87, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0x57, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0x58, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x59, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0x59, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x59, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x59, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0x5a, 0x0b, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x5b, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0x5c, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -18092,15 +18635,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x70, 0x82, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0x71, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0x72, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x73, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0x73, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x73, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x73, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0x74, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x75, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0x76, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -18128,15 +18675,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x8a, 0x88, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0x8b, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0x8c, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x8d, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0x8d, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x8d, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x8d, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0x8e, 0x08, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x8f, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0x90, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -18164,15 +18715,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xa4, 0x87, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0xa5, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0xa6, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xa7, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0xa7, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xa7, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xa7, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0xa8, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xa9, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0xaa, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -18200,15 +18755,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xbe, 0x82, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0xbf, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0xc0, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xc1, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0xc1, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xc1, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xc1, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0xc2, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xc3, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0xc4, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -18236,15 +18795,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xd8, 0x82, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0xd9, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0xda, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xdb, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0xdb, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xdb, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xdb, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0xdc, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xdd, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0xde, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -18272,15 +18835,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xf2, 0x82, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0xf3, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0xf4, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xf5, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0xf5, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xf5, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xf5, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0xf6, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xf7, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0xf8, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -18414,15 +18981,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x75, 0x80, MSM_CAMERA_I2C_BURST_DATA}, //80 LSC 11 Gain R
 		{0x76, 0x80, MSM_CAMERA_I2C_BURST_DATA}, //78 LSC 11 Gain GR
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		///////////////////////////////////////////
 		// D3 Page OTP, ROM Select TH
 		///////////////////////////////////////////
@@ -19295,15 +19866,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 		// STEVE Saturation control
 		// CB/CR vs sat
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
 		{0x68, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //outdoor 0x1070
@@ -19376,15 +19951,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xA9, 0x7c, MSM_CAMERA_I2C_BURST_DATA}, //
 		{0xAA, 0x9a, MSM_CAMERA_I2C_BURST_DATA}, // outdoor 0x169a
 		{0xAB, 0x78, MSM_CAMERA_I2C_BURST_DATA}, //
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 		//////////////////
 		// dd Page (DMA Indoor)
@@ -19961,15 +20540,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 		// STEVE Saturation control
 		// CB/CR vs sat
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
 		{0x68, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //indoor 0x1070
@@ -20042,15 +20625,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xA9, 0x7c, MSM_CAMERA_I2C_BURST_DATA}, //
 		{0xAA, 0x9a, MSM_CAMERA_I2C_BURST_DATA}, // indoor 0x169a
 		{0xAB, 0x78, MSM_CAMERA_I2C_BURST_DATA}, //
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 		//////////////////
 		// e0 Page (DMA Dark1)
@@ -20629,15 +21216,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x65, 0x28, MSM_CAMERA_I2C_BURST_DATA},
 		// STEVE Saturation control
 		// CB/CR vs sat
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
@@ -20711,15 +21302,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xA9, 0x7c, MSM_CAMERA_I2C_BURST_DATA}, //
 		{0xAA, 0x9a, MSM_CAMERA_I2C_BURST_DATA}, // Dark1 0x169a
 		{0xAB, 0x78, MSM_CAMERA_I2C_BURST_DATA}, //
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 
 		//////////////////
@@ -21301,15 +21896,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 		// STEVE Saturation control
 		// CB/CR vs sat
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
@@ -21384,15 +21983,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0xAA, 0x9a, MSM_CAMERA_I2C_BURST_DATA}, // Dark2 0x169a
 		{0xAB, 0x78, MSM_CAMERA_I2C_BURST_DATA}, //
 		// DMA END
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -21534,27 +22137,33 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x11, 0x83, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE 0 skip Fix Frame Off, XY Flip
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x01, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
 
 //		{0x03, 0xC0, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x33, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x32, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, //DMA on
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x01, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
 
 		{0x03, 0xC0, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x33, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x32, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, //DMA on
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 		//////////////////////////////////////////////
 		// Delay
 		//////////////////////////////////////////////
@@ -21571,18 +22180,23 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 	},
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6262] = {
 	// Cowell_60hz, youngwook.song@lge.com
-=======
+
 static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] = {
 	//                                    
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] = {
 	//                                    
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] = {
+	//                                    
+
 	{
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x01, 0xf1, MSM_CAMERA_I2C_BYTE_DATA}, //Initial_111221_AWB(EV)_target_ColorRatio_lsc75p_AGC_D0_50_deSat_Ysat
@@ -21600,28 +22214,36 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x07, 0xa5, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x07, 0xa5, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x09, 0xa2, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 		{0x0A, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, // MCU hardware reset
 		{0x0A, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x0A, 0x01, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x0A, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		///////////////////////////////////////////
 		// 20 Page OTP/ROM LSC download select setting
 		///////////////////////////////////////////
@@ -22202,15 +22824,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x62, 0x80, MSM_CAMERA_I2C_BYTE_DATA},
 		//Desat - Chroma
 		// STEVE for achromatic color
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 		{0x03, 0x10, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x70, 0x08, MSM_CAMERA_I2C_BURST_DATA},
 		{0x71, 0x00, MSM_CAMERA_I2C_BURST_DATA},
@@ -22242,15 +22868,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xf5, 0xfd, MSM_CAMERA_I2C_BURST_DATA},
 		{0xf6, 0x00, MSM_CAMERA_I2C_BURST_DATA},
 		{0xf7, 0x00, MSM_CAMERA_I2C_BURST_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		// STEVE Luminanace level setting (Add to DMA)
 		{0x32, 0x8b, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x33, 0x54, MSM_CAMERA_I2C_BYTE_DATA},
@@ -22367,7 +22997,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x13, 0x85, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x13, 0x05, MSM_CAMERA_I2C_BYTE_DATA},
 
-		//================ LSC set start
+		//== LSC set start
 		//start
 		{0x37, 0x39, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x37, 0x37, MSM_CAMERA_I2C_BYTE_DATA},
@@ -23379,7 +24009,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x37, 0x46, MSM_CAMERA_I2C_BYTE_DATA},
 		//END
 
-		//================ LSC set end
+		//== LSC set end
 
 		{0x12, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x13, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -23425,29 +24055,37 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xa6, 0xa0, MSM_CAMERA_I2C_BYTE_DATA}, //r max
 		{0xa8, 0xa0, MSM_CAMERA_I2C_BYTE_DATA}, //b max
 				// Pre WB gain setting(after AWB setting)
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 		{0xF0, 0x01, MSM_CAMERA_I2C_BYTE_DATA},//Pre WB gain enable Gain resolution_1x	STEVE LOW
 		{0xF1, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF2, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF3, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF4, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		///////////////////////////////////////////
 		// 17 Page Gamma
 		///////////////////////////////////////////
@@ -23638,15 +24276,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		///////////////////////////////////////////
 		// CD Page Adaptive Mode(Color ratio)
 		///////////////////////////////////////////
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 		{0x03, 0xCD, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x47, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x12, 0x40, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE LOW
@@ -23656,15 +24298,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x16, 0x46, MSM_CAMERA_I2C_BYTE_DATA}, //Ratio WB B gain max
 		{0x10, 0xB9, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE 38 -) b9 Enable
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		///////////////////////////////////////////
 		// 1F Page SSD
 		///////////////////////////////////////////
@@ -23990,15 +24636,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xa3, 0x41, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a01_n00
 		{0xa4, 0x46, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a02_n00
 		{0xa5, 0x4b, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xa6, 0x59, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
-=======
+
 		{0xa6, 0x5a, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xa6, 0x5a, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xa6, 0x5a, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
+
 		{0xa7, 0x69, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a05_n00
 		{0xa8, 0x6e, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a06_n00
 		{0xa9, 0x73, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a07_n00
@@ -24008,15 +24658,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xab, 0x14, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a01_n00
 		{0xac, 0x0a, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a02_n00
 		{0xad, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xae, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
-=======
+
 		{0xae, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xae, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xae, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
+
 		{0xaf, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a05_n00
 		{0xb0, 0x84, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a06_n00
 		{0xb1, 0x85, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a07_n00
@@ -24026,15 +24680,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xb3, 0x94, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a01_n00
 		{0xb4, 0x8a, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a02_n00
 		{0xb5, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xb6, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
-=======
+
 		{0xb6, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xb6, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xb6, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
+
 		{0xb7, 0x01, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a05_n00
 		{0xb8, 0x04, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a06_n00
 		{0xb9, 0x05, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a07_n00
@@ -24062,18 +24720,23 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xca, 0x00, MSM_CAMERA_I2C_BURST_DATA},
 		{0xcb, 0x00, MSM_CAMERA_I2C_BURST_DATA},
 		{0xcc, 0x00, MSM_CAMERA_I2C_BURST_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xcd, 0x22, MSM_CAMERA_I2C_BURST_DATA},
 		{0xce, 0x22, MSM_CAMERA_I2C_BURST_DATA},
-=======
+
 		{0xcd, 0x55, MSM_CAMERA_I2C_BURST_DATA},
 		{0xce, 0x55, MSM_CAMERA_I2C_BURST_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xcd, 0x55, MSM_CAMERA_I2C_BURST_DATA},
 		{0xce, 0x55, MSM_CAMERA_I2C_BURST_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xcd, 0x55, MSM_CAMERA_I2C_BURST_DATA},
+		{0xce, 0x55, MSM_CAMERA_I2C_BURST_DATA},
+
 		{0xcf, 0x00, MSM_CAMERA_I2C_BURST_DATA},
 
 		{0xd0, 0x00, MSM_CAMERA_I2C_BURST_DATA},
@@ -24216,18 +24879,23 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x5f, 0x81, MSM_CAMERA_I2C_BURST_DATA},
 
 		{0x60, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x61, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
 		{0x62, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
-=======
+
 		{0x61, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
 		{0x62, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x61, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
 		{0x62, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x61, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
+		{0x62, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
+
 		{0x63, 0x85, MSM_CAMERA_I2C_BURST_DATA},
 		{0x64, 0x8a, MSM_CAMERA_I2C_BURST_DATA},
 		{0x65, 0x8a, MSM_CAMERA_I2C_BURST_DATA},
@@ -24235,18 +24903,23 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x67, 0x81, MSM_CAMERA_I2C_BURST_DATA},
 
 		{0x68, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x69, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
 		{0x6a, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
-=======
+
 		{0x69, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
 		{0x6a, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x69, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
 		{0x6a, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x69, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
+		{0x6a, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
+
 		{0x6b, 0x05, MSM_CAMERA_I2C_BURST_DATA},
 		{0x6c, 0x0a, MSM_CAMERA_I2C_BURST_DATA},
 		{0x6d, 0x00, MSM_CAMERA_I2C_BURST_DATA},
@@ -24334,15 +25007,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xb9, 0x60, MSM_CAMERA_I2C_BURST_DATA}, // steve OutRgainMin
 		{0xba, 0x88, MSM_CAMERA_I2C_BURST_DATA}, // steve OutRgainMax
 		{0xbb, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMin
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xbc, 0x6c, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
-=======
+
 		{0xbc, 0x67, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xbc, 0x67, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xbc, 0x67, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
+
 
 		{0xbd, 0x04, MSM_CAMERA_I2C_BURST_DATA},
 		{0xbe, 0x00, MSM_CAMERA_I2C_BURST_DATA},
@@ -24470,15 +25147,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		/////////////MSM_CAMERA_I2C_BURST_DATA//////////////////////
 		// CF~D0~D1 PMSM_CAMERA_I2C_BURST_DATAtive GAMMA
 		/////////////MSM_CAMERA_I2C_BURST_DATA//////////////////////
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 
 		{0x63, 0x00, MSM_CAMERA_I2C_BURST_DATA},//GMA00
 		{0x64, 0x04, MSM_CAMERA_I2C_BURST_DATA},
@@ -24948,15 +25629,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x41, 0xa8, MSM_CAMERA_I2C_BURST_DATA},//SATR_10
 		{0x42, 0xa8, MSM_CAMERA_I2C_BURST_DATA},//SATR_11
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		///////////////////////////////////////////
 		// D1 Page Adaptive CMC
 		///////////////////////////////////////////
@@ -25095,15 +25780,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		///////////////////////////////////////////
 		// D1~D2~D3 Page Adaptive Multi-CMC
 		///////////////////////////////////////////
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 		//MCMC_00
 		{0xbb, 0x80, MSM_CAMERA_I2C_BURST_DATA},//GLB_GAIN
 		{0xbc, 0x00, MSM_CAMERA_I2C_BURST_DATA},//GLB_HUE
@@ -25199,15 +25888,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x22, 0x82, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0x23, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0x24, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x25, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0x25, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x25, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x25, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0x26, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x27, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0x28, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -25235,15 +25928,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x3c, 0x88, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0x3d, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0x3e, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x3f, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0x3f, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x3f, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x3f, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0x40, 0x08, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x41, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0x42, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -25271,15 +25968,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x56, 0x87, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0x57, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0x58, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x59, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0x59, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x59, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x59, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0x5a, 0x0b, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x5b, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0x5c, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -25307,15 +26008,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x70, 0x82, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0x71, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0x72, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x73, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0x73, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x73, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x73, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0x74, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x75, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0x76, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -25343,15 +26048,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x8a, 0x88, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0x8b, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0x8c, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x8d, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0x8d, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x8d, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x8d, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0x8e, 0x08, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x8f, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0x90, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -25379,15 +26088,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xa4, 0x87, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0xa5, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0xa6, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xa7, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0xa7, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xa7, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xa7, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0xa8, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xa9, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0xaa, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -25415,15 +26128,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xbe, 0x82, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0xbf, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0xc0, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xc1, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0xc1, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xc1, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xc1, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0xc2, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xc3, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0xc4, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -25451,15 +26168,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xd8, 0x82, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0xd9, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0xda, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xdb, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0xdb, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xdb, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xdb, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0xdc, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xdd, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0xde, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -25487,15 +26208,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xf2, 0x82, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0xf3, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0xf4, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xf5, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0xf5, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xf5, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xf5, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0xf6, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xf7, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0xf8, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -25629,15 +26354,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x75, 0x80, MSM_CAMERA_I2C_BURST_DATA}, //80 LSC 11 Gain R
 		{0x76, 0x80, MSM_CAMERA_I2C_BURST_DATA}, //78 LSC 11 Gain GR
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		///////////////////////////////////////////
 		// D3 Page OTP, ROM Select TH
 		///////////////////////////////////////////
@@ -26510,15 +27239,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 		// STEVE Saturation control
 		// CB/CR vs sat
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
 		{0x68, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //outdoor 0x1070
@@ -26591,15 +27324,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xA9, 0x7c, MSM_CAMERA_I2C_BURST_DATA}, //
 		{0xAA, 0x9a, MSM_CAMERA_I2C_BURST_DATA}, // outdoor 0x169a
 		{0xAB, 0x78, MSM_CAMERA_I2C_BURST_DATA}, //
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 		//////////////////
 		// dd Page (DMA Indoor)
@@ -27176,15 +27913,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 		// STEVE Saturation control
 		// CB/CR vs sat
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
 		{0x68, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //indoor 0x1070
@@ -27257,15 +27998,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xA9, 0x7c, MSM_CAMERA_I2C_BURST_DATA}, //
 		{0xAA, 0x9a, MSM_CAMERA_I2C_BURST_DATA}, // indoor 0x169a
 		{0xAB, 0x78, MSM_CAMERA_I2C_BURST_DATA}, //
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 		//////////////////
 		// e0 Page (DMA Dark1)
@@ -27844,15 +28589,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x65, 0x28, MSM_CAMERA_I2C_BURST_DATA},
 		// STEVE Saturation control
 		// CB/CR vs sat
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
@@ -27926,15 +28675,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xA9, 0x7c, MSM_CAMERA_I2C_BURST_DATA}, //
 		{0xAA, 0x9a, MSM_CAMERA_I2C_BURST_DATA}, // Dark1 0x169a
 		{0xAB, 0x78, MSM_CAMERA_I2C_BURST_DATA}, //
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 
 		//////////////////
@@ -28516,15 +29269,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 		// STEVE Saturation control
 		// CB/CR vs sat
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
@@ -28599,15 +29356,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xAA, 0x9a, MSM_CAMERA_I2C_BURST_DATA}, // Dark2 0x169a
 		{0xAB, 0x78, MSM_CAMERA_I2C_BURST_DATA}, //
 		// DMA END
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -28748,27 +29509,33 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x11, 0x83, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE 0 skip Fix Frame Off, XY Flip
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x01, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
 
 //		{0x03, 0xC0, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x33, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x32, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, //DMA on
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x01, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
 
 		{0x03, 0xC0, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x33, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x32, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, //DMA on
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 		//////////////////////////////////////////////
 		// Delay
 		//////////////////////////////////////////////
@@ -28783,15 +29550,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 	},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	// Cowell_50hz, youngwook.song@lge.com
-=======
+
 	//                                    
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                    
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                    
+
 	{
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x01, 0xf1, MSM_CAMERA_I2C_BYTE_DATA}, //Initial_111221_AWB(EV)_target_ColorRatio_lsc75p_AGC_D0_50_deSat_Ysat
@@ -28809,28 +29580,36 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x07, 0xa5, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x07, 0xa5, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x09, 0xa2, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 		{0x0A, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, // MCU hardware reset
 		{0x0A, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x0A, 0x01, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x0A, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		///////////////////////////////////////////
 		// 20 Page OTP/ROM LSC download select setting
 		///////////////////////////////////////////
@@ -29409,15 +30188,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x62, 0x80, MSM_CAMERA_I2C_BYTE_DATA},
 		//Desat - Chroma
 		// STEVE for achromatic color
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 		{0x03, 0x10, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x70, 0x08, MSM_CAMERA_I2C_BURST_DATA},
 		{0x71, 0x00, MSM_CAMERA_I2C_BURST_DATA},
@@ -29449,15 +30232,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xf5, 0xfd, MSM_CAMERA_I2C_BURST_DATA},
 		{0xf6, 0x00, MSM_CAMERA_I2C_BURST_DATA},
 		{0xf7, 0x00, MSM_CAMERA_I2C_BURST_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		// STEVE Luminanace level setting (Add to DMA)
 		{0x32, 0x8b, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x33, 0x54, MSM_CAMERA_I2C_BYTE_DATA},
@@ -29574,7 +30361,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x13, 0x85, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x13, 0x05, MSM_CAMERA_I2C_BYTE_DATA},
 
-		//================ LSC set start
+		//== LSC set start
 		//start
 		{0x37, 0x39, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x37, 0x37, MSM_CAMERA_I2C_BYTE_DATA},
@@ -30586,7 +31373,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x37, 0x46, MSM_CAMERA_I2C_BYTE_DATA},
 		//END
 
-		//================ LSC set end
+		//== LSC set end
 
 		{0x12, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x13, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -30632,29 +31419,37 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xa6, 0xa0, MSM_CAMERA_I2C_BYTE_DATA}, //r max
 		{0xa8, 0xa0, MSM_CAMERA_I2C_BYTE_DATA}, //b max
 				// Pre WB gain setting(after AWB setting)
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 		{0xF0, 0x01, MSM_CAMERA_I2C_BYTE_DATA},//Pre WB gain enable Gain resolution_1x	STEVE LOW
 		{0xF1, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF2, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF3, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF4, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		///////////////////////////////////////////
 		// 17 Page Gamma
 		///////////////////////////////////////////
@@ -30844,15 +31639,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		///////////////////////////////////////////
 		// CD Page Adaptive Mode(Color ratio)
 		///////////////////////////////////////////
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 		{0x03, 0xCD, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x47, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x12, 0x40, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE LOW
@@ -30862,15 +31661,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x16, 0x46, MSM_CAMERA_I2C_BYTE_DATA}, //Ratio WB B gain max
 		{0x10, 0xB9, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE 38 -) b9 Enable
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		///////////////////////////////////////////
 		// 1F Page SSD
 		///////////////////////////////////////////
@@ -31196,15 +31999,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xa3, 0x41, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a01_n00
 		{0xa4, 0x46, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a02_n00
 		{0xa5, 0x4b, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xa6, 0x59, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
-=======
+
 		{0xa6, 0x5a, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xa6, 0x5a, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xa6, 0x5a, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
+
 		{0xa7, 0x69, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a05_n00
 		{0xa8, 0x6e, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a06_n00
 		{0xa9, 0x73, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a07_n00
@@ -31214,15 +32021,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xab, 0x14, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a01_n00
 		{0xac, 0x0a, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a02_n00
 		{0xad, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xae, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
-=======
+
 		{0xae, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xae, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xae, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
+
 		{0xaf, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a05_n00
 		{0xb0, 0x84, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a06_n00
 		{0xb1, 0x85, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a07_n00
@@ -31232,15 +32043,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xb3, 0x94, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a01_n00
 		{0xb4, 0x8a, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a02_n00
 		{0xb5, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xb6, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
-=======
+
 		{0xb6, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xb6, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xb6, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
+
 		{0xb7, 0x01, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a05_n00
 		{0xb8, 0x04, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a06_n00
 		{0xb9, 0x05, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a07_n00
@@ -31269,18 +32084,23 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xca, 0x00, MSM_CAMERA_I2C_BURST_DATA},
 		{0xcb, 0x00, MSM_CAMERA_I2C_BURST_DATA},
 		{0xcc, 0x00, MSM_CAMERA_I2C_BURST_DATA},
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xcd, 0x22, MSM_CAMERA_I2C_BURST_DATA},
 		{0xce, 0x22, MSM_CAMERA_I2C_BURST_DATA},
-=======
+
 		{0xcd, 0x55, MSM_CAMERA_I2C_BURST_DATA},
 		{0xce, 0x55, MSM_CAMERA_I2C_BURST_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xcd, 0x55, MSM_CAMERA_I2C_BURST_DATA},
 		{0xce, 0x55, MSM_CAMERA_I2C_BURST_DATA},
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xcd, 0x55, MSM_CAMERA_I2C_BURST_DATA},
+		{0xce, 0x55, MSM_CAMERA_I2C_BURST_DATA},
+
 		{0xcf, 0x00, MSM_CAMERA_I2C_BURST_DATA},
 
 		{0xd0, 0x00, MSM_CAMERA_I2C_BURST_DATA},
@@ -31422,18 +32242,23 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x5e, 0x05, MSM_CAMERA_I2C_BURST_DATA},
 		{0x5f, 0x81, MSM_CAMERA_I2C_BURST_DATA},
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x60, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a03_n00
 		{0x61, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
-=======
+
 		{0x60, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a03_n00
 		{0x61, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x60, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a03_n00
 		{0x61, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x60, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a03_n00
+		{0x61, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
+
 		{0x62, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
 		{0x63, 0x85, MSM_CAMERA_I2C_BURST_DATA},
 		{0x64, 0x8a, MSM_CAMERA_I2C_BURST_DATA},
@@ -31442,18 +32267,23 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x67, 0x81, MSM_CAMERA_I2C_BURST_DATA},
 
 		{0x68, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a03_n00
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x69, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
 		{0x6a, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
-=======
+
 		{0x69, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
 		{0x6a, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x69, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
 		{0x6a, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x69, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
+		{0x6a, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
+
 		{0x6b, 0x05, MSM_CAMERA_I2C_BURST_DATA},
 		{0x6c, 0x0a, MSM_CAMERA_I2C_BURST_DATA},
 		{0x6d, 0x00, MSM_CAMERA_I2C_BURST_DATA},
@@ -31541,15 +32371,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xb9, 0x60, MSM_CAMERA_I2C_BURST_DATA}, // steve OutRgainMin
 		{0xba, 0x88, MSM_CAMERA_I2C_BURST_DATA}, // steve OutRgainMax
 		{0xbb, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMin
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xbc, 0x6c, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
-=======
+
 		{0xbc, 0x67, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xbc, 0x67, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xbc, 0x67, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
+
 
 		{0xbd, 0x04, MSM_CAMERA_I2C_BURST_DATA},
 		{0xbe, 0x00, MSM_CAMERA_I2C_BURST_DATA},
@@ -31677,15 +32511,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		/////////////MSM_CAMERA_I2C_BURST_DATA//////////////////////
 		// CF~D0~D1 PMSM_CAMERA_I2C_BURST_DATAtive GAMMA
 		/////////////MSM_CAMERA_I2C_BURST_DATA//////////////////////
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 
 		{0x63, 0x00, MSM_CAMERA_I2C_BURST_DATA},//GMA00
 		{0x64, 0x04, MSM_CAMERA_I2C_BURST_DATA},
@@ -32155,15 +32993,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x41, 0xa8, MSM_CAMERA_I2C_BURST_DATA},//SATR_10
 		{0x42, 0xa8, MSM_CAMERA_I2C_BURST_DATA},//SATR_11
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		///////////////////////////////////////////
 		// D1 Page Adaptive CMC
 		///////////////////////////////////////////
@@ -32302,15 +33144,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		///////////////////////////////////////////
 		// D1~D2~D3 Page Adaptive Multi-CMC
 		///////////////////////////////////////////
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S MR LOW Light Tuning
-=======
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                
+
 		//MCMC_00
 		{0xbb, 0x80, MSM_CAMERA_I2C_BURST_DATA},//GLB_GAIN
 		{0xbc, 0x00, MSM_CAMERA_I2C_BURST_DATA},//GLB_HUE
@@ -32406,15 +33252,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x22, 0x82, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0x23, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0x24, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x25, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0x25, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x25, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x25, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0x26, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x27, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0x28, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -32442,15 +33292,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x3c, 0x88, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0x3d, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0x3e, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x3f, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0x3f, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x3f, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x3f, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0x40, 0x08, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x41, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0x42, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -32478,15 +33332,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x56, 0x87, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0x57, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0x58, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x59, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0x59, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x59, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x59, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0x5a, 0x0b, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x5b, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0x5c, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -32514,15 +33372,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x70, 0x82, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0x71, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0x72, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x73, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0x73, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x73, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x73, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0x74, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x75, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0x76, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -32550,15 +33412,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x8a, 0x88, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0x8b, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0x8c, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0x8d, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0x8d, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0x8d, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0x8d, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0x8e, 0x08, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x8f, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0x90, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -32586,15 +33452,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xa4, 0x87, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0xa5, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0xa6, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xa7, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0xa7, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xa7, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xa7, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0xa8, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xa9, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0xaa, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -32622,15 +33492,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xbe, 0x82, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0xbf, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0xc0, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xc1, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0xc1, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xc1, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xc1, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0xc2, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xc3, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0xc4, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -32658,15 +33532,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xd8, 0x82, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0xd9, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0xda, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xdb, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0xdb, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xdb, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xdb, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0xdc, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xdd, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0xde, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -32694,15 +33572,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xf2, 0x82, MSM_CAMERA_I2C_BURST_DATA}, //1_HUE
 		{0xf3, 0x4c, MSM_CAMERA_I2C_BURST_DATA}, //1_CENTER
 		{0xf4, 0x13, MSM_CAMERA_I2C_BURST_DATA}, //1_DELTA
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		{0xf5, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
-=======
+
 		{0xf5, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		{0xf5, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		{0xf5, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
 		{0xf6, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xf7, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
 		{0xf8, 0x30, MSM_CAMERA_I2C_BURST_DATA}, //2_DELTA
@@ -32836,15 +33718,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x75, 0x80, MSM_CAMERA_I2C_BURST_DATA}, //80 LSC 11 Gain R
 		{0x76, 0x80, MSM_CAMERA_I2C_BURST_DATA}, //78 LSC 11 Gain GR
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E
-=======
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//            
+
 		///////////////////////////////////////////
 		// D3 Page OTP, ROM Select TH
 		///////////////////////////////////////////
@@ -33717,15 +34603,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 		// STEVE Saturation control
 		// CB/CR vs sat
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
 		{0x68, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //outdoor 0x1070
@@ -33798,15 +34688,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xA9, 0x7c, MSM_CAMERA_I2C_BURST_DATA}, //
 		{0xAA, 0x9a, MSM_CAMERA_I2C_BURST_DATA}, // outdoor 0x169a
 		{0xAB, 0x78, MSM_CAMERA_I2C_BURST_DATA}, //
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 		//////////////////
 		// dd Page (DMA Indoor)
@@ -34383,15 +35277,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 		// STEVE Saturation control
 		// CB/CR vs sat
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
 		{0x68, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //indoor 0x1070
@@ -34464,15 +35362,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xA9, 0x7c, MSM_CAMERA_I2C_BURST_DATA}, //
 		{0xAA, 0x9a, MSM_CAMERA_I2C_BURST_DATA}, // indoor 0x169a
 		{0xAB, 0x78, MSM_CAMERA_I2C_BURST_DATA}, //
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 		//////////////////
 		// e0 Page (DMA Dark1)
@@ -35051,15 +35953,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x65, 0x28, MSM_CAMERA_I2C_BURST_DATA},
 		// STEVE Saturation control
 		// CB/CR vs sat
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
@@ -35133,15 +36039,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xA9, 0x7c, MSM_CAMERA_I2C_BURST_DATA}, //
 		{0xAA, 0x9a, MSM_CAMERA_I2C_BURST_DATA}, // Dark1 0x169a
 		{0xAB, 0x78, MSM_CAMERA_I2C_BURST_DATA}, //
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 
 		//////////////////
@@ -35723,15 +36633,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 		// STEVE Saturation control
 		// CB/CR vs sat
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
@@ -35806,15 +36720,19 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0xAA, 0x9a, MSM_CAMERA_I2C_BURST_DATA}, // Dark2 0x169a
 		{0xAB, 0x78, MSM_CAMERA_I2C_BURST_DATA}, //
 		// DMA END
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
-=======
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                     
+
 
 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -35956,27 +36874,33 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x11, 0x83, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE 0 skip Fix Frame Off, XY Flip
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x01, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
 
 //		{0x03, 0xC0, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x33, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 //		{0x32, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, //DMA on
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x01, 0xf0, MSM_CAMERA_I2C_BYTE_DATA}, //sleep off
 
 		{0x03, 0xC0, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x33, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x32, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, //DMA on
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 		//////////////////////////////////////////////
 		// Delay
 		//////////////////////////////////////////////

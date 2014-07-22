@@ -569,7 +569,7 @@ static void hex_dump_ipc(char *prefix, char *string, int size)
 static void dump_uart_hs_registers(struct msm_hs_port *msm_uport)
 {
 	msm_hs_clock_vote(msm_uport);
-	MSM_HS_DBG("============= UART Registers ================\n");
+	MSM_HS_DBG("====== UART Registers ==\n");
 	MSM_HS_DBG("UART_DM_MR1:%x\n", msm_hs_read(&(msm_uport->uport),
 		UART_DM_MR1));
 	MSM_HS_DBG("UART_DM_MR2:%x\n", msm_hs_read(&(msm_uport->uport),
@@ -582,7 +582,7 @@ static void dump_uart_hs_registers(struct msm_hs_port *msm_uport)
 		UART_DM_SR));
 	MSM_HS_DBG("UART_DM_IMR: %x\n", msm_hs_read(&(msm_uport->uport),
 		UART_DM_IMR));
-	MSM_HS_DBG("=============================================\n");
+	MSM_HS_DBG("===\n");
 	msm_hs_clock_unvote(msm_uport);
 }
 
@@ -3038,18 +3038,23 @@ deregister_bam:
 	return rc;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, For G2 LPM */
 /* LG_BTUI : chanha.park@lge.com : Added bluesleep interface - [S] */
-=======
+
 /*                                                                    */
 /*                                                                 */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                                                                    */
 /*                                                                 */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                                                                    */
+/*                                                                 */
+
 #ifdef CONFIG_LGE_BLUESLEEP
 struct uart_port* msm_hs_get_bt_uport(unsigned int line)
 {
@@ -3086,21 +3091,27 @@ int msm_hs_get_bt_uport_clock_state(struct uart_port *uport)
 	return ret;
 }
 EXPORT_SYMBOL(msm_hs_get_bt_uport_clock_state);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LG_BTUI : chanha.park@lge.com : Added bluesleep interface - [E] */
 /* LGE_CHANGE_E, [BT][younghyun.kwon@lge.com], 2013-04-10 */
-=======
+
 #endif /*                      */
 /*                                                                 */
 /*                                                        */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #endif /*                      */
 /*                                                                 */
 /*                                                        */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#endif /*                      */
+/*                                                                 */
+/*                                                        */
+
 
 #define BLSP_UART_NR	12
 static int deviceid[BLSP_UART_NR] = {0};
@@ -3180,15 +3191,19 @@ static int __devinit msm_hs_probe(struct platform_device *pdev)
 					IORESOURCE_MEM, "bam_mem");
 		core_irqres = platform_get_irq_byname(pdev, "core_irq");
 		bam_irqres = platform_get_irq_byname(pdev, "bam_irq");
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if 0  // suhui.kim@lge.com  BT Bring-up, wakeup_irq is not used
-=======
+
 #if 0  //                                                       
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #if 0  //                                                       
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#if 0  //                                                       
+
 		wakeup_irqres = platform_get_irq_byname(pdev, "wakeup_irq");
 #else
 		wakeup_irqres = 0;

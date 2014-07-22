@@ -33,15 +33,19 @@
 #define DC_CURRENT_DEF   -1
 
 /* Battery temperature states */
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_MACH_MSM8926_X5_SPR) || defined(CONFIG_MACH_MSM8X10_W5C_SPR_US) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
-=======
+
 #ifdef CONFIG_MACH_MSM8926_X5_SPR
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #ifdef CONFIG_MACH_MSM8926_X5_SPR
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#ifdef CONFIG_MACH_MSM8926_X5_SPR
+
 enum lge_battemp_states {
 	CHG_BATTEMP_BL_M7,
 	CHG_BATTEMP_M6_M5,
@@ -62,15 +66,19 @@ enum lge_battemp_states {
 
 };
 #endif 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE charging states */
-=======
+
 /*                     */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                     */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                     */
+
 enum lge_charging_states {
 	CHG_BATT_NORMAL_STATE,
 	CHG_BATT_DECCUR_STATE,
@@ -78,15 +86,19 @@ enum lge_charging_states {
 	CHG_BATT_STPCHG_STATE,
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE charging states change */
-=======
+
 /*                            */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                            */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                            */
+
 enum lge_states_changes {
 	STS_CHE_NONE,
 	STS_CHE_NORMAL_TO_DECCUR,
@@ -133,13 +145,17 @@ struct batt_temp_table {
 extern void
 lge_monitor_batt_temp(struct charging_info req, struct charging_rsp *res);
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* __LGE_CHARGING_SCENARIO_H_ */
-=======
+
 /*                            */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                            */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                            */
+
 

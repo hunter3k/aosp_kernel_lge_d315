@@ -17,31 +17,38 @@
 
 #include <mach/lge_charging_scenario.h>
 #include <linux/string.h>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* For LGE charging scenario debug */
 #ifdef DEBUG_LCS
 /* For fake battery temp' debug */
 #ifdef DEBUG_LCS_DUMMY_TEMP
 static int dummy_temp = 250;
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 /*                                 */
 #ifdef DEBUG_LCS
 /* For fake battery temp' debug */
 #ifdef DEBUG_LCS_DUMMY_TEMP
 static int dummy_temp = 25;
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 static int time_order = 1;
 #endif
 #endif
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
 #define CHG_MAXIDX	7
 #else
@@ -60,9 +67,11 @@ static struct batt_temp_table chg_temp_table[CHG_MAXIDX] = {
 	{     451,       550,    CHG_BATTEMP_46_OT},	// 45 < batt_temp <= 55
 #endif
 	{     551,   INT_MAX,    CHG_BATTEMP_AB_OT},	// 55 < batt_temp
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 #define CHG_MAXIDX	6
 
 static struct batt_temp_table chg_temp_table[CHG_MAXIDX] = {
@@ -72,23 +81,29 @@ static struct batt_temp_table chg_temp_table[CHG_MAXIDX] = {
 	{     42,        45,    CHG_BATTEMP_42_45},
 	{     46,        55,    CHG_BATTEMP_46_OT},
 	{     56,   INT_MAX,    CHG_BATTEMP_AB_OT},
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 };
 
 static enum lge_charging_states charging_state = 0;
 static enum lge_states_changes states_change;
 static int change_charger;
 static int pseudo_chg_ui;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 static int last_pseudo_chg_ui;
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 
 #ifdef CONFIG_LGE_PM_THERMAL
 static int last_thermal_current;
@@ -120,15 +135,19 @@ determine_lge_charging_state(enum lge_battemp_states battemp_st, int batt_volt)
 			battemp_st <= CHG_BATTEMP_BL_M11) {
 			states_change = STS_CHE_NORMAL_TO_STPCHG;
 			if (battemp_st <= CHG_BATTEMP_BL_M11)
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
-=======
+
 #ifdef CONFIG_MACH_MSM8926_X5_VZW
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #ifdef CONFIG_MACH_MSM8926_X5_VZW
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#ifdef CONFIG_MACH_MSM8926_X5_VZW
+
 				pseudo_chg_ui = 0;
 #else
 				pseudo_chg_ui = 1;
@@ -137,19 +156,23 @@ determine_lge_charging_state(enum lge_battemp_states battemp_st, int batt_volt)
 				pseudo_chg_ui = 0;
 
 			next_state = CHG_BATT_STPCHG_STATE;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
 		} else if (battemp_st == CHG_BATTEMP_46_52 || battemp_st == CHG_BATTEMP_53_OT) {
 #else
 		} else if (battemp_st == CHG_BATTEMP_46_OT) {
 #endif
-=======
+
 		} else if (battemp_st == CHG_BATTEMP_46_OT) {
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		} else if (battemp_st == CHG_BATTEMP_46_OT) {
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		} else if (battemp_st == CHG_BATTEMP_46_OT) {
+
 			if (batt_volt > DC_IUSB_VOLTUV) {
 				states_change = STS_CHE_NORMAL_TO_STPCHG;
 				pseudo_chg_ui = 1;
@@ -166,15 +189,19 @@ determine_lge_charging_state(enum lge_battemp_states battemp_st, int batt_volt)
 			battemp_st <= CHG_BATTEMP_BL_M11) {
 			states_change = STS_CHE_DECCUR_TO_STPCHG;
 			if (battemp_st <= CHG_BATTEMP_BL_M11)
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
-=======
+
 #ifdef CONFIG_MACH_MSM8926_X5_VZW
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #ifdef CONFIG_MACH_MSM8926_X5_VZW
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#ifdef CONFIG_MACH_MSM8926_X5_VZW
+
 				pseudo_chg_ui = 0;
 #else
 				pseudo_chg_ui = 1;
@@ -201,8 +228,9 @@ determine_lge_charging_state(enum lge_battemp_states battemp_st, int batt_volt)
 			pseudo_chg_ui = 0;
 			next_state = CHG_BATT_NORMAL_STATE;
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
 		else if (battemp_st == CHG_BATTEMP_46_52 || battemp_st == CHG_BATTEMP_42_45) {
 			if (batt_volt > DC_IUSB_VOLTUV) {
@@ -216,16 +244,19 @@ determine_lge_charging_state(enum lge_battemp_states battemp_st, int batt_volt)
 			}
 		}
 #endif
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 		else if (battemp_st >= CHG_BATTEMP_AB_OT) {
 			pseudo_chg_ui = 0;
 			next_state = CHG_BATT_STPCHG_STATE;
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #ifdef CONFIG_MACH_MSM8X10_W5C_VZW
 		else if (battemp_st <= CHG_BATTEMP_BL_M11) {
 			states_change = STS_CHE_NORMAL_TO_STPCHG;
@@ -233,10 +264,12 @@ determine_lge_charging_state(enum lge_battemp_states battemp_st, int batt_volt)
 			next_state = CHG_BATT_STPCHG_STATE;
 		}
 #endif
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 		break;
 	default:
 		pr_err("unknown charging status. %d\n", charging_state);
@@ -254,25 +287,31 @@ void lge_monitor_batt_temp(struct charging_info req, struct charging_rsp *res)
 #ifdef DEBUG_LCS_DUMMY_TEMP
 	if (time_order == 1) {
 		dummy_temp++;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		if (dummy_temp > 650)
 			time_order = 0;
 	} else {
 		dummy_temp--;
 		if (dummy_temp < -150)
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 		if (dummy_temp > 65)
 			time_order = 0;
 	} else {
 		dummy_temp--;
 		if (dummy_temp < -15)
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 			time_order = 1;
 	}
 
@@ -334,27 +373,33 @@ void lge_monitor_batt_temp(struct charging_info req, struct charging_rsp *res)
 	else
 		res->btm_state = BTM_HEALTH_GOOD;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	res->pseudo_chg_ui = pseudo_chg_ui;
 	if (last_pseudo_chg_ui ^ pseudo_chg_ui){
 		last_pseudo_chg_ui = pseudo_chg_ui;
 		res->force_update = true;
 	}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	if (res->pseudo_chg_ui ^ pseudo_chg_ui){
 		res->force_update = true;
 	}
 	res->pseudo_chg_ui = pseudo_chg_ui;
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 #ifdef DEBUG_LCS
-	pr_err("DLCS ==============================================\n");
+	pr_err("DLCS ====\n");
 //	pr_err("DLCS : dummy battery temperature  = %d\n", dummy_temp);
 	pr_err("DLCS : battery temperature states = %d\n", battemp_state);
 	pr_err("DLCS : res -> state        = %d\n", res->state);
@@ -365,7 +410,7 @@ void lge_monitor_batt_temp(struct charging_info req, struct charging_rsp *res)
 	pr_err("DLCS : res -> btm_state    = %d\n", res->btm_state);
 	pr_err("DLCS : res -> is_charger   = %d\n", req.is_charger);
 	pr_err("DLCS : res -> pseudo_chg_ui= %d\n", res->pseudo_chg_ui);
-	pr_err("DLCS ==============================================\n");
+	pr_err("DLCS ====\n");
 #endif
 
 #ifdef CONFIG_LGE_PM_THERMAL

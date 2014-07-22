@@ -39,14 +39,18 @@
 #define ULL_SUPPORTED_SAMPLE_RATE 48000
 #define ULL_MAX_SUPPORTED_CHANNEL 2
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
+
 #define DEBUG //                                                    
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #define DEBUG //                                                    
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#define DEBUG //                                                    
+
 
 enum {
 	ADM_RX_AUDPROC_CAL,

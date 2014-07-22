@@ -31,13 +31,16 @@ unsigned char F54_HighResistance(void)
 	short resistance[3];
 	int i, Result=0;
 	unsigned char command;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	int read_count = 0;
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 
 #ifdef F54_Porting
 	int resistanceLimit[3][2] = { {-1000, 450}, {-1000, 450}, {-400, 20} };	//base value * 1000
@@ -48,9 +51,9 @@ unsigned char F54_HighResistance(void)
 #endif
 
 #ifdef F54_Porting
-	ret += sprintf(buf+ret, "\n=====================================================\n");
+	ret += sprintf(buf+ret, "\n====\n");
 	ret += sprintf(buf+ret, "\tHigh Resistance Test\n");
-	ret += sprintf(buf+ret, "=====================================================");
+	ret += sprintf(buf+ret, "====");
 #else
 	TOUCH_INFO_MSG("\nBin #: 12		Name: High Resistance Test\n");
 #endif
@@ -64,16 +67,19 @@ unsigned char F54_HighResistance(void)
 	writeRMI(F54_Command_Base, &command, 1);
 
 	do {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		if(++read_count > 10) {
 			TOUCH_INFO_MSG("%s[%d], command = %d\n", __func__, __LINE__, command);
 			return 0;
 		}
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 		delayMS(1); //wait 1ms
 		readRMI(F54_Command_Base, &command, 1);
 	} while (command != 0x00);
@@ -81,20 +87,24 @@ unsigned char F54_HighResistance(void)
 	command = 0x02;
 	writeRMI(F54_Command_Base, &command, 1);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	read_count = 0;
 	do {
 		if(++read_count > 10) {
 			TOUCH_INFO_MSG("%s[%d], command = %d\n", __func__, __LINE__, command);
 			return 0;
 		}
-=======
+
 	do {
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	do {
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	do {
+
 		delayMS(1); //wait 1ms
 		readRMI(F54_Command_Base, &command, 1);
 	} while (command != 0x00);
@@ -108,20 +118,24 @@ unsigned char F54_HighResistance(void)
 	writeRMI(F54_Command_Base, &command, 1);
 
    // Wait until the command is completed
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
    	read_count = 0;
 	do {
 		if(++read_count > 10) {
 			TOUCH_INFO_MSG("%s[%d], command = %d\n", __func__, __LINE__, command);
 			return 0;
 		}
-=======
+
 	do {
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	do {
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	do {
+
 		delayMS(1); //wait 1ms
 		readRMI(F54_Command_Base, &command, 1);
 	} while (command != 0x00);
@@ -184,20 +198,24 @@ unsigned char F54_HighResistance(void)
 	command = 0x02;
 	writeRMI(F54_Command_Base, &command, 1);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	read_count = 0;
 	do {
 		if(++read_count > 10) {
 			TOUCH_INFO_MSG("%s[%d], command = %d\n", __func__, __LINE__, command);
 			return 0;
 		}
-=======
+
 	do {
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	do {
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	do {
+
 		delayMS(1); //wait 1ms
 		readRMI(F54_Command_Base, &command, 1);
 	} while (command != 0x00);
@@ -291,9 +309,9 @@ int F54_GetHighResistance(char *buf)
 
 	readRMI(F54_Data_Buffer, imageBuffer, 6);
 /*
-	ret += sprintf(buf+ret, "\n\n=====================================================\n");
+	ret += sprintf(buf+ret, "\n\n====\n");
 	ret += sprintf(buf+ret, "\tHigh Resistance Test\n");
-	ret += sprintf(buf+ret, "=====================================================\n");
+	ret += sprintf(buf+ret, "====\n");
 	ret += sprintf(buf+ret, "\n Parameters: ");
 */
 	for(i=0; i<3; i++) {

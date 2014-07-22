@@ -42,15 +42,19 @@
 	_IOR(LGE_BROADCAST_DMB_IOCTL_MAGIC, 37, struct broadcast_dmb_sync_info*)
 
 #define LGE_BROADCAST_DMB_IOCTL_GET_SIG_INFO \
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	_IOR(LGE_BROADCAST_DMB_IOCTL_MAGIC, 38, struct broadcast_dmb_sig_info*)
-=======
+
 	_IOWR(LGE_BROADCAST_DMB_IOCTL_MAGIC, 38, struct broadcast_dmb_control_info*)
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	_IOWR(LGE_BROADCAST_DMB_IOCTL_MAGIC, 38, struct broadcast_dmb_control_info*)
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	_IOWR(LGE_BROADCAST_DMB_IOCTL_MAGIC, 38, struct broadcast_dmb_control_info*)
+
 
 #define LGE_BROADCAST_DMB_IOCTL_GET_CH_INFO \
 	_IOR(LGE_BROADCAST_DMB_IOCTL_MAGIC, 39, struct broadcast_dmb_ch_info*)
@@ -235,15 +239,19 @@ extern int	broadcast_drv_if_close(void);
 extern int	broadcast_drv_if_set_channel(struct broadcast_dmb_set_ch_info *udata);
 extern int	broadcast_drv_if_resync(void);
 extern int	broadcast_drv_if_detect_sync(struct broadcast_dmb_sync_info *udata);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 extern int	broadcast_drv_if_get_sig_info(struct broadcast_dmb_sig_info *bb_info);
-=======
+
 extern int	broadcast_drv_if_get_sig_info(struct broadcast_dmb_control_info *bb_info);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 extern int	broadcast_drv_if_get_sig_info(struct broadcast_dmb_control_info *bb_info);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+extern int	broadcast_drv_if_get_sig_info(struct broadcast_dmb_control_info *bb_info);
+
 extern int	broadcast_drv_if_get_ch_info(struct broadcast_dmb_ch_info *ch_info);
 extern int	broadcast_drv_if_get_dmb_data(struct broadcast_dmb_data_info *pdmb_data);
 extern int	broadcast_drv_if_reset_ch(void);

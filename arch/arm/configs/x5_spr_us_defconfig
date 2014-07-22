@@ -259,8 +259,11 @@ CONFIG_LGE_NFC=y
 CONFIG_LGE_NFC_PN544_C3=y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 CONFIG_LGE_NFC_MULTICORE_FASTBOOT=y
 CONFIG_LGE_NFC_PRESTANDBY=y
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
@@ -319,7 +322,10 @@ CONFIG_TOUCHSCREEN_LGE_TS_MISC=y
 CONFIG_TOUCHSCREEN_MELFAS_MMS136=y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 CONFIG_TOUCHSCREEN_LGE_LPWG=y
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
@@ -378,8 +384,11 @@ CONFIG_LGE_PM_PWR_KEY_FOR_CHG_LOGO=y
 CONFIG_LGE_PM_WORKAROUND_PORT_OPEN_FAIL_IN_FACTORY_TEST=y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 CONFIG_LGE_PM_BMS_FACTORY_TEST=y
 CONFIG_LGE_PM_BMS_CC_ACCURACY_PATCH=y
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
@@ -410,11 +419,17 @@ CONFIG_MSM_CSIPHY=y
 CONFIG_MSM_CSID=y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 CONFIG_MSM_EEPROM=y
 CONFIG_MSM_ISPIF=y
 CONFIG_IMX111=y
 CONFIG_IMX119=y
 CONFIG_IMX219=y
+=======
+CONFIG_MSM_ISPIF=y
+CONFIG_IMX111=y
+CONFIG_IMX119=y
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 CONFIG_MSM_ISPIF=y
 CONFIG_IMX111=y
@@ -488,7 +503,10 @@ CONFIG_USB_G_LGE_ANDROID_AUTORUN=y
 CONFIG_USB_G_LGE_ANDROID_AUTORUN_LGE=y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 CONFIG_USB_G_LGE_SERIALNO_REDIRECTION=y
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======

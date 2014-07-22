@@ -35,18 +35,23 @@
  * (as a macro let's say).
  */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* BEGIN : janghyun.baek@lge.com 2012-12-26 Temporarily change mode to 777
  * debug power sysfs node */
-=======
+
 /*                                                                        
                           */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                                                                        
                           */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                                                                        
+                          */
+
 #ifdef CONFIG_LGE_PM
 #define POWER_SUPPLY_ATTR(_name)					\
 {									\
@@ -62,15 +67,19 @@
 	.store = power_supply_store_property,				\
 }
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* END : janghyun.baek@lge.com 2012-12-26 */
-=======
+
 /*                                        */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                                        */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                                        */
+
 
 #ifdef CONFIG_LGE_PM_FACTORY_PSEUDO_BATTERY
 #define PSEUDO_BATT_ATTR(_name)						\
@@ -133,24 +142,30 @@ static ssize_t power_supply_show_property(struct device *dev,
 		"Unknown", "System", "Device"
 	};
 #ifdef CONFIG_LGE_PM_FACTORY_TESTMODE
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_MACH_MSM8926_X3N_OPEN_EU) || defined(CONFIG_MACH_MSM8926_X3N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_F70N_GLOBAL_COM) || \
 	defined(CONFIG_MACH_MSM8926_X3N_GLOBAL_SCA) || \
 	defined(CONFIG_MACH_MSM8926_X3_TRF_US) || defined(CONFIG_MACH_MSM8926_X3N_KR) || defined(CONFIG_MACH_MSM8926_F70N_KR)
 	static char *lge_hw_rev_text[] = {
 		"rev_0", "rev_a", "rev_a2", "rev_b", "rev_b2","rev_c", "rev_10", "rev_11", "revserved"
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 #if defined(CONFIG_MACH_MSM8926_X3N_OPEN_EU) || defined(CONFIG_MACH_MSM8926_X3N_GLOBAL_COM) || \
 	defined(CONFIG_MACH_MSM8926_X3_TRF_US) || defined(CONFIG_MACH_MSM8926_X3_KR)
 	static char *lge_hw_rev_text[] = {
 		"rev_0", "rev_a", "rev_a2", "rev_b", "rev_c","rev_d", "rev_10", "rev_11", "revserved"
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	};
 #else
 	static char *lge_hw_rev_text[] = {
@@ -436,16 +451,19 @@ static struct device_attribute power_supply_attrs[] = {
 #ifdef CONFIG_LGE_PM_VZW_FAST_CHG
 	POWER_SUPPLY_ATTR(vzw_chg),
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #ifdef CONFIG_MAX17048_FUELGAUGE
 	POWER_SUPPLY_ATTR(use_fuelgauge),
 #endif
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	/* Properties of type `const char *' */
 	POWER_SUPPLY_ATTR(model_name),
 	POWER_SUPPLY_ATTR(manufacturer),

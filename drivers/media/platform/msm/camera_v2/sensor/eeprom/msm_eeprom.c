@@ -24,15 +24,19 @@
 #define CDBG(fmt, args...) pr_debug(fmt, ##args)
 #endif
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 // [LGE_UPDATE] [yt.jeon@lge.com] [2014-01-06] use cmdline info (lge.camera)
-=======
+
 //                                                                          
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                                                          
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                                                          
+
 char *lge_camera_info = NULL;
 
 DEFINE_MSM_MUTEX(msm_eeprom_mutex);
@@ -228,15 +232,19 @@ int32_t read_eeprom_memory(struct msm_eeprom_ctrl_t *e_ctrl)
 			}
 			memptr += emap[j].mem.valid_size;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 // [LGE_UPDATE_S] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
-=======
+
 //                                                                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                                                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                                                                
+
 			/*
 			 *We need to change slave address for read data (Y412B)
 			 *I2C addr : 0x50, 0x51, 0x52, 0x53
@@ -247,15 +255,19 @@ int32_t read_eeprom_memory(struct msm_eeprom_ctrl_t *e_ctrl)
 				e_ctrl->i2c_client.cci_client->sid++;
 				#endif
 			#else
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 				#if defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
-=======
+
 				#if defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 				#if defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+				#if defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
+
 				if(lge_camera_info){
 					if(!strncmp(lge_camera_info, "imx111", 6)){
 						CDBG("%s: (global)I2C address : 0x%x\n", __func__, e_ctrl->i2c_client.client->addr);
@@ -269,15 +281,19 @@ int32_t read_eeprom_memory(struct msm_eeprom_ctrl_t *e_ctrl)
 					#endif
 				#endif
 			#endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 // [LGE_UPDATE_E] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
-=======
+
 //                                                                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                                                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                                                                
+
 		}
 		if (emap[j].pageen.valid_size) {
 			e_ctrl->i2c_client.addr_type = emap[j].pageen.addr_t;
@@ -461,21 +477,27 @@ static struct msm_cam_clk_info cam_8960_clk_info[] = {
 };
 
 static struct msm_cam_clk_info cam_8974_clk_info[] = {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 // [LGE_UPDATE_S] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
 	[SENSOR_CAM_MCLK] = {"cam_src_clk", 24000000},
 // [LGE_UPDATE_E] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
-=======
+
 //                                                                                
 	[SENSOR_CAM_MCLK] = {"cam_src_clk", 24000000},
 //                                                                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                                                                
 	[SENSOR_CAM_MCLK] = {"cam_src_clk", 24000000},
 //                                                                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                                                                
+	[SENSOR_CAM_MCLK] = {"cam_src_clk", 24000000},
+//                                                                                
+
 	[SENSOR_CAM_CLK] = {"cam_clk", 0},
 };
 
@@ -487,18 +509,23 @@ static struct v4l2_subdev_ops msm_eeprom_subdev_ops = {
 	.core = &msm_eeprom_subdev_core_ops,
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 // [LGE_UPDATE_S] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
 #if defined(CONFIG_IMX111)|| defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
-=======
+
 //                                                                                
 #if defined(CONFIG_IMX111)|| defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                                                                
 #if defined(CONFIG_IMX111)|| defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                                                                
+#if defined(CONFIG_IMX111)|| defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
+
 static int msm_eeprom_check_CRC(struct msm_eeprom_ctrl_t *e_ctrl)
 {
 	int CRC_code, CRC_sum, counter;
@@ -542,18 +569,23 @@ static int msm_eeprom_check_CRC(struct msm_eeprom_ctrl_t *e_ctrl)
 	return 0;
 }
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 // [LGE_UPDATE_E] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
 // [LGE_UPDATE_S] [yt.jeon@lge.com] [2014-01-06] use cmdline info (lge.camera)
-=======
+
 //                                                                                
 //                                                                            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                                                                
 //                                                                            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                                                                
+//                                                                            
+
 static int __init camera_information_setup(char *cam_info)
 {
         lge_camera_info = cam_info;
@@ -561,15 +593,19 @@ static int __init camera_information_setup(char *cam_info)
         return 1;
 }
 __setup("lge.camera=", camera_information_setup);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 // [LGE_UPDATE_E] [yt.jeon@lge.com] [2014-01-06] use cmdline info (lge.camera)
-=======
+
 //                                                                            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                                                            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                                                            
+
 
 int32_t msm_eeprom_i2c_probe(struct i2c_client *client,
 	const struct i2c_device_id *id) {
@@ -614,15 +650,19 @@ int32_t msm_eeprom_i2c_probe(struct i2c_client *client,
 	}
 
 	power_info = &e_ctrl->eboard_info->power_info;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	e_ctrl->eboard_info->i2c_slaveaddr = temp<<1; //LGE_UPDATE makes 8bit for i2c driver 2013-11-26 yt.jeon@lge.com
-=======
+
 	e_ctrl->eboard_info->i2c_slaveaddr = temp<<1; //                                                               
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	e_ctrl->eboard_info->i2c_slaveaddr = temp<<1; //                                                               
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	e_ctrl->eboard_info->i2c_slaveaddr = temp<<1; //                                                               
+
 	e_ctrl->i2c_client.client = client;
 	e_ctrl->is_supported = 0;
 
@@ -669,18 +709,23 @@ int32_t msm_eeprom_i2c_probe(struct i2c_client *client,
 	for (j = 0; j < e_ctrl->num_bytes; j++)
 		CDBG("memory_data[%d] = 0x%X\n", j, e_ctrl->memory_data[j]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	// [LGE_UPDATE_S] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
 #if defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
-=======
+
 	//                                                                                
 #if defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                                                
 #if defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                                                
+#if defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
+
 	if(lge_camera_info){
 		if(!strncmp(lge_camera_info, "imx111", 6)){
 			pr_err("%s (GLOBAL) call msm_eeprom_check_CRC\n", __func__);
@@ -701,15 +746,19 @@ int32_t msm_eeprom_i2c_probe(struct i2c_client *client,
 		}
 	#endif
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	// [LGE_UPDATE_E] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
-=======
+
 	//                                                                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                                                
+
 
 	rc = msm_camera_power_down(power_info, e_ctrl->eeprom_device_type,
 		&e_ctrl->i2c_client);
@@ -1127,15 +1176,19 @@ static int32_t msm_eeprom_platform_probe(struct platform_device *pdev)
 	for (j = 0; j < e_ctrl->num_bytes; j++)
 		CDBG("memory_data[%d] = 0x%X\n", j, e_ctrl->memory_data[j]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	// [LGE_UPDATE_S] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
-=======
+
 	//                                                                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                                                
+
 	#if defined(CONFIG_IMX111)
 	rc = msm_eeprom_check_CRC(e_ctrl);
 	if (rc < 0) {
@@ -1143,15 +1196,19 @@ static int32_t msm_eeprom_platform_probe(struct platform_device *pdev)
 		goto memdata_free;
 	}
 	#endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	// [LGE_UPDATE_E] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
-=======
+
 	//                                                                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//                                                                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//                                                                                
+
 
 	rc = msm_camera_power_down(power_info, e_ctrl->eeprom_device_type,
 		&e_ctrl->i2c_client);

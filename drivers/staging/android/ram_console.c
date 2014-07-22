@@ -28,18 +28,23 @@ static struct persistent_ram_zone *ram_console_zone;
 static const char *bootinfo;
 static size_t bootinfo_size;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE : not use Reed-solmon ECC check for ram-console data integrity.
   * this ECC use cpu-power intensively that lead  slow down a boot time
-=======
+
 /*                                                                    
                                                                        
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                                                                    
                                                                        
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                                                                    
+                                                                       
+
   */
 #define USE_RAM_CONSOLE_ECC	false
 

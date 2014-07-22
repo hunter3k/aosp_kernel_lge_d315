@@ -90,26 +90,32 @@
 #ifndef CONFIG_MACH_MSM8X10_W5_AIO_US
 #ifndef CONFIG_MACH_MSM8926_X3_TRF_US
 #ifndef CONFIG_MACH_MSM8X10_W3C_TRF_US
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #ifndef CONFIG_MACH_MSM8X10_W5_TRF_US
 #ifndef CONFIG_MACH_MSM8X10_W5C_TRF_US
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 #include "f_ecm.c"
 #endif
 #endif
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #endif
 #endif
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 #include "f_qc_rndis.c"
 #include "u_ether.c"
 #include "u_qc_ether.c"
@@ -294,16 +300,19 @@ static char serial_string[256];
 #define CHARGE_ONLY_STRING_IDX  3
 static char charge_only_string[256];
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #ifdef CONFIG_USB_G_LGE_SERIALNO_REDIRECTION
 #define STRING_SERIAL_REDI_IDX      4
 static char serial_string_redi[256];
 #endif
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 
 /* String Table */
 static struct usb_string strings_dev[] = {
@@ -313,15 +322,18 @@ static struct usb_string strings_dev[] = {
 #ifdef CONFIG_USB_G_LGE_ANDROID
     [CHARGE_ONLY_STRING_IDX].s = charge_only_string,
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #ifdef CONFIG_USB_G_LGE_SERIALNO_REDIRECTION
     [STRING_SERIAL_REDI_IDX].s = serial_string_redi,
 #endif
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	{  }			/* end of list */
 };
 
@@ -1089,14 +1101,17 @@ static struct android_usb_function ncm_function = {
 #ifndef CONFIG_MACH_MSM8X10_W5_AIO_US
 #ifndef CONFIG_MACH_MSM8926_X3_TRF_US
 #ifndef CONFIG_MACH_MSM8X10_W3C_TRF_US
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #ifndef CONFIG_MACH_MSM8X10_W5_TRF_US
 #ifndef CONFIG_MACH_MSM8X10_W5C_TRF_US
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 /* ecm transport string */
 static char ecm_transports[MAX_XPORT_STR_LEN];
 
@@ -1219,14 +1234,17 @@ static struct android_usb_function ecm_qc_function = {
 #endif
 #endif
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #endif
 #endif
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 /* MBIM - used with BAM */
 #define MAX_MBIM_INSTANCES 1
 
@@ -1896,14 +1914,17 @@ static struct android_usb_function rndis_qc_function = {
 #ifndef CONFIG_MACH_MSM8X10_W5_AIO_US
 #ifndef CONFIG_MACH_MSM8926_X3_TRF_US
 #ifndef CONFIG_MACH_MSM8X10_W3C_TRF_US
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #ifndef CONFIG_MACH_MSM8X10_W5_TRF_US
 #ifndef CONFIG_MACH_MSM8X10_W5C_TRF_US
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 static int ecm_function_bind_config(struct android_usb_function *f,
 					struct usb_configuration *c)
 {
@@ -1969,14 +1990,17 @@ static struct android_usb_function ecm_function = {
 #endif
 #endif
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #endif
 #endif
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 
 struct mass_storage_function_config {
 	struct fsg_config fsg;
@@ -1998,15 +2022,19 @@ static int mass_storage_function_init(struct android_usb_function *f,
 	if (!config)
 		return -ENOMEM;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #ifdef CONFIG_USB_G_LGE_ANDROID	/* by mo2chunghan.lee@lge.com, 09/20/2012 */
-=======
+
 #ifdef CONFIG_USB_G_LGE_ANDROID	/*                                        */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #ifdef CONFIG_USB_G_LGE_ANDROID	/*                                        */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#ifdef CONFIG_USB_G_LGE_ANDROID	/*                                        */
+
 		config->fsg.vendor_name = "LGE";
 		config->fsg.product_name = "Android Platform";
 #endif
@@ -2217,15 +2245,19 @@ static struct android_usb_function cdrom_storage_function = {
 	.bind_config	= cdrom_storage_function_bind_config,
 	.attributes	= cdrom_storage_function_attributes,
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #endif /* CONFIG_USB_G_LGE_ANDROID_AUTORUN */
-=======
+
 #endif /*                                  */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #endif /*                                  */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#endif /*                                  */
+
 
 #ifdef CONFIG_USB_G_LGE_ANDROID
 /* charge only mode */
@@ -2250,15 +2282,19 @@ static struct android_usb_function charge_only_function = {
    .cleanup    = charge_only_function_cleanup,
    .bind_config    = charge_only_function_bind_config,
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #endif /* CONFIG_USB_G_LGE_ANDROID */
-=======
+
 #endif /*                          */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #endif /*                          */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#endif /*                          */
+
 
 static int accessory_function_init(struct android_usb_function *f,
 					struct usb_composite_dev *cdev)
@@ -2407,26 +2443,32 @@ static struct android_usb_function *supported_functions[] = {
 #ifndef CONFIG_MACH_MSM8X10_W5_AIO_US
 #ifndef CONFIG_MACH_MSM8926_X3_TRF_US
 #ifndef CONFIG_MACH_MSM8X10_W3C_TRF_US
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #ifndef CONFIG_MACH_MSM8X10_W5_TRF_US
 #ifndef CONFIG_MACH_MSM8X10_W5C_TRF_US
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	&ecm_qc_function,
 #endif
 #endif
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #endif
 #endif
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 #ifdef CONFIG_SND_PCM
 	&audio_function,
 #endif
@@ -2451,26 +2493,32 @@ static struct android_usb_function *supported_functions[] = {
 #ifndef CONFIG_MACH_MSM8X10_W5_AIO_US
 #ifndef CONFIG_MACH_MSM8926_X3_TRF_US
 #ifndef CONFIG_MACH_MSM8X10_W3C_TRF_US
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #ifndef CONFIG_MACH_MSM8X10_W5_TRF_US
 #ifndef CONFIG_MACH_MSM8X10_W5C_TRF_US
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	&ecm_function,
 #endif
 #endif
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #endif
 #endif
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	&ncm_function,
 	&mass_storage_function,
 #ifdef CONFIG_USB_G_LGE_ANDROID
@@ -3183,15 +3231,19 @@ static void android_lge_factory_bind(struct usb_composite_dev *cdev)
     }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #endif /* CONFIG_USB_G_LGE_ANDROID && CONFIG_LGE_PM */
-=======
+
 #endif /*                                           */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #endif /*                                           */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#endif /*                                           */
+
 
 static int android_bind_config(struct usb_configuration *c)
 {
@@ -3263,15 +3315,19 @@ static int android_bind(struct usb_composite_dev *cdev)
 
 	/* Default strings - should be updated by userspace */
 #ifdef CONFIG_USB_G_LGE_ANDROID
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	/* Default string as LGE products */
-=======
+
 	/*                                */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	/*                                */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	/*                                */
+
 	ret = lgeusb_get_manufacturer_name(lge_manufacturer);
 	if (!ret)
 		strlcpy(manufacturer_string, lge_manufacturer,

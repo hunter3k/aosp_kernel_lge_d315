@@ -108,7 +108,11 @@
 		qcom,sensor-name = "hi707";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		qcom,maker-gpio = <112>;
+=======
+
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 
 >>>>>>> 0093d79... Overlay of LG soruce drop

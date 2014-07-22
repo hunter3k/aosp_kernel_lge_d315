@@ -55,6 +55,7 @@
 			atmel,t15_key_map = <158 172 139 249>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			atmel,t15_key_array = <0 0 1 0 2 0 3 0>;
 
 			atmel,fw_name = "atmel/E4A47P2_2_05.fw";
@@ -67,12 +68,17 @@
 =======
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 
 			atmel,fw_name = "atmel/E4A47P2_1_05.fw";
 			atmel,panel_check = <1>;
 			atmel,t15_extra_key_state = <2 128 8 1>;
 			atmel,extra_fw_name = "atmel/E4A47P1_1_05.fw";
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop

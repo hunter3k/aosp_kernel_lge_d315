@@ -357,9 +357,12 @@ CONFIG_LGE_PM_PWR_KEY_FOR_CHG_LOGO=y
 CONFIG_LGE_PM_WORKAROUND_USB_VALID_BY_REVERSE_BOOST=y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 CONFIG_LGE_PM_WORKAROUND_PORT_OPEN_FAIL_IN_FACTORY_TEST=y
 CONFIG_LGE_PM_BMS_FACTORY_TEST=y
 CONFIG_LGE_PM_BMS_CC_ACCURACY_PATCH=y
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
@@ -469,6 +472,10 @@ CONFIG_LEDS_QPNP=y
 CONFIG_LEDS_TRIGGERS=y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+CONFIG_LGE_TOVIS_ILI9806E_WVGA_PANEL_CABC=y
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 CONFIG_LGE_TOVIS_ILI9806E_WVGA_PANEL_CABC=y
 >>>>>>> 0093d79... Overlay of LG soruce drop

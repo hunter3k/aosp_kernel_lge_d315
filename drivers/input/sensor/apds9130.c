@@ -63,8 +63,9 @@
 
 #define APDS9130_INTERRUPT_MODE_ENABLE
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* Change History
  *
  * 1.0.0	Funcamental Functions of APDS-9130
@@ -73,9 +74,11 @@
  * 1.0.2	Add LG cross-talk calibration process
  * 1.0.3	LGE Commonization (WX-BSP-TS@lge.com, 2013/8/27)
  *
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 /*               
   
                                            
@@ -84,10 +87,13 @@
                                               
                                                          
   
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
  */
 
 #define APDS9130_IOCTL_PS_ENABLE		1
@@ -282,15 +288,19 @@ struct apds9130_data {
 #if defined(APDS9130_PROXIMITY_CAL)
 	int cross_talk;
 	bool read_ps_cal_data;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	int ps_cal_result;  //[LGSI_SP4_BSP][kirankumar.vm@lge.com] Proximity Testmode changes
-=======
+
 	int ps_cal_result;  //                                                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	int ps_cal_result;  //                                                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	int ps_cal_result;  //                                                                
+
 #endif
 
 	atomic_t i2c_status;
@@ -553,15 +563,19 @@ static ssize_t apds9130_show_run_calibration(struct device *dev,
 {
 	struct apds9130_data *data = dev_get_drvdata(dev);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	return sprintf(buf, "%d\n", data->ps_cal_result); //[LGSI_SP4_BSP][kirankumar.vm@lge.com] Proximity Testmode changes
-=======
+
 	return sprintf(buf, "%d\n", data->ps_cal_result); //                                                                
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	return sprintf(buf, "%d\n", data->ps_cal_result); //                                                                
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	return sprintf(buf, "%d\n", data->ps_cal_result); //                                                                
+
 }
 
 static ssize_t apds9130_store_run_calibration(struct device *dev,
@@ -1002,27 +1016,33 @@ static int apds9130_enable_ps_sensor(struct i2c_client *client, int val)
 
 
 			apds9130_set_pilt(client, 0);		// init threshold for proximity
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			apds9130_set_piht(client, data->ps_threshold); //[LGSI_SP4_BSP][kirankumar.vm@lge.com] add calibrated threshold
 			
 			//[LGSI_SP4_BSP_BEGIN][kirankumar.vm@lge.com] Report the Far Detection evertytime when u enable the sensor 07-11-2012
 			input_report_abs(data->input_dev_ps, ABS_DISTANCE, PROX_INPUT_FAR);/* NEAR-to-FAR detection */
 			input_sync(data->input_dev_ps);
 			//[LGSI_SP4_BSP_END][kirankumar.vm@lge.com] Report the Far Detection evertytime when u enable the sensor
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 			apds9130_set_piht(client, data->ps_threshold); //                                                              
 			
 			//                                                                                                                   
 			input_report_abs(data->input_dev_ps, ABS_DISTANCE, PROX_INPUT_FAR);/* NEAR-to-FAR detection */
 			input_sync(data->input_dev_ps);
 			//                                                                                                      
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 			
 			err = apds9130_set_enable(client, 0x2D);	 /* enable PS interrupt */
 			if(err < 0)
@@ -1216,15 +1236,19 @@ static ssize_t apds9130_store_ppcount(struct device *dev,
 	return count;
 }
 static DEVICE_ATTR(ppcount, S_IWUSR | S_IRUGO, apds9130_show_ppcount, apds9130_store_ppcount);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //[LGSI_SP4_BSP_END][kirankumar.vm@lge.com] 31-10-2012 Added sys Fs entry for PPcount
-=======
+
 //                                                                                   
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                                                                   
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                                                                   
+
 #if defined(APDS9130_PROXIMITY_CAL)
 static ssize_t apds9130_show_control(struct device *dev, struct device_attribute *attr, char *buf)
 {
@@ -1258,15 +1282,19 @@ static ssize_t apds9130_store_control(struct device *dev, struct device_attribut
 static DEVICE_ATTR(control,  S_IWUSR | S_IRUGO , apds9130_show_control, apds9130_store_control);
 #endif
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //[LGSI_SP4_BSP_BEGIN][kirankumar.vm@lge.com] Added Sys Fs access to show proximity status for Testmode
-=======
+
 //                                                                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                                                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                                                                                     
+
 static ssize_t apds9130_show_show(struct device *dev, struct device_attribute *attr, char *buf)
 {
 	struct apds9130_data *data = dev_get_drvdata(dev);
@@ -1285,15 +1313,19 @@ static ssize_t apds9130_show_show(struct device *dev, struct device_attribute *a
 }
 
 static DEVICE_ATTR(value, S_IWUSR | S_IRUGO , apds9130_show_show, NULL);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //[LGSI_SP4_BSP_END][kirankumar.vm@lge.com]
-=======
+
 //                                         
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                         
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                         
+
 
 static ssize_t apds9130_show_pdrive(struct device *dev,
 				struct device_attribute *attr, char *buf)
@@ -1475,21 +1507,27 @@ static struct attribute *apds9130_attributes[] = {
 	&dev_attr_run_calibration.attr,
 	&dev_attr_prox_cal_data.attr,
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	&dev_attr_value.attr, //[LGSI_SP4_BSP][kirankumar.vm@lge.com] Added Sys Fs access to show proximity status for Testmode
 	&dev_attr_ppcount.attr,
 	&dev_attr_pdrive.attr,/*[LGE_BSP][yunmo.yang@lge.com]add pDrive sysfs Entry*/
-=======
+
 	&dev_attr_value.attr, //                                                                                               
 	&dev_attr_ppcount.attr,
 	&dev_attr_pdrive.attr,/*                                                   */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	&dev_attr_value.attr, //                                                                                               
 	&dev_attr_ppcount.attr,
 	&dev_attr_pdrive.attr,/*                                                   */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	&dev_attr_value.attr, //                                                                                               
+	&dev_attr_ppcount.attr,
+	&dev_attr_pdrive.attr,/*                                                   */
+
 	&dev_attr_pilt.attr,
 	&dev_attr_piht.attr,
 	//add
@@ -1557,8 +1595,9 @@ static int apds9130_init_client(struct i2c_client *client)
 	if (err < 0) return err;
 
 	// sensor is in disabled mode but all the configurations are preset
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* Temp block the below code as no need to set cross talk threshold during proximity OFF state [LGSI_SP4_BSP][kirankumar.vm@lge.com]
 #if defined(APDS9130_PROXIMITY_CAL)
 	err = apds9130_set_enable(client,0);
@@ -1567,9 +1606,11 @@ static int apds9130_init_client(struct i2c_client *client)
 		return err;
 	}
 #endif
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 /*                                                                                                                                  
                                    
                                      
@@ -1578,10 +1619,13 @@ static int apds9130_init_client(struct i2c_client *client)
              
   
       
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 */
 	return 0;
 }

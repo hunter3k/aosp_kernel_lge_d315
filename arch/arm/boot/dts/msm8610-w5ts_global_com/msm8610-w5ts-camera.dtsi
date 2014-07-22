@@ -24,7 +24,11 @@
 			rt8542,max_brightness = <0x7D>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			rt8542,enable_pwm = <0>;
+=======
+			rt8542,enable_pwm = <1>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			rt8542,enable_pwm = <1>;
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -64,6 +68,7 @@
 
 &i2c {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 /* IMX111(8M) & IMX219(8M) actuator */
@@ -135,6 +140,8 @@
 =======
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	actuator0: qcom,actuator@18 {
 		cell-index = <0>;	//Use Af_main_0 of dw9716 with HI543
 		reg = <0x18 0x0>;
@@ -150,6 +157,9 @@
 		qcom,slave-addr = <0x28>;
 		qcom,cci-master = <0>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -215,6 +225,10 @@
 		qcom,sensor-mode = <0>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+		qcom,cci-master = <0>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		qcom,cci-master = <0>;
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -260,6 +274,10 @@
 		qcom,sensor-mode = <1>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+		qcom,cci-master = <0>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		qcom,cci-master = <0>;
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -307,7 +325,12 @@
 		qcom,sensor-mode = <0>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		status = "decide_in_lk";
+=======
+		qcom,cci-master = <0>;
+		status = "okay";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		qcom,cci-master = <0>;
 		status = "okay";
@@ -352,6 +375,7 @@
 		qcom,csi-lane-mask = <0x3>;
 		qcom,sensor-position = <1>;
 		qcom,sensor-mode = <1>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 		status = "okay";
@@ -446,12 +470,18 @@
 =======
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		qcom,cci-master = <0>;
 		status = "okay";
 		revision = "rev_b...";
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+};
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 };
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======

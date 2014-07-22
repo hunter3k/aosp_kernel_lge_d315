@@ -468,27 +468,33 @@ struct msm_otg {
 	bool ext_chg_opened;
 	bool ext_chg_active;
 	struct completion ext_chg_wait;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	bool pm_done;
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
         int ui_enabled;
 
 #ifdef CONFIG_LGE_PM_USB_ID
 	struct qpnp_vadc_chip		*vadc_dev;
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #ifdef CONFIG_LGE_PM_VZW_FAST_CHG
     int chg_det_count;
 #endif
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 };
 
 struct ci13xxx_platform_data {

@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+# CONFIG_ARM_PATCH_PHYS_VIRT is not set
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 # CONFIG_ARM_PATCH_PHYS_VIRT is not set
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -258,6 +262,12 @@ CONFIG_CFG80211=y
 CONFIG_NL80211_TESTMODE=y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+CONFIG_LGE_NFC=y
+CONFIG_LGE_NFC_PN547=y
+CONFIG_LGE_NFC_SET_IRQ_WAKEUP=y
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 CONFIG_LGE_NFC=y
 CONFIG_LGE_NFC_PN547=y
@@ -325,7 +335,10 @@ CONFIG_TOUCHSCREEN_LGE_TOUCHCORE=y
 CONFIG_TOUCHSCREEN_LGE_MELFAS=y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 CONFIG_TOUCHSCREEN_LGE_LPWG=y
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
@@ -380,8 +393,11 @@ CONFIG_LGE_PM_PWR_KEY_FOR_CHG_LOGO=y
 CONFIG_LGE_PM_WORKAROUND_PORT_OPEN_FAIL_IN_FACTORY_TEST=y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 CONFIG_LGE_PM_BMS_FACTORY_TEST=y
 CONFIG_LGE_PM_BMS_CC_ACCURACY_PATCH=y
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
@@ -415,7 +431,10 @@ CONFIG_MSM_ISPIF=y
 CONFIG_IMX111=y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 CONFIG_IMX219=y
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======

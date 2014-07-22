@@ -51,13 +51,16 @@ unsigned char F54_FullRawCap(int mode)
 	unsigned char command = 0;
 #ifdef F54_Porting
 	int ret = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	int read_count = 0;
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	//unsigned char product_id[11] = {0};
 #endif
 
@@ -145,16 +148,19 @@ unsigned char F54_FullRawCap(int mode)
 		command = 0x04;
 		writeRMI(F54_Command_Base, &command, 1);
 		do {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			if(++read_count > 10) {
 				TOUCH_INFO_MSG("%s[%d], command = %d\n", __func__, __LINE__, command);
 				return 0;
 			}
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 			delayMS(1); //wait 1ms
 			readRMI(F54_Command_Base, &command, 1);
 		} while (command != 0x00);
@@ -162,20 +168,24 @@ unsigned char F54_FullRawCap(int mode)
 		// Force calibrate
 		command = 0x02;
 		writeRMI(F54_Command_Base, &command, 1);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		read_count = 0;
 		do {
 			if(++read_count > 10) {
 				TOUCH_INFO_MSG("%s[%d], command = %d\n", __func__, __LINE__, command);
 				return 0;
 			}
-=======
+
 		do {
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		do {
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		do {
+
 			delayMS(1); //wait 1ms
 			readRMI(F54_Command_Base, &command, 1);
 		} while (command != 0x00);
@@ -195,8 +205,9 @@ unsigned char F54_FullRawCap(int mode)
 	writeRMI(F54_Command_Base, &command, 1);
  
 	// Wait until the command is completed
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	read_count = 0;
 	do {
 		if(++read_count > 10) {
@@ -206,17 +217,22 @@ unsigned char F54_FullRawCap(int mode)
 		delayMS(1); //wait 1ms
 		readRMI(F54_Command_Base, &command, 1);
 	} while (command != 0x00);
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	do {
 	 delayMS(1); //wait 1ms
 		readRMI(F54_Command_Base, &command, 1);
    } while (command != 0x00);
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
  
 	readRMI(F54_Data_Buffer, &ImageBuffer[0], length);
 
@@ -233,8 +249,8 @@ unsigned char F54_FullRawCap(int mode)
 #ifdef F54_Porting
 			memset(buf, 0, sizeof(buf));
 			ret += sprintf(buf+ret, "\nInfo: Tx=%d Rx=%d\n", numberOfTx, numberOfRx);
-			ret += sprintf(buf+ret, "===============================================");
-			ret += sprintf(buf+ret, "===================================\n");
+			ret += sprintf(buf+ret, "=====");
+			ret += sprintf(buf+ret, "\n");
 #else
 			printk("#ofTx\t%d\n", numberOfTx);
 			printk("#ofRx\t%d\n", numberOfRx);
@@ -600,8 +616,8 @@ int F54_GetFullRawCap(int mode, char *buf) {
 
 	ret += sprintf(buf+ret, "\n\n");
 	ret += sprintf(buf+ret, "Info: Tx=%d Rx=%d\n", numberOfTx, numberOfRx);
-	ret += sprintf(buf+ret, "\n===============================================");
-	ret += sprintf(buf+ret, "===================================\n      :");
+	ret += sprintf(buf+ret, "\n=====");
+	ret += sprintf(buf+ret, "\n      :");
 	for (i = 0; i < numberOfRx; i++)
 		ret += sprintf(buf+ret, "%5d",i);
 	ret += sprintf(buf+ret, "\n-----------------------------------------------------");

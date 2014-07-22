@@ -1433,9 +1433,9 @@ static ssize_t mms_chstatus_show(struct i2c_client *client, char *buf)
 		len += snprintf(buf + len, PAGE_SIZE - len, "*** LCD STATUS : O N ***\n");
 		len += snprintf(buf + len, PAGE_SIZE - len, "************************\n");
 	}
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 	len += snprintf(buf + len, PAGE_SIZE - len, "%5c", c);
 	for (j = 0; j < ts->dev.tx_ch_num; j++)
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", j);
@@ -1479,8 +1479,9 @@ static ssize_t mms_chstatus_show(struct i2c_client *client, char *buf)
 		}
 		len += snprintf(buf + len, PAGE_SIZE - len, "\n");
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 	if (ts->dev.key_num) {
 		/* read touch key chstatus */
@@ -1519,9 +1520,11 @@ static ssize_t mms_chstatus_show(struct i2c_client *client, char *buf)
 			len += snprintf(buf + len, PAGE_SIZE - len, "%5d", chstatus);
 		}
 	}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	/* read touch key chstatus */
 	len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 
@@ -1558,13 +1561,16 @@ static ssize_t mms_chstatus_show(struct i2c_client *client, char *buf)
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", chstatus);
 	}
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-	len += snprintf(buf + len, PAGE_SIZE - len, "\n===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+
+
+
+
+
+
+
+	len += snprintf(buf + len, PAGE_SIZE - len, "\n=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 	write_buf[0] = MMS_UNIVERSAL_CMD;
 	write_buf[1] = MMS_UNIVERSAL_CMD_EXIT;
 	i2c_master_send(ts->client, write_buf, 2);
@@ -1598,9 +1604,9 @@ static ssize_t mms_chstatus_show(struct i2c_client *client, char *buf)
 	} else {
 		len += snprintf(buf + len, PAGE_SIZE - len, "Result = %s\n", ts->pdata->selfdiagnostic_state[0] == 1 ? "PASS" : "FAIL");
 		if (ts->pdata->selfdiagnostic_state[0] == 0) {
-			len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-			len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-			len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+			len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+			len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+			len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 			len += snprintf(buf + len, PAGE_SIZE - len, "%5c", c);
 			for (j = 0; j < ts->dev.tx_ch_num; j++)
 				len += snprintf(buf + len, PAGE_SIZE - len, "%5d", j);
@@ -1629,9 +1635,9 @@ static ssize_t mms_chstatus_show(struct i2c_client *client, char *buf)
 			}
 		}
 	}
-	len += snprintf(buf + len, PAGE_SIZE - len, "\n===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "\n=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 
 	TOUCH_INFO_MSG("enable_irq\n");
 	enable_irq(ts->client->irq);
@@ -1761,9 +1767,9 @@ static ssize_t mms_rawdata_show(struct i2c_client *client, char *buf)
 		len += snprintf(buf + len, PAGE_SIZE - len, "*** LCD STATUS : O N ***\n");
 		len += snprintf(buf + len, PAGE_SIZE - len, "************************\n");
 	}
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 	len += snprintf(buf + len, PAGE_SIZE - len, "%5c", c);
 	for (j = 0; j < ts->dev.tx_ch_num; j++)
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", j);
@@ -1807,8 +1813,9 @@ static ssize_t mms_rawdata_show(struct i2c_client *client, char *buf)
 		}
 		len += snprintf(buf + len, PAGE_SIZE - len, "\n");
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 	if (ts->dev.key_num) {
 		/* read touch key rawdata */
@@ -1844,9 +1851,11 @@ static ssize_t mms_rawdata_show(struct i2c_client *client, char *buf)
 			}
 			len += snprintf(buf + len, PAGE_SIZE - len, "%5d", rawdata);
 		}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	/* read touch key rawdata */
 	len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 
@@ -1879,15 +1888,18 @@ static ssize_t mms_rawdata_show(struct i2c_client *client, char *buf)
 			ts->pdata->selfdiagnostic_state[1] = 0;
 		}
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", rawdata);
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	}
 
-	len += snprintf(buf + len, PAGE_SIZE - len, "\n===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "\n=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 	write_buf[0] = MMS_UNIVERSAL_CMD;
 	write_buf[1] = MMS_UNIVERSAL_CMD_EXIT;
 	i2c_master_send(ts->client, write_buf, 2);
@@ -1921,9 +1933,9 @@ static ssize_t mms_rawdata_show(struct i2c_client *client, char *buf)
 	} else {
 		len += snprintf(buf + len, PAGE_SIZE - len, "Result = %s\n", ts->pdata->selfdiagnostic_state[1] == 1 ? "PASS" : "FAIL");
 		if (ts->pdata->selfdiagnostic_state[1] == 0) {
-			len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-			len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-			len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+			len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+			len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+			len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 			len += snprintf(buf + len, PAGE_SIZE - len, "%5c", c);
 			for (j = 0; j < ts->dev.tx_ch_num; j++)
 				len += snprintf(buf + len, PAGE_SIZE - len, "%5d", j);
@@ -1952,9 +1964,9 @@ static ssize_t mms_rawdata_show(struct i2c_client *client, char *buf)
 			}
 		}
 	}
-	len += snprintf(buf + len, PAGE_SIZE - len, "\n===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "\n=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 
 	TOUCH_INFO_MSG("enable_irq\n");
 	enable_irq(ts->client->irq);
@@ -2005,9 +2017,9 @@ static ssize_t mms_delta_show(struct i2c_client *client, char *buf)
 	TOUCH_INFO_MSG("disable_irq\n");
 	disable_irq(ts->client->irq);
 
-	len += snprintf(buf + len, PAGE_SIZE - len, "=============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 	len += snprintf(buf + len, PAGE_SIZE - len, "%5c", c);
 	for (j = 0; j < ts->dev.tx_ch_num; j++)
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", j);
@@ -2043,8 +2055,9 @@ static ssize_t mms_delta_show(struct i2c_client *client, char *buf)
 		len += snprintf(buf + len, PAGE_SIZE - len, "\n");
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (ts->dev.key_num) {
 		len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 		for(j = 0; j<ts->dev.key_num; j++){
@@ -2069,9 +2082,11 @@ static ssize_t mms_delta_show(struct i2c_client *client, char *buf)
 			delta = ((delta<<8)|read_buf[0]);
 			len += snprintf(buf + len, PAGE_SIZE - len, "%5d", delta);
 		}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 	for(j = 0; j<ts->dev.key_num; j++){
 		write_buf[0] = MMS_UNIVERSAL_CMD;
@@ -2094,14 +2109,17 @@ static ssize_t mms_delta_show(struct i2c_client *client, char *buf)
 		delta = read_buf[1];
 		delta = ((delta<<8)|read_buf[0]);
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", delta);
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	}
-	len += snprintf(buf + len, PAGE_SIZE - len, "\n=============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "\n===");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 
 	TOUCH_INFO_MSG("enable_irq\n");
 	enable_irq(ts->client->irq);
@@ -2211,9 +2229,9 @@ static ssize_t mms_jitter_show(struct i2c_client *client, char *buf)
 		len += snprintf(buf + len, PAGE_SIZE - len, "************************\n");
 	}
 
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 	len += snprintf(buf + len, PAGE_SIZE - len, "%5c", c);
 	for (j = 0; j < ts->dev.tx_ch_num; j++)
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", j);
@@ -2256,8 +2274,9 @@ static ssize_t mms_jitter_show(struct i2c_client *client, char *buf)
 		}
 		len += snprintf(buf + len, PAGE_SIZE - len, "\n");
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 	if (ts->dev.key_num) {
 		/* read touch key jitter */
@@ -2295,9 +2314,11 @@ static ssize_t mms_jitter_show(struct i2c_client *client, char *buf)
 			len += snprintf(buf + len, PAGE_SIZE - len, "%5d", jitter);
 		}
 	}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	/* read touch key jitter */
 	len += snprintf(buf + len, PAGE_SIZE - len, "key: ");
 
@@ -2333,13 +2354,16 @@ static ssize_t mms_jitter_show(struct i2c_client *client, char *buf)
 		len += snprintf(buf + len, PAGE_SIZE - len, "%5d", jitter);
 	}
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-	len += snprintf(buf + len, PAGE_SIZE - len, "\n===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+
+
+
+
+
+
+
+	len += snprintf(buf + len, PAGE_SIZE - len, "\n=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 	write_buf[0] = MMS_UNIVERSAL_CMD;
 	write_buf[1] = MMS_UNIVERSAL_CMD_EXIT;
 	i2c_master_send(ts->client, write_buf, 2);
@@ -2370,9 +2394,9 @@ static ssize_t mms_jitter_show(struct i2c_client *client, char *buf)
 		len += snprintf(buf + len, PAGE_SIZE - len, "Result = %s\n", ts->pdata->selfdiagnostic_state[2] == 1 ? "PASS" : "FAIL");
 
 		if (ts->pdata->selfdiagnostic_state[2] == 0) {
-			len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-			len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-			len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+			len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+			len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+			len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 			len += snprintf(buf + len, PAGE_SIZE - len, "%5c", c);
 			for (j = 0; j < ts->dev.tx_ch_num; j++)
 				len += snprintf(buf + len, PAGE_SIZE - len, "%5d", j);
@@ -2401,9 +2425,9 @@ static ssize_t mms_jitter_show(struct i2c_client *client, char *buf)
 			}
 		}
 	}
-	len += snprintf(buf + len, PAGE_SIZE - len, "\n===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "===============================================");
-	len += snprintf(buf + len, PAGE_SIZE - len, "========================\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "\n=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "=====");
+	len += snprintf(buf + len, PAGE_SIZE - len, "===\n");
 
 	TOUCH_INFO_MSG("enable_irq\n");
 	enable_irq(ts->client->irq);
@@ -2441,7 +2465,7 @@ static ssize_t mms_self_diagnostic_show(struct i2c_client *client, char *buf)
 	len += snprintf(buf + len, PAGE_SIZE - len, "FW Product : %s \n", ts->module.product_code);
 	if (ts_pdata->panel_id != 0xFF)
 		len += snprintf(buf + len, PAGE_SIZE - len, "Panel ID : %d [%c] \n", ts_pdata->panel_id, ts_pdata->panel_type[ts_pdata->panel_id]);
-	len += snprintf(buf + len, PAGE_SIZE - len, "=======RESULT========\n");
+	len += snprintf(buf + len, PAGE_SIZE - len, "RESULT=\n");
 	len += snprintf(buf + len, PAGE_SIZE - len, "Channel Status : %s\n", ts->pdata->selfdiagnostic_state[0] == 1 ? "PASS" : "FAIL");
 	len += snprintf(buf + len, PAGE_SIZE - len, "Raw Data : %s\n", ts->pdata->selfdiagnostic_state[1] == 1 ? "PASS" : "FAIL");
 	//len += snprintf(buf + len, PAGE_SIZE - len, "Jitter Test: %s\n", ts->pdata->selfdiagnostic_state[2] == 1 ? "PASS" : "FAIL");

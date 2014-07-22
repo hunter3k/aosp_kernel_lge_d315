@@ -125,11 +125,14 @@ static int lm3530_write_reg(struct i2c_client *client,
 
 	return ret;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
 #if 0
 static char mapped_value[256] = {
 	0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, /*09*/  0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, /*19*/
@@ -147,10 +150,13 @@ static char mapped_value[256] = {
 	0x56, 0x57, 0x58, 0x58, 0x58, 0x58, 0x59, 0x5A, 0x5B, 0x5C, /*249*/ 0x5E, 0x5F, 0x60, 0x61, 0x62, 0x63 /*255*/
 };
 #endif
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 static void lm3530_set_main_current_level(struct i2c_client *client, int level)
 {
 	struct lm3530_device *dev = i2c_get_clientdata(client);

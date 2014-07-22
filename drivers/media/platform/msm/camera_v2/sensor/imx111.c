@@ -17,15 +17,19 @@ DEFINE_MSM_MUTEX(imx111_mut);
 
 static struct msm_sensor_ctrl_t imx111_s_ctrl;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE_CHANGE_S, jaehan.jeong, 2013.7.30,  To separate power settings depending on HW revisions, [STARTS HERE] */
-=======
+
 /*                                                                                                             */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                                                                                                             */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                                                                                                             */
+
 static struct msm_sensor_power_setting imx111_power_setting_rev_0[] = {
 	{
 		.seq_type = SENSOR_VREG,
@@ -83,15 +87,19 @@ static struct msm_sensor_power_setting imx111_power_setting_rev_0[] = {
 	},
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if !defined(CONFIG_MACH_MSM8X10_W6) && !defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
-=======
+
 #if !defined(CONFIG_MACH_MSM8X10_W6)
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #if !defined(CONFIG_MACH_MSM8X10_W6)
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#if !defined(CONFIG_MACH_MSM8X10_W6)
+
 static struct msm_sensor_power_setting imx111_power_setting_rev_a[] = {
 	 /* Set GPIO_RESET to low to disable power on reset*/
 	{
@@ -119,18 +127,21 @@ static struct msm_sensor_power_setting imx111_power_setting_rev_a[] = {
 		.delay = 1,
 	},
 	{
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		.seq_type = SENSOR_CLK,	//MCLK order is changed. 20140103. younjung.park
 		.seq_val = SENSOR_CAM_MCLK,
 		.config_val = 0,
 		.delay = 1,
 	},
 	{
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 		.seq_type = SENSOR_GPIO,
 		.seq_val = SENSOR_GPIO_STANDBY,
 		.config_val = GPIO_OUT_HIGH,
@@ -143,21 +154,27 @@ static struct msm_sensor_power_setting imx111_power_setting_rev_a[] = {
 		.delay = 30,
 	},
 	{
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
 		.seq_type = SENSOR_CLK,
 		.seq_val = SENSOR_CAM_MCLK,
 		.config_val = 0,
 		.delay = 1,
 	},
 	{
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 		.seq_type = SENSOR_I2C_MUX,
 		.seq_val = 0,
 		.config_val = 0,
@@ -165,15 +182,19 @@ static struct msm_sensor_power_setting imx111_power_setting_rev_a[] = {
 	},
 };
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W6) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
-=======
+
 #if defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM)|| defined(CONFIG_MACH_MSM8X10_W6)
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #if defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM)|| defined(CONFIG_MACH_MSM8X10_W6)
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#if defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM)|| defined(CONFIG_MACH_MSM8X10_W6)
+
 static struct msm_sensor_power_setting imx111_power_setting_rev_b[] = {
 	 /* Set GPIO_RESET to low to disable power on reset*/
 	{
@@ -230,15 +251,19 @@ static struct msm_sensor_power_setting imx111_power_setting_rev_b[] = {
 	},
 };
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE_CHANGE_E, jaehan.jeong, 2013.7.30,  To separate power settings depending on HW revisions,  [ENDS HERE] */
-=======
+
 /*                                                                                                            */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                                                                                                            */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                                                                                                            */
+
 
 static struct v4l2_subdev_info imx111_subdev_info[] = {
 	{
@@ -303,21 +328,27 @@ static int __init imx111_init_module(void)
 	int32_t rc = 0;
 	hw_rev_type rev_type = 0;
 	pr_info("%s:%d\n", __func__, __LINE__);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE_CHANGE_S, jaehan.jeong, 2013.7.30, To separate power settings depending on HW revisions., [STARTS HERE] */
       rev_type = lge_get_board_revno();
 #if 1// defined(CONFIG_MACH_LGE)
-=======
+
 /*                                                                                                             */
       rev_type = lge_get_board_revno();
 #if 1//                         
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                                                                                                             */
       rev_type = lge_get_board_revno();
 #if 1//                         
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                                                                                                             */
+      rev_type = lge_get_board_revno();
+#if 1//                         
+
 	switch(rev_type) {
 		case HW_REV_0:
 			printk("%s: Sensor power is set as Rev.0\n", __func__);
@@ -325,15 +356,19 @@ static int __init imx111_init_module(void)
 			imx111_s_ctrl.power_setting_array.size = ARRAY_SIZE(imx111_power_setting_rev_0);
 			break;
 		case HW_REV_A:
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5N_GLOBAL_COM)
-=======
+
 #if defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM)
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #if defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM)
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#if defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM)
+
 			printk("%s: Sensor power is set as Rev. %d\n", __func__,rev_type);
 			imx111_s_ctrl.power_setting_array.power_setting = imx111_power_setting_rev_a;
 			imx111_s_ctrl.power_setting_array.size = ARRAY_SIZE(imx111_power_setting_rev_a);
@@ -345,15 +380,19 @@ static int __init imx111_init_module(void)
 		case HW_REV_B:
 		default:
 			printk("%s: Sensor power is set as Rev.%d(Line:%d)\n", __func__,rev_type, __LINE__);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W6)|| defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
-=======
+
 #if defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W6)
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #if defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W6)
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#if defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W6)
+
 			imx111_s_ctrl.power_setting_array.power_setting = imx111_power_setting_rev_b;
 			imx111_s_ctrl.power_setting_array.size = ARRAY_SIZE(imx111_power_setting_rev_b);
 #else
@@ -363,15 +402,19 @@ static int __init imx111_init_module(void)
 			break;
 	}
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE_CHANGE_E, jaehan.jeong, 2013.7.30, To separate power settings depending on HW revisions.,  [ENDS HERE] */
-=======
+
 /*                                                                                                            */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                                                                                                            */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                                                                                                            */
+
 	rc = platform_driver_probe(&imx111_platform_driver,
 		imx111_platform_probe);
 	if (!rc)
@@ -393,23 +436,29 @@ static void __exit imx111_exit_module(void)
 
 static struct msm_sensor_ctrl_t imx111_s_ctrl = {
 	.sensor_i2c_client = &imx111_sensor_i2c_client,
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE_CHANGE_S, jaehan.jeong, 2013.7.30, To separate power settings depending on HW revisions., [STARTS HERE] */
 /*	.power_setting_array.power_setting = imx111_power_setting,
 	.power_setting_array.size = ARRAY_SIZE(imx111_power_setting),	*/
 /* LGE_CHANGE_E, jaehan.jeong, 2013.7.30, To separate power settings depending on HW revisions.,  [ENDS HERE] */
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 /*                                                                                                             */
 /*	.power_setting_array.power_setting = imx111_power_setting,
 	.power_setting_array.size = ARRAY_SIZE(imx111_power_setting),	*/
 /*                                                                                                            */
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	.msm_sensor_mutex = &imx111_mut,
 	.sensor_v4l2_subdev_info = imx111_subdev_info,
 	.sensor_v4l2_subdev_info_size = ARRAY_SIZE(imx111_subdev_info),

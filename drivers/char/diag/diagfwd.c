@@ -42,25 +42,31 @@
 #include "diag_dci.h"
 #include "diag_masks.h"
 #include "diagfwd_bridge.h"
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [START]
 #ifdef CONFIG_LGE_DM_DEV
 #include "lg_dm_dev_tty.h"
 #endif /*CONFIG_LGE_DM_DEV*/
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [END]
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 //                                                                             
 #ifdef CONFIG_LGE_DM_DEV
 #include "lg_dm_dev_tty.h"
 #endif /*                 */
 //                                                                           
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 #ifdef CONFIG_LGE_DM_APP
 #include "lg_dm_tty.h"
@@ -95,19 +101,23 @@
 #define SMD_DRAIN_BUF_SIZE 4096
 
 #ifdef CONFIG_LGE_DIAG_ENABLE
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_MACH_MSM8X10_W5C_TRF_US) || defined(CONFIG_MACH_MSM8X10_W5C_TRF_US)
 #define DIAG_ENABLE_DEBUG 1
 #else
 #define DIAG_ENABLE_DEBUG 0
 #endif
-=======
+
 #define DIAG_ENALBE_DEBUG 0
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #define DIAG_ENALBE_DEBUG 0
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#define DIAG_ENALBE_DEBUG 0
+
 static int diag_enable_status = 0;
 #ifdef CONFIG_LGE_DIAG_ENABLE_SPR
 extern int user_diag_enable;
@@ -127,15 +137,19 @@ int lge_diag_get_smem_value(void)
 		(smem_get_entry(SMEM_ID_VENDOR0, &smem_size));
 	//pr_info("cable type: %d", lge_hw_smem_id1_ptr->cable_type);
 	//pr_info("QEM: %d", lge_hw_smem_id1_ptr->qem); 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if DIAG_ENABLE_DEBUG
-=======
+
 #if DIAG_ENALBE_DEBUG
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #if DIAG_ENALBE_DEBUG
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#if DIAG_ENALBE_DEBUG
+
     printk("Diag enable status: %d", lge_hw_smem_id0_ptr->diag_enable);
 #endif
 
@@ -149,15 +163,19 @@ int lge_diag_get_smem_value(void)
 
 int set_diag_enable_status(int enable) 
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if DIAG_ENABLE_DEBUG
-=======
+
 #if DIAG_ENALBE_DEBUG
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #if DIAG_ENALBE_DEBUG
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#if DIAG_ENALBE_DEBUG
+
 	pr_info("%s, enable: %d", __func__, enable);
 #endif
 	diag_enable_status = enable;
@@ -169,15 +187,19 @@ int set_diag_enable_status(int enable)
 }
 #endif
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 // skip crc check because of MITS Test - WX-BSP-Factory@lge.com
-=======
+
 //                                                             
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                                             
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                                             
+
 #ifdef CONFIG_LGE_PM
 #include <mach/board_lge.h>
 static int skip_crc_chk = 0;
@@ -1176,15 +1198,19 @@ int diag_device_write(void *buf, int data_type, struct diag_request *write_ptr)
 	}
 #endif
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [START]
-=======
+
 //                                                                             
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                                                             
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                                                             
+
 #ifdef CONFIG_LGE_DM_DEV
 		if (driver->logging_mode == DM_DEV_MODE) {
 			/* only diag cmd #250 for supporting testmode tool */
@@ -1209,18 +1235,23 @@ int diag_device_write(void *buf, int data_type, struct diag_request *write_ptr)
 		wake_up_interruptible(&lge_dm_dev_tty->waitq);
 
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #endif /*CONFIG_LGE_DM_DEV*/
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [END]
-=======
+
 #endif /*                 */
 //                                                                           
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #endif /*                 */
 //                                                                           
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#endif /*                 */
+//                                                                           
+
     return err;
 }
 
@@ -1446,8 +1477,9 @@ int diag_process_apps_pkt(unsigned char *buf, int len)
 
 #ifdef CONFIG_LGE_DIAG_ENABLE
     if (diag_enable_status != 1 && buf[0] != 0xA1 && buf[0]!=0xA0 ) {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if DIAG_ENABLE_DEBUG
         pr_info("%s: diag_enable_status = %d \n",__func__,diag_enable_status);
 #endif
@@ -1458,19 +1490,24 @@ int diag_process_apps_pkt(unsigned char *buf, int len)
         return 0;
 #endif
 
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 #if DIAG_ENALBE_DEBUG
         pr_info("%s: diag_enable_status = %d \n",__func__,diag_enable_status);
 #endif
         driver->apps_rsp_buf[0] = 24;
         encode_rsp_and_send(0);
         return 0;
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
     }
 #endif
 	/* Check if the command is a supported mask command */
@@ -1985,15 +2022,19 @@ void diag_process_hdlc(void *data, unsigned len)
 
 	ret = diag_hdlc_decode(&hdlc);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 // skip crc check because of MITS Test - WX-BSP-Factory@lge.com
-=======
+
 //                                                             
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                                             
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                                             
+
 #ifdef CONFIG_LGE_PM
 	if (ret && !skip_crc_chk) {
 #else
@@ -2131,15 +2172,19 @@ int diagfwd_connect(void)
 	int err;
 	int i;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [START]
-=======
+
 //                                                                             
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                                                             
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                                                             
+
 #ifdef CONFIG_LGE_DM_DEV
 	if (driver->logging_mode == DM_DEV_MODE) {
 		driver->usb_connected = 1;
@@ -2154,18 +2199,23 @@ int diagfwd_connect(void)
 
 		return 0;
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #endif /*CONFIG_LGE_DM_DEV*/
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [END]
-=======
+
 #endif /*                 */
 //                                                                           
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #endif /*                 */
 //                                                                           
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#endif /*                 */
+//                                                                           
+
 
 #ifdef CONFIG_LGE_DM_APP
 	if (driver->logging_mode == DM_APP_MODE) {
@@ -2218,15 +2268,19 @@ int diagfwd_disconnect(void)
 {
 	int i;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [START]
-=======
+
 //                                                                             
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                                                             
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                                                             
+
 #ifdef CONFIG_LGE_DM_DEV
 	if (driver->logging_mode == DM_DEV_MODE) {
 		driver->usb_connected = 0;
@@ -2235,18 +2289,23 @@ int diagfwd_disconnect(void)
 
 		return 0;
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #endif /*CONFIG_LGE_DM_DEV*/
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [END]
-=======
+
 #endif /*                 */
 //                                                                           
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #endif /*                 */
 //                                                                           
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#endif /*                 */
+//                                                                           
+
 
 #ifdef CONFIG_LGE_DM_APP
 	if (driver->logging_mode == DM_APP_MODE) {
@@ -2379,15 +2438,19 @@ int diagfwd_read_complete(struct diag_request *diag_read_ptr)
 						 &(driver->diag_read_work));
 		}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [START]
-=======
+
 //                                                                             
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                                                             
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                                                             
+
 #ifdef CONFIG_LGE_DM_DEV
 		if (driver->logging_mode == DM_DEV_MODE) {
 			if (status != -ECONNRESET && status != -ESHUTDOWN)
@@ -2397,18 +2460,23 @@ int diagfwd_read_complete(struct diag_request *diag_read_ptr)
 				queue_work(driver->diag_wq,
 						 &(driver->diag_read_work));
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #endif /*CONFIG_LGE_DM_DEV*/
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [END]
-=======
+
 #endif /*                 */
 //                                                                           
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #endif /*                 */
 //                                                                           
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#endif /*                 */
+//                                                                           
+
 
 #ifdef CONFIG_LGE_DM_APP
 		if (driver->logging_mode == DM_APP_MODE) {
@@ -3004,15 +3072,19 @@ void diagfwd_init(void)
 	}
 	driver->diag_wq = create_singlethread_workqueue("diag_wq");
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 // skip crc check because of MITS Test - WX-BSP-Factory@lge.com
-=======
+
 //                                                             
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                                             
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                                             
+
 #ifdef CONFIG_LGE_PM
 	switch (lge_get_boot_mode()) {
 		case LGE_BOOT_MODE_QEM_56K:

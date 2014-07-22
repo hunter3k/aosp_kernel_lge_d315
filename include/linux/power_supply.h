@@ -160,15 +160,18 @@ enum power_supply_property {
 #ifdef CONFIG_LGE_PM_VZW_FAST_CHG
 	POWER_SUPPLY_PROP_VZW_CHG_STATE,
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #ifdef CONFIG_MAX17048_FUELGAUGE
 	POWER_SUPPLY_PROP_USE_FUELGAUGE,
 #endif
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	/* Properties of type `const char *' */
 	POWER_SUPPLY_PROP_MODEL_NAME,
 	POWER_SUPPLY_PROP_MANUFACTURER,

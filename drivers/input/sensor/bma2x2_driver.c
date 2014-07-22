@@ -1887,15 +1887,19 @@ static int bma2x2_get_slope_sign(struct i2c_client *client, unsigned char
 
 	return comres;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #endif /* CONFIG_SENSOR_LGE_DT */
-=======
+
 #endif /*                      */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #endif /*                      */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#endif /*                      */
+
 
 static int bma2x2_get_orient_status(struct i2c_client *client, unsigned char
 		*intstatus)
@@ -5250,14 +5254,14 @@ static ssize_t bma2x2_fast_calibration_x_store(struct device *dev,
 		mdelay(20);
 		bma2x2_read_accel_xyz(bma2x2->bma2x2_client, bma2x2->sensor_type, &acc_cal);			
 
-		printk(KERN_INFO "===============moved x=============== timeout = %d\n",timeout_shaking);
+		printk(KERN_INFO "=moved x= timeout = %d\n",timeout_shaking);
 		printk(KERN_INFO "(%d, %d, %d) (%d, %d, %d)\n", acc_cal_pre.x,	acc_cal_pre.y,	acc_cal_pre.z, acc_cal.x,acc_cal.y,acc_cal.z );
 
 		if((abs(acc_cal.x - acc_cal_pre.x) > BMA2X2_SHAKING_DETECT_THRESHOLD)
 			|| (abs((acc_cal.y - acc_cal_pre.y)) > BMA2X2_SHAKING_DETECT_THRESHOLD)
 			|| (abs((acc_cal.z - acc_cal_pre.z)) > BMA2X2_SHAKING_DETECT_THRESHOLD)) {
 				atomic_set(&bma2x2->fast_calib_rslt, 0);
-				printk(KERN_INFO "===============shaking x===============\n");
+				printk(KERN_INFO "=shaking x=\n");
 				return -EINVAL;
 		}
 		else{
@@ -5267,7 +5271,7 @@ static ssize_t bma2x2_fast_calibration_x_store(struct device *dev,
 		}
 		timeout_shaking++;
 	}while(timeout_shaking < 10);
-	printk(KERN_INFO "===============complete shaking x check===============\n");
+	printk(KERN_INFO "=complete shaking x check=\n");
 #endif
 
 	if (bma2x2_set_offset_target(bma2x2->bma2x2_client, 1, (unsigned
@@ -5349,14 +5353,14 @@ static ssize_t bma2x2_fast_calibration_y_store(struct device *dev,
 		mdelay(20);
 		bma2x2_read_accel_xyz(bma2x2->bma2x2_client, bma2x2->sensor_type, &acc_cal);			
 
-		printk(KERN_INFO "===============moved y=============== timeout = %d\n",timeout_shaking);
+		printk(KERN_INFO "=moved y= timeout = %d\n",timeout_shaking);
 		printk(KERN_INFO "(%d, %d, %d) (%d, %d, %d)\n", acc_cal_pre.x,	acc_cal_pre.y,	acc_cal_pre.z, acc_cal.x,acc_cal.y,acc_cal.z );
 
 		if((abs(acc_cal.x - acc_cal_pre.x) > BMA2X2_SHAKING_DETECT_THRESHOLD)
 			|| (abs((acc_cal.y - acc_cal_pre.y)) > BMA2X2_SHAKING_DETECT_THRESHOLD)
 			|| (abs((acc_cal.z - acc_cal_pre.z)) > BMA2X2_SHAKING_DETECT_THRESHOLD)){
 				atomic_set(&bma2x2->fast_calib_rslt, 0);
-				printk(KERN_INFO "===============shaking y===============\n");
+				printk(KERN_INFO "=shaking y=\n");
 				return -EINVAL;
 		}
 		else
@@ -5367,7 +5371,7 @@ static ssize_t bma2x2_fast_calibration_y_store(struct device *dev,
 		}
 		timeout_shaking++;		
 	}while(timeout_shaking < 10);	
-	printk(KERN_INFO "===============complete shaking y check===============\n");
+	printk(KERN_INFO "=complete shaking y check=\n");
 #endif
 
 	if (bma2x2_set_offset_target(bma2x2->bma2x2_client, 2, (unsigned
@@ -5450,14 +5454,14 @@ static ssize_t bma2x2_fast_calibration_z_store(struct device *dev,
 		mdelay(20);
 		bma2x2_read_accel_xyz(bma2x2->bma2x2_client, bma2x2->sensor_type, &acc_cal);			
 
-		printk(KERN_INFO "===============moved z=============== timeout = %d\n",timeout_shaking);
+		printk(KERN_INFO "=moved z= timeout = %d\n",timeout_shaking);
 		printk(KERN_INFO "(%d, %d, %d) (%d, %d, %d)\n", acc_cal_pre.x,	acc_cal_pre.y,	acc_cal_pre.z, acc_cal.x,acc_cal.y,acc_cal.z );
 
 		if((abs(acc_cal.x - acc_cal_pre.x) > BMA2X2_SHAKING_DETECT_THRESHOLD)
 			|| (abs((acc_cal.y - acc_cal_pre.y)) > BMA2X2_SHAKING_DETECT_THRESHOLD)
 			|| (abs((acc_cal.z - acc_cal_pre.z)) > BMA2X2_SHAKING_DETECT_THRESHOLD)){
 			atomic_set(&bma2x2->fast_calib_rslt, 0);		
-			printk(KERN_INFO "===============shaking z===============\n");
+			printk(KERN_INFO "=shaking z=\n");
 			return -EINVAL;
 		}
 		else{
@@ -5467,7 +5471,7 @@ static ssize_t bma2x2_fast_calibration_z_store(struct device *dev,
 		}
 		timeout_shaking++;
 	}while(timeout_shaking < 10);
-	printk(KERN_INFO "===============complete shaking z check===============\n");
+	printk(KERN_INFO "=complete shaking z check=\n");
 #endif
 
 	if (bma2x2_set_offset_target(bma2x2->bma2x2_client, 3, (unsigned
@@ -6196,14 +6200,14 @@ static ssize_t bma2x2_fast_calibration_store(struct device *dev,
 			mdelay(20);
 			bma2x2_read_accel_xyz(bma2x2->bma2x2_client, bma2x2->sensor_type, &acc_cal);			
 	
-			printk(KERN_INFO "===============moved x,y,z=============== timeout = %d\n",timeout_shaking);
+			printk(KERN_INFO "=moved x,y,z= timeout = %d\n",timeout_shaking);
 			printk(KERN_INFO "(%d, %d, %d) (%d, %d, %d)\n", acc_cal_pre.x,	acc_cal_pre.y,	acc_cal_pre.z, acc_cal.x,acc_cal.y,acc_cal.z );
 	
 			if((abs(acc_cal.x - acc_cal_pre.x) > BMA2X2_SHAKING_DETECT_THRESHOLD)
 				|| (abs((acc_cal.y - acc_cal_pre.y)) > BMA2X2_SHAKING_DETECT_THRESHOLD)
 				|| (abs((acc_cal.z - acc_cal_pre.z)) > BMA2X2_SHAKING_DETECT_THRESHOLD)) {
 					atomic_set(&bma2x2->fast_calib_rslt, 0);
-					printk(KERN_INFO "===============shaking x,y,z===============\n");
+					printk(KERN_INFO "=shaking x,y,z=\n");
 					return -EINVAL;
 			}
 			else{
@@ -6214,7 +6218,7 @@ static ssize_t bma2x2_fast_calibration_store(struct device *dev,
 			timeout_shaking++;
 		}while(timeout_shaking < 30);
 
-		printk(KERN_INFO "===============complete shaking x,y,z check===============\n");
+		printk(KERN_INFO "=complete shaking x,y,z check=\n");
 
 	if (bma2x2_set_offset_target_fast_cal(bma2x2->bma2x2_client, (unsigned char)data) < 0)
 		{

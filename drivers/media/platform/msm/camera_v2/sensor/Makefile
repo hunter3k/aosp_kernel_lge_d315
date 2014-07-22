@@ -9,13 +9,16 @@ obj-$(CONFIG_S5K3L1YX) += s5k3l1yx.o
 obj-$(CONFIG_IMX135) += imx135.o
 obj-$(CONFIG_IMX111) += imx111.o
 obj-$(CONFIG_IMX179) += imx179.o
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 obj-$(CONFIG_IMX219) += imx219.o
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 obj-$(CONFIG_IMX119) += imx119.o
 obj-$(CONFIG_HI543)  += hi543.o
 obj-$(CONFIG_HI707)  += hi707.o

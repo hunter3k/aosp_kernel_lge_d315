@@ -16,20 +16,25 @@
 
 
 #define WLAN_POWER    46
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_MACH_MSM8926_X10_VZW) || defined(CONFIG_MACH_MSM8926_JAGC_SPR)
 #define WLAN_HOSTWAKE 56
 #elif defined(CONFIG_MACH_MSM8926_JAGDSNM_CMCC_CN) || defined(CONFIG_MACH_MSM8926_JAGDSNM_CUCC_CN) || defined(CONFIG_MACH_MSM8926_JAGDSNM_CTC_CN)
 #define WLAN_HOSTWAKE 35
-=======
+
 #ifdef CONFIG_MACH_MSM8926_B1L_VZW
 #define WLAN_HOSTWAKE 56
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #ifdef CONFIG_MACH_MSM8926_B1L_VZW
 #define WLAN_HOSTWAKE 56
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#ifdef CONFIG_MACH_MSM8926_B1L_VZW
+#define WLAN_HOSTWAKE 56
+
 #else
 #define WLAN_HOSTWAKE 67
 #endif
@@ -402,8 +407,9 @@ struct cntry_locales_custom {
 
 /* Customized Locale table */
 const struct cntry_locales_custom bcm_wifi_translate_custom_table[] = {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* Table should be filled out based on custom platform regulatory requirement BCM4334 series */
            {"",       "GB",     0},
            {"AD",    "GB",     0},
@@ -651,9 +657,11 @@ const struct cntry_locales_custom bcm_wifi_translate_custom_table[] = {
            {"ZA",    "GB",     0},
            {"ZM",   "RU",     1},
            {"ZW",   "BR",     0},
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 /* Table should be filled out based on custom platform regulatory requirement */
 	{"",   "XZ", 11},	/* Universal if Country code is unknown or empty */
 	{"IR", "XZ", 11},	/* Universal if Country code is IRAN, (ISLAMIC REPUBLIC OF) */
@@ -802,10 +810,13 @@ const struct cntry_locales_custom bcm_wifi_translate_custom_table[] = {
 	{"MN", "MN", 0},  /* changed 1 -> 0*/
 	{"NI", "NI", 0},  /* changed 2 -> 0*/
 	{"ZA", "ZA", 6},  /* new changed */
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 };
 
 static void *bcm_wifi_get_country_code(char *ccode)

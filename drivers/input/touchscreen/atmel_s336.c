@@ -34,8 +34,9 @@
 #include <linux/time.h>
 #include <linux/file.h>
 #include <linux/syscalls.h>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #include <linux/async.h>
 #include "atmel_s336.h"
 #include "atmel_s336_patch.h"
@@ -43,29 +44,38 @@
 static struct mutex i2c_suspend_lock;
 static struct mutex irq_lock;
 
-=======
+
 #include "atmel_s336.h"
 #include "atmel_s336_patch.h"
 
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #include "atmel_s336.h"
 #include "atmel_s336_patch.h"
 
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#include "atmel_s336.h"
+#include "atmel_s336_patch.h"
+
+
 static bool is_probing;
 static bool selftest_enable;
 static bool selftest_show;
 
 static struct wake_lock touch_wake_lock;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
+
 static struct mutex i2c_suspend_lock;
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 static struct mutex i2c_suspend_lock;
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+static struct mutex i2c_suspend_lock;
+
 static struct mxt_data *global_mxt_data;
 static struct sys_device lge_touch_sys_device;
 static struct workqueue_struct	*touch_wq = NULL;
@@ -85,8 +95,9 @@ struct lge_touch_attribute {
 #define LGE_TOUCH_ATTR(_name, _mode, _show, _store)	\
 struct lge_touch_attribute lge_touch_attr_##_name = __ATTR(_name, _mode, _show, _store)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #define jitter_abs(x)	(x > 0 ? x : -x)
 #define jitter_sub(x, y)	(x > y ? x - y : y - x)
 #define get_time_interval(a,b) a>=b ? a-b : 1000000+a-b
@@ -245,19 +256,23 @@ ghost_err:
 return NEED_TO_OUT;
 
 }
-=======
+
 char *knockon_event[2] = { "TOUCH_GESTURE_WAKEUP=WAKEUP", NULL };
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 char *knockon_event[2] = { "TOUCH_GESTURE_WAKEUP=WAKEUP", NULL };
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+char *knockon_event[2] = { "TOUCH_GESTURE_WAKEUP=WAKEUP", NULL };
+
 
 static int touch_enable_irq_wake(unsigned int irq)
 {
 	int ret = 0;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	mutex_lock(&irq_lock);
 
 	if (!touch_irq_wake_mask) {
@@ -268,17 +283,22 @@ static int touch_enable_irq_wake(unsigned int irq)
 	}
 
 	mutex_unlock(&irq_lock);
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	if (!touch_irq_wake_mask) {
 		touch_irq_wake_mask = 1;
 		ret= enable_irq_wake(irq);
 	}
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	return ret;
 }
 
@@ -286,8 +306,9 @@ static int touch_disable_irq_wake(unsigned int irq)
 {
 	int ret = 0;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	mutex_lock(&irq_lock);
 
 	if (touch_irq_wake_mask) {
@@ -299,48 +320,60 @@ static int touch_disable_irq_wake(unsigned int irq)
 
 	mutex_unlock(&irq_lock);
 
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	if (touch_irq_wake_mask) {
 		touch_irq_wake_mask = 0;
 		ret = disable_irq_wake(irq);
 	}
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	return ret;
 }
 
 static void touch_enable_irq(unsigned int irq)
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	mutex_lock(&irq_lock);
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	if (!touch_irq_mask) {
 		touch_irq_mask = 1;
 		enable_irq(irq);
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 	mutex_unlock(&irq_lock);
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 }
 
 static void touch_disable_irq(unsigned int irq)
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	mutex_lock(&irq_lock);
 
 	if (touch_irq_mask) {
@@ -349,17 +382,22 @@ static void touch_disable_irq(unsigned int irq)
 	}
 
 	mutex_unlock(&irq_lock);
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	if (touch_irq_mask) {
 		touch_irq_mask = 0;
 		disable_irq(irq);
 	}
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 }
 
 static char mxt_power_block_get(void)
@@ -428,15 +466,19 @@ static bool mxt_object_readable(unsigned int type)
 
 static void mxt_dump_message(struct mxt_data *data, u8 *message)
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	print_hex_dump(KERN_ERR, "[Touch] MXT MSG:", DUMP_PREFIX_NONE, 16, 1,
-=======
+
 	print_hex_dump(KERN_DEBUG, "[Touch] MXT MSG:", DUMP_PREFIX_NONE, 16, 1,
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	print_hex_dump(KERN_DEBUG, "[Touch] MXT MSG:", DUMP_PREFIX_NONE, 16, 1,
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	print_hex_dump(KERN_DEBUG, "[Touch] MXT MSG:", DUMP_PREFIX_NONE, 16, 1,
+
 		       message, data->T5_msg_size, false);
 }
 
@@ -789,13 +831,16 @@ static int mxt_set_diagnostic_mode(struct mxt_data *data, u8 dbg_mode)
 {
 	u8 cur_mode = 0;
 	int ret = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	int retry_cnt = 0;
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 
 	ret = mxt_write_object(data, MXT_GEN_COMMAND_T6/*MXT_GEN_COMMANDPROCESSOR_T6*/,
 			MXT_COMMAND_DIAGNOSTIC, dbg_mode);
@@ -810,18 +855,23 @@ static int mxt_set_diagnostic_mode(struct mxt_data *data, u8 dbg_mode)
 		do {
 			ret = mxt_read_object(data, MXT_DEBUG_DIAGNOSTIC_T37,
 				MXT_DIAGNOSTIC_MODE, &cur_mode);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			if (ret || retry_cnt++ >= 4) {
 				TOUCH_INFO_MSG("Failed getting diagnositc mode(%d)\n", retry_cnt);
-=======
+
 			if (ret) {
 				TOUCH_INFO_MSG("Failed getting diagnositc mode\n");
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 			if (ret) {
 				TOUCH_INFO_MSG("Failed getting diagnositc mode\n");
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+			if (ret) {
+				TOUCH_INFO_MSG("Failed getting diagnositc mode\n");
+
 				goto out;
 			}
 			msleep(20);
@@ -1010,8 +1060,9 @@ err_alloc_reference:
 	return ;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 static int mxt_get_cap_diff(struct mxt_data *data)
 {
 	int t_diff = 0;
@@ -1113,10 +1164,12 @@ static int mxt_get_cap_diff(struct mxt_data *data)
 	return ret;
 }
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 static int mxt_read_all_diagnostic_data(struct mxt_data *data, u8 dbg_mode, char *buf, int* len)
 {
 	struct mxt_object *dbg_object = NULL;
@@ -1128,17 +1181,20 @@ static int mxt_read_all_diagnostic_data(struct mxt_data *data, u8 dbg_mode, char
 	u8 x_line = 0;
 	u8 y_line = 0;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 	touch_disable_irq(data->irq);
 	wake_lock_timeout(&touch_wake_lock, msecs_to_jiffies(2000));
 	mutex_lock(&data->input_dev->mutex);
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	/* to make the Page Num to 0 */
 	ret = mxt_set_diagnostic_mode(data, MXT_DIAG_CTE_MODE);
 	if (ret)
@@ -1157,19 +1213,23 @@ static int mxt_read_all_diagnostic_data(struct mxt_data *data, u8 dbg_mode, char
 		goto out;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE
-=======
+
 	//   
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//   
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//   
+
 	mxt_prepare_debug_data(data);
 
-	*len += snprintf(buf + *len, PAGE_SIZE - *len, "\n===============================================");
-	*len += snprintf(buf + *len, PAGE_SIZE - *len, "===============================================");
+	*len += snprintf(buf + *len, PAGE_SIZE - *len, "\n=====");
+	*len += snprintf(buf + *len, PAGE_SIZE - *len, "=====");
 
 	end_page = (data->info->matrix_xsize * data->info->matrix_ysize) / NODE_PER_PAGE;
 	*len += snprintf(buf + *len , PAGE_SIZE - *len, "\n       ");
@@ -1177,8 +1237,8 @@ static int mxt_read_all_diagnostic_data(struct mxt_data *data, u8 dbg_mode, char
 		*len += snprintf(buf + *len , PAGE_SIZE - *len, "[Y%02d] ", i);
 
 
-	*len += snprintf(buf + *len, PAGE_SIZE - *len, "\n===============================================");
-	*len += snprintf(buf + *len, PAGE_SIZE - *len, "===============================================");
+	*len += snprintf(buf + *len, PAGE_SIZE - *len, "\n=====");
+	*len += snprintf(buf + *len, PAGE_SIZE - *len, "=====");
 
 	/* read the dbg data */
 	for (read_page = 0 ; read_page < end_page; read_page++) {
@@ -1197,16 +1257,19 @@ static int mxt_read_all_diagnostic_data(struct mxt_data *data, u8 dbg_mode, char
 			value = mxt_treat_dbg_data(data, dbg_object, dbg_mode, read_point, num);
 
 			*len += snprintf(buf + *len , PAGE_SIZE - *len, "%6d", value);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 			if(dbg_mode == MXT_DIAG_REFERENCE_MODE && data->full_cap != NULL )
 				data->full_cap[num / data->info->matrix_ysize][num % data->info->matrix_ysize] = value;
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 			num++;
 		}
 		ret = mxt_set_diagnostic_mode(data, MXT_DIAG_PAGE_UP);
@@ -1222,21 +1285,24 @@ static int mxt_read_all_diagnostic_data(struct mxt_data *data, u8 dbg_mode, char
 			}
 		} while (cur_page != read_page + 1);
 	}
-	*len += snprintf(buf + *len, PAGE_SIZE - *len, "\n===============================================");
-	*len += snprintf(buf + *len, PAGE_SIZE - *len, "===============================================\n");
+	*len += snprintf(buf + *len, PAGE_SIZE - *len, "\n=====");
+	*len += snprintf(buf + *len, PAGE_SIZE - *len, "=====\n");
 
 
 out:
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	mutex_unlock(&data->input_dev->mutex);
 
 	touch_enable_irq(data->irq);
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	return ret;
 }
 
@@ -1267,15 +1333,19 @@ static int mxt_read_one_page_diagnostic_data(struct mxt_data *data, u8 dbg_mode)
 		goto out;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//LGE
-=======
+
 	//   
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//   
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//   
+
 	mxt_prepare_debug_data_temp(data);
 
 	/* read the dbg data */
@@ -1315,14 +1385,17 @@ static void mxt_proc_t6_messages(struct mxt_data *data, u8 *msg)
 {
 	u8 status = msg[1];
 	u32 crc = msg[2] | (msg[3] << 8) | (msg[4] << 16);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	static u8 t6_reset_cnt = 0;
 	struct input_dev *input_dev = data->input_dev;
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 
 	if (crc != data->config_crc) {
 		data->config_crc = crc;
@@ -1349,8 +1422,9 @@ static void mxt_proc_t6_messages(struct mxt_data *data, u8 *msg)
 	/* Save current status */
 	data->t6_status = status;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (status == 0) {
 		t6_reset_cnt = 0;
 	}
@@ -1391,22 +1465,27 @@ static void mxt_proc_t6_messages(struct mxt_data *data, u8 *msg)
 		data->reset.total_num = data->ts_data.total_num;
 		data->reset.state = HW_RESET_STATE;
 		data->patch.src_item[MXT_PATCH_ITEM_USER7] = HW_RESET_STATE;
-=======
+
 	if (status & MXT_T6_STATUS_RESET && global_mxt_data) {
 		TOUCH_INFO_MSG("RESET Detected. Start Recover \n");
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	if (status & MXT_T6_STATUS_RESET && global_mxt_data) {
 		TOUCH_INFO_MSG("RESET Detected. Start Recover \n");
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	if (status & MXT_T6_STATUS_RESET && global_mxt_data) {
+		TOUCH_INFO_MSG("RESET Detected. Start Recover \n");
+
 
 		if (mxt_patchevent_get(PATCH_EVENT_TA)) {
 			TOUCH_INFO_MSG("   Stage 1 : USB/TA \n");
 			mxt_patch_event(global_mxt_data, CHARGER_PLUGGED);
 		}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_TOUCHSCREEN_LGE_LPWG)
 		if (mxt_patchevent_get(PATCH_EVENT_KNOCKON)) {
 			if (data->lpwg_mode == LPWG_DOUBLE_TAP) {
@@ -1426,10 +1505,12 @@ static void mxt_proc_t6_messages(struct mxt_data *data, u8 *msg)
 			}
 		}
 #else
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 		if (mxt_patchevent_get(PATCH_EVENT_KNOCKON)) {
 			TOUCH_INFO_MSG("   Stage 2 : Knock On \n");
 			if (mxt_patchevent_get(PATCH_EVENT_TA)) {
@@ -1438,15 +1519,19 @@ static void mxt_proc_t6_messages(struct mxt_data *data, u8 *msg)
 				mxt_patch_event(global_mxt_data, NOCHARGER_KNOCKON_SLEEP);
 			}
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #endif
-=======
 
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
 
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 		TOUCH_INFO_MSG("Recover Complete\n");
 	}
 }
@@ -1486,8 +1571,9 @@ static void mxt_button_lock_func(struct work_struct *work_button_lock)
 {
 	struct mxt_data *data = container_of(to_delayed_work(work_button_lock), struct mxt_data, work_button_lock);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	mutex_lock(&data->input_dev->mutex);
 	data->button_lock = false;
 	mutex_unlock(&data->input_dev->mutex);
@@ -1985,7 +2071,7 @@ static void mxt_proc_t15_messages(struct mxt_data *data, u8 *msg)
 	if ((touched_finger_count || data->button_lock || data->palm)) {
 		return;
 	}
-=======
+
 	data->button_lock = false;
 }
 
@@ -2069,7 +2155,7 @@ static void mxt_proc_t9_message(struct mxt_data *data, u8 *message)
 		input_report_abs(input_dev, ABS_MT_PRESSURE, amplitude);
 		input_report_abs(input_dev, ABS_MT_TOUCH_MAJOR, area);
 		input_report_abs(input_dev, ABS_MT_ORIENTATION, vector);
-=======
+
 	data->button_lock = false;
 }
 
@@ -2144,6 +2230,82 @@ static void mxt_proc_t9_message(struct mxt_data *data, u8 *message)
 
 			TOUCH_INFO_MSG("%d finger pressed <%d> : x[%3d] y[%3d] z[%3d]\n", ++touched_finger_count, id, x, y, amplitude);
 			data->fingers[id].state = MXT_STATE_PRESS;
+
+	data->button_lock = false;
+}
+
+static void mxt_proc_t9_message(struct mxt_data *data, u8 *message)
+{
+	struct input_dev *input_dev = data->input_dev;
+	int id = 0;
+	u8 status = 0;
+	int x = 0;
+	int y = 0;
+	int area = 0;
+	int amplitude = 0;
+	u8 vector = 0;
+
+	/* do not report events if input device not yet registered */
+	if (!data->enable_reporting)
+		return;
+
+	id = message[0] - data->T9_reportid_min;
+	status = message[1];
+	x = (message[2] << 4) | ((message[4] >> 4) & 0xf);
+	y = (message[3] << 4) | ((message[4] & 0xf));
+
+	/* Handle 10/12 bit switching */
+	if (data->max_x < 1024)
+		x >>= 2;
+	if (data->max_y < 1024)
+		y >>= 2;
+
+	area = message[5];
+
+	amplitude = message[6];
+	vector = message[7];
+/*
+	TOUCH_INFO_MSG("[%u] %c%c%c%c%c%c%c%c x: %5u y: %5u area: %3u amp: %3u vector: %02X\n",
+		id,
+		(status & MXT_T9_DETECT) ? 'D' : '.',
+		(status & MXT_T9_PRESS) ? 'P' : '.',
+		(status & MXT_T9_RELEASE) ? 'R' : '.',
+		(status & MXT_T9_MOVE) ? 'M' : '.',
+		(status & MXT_T9_VECTOR) ? 'V' : '.',
+		(status & MXT_T9_AMP) ? 'A' : '.',
+		(status & MXT_T9_SUPPRESS) ? 'S' : '.',
+		(status & MXT_T9_UNGRIP) ? 'U' : '.',
+		x, y, area, amplitude, vector);
+*/
+
+	if (unlikely( id < 0 || id >= MXT_MAX_FINGER)) {
+		TOUCH_INFO_MSG("%s wrong id:%d \n", __func__, id);
+		return;
+	}
+
+	input_mt_slot(input_dev, id);
+
+	if (status & MXT_T9_DETECT) {
+		/* Multiple bits may be set if the host is slow to read the
+		 * status messages, indicating all the events that have
+		 * happened */
+		if (status & MXT_T9_RELEASE) {
+			input_mt_report_slot_state(input_dev, MT_TOOL_FINGER, 0);
+			mxt_input_sync(input_dev);
+
+			data->fingers[id].state = MXT_STATE_RELEASE;
+		}
+
+		if (status & MXT_T9_PRESS) {
+			if (data->reported_keycode) {
+				TOUCH_INFO_MSG("KEY[%s:%d] is canceled\n", get_touch_button_string(data->reported_keycode), data->reported_keycode);
+				input_report_key(input_dev, data->reported_keycode, 0xFF);
+				data->reported_keycode = 0;
+			}
+
+			TOUCH_INFO_MSG("%d finger pressed <%d> : x[%3d] y[%3d] z[%3d]\n", ++touched_finger_count, id, x, y, amplitude);
+			data->fingers[id].state = MXT_STATE_PRESS;
+
 		}
 
 		/* Touch active */
@@ -2153,7 +2315,10 @@ static void mxt_proc_t9_message(struct mxt_data *data, u8 *message)
 		input_report_abs(input_dev, ABS_MT_PRESSURE, amplitude);
 		input_report_abs(input_dev, ABS_MT_TOUCH_MAJOR, area);
 		input_report_abs(input_dev, ABS_MT_ORIENTATION, vector);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
 
 		data->button_lock = true;
 	} else {
@@ -2184,10 +2349,13 @@ static void mxt_proc_t15_messages(struct mxt_data *data, u8 *msg)
 
 	if (touched_finger_count || data->button_lock)
 		return;
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 	if (data->reported_keycode == 0 && keystates == 0)
 		return;
@@ -2217,8 +2385,9 @@ static void mxt_proc_t42_messages(struct mxt_data *data, u8 *msg)
 {
 	u8 status = msg[1];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (status & MXT_T42_MSG_TCHSUP) {
 		TOUCH_INFO_MSG("Palm detected %d\n", touched_finger_count);
 		data->button_lock = true;
@@ -2227,17 +2396,22 @@ static void mxt_proc_t42_messages(struct mxt_data *data, u8 *msg)
 		queue_delayed_work(touch_wq, &data->work_button_lock, msecs_to_jiffies(200));
 	}
 	mxt_reset_slots(data);
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	if (status & MXT_T42_MSG_TCHSUP)
 		TOUCH_INFO_MSG("Palm detected \n");
 	else
 		TOUCH_INFO_MSG("Palm released \n");
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 }
 
 static int mxt_proc_t48_messages(struct mxt_data *data, u8 *msg)
@@ -2269,8 +2443,9 @@ static void mxt_proc_t57_messages(struct mxt_data *data, u8 *message)
 	touch_area =			(message[4] << 8 | message[3]);
 	anti_touch_area =		(message[6] << 8 | message[5]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (data->t57_debug_enabled || data->ref_chk) {
 		TOUCH_INFO_MSG("T57 :%3d %3d %3d\n", area, touch_area, anti_touch_area);
 	}
@@ -2280,14 +2455,18 @@ static void mxt_proc_t57_messages(struct mxt_data *data, u8 *message)
 		data->t72_noise_state = true;
 		data->cal_cnt = 0;
 		mxt_t6_command(data, MXT_COMMAND_CALIBRATE, 1, false);
-=======
+
 	if (data->t57_debug_enabled) {
 		TOUCH_INFO_MSG("T57 : area %3d tarea %3d anti area %3d\n", area, touch_area, anti_touch_area);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	if (data->t57_debug_enabled) {
 		TOUCH_INFO_MSG("T57 : area %3d tarea %3d anti area %3d\n", area, touch_area, anti_touch_area);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	if (data->t57_debug_enabled) {
+		TOUCH_INFO_MSG("T57 : area %3d tarea %3d anti area %3d\n", area, touch_area, anti_touch_area);
+
 	}
 }
 
@@ -2300,14 +2479,17 @@ static int mxt_proc_t25_message(struct mxt_data *data, u8 *message)
 
 	TOUCH_INFO_MSG("T25 Self Test completed %u\n",status);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	memset(data->self_test_status, 0, sizeof(data->self_test_status));
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	if (selftest_show)
 		data->self_test_status[0] = status;
 
@@ -2343,8 +2525,9 @@ static int mxt_proc_t25_message(struct mxt_data *data, u8 *message)
 	return 0;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_TOUCHSCREEN_LGE_LPWG)
 static int mxt_proc_t37_message(struct mxt_data *data, u8 *msg_buf)
 {
@@ -2475,10 +2658,12 @@ static void mxt_proc_t93_messages(struct mxt_data *data, u8 *message)
 #endif
 
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 static void mxt_proc_t24_messages(struct mxt_data *data, u8 *message)
 {
 	u8 msg = 0;
@@ -2500,15 +2685,19 @@ static void mxt_proc_t24_messages(struct mxt_data *data, u8 *message)
 		y >>= 2;
 
 	if (msg == 0x04) {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		wake_lock_timeout(&touch_wake_lock, msecs_to_jiffies(2000));
-=======
+
 		wake_lock_timeout(&touch_wake_lock, msecs_to_jiffies(1000));
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		wake_lock_timeout(&touch_wake_lock, msecs_to_jiffies(1000));
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		wake_lock_timeout(&touch_wake_lock, msecs_to_jiffies(1000));
+
 		TOUCH_INFO_MSG("Knock On detected x[%3d] y[%3d] \n", x, y);
 		kobject_uevent_env(&lge_touch_sys_device.kobj, KOBJ_CHANGE, knockon_event);
 	} else {
@@ -2578,20 +2767,24 @@ static ssize_t mxt_update_patch_store(struct mxt_data *data, const char *buf, si
 	TOUCH_INFO_MSG("%s ppatch:%p %p\n", __func__, patch_data, data->patch.patch);
 
 	ret = mxt_patch_init(data, data->patch.patch);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (ret == 0) {
 		global_mxt_data = data;
 	} else {
 		global_mxt_data = NULL;
 		TOUCH_INFO_MSG("%s global_mxt_data is NULL \n", __func__);
 	}
-=======
+
 	global_mxt_data = data;
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	global_mxt_data = data;
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	global_mxt_data = data;
+
 	release_firmware(fw);
 
 	return 1;
@@ -2607,8 +2800,9 @@ out:
 
 void trigger_usb_state_from_otg(int usb_type)
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 	if (global_mxt_data && global_mxt_data->patch.event_cnt) {
 
@@ -2623,19 +2817,23 @@ void trigger_usb_state_from_otg(int usb_type)
 			TOUCH_INFO_MSG("%s mutex_is_locked \n", __func__);
 		}
 
-=======
+
 	if (global_mxt_data && global_mxt_data->patch.event_cnt) {
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	if (global_mxt_data && global_mxt_data->patch.event_cnt) {
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	if (global_mxt_data && global_mxt_data->patch.event_cnt) {
+
 		mutex_lock(&i2c_suspend_lock);
 		if (usb_type == 0) {
 			if (mxt_patchevent_get(PATCH_EVENT_TA)) {
 				if (mxt_patchevent_get(PATCH_EVENT_KNOCKON)) {
 					mxt_patchevent_unset(PATCH_EVENT_KNOCKON);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_TOUCHSCREEN_LGE_LPWG)
 					if (global_mxt_data->lpwg_mode == LPWG_DOUBLE_TAP) {
 						mxt_patch_event(global_mxt_data, CHARGER_KNOCKON_WAKEUP);
@@ -2653,12 +2851,15 @@ void trigger_usb_state_from_otg(int usb_type)
 						global_mxt_data->work_deepsleep_enabled = true;
 						queue_delayed_work(touch_wq, &global_mxt_data->work_deepsleep, msecs_to_jiffies(2000));
 					}
-=======
+
 					mxt_patch_event(global_mxt_data, CHARGER_KNOCKON_WAKEUP);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 					mxt_patch_event(global_mxt_data, CHARGER_KNOCKON_WAKEUP);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+					mxt_patch_event(global_mxt_data, CHARGER_KNOCKON_WAKEUP);
+
 				}
 				global_mxt_data->charging_mode = 0;
 				mxt_patch_event(global_mxt_data, CHARGER_UNplugged);
@@ -2666,8 +2867,9 @@ void trigger_usb_state_from_otg(int usb_type)
 			}
 		} else {
 			if (mxt_patchevent_get(PATCH_EVENT_KNOCKON)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_TOUCHSCREEN_LGE_LPWG)
 				if (global_mxt_data->lpwg_mode == LPWG_DOUBLE_TAP){
 					mxt_patch_event(global_mxt_data, NOCHARGER_KNOCKON_WAKEUP);
@@ -2677,20 +2879,24 @@ void trigger_usb_state_from_otg(int usb_type)
 #else
 				mxt_patch_event(global_mxt_data, NOCHARGER_KNOCKON_WAKEUP);
 #endif
-=======
+
 				mxt_patch_event(global_mxt_data, NOCHARGER_KNOCKON_WAKEUP);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 				mxt_patch_event(global_mxt_data, NOCHARGER_KNOCKON_WAKEUP);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+				mxt_patch_event(global_mxt_data, NOCHARGER_KNOCKON_WAKEUP);
+
 				mxt_patchevent_unset(PATCH_EVENT_KNOCKON);
 			}
 			global_mxt_data->charging_mode = 1;
 			mxt_patch_event(global_mxt_data, CHARGER_PLUGGED);
 			mxt_patchevent_set(PATCH_EVENT_TA);
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if 0
 		error = __mxt_read_reg(global_mxt_data->client, global_mxt_data->T71_address + 51, 26, &global_mxt_data->ref_limit);
 		if (!error) {
@@ -2714,10 +2920,12 @@ void trigger_usb_state_from_otg(int usb_type)
 #endif
 		do_gettimeofday(&t_ex_debug[TIME_EX_INIT_TIME]);
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 		mutex_unlock(&i2c_suspend_lock);
 	}
 }
@@ -2725,15 +2933,19 @@ void trigger_usb_state_from_otg(int usb_type)
 static void mxt_proc_message_log(struct mxt_data *data, u8 type)
 {
 	if (mxt_patchevent_get(PATCH_EVENT_KNOCKON)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		if (type != 6 && type != 46 && type != 56 && type != 61 && type != 72)
-=======
+
 		if (type != 6 && type != 46 && type != 56 && type != 61 && type != 62 && type != 72)
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		if (type != 6 && type != 46 && type != 56 && type != 61 && type != 62 && type != 72)
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		if (type != 6 && type != 46 && type != 56 && type != 61 && type != 62 && type != 72)
+
 			TOUCH_INFO_MSG("mxt_interrupt T%d \n", type);
 	}
 }
@@ -2754,8 +2966,9 @@ static int mxt_proc_message(struct mxt_data *data, u8 *message)
 	if (type == MXT_GEN_COMMAND_T6) {
 		mxt_proc_t6_messages(data, message);
 	} else if (type == MXT_TOUCH_MULTI_T9) {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_TOUCHSCREEN_LGE_LPWG)
 		if (data->mxt_multi_tap_enable && data->suspended) {
 			waited_udf(data, message);
@@ -2766,12 +2979,15 @@ static int mxt_proc_message(struct mxt_data *data, u8 *message)
 #else
 		mxt_proc_t9_message(data, message);
 #endif
-=======
+
 		mxt_proc_t9_message(data, message);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		mxt_proc_t9_message(data, message);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		mxt_proc_t9_message(data, message);
+
 	} else if (type == MXT_TOUCH_KEYARRAY_T15) {
 		mxt_proc_t15_messages(data, message);
 	} else if (type == MXT_PROCI_ONETOUCH_T24 && data->mxt_knock_on_enable) {
@@ -2789,8 +3005,9 @@ static int mxt_proc_message(struct mxt_data *data, u8 *message)
 	} else if (type == MXT_PROCI_EXTRATOUCHSCREENDATA_T57) {
 		mxt_proc_t57_messages(data, message);
 	} else if (type == MXT_PROCG_NOISESUPPRESSION_T72) {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		do_gettimeofday(&t_ex_debug[TIME_EX_T72_NOISE_INT_TIME]);
 		TOUCH_INFO_MSG("MXT_PROCG_NOISESUPPRESSION_T72");
 #if defined(CONFIG_TOUCHSCREEN_LGE_LPWG)
@@ -2799,16 +3016,21 @@ static int mxt_proc_message(struct mxt_data *data, u8 *message)
 #endif
 	} else {
 		if (type != MXT_SPT_TIMER_T61) {
-=======
+
 		TOUCH_INFO_MSG("MXT_PROCG_NOISESUPPRESSION_T72");
 	} else {
 		if ((type != MXT_SPT_TIMER_T61) && (type != 62)) {
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		TOUCH_INFO_MSG("MXT_PROCG_NOISESUPPRESSION_T72");
 	} else {
 		if ((type != MXT_SPT_TIMER_T61) && (type != 62)) {
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		TOUCH_INFO_MSG("MXT_PROCG_NOISESUPPRESSION_T72");
+	} else {
+		if ((type != MXT_SPT_TIMER_T61) && (type != 62)) {
+
 			TOUCH_INFO_MSG("%s : Unknown T%d \n", __func__, type);
 			mxt_dump_message(data, message);
 		}
@@ -2828,14 +3050,18 @@ static int mxt_read_and_process_messages(struct mxt_data *data, u8 count)
 	int ret = 0;
 	int i = 0;
 	u8 num_valid = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
+
 	bool use_mutex = false;
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	bool use_mutex = false;
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	bool use_mutex = false;
+
 
 	/* Safety check for msg_buf */
 	if (count > data->max_reportid)
@@ -2845,13 +3071,16 @@ static int mxt_read_and_process_messages(struct mxt_data *data, u8 count)
 		TOUCH_INFO_MSG("%s data->msg_buf = NULL \n", __func__);
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	/* Process remaining messages if necessary */
 	ret = __mxt_read_reg(data->client, data->T5_address, data->T5_msg_size * count, data->msg_buf);
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	if (data->suspended) {
 		use_mutex = true;
 	}
@@ -2870,10 +3099,13 @@ static int mxt_read_and_process_messages(struct mxt_data *data, u8 count)
 	if (use_mutex != data->suspended)
 		TOUCH_INFO_MSG("%s WARN different state \n", __func__);
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	if (ret) {
 		TOUCH_INFO_MSG("Failed to read %u messages (%d)\n", count, ret);
 		return ret;
@@ -2899,21 +3131,27 @@ static irqreturn_t mxt_process_messages(struct mxt_data *data)
 		count = 1;
 
 	/* include final invalid message */
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	total_handled = mxt_read_and_process_messages(data, count);
 	if (total_handled < 0)
 		return IRQ_HANDLED;
-=======
+
 	total_handled = mxt_read_and_process_messages(data, count + 1);
 	if (total_handled < 0)
 		return IRQ_NONE;
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	total_handled = mxt_read_and_process_messages(data, count + 1);
 	if (total_handled < 0)
 		return IRQ_NONE;
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	total_handled = mxt_read_and_process_messages(data, count + 1);
+	if (total_handled < 0)
+		return IRQ_NONE;
+
 
 	/* if there were invalid messages, then we are done */
 	else if (total_handled <= count)
@@ -2924,15 +3162,19 @@ static irqreturn_t mxt_process_messages(struct mxt_data *data)
 	do {
 		num_handled = mxt_read_and_process_messages(data, 2);
 		if (num_handled < 0)
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			return IRQ_HANDLED;
-=======
+
 			return IRQ_NONE;
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 			return IRQ_NONE;
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+			return IRQ_NONE;
+
 
 		total_handled += num_handled;
 
@@ -2954,22 +3196,28 @@ update_count:
 static irqreturn_t mxt_interrupt(int irq, void *dev_id)
 {
 	struct mxt_data *data = dev_id;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	irqreturn_t ret = IRQ_NONE;
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 
 	#if 0
 	if (mxt_patchevent_get(PATCH_EVENT_KNOCKON)) {
 		TOUCH_INFO_MSG("%s - IRQ \n", __func__);
 	}
 	#endif
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 	if (data->in_bootloader) {
 		/* bootloader state transition completion */
@@ -2978,8 +3226,9 @@ static irqreturn_t mxt_interrupt(int irq, void *dev_id)
 	}
 
 	if (!data->object_table)
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		return IRQ_HANDLED;
 
 	mutex_lock(&i2c_suspend_lock);
@@ -2989,16 +3238,21 @@ static irqreturn_t mxt_interrupt(int irq, void *dev_id)
 	mutex_unlock(&i2c_suspend_lock);
 
 	return ret;
-=======
+
 		return IRQ_NONE;
 
 	return mxt_process_messages(data);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		return IRQ_NONE;
 
 	return mxt_process_messages(data);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		return IRQ_NONE;
+
+	return mxt_process_messages(data);
+
 }
 
 static int mxt_t6_command(struct mxt_data *data, u16 cmd_offset, u8 value, bool wait)
@@ -3153,11 +3407,14 @@ static u32 mxt_calculate_crc(u8 *base, off_t start_off, off_t end_off)
 	return crc;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
 
 static int mxt_check_retrigen(struct mxt_data *data)
 {
@@ -3182,10 +3439,13 @@ static int mxt_check_retrigen(struct mxt_data *data)
 	return 0;
 }
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 static int mxt_set_t7_power_cfg(struct mxt_data *data, u8 sleep)
 {
 	int error = 0;
@@ -3234,8 +3494,9 @@ recheck:
 	}
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_TOUCHSCREEN_LGE_LPWG)
 static int mxt_init_t93_tab_count(struct mxt_data *data)
 {
@@ -3255,10 +3516,12 @@ static int mxt_init_t93_tab_count(struct mxt_data *data)
 }
 #endif
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 static int mxt_check_reg_init(struct mxt_data *data, const char *name)
 {
 	struct device *dev = &data->client->dev;
@@ -3469,19 +3732,25 @@ static int mxt_check_reg_init(struct mxt_data *data, const char *name)
 		TOUCH_INFO_MSG("Config CRC is mismatched 0x%06X \n", data->config_crc);
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
 	ret = mxt_check_retrigen(data);
 	if (ret)
 		goto release_mem;
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	ret = mxt_soft_reset(data);
 	if (ret)
 		goto release_mem;
@@ -3564,14 +3833,17 @@ static void mxt_free_object_table(struct mxt_data *data)
 	data->T56_address = 0;
 	data->T65_address = 0;
 	data->T72_address = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	data->T93_address = 0;
 	data->T93_reportid = 0;
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	data->max_reportid = 0;
 }
 
@@ -3619,13 +3891,16 @@ static int mxt_parse_object_table(struct mxt_data *data)
 				data->T5_msg_size = mxt_obj_size(object) - 1;
 			}
 			data->T5_address = object->start_address;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			break;
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 		case MXT_GEN_COMMAND_T6:
 			data->T6_reportid = min_id;
 			data->T6_address = object->start_address;
@@ -3677,8 +3952,9 @@ static int mxt_parse_object_table(struct mxt_data *data)
 			break;
 		case MXT_SPT_DYNAMICCONFIGURATIONCONTAINER_T71:
 			data->T71_address = object->start_address;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			break;
 		case MXT_PROCG_NOISESUPPRESSION_T72:
 			data->T72_address = object->start_address;
@@ -3687,16 +3963,21 @@ static int mxt_parse_object_table(struct mxt_data *data)
 			data->T93_reportid = min_id;
 			data->T93_address = object->start_address;
 			break;
-=======
+
 		case MXT_PROCG_NOISESUPPRESSION_T72:
 			data->T72_address = object->start_address;
 			break;
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		case MXT_PROCG_NOISESUPPRESSION_T72:
 			data->T72_address = object->start_address;
 			break;
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		case MXT_PROCG_NOISESUPPRESSION_T72:
+			data->T72_address = object->start_address;
+			break;
+
 		}
 
 		end_address = object->start_address + mxt_obj_size(object) * mxt_obj_instances(object) - 1;
@@ -3992,14 +4273,14 @@ static int mxt_rest_init(struct mxt_data *data)
 
 static void mxt_read_fw_version(struct mxt_data *data)
 {
-	TOUCH_INFO_MSG("==================================\n");
+	TOUCH_INFO_MSG("======\n");
 	TOUCH_INFO_MSG("Firmware Version = %d.%02d \n", data->pdata->fw_ver[0], data->pdata->fw_ver[1]);
 	TOUCH_INFO_MSG("FW Product       = %s \n", data->pdata->product);
 	TOUCH_INFO_MSG("Binary Version   = %u.%u.%02X \n", data->info->version >> 4, data->info->version & 0xF, data->info->build);
 	TOUCH_INFO_MSG("Config CRC       = 0x%X  \n", data->config_crc);
 	TOUCH_INFO_MSG("Family Id        = 0x%02X \n", data->info->family_id);
 	TOUCH_INFO_MSG("Variant          = 0x%02X \n", data->info->variant_id);
-	TOUCH_INFO_MSG("==================================\n");
+	TOUCH_INFO_MSG("======\n");
 }
 
 /* Firmware Version is returned as Major.Minor.Build */
@@ -4076,14 +4357,18 @@ static ssize_t mxt_selftest(struct mxt_data *data, char *buf, int len)
 			ret += snprintf(buf+ret, PAGE_SIZE - ret, "# Fail # type_num(%u) type_instance(%u)\n", data->self_test_status[1], data->self_test_status[2]);
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
+
 	memset(data->self_test_status, 0, sizeof(data->self_test_status));
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	memset(data->self_test_status, 0, sizeof(data->self_test_status));
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	memset(data->self_test_status, 0, sizeof(data->self_test_status));
+
 	selftest_show = false;
 	return ret;
 }
@@ -4435,15 +4720,19 @@ static ssize_t mxt_update_fw_store(struct mxt_data *data, const char *buf, size_
 
 	TOUCH_INFO_MSG("%s \n", __func__);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	wake_lock_timeout(&touch_wake_lock, msecs_to_jiffies(2000));
-=======
+
 	wake_lock_timeout(&touch_wake_lock, msecs_to_jiffies(1000));
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	wake_lock_timeout(&touch_wake_lock, msecs_to_jiffies(1000));
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	wake_lock_timeout(&touch_wake_lock, msecs_to_jiffies(1000));
+
 
 	if (data->suspended) {
 		TOUCH_INFO_MSG("LCD On \n");
@@ -4471,8 +4760,9 @@ static ssize_t mxt_update_fw_store(struct mxt_data *data, const char *buf, size_
 
 	error = mxt_update_firmware(data, package_name);
 	if (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		TOUCH_INFO_MSG("%s error \n", __func__);
 		goto exit;
 	}
@@ -4501,14 +4791,18 @@ static ssize_t mxt_update_fw_store(struct mxt_data *data, const char *buf, size_
 				global_mxt_data->ref_limit.butt_dif[0], global_mxt_data->ref_limit.butt_dif[1],
 				global_mxt_data->ref_limit.butt_dif[2]);
 		}
-=======
+
 		TOUCH_INFO_MSG("%s error \n", __func__);
 		goto exit;
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		TOUCH_INFO_MSG("%s error \n", __func__);
 		goto exit;
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		TOUCH_INFO_MSG("%s error \n", __func__);
+		goto exit;
+
 	}
 
 exit:
@@ -4710,8 +5004,9 @@ static ssize_t mxt_get_knockon_type(struct mxt_data *data, char *buf)
 	return ret;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if !defined(CONFIG_TOUCHSCREEN_LGE_LPWG)
 static ssize_t mxt_knock_on_store(struct mxt_data *data, const char *buf, size_t size)
 {
@@ -4720,30 +5015,38 @@ static ssize_t mxt_knock_on_store(struct mxt_data *data, const char *buf, size_t
 	if (mutex_is_locked(&i2c_suspend_lock)) {
 		TOUCH_INFO_MSG("%s mutex_is_locked \n", __func__);
 	}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 static ssize_t mxt_knock_on_store(struct mxt_data *data, const char *buf, size_t size)
 {
 	struct input_dev *input_dev = data->input_dev;
 	int value = 0;
 
 	mutex_lock(&input_dev->mutex);
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 	sscanf(buf, "%d", &value);
 
 	if (data->suspended) {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		mxt_reset_slots(data);
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 		if (value) {
 			mxt_regulator_enable(data);
 			mxt_set_t7_power_cfg(data, MXT_POWER_CFG_RUN);
@@ -4785,21 +5088,27 @@ static ssize_t mxt_knock_on_store(struct mxt_data *data, const char *buf, size_t
 		TOUCH_INFO_MSG("Knock On : %s\n", data->mxt_knock_on_enable ? "Enabled" : "Disabled");
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	return size;
 }
 #endif
-=======
+
 	mutex_unlock(&input_dev->mutex);
 	return size;
 }
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	mutex_unlock(&input_dev->mutex);
 	return size;
 }
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	mutex_unlock(&input_dev->mutex);
+	return size;
+}
+
 
 static void write_file(char *filename, char *data, int time)
 {
@@ -4911,8 +5220,9 @@ static ssize_t mxt_run_rawdata_show(struct mxt_data *data, char *buf)
 
 static ssize_t mxt_run_self_diagnostic_show(struct mxt_data *data, char *buf)
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	int i = 0;
 	int len = 0;
 	int info_len = 0;
@@ -4923,19 +5233,24 @@ static ssize_t mxt_run_self_diagnostic_show(struct mxt_data *data, char *buf)
 	bool chstatus_result = 1;
 	bool rawdata_result = 1;
 	struct input_dev *input_dev = data->input_dev;
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	int len = 0;
 	int info_len = 0;
 	int ref_len = 0;
 	char *ref_buf = NULL;
 	bool chstatus_result = 1;
 	bool rawdata_result = 1;
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 	mxt_power_block(POWERLOCK_SYSFS);
 
@@ -4957,8 +5272,9 @@ static ssize_t mxt_run_self_diagnostic_show(struct mxt_data *data, char *buf)
 		data->self_test_result_status = SELF_DIAGNOSTIC_STATUS_COMPLETE;
 		return 0;
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	temp_buf = kzalloc(100, GFP_KERNEL);
 	if (!temp_buf) {
 		TOUCH_INFO_MSG("%s Failed to allocate memory\n", __func__);
@@ -4981,22 +5297,25 @@ static ssize_t mxt_run_self_diagnostic_show(struct mxt_data *data, char *buf)
 	for(i = 0; i < data->info->matrix_xsize; i++) {
 		data->full_cap[i] = kzalloc(data->info->matrix_ysize * sizeof(int), GFP_KERNEL);
 	}
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 
 	write_file(SELF_DIAGNOSTIC_FILE_PATH, buf, 1);
 	msleep(30);
 	len += mxt_info_show(data, buf);
-	len += snprintf(buf + len, PAGE_SIZE - len, "=======RESULT========\n");
+
+	len += snprintf(buf + len, PAGE_SIZE - len, "RESULT=\n");
 	info_len = len;
 	len = mxt_selftest(data, buf, len);
 	write_file(SELF_DIAGNOSTIC_FILE_PATH, buf, 0);
 	msleep(30);
 	run_reference_read(data, ref_buf, &ref_len);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 	msleep(30);
 
 	mxt_get_cap_diff(data);
@@ -5055,23 +5374,35 @@ static ssize_t mxt_run_self_diagnostic_show(struct mxt_data *data, char *buf)
 		kfree((int*)data->full_cap);
 		data->full_cap = NULL;
 	}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+	len += snprintf(buf + len, PAGE_SIZE - len, "RESULT=\n");
+	info_len = len;
+	len = mxt_selftest(data, buf, len);
+	write_file(SELF_DIAGNOSTIC_FILE_PATH, buf, 0);
+	msleep(30);
+	run_reference_read(data, ref_buf, &ref_len);
+
 	write_file(SELF_DIAGNOSTIC_FILE_PATH, ref_buf, 0);
 	msleep(30);
 
 	kfree(ref_buf);
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 	if ((data->self_test_status[0] == 0x01) || (data->self_test_status[0] == 0x02))
 		chstatus_result = 0;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (data->self_test_status[0] == 0x17 || data->bad_sample || data->err_node_cnt)
 		rawdata_result = 0;
 	if (data->self_test_status[0] == 0) {
@@ -5084,19 +5415,24 @@ static ssize_t mxt_run_self_diagnostic_show(struct mxt_data *data, char *buf)
 		info_len += snprintf(buf + info_len, PAGE_SIZE - info_len, "Channel Status : %s\n", chstatus_result == 1 ? "PASS" : "FAIL");
 		info_len += snprintf(buf + info_len, PAGE_SIZE - info_len, "Raw Data : %s\n", rawdata_result == 1 ? "PASS" : "FAIL");
 	}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	if (data->self_test_status[0] == 0x17)
 		rawdata_result = 0;
 
 	info_len += snprintf(buf + info_len, PAGE_SIZE - info_len, "Channel Status : %s\n", chstatus_result == 1 ? "PASS" : "FAIL");
 	info_len += snprintf(buf + info_len, PAGE_SIZE - info_len, "Raw Data : %s\n", rawdata_result == 1 ? "PASS" : "FAIL");
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	mxt_power_unblock(POWERLOCK_SYSFS);
 
 	data->self_test_result_status = SELF_DIAGNOSTIC_STATUS_COMPLETE;
@@ -5120,24 +5456,30 @@ static ssize_t mxt_ghost_detection_enable_store(struct mxt_data *data, const cha
 	sscanf(buf, "%d", &value);
 
 	TOUCH_INFO_MSG("%s = %d \n", __func__, value);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	data->pdata->ghost_detection_enable= value;
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 
 	return count;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
+
 static ssize_t mxt_global_access_pixel_show(struct mxt_data *data, char *buf)
 {
 	int len = 0;
@@ -5174,8 +5516,9 @@ static ssize_t mxt_force_rebase_show(struct mxt_data *data, char *buf)
 	return len;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 static ssize_t mxt_mfts_enable_show(struct mxt_data *data, char *buf)
 {
 	int len = 0;
@@ -5586,10 +5929,12 @@ static ssize_t store_ime_status(struct mxt_data *data, const char *buf, size_t c
 }
 
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 static LGE_TOUCH_ATTR(fw_version, S_IRUGO, mxt_fw_version_show, NULL);
 static LGE_TOUCH_ATTR(hw_version, S_IRUGO, mxt_hw_version_show, NULL);
 static LGE_TOUCH_ATTR(testmode_ver, S_IRUGO | S_IWUSR, mxt_testmode_ver_show, NULL);
@@ -5603,20 +5948,24 @@ static LGE_TOUCH_ATTR(debug_enable, S_IWUSR | S_IRUSR, mxt_debug_enable_show, mx
 static LGE_TOUCH_ATTR(t57_debug_enable, S_IWUSR | S_IRUSR, NULL, mxt_t57_debug_enable_store);
 static LGE_TOUCH_ATTR(patch_debug_enable, S_IWUSR | S_IRUSR, mxt_patch_debug_enable_show, mxt_patch_debug_enable_store);
 static LGE_TOUCH_ATTR(knock_on_type, S_IRUGO, mxt_get_knockon_type, NULL);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_TOUCHSCREEN_LGE_LPWG)
 static LGE_TOUCH_ATTR(lpwg_data, S_IRUGO | S_IWUSR, show_lpwg_data, store_lpwg_data);
 static LGE_TOUCH_ATTR(lpwg_notify, S_IRUGO | S_IWUSR, NULL, store_lpwg_notify);
 #else
 static LGE_TOUCH_ATTR(touch_gesture,S_IRUGO | S_IWUSR, NULL, mxt_knock_on_store);
 #endif
-=======
+
 static LGE_TOUCH_ATTR(touch_gesture,S_IRUGO | S_IWUSR, NULL, mxt_knock_on_store);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 static LGE_TOUCH_ATTR(touch_gesture,S_IRUGO | S_IWUSR, NULL, mxt_knock_on_store);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+static LGE_TOUCH_ATTR(touch_gesture,S_IRUGO | S_IWUSR, NULL, mxt_knock_on_store);
+
 static LGE_TOUCH_ATTR(delta, S_IRUGO, mxt_run_delta_show, NULL);
 static LGE_TOUCH_ATTR(chstatus, S_IRUGO, mxt_run_chstatus_show, NULL);
 static LGE_TOUCH_ATTR(rawdata, S_IRUGO, mxt_run_rawdata_show, NULL);
@@ -5628,17 +5977,20 @@ static LGE_TOUCH_ATTR(power_control, S_IRUGO | S_IWUSR, mxt_power_control_show, 
 static LGE_TOUCH_ATTR(ghost_detection_enable, S_IWUSR, NULL, mxt_ghost_detection_enable_store);
 static LGE_TOUCH_ATTR(global_access_pixel, S_IWUSR | S_IRUSR, mxt_global_access_pixel_show, mxt_global_access_pixel_store);
 static LGE_TOUCH_ATTR(rebase, S_IWUSR | S_IRUSR, mxt_force_rebase_show, NULL);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 static LGE_TOUCH_ATTR(mfts, S_IWUSR | S_IRUSR, mxt_mfts_enable_show, mxt_mfts_enable_store);
 static LGE_TOUCH_ATTR(incoming_call, S_IRUGO | S_IWUSR, NULL, store_incoming_call);
 static LGE_TOUCH_ATTR(lockscreen, S_IRUGO | S_IWUSR, show_lockscreen, store_lockscreen);
 static LGE_TOUCH_ATTR(ime_status, S_IRUGO | S_IWUSR, NULL, store_ime_status);
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 
 static struct attribute *lge_touch_attribute_list[] = {
 	&lge_touch_attr_fw_version.attr,
@@ -5654,20 +6006,24 @@ static struct attribute *lge_touch_attribute_list[] = {
 	&lge_touch_attr_t57_debug_enable.attr,
 	&lge_touch_attr_patch_debug_enable.attr,
 	&lge_touch_attr_knock_on_type.attr,
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_TOUCHSCREEN_LGE_LPWG)
 	&lge_touch_attr_lpwg_data.attr,
 	&lge_touch_attr_lpwg_notify.attr,
 #else
 	&lge_touch_attr_touch_gesture.attr,
 #endif
-=======
+
 	&lge_touch_attr_touch_gesture.attr,
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	&lge_touch_attr_touch_gesture.attr,
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	&lge_touch_attr_touch_gesture.attr,
+
 	&lge_touch_attr_delta.attr,
 	&lge_touch_attr_chstatus.attr,
 	&lge_touch_attr_rawdata.attr,
@@ -5679,16 +6035,19 @@ static struct attribute *lge_touch_attribute_list[] = {
 	&lge_touch_attr_ghost_detection_enable.attr,
 	&lge_touch_attr_global_access_pixel.attr,
 	&lge_touch_attr_rebase.attr,
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	&lge_touch_attr_mfts.attr,
 	&lge_touch_attr_incoming_call.attr,
 	&lge_touch_attr_lockscreen.attr,
 	&lge_touch_attr_ime_status.attr,
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	NULL
 };
 
@@ -5745,8 +6104,9 @@ static void mxt_reset_slots(struct mxt_data *data)
 		input_mt_report_slot_state(input_dev, MT_TOOL_FINGER, 0);
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	mxt_input_sync(input_dev);
 	TOUCH_INFO_MSG("Release all event \n");
 
@@ -5754,17 +6114,22 @@ static void mxt_reset_slots(struct mxt_data *data)
 	touched_finger_count = 0;
 	data->button_lock = false;
 	data->palm = false;
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	touched_finger_count = 0;
 
 	mxt_input_sync(input_dev);
 	TOUCH_INFO_MSG("Release all event \n");
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 }
 
 static void mxt_gesture_mode_start(struct mxt_data *data)
@@ -5772,8 +6137,9 @@ static void mxt_gesture_mode_start(struct mxt_data *data)
 	if (global_mxt_data) {
 		mxt_patchevent_set(PATCH_EVENT_KNOCKON);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_TOUCHSCREEN_LGE_LPWG)
 		if (global_mxt_data->lpwg_mode == LPWG_DOUBLE_TAP) {
 			if (mxt_patchevent_get(PATCH_EVENT_TA)) {
@@ -5789,30 +6155,36 @@ static void mxt_gesture_mode_start(struct mxt_data *data)
 			}
 		}
 #else
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 		if (mxt_patchevent_get(PATCH_EVENT_TA)) {
 			mxt_patch_event(global_mxt_data, CHARGER_KNOCKON_SLEEP);
 		} else {
 			mxt_patch_event(global_mxt_data, NOCHARGER_KNOCKON_SLEEP);
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #endif
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	}
 }
 
 static void mxt_active_mode_start(struct mxt_data *data)
 {
 	if (global_mxt_data) {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 #if defined(CONFIG_TOUCHSCREEN_LGE_LPWG)
 		if (data->mxt_knock_on_enable || data->lpwg_mode == LPWG_DOUBLE_TAP){
@@ -5829,10 +6201,12 @@ static void mxt_active_mode_start(struct mxt_data *data)
 			} 
 		}
 #else
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 		if (mxt_patchevent_get(PATCH_EVENT_TA)) {
 			if (data->mxt_knock_on_enable || mxt_patchevent_get(PATCH_EVENT_KNOCKON)) {
 				mxt_patch_event(global_mxt_data, CHARGER_KNOCKON_WAKEUP);
@@ -5842,13 +6216,16 @@ static void mxt_active_mode_start(struct mxt_data *data)
 				mxt_patch_event(global_mxt_data, NOCHARGER_KNOCKON_WAKEUP);
 			}
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #endif
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 
 		mxt_patchevent_unset(PATCH_EVENT_KNOCKON);
 	}
@@ -5859,14 +6236,17 @@ static void mxt_start(struct mxt_data *data)
 	if (!data->suspended || data->in_bootloader)
 		return;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	TOUCH_INFO_MSG("%s \n", __func__);
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	touch_disable_irq(data->irq);
 
 	mxt_regulator_enable(data);
@@ -5880,20 +6260,25 @@ static void mxt_start(struct mxt_data *data)
 	/* Recalibrate since chip has been in deep sleep */
 	mxt_t6_command(data, MXT_COMMAND_CALIBRATE, 1, false);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	mxt_reset_slots(data);
 	data->suspended = false;
 	data->button_lock = false;
 	data->enable_reporting = true;
-=======
+
 	data->enable_reporting = true;
 	data->suspended = false;
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	data->enable_reporting = true;
 	data->suspended = false;
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	data->enable_reporting = true;
+	data->suspended = false;
+
 	touch_enable_irq(data->irq);
 }
 
@@ -5902,8 +6287,9 @@ static void mxt_stop(struct mxt_data *data)
 	if (data->suspended || data->in_bootloader)
 		return;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	TOUCH_INFO_MSG("%s \n", __func__);
 
 	touch_disable_irq(data->irq);
@@ -5913,17 +6299,22 @@ static void mxt_stop(struct mxt_data *data)
 #else
 	if (data->mxt_knock_on_enable) {
 #endif
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	data->enable_reporting = false;
 	touch_disable_irq(data->irq);
 
 	if (data->mxt_knock_on_enable) {
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 		mxt_gesture_mode_start(data);
 	} else {
 		TOUCH_INFO_MSG("%s MXT_POWER_CFG_DEEPSLEEP\n", __func__);
@@ -5934,8 +6325,9 @@ static void mxt_stop(struct mxt_data *data)
 	mxt_reset_slots(data);
 	data->suspended = true;
 	data->button_lock = false;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	data->enable_reporting = false;
 
 #if defined(CONFIG_TOUCHSCREEN_LGE_LPWG)
@@ -5943,12 +6335,15 @@ static void mxt_stop(struct mxt_data *data)
 #else
 	if (data->mxt_knock_on_enable) {
 #endif
-=======
+
 	if (data->mxt_knock_on_enable || data->mxt_character_enable) {
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	if (data->mxt_knock_on_enable || data->mxt_character_enable) {
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	if (data->mxt_knock_on_enable || data->mxt_character_enable) {
+
 		touch_enable_irq(data->irq);
 	}
 }
@@ -5973,15 +6368,19 @@ static int mxt_parse_dt(struct device *dev, struct mxt_platform_data *pdata)
 {
 	struct device_node *node = dev->of_node;
 	struct property *prop = NULL;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	u32 temp_array[16] = {0};
-=======
+
 	u32 temp_array[MXT_MAX_KEY] = {0};
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	u32 temp_array[MXT_MAX_KEY] = {0};
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	u32 temp_array[MXT_MAX_KEY] = {0};
+
 	int rc = 0;
 	int i = 0;
 	u32 temp_val = 0;
@@ -6036,8 +6435,9 @@ static int mxt_parse_dt(struct device *dev, struct mxt_platform_data *pdata)
 		TOUCH_INFO_MSG("DT : panel_check = %d\n", pdata->panel_check);
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	rc = of_property_read_u32(node, "atmel,ref_reg_weight_val", &temp_val);
 	if (rc) {
 		pdata->ref_reg_weight_val = 16;
@@ -6046,10 +6446,12 @@ static int mxt_parse_dt(struct device *dev, struct mxt_platform_data *pdata)
 		TOUCH_INFO_MSG("DT : ref_reg_weight_val = %d\n", pdata->ref_reg_weight_val);
 	}
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	if (pdata->panel_check) {
 		rc = of_property_read_string(node, "atmel,extra_fw_name",  &pdata->extra_fw_name);
 		if (rc && (rc != -EINVAL)) {
@@ -6062,11 +6464,14 @@ static int mxt_parse_dt(struct device *dev, struct mxt_platform_data *pdata)
 		pdata->extra_fw_name = NULL;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
 	rc = of_property_read_u32(node, "atmel,irqflags", &temp_val);
 	if (rc) {
 		TOUCH_INFO_MSG("DT : Unable to read irqflags\n");
@@ -6076,10 +6481,13 @@ static int mxt_parse_dt(struct device *dev, struct mxt_platform_data *pdata)
 		TOUCH_INFO_MSG("DT : irqflags = %lu\n", pdata->irqflags);
 	}
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	rc = of_property_read_u32(node, "atmel,knock_on_type",  &temp_val);
 	if (rc) {
 		TOUCH_INFO_MSG("DT : Unable to read knock_on_type - set as 0\n" );
@@ -6098,8 +6506,9 @@ static int mxt_parse_dt(struct device *dev, struct mxt_platform_data *pdata)
 	}
 	TOUCH_INFO_MSG("DT : global_access_pixel = %d \n",pdata->global_access_pixel);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	rc = of_property_read_u32(node, "atmel,use_mfts",  &temp_val);
 	if (rc) {
 		TOUCH_INFO_MSG("DT : Unable to read use_mfts - set as false \n" );
@@ -6182,10 +6591,12 @@ static int mxt_parse_dt(struct device *dev, struct mxt_platform_data *pdata)
 		}
 	}
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	prop = of_find_property(node, "atmel,t15_key_state", NULL);
 	if (prop) {
 		temp_val = prop->length / sizeof(temp_val);
@@ -6205,8 +6616,9 @@ static int mxt_parse_dt(struct device *dev, struct mxt_platform_data *pdata)
 		}
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	prop = of_find_property(node, "atmel,t15_key_array", NULL);
 	if (prop) {
 		temp_val = prop->length / sizeof(temp_val);
@@ -6224,10 +6636,12 @@ static int mxt_parse_dt(struct device *dev, struct mxt_platform_data *pdata)
 		}
 	}
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	if (pdata->panel_check) {
 		prop = of_find_property(node, "atmel,t15_extra_key_state", NULL);
 		if (prop) {
@@ -6249,8 +6663,9 @@ static int mxt_parse_dt(struct device *dev, struct mxt_platform_data *pdata)
 		}
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	prop = of_find_property(node, "atmel,t15_extra_key_array", NULL);
 	if (prop) {
 		temp_val = prop->length / sizeof(temp_val);
@@ -6268,10 +6683,12 @@ static int mxt_parse_dt(struct device *dev, struct mxt_platform_data *pdata)
 		}
 	}
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	prop = of_find_property(node, "atmel,t15_key_map", NULL);
 	if (prop) {
 		temp_val = prop->length / sizeof(temp_val);
@@ -6293,8 +6710,9 @@ static int mxt_parse_dt(struct device *dev, struct mxt_platform_data *pdata)
 		}
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	rc = of_property_read_u32(node, "atmel,butt_check_enable", &temp_val);
 	if (rc && (rc != -EINVAL)) {
 		TOUCH_INFO_MSG( "DT : Unable to read butt_check_enable\n");
@@ -6319,10 +6737,12 @@ static int mxt_parse_dt(struct device *dev, struct mxt_platform_data *pdata)
 		}
 	}
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	return 0;
 
 }
@@ -6714,14 +7134,17 @@ static int mxt_flash_fw_on_probe(struct mxt_fw_info *fw_info)
 {
 	struct mxt_data *data = fw_info->data;
 	int error = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	//struct mxt_object *object = NULL;
 	//int ret = 0;
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 
 	error = mxt_read_id_info(data);
 
@@ -6747,8 +7170,9 @@ static int mxt_flash_fw_on_probe(struct mxt_fw_info *fw_info)
 		goto out;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 // get T71 diff value before firmware upload
 /*
 	object = mxt_get_object(data, MXT_SPT_DYNAMICCONFIGURATIONCONTAINER_T71);
@@ -6772,10 +7196,12 @@ static int mxt_flash_fw_on_probe(struct mxt_fw_info *fw_info)
 */
 
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	error = mxt_enter_bootloader(data);
 	if (error) {
 		TOUCH_INFO_MSG("Failed enter bootloader mode\n");
@@ -6833,11 +7259,14 @@ static int mxt_read_info_crc(struct mxt_data *data, u32 *crc_pointer)
 	return 0;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
 #if 0
 static u32 mxt_make_crc24(u32 crc, u8 byte1, u8 byte2)
 {
@@ -6875,10 +7304,13 @@ static int mxt_calculate_infoblock_crc(struct mxt_data *data, u32 *crc_pointer)
 }
 #endif
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 static int mxt_table_initialize(struct mxt_data *data)
 {
 	u32 read_info_crc = 0;
@@ -6966,20 +7398,26 @@ static int mxt_read_message_reportid(struct mxt_data *data, struct mxt_message *
 		if (message->reportid == 0xff)
 			continue;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		if (message->reportid == reportid)
 			return 0;
-=======
+
 		if (message->reportid == reportid) {
 			return 0;
 		}
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		if (message->reportid == reportid) {
 			return 0;
 		}
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		if (message->reportid == reportid) {
+			return 0;
+		}
+
 	}
 
 	return -EINVAL;
@@ -7017,14 +7455,17 @@ static int mxt_write_config(struct mxt_fw_info *fw_info)
 	struct mxt_object *object = NULL;
 	struct mxt_cfg_data *cfg_data = NULL;
 	u32 current_crc = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	u32 t71_cfg_crc = 0;
 	u8 buf_crc_t71[5] = {0};
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	u8 i = 0, val = 0;
 	u16 reg = 0, index = 0;
 	int ret = 0;
@@ -7033,14 +7474,18 @@ static int mxt_write_config(struct mxt_fw_info *fw_info)
 
 	if (!fw_info->cfg_raw_data) {
 		TOUCH_INFO_MSG("No cfg data in file\n");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
+
 		//ret = mxt_write_config_from_pdata(data);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		//ret = mxt_write_config_from_pdata(data);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		//ret = mxt_write_config_from_pdata(data);
+
 		return ret;
 	}
 
@@ -7061,8 +7506,9 @@ static int mxt_write_config(struct mxt_fw_info *fw_info)
 		return 0;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	object = mxt_get_object(data, MXT_SPT_DYNAMICCONFIGURATIONCONTAINER_T71);
 
 	ret = mxt_read_mem(data, object->start_address + 107, 5, buf_crc_t71);
@@ -7075,14 +7521,18 @@ static int mxt_write_config(struct mxt_fw_info *fw_info)
 
 	/* Check config CRC */
 	if (current_crc == fw_info->cfg_crc || t71_cfg_crc == fw_info->cfg_crc) {
-=======
+
 	/* Check config CRC */
 	if (current_crc == fw_info->cfg_crc) {
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	/* Check config CRC */
 	if (current_crc == fw_info->cfg_crc) {
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	/* Check config CRC */
+	if (current_crc == fw_info->cfg_crc) {
+
 		TOUCH_INFO_MSG("Same Config[%06X] Skip Writing\n", current_crc);
 		return 0;
 	}
@@ -7096,8 +7546,9 @@ static int mxt_write_config(struct mxt_fw_info *fw_info)
 
 	TOUCH_INFO_MSG("Writing Config:[IC:%06X] [FW:%06X]\n", fw_info->cfg_crc, current_crc);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	/* Saved diff value */
 	if (buf_crc_t71[0] == 1) {
 		TOUCH_INFO_MSG("buf_crc_t71[0] == 1\n");
@@ -7108,10 +7559,12 @@ static int mxt_write_config(struct mxt_fw_info *fw_info)
 		}
 	}
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	/* Write config info */
 	for (index = 0; index < fw_info->cfg_len;) {
 		if (index + sizeof(struct mxt_cfg_data) >= fw_info->cfg_len) {
@@ -7181,8 +7634,9 @@ static int mxt_write_config(struct mxt_fw_info *fw_info)
 
 	TOUCH_INFO_MSG("Configuration Updated \n");
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	/* Restore diff value */
 	if (buf_crc_t71[0] == 1) {
 		TOUCH_INFO_MSG("Restore diff value \n");
@@ -7208,10 +7662,12 @@ static int mxt_write_config(struct mxt_fw_info *fw_info)
 
 	}
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	/* Backup to memory */
 	ret = mxt_command_backup(data, MXT_BACKUP_VALUE);
 	if (ret) {
@@ -7244,8 +7700,9 @@ static int  mxt_config_initialize(struct mxt_fw_info *fw_info)
 
 	if (data->patch.patch) {
 		ret = mxt_patch_init(data, data->patch.patch);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	}
 
 	if (ret == 0) {
@@ -7253,16 +7710,21 @@ static int  mxt_config_initialize(struct mxt_fw_info *fw_info)
 	} else {
 		global_mxt_data = NULL;
 		TOUCH_INFO_MSG("Failed to get global_mxt_data(NULL) \n");
-=======
+
 		global_mxt_data = data;
 	} else {
 		global_mxt_data = NULL;
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		global_mxt_data = data;
 	} else {
 		global_mxt_data = NULL;
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		global_mxt_data = data;
+	} else {
+		global_mxt_data = NULL;
+
 	}
 
 out:
@@ -7272,54 +7734,70 @@ out:
 void mxt_request_firmware_work(const struct firmware *fw, void *context)
 {
 	struct mxt_data *data = context;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
+
 	struct mxt_fw_info fw_info = {0};
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	struct mxt_fw_info fw_info = {0};
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	struct mxt_fw_info fw_info = {0};
+
 	int error = 0;
 
 	mxt_power_block(POWERLOCK_FW_UP);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	data->fw_info.data = data;
 
 	error = mxt_verify_fw(&data->fw_info, fw);
-=======
+
 	fw_info.data = data;
 
 	error = mxt_verify_fw(&fw_info, fw);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	fw_info.data = data;
 
 	error = mxt_verify_fw(&fw_info, fw);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	fw_info.data = data;
+
+	error = mxt_verify_fw(&fw_info, fw);
+
 	if (error)
 		goto ts_rest_init;
 
 	/* Skip update on boot up if firmware file does not have a header */
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (!data->fw_info.hdr_len)
 		goto ts_rest_init;
 
 	error = mxt_flash_fw_on_probe(&data->fw_info);
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	if (!fw_info.hdr_len)
 		goto ts_rest_init;
 
 	error = mxt_flash_fw_on_probe(&fw_info);
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	if (error)
 		goto out;
 
@@ -7330,8 +7808,9 @@ ts_rest_init:
 		goto out;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_TOUCHSCREEN_LGE_LPWG)
 	error = mxt_init_t93_tab_count(data);
 	if (error) {
@@ -7341,14 +7820,18 @@ ts_rest_init:
 
 	//mxt_acquire_irq(data);
 	error = mxt_config_initialize(&data->fw_info);
-=======
+
 	//mxt_acquire_irq(data);
 	error = mxt_config_initialize(&fw_info);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//mxt_acquire_irq(data);
 	error = mxt_config_initialize(&fw_info);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//mxt_acquire_irq(data);
+	error = mxt_config_initialize(&fw_info);
+
 	if (error) {
 		TOUCH_INFO_MSG("Failed to rest initialize\n");
 		goto out;
@@ -7404,13 +7887,16 @@ static int __devinit mxt_probe(struct i2c_client *client, const struct i2c_devic
 
 	wake_lock_init(&touch_wake_lock, WAKE_LOCK_SUSPEND, "touch_wakelock");
 	mutex_init(&i2c_suspend_lock);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	mutex_init(&irq_lock);
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 
 	if (!i2c_check_functionality(client->adapter, I2C_FUNC_I2C)) {
 		TOUCH_INFO_MSG("i2c functionality check error\n");
@@ -7423,14 +7909,17 @@ static int __devinit mxt_probe(struct i2c_client *client, const struct i2c_devic
 		return -ENOMEM;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	data->ref_chk = 1;
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	snprintf(data->phys, sizeof(data->phys), "i2c-%u-%04x/input0", client->adapter->nr, client->addr);
 	TOUCH_INFO_MSG("i2c-%u-%04x/input0\n", client->adapter->nr, client->addr);
 	data->client = client;
@@ -7441,15 +7930,19 @@ static int __devinit mxt_probe(struct i2c_client *client, const struct i2c_devic
 	if (client->dev.of_node) {
 		data->pdata = devm_kzalloc(&client->dev, sizeof(struct mxt_platform_data), GFP_KERNEL);
 		if (!data->pdata) {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			TOUCH_INFO_MSG("Failed to allocate pdata memory\n");
-=======
+
 			TOUCH_INFO_MSG("Failed to allocate memory\n");
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 			TOUCH_INFO_MSG("Failed to allocate memory\n");
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+			TOUCH_INFO_MSG("Failed to allocate memory\n");
+
 			error = -ENOMEM;
 			goto err_free_mem;
 		}
@@ -7459,8 +7952,9 @@ static int __devinit mxt_probe(struct i2c_client *client, const struct i2c_devic
 			goto err_free_mem;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_TOUCHSCREEN_LGE_LPWG)
 	TOUCH_INFO_MSG("Use LPWG feature\n");
 	data->qwindow_size = devm_kzalloc(&client->dev, sizeof(struct quickcover_size), GFP_KERNEL);
@@ -7471,10 +7965,12 @@ static int __devinit mxt_probe(struct i2c_client *client, const struct i2c_devic
 	}
 #endif
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	init_completion(&data->bl_completion);
 	init_completion(&data->reset_completion);
 	init_completion(&data->crc_completion);
@@ -7499,32 +7995,40 @@ static int __devinit mxt_probe(struct i2c_client *client, const struct i2c_devic
 		gpio_direction_input(data->pdata->gpio_int);
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	TOUCH_INFO_MSG("request_threaded_irq %s \n", __func__);
 	error = request_threaded_irq(data->irq, NULL, mxt_interrupt,
 			IRQF_TRIGGER_LOW | IRQF_ONESHOT | IRQF_NO_SUSPEND, client->name, data);
 
-=======
+
 	error = request_threaded_irq(data->irq, NULL, mxt_interrupt,
 				     data->pdata->irqflags | IRQF_ONESHOT, client->name, data);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	error = request_threaded_irq(data->irq, NULL, mxt_interrupt,
 				     data->pdata->irqflags | IRQF_ONESHOT, client->name, data);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	error = request_threaded_irq(data->irq, NULL, mxt_interrupt,
+				     data->pdata->irqflags | IRQF_ONESHOT, client->name, data);
+
 	if (error) {
 		TOUCH_INFO_MSG("Failed to register interrupt\n");
 		goto err_free_pdata;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
+
 	mxt_probe_regulators(data);
 	mxt_regulator_enable(data);
 	mxt_hw_reset(data);
@@ -7563,17 +8067,20 @@ static int __devinit mxt_probe(struct i2c_client *client, const struct i2c_devic
 					data->pdata->t15_keystate[i] = data->pdata->t15_extra_keystate[i];
 					TOUCH_INFO_MSG("Update t15_keystate[%d] = [%3d] \n", i, data->pdata->t15_keystate[i]);
 				}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 				for(i = 0; i < data->pdata->t15_num_keys; i++) {
 					data->pdata->t15_key_array_x[i] = data->pdata->t15_extra_key_array_x[i];
 					data->pdata->t15_key_array_y[i] = data->pdata->t15_extra_key_array_y[i];
 					TOUCH_INFO_MSG("Update t15_keystate_array[%d] = [%d,%d] \n", i, data->pdata->t15_key_array_x[i], data->pdata->t15_key_array_y[i]);
 				}
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 			}
 		} else {
 			TOUCH_INFO_MSG("No need to change Config \n");
@@ -7596,8 +8103,9 @@ static int __devinit mxt_probe(struct i2c_client *client, const struct i2c_devic
 		goto err_free_irq;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	/* Timer set */
 #if 0
 	if (data->pdata->ghost_detection_enable) {
@@ -7612,12 +8120,15 @@ static int __devinit mxt_probe(struct i2c_client *client, const struct i2c_devic
 	INIT_DELAYED_WORK(&data->work_button_lock, mxt_button_lock_func);
 	INIT_DELAYED_WORK(&data->work_palm_unlock, mxt_palm_unlock_func);
 	INIT_DELAYED_WORK(&data->work_deepsleep, mxt_deepsleep_func);
-=======
+
 	INIT_DELAYED_WORK(&data->work_button_lock, mxt_button_lock_func);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	INIT_DELAYED_WORK(&data->work_button_lock, mxt_button_lock_func);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	INIT_DELAYED_WORK(&data->work_button_lock, mxt_button_lock_func);
+
 
 	data->fb_notif.notifier_call = fb_notifier_callback;
 
@@ -7625,8 +8136,9 @@ static int __devinit mxt_probe(struct i2c_client *client, const struct i2c_devic
 	if (error)
 		TOUCH_INFO_MSG("Unable to register fb_notifier: %d\n", error);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	/*channal size init for reference check*/
 	error = __mxt_read_reg(data->client, data->T9_address + 1, 4, &data->channel_size);
 	if (!error)
@@ -7660,10 +8172,12 @@ static int __devinit mxt_probe(struct i2c_client *client, const struct i2c_devic
 
 	data->ref_chk = 0;
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	/* disabled report touch event to prevent unnecessary event.
 	* it will be enabled in open function
 	*/
@@ -7700,8 +8214,9 @@ static int __devinit mxt_probe(struct i2c_client *client, const struct i2c_devic
 		TOUCH_INFO_MSG("Failed to create %s\n", data->mem_access_attr.attr.name);
 		goto err_lge_touch_sysfs_init_and_add;
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_TOUCHSCREEN_LGE_LPWG)
 	hrtimer_init(&data->multi_tap_timer, CLOCK_MONOTONIC, HRTIMER_MODE_REL);
 	data->multi_tap_timer.function = &tci_timer_func;
@@ -7715,14 +8230,18 @@ static int __devinit mxt_probe(struct i2c_client *client, const struct i2c_devic
 	} else {
 		TOUCH_INFO_MSG("%s global_mxt_data is NULL \n", __func__);
 	}
-=======
+
 
 	TOUCH_INFO_MSG("%s success \n", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 
 	TOUCH_INFO_MSG("%s success \n", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+	TOUCH_INFO_MSG("%s success \n", __func__);
+
 	is_probing = false;
 
 	return 0;
@@ -7774,14 +8293,17 @@ static int __devexit mxt_remove(struct i2c_client *client)
 			kfree(data);
 
 		mutex_destroy(&i2c_suspend_lock);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		mutex_destroy(&irq_lock);
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 		wake_lock_destroy(&touch_wake_lock);
 	}
 
@@ -7791,39 +8313,51 @@ static int __devexit mxt_remove(struct i2c_client *client)
 static int mxt_suspend(struct device *device)
 {
 	TOUCH_INFO_MSG("%s \n", __func__);
-<<<<<<< HEAD
-<<<<<<< HEAD
-	mutex_lock(&i2c_suspend_lock);
-=======
+
+
 
 	mutex_lock(&i2c_suspend_lock);
 
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
 
 	mutex_lock(&i2c_suspend_lock);
 
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+	mutex_lock(&i2c_suspend_lock);
+
+
+
+
+	mutex_lock(&i2c_suspend_lock);
+
+
 	return 0;
 }
 
 static int mxt_resume(struct device *device)
 {
 	TOUCH_INFO_MSG("%s \n", __func__);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	mutex_unlock(&i2c_suspend_lock);
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 
 	wake_lock_timeout(&touch_wake_lock, msecs_to_jiffies(1000));
 	mutex_unlock(&i2c_suspend_lock);
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	return 0;
 }
 
@@ -7839,8 +8373,9 @@ static int mxt_fb_suspend(struct mxt_data *data)
 	}
 
 	mutex_lock(&input_dev->mutex);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	touch_disable_irq(data->irq);
 
 	data->pdata->panel_on = POWER_OFF;
@@ -7848,20 +8383,25 @@ static int mxt_fb_suspend(struct mxt_data *data)
 	data->patch.src_item[MXT_PATCH_ITEM_USER7] = IDLE_STATE;
 	data->t72_noise_state = false;
 	data->cal_cnt = 0;
-=======
+
 
 	data->pdata->panel_on = POWER_OFF;
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 
 	data->pdata->panel_on = POWER_OFF;
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+	data->pdata->panel_on = POWER_OFF;
+
 
 	if (input_dev->users)
 		mxt_stop(data);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_TOUCHSCREEN_LGE_LPWG)
 	if (data->lpwg_mode) {
 #else
@@ -7869,14 +8409,18 @@ static int mxt_fb_suspend(struct mxt_data *data)
 #endif
 		touch_enable_irq_wake(data->irq);
 		touch_enable_irq(data->irq);
-=======
+
 	if (data->mxt_knock_on_enable || data->mxt_character_enable) {
 		touch_enable_irq_wake(data->irq);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	if (data->mxt_knock_on_enable || data->mxt_character_enable) {
 		touch_enable_irq_wake(data->irq);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	if (data->mxt_knock_on_enable || data->mxt_character_enable) {
+		touch_enable_irq_wake(data->irq);
+
 	}
 
 	mutex_unlock(&input_dev->mutex);
@@ -7886,14 +8430,17 @@ static int mxt_fb_suspend(struct mxt_data *data)
 static int mxt_fb_resume(struct mxt_data *data)
 {
 	struct input_dev *input_dev = data->input_dev;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	char *package_name = NULL;
 	int error = 0;
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 
 	TOUCH_INFO_MSG("%s \n", __func__);
 
@@ -7904,8 +8451,9 @@ static int mxt_fb_resume(struct mxt_data *data)
 
 	mutex_lock(&input_dev->mutex);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (data->work_deepsleep_enabled) {
 		data->work_deepsleep_enabled = false;
 		cancel_delayed_work_sync(&data->work_deepsleep);
@@ -7960,9 +8508,11 @@ static int mxt_fb_resume(struct mxt_data *data)
 		TOUCH_INFO_MSG("MFTS : IC Init complete \n");
 	}
 
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	data->pdata->panel_on = POWER_ON;
 
 	if (data->mxt_knock_on_enable || data->mxt_character_enable) {
@@ -7972,10 +8522,13 @@ static int mxt_fb_resume(struct mxt_data *data)
 	if (input_dev->users)
 		mxt_start(data);
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	mutex_unlock(&input_dev->mutex);
 	return 0;
 }
@@ -8038,18 +8591,21 @@ static struct i2c_driver mxt_driver = {
 	.id_table	= mxt_id,
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 static void async_mxt_init(void *data, async_cookie_t cookie)
 {
 	i2c_add_driver(&mxt_driver);
 	return;
 }
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 #ifdef CONFIG_LGE_PM_CHARGING_CHARGERLOGO
 extern int lge_boot_mode_for_touch;
 #endif
@@ -8067,8 +8623,9 @@ static int __init mxt_init(void)
 		TOUCH_INFO_MSG("touch_wq error\n");
 		return -ENOMEM;
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_TOUCHSCREEN_LGE_LPWG)
 	touch_multi_tap_wq = create_singlethread_workqueue("touch_multi_tap_wq");
 	if (!touch_multi_tap_wq) {
@@ -8079,14 +8636,18 @@ static int __init mxt_init(void)
 	async_schedule(async_mxt_init, NULL);
 
 	return 0;
-=======
+
 
 	return i2c_add_driver(&mxt_driver);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 
 	return i2c_add_driver(&mxt_driver);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+	return i2c_add_driver(&mxt_driver);
+
 }
 
 static void __exit mxt_exit(void)
@@ -8101,18 +8662,22 @@ static void __exit mxt_exit(void)
 
 	if (touch_wq)
 		destroy_workqueue(touch_wq);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_TOUCHSCREEN_LGE_LPWG)
 	if (touch_multi_tap_wq)
 		destroy_workqueue(touch_multi_tap_wq);
 #endif
-=======
 
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
 
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 }
 
 module_init(mxt_init);

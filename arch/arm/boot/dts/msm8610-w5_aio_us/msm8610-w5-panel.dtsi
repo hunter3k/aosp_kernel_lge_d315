@@ -17,7 +17,11 @@
 &mdss_dsi0 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     qcom,dsi-pref-prim-pan = <&dsi_lgd_lg4577_wvga_video>;
+=======
+    qcom,dsi-pref-prim-pan = <&dsi_v2_lgd_incell_wvga_video>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
     qcom,dsi-pref-prim-pan = <&dsi_v2_lgd_incell_wvga_video>;
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -45,7 +49,11 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 &dsi_lgd_lg4577_wvga_video {
+=======
+&dsi_v2_lgd_incell_wvga_video {
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 &dsi_v2_lgd_incell_wvga_video {
 >>>>>>> 0093d79... Overlay of LG soruce drop

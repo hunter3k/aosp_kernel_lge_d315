@@ -277,8 +277,13 @@ static struct gpiomux_setting cam_settings[] = {
 /*
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  * This source has changed to match at lgps15 HDK board
  * changed by junil0814.lee@lge.com 2013-06-05
+=======
+                                                       
+                                              
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
                                                        
                                               
@@ -532,6 +537,7 @@ static struct gpiomux_setting mms100s_ts_ldo_sus_cfg = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 static struct gpiomux_setting aps_ts_int_act_cfg = {
 	.func = GPIOMUX_FUNC_GPIO,
 	.drv = GPIOMUX_DRV_2MA,
@@ -585,6 +591,8 @@ static struct gpiomux_setting synap_reset_cfg = {
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 static struct msm_gpiomux_config mms100s_ts_configs[] __initdata = {
 	{
 		.gpio      = 0,		/* MMS100s INT */
@@ -596,6 +604,7 @@ static struct msm_gpiomux_config mms100s_ts_configs[] __initdata = {
 	{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		.gpio      = 76,	/* GPIO MAKER ID */
 		.settings = {
 			[GPIOMUX_ACTIVE]    = &ts_makerid_cfg,
@@ -603,6 +612,8 @@ static struct msm_gpiomux_config mms100s_ts_configs[] __initdata = {
 		},
 	},
 	{
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
@@ -626,6 +637,7 @@ static struct msm_gpiomux_config mms100s_ts_configs_rev_c[] __initdata = {
 	{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		.gpio      = 76,	/* GPIO MAKER ID */
 		.settings = {
 			[GPIOMUX_ACTIVE]    = &ts_makerid_cfg,
@@ -633,6 +645,8 @@ static struct msm_gpiomux_config mms100s_ts_configs_rev_c[] __initdata = {
 		},
 	},
 	{
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
@@ -645,6 +659,7 @@ static struct msm_gpiomux_config mms100s_ts_configs_rev_c[] __initdata = {
 	},
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 static struct msm_gpiomux_config synaptics_configs[] __initdata = {
@@ -686,6 +701,8 @@ static struct msm_gpiomux_config synaptics_configs[] __initdata = {
 =======
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 static struct gpiomux_setting aps_ts_int_act_cfg = {
 	.func = GPIOMUX_FUNC_GPIO,
 	.drv = GPIOMUX_DRV_2MA,
@@ -713,6 +730,9 @@ static struct gpiomux_setting aps_ts_reset_sus_cfg = {
 	.pull = GPIOMUX_PULL_NONE,
 	.dir = GPIOMUX_OUT_LOW,
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -762,7 +782,11 @@ static struct msm_gpiomux_config ags04_ts_configs[] __initdata = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*  LGE_CHANGE_S, [NFC][taesik.kim@lge.com], NFC Bring up*/
+=======
+/*                                                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                       */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -866,7 +890,11 @@ static struct msm_gpiomux_config msm_nfc_configs_rev_c[] __initdata = {
 #endif
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*  LGE_CHANGE_E, [NFC][taesik.kim@lge.com], NFC Bring up*/
+=======
+/*                                                       */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                       */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -888,6 +916,7 @@ void __init msm8610_init_gpiomux(void)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	printk(KERN_INFO"[%s][TOUCH] HW_Revision = %d ", __func__, revision );
 	/* Touch gpio Mux */
 	if(revision == HW_REV_A)/*For Incell Touch*/
@@ -903,6 +932,8 @@ void __init msm8610_init_gpiomux(void)
 		msm_gpiomux_install(synaptics_configs, ARRAY_SIZE(synaptics_configs));
 
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 
@@ -921,6 +952,9 @@ void __init msm8610_init_gpiomux(void)
 		msm_gpiomux_install(ags04_ts_configs, ARRAY_SIZE(ags04_ts_configs));
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -937,7 +971,11 @@ void __init msm8610_init_gpiomux(void)
 	}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* LGE_CHANGE_S, Add gpiomux for ex-ldo used gpio, 2013-09-04, hyungtae.lee@lge.com */
+=======
+	/*                                                                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                                                                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -958,7 +996,11 @@ void __init msm8610_init_gpiomux(void)
 	}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* LGE_CHANGE_E, Add gpiomux for ex-ldo used gpio, 2013-09-04, hyungtae.lee@lge.com */
+=======
+/*                                                                                  */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                                                  */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -971,7 +1013,11 @@ void __init msm8610_init_gpiomux(void)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/*  LGE_CHANGE_S, [NFC][taesik.kim@lge.com], NFC Bring up */
+=======
+	/*                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	/*                                                        */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -988,7 +1034,11 @@ void __init msm8610_init_gpiomux(void)
 #endif
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*  LGE_CHANGE_E, [NFC][taesik.kim@lge.com], NFC Bring up */
+=======
+/*                                                        */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /*                                                        */
 >>>>>>> 0093d79... Overlay of LG soruce drop

@@ -80,22 +80,28 @@ static const struct soc_enum msm8226_auxpcm_enum[] = {
 #define I2S_PCM_SEL 1
 #define I2S_PCM_SEL_OFFSET 1
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #if defined(CONFIG_MACH_LGE) && defined(CONFIG_SWITCH_MAX1462X) //LGE_UPDATE 20130626 beekay.lee@lge.com WX_MAXIM
 extern bool maxim_enabled;
 #endif
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 #if defined(CONFIG_MACH_LGE) && defined(CONFIG_SWITCH_MAX1462X) //                                               
 extern bool maxim_enabled;
 #endif
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 void *def_tapan_mbhc_cal(void);
 static int msm_snd_enable_codec_ext_clk(struct snd_soc_codec *codec, int enable,
 					bool dapm);
@@ -505,15 +511,19 @@ static const struct snd_soc_dapm_widget msm8226_dapm_widgets[] = {
 
 	SND_SOC_DAPM_MIC("Handset Mic", NULL),
 	SND_SOC_DAPM_MIC("Headset Mic", NULL),
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
     SND_SOC_DAPM_MIC("Handset SubMic", NULL), // LGE, 2013-06-24, seungkyu.joo@lge.com, enable Mic Bias1 external connected to AMIC3 (submic)
-=======
+
     SND_SOC_DAPM_MIC("Handset SubMic", NULL), //                                                                                             
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
     SND_SOC_DAPM_MIC("Handset SubMic", NULL), //                                                                                             
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+    SND_SOC_DAPM_MIC("Handset SubMic", NULL), //                                                                                             
+
     SND_SOC_DAPM_MIC("ANCRight Headset Mic", NULL),
 	SND_SOC_DAPM_MIC("ANCLeft Headset Mic", NULL),
 
@@ -1252,18 +1262,23 @@ void *def_tapan_mbhc_cal(void)
         btn_high[7] = 500;
 #else
   btn_low[0] = -50;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
   btn_high[0] = 180; // hook
   btn_low[1] = 181;
-=======
+
   btn_high[0] = 150; // hook
   btn_low[1] = 151;
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
   btn_high[0] = 150; // hook
   btn_low[1] = 151;
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+  btn_high[0] = 150; // hook
+  btn_low[1] = 151;
+
   btn_high[1] = 200;
   btn_low[2] = 201;
   btn_high[2] = 300; // +
@@ -2406,8 +2421,9 @@ static __devinit int msm8226_asoc_machine_probe(struct platform_device *pdev)
 			goto err_vdd_spkr;
 		}
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #ifdef CONFIG_LGE_STEREO_SPEAKER
 	ext_spk_amp_gpio2 = of_get_named_gpio(pdev->dev.of_node,
 			"qcom,cdc-lineout-spkr-gpios2", 0);
@@ -2429,12 +2445,15 @@ static __devinit int msm8226_asoc_machine_probe(struct platform_device *pdev)
 	}
 #endif //CONFIG_LGE_STEREO_SPEAKER
 #if defined(CONFIG_MACH_LGE) && defined(CONFIG_SWITCH_MAX1462X) //LGE_UPDATE 20130626 beekay.lee@lge.com WX_MAXIM
-=======
+
 #if defined(CONFIG_MACH_LGE) && defined(CONFIG_SWITCH_MAX1462X) //                                               
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #if defined(CONFIG_MACH_LGE) && defined(CONFIG_SWITCH_MAX1462X) //                                               
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#if defined(CONFIG_MACH_LGE) && defined(CONFIG_SWITCH_MAX1462X) //                                               
+
 		if(maxim_enabled) {
 			mbhc_cfg.insert_detect = false;
 			pr_info("%s: mbhc disable\n", __func__);

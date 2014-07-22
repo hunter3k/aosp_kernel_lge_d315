@@ -67,7 +67,10 @@
 /* HI543(5M) eeprom */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Rev A ~ */
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
@@ -105,6 +108,7 @@
 	};
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	/* Rev C ~ */
 	eeprom1: msm_eeprom_hi543@14 { //EEPROM READ
 		cell-index = <0>;
@@ -133,6 +137,11 @@
 	};
 /* Rev A ~ */
 	hi543a: qcom,camera_rev_a@40 {
+=======
+
+/* Rev A ~ */
+	hi543: qcom,camera_rev_a@40 {
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 
 /* Rev A ~ */
@@ -178,6 +187,7 @@
 		qcom,sensor-position = <0>;
 		qcom,sensor-mode = <0>;
 		status = "okay";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 		revision = "rev_a";
@@ -254,6 +264,10 @@
 		revision = "rev_b...";
 	};
 
+=======
+		revision = "rev_a...";
+	};
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 		revision = "rev_a...";
 	};

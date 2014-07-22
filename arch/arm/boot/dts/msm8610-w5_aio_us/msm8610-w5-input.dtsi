@@ -53,6 +53,7 @@
 			lge,knock_on_type = <1>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			synaptics,fw_image = "synaptics/w5_aio_us/PLG317-V1.11-PR1600582-DS4.3.5.1.16_3204518B.img";
 			synaptics,panel_spec = "synaptics/w5_aio_us/w5_aio_us_limit.txt";
 			synaptics,global_access_pixel = <10>;
@@ -60,6 +61,8 @@
 				/* maker_id disable(0), enable(1) */
 				maker_id = <0>;
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 			synaptics,fw_image = "synaptics/w5_aio_us/PLG317-T009-PR1581873_DS4.3.5.1.16_32045109.img";
@@ -70,6 +73,9 @@
 				maker_id = <1>;
 				maker_id_gpio = <76>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -84,8 +90,13 @@
 				palm_detect_mode=<1>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				ghost_detection_enable=<0>;
 				ghost_detection_value = <200 5 4 6 5 5 10 500 100 6 5>;
+=======
+				ghost_detection_enable=<1>;
+				ghost_detection_jitter_value=<10>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 				ghost_detection_enable=<1>;
 				ghost_detection_jitter_value=<10>;

@@ -44,7 +44,10 @@ CONFIG_LGE_BOOTLOADER_TIME_CHECKER=y
 CONFIG_LGE_USE_CPU_CLOCK_TIMESTAMP=y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 CONFIG_LGE_QFPROM_INTERFACE=y
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
@@ -263,7 +266,10 @@ CONFIG_UID_STAT=y
 CONFIG_TSPDRV=y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 CONFIG_TSPDRV_3_0V_VIBRATOR=y
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
@@ -359,9 +365,12 @@ CONFIG_LGE_PM_PWR_KEY_FOR_CHG_LOGO=y
 CONFIG_LGE_PM_WORKAROUND_USB_VALID_BY_REVERSE_BOOST=y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 CONFIG_LGE_PM_WORKAROUND_PORT_OPEN_FAIL_IN_FACTORY_TEST=y
 CONFIG_LGE_PM_BMS_FACTORY_TEST=y
 CONFIG_LGE_PM_BMS_CC_ACCURACY_PATCH=y
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
@@ -451,8 +460,11 @@ CONFIG_USB_G_LGE_ANDROID_PFSC=y
 CONFIG_USB_G_LGE_ANDROID_AUTORUN=y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 CONFIG_USB_G_LGE_ANDROID_AUTORUN_LGE=y
 CONFIG_LGE_DIAG_ENABLE=y
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
@@ -465,7 +477,10 @@ CONFIG_MMC_EMBEDDED_SDIO=y
 CONFIG_MMC_PARANOID_SD_INIT=y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 CONFIG_LGE_REINIT_SDCARD_FOR_DETECT_FAIL=y
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
@@ -542,6 +557,10 @@ CONFIG_LSM_MMAP_MIN_ADDR=4096
 CONFIG_SECURITY_SELINUX=y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+CONFIG_DEFAULT_SECURITY_DAC=y
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 CONFIG_DEFAULT_SECURITY_DAC=y
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -555,8 +574,11 @@ CONFIG_CRYPTO_TWOFISH=y
 CONFIG_LGE_TRF_CARRIER_CODE=y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 CONFIG_LGE_DM_APP=y
 CONFIG_LGE_DM_DEV=y
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======

@@ -28,21 +28,27 @@
 #include "audio_acdb.h"
 #include "q6voice.h"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //LGE_UPDATE_S beekay.lee 2013-11-27 volte mute issue. from G2 project.
 #define TIMEOUT_MS 500
 //LGE_UPDATE_E
-=======
+
 //                                                                     
 #define TIMEOUT_MS 500
 //            
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                                                     
 #define TIMEOUT_MS 500
 //            
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                                                     
+#define TIMEOUT_MS 500
+//            
+
 
 
 #define CMD_STATUS_SUCCESS 0
@@ -111,15 +117,19 @@ static int voice_alloc_and_map_oob_mem(struct voice_data *v);
 static struct voice_data *voice_get_session_by_idx(int idx);
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //[AUDIO_BSP_START]minyoung1.kim@lge.com
-=======
+
 //                                      
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                      
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                      
+
 static uint32_t audio_start = 0;
 //static String audio_start = "/sys/module/q6voice/parameters/audio_start";
 static int set_start_call(const char *buf, struct kernel_param *kp)
@@ -140,15 +150,19 @@ static int get_start_call(char *buf, struct kernel_param *kp)
 	    return ret;
 }
 module_param_call(audio_start,set_start_call, get_start_call, NULL, 0664);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //[AUDIO_BSP_END]minyoung1.kim@lge.com
-=======
+
 //                                    
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                    
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                    
+
 
 
 
@@ -4817,25 +4831,31 @@ int voc_end_voice_call(uint32_t session_id)
 {
 	struct voice_data *v = voice_get_session(session_id);
 	int ret = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
   //[AUDIO_BSP_START]minyoung1.kim@lge.com
 	char temp_buf[2] = "0";   
 
    set_start_call(temp_buf,NULL); 
   //[AUDIO_BSP_END]minyoung1.kim@lge.com
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
   //                                      
 	char temp_buf[2] = "0";   
 
    set_start_call(temp_buf,NULL); 
   //                                    
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 	if (v == NULL) {
 		pr_err("%s: invalid session_id 0x%x\n", __func__, session_id);
@@ -4882,15 +4902,19 @@ int voc_standby_voice_call(uint32_t session_id)
 		return -EINVAL;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	pr_debug("%s: voc state=%d", __func__, v->voc_state); // LGE_UPDATE 2013-12-10 WBT issue(TD2170538882)
-=======
+
 	pr_debug("%s: voc state=%d", __func__, v->voc_state); //                                              
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	pr_debug("%s: voc state=%d", __func__, v->voc_state); //                                              
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	pr_debug("%s: voc state=%d", __func__, v->voc_state); //                                              
+
 
 	if (v->voc_state == VOC_RUN) {
 		apr_mvm = common.apr_q6_mvm;
@@ -4990,15 +5014,19 @@ int voc_start_voice_call(uint32_t session_id)
 {
 	struct voice_data *v = voice_get_session(session_id);
 	int ret = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	char temp_buf[2] = "1";  //[AUDIO_BSP_START]minyoung1.kim@lge.com
-=======
+
 	char temp_buf[2] = "1";  //                                      
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	char temp_buf[2] = "1";  //                                      
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	char temp_buf[2] = "1";  //                                      
+
 
 	if (v == NULL) {
 		pr_err("%s: invalid session_id 0x%x\n", __func__, session_id);
@@ -5066,28 +5094,36 @@ int voc_start_voice_call(uint32_t session_id)
 			goto fail;
 		}
 		ret = voice_setup_vocproc(v);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		//[AUDIO_BSP_START]minyoung1.kim@lge.com
-=======
+
 		//                                      
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		//                                      
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		//                                      
+
 		if(ret == 0){
 			set_start_call(temp_buf,NULL); 
 			pr_info("LG audio bsp - stated voice call \n");
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		//[AUDIO_BSP_END]minyoung1.kim@lge.com
-=======
+
 		//                                    
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		//                                    
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		//                                    
+
 		if (ret < 0) {
 			pr_err("setup voice failed\n");
 			goto fail;

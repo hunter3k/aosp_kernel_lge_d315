@@ -31,13 +31,16 @@ DEFINE_MSM_MUTEX(hi351_mut);
 //static int PREV_ISO = -1;
 //static int PREV_WB = -1;
 //static int PREV_FPS = -1;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 static int INIT_DONE = 0;			// LGE_CHANGE. youngwook.song@lge.com, this code is for distinguishing Camera/Camcoder init. from other enterings. 2014-01-21
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 static int PREV_BESTSHOT = -1;
 static int DELAY_START = 0;
 
@@ -105,15 +108,19 @@ static int hi351_sysfs_add(struct kobject* kobj)
 static struct msm_sensor_ctrl_t hi351_s_ctrl;
 
 static struct msm_sensor_power_setting hi351_power_setting[] = {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE_CHANGE_E, Power Setting for TIM_BR Model, youngwook.song@lge.com, 2013.08.26 */
-=======
+
 /*                                                                                  */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                                                                                  */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                                                                                  */
+
 #if defined(CONFIG_MACH_MSM8X10_W3C_TRF_US) || \
 	defined(CONFIG_MACH_MSM8X10_W3C_VZW)
 	{
@@ -171,15 +178,19 @@ static struct msm_sensor_power_setting hi351_power_setting[] = {
 		.delay = 20,
 	},
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE_CHANGE_X, Power Setting for TIM_BR Model, youngwook.song@lge.com, 2013.08.26 */
-=======
+
 /*                                                                                  */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                                                                                  */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                                                                                  */
+
 #else
 	{
 		.seq_type = SENSOR_GPIO,
@@ -230,21 +241,27 @@ static struct msm_sensor_power_setting hi351_power_setting[] = {
 		.delay = 20,
 	},
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE_CHANGE_E, Power Setting for VZW_US Model, youngwook.song@lge.com, 2013.08.26 */
 #endif
 /* LGE_CHANGE_X, Power Setting for VZW_US Model, youngwook.song@lge.com, 2013.08.26 */
-=======
+
 /*                                                                                  */
 #endif
 /*                                                                                  */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                                                                                  */
 #endif
 /*                                                                                  */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                                                                                  */
+#endif
+/*                                                                                  */
+
 };
 
 static struct msm_camera_i2c_conf_array hi351_init_conf[] = {
@@ -258,8 +275,9 @@ static struct msm_camera_i2c_conf_array hi351_init_conf[] = {
 	ARRAY_SIZE(hi351_recommend_settings_cowell[HI351_50HZ]), 0, MSM_CAMERA_I2C_BYTE_DATA},
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 // LGE_CHANGE_S. youngwook.song@lge.com, this code is for distinguishing Camera/Camcoder init. from other enterings. 2014-01-21
 // conf0 is with recommend setting right after.
 static struct msm_camera_i2c_conf_array hi351_prev_conf_in_case_of_init[] = {
@@ -270,23 +288,28 @@ static struct msm_camera_i2c_conf_array hi351_prev_conf_in_case_of_init[] = {
 };
 
 // conf1 is for after snapshot or restart-previewing.
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 static struct msm_camera_i2c_conf_array hi351_prev_conf[] = {
 	{&hi351_prev_settings[HI351_60HZ][0],
 	ARRAY_SIZE(hi351_prev_settings[HI351_60HZ]), 0, MSM_CAMERA_I2C_BYTE_DATA},
 	{&hi351_prev_settings[HI351_50HZ][0],
 	ARRAY_SIZE(hi351_prev_settings[HI351_50HZ]), 0, MSM_CAMERA_I2C_BYTE_DATA},
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 // LGE_CHANGE_E. youngwook.song@lge.com, this code is for distinguishing Camera/Camcoder init. from other enterings. 2014-01-21
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 
 static struct msm_camera_i2c_conf_array hi351_snap_conf[] = {
 	{&hi351_snap_settings[HI351_60HZ][0],
@@ -295,8 +318,9 @@ static struct msm_camera_i2c_conf_array hi351_snap_conf[] = {
 	ARRAY_SIZE(hi351_snap_settings[HI351_50HZ]), 0, MSM_CAMERA_I2C_BYTE_DATA},
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 // LGE_CHANGE_S. youngwook.song@lge.com, this code is for distinguishing Camera/Camcoder init. from other enterings. 2014-01-21
 // conf0 is with recommend setting right after.
 static struct msm_camera_i2c_conf_array hi351_attached_fps_conf_in_case_of_init[] = {
@@ -307,18 +331,21 @@ static struct msm_camera_i2c_conf_array hi351_attached_fps_conf_in_case_of_init[
 };
 
 // conf1 is for after snapshot or restart-previewing.
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 static struct msm_camera_i2c_conf_array hi351_attached_fps_conf[] = {
 	{&hi351_attached_fps_settings[HI351_60HZ][0],
 	ARRAY_SIZE(hi351_attached_fps_settings[HI351_60HZ]), 0, MSM_CAMERA_I2C_BYTE_DATA},
 	{&hi351_attached_fps_settings[HI351_50HZ][0],
 	ARRAY_SIZE(hi351_attached_fps_settings[HI351_50HZ]), 0, MSM_CAMERA_I2C_BYTE_DATA},
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 // LGE_CHANGE_E. youngwook.song@lge.com, this code is for distinguishing Camera/Camcoder init. from other enterings. 2014-01-21
 
 // LGE_CHANGE_S. youngwook.song@lge.com, this code is for distinguishing Camera/Camcoder init. from other enterings. 2014-01-21
@@ -331,20 +358,24 @@ static struct msm_camera_i2c_conf_array hi351_fixed_fps_conf_in_case_of_init[] =
 };
 
 // conf1 is for after snapshot or restart-previewing.
-=======
 
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
 
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 static struct msm_camera_i2c_conf_array hi351_fixed_fps_conf[] = {
 	{&hi351_fixed_fps_settings[HI351_60HZ][0],
 	ARRAY_SIZE(hi351_fixed_fps_settings[HI351_60HZ]), 0, MSM_CAMERA_I2C_BYTE_DATA},
 	{&hi351_fixed_fps_settings[HI351_50HZ][0],
 	ARRAY_SIZE(hi351_fixed_fps_settings[HI351_50HZ]), 0, MSM_CAMERA_I2C_BYTE_DATA},
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 // LGE_CHANGE_E. youngwook.song@lge.com, this code is for distinguishing Camera/Camcoder init. from other enterings. 2014-01-21
 
 // LGE_CHANGE_S. youngwook.song@lge.com, this code is for distinguishing Camera/Camcoder init. from other enterings. 2014-01-21
@@ -357,25 +388,31 @@ static struct msm_camera_i2c_conf_array hi351_auto_fps_conf_in_case_of_init[] = 
 };
 
 // conf1 is for after snapshot or restart-previewing.
-=======
 
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
 
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 static struct msm_camera_i2c_conf_array hi351_auto_fps_conf[] = {
 	{&hi351_auto_fps_settings[HI351_60HZ][0],
 	ARRAY_SIZE(hi351_auto_fps_settings[HI351_60HZ]), 0, MSM_CAMERA_I2C_BYTE_DATA},
 	{&hi351_auto_fps_settings[HI351_50HZ][0],
 	ARRAY_SIZE(hi351_auto_fps_settings[HI351_50HZ]), 0, MSM_CAMERA_I2C_BYTE_DATA},
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 // LGE_CHANGE_E. youngwook.song@lge.com, this code is for distinguishing Camera/Camcoder init. from other enterings. 2014-01-21
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 
 static struct msm_camera_i2c_conf_array hi351_scene_auto_conf[] = {
 	{&hi351_reg_scene_auto[HI351_60HZ][0],
@@ -436,15 +473,19 @@ static int32_t msm_hi351_i2c_probe(struct i2c_client *client,
 	const struct i2c_device_id *id)
 {
 	int rc = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	pr_err("%s, E.\n", __func__);
-=======
+
 	printk("%s, E.", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	printk("%s, E.", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	printk("%s, E.", __func__);
+
 
 	rc = msm_sensor_i2c_probe(client, id, &hi351_s_ctrl);
 	if(rc == 0){
@@ -490,15 +531,19 @@ static struct platform_driver hi351_platform_driver = {
 	},
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE_CHANGE_E, To make short for init. register setting, youngwook.song@lge.com, 2013.08.29 */
-=======
+
 /*                                                                                            */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                                                                                            */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                                                                                            */
+
 
 static int32_t msm_camera_qup_i2c_txdata(
 	struct msm_camera_i2c_client *dev_client, unsigned char *txdata,
@@ -631,22 +676,27 @@ static void hi351_i2c_write_table(struct msm_sensor_ctrl_t *s_ctrl,
 	}
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE_CHANGE_X, To make short for init. register setting, youngwook.song@lge.com, 2013.08.29 */
-=======
+
 /*                                                                                            */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                                                                                            */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                                                                                            */
+
 
 static int32_t hi351_platform_probe(struct platform_device *pdev)
 {
 	int32_t rc;
 	const struct of_device_id *match;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	printk("%s, E.\n", __func__);
 	match = of_match_device(hi351_dt_match, &pdev->dev);
 /* LGE_CHANGE_S : WBT, 2013-5-31, jonghwan.ko@lge.com */
@@ -656,9 +706,11 @@ static int32_t hi351_platform_probe(struct platform_device *pdev)
 			  return -ENODEV;
 		 }
 /* LGE_CHANGE_E : WBT, 2013-5-31, jonghwan.ko@lge.com */
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	printk("%s, E.", __func__);
 	match = of_match_device(hi351_dt_match, &pdev->dev);
 /*                                                    */
@@ -668,10 +720,13 @@ static int32_t hi351_platform_probe(struct platform_device *pdev)
 			  return -ENODEV;
 		 }
 /*                                                    */
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	rc = msm_sensor_platform_probe(pdev, match->data);
 	return rc;
 }
@@ -699,15 +754,19 @@ static void __exit hi351_exit_module(void)
 	return;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE_CHANGE_E, Kernel Driver Modifying on MR2, youngwook.song@lge.com, 2013.08.29 */
-=======
+
 /*                                                                                  */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                                                                                  */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                                                                                  */
+
 static int32_t hi351_sensor_match_id(struct msm_sensor_ctrl_t *s_ctrl)
 {
 	int32_t rc = 0;
@@ -730,15 +789,19 @@ static int32_t hi351_sensor_match_id(struct msm_sensor_ctrl_t *s_ctrl)
 	}
 	return rc;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE_CHANGE_X, Kernel Driver Modifying on MR2, youngwook.song@lge.com, 2013.08.29 */
-=======
+
 /*                                                                                  */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                                                                                  */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                                                                                  */
+
 #if 0
 static void hi351_set_stauration(struct msm_sensor_ctrl_t *s_ctrl, int value)
 {
@@ -765,15 +828,19 @@ static void hi351_set_sharpness(struct msm_sensor_ctrl_t *s_ctrl, int value)
 
 static void hi351_set_iso(struct msm_sensor_ctrl_t *s_ctrl, int value)
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	pr_debug("%s %d\n", __func__, value);
-=======
+
 	pr_debug("%s %d", __func__, value);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	pr_debug("%s %d", __func__, value);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	pr_debug("%s %d", __func__, value);
+
 	hi351_i2c_write_table(s_ctrl, &hi351_reg_iso[value][0],
 		ARRAY_SIZE(hi351_reg_iso[value]));
 }
@@ -781,33 +848,42 @@ static void hi351_set_iso(struct msm_sensor_ctrl_t *s_ctrl, int value)
 static void hi351_set_exposure_compensation(struct msm_sensor_ctrl_t *s_ctrl,
 	int value)
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	int val = value + ((12 - value)/2); // LGE CHNAGE, for HI351 SoC Sensor Brightness Array. youngwook.song@lge.com, 2013-10-17
 	pr_debug("%s %d\n", __func__, val);
-=======
+
 	int val = value + ((12 - value)/2); //                                                                                      
 	pr_debug("%s %d", __func__, val);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	int val = value + ((12 - value)/2); //                                                                                      
 	pr_debug("%s %d", __func__, val);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	int val = value + ((12 - value)/2); //                                                                                      
+	pr_debug("%s %d", __func__, val);
+
 	hi351_i2c_write_table(s_ctrl, &hi351_reg_exposure_compensation[val][0],
 		ARRAY_SIZE(hi351_reg_exposure_compensation[val]));
 }
 
 static void hi351_set_effect(struct msm_sensor_ctrl_t *s_ctrl, int value)
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	pr_debug("%s %d\n", __func__, value);
-=======
+
 	pr_debug("%s %d", __func__, value);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	pr_debug("%s %d", __func__, value);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	pr_debug("%s %d", __func__, value);
+
 	switch (value) {
 	case MSM_CAMERA_EFFECT_MODE_OFF: {
 		hi351_i2c_write_table(s_ctrl, &hi351_reg_effect_normal[0],
@@ -830,15 +906,19 @@ static void hi351_set_effect(struct msm_sensor_ctrl_t *s_ctrl, int value)
 		break;
 	}
 	case MSM_CAMERA_EFFECT_MODE_SOLARIZE: {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		pr_debug("%s: We do not support Saturation feature Value now\n", __func__);
-=======
+
 		pr_debug("%s: We do not support Saturation feature Value now", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		pr_debug("%s: We do not support Saturation feature Value now", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		pr_debug("%s: We do not support Saturation feature Value now", __func__);
+
 #if 0
 		hi351_i2c_write_table(s_ctrl, &hi351_reg_effect_solarize[0],
 			ARRAY_SIZE(hi351_reg_effect_solarize));
@@ -863,25 +943,31 @@ static void hi351_set_antibanding(struct msm_sensor_ctrl_t *s_ctrl, int value)
 static void hi351_set_scene_mode(struct msm_sensor_ctrl_t *s_ctrl, int value)
 {
 	if(PREV_BESTSHOT == value)
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		pr_err("%s duplicated %d\n", __func__, value);
 	else{
 		PREV_BESTSHOT = value;
 
 	pr_debug("%s %d\n", __func__, value);
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 		pr_err("%s duplicated %d", __func__, value);
 	else{
 		PREV_BESTSHOT = value;
 
 	pr_debug("%s %d", __func__, value);
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	switch (value) {
 	case MSM_CAMERA_SCENE_MODE_OFF: {
 		hi351_sensor_write_init_settings(s_ctrl->sensor_i2c_client,
@@ -935,15 +1021,19 @@ static void hi351_set_scene_mode(struct msm_sensor_ctrl_t *s_ctrl, int value)
 static void hi351_set_white_balance_mode(struct msm_sensor_ctrl_t *s_ctrl,
 	int value)
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	pr_debug("%s %d\n", __func__, value);
-=======
+
 	pr_debug("%s %d", __func__, value);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	pr_debug("%s %d", __func__, value);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	pr_debug("%s %d", __func__, value);
+
 	switch (value) {
 	case MSM_CAMERA_WB_MODE_AUTO: {
 		hi351_i2c_write_table(s_ctrl, &hi351_reg_wb_auto[0],
@@ -977,8 +1067,9 @@ static void hi351_set_white_balance_mode(struct msm_sensor_ctrl_t *s_ctrl,
 }
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //LGE_CHANGE_E,  This Function has been added only for fps of VIDEO Recording from SoC Camera Module. youngwook.song@lge.com 2013-11-04
 static void hi351_set_framerate_for_soc(struct msm_sensor_ctrl_t *s_ctrl, struct msm_fps_range_setting *framerate)
 {
@@ -987,9 +1078,11 @@ static void hi351_set_framerate_for_soc(struct msm_sensor_ctrl_t *s_ctrl, struct
 	if((framerate->min_fps == 1097859072) && (framerate->max_fps == 1097859072))
 		value = 0;
 	 // LGE_CHANGE, youngwook.song@lge.com, in case of Video(640x480 or over), fixed 30fps is in use. 1106247680 is 30.0 in float value.
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 //                                                                                                                                     
 static void hi351_set_framerate_for_soc(struct msm_sensor_ctrl_t *s_ctrl, struct msm_fps_range_setting *framerate)
 {
@@ -998,16 +1091,20 @@ static void hi351_set_framerate_for_soc(struct msm_sensor_ctrl_t *s_ctrl, struct
 	if((framerate->min_fps == 1097859072) && (framerate->max_fps == 1097859072))
 		value = 0;
 	 //                                                                                                                                 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	else if((framerate->min_fps == 1103101952) && (framerate->max_fps == 1106247680))
 		value = 1;
 	else value = 2;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	pr_debug("%s %d\n", __func__, value);
 	switch (value) {
 		case 0: { //attached MMS VIDEO 177x144, 384x288
@@ -1025,25 +1122,31 @@ static void hi351_set_framerate_for_soc(struct msm_sensor_ctrl_t *s_ctrl, struct
 				(struct msm_camera_i2c_reg_conf *) hi351_attached_fps_conf[hi351_antibanding].conf, hi351_attached_fps_conf[hi351_antibanding].size);
 				}
 			// LGE_CHANGE_E. youngwook.song@lge.com, this code is for distinguishing Camera/Camcoder init. from other enterings. 2014-01-21
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	pr_debug("%s %d", __func__, value);
 	switch (value) {
 		case 0: { //attached MMS VIDEO 177x144, 384x288
 			pr_debug("%s %d", __func__, value);
 			hi351_sensor_write_init_settings(s_ctrl->sensor_i2c_client,
 			(struct msm_camera_i2c_reg_conf *) hi351_attached_fps_conf[hi351_antibanding].conf, hi351_attached_fps_conf[hi351_antibanding].size);
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 			}
 			break;
 
 		case 1: { //fixed for VIDEO 640x480 and more over.
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			pr_debug("%s %d\n", __func__, value);
 
 			// LGE_CHANGE_S. youngwook.song@lge.com, this code is for distinguishing Camera/Camcoder init. from other enterings. 2014-01-21
@@ -1058,22 +1161,28 @@ static void hi351_set_framerate_for_soc(struct msm_sensor_ctrl_t *s_ctrl, struct
 				(struct msm_camera_i2c_reg_conf *) hi351_fixed_fps_conf[hi351_antibanding].conf, hi351_fixed_fps_conf[hi351_antibanding].size);
 				}
 			// LGE_CHANGE_E. youngwook.song@lge.com, this code is for distinguishing Camera/Camcoder init. from other enterings. 2014-01-21
-=======
+
 			pr_debug("%s %d", __func__, value);
 			hi351_sensor_write_init_settings(s_ctrl->sensor_i2c_client,
 			(struct msm_camera_i2c_reg_conf *) hi351_fixed_fps_conf[hi351_antibanding].conf, hi351_fixed_fps_conf[hi351_antibanding].size);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 			pr_debug("%s %d", __func__, value);
 			hi351_sensor_write_init_settings(s_ctrl->sensor_i2c_client,
 			(struct msm_camera_i2c_reg_conf *) hi351_fixed_fps_conf[hi351_antibanding].conf, hi351_fixed_fps_conf[hi351_antibanding].size);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+			pr_debug("%s %d", __func__, value);
+			hi351_sensor_write_init_settings(s_ctrl->sensor_i2c_client,
+			(struct msm_camera_i2c_reg_conf *) hi351_fixed_fps_conf[hi351_antibanding].conf, hi351_fixed_fps_conf[hi351_antibanding].size);
+
 			}
 			break;
 
 		default:{  //default
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			pr_debug("%s %d\n", __func__, value);
 
 			// LGE_CHANGE_S. youngwook.song@lge.com, this code is for distinguishing Camera/Camcoder init. from other enterings. 2014-01-21
@@ -1088,29 +1197,38 @@ static void hi351_set_framerate_for_soc(struct msm_sensor_ctrl_t *s_ctrl, struct
 				(struct msm_camera_i2c_reg_conf *) hi351_auto_fps_conf[hi351_antibanding].conf, hi351_auto_fps_conf[hi351_antibanding].size);
 				}
 			// LGE_CHANGE_E. youngwook.song@lge.com, this code is for distinguishing Camera/Camcoder init. from other enterings. 2014-01-21
-=======
+
 			pr_debug("%s %d", __func__, value);
 			hi351_sensor_write_init_settings(s_ctrl->sensor_i2c_client,
 			(struct msm_camera_i2c_reg_conf *) hi351_auto_fps_conf[hi351_antibanding].conf, hi351_auto_fps_conf[hi351_antibanding].size);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 			pr_debug("%s %d", __func__, value);
 			hi351_sensor_write_init_settings(s_ctrl->sensor_i2c_client,
 			(struct msm_camera_i2c_reg_conf *) hi351_auto_fps_conf[hi351_antibanding].conf, hi351_auto_fps_conf[hi351_antibanding].size);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+			pr_debug("%s %d", __func__, value);
+			hi351_sensor_write_init_settings(s_ctrl->sensor_i2c_client,
+			(struct msm_camera_i2c_reg_conf *) hi351_auto_fps_conf[hi351_antibanding].conf, hi351_auto_fps_conf[hi351_antibanding].size);
+
 			}
 			break;
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //LGE_CHANGE_X,  This Function has been added only for fps of VIDEO Recording from SoC Camera Module. youngwook.song@lge.com 2013-11-04
-=======
+
 //                                                                                                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                                                                                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                                                                                                                     
+
 
 int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 	void __user *argp)
@@ -1123,15 +1241,19 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		s_ctrl->sensordata->sensor_name, cdata->cfgtype);
 	switch (cdata->cfgtype) {
 	case CFG_GET_SENSOR_INFO:
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		pr_err("%s, CFG_GET_SENSOR_INFO!!\n", __func__);
-=======
+
 		pr_err("%s, CFG_GET_SENSOR_INFO!!", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		pr_err("%s, CFG_GET_SENSOR_INFO!!", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		pr_err("%s, CFG_GET_SENSOR_INFO!!", __func__);
+
 		memcpy(cdata->cfg.sensor_info.sensor_name,
 			s_ctrl->sensordata->sensor_name,
 			sizeof(cdata->cfg.sensor_info.sensor_name));
@@ -1153,43 +1275,55 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		/* Write Recommend settings */
 		int32_t rc = 0;
 		int32_t retry;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		pr_err("%s, CFG_SET_INIT_SETTING!!\n", __func__);
 /* LGE_CHANGE_S, Kernel Driver Modifying for dual module setting , youngwook.song@lge.com, 2014.01.09 */
-=======
+
 		pr_err("%s, CFG_SET_INIT_SETTING!!", __func__);
 
 /*                                                                                                    */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		pr_err("%s, CFG_SET_INIT_SETTING!!", __func__);
 
 /*                                                                                                    */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		pr_err("%s, CFG_SET_INIT_SETTING!!", __func__);
+
+/*                                                                                                    */
+
 		if((main_cam_id_value == HI351_SUNNY)&&(hi351_antibanding == HI351_60HZ)) hi351_ab_mod = 0;
 			else if((main_cam_id_value == HI351_SUNNY)&&(hi351_antibanding == HI351_50HZ)) hi351_ab_mod = 1;
 				else if((main_cam_id_value == HI351_COWELL)&&(hi351_antibanding == HI351_60HZ)) hi351_ab_mod = 2;
 					else if((main_cam_id_value == HI351_COWELL)&&(hi351_antibanding == HI351_50HZ)) hi351_ab_mod = 3;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		pr_err("%s, hi351_ab_mod vaule : 01Sun,23Cow %d\n", __func__, hi351_ab_mod);
 /* LGE_CHANGE_E, Kernel Driver Modifying for dual module setting , youngwook.song@lge.com, 2014.01.09 */
-=======
+
 		pr_err("%s, hi351_ab_mod vaule : %d", __func__, hi351_ab_mod);
 /*                                                                                                    */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		pr_err("%s, hi351_ab_mod vaule : %d", __func__, hi351_ab_mod);
 /*                                                                                                    */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		pr_err("%s, hi351_ab_mod vaule : %d", __func__, hi351_ab_mod);
+/*                                                                                                    */
+
 
 		for (retry = 0; retry < 3; ++retry) {
 				rc = hi351_sensor_write_init_settings(s_ctrl->sensor_i2c_client,
 							(struct msm_camera_i2c_reg_conf *) hi351_init_conf[hi351_ab_mod].conf, hi351_init_conf[hi351_ab_mod].size);
 				if (rc < 0)
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 					pr_err(KERN_ERR "[ERROR]%s:Sensor Init Setting Fail\n", __func__);
 				else break;
 		}
@@ -1204,9 +1338,11 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		/* LGE_CHANGE_E, Kernel Driver Modifying on MR2 for change resolution to take pictures , youngwook.song@lge.com, 2013.08.29 */
 		int val = 0;
 		pr_err("%s, CFG_SET_RESOLUTION!!\n", __func__);
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 					printk(KERN_ERR "[ERROR]%s:Sensor Init Setting Fail\n", __func__);
 				else break;
 		}
@@ -1216,10 +1352,13 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		/*                                                                                                                          */
 		int val = 0;
 		pr_err("%s, CFG_SET_RESOLUTION!!", __func__);
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 		if (copy_from_user(&val,
 			(void *)cdata->cfg.setting, sizeof(int))) {
 			pr_err("%s:%d failed\n", __func__, __LINE__);
@@ -1229,8 +1368,9 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		if (val == 0){
 			hi351_sensor_write_init_settings(s_ctrl->sensor_i2c_client,
 							(struct msm_camera_i2c_reg_conf *) hi351_snap_conf[hi351_antibanding].conf, hi351_snap_conf[hi351_antibanding].size);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			pr_err("%s, snapsettings!!\n", __func__);
 		}
 		else if (val == 1){
@@ -1254,9 +1394,11 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		}
 	case CFG_SET_STOP_STREAM:
 		pr_err("%s, CFG_SET_STOP_STREAM!!\n", __func__);
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 			pr_err("%s, snapsettings!!", __func__);
 		}
 		else if (val == 1){
@@ -1269,16 +1411,20 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		}
 	case CFG_SET_STOP_STREAM:
 		pr_err("%s, CFG_SET_STOP_STREAM!!", __func__);
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 		hi351_i2c_write_table(s_ctrl,
 			&hi351_stop_settings[0],
 			ARRAY_SIZE(hi351_stop_settings));
 		break;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 	case CFG_SET_START_STREAM:
 		pr_err("%s, CFG_SET_START_STREAM!!\n", __func__);
@@ -1296,9 +1442,11 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		break;
 	case CFG_GET_SENSOR_INIT_PARAMS:
 		pr_err("%s, CFG_GET_SENSOR_INIT_PARAMS!!\n", __func__);
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	case CFG_SET_START_STREAM:
 		pr_err("%s, CFG_SET_START_STREAM!!", __func__);
 		hi351_i2c_write_table(s_ctrl,
@@ -1307,10 +1455,13 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		break;
 	case CFG_GET_SENSOR_INIT_PARAMS:
 		pr_err("%s, CFG_GET_SENSOR_INIT_PARAMS!!", __func__);
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 		cdata->cfg.sensor_init_params =
 			*s_ctrl->sensordata->sensor_init_params;
 		CDBG("%s:%d init params mode %d pos %d mount %d\n", __func__,
@@ -1323,15 +1474,19 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		struct msm_camera_sensor_slave_info sensor_slave_info;
 		struct msm_sensor_power_setting_array *power_setting_array;
 		int slave_index = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		pr_err("%s, CFG_SET_SLAVE_INFO!!\n", __func__);
-=======
+
 		pr_err("%s, CFG_SET_SLAVE_INFO!!", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		pr_err("%s, CFG_SET_SLAVE_INFO!!", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		pr_err("%s, CFG_SET_SLAVE_INFO!!", __func__);
+
 		if (copy_from_user(&sensor_slave_info,
 		    (void *)cdata->cfg.setting,
 		    sizeof(struct msm_camera_sensor_slave_info))) {
@@ -1398,15 +1553,19 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 	case CFG_WRITE_I2C_ARRAY: {
 		struct msm_camera_i2c_reg_setting conf_array;
 		struct msm_camera_i2c_reg_array *reg_setting = NULL;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		pr_err("%s, CFG_WRITE_I2C_ARRAY!!\n", __func__);
-=======
+
 		pr_err("%s, CFG_WRITE_I2C_ARRAY!!", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		pr_err("%s, CFG_WRITE_I2C_ARRAY!!", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		pr_err("%s, CFG_WRITE_I2C_ARRAY!!", __func__);
+
 		if (copy_from_user(&conf_array,
 			(void *)cdata->cfg.setting,
 			sizeof(struct msm_camera_i2c_reg_setting))) {
@@ -1440,15 +1599,19 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 	case CFG_WRITE_I2C_SEQ_ARRAY: {
 		struct msm_camera_i2c_seq_reg_setting conf_array;
 		struct msm_camera_i2c_seq_reg_array *reg_setting = NULL;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		pr_err("%s, CFG_WRITE_I2C_SEQ_ARRAY!!\n", __func__);
-=======
+
 		pr_err("%s, CFG_WRITE_I2C_SEQ_ARRAY!!", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		pr_err("%s, CFG_WRITE_I2C_SEQ_ARRAY!!", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		pr_err("%s, CFG_WRITE_I2C_SEQ_ARRAY!!", __func__);
+
 		if (copy_from_user(&conf_array,
 			(void *)cdata->cfg.setting,
 			sizeof(struct msm_camera_i2c_seq_reg_setting))) {
@@ -1482,15 +1645,19 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		break;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /*LGE_CHANGE_S, add soc exif, 2013-10-04, kwangsik83.kim@lge.com*/
-=======
+
 /*                                                              */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                                                              */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                                                              */
+
 		case CFG_PAGE_MODE_READ_I2C_ARRAY:{
 			int16_t size=0;
 			uint16_t read_data_size = 0;
@@ -1585,21 +1752,27 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 
 			break;
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /*LGE_CHANGE_E, add soc exif, 2013-10-04, kwangsik83.kim@lge.com*/
 
 /*LGE_CHANGE_S, modified power-up/down status for recovery, 2013-12-27, hyungtae.lee@lge.com*/
-=======
+
 /*                                                              */
 
 /*                                                                                          */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                                                              */
 
 /*                                                                                          */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                                                              */
+
+/*                                                                                          */
+
 	case CFG_POWER_UP:{
 
 		if (s_ctrl->sensor_state != MSM_SENSOR_POWER_DOWN) {
@@ -1651,28 +1824,36 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		}
 		break;
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /*LGE_CHANGE_E, modified power-up/down status for recovery, 2013-12-27, hyungtae.lee@lge.com*/
-=======
+
 /*                                                                                          */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                                                                                          */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                                                                                          */
+
 	case CFG_SET_STOP_STREAM_SETTING: {
 		struct msm_camera_i2c_reg_setting *stop_setting =
 			&s_ctrl->stop_setting;
 		struct msm_camera_i2c_reg_array *reg_setting = NULL;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		pr_err("%s, CFG_SET_STOP_STREAM_SETTING!!\n", __func__);
-=======
+
 		pr_err("%s, CFG_SET_STOP_STREAM_SETTING!!", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		pr_err("%s, CFG_SET_STOP_STREAM_SETTING!!", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		pr_err("%s, CFG_SET_STOP_STREAM_SETTING!!", __func__);
+
 		if (copy_from_user(stop_setting, (void *)cdata->cfg.setting,
 		    sizeof(struct msm_camera_i2c_reg_setting))) {
 			pr_err("%s:%d failed\n", __func__, __LINE__);
@@ -1701,15 +1882,19 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		break;
 	}
 	case CFG_SET_SATURATION: {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		pr_debug("%s: We do not support Saturation feature Value now\n", __func__);
-=======
+
 		pr_debug("%s: We do not support Saturation feature Value now", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		pr_debug("%s: We do not support Saturation feature Value now", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		pr_debug("%s: We do not support Saturation feature Value now", __func__);
+
 #if 0
 		int32_t sat_lev;
 		if (copy_from_user(&sat_lev, (void *)cdata->cfg.setting,
@@ -1724,15 +1909,19 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		break;
 	}
 	case CFG_SET_CONTRAST: {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		pr_debug("%s: We do not support Contrast feature Value now\n", __func__);
-=======
+
 		pr_debug("%s: We do not support Contrast feature Value now", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		pr_debug("%s: We do not support Contrast feature Value now", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		pr_debug("%s: We do not support Contrast feature Value now", __func__);
+
 #if 0
 		int32_t con_lev;
 		if (copy_from_user(&con_lev, (void *)cdata->cfg.setting,
@@ -1747,15 +1936,19 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		break;
 	}
 	case CFG_SET_SHARPNESS: {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		pr_debug("%s: We do not support Sharpness feature Value now\n", __func__);
-=======
+
 		pr_debug("%s: We do not support Sharpness feature Value now", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		pr_debug("%s: We do not support Sharpness feature Value now", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		pr_debug("%s: We do not support Sharpness feature Value now", __func__);
+
 #if 0
 		int32_t shp_lev;
 		if (copy_from_user(&shp_lev, (void *)cdata->cfg.setting,
@@ -1777,15 +1970,19 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 			rc = -EFAULT;
 			break;
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		pr_debug("%s: ISO Value is %d\n", __func__, iso_lev);
-=======
+
 		pr_debug("%s: ISO Value is %d", __func__, iso_lev);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		pr_debug("%s: ISO Value is %d", __func__, iso_lev);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		pr_debug("%s: ISO Value is %d", __func__, iso_lev);
+
 		hi351_set_iso(s_ctrl, iso_lev);
 		break;
 	}
@@ -1797,15 +1994,19 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 			rc = -EFAULT;
 			break;
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		pr_debug("%s: Exposure compensation Value is %d\n",
-=======
+
 		pr_debug("%s: Exposure compensation Value is %d",
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		pr_debug("%s: Exposure compensation Value is %d",
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		pr_debug("%s: Exposure compensation Value is %d",
+
 			__func__, ec_lev);
 		hi351_set_exposure_compensation(s_ctrl, ec_lev);
 		break;
@@ -1818,28 +2019,36 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 			rc = -EFAULT;
 			break;
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		pr_debug("%s: Effect mode is %d\n", __func__, effect_mode);
-=======
+
 		pr_debug("%s: Effect mode is %d", __func__, effect_mode);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		pr_debug("%s: Effect mode is %d", __func__, effect_mode);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		pr_debug("%s: Effect mode is %d", __func__, effect_mode);
+
 		hi351_set_effect(s_ctrl, effect_mode);
 		break;
 	}
 	case CFG_SET_ANTIBANDING: {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		pr_debug("%s: We do not support Antibanding feature Value now\n", __func__);
-=======
+
 		pr_debug("%s: We do not support Antibanding feature Value now", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		pr_debug("%s: We do not support Antibanding feature Value now", __func__);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		pr_debug("%s: We do not support Antibanding feature Value now", __func__);
+
 #if 0
 		int32_t antibanding_mode;
 		if (copy_from_user(&antibanding_mode,
@@ -1863,15 +2072,19 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 			rc = -EFAULT;
 			break;
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		pr_debug("%s: best shot mode is %d\n", __func__, bs_mode);
-=======
+
 		pr_debug("%s: best shot mode is %d", __func__, bs_mode);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		pr_debug("%s: best shot mode is %d", __func__, bs_mode);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		pr_debug("%s: best shot mode is %d", __func__, bs_mode);
+
 		hi351_set_scene_mode(s_ctrl, bs_mode);
 		break;
 	}
@@ -1883,8 +2096,9 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 			rc = -EFAULT;
 			break;
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		pr_debug("%s: white balance is %d\n", __func__, wb_mode);
 		hi351_set_white_balance_mode(s_ctrl, wb_mode);
 		break;
@@ -1897,9 +2111,11 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		break;
 //LGE_CHANGE_X,  These options has beend added due to colour effect issue. youngwook.song@lge.com 2013-11-25
 //LGE_CHANGE_E,  This Function has been added only for fps of VIDEO Recording from SoC Camera Module. youngwook.song@lge.com 2013-11-04
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 		pr_debug("%s: white balance is %d", __func__, wb_mode);
 		hi351_set_white_balance_mode(s_ctrl, wb_mode);
 		break;
@@ -1912,10 +2128,13 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		break;
 //                                                                                                          
 //                                                                                                                                     
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	case CFG_SET_FRAMERATE_FOR_SOC: {
 		struct msm_fps_range_setting *framerate;
 		if (copy_from_user(&framerate, (void *)cdata->cfg.setting, sizeof(struct msm_fps_range_setting))) {
@@ -1925,15 +2144,19 @@ int32_t hi351_sensor_config(struct msm_sensor_ctrl_t *s_ctrl,
 		hi351_set_framerate_for_soc(s_ctrl, framerate);
 		break;
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //LGE_CHANGE_X,  This Function has been added only for fps of VIDEO Recording from SoC Camera Module. youngwook.song@lge.com 2013-11-04
-=======
+
 //                                                                                                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 //                                                                                                                                     
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+//                                                                                                                                     
+
 	default:
 		rc = -EFAULT;
 		break;

@@ -93,9 +93,12 @@ soc {
 		fci_spi_fc8150,irq-gpio = <&msmgpio 82 0x00>; //Pass a GPIO
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		fci_spi_fc8150,en-gpio = <&msmgpio 100 0x00>; //Pass a GPIO
 		fci_spi_fc8150,reset-gpio = <&msmgpio 92 0x00>; //Pass a GPIO
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 		fci_spi_fc8150_con_after_rev_a {
@@ -104,6 +107,9 @@ soc {
 			revision = "rev_a...";
 		};
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop

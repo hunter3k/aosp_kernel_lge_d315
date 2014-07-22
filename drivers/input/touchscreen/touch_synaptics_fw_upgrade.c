@@ -957,12 +957,15 @@ static int RMI4WritePage(struct synaptics_fw_data *fw, struct synaptics_ts_data 
 
 	return ret;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
 #if 0
 
 static unsigned long ExtractLongFromHeader(const unsigned char* SynaImage)	/* Endian agnostic */
@@ -1039,10 +1042,13 @@ static int RMI4ReadFirmwareHeader(struct synaptics_fw_data *fw, struct synaptics
 	return ret;
 }
 #endif
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 static int RMI4isExpectedRegFormat(struct synaptics_fw_data *fw, struct synaptics_ts_data *ts)
 {
 	/* Flash Properties query 1: registration map format version 1
@@ -1146,12 +1152,15 @@ int FirmwareUpgrade(struct synaptics_ts_data *ts, struct firmware *fw_img)
 		TOUCH_ERR_MSG("Flash address setting fail\n");
 		goto exit_upgrade;
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
 /*
 	ret = RMI4ReadFirmwareHeader(fw, ts);
 	if (ret < 0) {
@@ -1159,10 +1168,13 @@ int FirmwareUpgrade(struct synaptics_ts_data *ts, struct firmware *fw_img)
 		goto exit_upgrade;
 	}
 */
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	ret = RMI4ProgramFirmware(fw, ts);					/* issues the "eraseAll" so must call before any write */
 	if (ret < 0) {
 		TOUCH_ERR_MSG("Program Firmware fail\n");

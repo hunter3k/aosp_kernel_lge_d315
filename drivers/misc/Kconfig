@@ -604,19 +604,23 @@ config FMR_INTENNA
 config TSPDRV
     bool "tspdrv"
         default n
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 config TSPDRV_3_0V_VIBRATOR
 	bool "tspdrv use 3.0V Vibrator"
 	default n
 
-=======
+
         
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
         
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+        
+
 config ANDROID_SW_IRRC
 	bool "Android irrc support"
 	default n

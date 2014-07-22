@@ -79,7 +79,6 @@ endef
 
 $(KERNEL_OUT):
 	mkdir -p $(KERNEL_OUT)
-
 # porting bootchart2 to android
 ifeq ($(INIT_BOOTCHART2),true)
 KERNEL_DEFCONFIG_PATH:=kernel/arch/arm/configs/$(KERNEL_DEFCONFIG)
@@ -94,7 +93,6 @@ bootchart2defconfig:
 	echo "CONFIG_CONNECTOR=y" >> $(KERNEL_DEFCONFIG_BC2_PATH)
 	echo "CONFIG_PROC_EVENTS=y" >> $(KERNEL_DEFCONFIG_BC2_PATH)
 
-
 $(KERNEL_CONFIG): $(KERNEL_OUT) bootchart2defconfig
 	$(MAKE) -C kernel O=../$(KERNEL_OUT) ARCH=arm CROSS_COMPILE=arm-eabi- bc2_$(KERNEL_DEFCONFIG)
 else
@@ -106,8 +104,7 @@ $(KERNEL_CONFIG): $(KERNEL_OUT)
 # RF_SW kyuhyung.lee
 ifneq ($(TARGET_BUILD_VARIANT), user)
 	echo "CONFIG_LGE_RSSI_DEBUG=y" >> $(KERNEL_CONFIG)
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 endif
 # LGE_CHANGE_END
 endif
@@ -119,17 +116,11 @@ ifeq ($(strip $(USES_VMWARE_VIRTUALIZATION)), true)
 	echo "CONFIG_VMWARE_PVTCP_DEBUG=y" >> $(KERNEL_CONFIG)
 endif
 # VMware_E
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 endif 
 # LGE_CHANGE_END
 endif
 # porting bootchart2 to android
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
 
 $(KERNEL_OUT)/piggy : $(TARGET_PREBUILT_INT_KERNEL)
 	$(hide) gunzip -c $(KERNEL_OUT)/arch/arm/boot/compressed/piggy.gzip > $(KERNEL_OUT)/piggy

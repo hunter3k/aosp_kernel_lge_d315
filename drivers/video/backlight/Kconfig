@@ -372,18 +372,21 @@ config BACKLIGHT_LM3530
 	help
 	  Say Y to enable the backlight driver for TI LM3530.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 config BACKLIGHT_RT8555
 	tristate "Backlight Driver for RT8555 using WLED"
 	depends on BACKLIGHT_CLASS_DEVICE
 	help
 	  Say Y to enable the backlight driver for RT8555.
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 endif # BACKLIGHT_CLASS_DEVICE
 
 endif # BACKLIGHT_LCD_SUPPORT

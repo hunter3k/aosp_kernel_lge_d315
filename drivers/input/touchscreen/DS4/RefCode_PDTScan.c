@@ -50,28 +50,36 @@ unsigned char ButtonRXUsed[CFG_F54_RXCOUNT];
 
 void SYNA_PDTScan(void)
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	unsigned char j, tmp = 255, check_bit = 0;
-=======
+
 	unsigned char j, tmp = 255;
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	unsigned char j, tmp = 255;
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	unsigned char j, tmp = 255;
+
 	unsigned char FUNC_EXISTS = 0;
 	unsigned char in[10];	
 #ifdef F54_Porting
 	unsigned short i;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
  	char buf[768] = {0};
-=======
+
  	char buf[512] = {0};
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
  	char buf[512] = {0};
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+ 	char buf[512] = {0};
+
  	int ret = 0;
 #else
 	unsigned short i, tmp16, l, m;
@@ -98,8 +106,9 @@ void SYNA_PDTScan(void)
 
 		while(1) 
 		{
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 			if (check_bit == 0x1f || j > 10) {
 				write_log(buf);
@@ -107,10 +116,12 @@ void SYNA_PDTScan(void)
 				break;
 			}
 
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 			j++;
 			readRMI((i << 8) | (PDT_ADDR - PDT_SIZE*j), in, 6);
 			readRMI((i << 8) | 0xFF, &tmp, 1);
@@ -131,121 +142,150 @@ void SYNA_PDTScan(void)
 				}
 				break;
 			} 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			else if(in[5] == 0x11 && !(check_bit & (1 << 0))) 
 			{		// Function11
 				check_bit |= (1 << 0);
-=======
+
 			else if(in[5] == 0x11) 
 			{		// Function11
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 			else if(in[5] == 0x11) 
 			{		// Function11
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+			else if(in[5] == 0x11) 
+			{		// Function11
+
 				F11_Query_Base = (i << 8) | in[0];
 				F11_Cmd_Base = (i << 8) | in[1];
 				F11_Ctrl_Base = (i << 8) | in[2];
 				F11_Data_Base = (i << 8) | in[3];
 #ifdef F54_Porting
 				ret += sprintf(buf+ret, "-- RMI Function $%02X, Address = 0x%02x --\n", in[5], (PDT_ADDR - PDT_SIZE*j));
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
                                 if(ret>512){
 					printk(KERN_INFO"\n-- RMI Function $%02X, buffer size over.\n", in[5]);
 					write_log(buf);
 					return;
 				}
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 #else
 				printk("\n-- RMI Function $%02X, Address = 0x%02x --\n", in[5], (PDT_ADDR - PDT_SIZE*j));
 #endif
 			} 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			else if(in[5] == 0x34 && !(check_bit & (1 << 1))) 
 			{		// Function34
 				check_bit |= (1 << 1);
-=======
+
 			else if(in[5] == 0x34) 
 			{		// Function34
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 			else if(in[5] == 0x34) 
 			{		// Function34
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+			else if(in[5] == 0x34) 
+			{		// Function34
+
 				F34_Query_Base = (i << 8) | in[0];
 				F34_Cmd_Base = (i << 8) | in[1];
 				F34_Ctrl_Base = (i << 8) | in[2];
 				F34_Data_Base = (i << 8) | in[3];
 #ifdef F54_Porting
 				ret += sprintf(buf+ret, "\n-- RMI Function $%02X, Address = 0x%02x --\n", in[5], (PDT_ADDR - PDT_SIZE*j));
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
                                 if(ret>512){
 					printk(KERN_INFO"\n-- RMI Function $%02X, buffer size over.\n", in[5]);
 					write_log(buf);
 					return;
 				}
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 #else
 				printk("\n-- RMI Function $%02X, Address = 0x%02x --\n", in[5], (PDT_ADDR - PDT_SIZE*j));
 #endif
 			} 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			else if(in[5] == 0x01 && !(check_bit & (1 << 2)))  
 			{		 // Function01
 				check_bit |= (1 << 2);
-=======
+
 			else if(in[5] == 0x01) 
 			{		 // Function01
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 			else if(in[5] == 0x01) 
 			{		 // Function01
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+			else if(in[5] == 0x01) 
+			{		 // Function01
+
 				F01_Query_Base = (i << 8) | in[0];
 				F01_Cmd_Base = (i << 8) | in[1];
 				F01_Ctrl_Base = (i << 8) | in[2];
 				F01_Data_Base = (i << 8) | in[3];
 #ifdef F54_Porting
 				ret += sprintf(buf+ret, "-- RMI Function $%02X, Address = 0x%02x --\n", in[5], (PDT_ADDR - PDT_SIZE*j));
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
                                 if(ret>512){
 					printk(KERN_INFO"\n-- RMI Function $%02X, buffer size over.\n", in[5]);
 					write_log(buf);
 					return;
 				}
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 #else
 				printk("\n-- RMI Function $%02X, Address = 0x%02x --\n", in[5], (PDT_ADDR - PDT_SIZE*j));
 #endif
 			}				
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			else if(in[5] == 0x54 && !(check_bit & (1 << 3)))  
 			{
 				check_bit |= (1 << 3);
-=======
+
 			else if(in[5] == 0x54) 
 			{
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 			else if(in[5] == 0x54) 
 			{
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+			else if(in[5] == 0x54) 
+			{
+
 				F54_Query_Base = (i << 8) | in[0];
 				F54_Command_Base = (i << 8) | in[1];
 				F54_Control_Base = (i << 8) | in[2];
@@ -261,34 +301,42 @@ void SYNA_PDTScan(void)
 
 #ifdef F54_Porting
 				ret += sprintf(buf+ret, "-- RMI Function $%02X, Address = 0x%02x --\n", in[5], (PDT_ADDR - PDT_SIZE*j));
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
                                 if(ret>512){
 					printk(KERN_INFO"\n-- RMI Function $%02X, buffer size over.\n", in[5]);
 					write_log(buf);
 					return;
 				}
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 #else
 				printk("\n-- RMI Function $%02X, Address = 0x%02x --\n", in[5], (PDT_ADDR - PDT_SIZE*j));
 #endif
 			} 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			else if(in[5] == 0x1A && !(check_bit & (1 << 4)))  
 			{
 				check_bit |= (1 << 4);
-=======
+
 			else if(in[5] == 0x1A) 
 			{
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 			else if(in[5] == 0x1A) 
 			{
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+			else if(in[5] == 0x1A) 
+			{
+
 				F1A_Query_Base = (i << 8) | in[0];
 				F1A_Command_Base = (i << 8) | in[1];
 				F1A_Control_Base = (i << 8) | in[2];
@@ -302,17 +350,20 @@ void SYNA_PDTScan(void)
 
 #ifdef F54_Porting
 				ret += sprintf(buf+ret, "-- RMI Function $%02X, Address = 0x%02x --\n", in[5], (PDT_ADDR - PDT_SIZE*j));
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
                                 if(ret>512){
 					printk(KERN_INFO"\n-- RMI Function $%02X, buffer size over.\n", in[5]);
 					write_log(buf);
 					return;
 				}
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 #else
 				printk("\n-- RMI Function $%02X, Address = 0x%02x --\n", in[5], (PDT_ADDR - PDT_SIZE*j));
 #endif
@@ -320,19 +371,23 @@ void SYNA_PDTScan(void)
 			else 
 			{
 #ifdef F54_Porting
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
                                 if(ret>512){
 					printk(KERN_INFO"\n-- RMI Function $%02X, buffer size over.\n", in[5]);
 					write_log(buf);
 					return;
 				}
-=======
+
 				ret += sprintf(buf+ret, "-- RMI Function $%02X not supported --\n", in[5]);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 				ret += sprintf(buf+ret, "-- RMI Function $%02X not supported --\n", in[5]);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+				ret += sprintf(buf+ret, "-- RMI Function $%02X not supported --\n", in[5]);
+
 #else
 				printk("\n-- RMI Function $%02X not supported --\n", in[5]);
 #endif

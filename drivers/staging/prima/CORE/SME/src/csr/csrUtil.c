@@ -52,7 +52,7 @@
 
 
     Copyright (C) 2006 Airgo Networks, Incorporated
-   ========================================================================== */
+   ==== */
 
 
 #include "aniGlobal.h"
@@ -431,15 +431,19 @@ static tCsrCountryInfo gCsrCountryInfo[eCSR_NUM_COUNTRY_INDEX] =
     {REG_DOMAIN_ETSI, {'D', 'K', ' '}},      //DENMARK
     {REG_DOMAIN_WORLD, {'D', 'M', ' '}},     //DOMINICA
     {REG_DOMAIN_WORLD, {'D', 'O', ' '}},       //DOMINICAN REPUBLIC
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
     {REG_DOMAIN_WORLD, {'D', 'Z', ' '}},     //ALGERIA
-=======
+
     {REG_DOMAIN_WORLD, {'D', 'Z', ' '}},     //       
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
     {REG_DOMAIN_WORLD, {'D', 'Z', ' '}},     //       
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+    {REG_DOMAIN_WORLD, {'D', 'Z', ' '}},     //       
+
     {REG_DOMAIN_WORLD, {'E', 'C', ' '}},       //ECUADOR
     {REG_DOMAIN_HI_5GHZ, {'E', 'E', ' '}},      //ESTONIA
     {REG_DOMAIN_WORLD, {'E', 'G', ' '}},     //EGYPT

@@ -12,15 +12,19 @@
 #ifndef __MACH_LGE_HANDLE_PANIC_H
 #define __MACH_LGE_HANDLE_PANIC_H
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE reboot reason for crash handler */
-=======
+
 /*                                     */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 /*                                     */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+/*                                     */
+
 #define LGE_RB_MAGIC    0x6D630000
 
 #define LGE_ERR_KERN    0x0100

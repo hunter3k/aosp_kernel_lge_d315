@@ -28,25 +28,31 @@
 #define SOCKET_MODE			5
 #define CALLBACK_MODE			6
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [START]
 #ifdef CONFIG_LGE_DM_DEV
 #define DM_DEV_MODE         20
 #endif
 //2013-03-06 seongmook.yim(seongmook.yim@lge.com) [P6/MDMBSP] ADD LGODL [END]
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 //                                                                             
 #ifdef CONFIG_LGE_DM_DEV
 #define DM_DEV_MODE         20
 #endif
 //                                                                           
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 #ifdef CONFIG_LGE_DM_APP
 #define DM_APP_MODE			10

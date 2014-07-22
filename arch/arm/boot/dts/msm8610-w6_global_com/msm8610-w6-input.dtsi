@@ -67,11 +67,16 @@
 			revision = "rev_b...";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			synaptics,fw_version_info = <0x12 0x05 0x01>;
 			synaptics,fw_image = "synaptics/w6_global_com/PLG337-T001-PR1592892-DS4.3.5.1.16_12050101.img";
 			synaptics,panel_spec = "synaptics/w6_global_com/w6_global_com_limit.txt";
                         synaptics,global_access_pixel = <10>;
 			lge,knock_on_type = <1>;
+=======
+			synaptics,fw_version_info = <0x14 0x05 0x01>;
+			synaptics,fw_image = "synaptics/w6ds_tim_br/PLG323-T001-PR1578894-DS4.3.5.1.16_14050101.img";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			synaptics,fw_version_info = <0x14 0x05 0x01>;
 			synaptics,fw_image = "synaptics/w6ds_tim_br/PLG323-T001-PR1578894-DS4.3.5.1.16_14050101.img";
@@ -91,12 +96,15 @@
 				gpio_vdd_en = <75>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			    	/*maker_id  disable(0), enable(1)*/
 				maker_id = <0>;
 				maker_id_gpio = <76>;
                                 palm_detect_mode = <1>;
                                 ghost_detection_enable = <0>;
 =======
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 			    /* firmware image depends on this value, temporarily used */
@@ -106,6 +114,9 @@
 				maker_id = <1>;
 				maker_id_gpio = <76>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop

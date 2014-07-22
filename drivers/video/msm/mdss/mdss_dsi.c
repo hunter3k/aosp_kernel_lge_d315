@@ -31,6 +31,7 @@
 static unsigned char *mdss_dsi_base;
 
 
+
 #if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) ||defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL) ||defined(CONFIG_FB_MSM_MIPI_LGD_LH500WX9_VIDEO_HD_PT_PANEL) || defined(CONFIG_LGE_MIPI_DSI_LGD_NT35521_WXGA)
 int has_dsv_f;
 
@@ -64,6 +65,10 @@ EXPORT_SYMBOL(mdss_dsi_lane_config);
 
 #if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
 int has_dsv_f;
+
+#if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
+int has_dsv_f;
+
 
 #if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
 int has_dsv_f;
@@ -106,9 +111,10 @@ static int mdss_dsi_panel_power_on(struct mdss_panel_data *pdata, int enable)
 
 	ctrl_pdata = container_of(pdata, struct mdss_dsi_ctrl_pdata,
 				panel_data);
-	pr_debug("%s: enable=%d\n", __func__, enable);
+	pr_info("%s: enable=%d\n", __func__, enable);
 
 	if (enable) {
+
 
 #ifdef CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL
 
@@ -131,6 +137,14 @@ static int mdss_dsi_panel_power_on(struct mdss_panel_data *pdata, int enable)
 			{
 				if(gpio_get_value(ctrl_pdata->rst_gpio)) {
 
+
+#ifdef CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL
+		if(HW_REV_0 == hw_rev)
+    	{
+			if (!has_dsv_f && pdata->panel_info.panel_power_on == 0)//          
+			{
+				if(gpio_get_value(ctrl_pdata->rst_gpio)) {
+
 					mdss_dsi_panel_reset(pdata, 0);
 					mdelay(10);
 				}
@@ -139,7 +153,10 @@ static int mdss_dsi_panel_power_on(struct mdss_panel_data *pdata, int enable)
 #endif
 
 
+
 		printk("power_data.num_gpio=%x,power_data.num_vreg=%x\n",ctrl_pdata->power_data.num_gpio, ctrl_pdata->power_data.num_vreg);
+
+
 
 
 
@@ -151,6 +168,7 @@ static int mdss_dsi_panel_power_on(struct mdss_panel_data *pdata, int enable)
 				__func__, ret);
 			goto error;
 		}
+
 
 
 #if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) ||defined(CONFIG_FB_MSM_MIPI_LGD_LH500WX9_VIDEO_HD_PT_PANEL)
@@ -174,11 +192,17 @@ static int mdss_dsi_panel_power_on(struct mdss_panel_data *pdata, int enable)
 		if (!has_dsv_f && pdata->panel_info.panel_power_on == 0)//LGE Change
 			mdss_dsi_panel_reset(pdata, 1);
 
+
+#if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL)
+		if (!has_dsv_f && pdata->panel_info.panel_power_on == 0)//          
+			mdss_dsi_panel_reset(pdata, 1);
+
 #else
 		if(pdata->panel_info.panel_power_on ==0) //qct original
 			mdss_dsi_panel_reset(pdata, 1);
 #endif
 	} else {
+
 
 #if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGD_LH500WX9_VIDEO_HD_PT_PANEL)
 		if (!has_dsv_f) //LGE Change
@@ -202,6 +226,11 @@ static int mdss_dsi_panel_power_on(struct mdss_panel_data *pdata, int enable)
 #if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
 		if (!has_dsv_f) //LGE Change
 			mdss_dsi_panel_reset(pdata, 0);
+
+#if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
+		if (!has_dsv_f) //          
+			mdss_dsi_panel_reset(pdata, 0);
+
 
 #if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
 		if (!has_dsv_f) //          
@@ -493,7 +522,7 @@ int mdss_dsi_on(struct mdss_panel_data *pdata)
 	ctrl_pdata = container_of(pdata, struct mdss_dsi_ctrl_pdata,
 				panel_data);
 
-	pr_debug("%s+: ctrl=%p ndx=%d\n",
+	pr_info("%s+: ctrl=%p ndx=%d\n",
 				__func__, ctrl_pdata, ctrl_pdata->ndx);
 
 	pinfo = &pdata->panel_info;
@@ -594,6 +623,7 @@ int mdss_dsi_on(struct mdss_panel_data *pdata)
 	}
 
 
+
 	#if defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
 	{
 
@@ -611,12 +641,20 @@ int mdss_dsi_on(struct mdss_panel_data *pdata)
 		if(HW_REV_0 != lge_get_board_revno())
 #endif		
 
+
+	#if defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
+	{
+		if(HW_REV_0 != lge_get_board_revno())
+
 		{
 			pr_info("[LCD] %s: delay(40) \n",__func__);
 			mdelay(50);
 		}
 	}
 	#endif
+
+
+
 
 
 	mdss_dsi_sw_reset(pdata);
@@ -650,9 +688,13 @@ int mdss_dsi_on(struct mdss_panel_data *pdata)
 	}
 
 
+
 #if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGD_LH500WX9_VIDEO_HD_PT_PANEL)
 
 	#if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
+
+	#if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
+
 
 	#if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
 
@@ -662,6 +704,12 @@ int mdss_dsi_on(struct mdss_panel_data *pdata)
 	  tmp &= ~(1<<28);
 	  MIPI_OUTP((ctrl_pdata->ctrl_base) + 0xac, tmp);
 	  wmb();
+
+
+#if defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
+	  mdelay(20);
+#endif
+
 	  mdss_dsi_panel_reset(pdata, 1);
 	  pr_info(" panel reset after mipi stop state. lane_ctrl value = %x\n", tmp);
 	}
@@ -670,7 +718,7 @@ int mdss_dsi_on(struct mdss_panel_data *pdata)
 	if (pdata->panel_info.type == MIPI_CMD_PANEL)
 		mdss_dsi_clk_ctrl(ctrl_pdata, 0);
 
-	pr_debug("%s-:\n", __func__);
+	pr_info("%s-:\n", __func__);
 	return 0;
 }
 
@@ -926,6 +974,7 @@ static int mdss_dsi_event_handler(struct mdss_panel_data *pdata,
 				panel_data);
 
 
+
 	printk("%s+:event=%d\n", __func__, event);
 
 	pr_info("%s+:event=%d\n", __func__, event);
@@ -934,6 +983,9 @@ static int mdss_dsi_event_handler(struct mdss_panel_data *pdata,
 	pr_info("%s+:event=%d\n", __func__, event);
 
 	pr_debug("%s+:event=%d\n", __func__, event);
+
+	pr_info("%s+:event=%d\n", __func__, event);
+
 
 
 
@@ -1010,7 +1062,7 @@ static int mdss_dsi_event_handler(struct mdss_panel_data *pdata,
 		pr_debug("%s: unhandled event=%d\n", __func__, event);
 		break;
 	}
-	pr_debug("%s-:event=%d, rc=%d\n", __func__, event, rc);
+	pr_info("%s-:event=%d, rc=%d\n", __func__, event, rc);
 	return rc;
 }
 
@@ -1028,6 +1080,7 @@ static int mdss_dsi_event_handler(struct mdss_panel_data *pdata,
  *
  * returns pointer to panel node on success, NULL on error.
  */
+
 static struct device_node *mdss_dsi_find_panel_of_node(
 		struct platform_device *pdev, char *panel_cfg)
 {
@@ -1598,7 +1651,11 @@ int dsi_panel_device_register(struct device_node *pan_node,
 	ctrl_pdata->ctrl_state = CTRL_STATE_UNKNOWN;
 
 
+
   #if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGD_LH500WX9_VIDEO_HD_PT_PANEL)
+
+  #if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
+
 
   #if defined(CONFIG_LGE_MIPI_TOVIS_VIDEO_540P_PANEL) || defined(CONFIG_FB_MSM_MIPI_TIANMA_VIDEO_QHD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_LGIT_LH470WX1_VIDEO_HD_PT_PANEL) || defined(CONFIG_FB_MSM_MIPI_TOVIS_LM570HN1A_VIDEO_HD_PT_PANEL)
 

@@ -38,21 +38,27 @@ void of_i2c_register_devices(struct i2c_adapter *adap)
 		dev_dbg(&adap->dev, "of_i2c: register %s\n", node->full_name);
 
 #ifdef CONFIG_MACH_LGE
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		/* LGE_CHANGE: check status=okay for i2c child node
 		 * 2012-11-07, bongkyu.kim@lge.com
 		 */
-=======
+
 		/*                                                 
                                     
    */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		/*                                                 
                                     
    */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		/*                                                 
+                                    
+   */
+
 		if (!of_device_is_available(node))
 			continue;
 

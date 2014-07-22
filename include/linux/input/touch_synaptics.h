@@ -74,16 +74,19 @@ struct synaptics_ts_fw_info
 
 struct synaptics_ts_data {
 	u8	is_probed;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	u8  lpwg_mode;
 	u8  double_tap_enable;
 	u8	multi_tap_enable;
 	u8	multi_tap_count;
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	struct regulator*	regulator_vdd;
 	struct regulator*	regulator_vio;
 	struct i2c_client*	client;
@@ -99,15 +102,18 @@ struct synaptics_ts_data {
 	struct lge_touch_data *lge_touch_ts;
 	struct hrtimer		palm_timer;
 	struct work_struct	palm_work;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	struct hrtimer		multi_tap_timer;
 	struct work_struct	multi_tap_work;
 	atomic_t    is_suspend;
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 };
 
 /* extern function */

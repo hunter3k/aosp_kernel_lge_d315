@@ -142,8 +142,9 @@ config IMX179
 		Support for IMX179 sensor driver.
 		This is a Sony 8MP Bayer Sensor with autofocus.
 		Say Y if the platform uses IMX179 sensor.
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 config IMX219
 	bool "Sensor imx219 (Sony 8MP)"
@@ -153,12 +154,15 @@ config IMX219
 		This is a Sony 8MP Bayer Sensor with autofocus.
 		Say Y if the platform uses IMX219 sensor.
 
-=======
+
 		
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		
+
 config HI543
     bool "Sensor hi543 (Hynix 5MP)"
     depends on MSMB_CAMERA

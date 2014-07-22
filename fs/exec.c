@@ -65,8 +65,9 @@
 #include "internal.h"
 
 #include <trace/events/sched.h>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE_CHANGE_S
  *
  * do read/mmap profiling during booting
@@ -76,9 +77,11 @@
  */
 #include "sreadahead_prof.h"
 /* LGE_CHAGE_E */
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 /*             
   
                                         
@@ -88,10 +91,13 @@
  */
 #include "sreadahead_prof.h"
 /*             */
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 
 int core_uses_pid;
@@ -170,8 +176,9 @@ SYSCALL_DEFINE1(uselib, const char __user *, library)
 		goto exit;
 
 	fsnotify_open(file);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE_CHANGE_S
  *
  * do read/mmap profiling during booting
@@ -181,9 +188,11 @@ SYSCALL_DEFINE1(uselib, const char __user *, library)
  */
 	sreadahead_prof( file, 0, 0);
 /* LGE_CHANGE_E */
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 /*             
   
                                         
@@ -193,10 +202,13 @@ SYSCALL_DEFINE1(uselib, const char __user *, library)
  */
 	sreadahead_prof( file, 0, 0);
 /*              */
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 
 	error = -ENOEXEC;
@@ -840,8 +852,9 @@ struct file *open_exec(const char *name)
 		goto exit;
 
 	fsnotify_open(file);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE_CHANGE_S
  *
  * do read/mmap profiling during booting
@@ -851,9 +864,11 @@ struct file *open_exec(const char *name)
  */
 	sreadahead_prof( file, 0, 0);
 /* LGE_CHANGE_E */
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 /*             
   
                                         
@@ -863,10 +878,13 @@ struct file *open_exec(const char *name)
  */
 	sreadahead_prof( file, 0, 0);
 /*              */
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 
 	err = deny_write_access(file);

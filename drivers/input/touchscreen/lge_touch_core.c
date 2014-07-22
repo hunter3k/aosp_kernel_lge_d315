@@ -36,15 +36,18 @@
 #include <linux/types.h>
 #include <linux/time.h>
 #include <linux/version.h>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 #include <asm/atomic.h>
 #include <linux/gpio.h>
 #include <linux/regulator/consumer.h>
 #include <linux/input/lge_touch_core.h>
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 
 #include <asm/atomic.h>
 #include <linux/gpio.h>
@@ -54,10 +57,13 @@
 
 #define CUST_KNOCK_ON_GESTURE
 #ifdef CUST_KNOCK_ON_GESTURE
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 #include <linux/wakelock.h>
 #include <linux/mutex.h>
 
@@ -65,26 +71,34 @@ static int touch_gesture_enable = 0;
 static int ts_suspend = 0;
 static int power_block = 0;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
 
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
+
+
 static struct wake_lock touch_wake_lock;
 static struct mutex i2c_suspend_lock;
 
 static void touch_double_tap_wakeup_enable(struct lge_touch_data *ts);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
+
 #endif
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #endif
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#endif
+
 
 #include <mach/board_lge.h>
 
@@ -162,13 +176,16 @@ static void release_all_ts_event(struct lge_touch_data *ts);
 
 u8 synaptics_probe = 0;
 u8 device_control_reg = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 u8 synaptics_rebase_retry_cnt = 0;
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 int trigger_baseline = 0;
 int ts_charger_plug = 0;
 int ts_charger_type = 0;
@@ -182,8 +199,9 @@ static struct hrtimer hr_touch_trigger_timer;
 
 static enum hrtimer_restart touch_trigger_timer_handler(struct hrtimer *timer)
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 	if(synaptics_rebase_retry_cnt == MAX_RETRY_COUNT){
 		trigger_baseline = 0;
@@ -207,19 +225,24 @@ static enum hrtimer_restart touch_trigger_timer_handler(struct hrtimer *timer)
 				atomic_inc(&touch_test_dev->next_work);
 				queue_work(touch_wq, &touch_test_dev->work);
 			}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	if (touch_test_dev && touch_test_dev->pdata->role->ghost_detection_enable) {
 		if(trigger_baseline==1 && atomic_read(&touch_test_dev->device_init) == 1)
 		{
 			trigger_baseline = 2;
 			atomic_inc(&touch_test_dev->next_work);
 			queue_work(touch_wq, &touch_test_dev->work);
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 		}
 	}
 	return HRTIMER_NORESTART;
@@ -229,18 +252,24 @@ void trigger_usb_state_from_otg(int type)
 {
 	u8 buf=0;
 	int plug_in = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
+
 #ifdef G_ONLY
 	extern u8 hopping;
 #endif
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #ifdef G_ONLY
 	extern u8 hopping;
 #endif
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#ifdef G_ONLY
+	extern u8 hopping;
+#endif
+
 
 	if(!synaptics_probe || !device_control_reg)
 		return;
@@ -250,17 +279,22 @@ void trigger_usb_state_from_otg(int type)
 	plug_in = (type == 0) ? 0 : 1;
 
 	if (touch_test_dev && touch_test_dev->pdata->role->ghost_detection_enable) {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		TOUCH_INFO_MSG("plug_in_type : %d \n", type);
-=======
+
 		TOUCH_INFO_MSG("device_control_reg : %02X ", device_control_reg);
 		TOUCH_INFO_MSG("plug_in_type : %d ", type);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		TOUCH_INFO_MSG("device_control_reg : %02X ", device_control_reg);
 		TOUCH_INFO_MSG("plug_in_type : %d ", type);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		TOUCH_INFO_MSG("device_control_reg : %02X ", device_control_reg);
+		TOUCH_INFO_MSG("plug_in_type : %d ", type);
+
 		/* INVALID:0, SDP:1, DCP:2, CDP:3 */
 
 	    if(plug_in == 0 || plug_in == 1)
@@ -277,27 +311,36 @@ void trigger_usb_state_from_otg(int type)
 					safety_reset(touch_test_dev);
 					queue_delayed_work(touch_wq, &touch_test_dev->work_init,
 								msecs_to_jiffies(touch_test_dev->pdata->role->booting_delay));
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
+
 #ifdef G_ONLY
 					TOUCH_INFO_MSG("cur_hopping_idx [ %s ] = %x\n", __func__, cur_hopping_idx);
 #endif
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #ifdef G_ONLY
 					TOUCH_INFO_MSG("cur_hopping_idx [ %s ] = %x\n", __func__, cur_hopping_idx);
 #endif
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#ifdef G_ONLY
+					TOUCH_INFO_MSG("cur_hopping_idx [ %s ] = %x\n", __func__, cur_hopping_idx);
+#endif
+
 				} else if(plug_in == 1){
 					touch_i2c_read(touch_test_dev->client, device_control_reg, 1, &buf);
 					buf = buf | 0x20;
 					touch_i2c_write_byte(touch_test_dev->client, device_control_reg, buf);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
 
 #ifdef G_ONLY
 					touch_i2c_write_byte(touch_test_dev->client, 0xFF, 0x01);
@@ -322,10 +365,13 @@ void trigger_usb_state_from_otg(int type)
 					}
 					touch_i2c_write_byte(touch_test_dev->client, 0xFF, 0x00);
 #endif
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 				}
 			}
 
@@ -373,14 +419,17 @@ bool chk_time_interval(struct timeval t_aft, struct timeval t_bef, int t_val)
 int ghost_detect_solution(struct lge_touch_data *ts)
 {
 	extern u8 pressure_zero;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	int first_int_detection = 0;
 	int cnt = 0, id =0;
 
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 #ifdef G_ONLY
 	extern u8 hopping;
 #endif
@@ -394,10 +443,13 @@ int ghost_detect_solution(struct lge_touch_data *ts)
 	}
 #endif
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	if(trigger_baseline==2)
 		goto out_need_to_rebase;
 
@@ -423,22 +475,28 @@ int ghost_detect_solution(struct lge_touch_data *ts)
 		TOUCH_INFO_MSG("pressure\n");
 		ghost_detection = true;
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
 #ifdef G_ONLY
 	if(hopping == 1) {
 		TOUCH_INFO_MSG("hopping\n");
 		ghost_detection = true;
 	}
 #endif
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	if (ts_charger_plug) {
 		if((ts_role->ta_debouncing_finger_num  <= ts->ts_data.total_num) && (ta_debouncing_count < ts_role->ta_debouncing_count)) {
 			ta_debouncing_count ++;
@@ -455,15 +513,19 @@ int ghost_detect_solution(struct lge_touch_data *ts)
 		{
 			if (ts->ts_data.prev_total_num <= ts->ts_data.total_num)
 			{
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 				if (ts->gf_ctrl.stage == GHOST_STAGE_CLEAR || (ts->gf_ctrl.stage | GHOST_STAGE_1) || ts->gf_ctrl.stage == GHOST_STAGE_4)
-=======
+
 			       if (ts->gf_ctrl.stage == GHOST_STAGE_CLEAR || (ts->gf_ctrl.stage | GHOST_STAGE_1) || ts->gf_ctrl.stage == GHOST_STAGE_4)
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 			       if (ts->gf_ctrl.stage == GHOST_STAGE_CLEAR || (ts->gf_ctrl.stage | GHOST_STAGE_1) || ts->gf_ctrl.stage == GHOST_STAGE_4)
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+			       if (ts->gf_ctrl.stage == GHOST_STAGE_CLEAR || (ts->gf_ctrl.stage | GHOST_STAGE_1) || ts->gf_ctrl.stage == GHOST_STAGE_4)
+
 					ts->ts_data.state = TOUCH_BUTTON_LOCK;
 
 				for(id=0; id < ts_caps->max_id; id++){
@@ -480,15 +542,19 @@ int ghost_detect_solution(struct lge_touch_data *ts)
 
 					if (1 <= ts->ts_data.prev_total_num && 1 <= ts->ts_data.total_num && is_valid_ghost_jitter(ts, ts_prev_finger_press_data, ts->ts_data.curr_data[id]))
 					{
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 						// if time_interval between prev fingger pressed and curr finger pressed is less than 50ms, we need to rebase touch ic.
-=======
+
 					       // if time_interval between prev fingger pressed and curr finger pressed is less than 50ms, we need to rebase touch ic.
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 					       // if time_interval between prev fingger pressed and curr finger pressed is less than 50ms, we need to rebase touch ic.
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+					       // if time_interval between prev fingger pressed and curr finger pressed is less than 50ms, we need to rebase touch ic.
+
 						if(chk_time_interval(t_ex_debug[EX_CURR_PRESS], t_ex_debug[EX_PREV_PRESS], ts_ghost_value[DURATION_BET_PRESS] * 1000)) {
 							ghost_detection = true;
 							ghost_detection_count++;
@@ -511,8 +577,9 @@ int ghost_detect_solution(struct lge_touch_data *ts)
 
 					memcpy(&ts_prev_finger_press_data, &ts->ts_data.curr_data[id], sizeof(ts_prev_finger_press_data));
 				}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			} else {
 				memcpy(&t_ex_debug[EX_PREV_PRESS], &t_ex_debug[EX_CURR_PRESS], sizeof(struct timeval));
 				do_gettimeofday(&t_ex_debug[EX_CURR_INT]);
@@ -528,9 +595,11 @@ int ghost_detect_solution(struct lge_touch_data *ts)
 					TOUCH_INFO_MSG("need_to_rebase finger_subtraction!!! \n");
 					goto out_need_to_rebase;
 				}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 			}else{
 					memcpy(&t_ex_debug[EX_PREV_PRESS], &t_ex_debug[EX_CURR_PRESS], sizeof(struct timeval));
 					do_gettimeofday(&t_ex_debug[EX_CURR_INT]);
@@ -546,10 +615,13 @@ int ghost_detect_solution(struct lge_touch_data *ts)
 						TOUCH_INFO_MSG("need_to_rebase finger_subtraction!!! \n");
 						goto out_need_to_rebase;
 					}
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 			}
 		}
 
@@ -581,14 +653,18 @@ int ghost_detect_solution(struct lge_touch_data *ts)
 			else
 				long_press_check_count = 0;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
+
 			//TOUCH_INFO_MSG("long_press_check_count %d !!! \n", long_press_check_count);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 			//TOUCH_INFO_MSG("long_press_check_count %d !!! \n", long_press_check_count);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+			//TOUCH_INFO_MSG("long_press_check_count %d !!! \n", long_press_check_count);
+
 			if (long_press_check_count > ts_ghost_value[LONG_PRESS_CNT]) {
 				long_press_check_count = 0;
 				TOUCH_INFO_MSG("need_to_rebase long press!!! \n");
@@ -596,8 +672,9 @@ int ghost_detect_solution(struct lge_touch_data *ts)
 			}
 		}
 	}else if (!ts->ts_data.total_num){
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		long_press_check_count = 0;
 		finger_subtraction_check_count = 0;
 	}
@@ -632,9 +709,11 @@ int ghost_detect_solution(struct lge_touch_data *ts)
 						button_press_count = 0;
 				} else; //do not anything
 			}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 			long_press_check_count = 0;
 			finger_subtraction_check_count = 0;
 	}
@@ -672,10 +751,13 @@ int ghost_detect_solution(struct lge_touch_data *ts)
 							button_press_count = 0;
 					} else; //do not anything
 				}
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 		}
 	}
 
@@ -694,8 +776,9 @@ out_need_to_debounce:
 	return NEED_TO_OUT;
 
 out_need_to_rebase:
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	ghost_detection = false;
 	ghost_detection_count = 0;
 	memset(&ts_prev_finger_press_data, 0x0, sizeof(ts_prev_finger_press_data));
@@ -734,9 +817,11 @@ out_need_to_rebase:
 	}
 	TOUCH_INFO_MSG("need_to_rebase\n");
 
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	{
 			ghost_detection = false;
 			ghost_detection_count = 0;
@@ -776,24 +861,31 @@ out_need_to_rebase:
 			}
 			TOUCH_INFO_MSG("need_to_rebase\n");
 	}
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	return NEED_TO_OUT;
 
 out_need_to_init:
 	return NEED_TO_INIT;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
+
+
+
+
 #ifdef CUST_KNOCK_ON_GESTURE
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #ifdef CUST_KNOCK_ON_GESTURE
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#ifdef CUST_KNOCK_ON_GESTURE
+
 static bool touch_irq_wake = 0;
 static int touch_enable_irq_wake(struct lge_touch_data *ts){
 	int ret = 0;
@@ -815,14 +907,18 @@ static int touch_disable_irq_wake(struct lge_touch_data *ts){
 		TOUCH_INFO_MSG("touch_disable_irq_wake!!!\n");
 	return ret;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
+
 #endif
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #endif
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#endif
+
 
 void Send_Touch( unsigned int x, unsigned int y)
 {
@@ -1302,8 +1398,9 @@ static void safety_reset(struct lge_touch_data *ts)
 	}
 	release_all_ts_event(ts);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (ts->pdata->role->suspend_pwr == POWER_OFF) {
 		touch_power_cntl(ts, POWER_OFF);
 		touch_power_cntl(ts, POWER_ON);
@@ -1311,14 +1408,18 @@ static void safety_reset(struct lge_touch_data *ts)
 		TOUCH_INFO_MSG("SOFT RESET in safety_reset func");
 		touch_device_func->ic_ctrl(ts->client, IC_CTRL_RESET_CMD, 0);
 	} else {}
-=======
+
 	touch_power_cntl(ts, POWER_OFF);
 	touch_power_cntl(ts, POWER_ON);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	touch_power_cntl(ts, POWER_OFF);
 	touch_power_cntl(ts, POWER_ON);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	touch_power_cntl(ts, POWER_OFF);
+	touch_power_cntl(ts, POWER_ON);
+
 	msleep(ts->pdata->role->booting_delay);
 
 	if (ts->pdata->role->operation_mode)
@@ -1357,14 +1458,18 @@ static int touch_ic_init(struct lge_touch_data *ts)
 		goto err_out_retry;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
+
 #ifdef CUST_KNOCK_ON_GESTURE
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #ifdef CUST_KNOCK_ON_GESTURE
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#ifdef CUST_KNOCK_ON_GESTURE
+
 	if(touch_device_func->ic_ctrl) {
 		if(touch_device_func->ic_ctrl(ts->client, IC_CTRL_DOUBLE_TAP_WAKEUP_MODE, 0) < 0){
 			TOUCH_ERR_MSG("IC_CTRL_DOUBLE_TAP_WAKEUP_MODE handling fail\n");
@@ -1372,11 +1477,14 @@ static int touch_ic_init(struct lge_touch_data *ts)
 		}
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
 #if 0
 	r_mem = kzalloc(sizeof(char) * (1), GFP_KERNEL);
 	if (touch_i2c_read(ts->client, SET_NO_SLEEP_REG,(1), r_mem) < 0) {
@@ -1391,10 +1499,13 @@ static int touch_ic_init(struct lge_touch_data *ts)
 #endif
 #endif
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	/* Interrupt pin check after IC init - avoid Touch lockup */
 	if(ts->pdata->role->operation_mode == INTERRUPT_MODE){
 		ts->int_pin_state = gpio_get_value(ts->pdata->int_pin);
@@ -1406,8 +1517,9 @@ static int touch_ic_init(struct lge_touch_data *ts)
 			goto err_out_retry;
 		}
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 	if (ts->pdata->role->ghost_detection_enable) {
 		   /* force continuous mode after IC init  */
@@ -1424,9 +1536,11 @@ static int touch_ic_init(struct lge_touch_data *ts)
 		ghost_detection_count = 0;
 		do_gettimeofday(&t_ex_debug[EX_INIT]);
 	}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 		if (ts->pdata->role->ghost_detection_enable) {
 			   /* force continuous mode after IC init  */
 			if(touch_device_func->ic_ctrl){
@@ -1442,10 +1556,13 @@ static int touch_ic_init(struct lge_touch_data *ts)
 			ghost_detection_count = 0;
 			do_gettimeofday(&t_ex_debug[EX_INIT]);
 		}
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 	ts->gf_ctrl.count = 0;
 	ts->gf_ctrl.ghost_check_count = 0;
@@ -1630,19 +1747,25 @@ static int ghost_finger_solution(struct lge_touch_data *ts)
 			if(touch_device_func->ic_ctrl){
 				if(touch_device_func->ic_ctrl(ts->client, IC_CTRL_BASELINE, BASELINE_OPEN) < 0)
 					return -1;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
 #if 0
 				if(touch_device_func->ic_ctrl(ts->client, IC_CTRL_BASELINE, BASELINE_REBASE) < 0)
 					return -1;
 #endif
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 			}
 			if (unlikely(touch_debug_mask & DEBUG_GHOST))
 				TOUCH_INFO_MSG("ghost_stage_2: multi_finger. return to ghost_stage_1[0x%x]\n", ts->gf_ctrl.stage);
@@ -1689,21 +1812,27 @@ static int ghost_finger_solution(struct lge_touch_data *ts)
 	}
 	else if(ts->gf_ctrl.stage & GHOST_STAGE_4){
 		if(ts->ts_data.total_num == 0 && ts->ts_data.curr_button.state == 0 && ts->ts_data.palm == 0){
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
 #if 0
 			if(touch_device_func->ic_ctrl){
 				if (touch_device_func->ic_ctrl(ts->client, IC_CTRL_BASELINE, BASELINE_REBASE) < 0)
 					return -1;
 			}
 #endif
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 			ts->gf_ctrl.stage = GHOST_STAGE_CLEAR;
 			if (unlikely(touch_debug_mask & DEBUG_GHOST || touch_debug_mask & DEBUG_BASE_INFO))
 				TOUCH_INFO_MSG("ghost_stage_4: cleared[0x%x]\n", ts->gf_ctrl.stage);
@@ -1966,17 +2095,20 @@ static void touch_init_func(struct work_struct *work_init)
 
 static struct sys_device lge_touch_sys_device;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 char *touch_wakeup_gesture[2] = { "TOUCH_GESTURE_WAKEUP=WAKEUP", NULL };
 static void touch_gesture_wakeup_func(struct work_struct *work_gesture_wakeup)
 {
 	struct lge_touch_data *ts =
 		container_of(to_delayed_work(work_gesture_wakeup), struct lge_touch_data, work_gesture_wakeup);
 
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 #ifdef CUST_KNOCK_ON_GESTURE
 char *touch_wakeup_gesture[2] = { "TOUCH_GESTURE_WAKEUP=WAKEUP", NULL };
 static void touch_gesture_wakeup_func(struct work_struct *work_gesture_wakeup)
@@ -1986,16 +2118,20 @@ static void touch_gesture_wakeup_func(struct work_struct *work_gesture_wakeup)
 		container_of(to_delayed_work(work_gesture_wakeup), struct lge_touch_data, work_gesture_wakeup);
 
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	if (ts->fw_info.fw_upgrade.is_downloading == UNDER_DOWNLOADING){
 		TOUCH_INFO_MSG("touch_gesture_wakeup is not executed\n");
 		return;
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 	TOUCH_INFO_MSG("called touch_gesture_wakeup_func\n");
 	mutex_lock(&ts->irq_work_mutex);
@@ -2010,9 +2146,11 @@ static void touch_gesture_wakeup_func(struct work_struct *work_gesture_wakeup)
 
 	wake_lock_timeout(&touch_wake_lock, msecs_to_jiffies(3000));
 }
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	TOUCH_INFO_MSG("called touch_gesture_wakeup_func\n");
 	mutex_lock(&ts->irq_work_mutex);
 	mutex_lock(&i2c_suspend_lock);
@@ -2040,10 +2178,13 @@ static void touch_gesture_wakeup_func(struct work_struct *work_gesture_wakeup)
 
 }
 #endif
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 
 static void touch_lock_func(struct work_struct *work_touch_lock)
@@ -2242,20 +2383,25 @@ static void touch_work_func_a(struct work_struct *work)
 	u8 report_enable = 0;
 	int ret = 0;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	mutex_lock(&ts->irq_work_mutex);
 
 	if (ts->pdata->role->ghost_detection_enable) {
 		if(trigger_baseline == 2){
-=======
+
 	if (ts->pdata->role->ghost_detection_enable) {
 		if(trigger_baseline==2){
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	if (ts->pdata->role->ghost_detection_enable) {
 		if(trigger_baseline==2){
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	if (ts->pdata->role->ghost_detection_enable) {
+		if(trigger_baseline==2){
+
 			ret = ghost_detect_solution(ts);
 			trigger_baseline = 0;
 			touch_device_func->data(ts->client, &ts->ts_data);
@@ -2268,8 +2414,9 @@ static void touch_work_func_a(struct work_struct *work)
 		goto err_out_critical;
 	else if (ret == -EAGAIN)
 		goto out;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	else if (ret == -IGNORE_INTERRUPT) {
 		mutex_unlock(&ts->irq_work_mutex);
 		return;
@@ -2283,9 +2430,11 @@ static void touch_work_func_a(struct work_struct *work)
 		else if(ret == NEED_TO_INIT)
 			goto err_out_init;
 	}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 
 	else if (ret == -IGNORE_INTERRUPT)
 		return;
@@ -2298,10 +2447,13 @@ static void touch_work_func_a(struct work_struct *work)
 			else if(ret == NEED_TO_INIT)
 				goto err_out_init;
 		}
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 	if (ts->pdata->role->palm_detect_mode && (ts->ts_data.palm || ts->ts_data.prev_palm)){
 		release_all_ts_event(ts);
@@ -2736,8 +2888,9 @@ static void touch_fw_upgrade_func(struct work_struct *work_fw_upgrade)
 	struct lge_touch_data *ts =
 			container_of(work_fw_upgrade, struct lge_touch_data, work_fw_upgrade);
 	u8	saved_state = ts->curr_pwr_state;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	bool old_irq_mask = true;
 
     /*Disable IRQ before touch firmware upgrade */
@@ -2747,9 +2900,11 @@ static void touch_fw_upgrade_func(struct work_struct *work_fw_upgrade)
         TOUCH_INFO_MSG("START fw_upgrade_func, old_irq_mask = %s, touch_irq_maask = %s",old_irq_mask?"TRUE":"FALSE",touch_irq_mask?"TRUE":"FALSE");
 
     touch_disable_irq(ts->client->irq);
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
         bool old_irq_mask = true;
         
         /*Disable IRQ before touch firmware upgrade */
@@ -2759,10 +2914,13 @@ static void touch_fw_upgrade_func(struct work_struct *work_fw_upgrade)
             TOUCH_INFO_MSG("START fw_upgrade_func, old_irq_mask = %s, touch_irq_maask = %s ",old_irq_mask?"TRUE":"FALSE",touch_irq_mask?"TRUE":"FALSE");
         
         touch_disable_irq(ts->client->irq);
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
     
 	if (unlikely(touch_debug_mask & DEBUG_TRACE))
 		TOUCH_DEBUG_MSG("\n");
@@ -2778,21 +2936,27 @@ static void touch_fw_upgrade_func(struct work_struct *work_fw_upgrade)
 		else
 			hrtimer_cancel(&ts->timer);
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (ts->pdata->role->ghost_detection_enable) {
 		hrtimer_cancel(&hr_touch_trigger_timer);
 	}
-=======
+
 		if (ts->pdata->role->ghost_detection_enable) {
 			hrtimer_cancel(&hr_touch_trigger_timer);
 		}
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		if (ts->pdata->role->ghost_detection_enable) {
 			hrtimer_cancel(&hr_touch_trigger_timer);
 		}
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		if (ts->pdata->role->ghost_detection_enable) {
+			hrtimer_cancel(&hr_touch_trigger_timer);
+		}
+
 
 	if (ts->curr_pwr_state == POWER_OFF) {
 		touch_power_cntl(ts, POWER_ON);
@@ -2860,8 +3024,9 @@ err_out:
 	touch_ic_init(ts);
 
 out:
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 	memset(&ts->fw_info.fw_upgrade, 0, sizeof(ts->fw_info.fw_upgrade));
 	/*Enable IRQ after touch firmware upgrade if IRQ has been enabled. */
@@ -2869,9 +3034,11 @@ out:
         touch_enable_irq(ts->client->irq);
         TOUCH_INFO_MSG("FW Upgrade finish and enable irq again\n");
     }
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 #if 0 //
 		/* Specific device resolution */
 		if (touch_device_func->resolution) {
@@ -2888,10 +3055,13 @@ out:
             touch_enable_irq(ts->client->irq);
             TOUCH_INFO_MSG("FW Upgrade finish and enable irq again ");
         }
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 	return;
 }
@@ -2931,43 +3101,55 @@ static irqreturn_t touch_thread_irq_handler(int irq, void *dev_id)
 #ifdef LGE_TOUCH_TIME_DEBUG
 	do_gettimeofday(&t_debug[TIME_THREAD_ISR_START]);
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 	if(ts_suspend && touch_gesture_enable){
 		TOUCH_INFO_MSG("touch_thread_irq_handler : %d %d\n", ts_suspend, touch_gesture_enable);
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 #ifdef CUST_KNOCK_ON_GESTURE
 
 	if(ts_suspend && touch_gesture_enable){
 		TOUCH_INFO_MSG("touch_thread_irq_handler : %d %d\n", ts_suspend, touch_gesture_enable);
 		//wake_lock_timeout(&touch_wake_lock, msecs_to_jiffies(1000));
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 		TOUCH_INFO_MSG("gesture wakeup\n");
 		queue_delayed_work(touch_wq, &ts->work_gesture_wakeup,msecs_to_jiffies(0));
 		return IRQ_HANDLED;
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	queue_work(touch_wq, &ts->work);
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 
 #endif
 
 	//disable_irq_nosync(ts->client->irq);
 	queue_work(touch_wq, &ts->work);
 	//touch_enable_irq(ts->client->irq);
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 	return IRQ_HANDLED;
 }
@@ -3199,14 +3381,18 @@ static ssize_t store_fw_upgrade(struct lge_touch_data *ts, const char *buf, size
 
 	sscanf(buf, "%d %s", &value, path);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
+
 	printk(KERN_INFO "\n");
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	printk(KERN_INFO "\n");
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	printk(KERN_INFO "\n");
+
 	TOUCH_INFO_MSG("Firmware image path: %s\n", path[0] != 0 ? path : "Internal");
 
 	if (value) {
@@ -3215,17 +3401,22 @@ static ssize_t store_fw_upgrade(struct lge_touch_data *ts, const char *buf, size
 			while(ts->fw_info.fw_upgrade.is_downloading);
 
 			msleep(ts->pdata->role->booting_delay * 2);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			TOUCH_INFO_MSG("Firmware image upgrade: No.%d\n", repeat+1);
-=======
+
 			printk(KERN_INFO "\n");
 			TOUCH_INFO_MSG("Firmware image upgrade: No.%d", repeat+1);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 			printk(KERN_INFO "\n");
 			TOUCH_INFO_MSG("Firmware image upgrade: No.%d", repeat+1);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+			printk(KERN_INFO "\n");
+			TOUCH_INFO_MSG("Firmware image upgrade: No.%d", repeat+1);
+
 
 			/* for n-th repeat test - because ts->fw_info.fw_upgrade is setted 0 after FW upgrade */
 			if(path[0] == 0)
@@ -3233,15 +3424,19 @@ static ssize_t store_fw_upgrade(struct lge_touch_data *ts, const char *buf, size
 			else
 				ts->fw_info.fw_upgrade.fw_path = (char *) path;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			TOUCH_INFO_MSG("Firmware image path (force update): %s\n", ts->fw_info.fw_upgrade.fw_path);
-=======
+
 			TOUCH_INFO_MSG("Firmware image path (force update): %s", ts->fw_info.fw_upgrade.fw_path);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 			TOUCH_INFO_MSG("Firmware image path (force update): %s", ts->fw_info.fw_upgrade.fw_path);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+			TOUCH_INFO_MSG("Firmware image path (force update): %s", ts->fw_info.fw_upgrade.fw_path);
+
 
 			/* set downloading flag for sync for n-th test */
 			ts->fw_info.fw_upgrade.is_downloading = UNDER_DOWNLOADING;
@@ -3336,8 +3531,9 @@ static ssize_t store_ts_reset(struct lge_touch_data *ts, const char *buf, size_t
 
 	if (saved_state == POWER_ON || saved_state == POWER_WAKE) {
 		if (!strncmp(string, "soft", 4)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			if (touch_device_func->ic_ctrl) {
 				TOUCH_INFO_MSG("SOFT RESET");
 				touch_device_func->ic_ctrl(ts->client, IC_CTRL_RESET_CMD, 0);
@@ -3348,9 +3544,11 @@ static ssize_t store_ts_reset(struct lge_touch_data *ts, const char *buf, size_t
 		} else if (!strncmp(string, "pin", 3)) {
 			if (gpio_is_valid(ts->pdata->reset_pin)) {
 				TOUCH_INFO_MSG("PIN RESET");
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 			if(touch_device_func->ic_ctrl)
                         {
                                 TOUCH_INFO_MSG("SOFT RESET");
@@ -3363,25 +3561,32 @@ static ssize_t store_ts_reset(struct lge_touch_data *ts, const char *buf, size_t
 		} else if (!strncmp(string, "pin", 3)) {
 			if(gpio_is_valid(ts->pdata->reset_pin)){
                                 TOUCH_INFO_MSG("PIN RESET");
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 				gpio_set_value(ts->pdata->reset_pin, 0);
 				msleep(ts->pdata->role->reset_delay);
 				gpio_set_value(ts->pdata->reset_pin, 1);
 			} else
 				TOUCH_INFO_MSG("There is no reset pin\n");
 		} else if (!strncmp(string, "vdd", 3)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			TOUCH_INFO_MSG("VDD RESET");
-=======
+
                         TOUCH_INFO_MSG("VDD RESET");
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
                         TOUCH_INFO_MSG("VDD RESET");
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+                        TOUCH_INFO_MSG("VDD RESET");
+
 			touch_power_cntl(ts, POWER_OFF);
 			touch_power_cntl(ts, POWER_ON);
 		}
@@ -3407,15 +3612,19 @@ static ssize_t store_ts_reset(struct lge_touch_data *ts, const char *buf, size_t
 		mutex_unlock(&ts->irq_work_mutex);
 	else
 		hrtimer_start(&ts->timer,
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			ktime_set(0, ts->pdata->role->report_period), HRTIMER_MODE_REL);
-=======
+
 				ktime_set(0, ts->pdata->role->report_period), HRTIMER_MODE_REL);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 				ktime_set(0, ts->pdata->role->report_period), HRTIMER_MODE_REL);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+				ktime_set(0, ts->pdata->role->report_period), HRTIMER_MODE_REL);
+
 
 	if (saved_state == POWER_ON || saved_state == POWER_WAKE)
 		touch_ic_init(ts);
@@ -3426,14 +3635,18 @@ static ssize_t store_ts_reset(struct lge_touch_data *ts, const char *buf, size_t
  *
  * User can see any register of touch_IC
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
+
 #if 1//def CUST_G_TOUCH
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #if 1//def CUST_G_TOUCH
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#if 1//def CUST_G_TOUCH
+
 static ssize_t ic_register_ctrl(struct lge_touch_data *ts, const char *buf, size_t count)
 {
 	unsigned char string[6];
@@ -3442,21 +3655,26 @@ static ssize_t ic_register_ctrl(struct lge_touch_data *ts, const char *buf, size
 	int value = 0;
 	int ret = 0;
 	u32 write_data;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	int i = 0;
 	int offset = 0;
 	unsigned char *r_mem = NULL;
 
 	sscanf(buf, "%s %d %d %d %d", string, &page, &reg, &value, &offset);
-=======
+
 
 	sscanf(buf, "%s %d %d %d", string, &page, &reg, &value);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 
 	sscanf(buf, "%s %d %d %d", string, &page, &reg, &value);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+	sscanf(buf, "%s %d %d %d", string, &page, &reg, &value);
+
 
 	if(touch_device_func->ic_ctrl) {
 		if(ts->curr_pwr_state == POWER_ON || ts->curr_pwr_state == POWER_WAKE){
@@ -3479,8 +3697,9 @@ static ssize_t ic_register_ctrl(struct lge_touch_data *ts, const char *buf, size
 				} else {
 					TOUCH_INFO_MSG("cannot write register[0x%02X%02X]\n", page, reg);
 				}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 			} else if(!strncmp(string, "rall", 4)) {
 				r_mem = kzalloc(sizeof(char) * value, GFP_KERNEL);
 				if (r_mem == NULL) {
@@ -3526,9 +3745,11 @@ static ssize_t ic_register_ctrl(struct lge_touch_data *ts, const char *buf, size
 				TOUCH_INFO_MSG(" - value [write] : set value into reg_num\n");
 				TOUCH_INFO_MSG("Usage: echo [read | rall | write | wall] reg_num value offset > ic_rw\n");
 				TOUCH_INFO_MSG(" - value [rall] : number of register starting form reg_num\n");
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 			} else{
 				TOUCH_INFO_MSG("Usage: echo [read | write] page_num reg_num value > ic_rw\n");
 				TOUCH_INFO_MSG(" - page_num : register page\n");
@@ -3580,10 +3801,13 @@ static ssize_t ic_register_ctrl(struct lge_touch_data *ts, const char *buf, size
 				TOUCH_INFO_MSG(" - reg_num : register address\n");
 				TOUCH_INFO_MSG(" - value [read] : number of register starting form reg_num\n");
 				TOUCH_INFO_MSG(" - value [write] : set value into reg_num\n");
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 			}
 		}
 		else
@@ -3593,14 +3817,18 @@ static ssize_t ic_register_ctrl(struct lge_touch_data *ts, const char *buf, size
 
 	return count;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
+
 #endif
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #endif
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#endif
+
 
 /* store_keyguard_info
  *
@@ -3661,29 +3889,36 @@ static ssize_t show_virtual_key(struct lge_touch_data *ts, char *buf)
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
+
 #ifdef CUST_KNOCK_ON_GESTURE
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #ifdef CUST_KNOCK_ON_GESTURE
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#ifdef CUST_KNOCK_ON_GESTURE
+
 static ssize_t store_touch_gesture(struct lge_touch_data *ts, const char *buf, size_t count)
 {
 	int value;
 	sscanf(buf, "%d", &value);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	mutex_lock(&ts->irq_work_mutex);
 	touch_gesture_enable = value;
 	mutex_unlock(&ts->irq_work_mutex);
 	return count;
 }
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	if (touch_debug_mask & DEBUG_BASE_INFO){
 		TOUCH_INFO_MSG("touch gesture = %x\n", touch_gesture_enable);
 	}
@@ -3719,10 +3954,13 @@ no_action:
 
 }
 #endif
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 static ssize_t store_jitter_solution(struct lge_touch_data *ts, const char *buf, size_t count)
 {
@@ -3830,19 +4068,25 @@ static ssize_t store_debouncing_count(struct lge_touch_data *ts, const char *buf
 	int ret = 0;
 	int debouncing_count = 0;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	ret = sscanf(buf, "%d", &debouncing_count);
-=======
+
 	ret = sscanf(buf, "%d",
 				&debouncing_count
 				);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	ret = sscanf(buf, "%d",
 				&debouncing_count
 				);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	ret = sscanf(buf, "%d",
+				&debouncing_count
+				);
+
 
 	ts->pdata->role->ta_debouncing_count = debouncing_count;
 	return count;
@@ -3853,19 +4097,25 @@ static ssize_t store_debouncing_finger_num(struct lge_touch_data *ts, const char
 	int ret = 0;
 	int debouncing_finger_num = 0;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	ret = sscanf(buf, "%d", &debouncing_finger_num);
-=======
+
 	ret = sscanf(buf, "%d",
 				&debouncing_finger_num
 				);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	ret = sscanf(buf, "%d",
 				&debouncing_finger_num
 				);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	ret = sscanf(buf, "%d",
+				&debouncing_finger_num
+				);
+
 
 	ts->pdata->role->ta_debouncing_finger_num = debouncing_finger_num;
 	return count;
@@ -3876,19 +4126,25 @@ static ssize_t store_ghost_detection_enable(struct lge_touch_data *ts, const cha
 	int ret = 0;
 	int ghost_detection_enable = 0;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	ret = sscanf(buf, "%d", &ghost_detection_enable);
-=======
+
 	ret = sscanf(buf, "%d",
 				&ghost_detection_enable
 				);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	ret = sscanf(buf, "%d",
 				&ghost_detection_enable
 				);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	ret = sscanf(buf, "%d",
+				&ghost_detection_enable
+				);
+
 
 	ts->pdata->role->ghost_detection_enable = ghost_detection_enable;
 	return count;
@@ -3933,8 +4189,9 @@ static ssize_t show_chstatus(struct lge_touch_data *ts, char *buf)
 	return ret;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* send_uevent
  *
  * It will be used to send u-event to Android-framework.
@@ -4099,6 +4356,8 @@ static ssize_t store_lpwg_notify(struct lge_touch_data *ts, const char *buf, siz
     return count;
 }
 
+
+
 static ssize_t store_global_access_pixel(struct lge_touch_data *ts, const char *buf, size_t count)
 {
 	int ret = 0;
@@ -4106,12 +4365,20 @@ static ssize_t store_global_access_pixel(struct lge_touch_data *ts, const char *
 
 	ret = sscanf(buf, "%d", &pixel);
 	if(ret < 0){
+
 		TOUCH_ERR_MSG("Error to write pixel data.....\n");
+
+		TOUCH_ERR_MSG("Error to write pixel data.....");
+
 	}
 
 	ts->pdata->global_access_pixel = pixel;
 
+
 	TOUCH_INFO_MSG("SET global_access_pixel = %d\n",ts->pdata->global_access_pixel);
+
+	TOUCH_INFO_MSG("SET global_access_pixel = %d",ts->pdata->global_access_pixel);
+
 	return count;
 }
 
@@ -4120,7 +4387,11 @@ static ssize_t show_global_access_pixel(struct lge_touch_data *ts, char *buf)
 	int ret = 0;
 
 	ret = sprintf(buf, "%d\n", ts->pdata->global_access_pixel);
+
 	TOUCH_INFO_MSG("Get global access pixel = %d\n", ts->pdata->global_access_pixel);
+
+	TOUCH_INFO_MSG("Get global access pixel = %d ", ts->pdata->global_access_pixel);
+
 	return ret;
 }
 
@@ -4135,10 +4406,11 @@ static LGE_TOUCH_ATTR(reset, S_IRUGO | S_IWUSR, NULL, store_ts_reset);
 static LGE_TOUCH_ATTR(ic_rw, S_IRUGO | S_IWUSR, NULL, ic_register_ctrl);
 static LGE_TOUCH_ATTR(keyguard, S_IRUGO | S_IWUSR, NULL, store_keyguard_info);
 static LGE_TOUCH_ATTR(virtualkeys, S_IRUGO | S_IWUSR, show_virtual_key, NULL);
+
 static LGE_TOUCH_ATTR(touch_gesture, S_IRUGO | S_IWUSR, NULL, store_touch_gesture);
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
 
 static ssize_t store_global_access_pixel(struct lge_touch_data *ts, const char *buf, size_t count)
 {
@@ -4179,10 +4451,10 @@ static LGE_TOUCH_ATTR(virtualkeys, S_IRUGO | S_IWUSR, show_virtual_key, NULL);
 #ifdef CUST_KNOCK_ON_GESTURE
 static LGE_TOUCH_ATTR(touch_gesture, S_IRUGO | S_IWUSR, NULL, store_touch_gesture);
 #endif
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
 static LGE_TOUCH_ATTR(jitter, S_IRUGO | S_IWUSR, NULL, store_jitter_solution);
 static LGE_TOUCH_ATTR(accuracy, S_IRUGO | S_IWUSR, NULL, store_accuracy_solution);
 static LGE_TOUCH_ATTR(knock_on_type, S_IRUGO | S_IWUSR, show_knock_on_type, NULL);
@@ -4197,16 +4469,36 @@ static LGE_TOUCH_ATTR(delta, S_IRUGO | S_IWUSR, show_delta, NULL);
 static LGE_TOUCH_ATTR(chstatus, S_IRUGO | S_IWUSR, show_chstatus, NULL);
 static LGE_TOUCH_ATTR(power_control, S_IRUGO | S_IWUSR, NULL, power_control_store);
 static LGE_TOUCH_ATTR(global_access_pixel, S_IRUGO | S_IWUSR, show_global_access_pixel, store_global_access_pixel);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 static LGE_TOUCH_ATTR(lpwg_data, S_IRUGO | S_IWUSR, show_lpwg_data, store_lpwg_data);
 static LGE_TOUCH_ATTR(lpwg_notify, S_IRUGO | S_IWUSR, NULL, store_lpwg_notify);
-=======
 
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
 
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+#ifdef CUST_KNOCK_ON_GESTURE
+static LGE_TOUCH_ATTR(touch_gesture, S_IRUGO | S_IWUSR, NULL, store_touch_gesture);
+#endif
+static LGE_TOUCH_ATTR(jitter, S_IRUGO | S_IWUSR, NULL, store_jitter_solution);
+static LGE_TOUCH_ATTR(accuracy, S_IRUGO | S_IWUSR, NULL, store_accuracy_solution);
+static LGE_TOUCH_ATTR(knock_on_type, S_IRUGO | S_IWUSR, show_knock_on_type, NULL);
+static LGE_TOUCH_ATTR(sd, S_IRUGO | S_IWUSR, show_sd, NULL);
+static LGE_TOUCH_ATTR(sd_status, S_IRUGO | S_IWUSR, show_sd_status, NULL);
+static LGE_TOUCH_ATTR(rawdata, S_IRUGO | S_IWUSR, show_rawdata, NULL);
+static LGE_TOUCH_ATTR(report_mode, S_IRUGO | S_IWUSR, NULL, store_report_mode);
+static LGE_TOUCH_ATTR(ta_debouncing_count, S_IRUGO | S_IWUSR, NULL, store_debouncing_count);
+static LGE_TOUCH_ATTR(ta_debouncing_finger_num, S_IRUGO | S_IWUSR, NULL, store_debouncing_finger_num);
+static LGE_TOUCH_ATTR(ghost_detection_enable, S_IRUGO | S_IWUSR, NULL, store_ghost_detection_enable);
+static LGE_TOUCH_ATTR(delta, S_IRUGO | S_IWUSR, show_delta, NULL);
+static LGE_TOUCH_ATTR(chstatus, S_IRUGO | S_IWUSR, show_chstatus, NULL);
+static LGE_TOUCH_ATTR(power_control, S_IRUGO | S_IWUSR, NULL, power_control_store);
+static LGE_TOUCH_ATTR(global_access_pixel, S_IRUGO | S_IWUSR, show_global_access_pixel, store_global_access_pixel);
+
+
 
 static struct attribute *lge_touch_attribute_list[] = {
 	&lge_touch_attr_platform_data.attr,
@@ -4217,32 +4509,42 @@ static struct attribute *lge_touch_attribute_list[] = {
 	&lge_touch_attr_reset.attr,
 	&lge_touch_attr_ic_rw.attr,
 	&lge_touch_attr_keyguard.attr,
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	&lge_touch_attr_touch_gesture.attr,
-=======
+
 	#ifdef CUST_KNOCK_ON_GESTURE
 	&lge_touch_attr_touch_gesture.attr,
 	#endif
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	#ifdef CUST_KNOCK_ON_GESTURE
 	&lge_touch_attr_touch_gesture.attr,
 	#endif
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	#ifdef CUST_KNOCK_ON_GESTURE
+	&lge_touch_attr_touch_gesture.attr,
+	#endif
+
 	&lge_touch_attr_virtualkeys.attr,
 	&lge_touch_attr_jitter.attr,
 	&lge_touch_attr_accuracy.attr,
 	&lge_touch_attr_knock_on_type.attr,
 	&lge_touch_attr_power_control.attr,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
 
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
+
+
 	&lge_touch_attr_sd.attr,
 	&lge_touch_attr_sd_status.attr,
 	&lge_touch_attr_rawdata.attr,
@@ -4253,14 +4555,17 @@ static struct attribute *lge_touch_attribute_list[] = {
 	&lge_touch_attr_delta.attr,
 	&lge_touch_attr_chstatus.attr,
 	&lge_touch_attr_global_access_pixel.attr,
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	&lge_touch_attr_lpwg_data.attr,
 	&lge_touch_attr_lpwg_notify.attr,
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	NULL,
 };
 
@@ -4287,15 +4592,19 @@ static ssize_t lge_touch_attr_store(struct kobject *lge_touch_kobj, struct attri
 			      const char *buf, size_t count)
 {
 	struct lge_touch_data *ts =
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		container_of(lge_touch_kobj, struct lge_touch_data, lge_touch_kobj);
-=======
+
 			container_of(lge_touch_kobj, struct lge_touch_data, lge_touch_kobj);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 			container_of(lge_touch_kobj, struct lge_touch_data, lge_touch_kobj);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+			container_of(lge_touch_kobj, struct lge_touch_data, lge_touch_kobj);
+
 	struct lge_touch_attribute *lge_touch_priv =
 		container_of(attr, struct lge_touch_attribute, attr);
 	ssize_t ret = 0;
@@ -4359,15 +4668,19 @@ int synaptics_power_on(int on)
 			}
 		}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		rc = regulator_set_voltage(vreg_l28, 2850000, 2850000);
-=======
+
 			rc = regulator_set_voltage(vreg_l28, 2850000, 2850000);
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 			rc = regulator_set_voltage(vreg_l28, 2850000, 2850000);
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+			rc = regulator_set_voltage(vreg_l28, 2850000, 2850000);
+
 
 		if (rc < 0) {
 			printk(KERN_INFO "[Touch D] %s: cannot control regulator:%d\n",
@@ -4403,28 +4716,36 @@ static int synaptics_parse_dt(struct device *dev, struct touch_platform_data *pd
 	const char *temp_string = node->name;
 	const char *reg_string = node->name;
 	u32 temp_val;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	u32 temp_array[16];
-=======
+
 	u32 temp_array[10];
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	u32 temp_array[10];
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	u32 temp_array[10];
+
 
 	/* reset, irq gpio info */
 	if (node == NULL)
 		return -ENODEV;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
+
 	//pdata->reset_pin = 0;
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 	//pdata->reset_pin = 0;
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+	//pdata->reset_pin = 0;
+
 	pdata->reset_pin = of_get_named_gpio_flags(node, "synaptics,reset-gpio", 0, NULL);
 	pdata->int_pin = of_get_named_gpio_flags(node, "synaptics,irq-gpio", 0, NULL);
 
@@ -4437,8 +4758,9 @@ static int synaptics_parse_dt(struct device *dev, struct touch_platform_data *pd
 	}
 	len = strlen(temp_string);
 	memcpy(pdata->maker, temp_string, len);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	rc = of_property_read_u32_array(node, "synaptics,fw_version_info", temp_array, FW_VER_INFO_NUM-1);
 	if (rc) {
 		TOUCH_DEBUG_MSG( "Looking up %s property in node %02X %02X %02X failed",
@@ -4473,9 +4795,11 @@ static int synaptics_parse_dt(struct device *dev, struct touch_platform_data *pd
 		}
 	}
 
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	rc = of_property_read_u32_array(node, "synaptics,fw_version_info", pdata->fw_version, FW_VER_INFO_NUM-1);
 	if(rc){
 		TOUCH_DEBUG_MSG( "Looking up %s property in node %02X %02X %02X failed",
@@ -4498,10 +4822,13 @@ static int synaptics_parse_dt(struct device *dev, struct touch_platform_data *pd
 	else
 		TOUCH_DEBUG_MSG("fw_image: %s",pdata->inbuilt_fw_name);
 	#endif
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	rc = of_property_read_u32(node, "lge,knock_on_type",  &temp_val);
 	if (rc) {
 		TOUCH_DEBUG_MSG( "Unable to read knock_on_type - set as 0\n" );
@@ -4524,8 +4851,9 @@ static int synaptics_parse_dt(struct device *dev, struct touch_platform_data *pd
 	if (!caps_info)
 		return -ENOMEM;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	rc = of_property_count_strings(node, "synaptics,panel_spec");
 	TOUCH_INFO_MSG("panel_spec, rc = %d ", rc);
 	if (rc > 1) {
@@ -4544,9 +4872,11 @@ static int synaptics_parse_dt(struct device *dev, struct touch_platform_data *pd
 			TOUCH_DEBUG_MSG("panel_spec: %s",pdata->panel_spec);
 		}
 	}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	rc = of_property_read_string(node, "synaptics,panel_spec",  &pdata->panel_spec);
 		if (rc) {
 			TOUCH_DEBUG_MSG( "Looking up %s property in node %s failed",
@@ -4555,10 +4885,13 @@ static int synaptics_parse_dt(struct device *dev, struct touch_platform_data *pd
 		else {
 			TOUCH_DEBUG_MSG("panel_spec: %s",pdata->panel_spec);
 		}
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 	/*global_access_pixel parsing*/
 	rc = of_property_read_u32(node, "synaptics,global_access_pixel", &pdata->global_access_pixel);
@@ -4569,9 +4902,10 @@ static int synaptics_parse_dt(struct device *dev, struct touch_platform_data *pd
 	else {
 		TOUCH_DEBUG_MSG("global_access_pixel: %d",pdata->global_access_pixel);
 	}
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+
+
+
 	pdata->caps = caps_info;	
 	for_each_child_of_node(node, pp) {
 		rc = of_property_read_u32(pp, "panel_type", &temp_val);
@@ -4871,12 +5205,16 @@ static int synaptics_parse_dt(struct device *dev, struct touch_platform_data *pd
 		}
 
 		role_info++;
-=======
-
-=======
 
 
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
 
 	pdata->caps = caps_info;	
 	for_each_child_of_node(node, pp) {
@@ -5163,10 +5501,13 @@ static int synaptics_parse_dt(struct device *dev, struct touch_platform_data *pd
 				}
 
 				role_info++;
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 	/* pwr */
 		pdata->num_pwr = 0;
@@ -5183,8 +5524,9 @@ static int synaptics_parse_dt(struct device *dev, struct touch_platform_data *pd
 
 		pdata->pwr = pwr_info;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 		for_each_child_of_node(node, pp) {
 
 			rc = of_property_read_u32(pp, "use_regulator", &temp_val);
@@ -5247,9 +5589,11 @@ static int synaptics_parse_dt(struct device *dev, struct touch_platform_data *pd
 
 			pwr_info++;
 		}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 
 		for_each_child_of_node(node, pp) {
 
@@ -5313,10 +5657,13 @@ static int synaptics_parse_dt(struct device *dev, struct touch_platform_data *pd
 
 		pwr_info++;
 			}
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 	return 0;
 
@@ -5330,8 +5677,9 @@ static int touch_fb_suspend(struct device *device)
 	if (unlikely(touch_debug_mask & DEBUG_TRACE))
 		TOUCH_DEBUG_MSG("\n");
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if(!ts_suspend) {
 		if (ts->fw_info.fw_upgrade.is_downloading == UNDER_DOWNLOADING){
 			TOUCH_INFO_MSG("touch_suspend is not executed\n");
@@ -5373,9 +5721,11 @@ static int touch_fb_suspend(struct device *device)
 
 		mutex_unlock(&ts->irq_work_mutex);
 	}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	if (ts->fw_info.fw_upgrade.is_downloading == UNDER_DOWNLOADING){
 		TOUCH_INFO_MSG("touch_suspend is not executed\n");
 		return 0;
@@ -5414,10 +5764,13 @@ static int touch_fb_suspend(struct device *device)
 
 	mutex_unlock(&ts->irq_work_mutex);
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	return 0;
 }
 
@@ -5428,8 +5781,9 @@ static int touch_fb_resume(struct device *device)
 
 	if (unlikely(touch_debug_mask & DEBUG_TRACE))
 		TOUCH_DEBUG_MSG("\n");
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	mutex_lock(&ts->irq_work_mutex);
 
 	if(ts_suspend) {
@@ -5471,9 +5825,11 @@ static int touch_fb_resume(struct device *device)
 failed_out:
 	mutex_unlock(&ts->irq_work_mutex);
 	double_tap_enabled = 0;
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 
 	mutex_lock(&ts->irq_work_mutex);
 	if (ts->fw_info.fw_upgrade.is_downloading == UNDER_DOWNLOADING){
@@ -5519,10 +5875,13 @@ failed_out:
 failed_out:
 	mutex_unlock(&ts->irq_work_mutex);
         double_tap_enabled = 0;
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	return ret;
 }
 #endif
@@ -5552,24 +5911,30 @@ static void touch_double_tap_wakeup_enable(struct lge_touch_data *ts)
 
 	TOUCH_INFO_MSG("called touch_double_tap_wakeup_enable\n");
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
         double_tap_enabled = 1;
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
 	if (touch_enable_irq_wake(ts) != 0){
 
 		TOUCH_INFO_MSG("enable_irq_wake failed\n");
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 	touch_enable_irq(ts->client->irq);
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	if(touch_device_func->ic_ctrl) {
 		if(touch_device_func->ic_ctrl(ts->client, IC_CTRL_DOUBLE_TAP_WAKEUP_MODE, 1) < 0){
 			TOUCH_ERR_MSG("IC_CTRL_DOUBLE_TAP_WAKEUP_MODE handling fail\n");
@@ -5582,10 +5947,13 @@ static void touch_double_tap_wakeup_enable(struct lge_touch_data *ts)
 	}
 	
         touch_enable_irq(ts->client->irq);
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	TOUCH_INFO_MSG("%s : enable_irq !!\n", __func__);
 
 }
@@ -5600,21 +5968,27 @@ static int touch_probe(struct i2c_client *client, const struct i2c_device_id *id
 	int ret = 0;
 	int one_sec = 0;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	wake_lock_init(&touch_wake_lock, WAKE_LOCK_SUSPEND, "touch_irq");
 	mutex_init(&i2c_suspend_lock);
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 #ifdef CUST_KNOCK_ON_GESTURE
 	wake_lock_init(&touch_wake_lock, WAKE_LOCK_SUSPEND, "touch_irq");
 	mutex_init(&i2c_suspend_lock);
 #endif
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 	if (unlikely(touch_debug_mask & DEBUG_TRACE))
 		TOUCH_DEBUG_MSG("\n");
@@ -5736,21 +6110,27 @@ static int touch_probe(struct i2c_client *client, const struct i2c_device_id *id
 	INIT_DELAYED_WORK(&ts->work_init, touch_init_func);
 	INIT_WORK(&ts->work_fw_upgrade, touch_fw_upgrade_func);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 	INIT_DELAYED_WORK(&ts->work_gesture_wakeup, touch_gesture_wakeup_func);
 
-=======
+
 #ifdef CUST_KNOCK_ON_GESTURE
 	INIT_DELAYED_WORK(&ts->work_gesture_wakeup, touch_gesture_wakeup_func);
 #endif
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #ifdef CUST_KNOCK_ON_GESTURE
 	INIT_DELAYED_WORK(&ts->work_gesture_wakeup, touch_gesture_wakeup_func);
 #endif
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#ifdef CUST_KNOCK_ON_GESTURE
+	INIT_DELAYED_WORK(&ts->work_gesture_wakeup, touch_gesture_wakeup_func);
+#endif
+
 	/* input dev setting */
 	ts->input_dev = input_allocate_device();
 	if (ts->input_dev == NULL) {
@@ -5797,14 +6177,18 @@ static int touch_probe(struct i2c_client *client, const struct i2c_device_id *id
 	input_mt_init_slots(ts->input_dev, ts->pdata->caps->max_id);
 #endif
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
 
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
+
+
 	/* interrupt mode */
 	if (ts->pdata->role->operation_mode) {
 		ret = gpio_request(ts->pdata->int_pin, "touch_int");
@@ -5830,8 +6214,9 @@ static int touch_probe(struct i2c_client *client, const struct i2c_device_id *id
 		hrtimer_start(&ts->timer, ktime_set(0, ts->pdata->role->report_period), HRTIMER_MODE_REL);
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (ts->pdata->role->ghost_detection_enable) {
 	   hrtimer_init(&hr_touch_trigger_timer, CLOCK_MONOTONIC, HRTIMER_MODE_REL);
 	   hr_touch_trigger_timer.function = touch_trigger_timer_handler;
@@ -5841,9 +6226,11 @@ static int touch_probe(struct i2c_client *client, const struct i2c_device_id *id
 
 	mutex_init(&ts->irq_work_mutex);
 
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 		if (ts->pdata->role->ghost_detection_enable) {
 		   hrtimer_init(&hr_touch_trigger_timer, CLOCK_MONOTONIC, HRTIMER_MODE_REL);
 		   hr_touch_trigger_timer.function = touch_trigger_timer_handler;
@@ -5853,31 +6240,40 @@ static int touch_probe(struct i2c_client *client, const struct i2c_device_id *id
 #ifdef CUST_KNOCK_ON_GESTURE
 	mutex_init(&ts->irq_work_mutex);
 #endif
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 	/* Specific device initialization */
 	touch_ic_init(ts);
 
 	/* Firmware Upgrade Check*/
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (touch_device_func->fw_upgrade) {
 		queue_work(touch_wq, &ts->work_fw_upgrade);
 	}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 	#if 1
 	if (touch_device_func->fw_upgrade) {
 		queue_work(touch_wq, &ts->work_fw_upgrade);
 	}
 	#endif
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 
 	ret = input_register_device(ts->input_dev);
 	if (ret < 0) {
@@ -6002,41 +6398,53 @@ static int touch_remove(struct i2c_client *client)
 	else
 		hrtimer_cancel(&ts->timer);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (ts->pdata->role->ghost_detection_enable) {
 		hrtimer_cancel(&hr_touch_trigger_timer);
 	}
-=======
+
 		if (ts->pdata->role->ghost_detection_enable) {
 			hrtimer_cancel(&hr_touch_trigger_timer);
 		}
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		if (ts->pdata->role->ghost_detection_enable) {
 			hrtimer_cancel(&hr_touch_trigger_timer);
 		}
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		if (ts->pdata->role->ghost_detection_enable) {
+			hrtimer_cancel(&hr_touch_trigger_timer);
+		}
+
 
 	input_unregister_device(ts->input_dev);
 
 	mutex_destroy(&ts->irq_work_mutex);
 	mutex_destroy(&i2c_suspend_lock);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 	wake_lock_destroy(&touch_wake_lock);
 
-=======
+
 #ifdef CUST_KNOCK_ON_GESTURE
 	wake_lock_destroy(&touch_wake_lock);
 #endif
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 #ifdef CUST_KNOCK_ON_GESTURE
 	wake_lock_destroy(&touch_wake_lock);
 #endif
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+#ifdef CUST_KNOCK_ON_GESTURE
+	wake_lock_destroy(&touch_wake_lock);
+#endif
+
 	kfree(ts);
 
 	return 0;
@@ -6056,41 +6464,53 @@ static void touch_early_suspend(struct early_suspend *h)
 		return;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (ts->pdata->role->ghost_detection_enable) {
 		resume_flag = 0;
 	}
-=======
+
 		if (ts->pdata->role->ghost_detection_enable) {
 			resume_flag = 0;
 		}
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		if (ts->pdata->role->ghost_detection_enable) {
 			resume_flag = 0;
 		}
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		if (ts->pdata->role->ghost_detection_enable) {
+			resume_flag = 0;
+		}
+
 	if (ts->pdata->role->operation_mode)
 		touch_disable_irq(ts->client->irq);
 	else
 		hrtimer_cancel(&ts->timer);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (ts->pdata->role->ghost_detection_enable) {
 		hrtimer_cancel(&hr_touch_trigger_timer);
 	}
-=======
+
 		if (ts->pdata->role->ghost_detection_enable) {
 			hrtimer_cancel(&hr_touch_trigger_timer);
 		}
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 		if (ts->pdata->role->ghost_detection_enable) {
 			hrtimer_cancel(&hr_touch_trigger_timer);
 		}
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+		if (ts->pdata->role->ghost_detection_enable) {
+			hrtimer_cancel(&hr_touch_trigger_timer);
+		}
+
 
 	cancel_work_sync(&ts->work);
 	cancel_delayed_work_sync(&ts->work_init);
@@ -6137,11 +6557,14 @@ static void touch_late_resume(struct early_suspend *h)
 #endif
 
 #if defined(CONFIG_PM)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
+
 #if (!defined(CONFIG_FB) && !defined(CONFIG_HAS_EARLYSUSPEND))
 static int touch_suspend(struct device *device)
 {
@@ -6153,10 +6576,13 @@ static int touch_resume(struct device *device)
 	return 0;
 }
 #elif defined(CUST_KNOCK_ON_GESTURE)
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 static int touch_suspend(struct device *device)
 {
 	mutex_lock(&i2c_suspend_lock);
@@ -6170,22 +6596,28 @@ static int touch_resume(struct device *device)
 		TOUCH_DEBUG_MSG("\n");
 	return 0;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-#endif
 
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
 
 #endif
+
+
+
+
+
+
+
+#endif
 #endif
 
 
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 #if defined(CONFIG_PM)
 static struct dev_pm_ops touch_pm_ops = {
 	.suspend 	= touch_suspend,
@@ -6220,25 +6652,31 @@ int touch_driver_register(struct touch_device_driver* driver)
 	int ret = 0;
 
 #ifdef CONFIG_LGE_PM_CHARGING_CHARGERLOGO
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (lge_boot_mode_for_touch == 2) { // Chargerlogo mode
 		TOUCH_INFO_MSG("Chargerlogo mode. Skip probe \n");
 		ret = -EMLINK;
 		goto err_touch_driver_register;
 	}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 			if (lge_boot_mode_for_touch == 2) { // Chargerlogo mode
 				TOUCH_INFO_MSG("Chargerlogo mode. Skip probe \n");
 				ret = -EMLINK;
 				goto err_touch_driver_register;
 			}
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 #endif
 
 	if (unlikely(touch_debug_mask & DEBUG_TRACE))
@@ -6278,23 +6716,29 @@ void touch_driver_unregister(void)
 {
 
 #ifdef CONFIG_LGE_PM_CHARGING_CHARGERLOGO
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 	if (lge_boot_mode_for_touch == 2) { // Chargerlogo mode
 		TOUCH_INFO_MSG("Chargerlogo mode. Skip probe \n");
 		return;
 	}
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 				if (lge_boot_mode_for_touch == 2) { // Chargerlogo mode
 					TOUCH_INFO_MSG("Chargerlogo mode. Skip probe \n");
 					return;
 				}
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
 #endif
 
 

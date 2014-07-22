@@ -1574,25 +1574,31 @@ void input_reset_device(struct input_dev *dev)
 		 * Keys that have been pressed at suspend time are unlikely
 		 * to be still pressed when we resume.
 		 */
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 /* LGE_CHANGE
  * During Suspend & Resume Do not release keys for Power Long Key press.
  * If some devices want to release pressed keys on Suspend,
  * Add the routine on each devices.
  * fred.cho@lge.com, 2012-03-19
-=======
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
 /*           
                                                                         
                                                            
                                    
                                
-<<<<<<< HEAD
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+
+
+
+
+
  */
 /*
 		if (!test_bit(INPUT_PROP_NO_DUMMY_RELEASE, dev->propbit)) {

@@ -207,15 +207,19 @@ int diag_hdlc_decode(struct diag_hdlc_decode_type *hdlc)
 							  ^ ESC_MASK;
 				}
 			} else if (src_byte == CONTROL_CHAR) {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 				if (len == 0) /* LGE CODE for remove first 7E */
-=======
+
 				if (len == 0) /*                              */
->>>>>>> 0093d79... Overlay of LG soruce drop
-=======
+
+
 				if (len == 0) /*                              */
->>>>>>> 0093d79... Overlay of LG soruce drop
+
+
+				if (len == 0) /*                              */
+
 					continue;
 
 				if (msg_start && i == 0 && src_length > 1)

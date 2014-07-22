@@ -22,7 +22,11 @@
 		lp5521@32{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			status = "ok";
+=======
+			status = "disable";
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			status = "disable";
 >>>>>>> 0093d79... Overlay of LG soruce drop

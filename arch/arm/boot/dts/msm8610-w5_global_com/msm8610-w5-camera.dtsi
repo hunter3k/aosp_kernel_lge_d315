@@ -24,7 +24,11 @@
 			rt8542,max_brightness = <0x7D>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			rt8542,enable_pwm = <0>;
+=======
+			rt8542,enable_pwm = <1>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 			rt8542,enable_pwm = <1>;
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -66,7 +70,11 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* IMX111(8M) & IMX219(8M) actuator */
+=======
+/* IMX111(8M) actuator */
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 /* IMX111(8M) actuator */
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -317,6 +325,7 @@
 /* imx111 Rev B ~ */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	imx111: qcom,camera_rev_b@20 {
 		compatible = "qcom,imx111";
 		reg = <0x20 0x0>;
@@ -324,11 +333,16 @@
 =======
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 	imx111: qcom,camera_rev_b@34 {
 		compatible = "qcom,imx111";
 		reg = <0x34 0x0>;
 		qcom,slave-id = <0x34 0x0 0x111>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -363,6 +377,7 @@
 		qcom,csi-lane-mask = <0x7>;
 		qcom,sensor-position = <0>;
 		qcom,sensor-mode = <0>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 		status = "okay";
@@ -409,11 +424,16 @@
 =======
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 		status = "decide_in_lk";
 		revision = "rev_b...";
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0093d79... Overlay of LG soruce drop
+=======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
@@ -425,7 +445,10 @@
 		imx111 = &imx111;	/* 8M Main Camera */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		imx219 = &imx219;	/* 8M Main Camera */
+=======
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 >>>>>>> 0093d79... Overlay of LG soruce drop
 =======

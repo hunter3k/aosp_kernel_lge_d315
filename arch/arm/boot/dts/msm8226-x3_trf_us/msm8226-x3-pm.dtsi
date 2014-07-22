@@ -270,7 +270,11 @@
 	qcom,vddsafe-mv = <4380>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	qcom,vinmin-mv = <4350>;
+=======
+	qcom,vinmin-mv = <4200>;
+>>>>>>> 0093d79... Overlay of LG soruce drop
 =======
 	qcom,vinmin-mv = <4200>;
 >>>>>>> 0093d79... Overlay of LG soruce drop
