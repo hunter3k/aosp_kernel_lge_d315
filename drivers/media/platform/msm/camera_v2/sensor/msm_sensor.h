@@ -76,6 +76,7 @@ struct msm_sensor_ctrl_t {
 
 
 
+
 	uint16_t isFirstStream;	//LGE_CHANGE, mipi end packet issue, 2013-10-15, kwangsik83.kim@lge.com
 
 	uint16_t isFirstStream;	//                                                                     
@@ -85,6 +86,9 @@ struct msm_sensor_ctrl_t {
 
 
 	uint16_t isFirstStream;	//                                                                     
+
+
+	uint16_t isFirstStream;	//LGE_CHANGE, mipi end packet issue, 2013-10-15, kwangsik83.kim@lge.com
 
 };
 

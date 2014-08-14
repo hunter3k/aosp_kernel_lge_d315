@@ -20,6 +20,9 @@
 
 
 
+
+
+
 /* Change History
  *
  * 1.0.1	Functions apds9190_show_rev(), apds9190_show_id() and apds9190_show_status()
@@ -45,6 +48,7 @@
 
 
 
+
 /*               
   
                                                                                      
@@ -65,6 +69,8 @@
   
                                                    
                                  
+
+
 
 
 

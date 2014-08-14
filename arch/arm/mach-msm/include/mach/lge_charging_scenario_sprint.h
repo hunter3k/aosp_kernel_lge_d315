@@ -69,6 +69,7 @@ enum lge_battemp_states {
 
 
 
+
 /* LGE charging states */
 
 /*                     */
@@ -79,12 +80,16 @@ enum lge_battemp_states {
 
 /*                     */
 
+
+/* LGE charging states */
+
 enum lge_charging_states {
 	CHG_BATT_NORMAL_STATE,
 	CHG_BATT_DECCUR_STATE,
 	CHG_BATT_WARNIG_STATE,
 	CHG_BATT_STPCHG_STATE,
 };
+
 
 
 
@@ -98,6 +103,9 @@ enum lge_charging_states {
 
 
 /*                            */
+
+
+/* LGE charging states change */
 
 enum lge_states_changes {
 	STS_CHE_NONE,
@@ -148,9 +156,13 @@ lge_monitor_batt_temp(struct charging_info req, struct charging_rsp *res);
 
 
 
+
 /* __LGE_CHARGING_SCENARIO_H_ */
 
 /*                            */
+
+/* __LGE_CHARGING_SCENARIO_H_ */
+
 
 
 /*                            */

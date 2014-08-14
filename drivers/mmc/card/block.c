@@ -2178,6 +2178,7 @@ static u8 mmc_blk_prep_packed_list(struct mmc_queue *mq, struct request *req)
 
 
 
+
 /* LGE_UPDATE_S by p1-fs@lge.com Toshiba recommend packed number no over 8 */
 	else if(max_packed_rw > 8)
 		max_packed_rw = 8;
@@ -2188,9 +2189,12 @@ static u8 mmc_blk_prep_packed_list(struct mmc_queue *mq, struct request *req)
 
 
 /*                                                                         */
+
+/* LGE_UPDATE_S by p1-fs@lge.com Toshiba recommend packed number no over 8 */
+
 	else if(max_packed_rw > 8)
 		max_packed_rw = 8;
-/*                               */
+/* LGE_UPDATE_E by p1-fs@lge.com */
 
 
 

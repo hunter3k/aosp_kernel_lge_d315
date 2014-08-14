@@ -479,8 +479,13 @@
 };
 &pm8226_bms{
 
+<<<<<<< HEAD:arch/arm/boot/dts/msm8226-g2mds_global_com/msm8226-g2mds-pm.dtsi
 	qcom,r-sense-uohm = <10000>;
 	qcom,v-cutoff-uv = <3400000>;
+=======
+	qcom,r-sense-uohm = <11600>;
+	qcom,v-cutoff-uv = <3200000>;
+>>>>>>> 986617a... udpate from D410 10d:arch/arm/boot/dts/msm8226-w7_global_com/msm8226-w7-pm.dtsi
 	qcom,max-voltage-uv = <4350000>;
 	qcom,r-conn-mohm = <18>;
 	qcom,shutdown-soc-valid-limit = <20>;
@@ -494,12 +499,12 @@
 	qcom,low-voltage-calculate-soc-ms=<1000>;
 	qcom,chg-term-ua = <100000>;
 	qcom,batt-type = <0>;
-	qcom,low-voltage-threshold = <3420000>;
+	qcom,low-voltage-threshold = <3220000>;
 	qcom,use-external-rsense = <1>;
 };
 
 &pm8226_iadc {
-       qcom,rsense = <10000000>;
+       qcom,rsense = <11600000>;
 };
 
 &rpm_bus {

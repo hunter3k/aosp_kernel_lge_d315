@@ -1,4 +1,4 @@
-/* Copyright (c) 2013, The Linux Foundation. All rights reserved.
+// /* Copyright (c) 2013, The Linux Foundation. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
@@ -70,6 +70,7 @@ static struct msm_sensor_power_setting hi543_power_setting_rev_a[] = {
 
 
 
+
 #else //temp, comment out for sleep current, will be used from revB, 2013-08-30, yt.jeon@lge.com
 
 #else //                                                                                        
@@ -79,6 +80,9 @@ static struct msm_sensor_power_setting hi543_power_setting_rev_a[] = {
 
 
 #else //                                                                                        
+
+
+#else //temp, comment out for sleep current, will be used from revB, 2013-08-30, yt.jeon@lge.com
 
 	{
 		.seq_type = SENSOR_GPIO,
@@ -349,6 +353,7 @@ static int32_t hi543_platform_probe(struct platform_device *pdev)
 
 
 
+
 /* LGE_CHANGE_S : WBT, 2013-5-31, jonghwan.ko@lge.com */
 
 /*                                                    */
@@ -359,11 +364,15 @@ static int32_t hi543_platform_probe(struct platform_device *pdev)
 
 /*                                                    */
 
+
+/* LGE_CHANGE_S : WBT, 2013-5-31, jonghwan.ko@lge.com */
+
 	if(!match)
 	{
 		  pr_err(" %s failed ",__func__);
 		  return -ENODEV;
 	 }
+
 
 
 
@@ -377,6 +386,9 @@ static int32_t hi543_platform_probe(struct platform_device *pdev)
 
 /*                                                    */
 
+
+/* LGE_CHANGE_E : WBT, 2013-5-31, jonghwan.ko@lge.com */
+
 	rc = msm_sensor_platform_probe(pdev, match->data);
 	return rc;
 }
@@ -385,6 +397,7 @@ static int __init hi543_init_module(void)
 {
 	int32_t rc = 0;
 	pr_info("%s:%d\n", __func__, __LINE__);
+
 
 
 
@@ -399,6 +412,9 @@ static int __init hi543_init_module(void)
 
 
 /*                                                                                          */
+
+/* LGE_CHANGE_S, yt.jeon, 2013.10.07, To separate power settings depending on HW revisions. */
+
 #if defined(CONFIG_MACH_MSM8X10_W5)
 	switch(lge_get_board_revno()) {
 		case HW_REV_A:
@@ -522,6 +538,7 @@ static int __init hi543_init_module(void)
 
 
 
+
 /* LGE_CHANGE_E, yt.jeon, 2013.10.07, To separate power settings depending on HW revisions. */
 
 /*                                                                                          */
@@ -531,6 +548,9 @@ static int __init hi543_init_module(void)
 
 
 /*                                                                                          */
+
+
+/* LGE_CHANGE_E, yt.jeon, 2013.10.07, To separate power settings depending on HW revisions. */
 
 	rc = platform_driver_probe(&hi543_platform_driver,
 		hi543_platform_probe);
@@ -600,6 +620,7 @@ static struct msm_sensor_ctrl_t hi543_s_ctrl = {
 
 
 
+
 /* LGE_CHANGE_S, yt.jeon, 2013.10.07, To separate power settings depending on HW revisions. */
 	//.power_setting_array.power_setting = hi543_power_setting,
 	//.power_setting_array.size = ARRAY_SIZE(hi543_power_setting),
@@ -619,6 +640,12 @@ static struct msm_sensor_ctrl_t hi543_s_ctrl = {
 
 
 
+
+
+/* LGE_CHANGE_S, yt.jeon, 2013.10.07, To separate power settings depending on HW revisions. */
+	//.power_setting_array.power_setting = hi543_power_setting,
+	//.power_setting_array.size = ARRAY_SIZE(hi543_power_setting),
+/* LGE_CHANGE_E, yt.jeon, 2013.10.07, To separate power settings depending on HW revisions. */
 
 	.msm_sensor_mutex = &hi543_mut,
 	.sensor_v4l2_subdev_info = hi543_subdev_info,

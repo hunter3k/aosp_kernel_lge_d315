@@ -557,6 +557,7 @@ MODULE_LICENSE("GPL");
 
 
 
+
 #endif // CONFIG_LGE_ENABLE_MMC_STRENGTH_CONTROL
 
 #endif //                                       
@@ -566,4 +567,7 @@ MODULE_LICENSE("GPL");
 
 
 #endif //                                       
+
+
+#endif // CONFIG_LGE_ENABLE_MMC_STRENGTH_CONTROL
 

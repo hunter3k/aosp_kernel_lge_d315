@@ -68,6 +68,7 @@ static void mmc_clk_scaling(struct mmc_host *host, bool from_wq);
 
 
 
+
  * LGE_CHANGE_S
  * Comment : FMBT porting
  * 2013-11-22, p1-fs@lge.com
@@ -85,6 +86,11 @@ static void mmc_clk_scaling(struct mmc_host *host, bool from_wq);
                
                          
                             
+
+
+ * LGE_CHANGE_S
+ * Comment : FMBT porting
+ * 2013-11-22, p1-fs@lge.com
 
  */
 #if defined(CONFIG_FMBT_TRACE_EMMC)
@@ -227,6 +233,7 @@ void mmc_request_done(struct mmc_host *host, struct mmc_request *mrq)
 
 
 
+
  * LGE_CHANGE_S
  * FMBT porting
  * 2013-11-22, p1-fs@lge.com
@@ -245,11 +252,17 @@ void mmc_request_done(struct mmc_host *host, struct mmc_request *mrq)
                
                             
 
+
+ * LGE_CHANGE_S
+ * FMBT porting
+ * 2013-11-22, p1-fs@lge.com
+
  */
 #if defined(CONFIG_FMBT_TRACE_EMMC)
 	unsigned long long currentTime = 0;
 	int i;
 #endif
+
 
 
 
@@ -259,6 +272,9 @@ void mmc_request_done(struct mmc_host *host, struct mmc_request *mrq)
 
 
 /*              */
+
+/* LGE_CHANGE_E */
+
 
 
 /*              */
@@ -319,6 +335,7 @@ void mmc_request_done(struct mmc_host *host, struct mmc_request *mrq)
 
 
 
+
  * LGE_CHANGE_S
  * Comment : FMBT porting
  * 2013-11-22, p1-fs@lge.com
@@ -336,6 +353,11 @@ void mmc_request_done(struct mmc_host *host, struct mmc_request *mrq)
                
                          
                             
+
+
+ * LGE_CHANGE_S
+ * Comment : FMBT porting
+ * 2013-11-22, p1-fs@lge.com
 
  */
 #if defined(CONFIG_FMBT_TRACE_EMMC)
@@ -401,6 +423,7 @@ void mmc_request_done(struct mmc_host *host, struct mmc_request *mrq)
 			}
 #endif
 /* LGE_CHANGE_E */
+
 		}
 
 /* LGE_CHANGE_E */
@@ -412,6 +435,11 @@ void mmc_request_done(struct mmc_host *host, struct mmc_request *mrq)
 
 
 /*              */
+
+		}
+
+/* LGE_CHANGE_E */
+
 
 		if (mrq->stop) {
 			pr_debug("%s:     (CMD%u): %d: %08x %08x %08x %08x\n",
@@ -496,6 +524,7 @@ mmc_start_request(struct mmc_host *host, struct mmc_request *mrq)
 
 
 
+
  * LGE_CHANGE_S
  * Comment : FMBT porting
  * 2013-11-22, p1-fs@lge.com
@@ -514,6 +543,11 @@ mmc_start_request(struct mmc_host *host, struct mmc_request *mrq)
                          
                             
 
+
+ * LGE_CHANGE_S
+ * Comment : FMBT porting
+ * 2013-11-22, p1-fs@lge.com
+
  */
 #if defined(CONFIG_FMBT_TRACE_EMMC)
 		glTimeGap2 = sched_clock();
@@ -526,6 +560,7 @@ mmc_start_request(struct mmc_host *host, struct mmc_request *mrq)
 
 
 
+
 /* LGE_CHANGE_E */
 
 /*              */
@@ -535,6 +570,9 @@ mmc_start_request(struct mmc_host *host, struct mmc_request *mrq)
 
 
 /*              */
+
+
+/* LGE_CHANGE_E */
 
 	
 	}
@@ -1485,6 +1523,9 @@ void mmc_set_data_timeout(struct mmc_data *data, const struct mmc_card *card)
 
 
 
+
+
+
 			/* LGE_CHANGE
 			 * Although we already applied enough time,
 			 * timeout-error occurs until now with several-ultimate-crappy-memory.
@@ -1496,12 +1537,15 @@ void mmc_set_data_timeout(struct mmc_data *data, const struct mmc_card *card)
 
 
 
+
 			/*           
                                               
                                                                          
                                         
                                
     */
+
+
 
 
 
@@ -2141,6 +2185,9 @@ void mmc_power_up(struct mmc_host *host)
 
 
 
+
+
+
 	/* LGE_CHANGE
 	* Augmenting delay-time for some crappy card.
 	* 2013-03-09, G2-FS@lge.com
@@ -2150,10 +2197,13 @@ void mmc_power_up(struct mmc_host *host)
 
 
 
+
 	/*           
                                               
                             
  */
+
+
 
 
 
@@ -2179,6 +2229,9 @@ void mmc_power_up(struct mmc_host *host)
 
 
 
+
+
+
 	/* LGE_CHANGE
 	* Augmenting delay-time for some crappy card.
 	* 2013-03-09, G2-FS@lge.com
@@ -2188,10 +2241,13 @@ void mmc_power_up(struct mmc_host *host)
 
 
 
+
 	/*           
                                               
                             
  */
+
+
 
 
 
@@ -4069,6 +4125,7 @@ static int __init mmc_init(void)
 
 
 
+
  * LGE_CHANGE_S
  * Comment : FMBT porting
  * 2013-11-22, p1-fs@lge.com
@@ -4087,10 +4144,16 @@ static int __init mmc_init(void)
                          
                             
 
+
+ * LGE_CHANGE_S
+ * Comment : FMBT porting
+ * 2013-11-22, p1-fs@lge.com
+
  */
 #if defined(CONFIG_FMBT_TRACE_EMMC)
 	init_memLog();
 #endif
+
 
 
 
@@ -4103,6 +4166,9 @@ static int __init mmc_init(void)
 
 
 /*              */
+
+/* LGE_CHANGE_E */
+
 
 
 	return 0;

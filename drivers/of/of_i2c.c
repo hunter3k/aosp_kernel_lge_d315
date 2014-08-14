@@ -41,6 +41,7 @@ void of_i2c_register_devices(struct i2c_adapter *adap)
 
 
 
+
 		/* LGE_CHANGE: check status=okay for i2c child node
 		 * 2012-11-07, bongkyu.kim@lge.com
 		 */
@@ -58,6 +59,11 @@ void of_i2c_register_devices(struct i2c_adapter *adap)
 		/*                                                 
                                     
    */
+
+
+		/* LGE_CHANGE: check status=okay for i2c child node
+		 * 2012-11-07, bongkyu.kim@lge.com
+		 */
 
 		if (!of_device_is_available(node))
 			continue;

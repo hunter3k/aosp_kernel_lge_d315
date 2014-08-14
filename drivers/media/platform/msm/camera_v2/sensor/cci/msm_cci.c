@@ -661,6 +661,7 @@ static int32_t msm_cci_init(struct v4l2_subdev *sd,
 
 
 
+
       pr_err("%s: E cci_dev(0x%p) ref_count(%d)\n", __func__, sd, cci_dev->ref_count); /* LGE_CHANGE, jaehan.jeong, 2013.12.2, Log for debugging */
 
       pr_err("%s: E cci_dev(0x%p) ref_count(%d)\n", __func__, sd, cci_dev->ref_count); /*                                                        */
@@ -670,6 +671,9 @@ static int32_t msm_cci_init(struct v4l2_subdev *sd,
 
 
       pr_err("%s: E cci_dev(0x%p) ref_count(%d)\n", __func__, sd, cci_dev->ref_count); /*                                                        */
+
+
+      pr_err("%s: E cci_dev(0x%p) ref_count(%d)\n", __func__, sd, cci_dev->ref_count); /* LGE_CHANGE, jaehan.jeong, 2013.12.2, Log for debugging */
 
 	if (cci_dev->ref_count++) {
 		CDBG("%s ref_count %d\n", __func__, cci_dev->ref_count);
@@ -714,6 +718,7 @@ static int32_t msm_cci_init(struct v4l2_subdev *sd,
 
 
 
+
 		pr_err("%s: clk enable failed\n", __func__); /* LGE_CHANGE, jaehan.jeong, 2013.12.2, Log for debugging */
 
 		pr_err("%s: clk enable failed\n", __func__); /*                                                        */
@@ -723,6 +728,9 @@ static int32_t msm_cci_init(struct v4l2_subdev *sd,
 
 
 		pr_err("%s: clk enable failed\n", __func__); /*                                                        */
+
+
+		pr_err("%s: clk enable failed\n", __func__); /* LGE_CHANGE, jaehan.jeong, 2013.12.2, Log for debugging */
 
 		goto clk_enable_failed;
 	}
@@ -753,6 +761,7 @@ static int32_t msm_cci_init(struct v4l2_subdev *sd,
 
 
 
+
       pr_err("%s X: exited \n", __func__);  /* LGE_CHANGE, jaehan.jeong, 2013.12.2, Log for debugging */
 
       pr_err("%s X: exited \n", __func__);  /*                                                        */
@@ -762,6 +771,9 @@ static int32_t msm_cci_init(struct v4l2_subdev *sd,
 
 
       pr_err("%s X: exited \n", __func__);  /*                                                        */
+
+
+      pr_err("%s X: exited \n", __func__);  /* LGE_CHANGE, jaehan.jeong, 2013.12.2, Log for debugging */
 
 	return 0;
 
@@ -785,9 +797,13 @@ static int32_t msm_cci_release(struct v4l2_subdev *sd)
 
 
 
+
       pr_err("%s: E cci_dev(0x%p) ref_count(%d)\n", __func__, sd, cci_dev->ref_count); /* LGE_CHANGE, jaehan.jeong, 2013.12.2, Log for debugging */
 
       pr_err("%s: E cci_dev(0x%p) ref_count(%d)\n", __func__, sd, cci_dev->ref_count); /*                                                        */
+
+      pr_err("%s: E cci_dev(0x%p) ref_count(%d)\n", __func__, sd, cci_dev->ref_count); /* LGE_CHANGE, jaehan.jeong, 2013.12.2, Log for debugging */
+
 
 
       pr_err("%s: E cci_dev(0x%p) ref_count(%d)\n", __func__, sd, cci_dev->ref_count); /*                                                        */
@@ -819,6 +835,7 @@ static int32_t msm_cci_release(struct v4l2_subdev *sd)
 
 
 
+
       pr_err("%s X: exited \n", __func__);  /* LGE_CHANGE, jaehan.jeong, 2013.12.2, Log for debugging */
 
       pr_err("%s X: exited \n", __func__);  /*                                                        */
@@ -828,6 +845,9 @@ static int32_t msm_cci_release(struct v4l2_subdev *sd)
 
 
       pr_err("%s X: exited \n", __func__);  /*                                                        */
+
+
+      pr_err("%s X: exited \n", __func__);  /* LGE_CHANGE, jaehan.jeong, 2013.12.2, Log for debugging */
 
 	return 0;
 }
@@ -839,9 +859,13 @@ static int32_t msm_cci_config(struct v4l2_subdev *sd,
 
 
 
+
        int32_t trialCnt = 3;  /*QCT_PATCH, add the retrial code only in msm_cci_config() function , 2013-12-09, yousung.kang@lge.com */
 
        int32_t trialCnt = 3;  /*                                                                                                     */
+
+       int32_t trialCnt = 3;  /*QCT_PATCH, add the retrial code only in msm_cci_config() function , 2013-12-09, yousung.kang@lge.com */
+
 
 
        int32_t trialCnt = 3;  /*                                                                                                     */
@@ -865,6 +889,7 @@ static int32_t msm_cci_config(struct v4l2_subdev *sd,
 
 
 
+
 /*QCT_PATCH E, add the retrial code only in msm_cci_config() function , 2013-12-09, yousung.kang@lge.com */
 
 /*                                                                                                       */
@@ -874,6 +899,9 @@ static int32_t msm_cci_config(struct v4l2_subdev *sd,
 
 
 /*                                                                                                       */
+
+
+/*QCT_PATCH E, add the retrial code only in msm_cci_config() function , 2013-12-09, yousung.kang@lge.com */
 
 #if 1 // QCT Test
              do{
@@ -888,6 +916,7 @@ static int32_t msm_cci_config(struct v4l2_subdev *sd,
 
 
 
+
 /*QCT_PATCH E, add the retrial code only in msm_cci_config() function , 2013-12-09, yousung.kang@lge.com */
 
 /*                                                                                                       */
@@ -897,6 +926,9 @@ static int32_t msm_cci_config(struct v4l2_subdev *sd,
 
 
 /*                                                                                                       */
+
+
+/*QCT_PATCH E, add the retrial code only in msm_cci_config() function , 2013-12-09, yousung.kang@lge.com */
 
 		break;
 	case MSM_CCI_GPIO_WRITE:

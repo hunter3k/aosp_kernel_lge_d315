@@ -264,6 +264,7 @@ static int32_t msm_sensor_get_dt_vreg_data(struct device_node *of_node,
 
 
 
+
 	int32_t count = 0;  /* LGE_CHANGE, HI543 bring up, 2013-08-07, hyungtae.lee@lge.com */
 
 	int32_t count = 0;  /*                                                              */
@@ -274,10 +275,14 @@ static int32_t msm_sensor_get_dt_vreg_data(struct device_node *of_node,
 
 	int32_t count = 0;  /*                                                              */
 
+
+	int32_t count = 0;  /* LGE_CHANGE, HI543 bring up, 2013-08-07, hyungtae.lee@lge.com */
+
 	uint32_t *vreg_array = NULL;
 
 	count = of_property_count_strings(of_node, "qcom,cam-vreg-name");
 	CDBG("%s qcom,cam-vreg-name count %d\n", __func__, count);
+
 
 
 
@@ -292,6 +297,9 @@ static int32_t msm_sensor_get_dt_vreg_data(struct device_node *of_node,
 
 /*                                                                */
 
+
+/* LGE_CHANGE_S, HI543 bring up, 2013-08-07, hyungtae.lee@lge.com */
+
 	#if 0 // QCT original
 	if (!count)
 		return 0;
@@ -299,6 +307,7 @@ static int32_t msm_sensor_get_dt_vreg_data(struct device_node *of_node,
 	if (count <= 0)
 		return 0;
 	#endif
+
 
 
 
@@ -311,6 +320,9 @@ static int32_t msm_sensor_get_dt_vreg_data(struct device_node *of_node,
 
 
 /*                                                                */
+
+/* LGE_CHANGE_E, HI543 bring up, 2013-08-07, hyungtae.lee@lge.com */
+
 
 
 	sensordata->cam_vreg = kzalloc(sizeof(struct camera_vreg_t) * count,
@@ -809,6 +821,18 @@ static int32_t msm_sensor_get_dt_data(struct device_node *of_node,
 	}
 /* LGE_CHANGE_E, Fix for Dual Camera Module of HI707, 2014-03-04, dongsu.bag@lge.com */
 
+/* LGE_CHANGE_S, Fix for Dual Camera Module of HI707, 2014-03-04, dongsu.bag@lge.com */
+	rc = of_property_read_u32(of_node, "qcom,maker-gpio",
+		&sensordata->sensor_init_params->maker_gpio);
+	CDBG("%s qcom,maker-gpio %d, rc %d\n", __func__,
+		sensordata->sensor_init_params->maker_gpio, rc);
+	if (rc < 0) {
+		/* Set default maker-gpio */
+		sensordata->sensor_init_params->maker_gpio = -1;
+		rc = 0;
+	}
+/* LGE_CHANGE_E, Fix for Dual Camera Module of HI707, 2014-03-04, dongsu.bag@lge.com */
+
 	rc = of_property_read_u32(of_node, "qcom,mount-angle",
 		&sensordata->sensor_init_params->sensor_mount_angle);
 	CDBG("%s qcom,mount-angle %d, rc %d\n", __func__,
@@ -1137,6 +1161,7 @@ int32_t msm_sensor_power_up(struct msm_sensor_ctrl_t *s_ctrl)
 
 
 
+
 	/*LGE_CHANGE_S, mipi end packet issue, 2013-10-15, kwangsik83.kim@lge.com*/
 	if(strncmp(s_ctrl->sensordata->sensor_name, "hi707", strlen("hi707")) == 0)
 		s_ctrl->isFirstStream = TRUE;
@@ -1158,9 +1183,12 @@ int32_t msm_sensor_power_up(struct msm_sensor_ctrl_t *s_ctrl)
 
 
 	/*                                                                       */
+
+	/*LGE_CHANGE_S, mipi end packet issue, 2013-10-15, kwangsik83.kim@lge.com*/
+
 	if(strncmp(s_ctrl->sensordata->sensor_name, "hi707", strlen("hi707")) == 0)
 		s_ctrl->isFirstStream = TRUE;
-	/*                                                                       */
+	/*LGE_CHANGE_E, mipi end packet issue, 2013-10-15, kwangsik83.kim@lge.com*/
 
 	CDBG("%s exit\n", __func__);
 	return 0;
@@ -1291,6 +1319,7 @@ int32_t msm_sensor_power_down(struct msm_sensor_ctrl_t *s_ctrl)
 
 
 
+
 	/*LGE_CHANGE_S, mipi end packet issue, 2013-10-15, kwangsik83.kim@lge.com*/
 	if(strncmp(s_ctrl->sensordata->sensor_name, "hi707", strlen("hi707")) == 0)
 		s_ctrl->isFirstStream = FALSE;
@@ -1301,9 +1330,12 @@ int32_t msm_sensor_power_down(struct msm_sensor_ctrl_t *s_ctrl)
 
 
 	/*                                                                       */
+
+	/*LGE_CHANGE_S, mipi end packet issue, 2013-10-15, kwangsik83.kim@lge.com*/
+
 	if(strncmp(s_ctrl->sensordata->sensor_name, "hi707", strlen("hi707")) == 0)
 		s_ctrl->isFirstStream = FALSE;
-	/*                                                                       */
+	/*LGE_CHANGE_E, mipi end packet issue, 2013-10-15, kwangsik83.kim@lge.com*/
 
 
 
@@ -1326,6 +1358,7 @@ int32_t msm_sensor_match_id(struct msm_sensor_ctrl_t *s_ctrl)
 
 
 
+
 			&chipid, MSM_CAMERA_I2C_WORD_DATA);   /* LGE_CHANGE, Changed to WORD unit */
 
 			&chipid, MSM_CAMERA_I2C_WORD_DATA);   /*                                  */
@@ -1335,6 +1368,9 @@ int32_t msm_sensor_match_id(struct msm_sensor_ctrl_t *s_ctrl)
 
 
 			&chipid, MSM_CAMERA_I2C_WORD_DATA);   /*                                  */
+
+
+			&chipid, MSM_CAMERA_I2C_WORD_DATA);   /* LGE_CHANGE, Changed to WORD unit */
 
 	if (rc < 0) {
 		pr_err("%s: %s: read id failed\n", __func__,

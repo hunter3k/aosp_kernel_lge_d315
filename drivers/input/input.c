@@ -1577,6 +1577,9 @@ void input_reset_device(struct input_dev *dev)
 
 
 
+
+
+
 /* LGE_CHANGE
  * During Suspend & Resume Do not release keys for Power Long Key press.
  * If some devices want to release pressed keys on Suspend,
@@ -1587,11 +1590,14 @@ void input_reset_device(struct input_dev *dev)
 
 
 
+
 /*           
                                                                         
                                                            
                                    
                                
+
+
 
 
 

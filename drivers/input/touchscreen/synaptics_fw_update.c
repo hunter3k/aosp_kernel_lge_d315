@@ -785,6 +785,9 @@ static enum flash_area fwu_go_nogo(void)
 
 
 
+
+
+
 /* LGE_CHANGE
  * fix read data length method : sizeof -> strlen
  * strnstr compare to string with length not a size
@@ -794,10 +797,13 @@ static enum flash_area fwu_go_nogo(void)
 
 
 
+
 /*           
                                                  
                                                    
                                    */
+
+
 
 
 
@@ -853,6 +859,9 @@ static enum flash_area fwu_go_nogo(void)
 
 
 
+
+
+
 /* LGE_CHANGE
  * fix Firmware version compare method
  * if firmware version is same then it couldn't need update.
@@ -862,10 +871,13 @@ static enum flash_area fwu_go_nogo(void)
 
 
 
+
 /*           
                                       
                                                             
                                    */
+
+
 
 
 

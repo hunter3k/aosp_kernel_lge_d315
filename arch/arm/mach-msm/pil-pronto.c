@@ -74,6 +74,7 @@
 
 
 
+
 // LGE_UPDATE_S enable_ramdump only for pronto
 static int enable_pronto_ramdump;
 module_param(enable_pronto_ramdump, int, S_IRUGO | S_IWUSR);
@@ -84,9 +85,12 @@ module_param(enable_pronto_ramdump, int, S_IRUGO | S_IWUSR);
 
 
 //                                            
+
+// LGE_UPDATE_S enable_ramdump only for pronto
+
 static int enable_pronto_ramdump;
 module_param(enable_pronto_ramdump, int, S_IRUGO | S_IWUSR);
-//             
+// LGE_UPDATE_E
 
 
 
@@ -423,6 +427,7 @@ static int wcnss_ramdump(int enable, const struct subsys_desc *subsys)
 
 
 
+
 // LGE_UPDATE_S enable_ramdump only for pronto
 //	if (!enable)
 	if(!enable_pronto_ramdump)
@@ -442,6 +447,12 @@ static int wcnss_ramdump(int enable, const struct subsys_desc *subsys)
 
 
 
+
+
+// LGE_UPDATE_S enable_ramdump only for pronto
+//	if (!enable)
+	if(!enable_pronto_ramdump)
+// LGE_UPDATE_E
 
 		return 0;
 

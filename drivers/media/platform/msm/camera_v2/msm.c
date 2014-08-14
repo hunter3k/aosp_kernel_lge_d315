@@ -163,6 +163,7 @@ static void msm_enqueue(struct msm_queue_head *qhead,
 
 
 
+
 	BUG_ON(!qhead);  /* LGE_CHANGE, soojong.jin, 2013.11.25, Fixed WBT*/ 
 
 	BUG_ON(!qhead);  /*                                               */ 
@@ -172,6 +173,9 @@ static void msm_enqueue(struct msm_queue_head *qhead,
 
 
 	BUG_ON(!qhead);  /*                                               */ 
+
+
+	BUG_ON(!qhead);  /* LGE_CHANGE, soojong.jin, 2013.11.25, Fixed WBT*/ 
 
 	
 	spin_lock_irqsave(&qhead->lock, flags);
@@ -714,6 +718,7 @@ int msm_post_event(struct v4l2_event *event, int timeout)
 
 
 
+
 /* LGE_CHANGE_S, Camera Recovery Code, 2013-08-20, jungki.kim@lge.com */
 			pr_err("%s: ===== Camera Recovery Start! ===== \n", __func__);
 			dump_stack();
@@ -735,6 +740,13 @@ int msm_post_event(struct v4l2_event *event, int timeout)
 
 
 
+
+
+/* LGE_CHANGE_S, Camera Recovery Code, 2013-08-20, jungki.kim@lge.com */
+			pr_err("%s: ===== Camera Recovery Start! ===== \n", __func__);
+			dump_stack();
+			send_sig(SIGKILL, current, 0);
+/* LGE_CHANGE_E, Camera Recovery Code, 2013-08-20, jungki.kim@lge.com */
 
 			return rc;
 		}

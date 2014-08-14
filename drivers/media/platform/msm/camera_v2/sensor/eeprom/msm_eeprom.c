@@ -27,6 +27,7 @@
 
 
 
+
 // [LGE_UPDATE] [yt.jeon@lge.com] [2014-01-06] use cmdline info (lge.camera)
 
 //                                                                          
@@ -36,6 +37,9 @@
 
 
 //                                                                          
+
+
+// [LGE_UPDATE] [yt.jeon@lge.com] [2014-01-06] use cmdline info (lge.camera)
 
 char *lge_camera_info = NULL;
 
@@ -235,6 +239,7 @@ int32_t read_eeprom_memory(struct msm_eeprom_ctrl_t *e_ctrl)
 
 
 
+
 // [LGE_UPDATE_S] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
 
 //                                                                                
@@ -244,6 +249,9 @@ int32_t read_eeprom_memory(struct msm_eeprom_ctrl_t *e_ctrl)
 
 
 //                                                                                
+
+
+// [LGE_UPDATE_S] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
 
 			/*
 			 *We need to change slave address for read data (Y412B)
@@ -284,6 +292,7 @@ int32_t read_eeprom_memory(struct msm_eeprom_ctrl_t *e_ctrl)
 
 
 
+
 // [LGE_UPDATE_E] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
 
 //                                                                                
@@ -293,6 +302,9 @@ int32_t read_eeprom_memory(struct msm_eeprom_ctrl_t *e_ctrl)
 
 
 //                                                                                
+
+
+// [LGE_UPDATE_E] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
 
 		}
 		if (emap[j].pageen.valid_size) {
@@ -480,6 +492,7 @@ static struct msm_cam_clk_info cam_8974_clk_info[] = {
 
 
 
+
 // [LGE_UPDATE_S] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
 	[SENSOR_CAM_MCLK] = {"cam_src_clk", 24000000},
 // [LGE_UPDATE_E] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
@@ -498,6 +511,11 @@ static struct msm_cam_clk_info cam_8974_clk_info[] = {
 	[SENSOR_CAM_MCLK] = {"cam_src_clk", 24000000},
 //                                                                                
 
+
+// [LGE_UPDATE_S] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
+	[SENSOR_CAM_MCLK] = {"cam_src_clk", 24000000},
+// [LGE_UPDATE_E] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
+
 	[SENSOR_CAM_CLK] = {"cam_clk", 0},
 };
 
@@ -512,6 +530,7 @@ static struct v4l2_subdev_ops msm_eeprom_subdev_ops = {
 
 
 
+
 // [LGE_UPDATE_S] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
 #if defined(CONFIG_IMX111)|| defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
 
@@ -520,6 +539,9 @@ static struct v4l2_subdev_ops msm_eeprom_subdev_ops = {
 
 
 //                                                                                
+
+// [LGE_UPDATE_S] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
+
 #if defined(CONFIG_IMX111)|| defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
 
 
@@ -572,6 +594,7 @@ static int msm_eeprom_check_CRC(struct msm_eeprom_ctrl_t *e_ctrl)
 
 
 
+
 // [LGE_UPDATE_E] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
 // [LGE_UPDATE_S] [yt.jeon@lge.com] [2014-01-06] use cmdline info (lge.camera)
 
@@ -586,6 +609,10 @@ static int msm_eeprom_check_CRC(struct msm_eeprom_ctrl_t *e_ctrl)
 //                                                                                
 //                                                                            
 
+
+// [LGE_UPDATE_E] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
+// [LGE_UPDATE_S] [yt.jeon@lge.com] [2014-01-06] use cmdline info (lge.camera)
+
 static int __init camera_information_setup(char *cam_info)
 {
         lge_camera_info = cam_info;
@@ -596,12 +623,16 @@ __setup("lge.camera=", camera_information_setup);
 
 
 
+
 // [LGE_UPDATE_E] [yt.jeon@lge.com] [2014-01-06] use cmdline info (lge.camera)
 
 //                                                                            
 
 
 //                                                                            
+
+// [LGE_UPDATE_E] [yt.jeon@lge.com] [2014-01-06] use cmdline info (lge.camera)
+
 
 
 //                                                                            
@@ -653,6 +684,7 @@ int32_t msm_eeprom_i2c_probe(struct i2c_client *client,
 
 
 
+
 	e_ctrl->eboard_info->i2c_slaveaddr = temp<<1; //LGE_UPDATE makes 8bit for i2c driver 2013-11-26 yt.jeon@lge.com
 
 	e_ctrl->eboard_info->i2c_slaveaddr = temp<<1; //                                                               
@@ -662,6 +694,9 @@ int32_t msm_eeprom_i2c_probe(struct i2c_client *client,
 
 
 	e_ctrl->eboard_info->i2c_slaveaddr = temp<<1; //                                                               
+
+
+	e_ctrl->eboard_info->i2c_slaveaddr = temp<<1; //LGE_UPDATE makes 8bit for i2c driver 2013-11-26 yt.jeon@lge.com
 
 	e_ctrl->i2c_client.client = client;
 	e_ctrl->is_supported = 0;
@@ -712,6 +747,7 @@ int32_t msm_eeprom_i2c_probe(struct i2c_client *client,
 
 
 
+
 	// [LGE_UPDATE_S] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
 #if defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5N_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
 
@@ -720,6 +756,9 @@ int32_t msm_eeprom_i2c_probe(struct i2c_client *client,
 
 
 	//                                                                                
+
+	// [LGE_UPDATE_S] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
+
 #if defined(CONFIG_MACH_MSM8X10_W5_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5DS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8X10_W5TS_GLOBAL_COM)
 
 
@@ -749,9 +788,13 @@ int32_t msm_eeprom_i2c_probe(struct i2c_client *client,
 
 
 
+
 	// [LGE_UPDATE_E] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
 
 	//                                                                                
+
+	// [LGE_UPDATE_E] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
+
 
 
 	//                                                                                
@@ -1179,6 +1222,7 @@ static int32_t msm_eeprom_platform_probe(struct platform_device *pdev)
 
 
 
+
 	// [LGE_UPDATE_S] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
 
 	//                                                                                
@@ -1188,6 +1232,9 @@ static int32_t msm_eeprom_platform_probe(struct platform_device *pdev)
 
 
 	//                                                                                
+
+
+	// [LGE_UPDATE_S] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
 
 	#if defined(CONFIG_IMX111)
 	rc = msm_eeprom_check_CRC(e_ctrl);
@@ -1199,12 +1246,16 @@ static int32_t msm_eeprom_platform_probe(struct platform_device *pdev)
 
 
 
+
 	// [LGE_UPDATE_E] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
 
 	//                                                                                
 
 
 	//                                                                                
+
+	// [LGE_UPDATE_E] [hyungtae.lee@lge.com] [2013-05-24] EEPROM ( of Y412B ) bring-up
+
 
 
 	//                                                                                

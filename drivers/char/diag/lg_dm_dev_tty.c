@@ -608,6 +608,7 @@ MODULE_AUTHOR("Seongmook Yim <seongmook.yim@lge.com>");
 
 
 
+
 #endif /*CONFIG_LGE_DM_DEV*/
 
 #endif /*                 */
@@ -617,4 +618,7 @@ MODULE_AUTHOR("Seongmook Yim <seongmook.yim@lge.com>");
 
 
 #endif /*                 */
+
+
+#endif /*CONFIG_LGE_DM_DEV*/
 

@@ -506,6 +506,7 @@ bool is_lge_battery_valid(void)
 
 
 
+
 #endif //CONFIG_LGE_PM_BATTERY_4_2VOLT
 
 #endif //                             
@@ -515,6 +516,9 @@ bool is_lge_battery_valid(void)
 
 
 #endif //                             
+
+
+#endif //CONFIG_LGE_PM_BATTERY_4_2VOLT
 
 #endif
 }
@@ -786,9 +790,13 @@ void __init lge_android_usb_init(void)
 
 
 
+
 #endif /* CONFIG_USB_G_LGE_ANDROID */
 
 #endif /*                          */
+
+#endif /* CONFIG_USB_G_LGE_ANDROID */
+
 
 
 #endif /*                          */
@@ -820,6 +828,7 @@ unsigned long int lge_get_crash_footprint(void)
 
 
 
+
 #if defined(CONFIG_MACH_MSM8X10_W5) || defined(CONFIG_MACH_MSM8X10_W65)
 
 #if defined(CONFIG_MACH_MSM8X10_W5)
@@ -829,6 +838,9 @@ unsigned long int lge_get_crash_footprint(void)
 
 
 #if defined(CONFIG_MACH_MSM8X10_W5)
+
+
+#if defined(CONFIG_MACH_MSM8X10_W5) || defined(CONFIG_MACH_MSM8X10_W65)
 
 // 0 is primary
 // 1 is secondary

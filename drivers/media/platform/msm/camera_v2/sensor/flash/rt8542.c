@@ -63,6 +63,7 @@
 #define DEFAULT_FTM_BRIGHTNESS                   0x0F
 #define UI_MAX_BRIGHTNESS                        0xFF
 
+
 /*                                                                          */
 
 
@@ -70,6 +71,9 @@
 
 
 
+
+
+/* LGE_CHANGE_S, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
 
 #define POWER_OFF		0x00
 #define POWER_ON_TEST	0xFF
@@ -78,9 +82,13 @@
 
 
 
+
 /* LGE_CHANGE_E, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
 
 /*                                                                          */
+
+/* LGE_CHANGE_E, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
+
 
 
 /*                                                                          */
@@ -147,6 +155,7 @@ static int saved_main_lcd_level = DEFAULT_BRIGHTNESS;
 
 
 
+
 /* LGE_CHANGE, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
 
 /*                                                                        */
@@ -156,6 +165,9 @@ static int saved_main_lcd_level = DEFAULT_BRIGHTNESS;
 
 
 /*                                                                        */
+
+
+/* LGE_CHANGE, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
 
 static int backlight_status = POWER_OFF;
 static int rt8542_pwm_enable;
@@ -179,6 +191,7 @@ static void rt8542_hw_reset(void)
 
 
 
+
 	/* LGE_CHANGE */
 	if (gpio_is_valid(gpio)) {
 		gpio_direction_output(gpio, 1);
@@ -190,6 +203,9 @@ static void rt8542_hw_reset(void)
 
 
 	/*            */
+
+	/* LGE_CHANGE */
+
 	if (gpio_is_valid(gpio)) {
 		gpio_direction_output(gpio, 1);
 		gpio_set_value_cansleep(gpio, 1);
@@ -245,6 +261,7 @@ static int cal_value;
 
 
 
+
 static unsigned char bl_ctrl;/* LGE_CHANGE, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
 
 static unsigned char bl_ctrl;/*                                                                        */
@@ -254,6 +271,9 @@ static unsigned char bl_ctrl;/*                                                 
 
 
 static unsigned char bl_ctrl;/*                                                                        */
+
+static unsigned char bl_ctrl;/* LGE_CHANGE, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
+
 
 
 static void rt8542_set_main_current_level(struct i2c_client *client, int level)
@@ -292,6 +312,7 @@ static void rt8542_set_main_current_level(struct i2c_client *client, int level)
 
 
 
+
 /* LGE_CHANGE_S, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
 
 /*                                                                          */
@@ -302,6 +323,9 @@ static void rt8542_set_main_current_level(struct i2c_client *client, int level)
 
 /*                                                                          */
 
+
+/* LGE_CHANGE_S, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
+
 	} else{
 		rt8542_write_reg(client, 0x05, 0x00);
 		bl_ctrl = 0;
@@ -309,6 +333,7 @@ static void rt8542_set_main_current_level(struct i2c_client *client, int level)
 		bl_ctrl &= 0xE6;
 		rt8542_write_reg(main_rt8542_dev->client, 0x0A, bl_ctrl);
 	}
+
 
 
 
@@ -321,6 +346,9 @@ static void rt8542_set_main_current_level(struct i2c_client *client, int level)
 
 
 /*                                                                          */
+
+
+/* LGE_CHANGE_E, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
 
 	mutex_unlock(&dev->bl_mutex);
 
@@ -374,7 +402,7 @@ extern unsigned char strobe_ctrl;
 
 void rt8542_backlight_on(int level)
 {
-	if (backlight_status != BL_ON){/*                                                                        */
+	if (backlight_status != BL_ON){/* LGE_CHANGE, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
 		if (backlight_status == POWER_OFF) {
 			
 			rt8542_hw_reset();
@@ -395,6 +423,7 @@ void rt8542_backlight_on(int level)
 			}
 #endif
 		}
+
 		/*                                                                          */ 
 
 
@@ -403,10 +432,14 @@ void rt8542_backlight_on(int level)
 
 
 
+
+		/* LGE_CHANGE_S, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/ 
+
 		bl_ctrl = 0;
 		rt8542_read_reg(main_rt8542_dev->client, 0x0A, &bl_ctrl);
 		bl_ctrl |= 0x19;
 		rt8542_write_reg(main_rt8542_dev->client, 0x0A, bl_ctrl);
+
 
 
 
@@ -420,10 +453,14 @@ void rt8542_backlight_on(int level)
 
 		/*                                                                          */ 
 
+
+		/* LGE_CHANGE_E, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/ 
+
 	}	
 	
 	mdelay(1);
 	rt8542_set_main_current_level(main_rt8542_dev->client, level);
+
 
 
 
@@ -433,6 +470,9 @@ void rt8542_backlight_on(int level)
 
 
 	backlight_status |= BL_ON; /*                                                                          */ 
+
+	backlight_status |= BL_ON; /* LGE_CHANGE_E, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/ 
+
 
 
 	backlight_status |= BL_ON; /*                                                                          */ 
@@ -444,6 +484,7 @@ void rt8542_backlight_on(int level)
 void rt8542_backlight_off(void)
 {
 	int gpio = main_rt8542_dev->gpio;
+
 
 
 
@@ -463,6 +504,9 @@ void rt8542_backlight_off(void)
 
 
 	if (!(backlight_status & BL_ON))/*                                                                        */
+
+	if (!(backlight_status & BL_ON))/* LGE_CHANGE, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
+
 	{
 		return;
 	}
@@ -473,7 +517,8 @@ void rt8542_backlight_off(void)
 	}
 	saved_main_lcd_level = cur_main_lcd_level;
 	rt8542_set_main_current_level(main_rt8542_dev->client, 0);
-	backlight_status &= ~BL_ON;/*                                                                        */
+	backlight_status &= ~BL_ON;/* LGE_CHANGE, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
+
 
 	if(backlight_status == POWER_OFF)/*                                                                        */
 
@@ -482,6 +527,9 @@ void rt8542_backlight_off(void)
 
 
 
+
+
+	if(backlight_status == POWER_OFF)/* LGE_CHANGE, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
 
 	{
 		gpio_direction_output(gpio, 0);
@@ -494,6 +542,7 @@ void rt8542_backlight_off(void)
 
 
 
+
 /* LGE_CHANGE_S, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
 
 /*                                                                          */
@@ -503,6 +552,9 @@ void rt8542_backlight_off(void)
 
 
 /*                                                                          */
+
+
+/* LGE_CHANGE_S, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
 
 void rt8542_led_enable(void){
 
@@ -541,9 +593,13 @@ void rt8542_led_disable(void){
 
 
 
+
 /* LGE_CHANGE_E, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
 
 /*                                                                          */
+
+/* LGE_CHANGE_E, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
+
 
 
 /*                                                                          */
@@ -581,6 +637,7 @@ static int bl_set_intensity(struct backlight_device *bd)
 
 
 
+
 	/* LGE_CHANGE */
 
 	/*            */
@@ -590,6 +647,9 @@ static int bl_set_intensity(struct backlight_device *bd)
 
 
 	/*            */
+
+
+	/* LGE_CHANGE */
 
 	if(bd->props.brightness == cur_main_lcd_level){
 		pr_debug("%s level is already set. skip it\n", __func__);
@@ -933,6 +993,7 @@ static int rt8542_probe(struct i2c_client *i2c_dev,
 
 
 
+
 		backlight_status = POWER_OFF;/* LGE_CHANGE, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
 
 	i2c_set_clientdata(i2c_dev, dev);
@@ -943,6 +1004,9 @@ static int rt8542_probe(struct i2c_client *i2c_dev,
 
 
 		backlight_status = POWER_OFF;/*                                                                        */
+
+		backlight_status = POWER_OFF;/* LGE_CHANGE, yt.jeon@lge.com, To fix an issue of flash widget 2013-10-30*/
+
 
 	i2c_set_clientdata(i2c_dev, dev);
 

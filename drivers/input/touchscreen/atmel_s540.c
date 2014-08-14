@@ -2566,6 +2566,7 @@ error:
 }
 #endif
 
+
 #endif
 #ifdef MXT_GESTURE_RECOGNIZE
 #ifdef TSP_PATCH
@@ -2591,6 +2592,12 @@ static const u8 *UDF_on_configs_[] = {
 #endif
 int write_partial_configs(struct mxt_data *ts, const u8** configs);
 static void mxt_proc_t35_messages(struct mxt_data *data, u8 *message)
+
+#ifdef CUST_B_TOUCH
+// LGE_CHANGE_S [naomi.kim@lge.com] 13.06.18, make width minor data
+#if TOUCHEVENTFILTER
+int set_minor_data(struct mxt_data *data, int area, u8 vector)
+
 {
 	struct device *dev = &data->client->dev;
 	u8 msg;
@@ -2650,10 +2657,17 @@ int set_t93_sequence_arm(struct mxt_data *data, u8 value)
 	DO_IF(__mxt_read_reg(data->client, object->start_address, 1, &buf), error);
 	TOUCH_INFO_MSG("set_t93_sequence_arm read T%d %d %x\n", MXT_T93_NEW, 0, buf);
 
+
 	if (value) //new protocol
 		buf = (buf & T93_CTRL_AUTOARMEN) | T93_CTRL_ARMCMD;
 	else //previous protocol
 		buf = buf | T93_CTRL_DISABLE_AUTOARMEN;
+
+	return minor;
+}
+#endif
+// LGE_CHANGE_E [naomi.kim@lge.com] 13.06.18, make width minor data
+
 
 	DO_IF(__mxt_write_reg(data->client, object->start_address, 1, &buf), error);
 	TOUCH_INFO_MSG("set_t93_sequence_arm write T%d %d %x\n", MXT_T93_NEW, 0, buf);
@@ -2726,6 +2740,50 @@ static void mxt_proc_t35_messages(struct mxt_data *data, u8 *message)
 
 char *knockon_event[2] = { "TOUCH_GESTURE_WAKEUP=WAKEUP", NULL };
 
+
+
+
+		// LGE_CHANGE_S [naomi.kim@lge.com] 13.06.18, add more debugging data
+			#if TOUCHEVENTFILTER
+			dev_dbg(dev,
+				"report_data[%d] : x: %d y: %d, z: %d, M: %d, m: %d, orient: %d)\n",
+					data->ts_data.curr_data[i].id,
+					data->ts_data.curr_data[i].x_position,
+					data->ts_data.curr_data[i].y_position,
+					data->ts_data.curr_data[i].pressure,
+					data->ts_data.curr_data[i].touch_major,
+					data->ts_data.curr_data[i].touch_minor,
+					data->ts_data.curr_data[i].orientation
+			);
+			#else
+			dev_dbg(dev, "report_data[%d] : (x %d, y %d, presure %d, touch_major %d, orient %d)\n",
+					i,
+					data->ts_data.curr_data[i].x_position,
+					data->ts_data.curr_data[i].y_position,
+					data->ts_data.curr_data[i].pressure,
+					data->ts_data.curr_data[i].touch_major,
+					data->ts_data.curr_data[i].orientation
+			);
+			#endif
+			// LGE_CHANGE_E [naomi.kim@lge.com] 13.06.18, add more debugging data
+		}
+#if DEBUG_ABS
+		if (data->ts_data.curr_data[i].status == FINGER_PRESSED) {
+			tool_type = get_tool_type(data, data->ts_data.curr_data[i]);
+			dev_info(dev, "%d %s Pressed <%d> : x[%4d] y[%4d], z[%3d]\n",
+					data->ts_data.total_num, tool_type,
+					data->ts_data.curr_data[i].id,
+					data->ts_data.curr_data[i].x_position,
+					data->ts_data.curr_data[i].y_position,
+					data->ts_data.curr_data[i].pressure);
+		} else if (data->ts_data.curr_data[i].status == FINGER_RELEASED) {
+			tool_type = get_tool_type(data, data->ts_data.prev_data[i]);
+			dev_info(dev, "%s Released <%d> <%d P>\n",
+					tool_type,
+					data->ts_data.curr_data[i].id, data->ts_data.total_num);
+		}
+#endif
+	}
 
 
 
@@ -7682,7 +7740,7 @@ static void mxt_active_mode_start(struct mxt_data *data)
 	/* T8 setting */
 	mxt_change_cfg(data, data->T8_address, 2,  t8_active_mode[0]);
 	mxt_change_cfg(data, data->T8_address, 4,  t8_active_mode[1]);
-	data->anti->autocal = true; /*                                                        */
+	data->anti->autocal = true; /* hyunjee.yoon@lge.com : use auto cal for 2s after lcd on*/
 	/* T46 setting */
 	mxt_change_cfg(data, data->T46_address, 0,  t46_active_mode[0]);
 	mxt_change_cfg(data, data->T46_address, 2,  t46_active_mode[1]);

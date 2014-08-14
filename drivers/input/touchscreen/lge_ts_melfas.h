@@ -246,9 +246,13 @@ int mms_power_ctrl(struct i2c_client* client, int power_ctrl);
 
 
 
+
 #endif // LGE_TS_MELFAS_H
 
 #endif //                
+
+#endif // LGE_TS_MELFAS_H
+
 
 
 #endif //                

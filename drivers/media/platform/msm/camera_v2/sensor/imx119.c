@@ -20,6 +20,7 @@ static struct msm_sensor_ctrl_t imx119_s_ctrl;
 
 
 
+
 /* LGE_CHANGE_S, jaehan.jeong, 2013.7.30, To separate power settings depending on HW revisions, [STARTS HERE] */
 
 /*                                                                                                            */
@@ -29,6 +30,9 @@ static struct msm_sensor_ctrl_t imx119_s_ctrl;
 
 
 /*                                                                                                            */
+
+
+/* LGE_CHANGE_S, jaehan.jeong, 2013.7.30, To separate power settings depending on HW revisions, [STARTS HERE] */
 
 #if defined(CONFIG_MACH_MSM8226_G2MDS_OPEN_CIS) || defined(CONFIG_MACH_MSM8226_G2MDS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_G2M_OPEN) || defined(CONFIG_MACH_MSM8926_G2M_VDF) || defined(CONFIG_MACH_MSM8926_G2M_GLOBAL) || defined(CONFIG_MACH_MSM8926_G2M_KR) || defined(CONFIG_MACH_MSM8226_G2MSS_GLOBAL_COM)
 static struct msm_sensor_power_setting imx119_power_setting_rev_0[] = {
@@ -180,7 +184,11 @@ static struct msm_sensor_power_setting imx119_power_setting_rev_c[] = {
 
 
 
+
 #elif defined(CONFIG_MACH_MSM8926_B2L_ATT) || defined(CONFIG_MACH_MSM8926_B2LN_LGU) || defined(CONFIG_MACH_MSM8926_B2LN_SKT) || defined(CONFIG_MACH_MSM8926_B2LN_KT) || defined(CONFIG_MACH_MSM8926_X10_VZW) || defined(CONFIG_MACH_MSM8926_JAGNM_ATT) || defined(CONFIG_MACH_MSM8926_JAGNM_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_JAGDSNM_CMCC_CN)
+
+#elif defined(CONFIG_MACH_MSM8926_B1L_ATT) || defined(CONFIG_MACH_MSM8926_B1L_VZW)
+
 static struct msm_sensor_power_setting imx119_power_setting_b1l[] = {
 	 /* Set GPIO_RESET to low to disable power on reset*/
 	{
@@ -276,6 +284,9 @@ static struct msm_sensor_power_setting imx119_power_setting_w5[] = {
 	},
 
 };
+
+
+
 
 
 
@@ -382,9 +393,13 @@ static struct msm_sensor_power_setting imx119_power_setting_rev_a[] = {
 
 
 
+
 /* LGE_CHANGE_E, jaehan.jeong, 2013.7.30, To separate power settings depending on HW revisions,  [ENDS HERE] */
 
 /*                                                                                                           */
+
+/* LGE_CHANGE_E, jaehan.jeong, 2013.7.30, To separate power settings depending on HW revisions,  [ENDS HERE] */
+
 
 
 /*                                                                                                           */
@@ -454,6 +469,7 @@ static int32_t imx119_platform_probe(struct platform_device *pdev)
 
 
 
+
 #if defined(CONFIG_MACH_MSM8226_G2MDS_OPEN_CIS) || defined(CONFIG_MACH_MSM8226_G2MDS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_G2M_OPEN) || defined(CONFIG_MACH_MSM8926_G2M_VDF) || defined(CONFIG_MACH_MSM8926_G2M_GLOBAL) || defined(CONFIG_MACH_MSM8926_G2M_KR) || defined(CONFIG_MACH_MSM8226_G2MSS_GLOBAL_COM)
 
 #if defined(CONFIG_MACH_MSM8226_G2MDS_OPEN_CIS) || defined(CONFIG_MACH_MSM8226_G2MDS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_G2M_OPEN) || defined(CONFIG_MACH_MSM8926_G2M_VDF) || defined(CONFIG_MACH_MSM8926_G2M_GLOBAL) || defined(CONFIG_MACH_MSM8926_G2M_KR)
@@ -463,6 +479,9 @@ static int32_t imx119_platform_probe(struct platform_device *pdev)
 
 
 #if defined(CONFIG_MACH_MSM8226_G2MDS_OPEN_CIS) || defined(CONFIG_MACH_MSM8226_G2MDS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_G2M_OPEN) || defined(CONFIG_MACH_MSM8926_G2M_VDF) || defined(CONFIG_MACH_MSM8926_G2M_GLOBAL) || defined(CONFIG_MACH_MSM8926_G2M_KR)
+
+
+#if defined(CONFIG_MACH_MSM8226_G2MDS_OPEN_CIS) || defined(CONFIG_MACH_MSM8226_G2MDS_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_G2M_OPEN) || defined(CONFIG_MACH_MSM8926_G2M_VDF) || defined(CONFIG_MACH_MSM8926_G2M_GLOBAL) || defined(CONFIG_MACH_MSM8926_G2M_KR) || defined(CONFIG_MACH_MSM8226_G2MSS_GLOBAL_COM)
 
 static void imx119_power_setting(void)
 {
@@ -497,7 +516,11 @@ static void imx119_power_setting(void)
 
 
 
+
 #elif defined(CONFIG_MACH_MSM8926_B2L_ATT) || defined(CONFIG_MACH_MSM8926_B2LN_LGU) || defined(CONFIG_MACH_MSM8926_B2LN_SKT) || defined(CONFIG_MACH_MSM8926_B2LN_KT) || defined(CONFIG_MACH_MSM8926_X10_VZW) || defined(CONFIG_MACH_MSM8926_JAGNM_ATT) || defined(CONFIG_MACH_MSM8926_JAGNM_GLOBAL_COM) || defined(CONFIG_MACH_MSM8926_JAGDSNM_CMCC_CN)
+
+#elif defined(CONFIG_MACH_MSM8926_B1L_ATT) || defined(CONFIG_MACH_MSM8926_B1L_VZW)
+
 static void imx119_power_setting(void)
 {
 	pr_err("%s: Sensor power is set as imx119_power_setting_b1l[]\n", __func__);
@@ -511,6 +534,9 @@ static void imx119_power_setting(void)
 	imx119_s_ctrl.power_setting_array.power_setting = imx119_power_setting_w5;
 	imx119_s_ctrl.power_setting_array.size = ARRAY_SIZE(imx119_power_setting_w5);
 }
+
+
+
 
 
 
@@ -573,6 +599,7 @@ static struct msm_sensor_ctrl_t imx119_s_ctrl = {
 
 
 
+
 /* LGE_CHANGE_S, jaehan.jeong, 2013.7.30, To separate power settings depending on HW revisions, [STARTS HERE] */
 
 /*                                                                                                            */
@@ -583,10 +610,14 @@ static struct msm_sensor_ctrl_t imx119_s_ctrl = {
 
 /*                                                                                                            */
 
+
+/* LGE_CHANGE_S, jaehan.jeong, 2013.7.30, To separate power settings depending on HW revisions, [STARTS HERE] */
+
 /*
 	.power_setting_array.power_setting = imx119_power_setting,
 	.power_setting_array.size = ARRAY_SIZE(imx119_power_setting),
  */
+
 
 
 
@@ -599,6 +630,9 @@ static struct msm_sensor_ctrl_t imx119_s_ctrl = {
 
 
 /*                                                                                                           */
+
+
+/* LGE_CHANGE_E, jaehan.jeong, 2013.7.30, To separate power settings depending on HW revisions,  [ENDS HERE] */
 
 	.msm_sensor_mutex = &imx119_mut,
 	.sensor_v4l2_subdev_info = imx119_subdev_info,

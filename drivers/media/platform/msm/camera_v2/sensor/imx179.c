@@ -242,6 +242,9 @@ static struct msm_sensor_power_setting imx179_power_setting_rev_c[] = {
 
 
 
+
+
+
 static struct msm_sensor_power_setting imx179_power_setting_rev_d[] = {
 	 /* Set GPIO_RESET to low to disable power on reset*/
 	{
@@ -293,6 +296,9 @@ static struct msm_sensor_power_setting imx179_power_setting_rev_d[] = {
 		.delay = 0,
 	},
 };
+
+
+
 
 
 
@@ -523,6 +529,9 @@ static struct msm_sensor_power_setting imx179_power_setting_rev_c[] = {
 
 
 
+
+
+
 static struct msm_sensor_power_setting imx179_power_setting_rev_d[] = {
 	 /* Set GPIO_RESET to low to disable power on reset*/
 	{
@@ -581,6 +590,9 @@ static struct msm_sensor_power_setting imx179_power_setting_rev_d[] = {
 		.delay = 0,
 	},
 };
+
+
+
 
 
 
@@ -661,6 +673,7 @@ static int __init imx179_init_module(void)
 
 
 
+
 #if 1// defined(CONFIG_MACH_LGE)
 
 #if 1//                         
@@ -670,6 +683,9 @@ static int __init imx179_init_module(void)
 
 
 #if 1//                         
+
+
+#if 1// defined(CONFIG_MACH_LGE)
 
 	switch(rev_type) {
 		case HW_REV_0:
@@ -696,11 +712,15 @@ static int __init imx179_init_module(void)
 
 
 
+
+
+
 		case HW_REV_D:
 		       pr_err("%s: Sensor power is set as Rev.D\n", __func__);
 			imx179_s_ctrl.power_setting_array.power_setting = imx179_power_setting_rev_d;
 			imx179_s_ctrl.power_setting_array.size = ARRAY_SIZE(imx179_power_setting_rev_d);
 			break;
+
 		default:
 			pr_err("%s: Sensor power is set as Default mode and Rev. %d\n", __func__,rev_type);
 			imx179_s_ctrl.power_setting_array.power_setting = imx179_power_setting_rev_d;
@@ -714,12 +734,16 @@ static int __init imx179_init_module(void)
 
 
 
+
+
 		default:
 			pr_err("%s: Sensor power is set as Default mode and Rev. %d\n", __func__,rev_type);
+			imx179_s_ctrl.power_setting_array.power_setting = imx179_power_setting_rev_d;
+			imx179_s_ctrl.power_setting_array.size = ARRAY_SIZE(imx179_power_setting_rev_d);
 			break;
 	}
 #endif
-/*                                                                                                            */
+/* LGE_CHANGE_E, jaehan.jeong, 2013.7.30, To separate power settings depending on HW revisions.,  [ENDS HERE] */
 
 
 

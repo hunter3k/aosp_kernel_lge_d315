@@ -114,6 +114,7 @@ int msm_camera_get_dt_power_setting_data(struct device_node *of_node,
 
 
 
+
 			/* LGE_CHANGE_S, EEPROM ( of Camera Module ) bring-up, 2013-08-05, hyungtae.lee@lge.com */
 			else if (!strcmp(seq_name, "sensor_gpio_vio"))
 				ps[i].seq_val = SENSOR_GPIO_VIO;
@@ -133,6 +134,12 @@ int msm_camera_get_dt_power_setting_data(struct device_node *of_node,
 
 
 
+
+
+			/* LGE_CHANGE_S, EEPROM ( of Camera Module ) bring-up, 2013-08-05, hyungtae.lee@lge.com */
+			else if (!strcmp(seq_name, "sensor_gpio_vio"))
+				ps[i].seq_val = SENSOR_GPIO_VIO;
+			/* LGE_CHANGE_E, EEPROM ( of Camera Module ) bring-up, 2013-08-05, hyungtae.lee@lge.com */
 
 			else if (!strcmp(seq_name, "sensor_gpio_vdig"))
 				ps[i].seq_val = SENSOR_GPIO_VDIG;
@@ -363,6 +370,7 @@ int32_t msm_camera_init_gpio_pin_tbl(struct device_node *of_node,
 
 
 
+
 /* LGE_CHANGE_S, EEPROM ( of Camera Module ) bring-up, 2013-08-05, hyungtae.lee@lge.com */
 
 /*                                                                                      */
@@ -372,6 +380,9 @@ int32_t msm_camera_init_gpio_pin_tbl(struct device_node *of_node,
 
 
 /*                                                                                      */
+
+
+/* LGE_CHANGE_S, EEPROM ( of Camera Module ) bring-up, 2013-08-05, hyungtae.lee@lge.com */
 
 	if (of_property_read_bool(of_node, "qcom,gpio-vio") == true) {
 		rc = of_property_read_u32(of_node, "qcom,gpio-vio", &val);
@@ -392,6 +403,7 @@ int32_t msm_camera_init_gpio_pin_tbl(struct device_node *of_node,
 
 
 
+
 /* LGE_CHANGE_E, EEPROM ( of Camera Module ) bring-up, 2013-08-05, hyungtae.lee@lge.com */
 
 /*                                                                                      */
@@ -401,6 +413,9 @@ int32_t msm_camera_init_gpio_pin_tbl(struct device_node *of_node,
 
 
 /*                                                                                      */
+
+
+/* LGE_CHANGE_E, EEPROM ( of Camera Module ) bring-up, 2013-08-05, hyungtae.lee@lge.com */
 
 	return rc;
 
@@ -417,6 +432,7 @@ int msm_camera_get_dt_vreg_data(struct device_node *of_node,
 
 
 
+
 	int32_t count = 0; /* LGE_CHANGE, EEPROM bring-up, 2013-10-02, hyungtae.lee@lge.com */
 
 	int32_t count = 0; /*                                                               */
@@ -427,11 +443,15 @@ int msm_camera_get_dt_vreg_data(struct device_node *of_node,
 
 	int32_t count = 0; /*                                                               */
 
+
+	int32_t count = 0; /* LGE_CHANGE, EEPROM bring-up, 2013-10-02, hyungtae.lee@lge.com */
+
 	uint32_t *vreg_array = NULL;
 	struct camera_vreg_t *vreg = NULL;
 
 	count = of_property_count_strings(of_node, "qcom,cam-vreg-name");
 	CDBG("%s qcom,cam-vreg-name count %d\n", __func__, count);
+
 
 
 
@@ -446,6 +466,9 @@ int msm_camera_get_dt_vreg_data(struct device_node *of_node,
 
 	/*                                                                 */
 
+
+	/* LGE_CHANGE_S, EEPROM bring-up, 2013-10-02, hyungtae.lee@lge.com */
+
 	#if 0 //QCT origonal
 	if (!count)
 		return 0;
@@ -456,12 +479,16 @@ int msm_camera_get_dt_vreg_data(struct device_node *of_node,
 
 
 
+
 	/* LGE_CHANGE_E, EEPROM bring-up, 2013-10-02, hyungtae.lee@lge.com */
 
 	/*                                                                 */
 
 
 	/*                                                                 */
+
+	/* LGE_CHANGE_E, EEPROM bring-up, 2013-10-02, hyungtae.lee@lge.com */
+
 
 
 	/*                                                                 */

@@ -55,6 +55,7 @@ static struct msm_camera_i2c_reg_conf hi351_stop_settings[] = {
 
 
 
+
 static struct msm_camera_i2c_reg_conf hi351_prev_settings_in_case_of_init[2][144] = {
 	{//60hz
 //		{0x03, 0xFE, MSM_CAMERA_I2C_BYTE_DATA},
@@ -71,6 +72,9 @@ static struct msm_camera_i2c_reg_conf hi351_prev_settings_in_case_of_init[2][144
 
 
 /*                                                                                                  */
+
+/* LGE_CHANGE_E, Kernel Driver Modifying on MR2 for turning off, youngwook.song@lge.com, 2013.08.29 */
+
 /*static struct msm_camera_i2c_reg_conf hi351_sleep_settings[] = {
 	{0x03, 0x00},
 	{0x01, 0xf1},
@@ -80,7 +84,7 @@ static struct msm_camera_i2c_reg_conf hi351_prev_settings_in_case_of_init[2][144
 	{0x01, 0xf3},
 	{0x01, 0xf1},
 };*/
-/*                                                                                                  */
+/* LGE_CHANGE_E, Kernel Driver Modifying on MR2 for turning off, youngwook.song@lge.com, 2013.08.29 */
 
 static struct msm_camera_i2c_reg_conf hi351_prev_settings[2][160] = {
 	{//60hz
@@ -1122,6 +1126,7 @@ static struct msm_camera_i2c_reg_conf hi351_snap_settings[2][61] = {
 		{0x03, 0x11, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xf0, 0x00, MSM_CAMERA_I2C_BYTE_DATA}, // STEVE Dark mode for Sawtooth
 
+
 		{0x03, 0x48, MSM_CAMERA_I2C_BYTE_DATA}, //MIPI Setting
 		{0x10, 0x1C, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x16, 0x04, MSM_CAMERA_I2C_BYTE_DATA}, // non first vsync
@@ -1424,6 +1429,8 @@ static struct msm_camera_i2c_reg_conf hi351_reg_effect_old_movie[] = {
 }; /*for sepia*/
 
 
+
+
 static struct msm_camera_i2c_reg_conf hi351_reg_wb_auto[] = {
 	// need to check
 		{0x03, 0xc5},
@@ -1433,6 +1440,7 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_auto[] = {
     	{0xab, 0x14}, //aInRgTgtOfs_a01_n00
     	{0xac, 0x0a}, //aInRgTgtOfs_a02_n00
     	{0xad, 0x00}, //aInRgTgtOfs_a03_n00
+
 
 
 
@@ -1446,6 +1454,9 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_auto[] = {
 
     	{0xae, 0x81}, //aInRgTgtOfs_a04_n00
 
+
+    	{0xae, 0x00}, //aInRgTgtOfs_a04_n00
+
     	{0xaf, 0x81}, //aInRgTgtOfs_a05_n00
     	{0xb0, 0x84}, //aInRgTgtOfs_a06_n00
     	{0xb1, 0x85}, //aInRgTgtOfs_a07_n00
@@ -1458,6 +1469,7 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_auto[] = {
 
 
 
+
     	{0xb6, 0x00}, //aInBgTgtOfs_a04_n00
 
     	{0xb6, 0x81}, //aInBgTgtOfs_a04_n00
@@ -1467,6 +1479,9 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_auto[] = {
 
 
     	{0xb6, 0x81}, //aInBgTgtOfs_a04_n00
+
+
+    	{0xb6, 0x00}, //aInBgTgtOfs_a04_n00
 
     	{0xb7, 0x01}, //aInBgTgtOfs_a05_n00
     	{0xb8, 0x04}, //aInBgTgtOfs_a06_n00
@@ -1484,6 +1499,7 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_auto[] = {
 
 
 
+
     	{0xbc, 0x6c}, // steve OutBgainMax
 
     	{0xbc, 0x67}, // steve OutBgainMax
@@ -1493,6 +1509,9 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_auto[] = {
 
 
     	{0xbc, 0x67}, // steve OutBgainMax
+
+
+    	{0xbc, 0x6c}, // steve OutBgainMax
 
 	
 		{0x03, 0xc5},
@@ -1623,6 +1642,7 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_office[] = {
 
 
 
+
     	{0xae, 0x00}, //aInRgTgtOfs_a04_n00     
 
     	{0xae, 0x81}, //aInRgTgtOfs_a04_n00
@@ -1632,6 +1652,9 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_office[] = {
 
 
     	{0xae, 0x81}, //aInRgTgtOfs_a04_n00
+
+
+    	{0xae, 0x00}, //aInRgTgtOfs_a04_n00     
 
     	{0xaf, 0x81}, //aInRgTgtOfs_a05_n00
     	{0xb0, 0x84}, //aInRgTgtOfs_a06_n00
@@ -1645,6 +1668,7 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_office[] = {
 
 
 
+
     	{0xb6, 0x00}, //aInBgTgtOfs_a04_n00     
 
     	{0xb6, 0x81}, //aInBgTgtOfs_a04_n00
@@ -1654,6 +1678,9 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_office[] = {
 
 
     	{0xb6, 0x81}, //aInBgTgtOfs_a04_n00
+
+
+    	{0xb6, 0x00}, //aInBgTgtOfs_a04_n00     
 
     	{0xb7, 0x01}, //aInBgTgtOfs_a05_n00
     	{0xb8, 0x04}, //aInBgTgtOfs_a06_n00
@@ -1719,6 +1746,7 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_sunny[] = {
 
 
 
+
     	{0xae, 0x00}, //aInRgTgtOfs_a04_n00
 
     	{0xae, 0x81}, //aInRgTgtOfs_a04_n00
@@ -1728,6 +1756,9 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_sunny[] = {
 
 
     	{0xae, 0x81}, //aInRgTgtOfs_a04_n00
+
+
+    	{0xae, 0x00}, //aInRgTgtOfs_a04_n00
 
     	{0xaf, 0x81}, //aInRgTgtOfs_a05_n00
     	{0xb0, 0x84}, //aInRgTgtOfs_a06_n00
@@ -1741,6 +1772,7 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_sunny[] = {
 
 
 
+
     	{0xb6, 0x00}, //aInBgTgtOfs_a04_n00
 
     	{0xb6, 0x81}, //aInBgTgtOfs_a04_n00
@@ -1750,6 +1782,9 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_sunny[] = {
 
 
     	{0xb6, 0x81}, //aInBgTgtOfs_a04_n00
+
+
+    	{0xb6, 0x00}, //aInBgTgtOfs_a04_n00
 
     	{0xb7, 0x01}, //aInBgTgtOfs_a05_n00
     	{0xb8, 0x04}, //aInBgTgtOfs_a06_n00
@@ -1817,6 +1852,7 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_cloudy[] = {
 
 
 
+
     	{0xae, 0x00}, //aInRgTgtOfs_a04_n00  
 
     	{0xae, 0x81}, //aInRgTgtOfs_a04_n00  
@@ -1826,6 +1862,9 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_cloudy[] = {
 
 
     	{0xae, 0x81}, //aInRgTgtOfs_a04_n00  
+
+
+    	{0xae, 0x00}, //aInRgTgtOfs_a04_n00  
 
     	{0xaf, 0x81}, //aInRgTgtOfs_a05_n00  
     	{0xb0, 0x84}, //aInRgTgtOfs_a06_n00  
@@ -1839,6 +1878,7 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_cloudy[] = {
 
 
 
+
     	{0xb6, 0x00}, //aInBgTgtOfs_a04_n00  
 
     	{0xb6, 0x81}, //aInBgTgtOfs_a04_n00  
@@ -1848,6 +1888,9 @@ static struct msm_camera_i2c_reg_conf hi351_reg_wb_cloudy[] = {
 
 
     	{0xb6, 0x81}, //aInBgTgtOfs_a04_n00  
+
+
+    	{0xb6, 0x00}, //aInBgTgtOfs_a04_n00  
 
     	{0xb7, 0x01}, //aInBgTgtOfs_a05_n00  
     	{0xb8, 0x04}, //aInBgTgtOfs_a06_n00  
@@ -5548,6 +5591,7 @@ static struct msm_camera_i2c_reg_conf hi351_reg_scene_auto[2][115] = {
 
 
 
+
 		{0xbc, 0x6c}, // steve OutBgainMax
 
 		{0xbc, 0x67}, // steve OutBgainMax
@@ -5557,6 +5601,9 @@ static struct msm_camera_i2c_reg_conf hi351_reg_scene_auto[2][115] = {
 
 
 		{0xbc, 0x67}, // steve OutBgainMax
+
+
+		{0xbc, 0x6c}, // steve OutBgainMax
 
 
 		//Saturation 0
@@ -5720,6 +5767,7 @@ static struct msm_camera_i2c_reg_conf hi351_reg_scene_auto[2][115] = {
 
 
 
+
 		{0xbc, 0x6c}, // steve OutBgainMax
 
 		{0xbc, 0x67}, // steve OutBgainMax
@@ -5729,6 +5777,9 @@ static struct msm_camera_i2c_reg_conf hi351_reg_scene_auto[2][115] = {
 
 
 		{0xbc, 0x67}, // steve OutBgainMax
+
+
+		{0xbc, 0x6c}, // steve OutBgainMax
 
 
 		//Saturation 0
@@ -7208,6 +7259,7 @@ static struct msm_camera_i2c_reg_conf hi351_reg_scene_night[2][115] = {
 
 
 
+
 		{0xbc, 0x6c}, // steve OutBgainMax
 
 		{0xbc, 0x67}, // steve OutBgainMax
@@ -7217,6 +7269,9 @@ static struct msm_camera_i2c_reg_conf hi351_reg_scene_night[2][115] = {
 
 
 		{0xbc, 0x67}, // steve OutBgainMax
+
+
+		{0xbc, 0x6c}, // steve OutBgainMax
 
 
 		//Saturation 0
@@ -7373,6 +7428,7 @@ static struct msm_camera_i2c_reg_conf hi351_reg_scene_night[2][115] = {
 
 
 
+
 		{0xbc, 0x6c}, // steve OutBgainMax
 
 		{0xbc, 0x67}, // steve OutBgainMax
@@ -7382,6 +7438,9 @@ static struct msm_camera_i2c_reg_conf hi351_reg_scene_night[2][115] = {
 
 
 		{0xbc, 0x67}, // steve OutBgainMax
+
+
+		{0xbc, 0x6c}, // steve OutBgainMax
 
 
 		//Saturation 0
@@ -7450,6 +7509,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6262] = 
 	// Sunny_60hz, youngwook.song@lge.com
 
 static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = {
+
 	//                                   
 
 
@@ -7459,6 +7519,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = {
 	//                                   
+
+
+	// Sunny_60hz, youngwook.song@lge.com
 
 	{
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -7480,6 +7543,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -7490,10 +7554,14 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 	//                                
 
+
+	//LGE_CHANGE_S MR LOW Light Tuning
+
 		{0x0A, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, // MCU hardware reset
 		{0x0A, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x0A, 0x01, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x0A, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
+
 
 
 
@@ -7506,6 +7574,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		///////////////////////////////////////////
 		// 20 Page OTP/ROM LSC download select setting
@@ -8090,6 +8161,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -8099,6 +8171,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                
+
+
+	//LGE_CHANGE_S MR LOW Light Tuning
 
 		{0x03, 0x10, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x70, 0x08, MSM_CAMERA_I2C_BURST_DATA},
@@ -8134,6 +8209,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_E
 
 	//            
@@ -8143,6 +8219,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		// STEVE Luminanace level setting (Add to DMA)
 		{0x32, 0x8b, MSM_CAMERA_I2C_BYTE_DATA},
@@ -9321,6 +9400,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -9331,11 +9411,15 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 	//                                
 
+
+	//LGE_CHANGE_S MR LOW Light Tuning
+
 		{0xF0, 0x01, MSM_CAMERA_I2C_BYTE_DATA},//Pre WB gain enable Gain resolution_1x	STEVE LOW
 		{0xF1, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF2, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF3, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF4, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
+
 
 
 
@@ -9348,6 +9432,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		///////////////////////////////////////////
 		// 17 Page Gamma
@@ -9542,6 +9629,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -9551,6 +9639,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                
+
+
+	//LGE_CHANGE_S MR LOW Light Tuning
 
 		{0x03, 0xCD, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x47, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -9564,6 +9655,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_E
 
 	//            
@@ -9573,6 +9665,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		///////////////////////////////////////////
 		// 1F Page SSD
@@ -9902,6 +9997,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0xa6, 0x59, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
 
 		{0xa6, 0x5a, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
@@ -9911,6 +10007,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0xa6, 0x5a, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
+
+
+		{0xa6, 0x59, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
 
 		{0xa7, 0x69, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a05_n00
 		{0xa8, 0x6e, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a06_n00
@@ -9924,6 +10023,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0xae, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
 
 		{0xae, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
@@ -9933,6 +10033,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0xae, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
+
+
+		{0xae, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
 
 		{0xaf, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a05_n00
 		{0xb0, 0x84, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a06_n00
@@ -9946,6 +10049,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0xb6, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
 
 		{0xb6, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
@@ -9955,6 +10059,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0xb6, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
+
+
+		{0xb6, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
 
 		{0xb7, 0x01, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a05_n00
 		{0xb8, 0x04, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a06_n00
@@ -9986,6 +10093,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0xcd, 0x22, MSM_CAMERA_I2C_BURST_DATA},
 		{0xce, 0x22, MSM_CAMERA_I2C_BURST_DATA},
 
@@ -9999,6 +10107,10 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 		{0xcd, 0x55, MSM_CAMERA_I2C_BURST_DATA},
 		{0xce, 0x55, MSM_CAMERA_I2C_BURST_DATA},
+
+
+		{0xcd, 0x22, MSM_CAMERA_I2C_BURST_DATA},
+		{0xce, 0x22, MSM_CAMERA_I2C_BURST_DATA},
 
 		{0xcf, 0x00, MSM_CAMERA_I2C_BURST_DATA},
 
@@ -10145,6 +10257,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0x61, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
 		{0x62, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
 
@@ -10159,6 +10272,10 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x61, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
 		{0x62, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
 
+
+		{0x61, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
+		{0x62, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
+
 		{0x63, 0x85, MSM_CAMERA_I2C_BURST_DATA},
 		{0x64, 0x8a, MSM_CAMERA_I2C_BURST_DATA},
 		{0x65, 0x8a, MSM_CAMERA_I2C_BURST_DATA},
@@ -10166,6 +10283,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x67, 0x81, MSM_CAMERA_I2C_BURST_DATA},
 
 		{0x68, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a03_n00
+
 
 
 
@@ -10182,6 +10300,10 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 		{0x69, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
 		{0x6a, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
+
+
+		{0x69, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
+		{0x6a, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
 
 		{0x6b, 0x05, MSM_CAMERA_I2C_BURST_DATA},
 		{0x6c, 0x0a, MSM_CAMERA_I2C_BURST_DATA},
@@ -10273,6 +10395,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0xbc, 0x6c, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
 
 		{0xbc, 0x67, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
@@ -10282,6 +10405,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0xbc, 0x67, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
+
+
+		{0xbc, 0x6c, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
 
 
 		{0xbd, 0x04, MSM_CAMERA_I2C_BURST_DATA},
@@ -10413,6 +10539,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -10422,6 +10549,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                
+
+
+	//LGE_CHANGE_S MR LOW Light Tuning
 
 
 		{0x63, 0x00, MSM_CAMERA_I2C_BURST_DATA},//GMA00
@@ -10895,6 +11025,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_E
 
 	//            
@@ -10904,6 +11035,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		///////////////////////////////////////////
 		// D1 Page Adaptive CMC
@@ -11046,6 +11180,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -11055,6 +11190,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                
+
+
+	//LGE_CHANGE_S MR LOW Light Tuning
 
 		//MCMC_00
 		{0xbb, 0x80, MSM_CAMERA_I2C_BURST_DATA},//GLB_GAIN
@@ -11154,6 +11292,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0x25, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x25, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -11163,6 +11302,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0x25, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0x25, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x26, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x27, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -11194,6 +11336,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0x3f, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x3f, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -11203,6 +11346,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0x3f, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0x3f, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x40, 0x08, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x41, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -11234,6 +11380,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0x59, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x59, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -11243,6 +11390,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0x59, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0x59, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x5a, 0x0b, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x5b, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -11274,6 +11424,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0x73, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x73, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -11283,6 +11434,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0x73, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0x73, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x74, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x75, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -11314,6 +11468,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0x8d, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x8d, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -11323,6 +11478,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0x8d, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0x8d, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x8e, 0x08, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x8f, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -11354,6 +11512,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0xa7, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xa7, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -11363,6 +11522,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0xa7, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0xa7, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xa8, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xa9, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -11394,6 +11556,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0xc1, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xc1, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -11403,6 +11566,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0xc1, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0xc1, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xc2, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xc3, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -11434,6 +11600,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0xdb, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xdb, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -11443,6 +11610,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0xdb, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0xdb, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xdc, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xdd, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -11474,6 +11644,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0xf5, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xf5, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -11483,6 +11654,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0xf5, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0xf5, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xf6, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xf7, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -11620,6 +11794,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_E
 
 	//            
@@ -11629,6 +11804,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		///////////////////////////////////////////
 		// D3 Page OTP, ROM Select TH
@@ -12505,6 +12683,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -12514,6 +12693,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
@@ -12590,6 +12772,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -12599,6 +12782,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 
 		//////////////////
@@ -13179,6 +13365,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -13188,6 +13375,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
@@ -13264,6 +13454,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -13273,6 +13464,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 
 		//////////////////
@@ -13855,6 +14049,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -13864,6 +14059,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
@@ -13941,6 +14139,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -13950,6 +14149,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 
 
@@ -14535,6 +14737,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -14544,6 +14747,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
@@ -14622,6 +14828,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -14631,6 +14838,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 
 
@@ -14816,6 +15026,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	// Sunny_50hz, youngwook.song@lge.com
 
 	//                                   
@@ -14825,6 +15036,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                   
+
+
+	// Sunny_50hz, youngwook.song@lge.com
 
 	{
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -14846,6 +15060,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -14856,10 +15071,14 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 	//                                
 
+
+	//LGE_CHANGE_S MR LOW Light Tuning
+
 		{0x0A, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, // MCU hardware reset
 		{0x0A, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x0A, 0x01, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x0A, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
+
 
 
 
@@ -14872,6 +15091,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		///////////////////////////////////////////
 		// 20 Page OTP/ROM LSC download select setting
@@ -15454,6 +15676,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -15463,6 +15686,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                
+
+
+	//LGE_CHANGE_S MR LOW Light Tuning
 
 		{0x03, 0x10, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x70, 0x08, MSM_CAMERA_I2C_BURST_DATA},
@@ -15498,6 +15724,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_E
 
 	//            
@@ -15507,6 +15734,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		// STEVE Luminanace level setting (Add to DMA)
 		{0x32, 0x8b, MSM_CAMERA_I2C_BYTE_DATA},
@@ -16685,6 +16915,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -16695,11 +16926,15 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 	//                                
 
+
+	//LGE_CHANGE_S MR LOW Light Tuning
+
 		{0xF0, 0x01, MSM_CAMERA_I2C_BYTE_DATA},//Pre WB gain enable Gain resolution_1x	STEVE LOW
 		{0xF1, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF2, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF3, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF4, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
+
 
 
 
@@ -16712,6 +16947,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		///////////////////////////////////////////
 		// 17 Page Gamma
@@ -16905,6 +17143,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -16914,6 +17153,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                
+
+
+	//LGE_CHANGE_S MR LOW Light Tuning
 
 		{0x03, 0xCD, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x47, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -16927,6 +17169,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_E
 
 	//            
@@ -16936,6 +17179,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		///////////////////////////////////////////
 		// 1F Page SSD
@@ -17265,6 +17511,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0xa6, 0x59, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
 
 		{0xa6, 0x5a, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
@@ -17274,6 +17521,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0xa6, 0x5a, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
+
+
+		{0xa6, 0x59, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
 
 		{0xa7, 0x69, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a05_n00
 		{0xa8, 0x6e, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a06_n00
@@ -17287,6 +17537,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0xae, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
 
 		{0xae, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
@@ -17296,6 +17547,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0xae, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
+
+
+		{0xae, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
 
 		{0xaf, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a05_n00
 		{0xb0, 0x84, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a06_n00
@@ -17309,6 +17563,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0xb6, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
 
 		{0xb6, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
@@ -17318,6 +17573,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0xb6, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
+
+
+		{0xb6, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
 
 		{0xb7, 0x01, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a05_n00
 		{0xb8, 0x04, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a06_n00
@@ -17350,6 +17608,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0xcd, 0x22, MSM_CAMERA_I2C_BURST_DATA},
 		{0xce, 0x22, MSM_CAMERA_I2C_BURST_DATA},
 
@@ -17363,6 +17622,10 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 		{0xcd, 0x55, MSM_CAMERA_I2C_BURST_DATA},
 		{0xce, 0x55, MSM_CAMERA_I2C_BURST_DATA},
+
+
+		{0xcd, 0x22, MSM_CAMERA_I2C_BURST_DATA},
+		{0xce, 0x22, MSM_CAMERA_I2C_BURST_DATA},
 
 		{0xcf, 0x00, MSM_CAMERA_I2C_BURST_DATA},
 
@@ -17509,6 +17772,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0x61, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
 		{0x62, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
 
@@ -17523,6 +17787,10 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x61, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
 		{0x62, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
 
+
+		{0x61, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
+		{0x62, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
+
 		{0x63, 0x85, MSM_CAMERA_I2C_BURST_DATA},
 		{0x64, 0x8a, MSM_CAMERA_I2C_BURST_DATA},
 		{0x65, 0x8a, MSM_CAMERA_I2C_BURST_DATA},
@@ -17530,6 +17798,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 		{0x67, 0x81, MSM_CAMERA_I2C_BURST_DATA},
 
 		{0x68, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a03_n00
+
 
 
 
@@ -17546,6 +17815,10 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 		{0x69, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
 		{0x6a, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
+
+
+		{0x69, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
+		{0x6a, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
 
 		{0x6b, 0x05, MSM_CAMERA_I2C_BURST_DATA},
 		{0x6c, 0x0a, MSM_CAMERA_I2C_BURST_DATA},
@@ -17637,6 +17910,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0xbc, 0x6c, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
 
 		{0xbc, 0x67, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
@@ -17646,6 +17920,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0xbc, 0x67, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
+
+
+		{0xbc, 0x6c, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
 
 
 		{0xbd, 0x04, MSM_CAMERA_I2C_BURST_DATA},
@@ -17777,6 +18054,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -17786,6 +18064,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                
+
+
+	//LGE_CHANGE_S MR LOW Light Tuning
 
 
 		{0x63, 0x00, MSM_CAMERA_I2C_BURST_DATA},//GMA00
@@ -18259,6 +18540,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_E
 
 	//            
@@ -18268,6 +18550,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		///////////////////////////////////////////
 		// D1 Page Adaptive CMC
@@ -18410,6 +18695,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -18419,6 +18705,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                
+
+
+	//LGE_CHANGE_S MR LOW Light Tuning
 
 		//MCMC_00
 		{0xbb, 0x80, MSM_CAMERA_I2C_BURST_DATA},//GLB_GAIN
@@ -18518,6 +18807,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0x25, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x25, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -18527,6 +18817,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0x25, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0x25, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x26, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x27, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -18558,6 +18851,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0x3f, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x3f, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -18567,6 +18861,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0x3f, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0x3f, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x40, 0x08, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x41, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -18598,6 +18895,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0x59, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x59, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -18607,6 +18905,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0x59, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0x59, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x5a, 0x0b, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x5b, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -18638,6 +18939,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0x73, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x73, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -18647,6 +18949,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0x73, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0x73, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x74, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x75, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -18678,6 +18983,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0x8d, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x8d, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -18687,6 +18993,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0x8d, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0x8d, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x8e, 0x08, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x8f, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -18718,6 +19027,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0xa7, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xa7, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -18727,6 +19037,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0xa7, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0xa7, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xa8, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xa9, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -18758,6 +19071,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0xc1, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xc1, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -18767,6 +19081,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0xc1, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0xc1, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xc2, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xc3, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -18798,6 +19115,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0xdb, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xdb, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -18807,6 +19125,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0xdb, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0xdb, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xdc, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xdd, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -18838,6 +19159,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 		{0xf5, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xf5, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -18847,6 +19169,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 		{0xf5, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0xf5, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xf6, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xf7, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -18984,6 +19309,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_E
 
 	//            
@@ -18993,6 +19319,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		///////////////////////////////////////////
 		// D3 Page OTP, ROM Select TH
@@ -19869,6 +20198,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -19878,6 +20208,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
@@ -19954,6 +20287,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -19963,6 +20297,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 
 		//////////////////
@@ -20543,6 +20880,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -20552,6 +20890,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
@@ -20628,6 +20969,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -20637,6 +20979,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 
 		//////////////////
@@ -21219,6 +21564,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -21228,6 +21574,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
@@ -21305,6 +21654,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -21314,6 +21664,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 
 
@@ -21899,6 +22252,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -21908,6 +22262,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
@@ -21986,6 +22343,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -21995,6 +22353,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_sunny[2][6267] = 
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 
 
@@ -22195,7 +22556,11 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] = {
+
 	//                                    
+
+
+	// Cowell_60hz, youngwook.song@lge.com
 
 	{
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -22217,6 +22582,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -22227,10 +22593,14 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 	//                                
 
+
+	//LGE_CHANGE_S MR LOW Light Tuning
+
 		{0x0A, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, // MCU hardware reset
 		{0x0A, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x0A, 0x01, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x0A, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
+
 
 
 
@@ -22243,6 +22613,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		///////////////////////////////////////////
 		// 20 Page OTP/ROM LSC download select setting
@@ -22827,6 +23200,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -22836,6 +23210,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                
+
+
+	//LGE_CHANGE_S MR LOW Light Tuning
 
 		{0x03, 0x10, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x70, 0x08, MSM_CAMERA_I2C_BURST_DATA},
@@ -22871,6 +23248,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_E
 
 	//            
@@ -22880,6 +23258,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		// STEVE Luminanace level setting (Add to DMA)
 		{0x32, 0x8b, MSM_CAMERA_I2C_BYTE_DATA},
@@ -24058,6 +24439,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -24068,11 +24450,15 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 	//                                
 
+
+	//LGE_CHANGE_S MR LOW Light Tuning
+
 		{0xF0, 0x01, MSM_CAMERA_I2C_BYTE_DATA},//Pre WB gain enable Gain resolution_1x	STEVE LOW
 		{0xF1, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF2, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF3, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF4, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
+
 
 
 
@@ -24085,6 +24471,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		///////////////////////////////////////////
 		// 17 Page Gamma
@@ -24279,6 +24668,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -24288,6 +24678,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                
+
+
+	//LGE_CHANGE_S MR LOW Light Tuning
 
 		{0x03, 0xCD, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x47, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -24301,6 +24694,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_E
 
 	//            
@@ -24310,6 +24704,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		///////////////////////////////////////////
 		// 1F Page SSD
@@ -24639,6 +25036,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0xa6, 0x59, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
 
 		{0xa6, 0x5a, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
@@ -24648,6 +25046,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0xa6, 0x5a, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
+
+
+		{0xa6, 0x59, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
 
 		{0xa7, 0x69, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a05_n00
 		{0xa8, 0x6e, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a06_n00
@@ -24661,6 +25062,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0xae, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
 
 		{0xae, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
@@ -24670,6 +25072,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0xae, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
+
+
+		{0xae, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
 
 		{0xaf, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a05_n00
 		{0xb0, 0x84, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a06_n00
@@ -24683,6 +25088,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0xb6, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
 
 		{0xb6, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
@@ -24692,6 +25098,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0xb6, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
+
+
+		{0xb6, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
 
 		{0xb7, 0x01, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a05_n00
 		{0xb8, 0x04, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a06_n00
@@ -24723,6 +25132,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0xcd, 0x22, MSM_CAMERA_I2C_BURST_DATA},
 		{0xce, 0x22, MSM_CAMERA_I2C_BURST_DATA},
 
@@ -24736,6 +25146,10 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 		{0xcd, 0x55, MSM_CAMERA_I2C_BURST_DATA},
 		{0xce, 0x55, MSM_CAMERA_I2C_BURST_DATA},
+
+
+		{0xcd, 0x22, MSM_CAMERA_I2C_BURST_DATA},
+		{0xce, 0x22, MSM_CAMERA_I2C_BURST_DATA},
 
 		{0xcf, 0x00, MSM_CAMERA_I2C_BURST_DATA},
 
@@ -24882,6 +25296,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0x61, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
 		{0x62, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
 
@@ -24896,6 +25311,10 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x61, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
 		{0x62, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
 
+
+		{0x61, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
+		{0x62, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
+
 		{0x63, 0x85, MSM_CAMERA_I2C_BURST_DATA},
 		{0x64, 0x8a, MSM_CAMERA_I2C_BURST_DATA},
 		{0x65, 0x8a, MSM_CAMERA_I2C_BURST_DATA},
@@ -24903,6 +25322,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x67, 0x81, MSM_CAMERA_I2C_BURST_DATA},
 
 		{0x68, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a03_n00
+
 
 
 
@@ -24919,6 +25339,10 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 		{0x69, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
 		{0x6a, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
+
+
+		{0x69, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
+		{0x6a, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
 
 		{0x6b, 0x05, MSM_CAMERA_I2C_BURST_DATA},
 		{0x6c, 0x0a, MSM_CAMERA_I2C_BURST_DATA},
@@ -25010,6 +25434,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0xbc, 0x6c, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
 
 		{0xbc, 0x67, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
@@ -25019,6 +25444,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0xbc, 0x67, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
+
+
+		{0xbc, 0x6c, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
 
 
 		{0xbd, 0x04, MSM_CAMERA_I2C_BURST_DATA},
@@ -25150,6 +25578,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -25159,6 +25588,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                
+
+
+	//LGE_CHANGE_S MR LOW Light Tuning
 
 
 		{0x63, 0x00, MSM_CAMERA_I2C_BURST_DATA},//GMA00
@@ -25632,6 +26064,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_E
 
 	//            
@@ -25641,6 +26074,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		///////////////////////////////////////////
 		// D1 Page Adaptive CMC
@@ -25783,6 +26219,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -25792,6 +26229,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                
+
+
+	//LGE_CHANGE_S MR LOW Light Tuning
 
 		//MCMC_00
 		{0xbb, 0x80, MSM_CAMERA_I2C_BURST_DATA},//GLB_GAIN
@@ -25891,6 +26331,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0x25, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x25, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -25900,6 +26341,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0x25, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0x25, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x26, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x27, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -25931,6 +26375,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0x3f, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x3f, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -25940,6 +26385,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0x3f, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0x3f, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x40, 0x08, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x41, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -25971,6 +26419,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0x59, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x59, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -25980,6 +26429,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0x59, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0x59, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x5a, 0x0b, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x5b, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -26011,6 +26463,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0x73, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x73, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -26020,6 +26473,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0x73, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0x73, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x74, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x75, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -26051,6 +26507,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0x8d, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x8d, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -26060,6 +26517,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0x8d, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0x8d, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x8e, 0x08, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x8f, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -26091,6 +26551,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0xa7, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xa7, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -26100,6 +26561,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0xa7, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0xa7, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xa8, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xa9, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -26131,6 +26595,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0xc1, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xc1, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -26140,6 +26605,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0xc1, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0xc1, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xc2, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xc3, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -26171,6 +26639,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0xdb, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xdb, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -26180,6 +26649,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0xdb, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0xdb, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xdc, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xdd, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -26211,6 +26683,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0xf5, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xf5, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -26220,6 +26693,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0xf5, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0xf5, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xf6, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xf7, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -26357,6 +26833,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_E
 
 	//            
@@ -26366,6 +26843,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		///////////////////////////////////////////
 		// D3 Page OTP, ROM Select TH
@@ -27242,6 +27722,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -27251,6 +27732,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
@@ -27327,6 +27811,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -27336,6 +27821,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 
 		//////////////////
@@ -27916,6 +28404,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -27925,6 +28414,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
@@ -28001,6 +28493,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -28010,6 +28503,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 
 		//////////////////
@@ -28592,6 +29088,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -28601,6 +29098,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
@@ -28678,6 +29178,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -28687,6 +29188,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 
 
@@ -29272,6 +29776,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -29281,6 +29786,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
@@ -29359,6 +29867,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -29368,6 +29877,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 
 
@@ -29553,6 +30065,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	// Cowell_50hz, youngwook.song@lge.com
 
 	//                                    
@@ -29562,6 +30075,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                    
+
+
+	// Cowell_50hz, youngwook.song@lge.com
 
 	{
 		{0x03, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -29583,6 +30099,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -29593,10 +30110,14 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 	//                                
 
+
+	//LGE_CHANGE_S MR LOW Light Tuning
+
 		{0x0A, 0x01, MSM_CAMERA_I2C_BYTE_DATA}, // MCU hardware reset
 		{0x0A, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x0A, 0x01, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x0A, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
+
 
 
 
@@ -29609,6 +30130,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		///////////////////////////////////////////
 		// 20 Page OTP/ROM LSC download select setting
@@ -30191,6 +30715,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -30200,6 +30725,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                
+
+
+	//LGE_CHANGE_S MR LOW Light Tuning
 
 		{0x03, 0x10, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x70, 0x08, MSM_CAMERA_I2C_BURST_DATA},
@@ -30235,6 +30763,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_E
 
 	//            
@@ -30244,6 +30773,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		// STEVE Luminanace level setting (Add to DMA)
 		{0x32, 0x8b, MSM_CAMERA_I2C_BYTE_DATA},
@@ -31422,6 +31954,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -31432,11 +31965,15 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 	//                                
 
+
+	//LGE_CHANGE_S MR LOW Light Tuning
+
 		{0xF0, 0x01, MSM_CAMERA_I2C_BYTE_DATA},//Pre WB gain enable Gain resolution_1x	STEVE LOW
 		{0xF1, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF2, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF3, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
 		{0xF4, 0x40, MSM_CAMERA_I2C_BYTE_DATA},
+
 
 
 
@@ -31449,6 +31986,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		///////////////////////////////////////////
 		// 17 Page Gamma
@@ -31642,6 +32182,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -31651,6 +32192,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                
+
+
+	//LGE_CHANGE_S MR LOW Light Tuning
 
 		{0x03, 0xCD, MSM_CAMERA_I2C_BYTE_DATA},
 		{0x47, 0x00, MSM_CAMERA_I2C_BYTE_DATA},
@@ -31664,6 +32208,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_E
 
 	//            
@@ -31673,6 +32218,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		///////////////////////////////////////////
 		// 1F Page SSD
@@ -32002,6 +32550,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0xa6, 0x59, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
 
 		{0xa6, 0x5a, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
@@ -32011,6 +32560,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0xa6, 0x5a, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
+
+
+		{0xa6, 0x59, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a04_n00
 
 		{0xa7, 0x69, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a05_n00
 		{0xa8, 0x6e, MSM_CAMERA_I2C_BURST_DATA}, //aInTgtAngle_a06_n00
@@ -32024,6 +32576,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0xae, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
 
 		{0xae, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
@@ -32033,6 +32586,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0xae, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
+
+
+		{0xae, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a04_n00
 
 		{0xaf, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a05_n00
 		{0xb0, 0x84, MSM_CAMERA_I2C_BYTE_DATA},//aInRgTgtOfs_a06_n00
@@ -32046,6 +32602,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0xb6, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
 
 		{0xb6, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
@@ -32055,6 +32612,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0xb6, 0x81, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
+
+
+		{0xb6, 0x00, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a04_n00
 
 		{0xb7, 0x01, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a05_n00
 		{0xb8, 0x04, MSM_CAMERA_I2C_BYTE_DATA},//aInBgTgtOfs_a06_n00
@@ -32087,6 +32647,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0xcd, 0x22, MSM_CAMERA_I2C_BURST_DATA},
 		{0xce, 0x22, MSM_CAMERA_I2C_BURST_DATA},
 
@@ -32100,6 +32661,10 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 		{0xcd, 0x55, MSM_CAMERA_I2C_BURST_DATA},
 		{0xce, 0x55, MSM_CAMERA_I2C_BURST_DATA},
+
+
+		{0xcd, 0x22, MSM_CAMERA_I2C_BURST_DATA},
+		{0xce, 0x22, MSM_CAMERA_I2C_BURST_DATA},
 
 		{0xcf, 0x00, MSM_CAMERA_I2C_BURST_DATA},
 
@@ -32245,6 +32810,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0x60, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a03_n00
 		{0x61, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
 
@@ -32259,6 +32825,10 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x60, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a03_n00
 		{0x61, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
 
+
+		{0x60, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a03_n00
+		{0x61, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a04_n00  // STEVE 20120626
+
 		{0x62, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutRgTgtOfs_a05_n00
 		{0x63, 0x85, MSM_CAMERA_I2C_BURST_DATA},
 		{0x64, 0x8a, MSM_CAMERA_I2C_BURST_DATA},
@@ -32267,6 +32837,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 		{0x67, 0x81, MSM_CAMERA_I2C_BURST_DATA},
 
 		{0x68, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a03_n00
+
 
 
 
@@ -32283,6 +32854,10 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 		{0x69, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
 		{0x6a, 0x81, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
+
+
+		{0x69, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a04_n00 // STEVE 20120626
+		{0x6a, 0x00, MSM_CAMERA_I2C_BURST_DATA}, //aOutBgTgtOfs_a05_n00
 
 		{0x6b, 0x05, MSM_CAMERA_I2C_BURST_DATA},
 		{0x6c, 0x0a, MSM_CAMERA_I2C_BURST_DATA},
@@ -32374,6 +32949,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0xbc, 0x6c, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
 
 		{0xbc, 0x67, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
@@ -32383,6 +32959,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0xbc, 0x67, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
+
+
+		{0xbc, 0x6c, MSM_CAMERA_I2C_BURST_DATA}, // steve OutBgainMax
 
 
 		{0xbd, 0x04, MSM_CAMERA_I2C_BURST_DATA},
@@ -32514,6 +33093,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -32523,6 +33103,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                
+
+
+	//LGE_CHANGE_S MR LOW Light Tuning
 
 
 		{0x63, 0x00, MSM_CAMERA_I2C_BURST_DATA},//GMA00
@@ -32996,6 +33579,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_E
 
 	//            
@@ -33005,6 +33589,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		///////////////////////////////////////////
 		// D1 Page Adaptive CMC
@@ -33147,6 +33734,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_S MR LOW Light Tuning
 
 	//                                
@@ -33156,6 +33744,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                
+
+
+	//LGE_CHANGE_S MR LOW Light Tuning
 
 		//MCMC_00
 		{0xbb, 0x80, MSM_CAMERA_I2C_BURST_DATA},//GLB_GAIN
@@ -33255,6 +33846,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0x25, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x25, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -33264,6 +33856,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0x25, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0x25, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x26, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x27, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -33295,6 +33890,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0x3f, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x3f, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -33304,6 +33900,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0x3f, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0x3f, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x40, 0x08, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x41, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -33335,6 +33934,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0x59, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x59, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -33344,6 +33944,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0x59, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0x59, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x5a, 0x0b, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x5b, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -33375,6 +33978,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0x73, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x73, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -33384,6 +33988,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0x73, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0x73, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x74, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x75, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -33415,6 +34022,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0x8d, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x8d, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -33424,6 +34032,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0x8d, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0x8d, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0x8e, 0x08, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0x8f, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -33455,6 +34066,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0xa7, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xa7, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -33464,6 +34076,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0xa7, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0xa7, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xa8, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xa9, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -33495,6 +34110,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0xc1, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xc1, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -33504,6 +34120,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0xc1, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0xc1, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xc2, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xc3, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -33535,6 +34154,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0xdb, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xdb, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -33544,6 +34164,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0xdb, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0xdb, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xdc, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xdd, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -33575,6 +34198,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 		{0xf5, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xf5, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
@@ -33584,6 +34208,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 		{0xf5, 0xc0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
+
+
+		{0xf5, 0xa0, MSM_CAMERA_I2C_BURST_DATA}, //2_GAIN
 
 		{0xf6, 0x0e, MSM_CAMERA_I2C_BURST_DATA}, //2_HUE
 		{0xf7, 0x70, MSM_CAMERA_I2C_BURST_DATA}, //2_CENTER
@@ -33721,6 +34348,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_E
 
 	//            
@@ -33730,6 +34358,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//            
+
+
+	//LGE_CHANGE_E
 
 		///////////////////////////////////////////
 		// D3 Page OTP, ROM Select TH
@@ -34606,6 +35237,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -34615,6 +35247,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
@@ -34691,6 +35326,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -34700,6 +35336,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 
 		//////////////////
@@ -35280,6 +35919,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -35289,6 +35929,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
 		{0x67, 0x10, MSM_CAMERA_I2C_BURST_DATA}, //
@@ -35365,6 +36008,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -35374,6 +36018,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 
 		//////////////////
@@ -35956,6 +36603,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -35965,6 +36613,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
@@ -36042,6 +36693,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -36051,6 +36703,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 
 
@@ -36636,6 +37291,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -36645,6 +37301,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_S ADD INTO MR ver. for low light condition
 
 
 		{0x66, 0x03, MSM_CAMERA_I2C_BURST_DATA}, //page 10
@@ -36723,6 +37382,7 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 
+
 	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 	//                                                     
@@ -36732,6 +37392,9 @@ static struct msm_camera_i2c_reg_conf hi351_recommend_settings_cowell[2][6267] =
 
 
 	//                                                     
+
+
+	//LGE_CHANGE_E ADD INTO MR ver. for low light condition
 
 
 

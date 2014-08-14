@@ -72,6 +72,7 @@ enum msm_camera_i2c_data_type {
 
 
 
+
 //LGE_CHANGE_S: V3 HI351 Camera Bringup I2C speed up burst mode - hong.junki@lge.com 2012/10/05
         MSM_CAMERA_I2C_BURST_DATA,
 //LGE_CHANGE_E: V3 HI351 Camera Bringup I2C speed up burst mode - hong.junki@lge.com 2012/10/05
@@ -89,6 +90,11 @@ enum msm_camera_i2c_data_type {
 //                                                                                             
         MSM_CAMERA_I2C_BURST_DATA,
 //                                                                                             
+
+
+//LGE_CHANGE_S: V3 HI351 Camera Bringup I2C speed up burst mode - hong.junki@lge.com 2012/10/05
+        MSM_CAMERA_I2C_BURST_DATA,
+//LGE_CHANGE_E: V3 HI351 Camera Bringup I2C speed up burst mode - hong.junki@lge.com 2012/10/05
 
 	MSM_CAMERA_I2C_DATA_TYPE_MAX,
 };
@@ -270,6 +276,7 @@ struct msm_camera_i2c_reg_setting {
 
 
 
+
 	uint16_t *value;	/*LGE_CHANGE, add soc exif, 2013-10-04, kwangsik83.kim@lge.com*/
 };
 
@@ -292,6 +299,12 @@ struct msm_camera_i2c_reg_setting {
 
 /*                                                                                                                   */
 
+
+	uint16_t *value;	/*LGE_CHANGE, add soc exif, 2013-10-04, kwangsik83.kim@lge.com*/
+};
+
+/*LGE_CHANGE_E, this is for sending fps variables via Hal to Kernel as of integer, 2013-10-04, youngwook.song@lge.com*/
+
 struct msm_fps_range_setting{
    int32_t min_fps;
    int32_t max_fps;
@@ -299,9 +312,13 @@ struct msm_fps_range_setting{
 
 
 
+
 /*LGE_CHANGE_X, this is for sending fps variables via Hal to Kernel as of interger, 2013-10-04, youngwook.song@lge.com*/
 
 /*                                                                                                                    */
+
+/*LGE_CHANGE_X, this is for sending fps variables via Hal to Kernel as of interger, 2013-10-04, youngwook.song@lge.com*/
+
 
 
 /*                                                                                                                    */
@@ -501,6 +518,7 @@ enum msm_sensor_cfg_type_t {
 
 
 
+
 	CFG_PAGE_MODE_READ_I2C_ARRAY,	/*LGE_CHANGE, add soc exif, 2013-10-04, kwangsik83.kim@lge.com*/
 	CFG_SET_FRAMERATE_FOR_SOC,		/*LGE_CHANGE, add Framerate for SoC, 2013-10-27, youngwook.song@lge.com*/
 /* LGE_CHANGE_S, Enable touch AE in soc sensor , 2013-11-12, dongsu.bag@lge.com */
@@ -527,6 +545,15 @@ enum msm_sensor_cfg_type_t {
 
 
 
+
+
+	CFG_PAGE_MODE_READ_I2C_ARRAY,	/*LGE_CHANGE, add soc exif, 2013-10-04, kwangsik83.kim@lge.com*/
+	CFG_SET_FRAMERATE_FOR_SOC,		/*LGE_CHANGE, add Framerate for SoC, 2013-10-27, youngwook.song@lge.com*/
+/* LGE_CHANGE_S, Enable touch AE in soc sensor , 2013-11-12, dongsu.bag@lge.com */
+	CFG_SET_AEC_ROI,
+	CFG_SET_AWB_LOCK,
+	CFG_SET_AEC_LOCK,
+/* LGE_CHANGE_E, Enable touch AE in soc sensor , 2013-11-12, dongsu.bag@lge.com */
 
 };
 

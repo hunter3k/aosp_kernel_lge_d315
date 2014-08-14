@@ -85,6 +85,7 @@ static int __devinit vfe_probe(struct platform_device *pdev)
 
 
 
+
 /*LGE_CHANGE_E, beacuse of WBT.517790, it may casue Kernel Panic or Fatal Error with NULL of Match_dev, youngwook.song@lge.com, 2013-10-17 */
 
 /*                                                                                                                                         */
@@ -95,10 +96,14 @@ static int __devinit vfe_probe(struct platform_device *pdev)
 
 /*                                                                                                                                         */
 
+
+/*LGE_CHANGE_E, beacuse of WBT.517790, it may casue Kernel Panic or Fatal Error with NULL of Match_dev, youngwook.song@lge.com, 2013-10-17 */
+
 		if(!match_dev){
 			pr_err("%s: no match dev found\n", __func__);
 			return -EINVAL;
 		}
+
 
 
 
@@ -111,6 +116,9 @@ static int __devinit vfe_probe(struct platform_device *pdev)
 
 
 /*                                                                                                                                         */
+
+
+/*LGE_CHANGE_X, beacuse of WBT.517790, it may casue Kernel Panic or Fatal Error with NULL of Match_dev, youngwook.song@lge.com, 2013-10-17 */
 
 		vfe_dev->hw_info =
 			(struct msm_vfe_hardware_info *) match_dev->data;

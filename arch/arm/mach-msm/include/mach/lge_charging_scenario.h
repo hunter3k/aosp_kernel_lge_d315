@@ -28,6 +28,7 @@
 
 
 
+
 #ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
 
 #ifdef CONFIG_MACH_MSM8926_X5_VZW
@@ -37,6 +38,9 @@
 
 
 #ifdef CONFIG_MACH_MSM8926_X5_VZW
+
+
+#ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
 
 #define DC_IUSB_CURRENT  400
 #else
@@ -53,6 +57,9 @@ enum lge_battemp_states {
 
 
 
+
+
+
 #ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
 	CHG_BATTEMP_46_52,
 	CHG_BATTEMP_53_OT,
@@ -60,18 +67,25 @@ enum lge_battemp_states {
 	CHG_BATTEMP_46_OT,
 #endif
 
-	CHG_BATTEMP_46_OT,
-
 
 	CHG_BATTEMP_46_OT,
 
 
 	CHG_BATTEMP_46_OT,
+
+
+	CHG_BATTEMP_46_OT,
+
+
 
 	CHG_BATTEMP_AB_OT,
 
 };
 
+
+
+
+/* LGE charging states */
 
 enum lge_charging_states {
 	CHG_BATT_NORMAL_STATE,
@@ -81,6 +95,10 @@ enum lge_charging_states {
 };
 
 
+
+
+/* LGE charging states change */
+
 enum lge_states_changes {
 	STS_CHE_NONE,
 	STS_CHE_NORMAL_TO_DECCUR,
@@ -89,6 +107,12 @@ enum lge_states_changes {
 	STS_CHE_DECCUR_TO_STPCHG,
 	STS_CHE_STPCHG_TO_NORMAL,
 
+
+
+
+#ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
+	STS_CHE_STPCHG_TO_DECCUR
+#endif
 
 
 #ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
@@ -134,3 +158,8 @@ struct batt_temp_table {
 extern void
 lge_monitor_batt_temp(struct charging_info req, struct charging_rsp *res);
 #endif
+
+
+/* __LGE_CHARGING_SCENARIO_H_ */
+
+

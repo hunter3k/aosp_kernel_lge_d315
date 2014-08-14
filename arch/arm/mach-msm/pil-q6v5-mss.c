@@ -79,6 +79,7 @@ struct modem_data {
 
 
 
+
 // [START] jin.park@lge.com, SSR FEATURE
 char ssr_noti[MAX_SSR_REASON_LEN];
 // [END] jin.park@lge.com, SSR FEATURE
@@ -97,6 +98,11 @@ char ssr_noti[MAX_SSR_REASON_LEN];
 char ssr_noti[MAX_SSR_REASON_LEN];
 //                                    
 
+
+// [START] jin.park@lge.com, SSR FEATURE
+char ssr_noti[MAX_SSR_REASON_LEN];
+// [END] jin.park@lge.com, SSR FEATURE
+
 static void log_modem_sfr(void)
 {
 	u32 size;
@@ -114,6 +120,7 @@ static void log_modem_sfr(void)
 
 	strlcpy(reason, smem_reason, min(size, sizeof(reason)));
 	pr_err("modem subsystem failure reason: %s.\n", reason);
+
 
 
 
@@ -143,6 +150,11 @@ static void log_modem_sfr(void)
 //                                      
 	strlcpy(ssr_noti, smem_reason, min(size, sizeof(ssr_noti)));
 //                                    
+
+
+// [START] jin.park@lge.com, SSR FEATURE
+	strlcpy(ssr_noti, smem_reason, min(size, sizeof(ssr_noti)));
+// [END] jin.park@lge.com, SSR FEATURE
 
 	smem_reason[0] = '\0';
 	wmb();

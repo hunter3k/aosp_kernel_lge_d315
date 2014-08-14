@@ -4145,10 +4145,14 @@ static int set_battery_data(struct qpnp_bms_chip *chip)
 
 
 
+
+
+
 #ifdef CONFIG_LGE_PM_BATTERY_HITACI_2100mAh
             batt_data = &LGE_Hitaci_2040mAh_data;
 			pr_err("[BATTERY PROFILE] Using default profile - Hitaci_2100mAh for id(%d)\n",battery_id);
 #else
+
             batt_data = &LGE_Tocad_2040mAh_data;
 			pr_err("[BATTERY PROFILE] Using default profile - Tocad_2100mAh for id(%d)\n",battery_id);
 #endif
@@ -4164,6 +4168,11 @@ static int set_battery_data(struct qpnp_bms_chip *chip)
             batt_data = &LGE_Tocad_2040mAh_data;
 			pr_err("[BATTERY PROFILE] Using default profile - Tocad_2100mAh for id(%d)\n",battery_id);
 
+
+            batt_data = &LGE_Tocad_2040mAh_data;
+			pr_err("[BATTERY PROFILE] Using default profile - Tocad_2100mAh for id(%d)\n",battery_id);
+#endif
+
             break;
 		case BATT_ID_ISL6296_C : // FALL THROUGH
 		default : 
@@ -4174,23 +4183,40 @@ static int set_battery_data(struct qpnp_bms_chip *chip)
 
 
 
+
 #elif defined(CONFIG_LGE_PM_BATTERY_CAPACITY_3200mAh)
 	switch ( battery_id ){
 		case BATT_ID_ISL6296_C : // FALL THROUGH
+
+#elif defined(CONFIG_LGE_PM_BATTERY_CAPACITY_3200mAh)
+	switch ( battery_id ){
+		case BATT_ID_DS2704_N : // FALL THROUGH
+
 		case BATT_ID_DS2704_L : // FALL THROUGH
             batt_data = &LGE_BL_47TH_3200mAh_LG_Chem_data;
 			pr_err("[BATTERY PROFILE] Using default profile - LGChem_3200mAh for id(%d)\n",battery_id);
             break;
 		case BATT_ID_DS2704_C : // FALL THROUGH
+
+
+		case BATT_ID_ISL6296_N : // FALL THROUGH
+
 		case BATT_ID_ISL6296_L : // FALL THROUGH
             batt_data = &LGE_BL_47TH_3200mAh_Tocad_data;
 			pr_err("[BATTERY PROFILE] Using default profile - Tocad_3200mAh for id(%d)\n",battery_id);
             break;
+
+
+		case BATT_ID_ISL6296_C : // FALL THROUGH
+
 		default : 
             batt_data = &LGE_BL_47TH_3200mAh_LG_Chem_data;
 			pr_err("[BATTERY PROFILE] No battery ID matching\nUsing default profile - LGChem_3200mAh for id(%d)\n",battery_id);
 			break;
 	}
+
+
+
 
 
 

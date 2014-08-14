@@ -20,6 +20,7 @@
 
 
 
+
 /* For LGE charging scenario debug */
 #ifdef DEBUG_LCS
 /* For fake battery temp' debug */
@@ -42,9 +43,17 @@ static int dummy_temp = 25;
 
 
 
+
+/* For LGE charging scenario debug */
+#ifdef DEBUG_LCS
+/* For fake battery temp' debug */
+#ifdef DEBUG_LCS_DUMMY_TEMP
+static int dummy_temp = 250;
+
 static int time_order = 1;
 #endif
 #endif
+
 
 
 
@@ -72,9 +81,16 @@ static struct batt_temp_table chg_temp_table[CHG_MAXIDX] = {
 
 
 
+
+#ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
+#define CHG_MAXIDX	7
+#else
+
 #define CHG_MAXIDX	6
+#endif
 
 static struct batt_temp_table chg_temp_table[CHG_MAXIDX] = {
+
 	{INT_MIN,       -11,    CHG_BATTEMP_BL_M11},
 	{    -10,        -5,    CHG_BATTEMP_M10_M5},
 	{     -4,        41,    CHG_BATTEMP_M4_41},
@@ -88,12 +104,26 @@ static struct batt_temp_table chg_temp_table[CHG_MAXIDX] = {
 
 
 
+
+	{INT_MIN,       -101,    CHG_BATTEMP_BL_M11},	// batt_temp < -10
+	{    -100,       -50,    CHG_BATTEMP_M10_M5},	// -10 <= batt_temp <= -5
+	{     -49,       419,    CHG_BATTEMP_M4_41},	// -5 < batt_temp < 42
+	{     420,       450,    CHG_BATTEMP_42_45},	// 42 <= batt_temp <= 45
+#ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
+	{     451,       520,    CHG_BATTEMP_46_52},	// 45 < batt_temp <= 52
+	{     521,       550,    CHG_BATTEMP_53_OT},	// 52 < batt_temp <= 55
+#else
+	{     451,       550,    CHG_BATTEMP_46_OT},	// 45 < batt_temp <= 55
+#endif
+	{     551,   INT_MAX,    CHG_BATTEMP_AB_OT},	// 55 < batt_temp
+
 };
 
 static enum lge_charging_states charging_state = 0;
 static enum lge_states_changes states_change;
 static int change_charger;
 static int pseudo_chg_ui;
+static int last_pseudo_chg_ui;
 
 
 
@@ -138,6 +168,7 @@ determine_lge_charging_state(enum lge_battemp_states battemp_st, int batt_volt)
 
 
 
+
 #ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
 
 #ifdef CONFIG_MACH_MSM8926_X5_VZW
@@ -147,6 +178,9 @@ determine_lge_charging_state(enum lge_battemp_states battemp_st, int batt_volt)
 
 
 #ifdef CONFIG_MACH_MSM8926_X5_VZW
+
+
+#ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
 
 				pseudo_chg_ui = 0;
 #else
@@ -159,19 +193,25 @@ determine_lge_charging_state(enum lge_battemp_states battemp_st, int batt_volt)
 
 
 
+
+
+
 #ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
 		} else if (battemp_st == CHG_BATTEMP_46_52 || battemp_st == CHG_BATTEMP_53_OT) {
 #else
 		} else if (battemp_st == CHG_BATTEMP_46_OT) {
 #endif
 
-		} else if (battemp_st == CHG_BATTEMP_46_OT) {
-
 
 		} else if (battemp_st == CHG_BATTEMP_46_OT) {
 
 
 		} else if (battemp_st == CHG_BATTEMP_46_OT) {
+
+
+		} else if (battemp_st == CHG_BATTEMP_46_OT) {
+
+
 
 			if (batt_volt > DC_IUSB_VOLTUV) {
 				states_change = STS_CHE_NORMAL_TO_STPCHG;
@@ -192,6 +232,7 @@ determine_lge_charging_state(enum lge_battemp_states battemp_st, int batt_volt)
 
 
 
+
 #ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
 
 #ifdef CONFIG_MACH_MSM8926_X5_VZW
@@ -201,6 +242,9 @@ determine_lge_charging_state(enum lge_battemp_states battemp_st, int batt_volt)
 
 
 #ifdef CONFIG_MACH_MSM8926_X5_VZW
+
+
+#ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
 
 				pseudo_chg_ui = 0;
 #else
@@ -231,6 +275,9 @@ determine_lge_charging_state(enum lge_battemp_states battemp_st, int batt_volt)
 
 
 
+
+
+
 #ifdef CONFIG_LGE_PM_VZW_CHARGING_TEMP_SCENARIO
 		else if (battemp_st == CHG_BATTEMP_46_52 || battemp_st == CHG_BATTEMP_42_45) {
 			if (batt_volt > DC_IUSB_VOLTUV) {
@@ -250,10 +297,16 @@ determine_lge_charging_state(enum lge_battemp_states battemp_st, int batt_volt)
 
 
 
+
+
+
 		else if (battemp_st >= CHG_BATTEMP_AB_OT) {
 			pseudo_chg_ui = 0;
 			next_state = CHG_BATT_STPCHG_STATE;
 		}
+
+
+
 
 
 
@@ -264,6 +317,9 @@ determine_lge_charging_state(enum lge_battemp_states battemp_st, int batt_volt)
 			next_state = CHG_BATT_STPCHG_STATE;
 		}
 #endif
+
+
+
 
 
 
@@ -290,6 +346,7 @@ void lge_monitor_batt_temp(struct charging_info req, struct charging_rsp *res)
 
 
 
+
 		if (dummy_temp > 650)
 			time_order = 0;
 	} else {
@@ -311,6 +368,13 @@ void lge_monitor_batt_temp(struct charging_info req, struct charging_rsp *res)
 
 
 
+
+
+		if (dummy_temp > 650)
+			time_order = 0;
+	} else {
+		dummy_temp--;
+		if (dummy_temp < -150)
 
 			time_order = 1;
 	}
@@ -376,6 +440,7 @@ void lge_monitor_batt_temp(struct charging_info req, struct charging_rsp *res)
 
 
 
+
 	res->pseudo_chg_ui = pseudo_chg_ui;
 	if (last_pseudo_chg_ui ^ pseudo_chg_ui){
 		last_pseudo_chg_ui = pseudo_chg_ui;
@@ -387,9 +452,13 @@ void lge_monitor_batt_temp(struct charging_info req, struct charging_rsp *res)
 
 
 	if (res->pseudo_chg_ui ^ pseudo_chg_ui){
+
+	res->pseudo_chg_ui = pseudo_chg_ui;
+	if (last_pseudo_chg_ui ^ pseudo_chg_ui){
+		last_pseudo_chg_ui = pseudo_chg_ui;
+
 		res->force_update = true;
 	}
-	res->pseudo_chg_ui = pseudo_chg_ui;
 
 
 

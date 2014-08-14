@@ -78,6 +78,7 @@ const char *hw_platform[] = {
 
 
 
+
 /* LGE platform id */
 
 /*                 */
@@ -87,6 +88,9 @@ const char *hw_platform[] = {
 
 
 /*                 */
+
+
+/* LGE platform id */
 
 enum {
 		HW_PLATFORM_LGE_START  = 100,

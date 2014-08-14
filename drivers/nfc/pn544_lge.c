@@ -6,6 +6,7 @@
 
 
 
+
 // seokmin.hong@lge.com    header file added for removing depedency of platform and managing LGE modification
 #include "pn544_lge_hwadapter.h"
 /*  LGE_CHANGE_S, [NFC][minwoo.kwon@lge.com], 2013-03-07, NFC Bring up */
@@ -17,10 +18,13 @@
 
 
 //                                                                                                           
+
+// seokmin.hong@lge.com    header file added for removing depedency of platform and managing LGE modification
+
 #include "pn544_lge_hwadapter.h"
-/*                                                                     */
+/*  LGE_CHANGE_S, [NFC][minwoo.kwon@lge.com], 2013-03-07, NFC Bring up */
 #include <linux/of_gpio.h>
-/*                                                                     */
+/*  LGE_CHANGE_E, [NFC][minwoo.kwon@lge.com], 2013-03-07, NFC Bring up */
 
 
 
@@ -36,9 +40,13 @@
 
 
 
+
 /* LGE_CHANGE_E */
 
 /*              */
+
+/* LGE_CHANGE_E */
+
 
 
 /*              */
@@ -54,6 +62,7 @@
 
 
 
+
 // LGE_START byunggu.kang@lge.com 2013-11-11 Modify for Balanced IRQ Reg/Dereg
 #ifdef CONFIG_LGE_NFC_SET_IRQ_WAKEUP
 static bool sIrqState = false;
@@ -65,10 +74,13 @@ static bool sIrqState = false;
 
 
 //                                                                            
+
+// LGE_START byunggu.kang@lge.com 2013-11-11 Modify for Balanced IRQ Reg/Dereg
+
 #ifdef CONFIG_LGE_NFC_SET_IRQ_WAKEUP
 static bool sIrqState = false;
 #endif
-//                                                                          
+// LGE_END byunggu.kang@lge.com 2013-07-21 Modify for Balanced IRQ Reg/Dereg
 
 
 
@@ -110,6 +122,7 @@ static void pn544_disable_irq(struct pn544_dev *pn544_dev)
 
 
 
+
 // 20120831, jh.heo@lge.com Fix to irq interrupt in sleep mode.
 
 //                                                             
@@ -119,6 +132,9 @@ static void pn544_disable_irq(struct pn544_dev *pn544_dev)
 
 
 //                                                             
+
+
+// 20120831, jh.heo@lge.com Fix to irq interrupt in sleep mode.
 
 #if !defined(CONFIG_LGE_NFC_HW_QCT_MSM8660)&&!defined(CONFIG_LGE_NFC_HW_QCT_MSM8255)
 		disable_irq_wake(pn544_get_irq_pin(pn544_dev));
@@ -452,6 +468,9 @@ void pn544_factory_standby_set(void)
 
 
 
+
+
+
 #endif /* CONFIG_LGE_NFC_PN544_C2 & CONFIG_LGE_NFC_PN544_C3 */
 #endif /* CONFIG_LGE_NFC_PRESTANDBY */
 
@@ -462,6 +481,7 @@ void pn544_factory_standby_set(void)
  * in order to reduce booting time.
  * 
  * byungchul.park@lge.com 20120328
+
 
 
 
@@ -484,6 +504,8 @@ void pn544_factory_standby_set(void)
 
 
 
+
+
  */
 #if defined(CONFIG_LGE_NFC_MULTICORE_FASTBOOT)&&defined(CONFIG_LGE_NFC_PRESTANDBY)
 static int pn544_factory_standby_set_thread(void *arg)
@@ -492,6 +514,7 @@ static int pn544_factory_standby_set_thread(void *arg)
 	dprintk("%s end\n", __func__);
 	return 0;
 }
+
 
 
 
@@ -508,6 +531,10 @@ static int pn544_factory_standby_set_thread(void *arg)
 
 #endif /*                                                                                */
 /*              */
+
+#endif /* defined(CONFIG_LGE_NFC_MULTICORE_FASTBOOT)&&defined(CONFIG_LGE_NFC_PRESTANDBY) */
+/* LGE_CHANGE_E */
+
 
 
 static ssize_t pn544_dev_read(struct file *filp, char __user *buf,
@@ -542,6 +569,7 @@ static ssize_t pn544_dev_read(struct file *filp, char __user *buf,
 
 
 
+
 // 20120831, jh.heo@lge.com Fix to irq interrupt in sleep mode.
 
 //                                                             
@@ -551,6 +579,9 @@ static ssize_t pn544_dev_read(struct file *filp, char __user *buf,
 
 
 //                                                             
+
+
+// 20120831, jh.heo@lge.com Fix to irq interrupt in sleep mode.
 
 #if !defined(LGE_NFC_HW_QCT_MSM8660)
 			enable_irq_wake(pn544_get_irq_pin(pn544_dev));
@@ -825,6 +856,9 @@ static int pn544_probe(struct i2c_client *client,
 
 
 
+
+
+
 /* LGE_CHANGE_S
  *
  * do device driver initialization
@@ -837,6 +871,7 @@ static int pn544_probe(struct i2c_client *client,
 
 
 
+
 /*             
   
                                   
@@ -844,6 +879,8 @@ static int pn544_probe(struct i2c_client *client,
                                    
   
                                   
+
+
 
 
 
@@ -871,6 +908,7 @@ static int pn544_probe(struct i2c_client *client,
 
 
 
+
 /* LGE_CHANGE_E */
 
 /*              */
@@ -880,6 +918,9 @@ static int pn544_probe(struct i2c_client *client,
 
 
 /*              */
+
+
+/* LGE_CHANGE_E */
 
     }
 #endif
@@ -1011,6 +1052,7 @@ module_exit(pn544_dev_exit);
 
 
 
+
 /* LGE_CHANGE_S, [NFC][minwoo.kwon@lge.com], 2013-03-07, NFC Bring up */
 MODULE_DEVICE_TABLE(i2c, pn544_id);
 /* LGE_CHANGE_E, [NFC][minwoo.kwon@lge.com], 2013-03-07, NFC Bring up */
@@ -1028,6 +1070,11 @@ MODULE_DEVICE_TABLE(i2c, pn544_id);
 /*                                                                    */
 MODULE_DEVICE_TABLE(i2c, pn544_id);
 /*                                                                    */
+
+
+/* LGE_CHANGE_S, [NFC][minwoo.kwon@lge.com], 2013-03-07, NFC Bring up */
+MODULE_DEVICE_TABLE(i2c, pn544_id);
+/* LGE_CHANGE_E, [NFC][minwoo.kwon@lge.com], 2013-03-07, NFC Bring up */
 
 MODULE_AUTHOR("Sylvain Fonteneau");
 MODULE_DESCRIPTION("NFC PN544 driver");

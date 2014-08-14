@@ -38,6 +38,7 @@
 
 
 
+
 /* BEGIN : janghyun.baek@lge.com 2012-12-26 Temporarily change mode to 777
  * debug power sysfs node */
 
@@ -51,6 +52,10 @@
 
 /*                                                                        
                           */
+
+
+/* BEGIN : janghyun.baek@lge.com 2012-12-26 Temporarily change mode to 777
+ * debug power sysfs node */
 
 #ifdef CONFIG_LGE_PM
 #define POWER_SUPPLY_ATTR(_name)					\
@@ -70,9 +75,13 @@
 
 
 
+
 /* END : janghyun.baek@lge.com 2012-12-26 */
 
 /*                                        */
+
+/* END : janghyun.baek@lge.com 2012-12-26 */
+
 
 
 /*                                        */

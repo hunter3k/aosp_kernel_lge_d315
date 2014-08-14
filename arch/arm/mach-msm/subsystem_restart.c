@@ -857,6 +857,7 @@ int subsys_modem_restart(void)
 
 
 
+
 	ignore_errors_by_subsys_modem_restart = true; //dj.seo@lge.com , temp add
 
 	ignore_errors_by_subsys_modem_restart = true; //                         
@@ -866,6 +867,9 @@ int subsys_modem_restart(void)
 
 
 	ignore_errors_by_subsys_modem_restart = true; //                         
+
+
+	ignore_errors_by_subsys_modem_restart = true; //dj.seo@lge.com , temp add
 
 	ret = subsystem_restart_dev(dev);
 	dev->restart_level = rsl;

@@ -47,6 +47,7 @@
 
 
 
+
 /* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, Configuration bluesleep for A1 LPM */
 
 /*                                                                                            */
@@ -57,10 +58,14 @@
 
 /*                                                                                            */
 
+
+/* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, Configuration bluesleep for A1 LPM */
+
 #ifdef CONFIG_LGE_BLUESLEEP
 #include <linux/gpio.h>
 #include <linux/of_gpio.h>
 #include <linux/wakelock.h>
+
 
 
 
@@ -86,11 +91,18 @@
 #endif /*                      */
 /*                                                        */
 
+
+#else  /* CONFIG_LGE_BLUESLEEP */
+#include <mach/gpio.h>
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* LGE_CHANGE_E, [BT][younghyun.kwon@lge.com], 2013-04-10 */
+
 #include <mach/msm_serial_hs.h>
 
 #include <net/bluetooth/bluetooth.h>
 #include <net/bluetooth/hci_core.h> /* event notifications */
 #include "hci_uart.h"
+
 
 
 
@@ -105,6 +117,9 @@
 
 /*                                                                                            */
 
+
+/* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, Configuration bluesleep for A1 LPM */
+
 #ifdef CONFIG_LGE_BLUESLEEP
 #undef BT_INFO
 #define BT_INFO(fmt, arg...) printk(KERN_INFO "*[bluesleep(%d)-%s()] " fmt "\n" , __LINE__, __FUNCTION__, ## arg)
@@ -117,6 +132,7 @@
 
 
 
+
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LGE_CHANGE_E, [BT][younghyun.kwon@lge.com], 2013-04-10 */
 
@@ -126,6 +142,10 @@
 
 #endif /*                      */
 /*                                                        */
+
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* LGE_CHANGE_E, [BT][younghyun.kwon@lge.com], 2013-04-10 */
+
 
 
 #endif /*                      */
@@ -166,6 +186,7 @@ struct bluesleep_info {
 
 
 
+
 /* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, Configuration bluesleep for A1 LPM */
 #ifdef CONFIG_LGE_BLUESLEEP
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
@@ -179,9 +200,13 @@ struct bluesleep_info {
 
 
 /*                                                                                            */
+
+/* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, Configuration bluesleep for A1 LPM */
+
 #ifdef CONFIG_LGE_BLUESLEEP
-/*                                                      */
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
 	struct wake_lock wake_lock;
+
 /*                                                      */
 #endif /*                      */
 /*                                                        */
@@ -191,6 +216,11 @@ struct bluesleep_info {
 
 
 
+
+
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* LGE_CHANGE_E, [BT][younghyun.kwon@lge.com], 2013-04-10 */
 
 };
 
@@ -209,6 +239,7 @@ DECLARE_DELAYED_WORK(sleep_workqueue, bluesleep_sleep_work);
 
 
 
+
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
 
 /*                                                      */
@@ -219,10 +250,14 @@ DECLARE_DELAYED_WORK(sleep_workqueue, bluesleep_sleep_work);
 
 /*                                                      */
 
+
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
+
 #ifdef CONFIG_LGE_BLUESLEEP
 /* Fixed power consumtion problem when connected with Samsung stereo headset. */
 /* 5 second timeout */
 #define TX_TIMER_INTERVAL	5
+
 
 
 
@@ -245,10 +280,13 @@ DECLARE_DELAYED_WORK(sleep_workqueue, bluesleep_sleep_work);
 
 
 #else /*                      */
+
+#else /* CONFIG_LGE_BLUESLEEP */
+
 /* 1 second timeout */
 #define TX_TIMER_INTERVAL	1
-#endif /*                      */
-/*                                                      */
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
 
 
 /* state variable names and bit positions */
@@ -267,6 +305,7 @@ static atomic_t open_count = ATOMIC_INIT(1);
 
 
 
+
 /* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, Configuration bluesleep for A1 LPM */
 
 /*                                                                                            */
@@ -277,11 +316,15 @@ static atomic_t open_count = ATOMIC_INIT(1);
 
 /*                                                                                            */
 
+
+/* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, Configuration bluesleep for A1 LPM */
+
 #ifdef CONFIG_LGE_BLUESLEEP
 #define EDGE_RISING		0
 #define EDGE_FALLING		1
 #define LEVEL_HIGH		2
 #define LEVEL_LOW		3
+
 
 
 
@@ -325,20 +368,25 @@ static int bluesleep_hci_event(struct notifier_block *this,
 
 #endif /*                      */
 /*                                                        */
+
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* LGE_CHANGE_E, [BT][younghyun.kwon@lge.com], 2013-04-10 */
+
 /*
  * Local function prototypes
  */
-/*                                                      */
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
 #ifndef CONFIG_LGE_BLUESLEEP
 static int bluesleep_hci_event(struct notifier_block *this,
 			    unsigned long event, void *data);
-#endif /*                      */
-/*                                                      */
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
 
 
 /*
  * Global variables
  */
+
 
 
 
@@ -353,12 +401,16 @@ static int bluesleep_hci_event(struct notifier_block *this,
 
 /*                                                                                            */
 
+
+/* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, Configuration bluesleep for A1 LPM */
+
 #ifdef CONFIG_LGE_BLUESLEEP
 /** Device table */
 static struct of_device_id bluesleep_match_table[] = {
 	{ .compatible = "lge,bcm_bluesleep" },
 	{}
 };
+
 
 
 
@@ -375,6 +427,10 @@ static struct of_device_id bluesleep_match_table[] = {
 
 #endif /*                      */
 /*                                                        */
+
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* LGE_CHANGE_E, [BT][younghyun.kwon@lge.com], 2013-04-10 */
+
 
 
 /** Global state flags */
@@ -392,6 +448,7 @@ static spinlock_t rw_lock;
 
 
 
+
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
 
 /*                                                      */
@@ -402,11 +459,15 @@ static spinlock_t rw_lock;
 
 /*                                                      */
 
+
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
+
 #ifndef CONFIG_LGE_BLUESLEEP
 /** Notifier block for HCI events */
 struct notifier_block hci_event_nblock = {
 	.notifier_call = bluesleep_hci_event,
 };
+
 
 
 
@@ -423,6 +484,10 @@ struct notifier_block hci_event_nblock = {
 
 #endif /*                      */
 /*                                                      */
+
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
+
 
 
 struct proc_dir_entry *bluetooth_dir, *sleep_dir;
@@ -464,6 +529,7 @@ void bluesleep_sleep_wakeup(void)
 
 
 
+
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
 #ifdef CONFIG_LGE_BLUESLEEP
 		wake_lock(&bsi->wake_lock);
@@ -479,14 +545,17 @@ void bluesleep_sleep_wakeup(void)
 
 
 /*                                                      */
+
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
+
 #ifdef CONFIG_LGE_BLUESLEEP
 		wake_lock(&bsi->wake_lock);
-#else /*                      */
+#else /* CONFIG_LGE_BLUESLEEP */
 		/* Start the timer */
 		mod_timer(&tx_timer, jiffies + (TX_TIMER_INTERVAL * HZ));
 		gpio_set_value(bsi->ext_wake, 0);
-#endif /*                      */
-/*                                                      */
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
 
 
 
@@ -509,6 +578,7 @@ void bluesleep_sleep_wakeup(void)
 
 
 
+
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
 
 /*                                                      */
@@ -518,6 +588,9 @@ void bluesleep_sleep_wakeup(void)
 
 
 /*                                                      */
+
+
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
 
 #ifdef CONFIG_LGE_BLUESLEEP
 	else {
@@ -538,6 +611,7 @@ void bluesleep_sleep_wakeup(void)
 
 
 
+
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
 
@@ -551,6 +625,10 @@ void bluesleep_sleep_wakeup(void)
 
 #endif /*                      */
 /*                                                      */
+
+
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
 
 }
 
@@ -572,6 +650,7 @@ static void bluesleep_sleep_work(struct work_struct *work)
 
 
 
+
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
 #ifndef CONFIG_LGE_BLUESLEEP
 		if (msm_hs_tx_empty(bsi->uport)) {
@@ -583,6 +662,18 @@ static void bluesleep_sleep_work(struct work_struct *work)
 		if (msm_hs_tx_empty(bsi->uport)) {
 #endif /*                    */			
 /*                                                      */
+
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
+#ifndef CONFIG_LGE_BLUESLEEP
+		if (msm_hs_tx_empty(bsi->uport)) {
+#endif /*CONFIG_LGE_BLUESLEEP*/			
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
+			BT_DBG("going to sleep...");
+			set_bit(BT_ASLEEP, &flags);
+			/*Deactivating UART */
+			hsuart_power(0);
+
+
 
 
 /*                                                      */
@@ -628,11 +719,16 @@ static void bluesleep_sleep_work(struct work_struct *work)
 
 /*                                                      */
 #ifdef CONFIG_LGE_BLUESLEEP
+
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
+#ifdef CONFIG_LGE_BLUESLEEP
+
 			wake_lock_timeout(&bsi->wake_lock, HZ / 2);
-#endif /*                      */
-/*                                                      */
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
 #ifndef CONFIG_LGE_BLUESLEEP
 		}
+
 #endif /*                    */
 /*                                                      */
 
@@ -642,11 +738,16 @@ static void bluesleep_sleep_work(struct work_struct *work)
 
 
 
+
+#endif /*CONFIG_LGE_BLUESLEEP*/
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
+
 #ifndef CONFIG_LGE_BLUESLEEP
 		else {
 			mod_timer(&tx_timer, jiffies + (TX_TIMER_INTERVAL * HZ));
 			return;
 		}
+
 
 
 
@@ -663,6 +764,10 @@ static void bluesleep_sleep_work(struct work_struct *work)
 
 #endif /*                      */
 /*                                                      */
+
+
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
 
 	} else {
 		bluesleep_sleep_wakeup();
@@ -685,6 +790,7 @@ static void bluesleep_hostwake_task(unsigned long data)
 
 
 
+
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
 
 /*                                                      */
@@ -694,6 +800,9 @@ static void bluesleep_hostwake_task(unsigned long data)
 
 
 /*                                                      */
+
+
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
 
 #ifdef CONFIG_LGE_BLUESLEEP
 	if (gpio_get_value(bsi->host_wake) == 0) {
@@ -708,6 +817,7 @@ static void bluesleep_hostwake_task(unsigned long data)
 
 
 
+
 #else /* CONFIG_LGE_BLUESLEEP */
 
 #else /*                      */
@@ -718,10 +828,14 @@ static void bluesleep_hostwake_task(unsigned long data)
 
 #else /*                      */
 
+
+#else /* CONFIG_LGE_BLUESLEEP */
+
 	if (gpio_get_value(bsi->host_wake))
 		bluesleep_rx_busy();
 	else
 		bluesleep_rx_idle();
+
 
 
 
@@ -739,9 +853,14 @@ static void bluesleep_hostwake_task(unsigned long data)
 #endif /*                      */
 /*                                                      */
 
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
+
+
 
 	spin_unlock(&rw_lock);
 }
+
 
 
 
@@ -755,6 +874,9 @@ static void bluesleep_hostwake_task(unsigned long data)
 
 
 /*                                                      */
+
+
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
 
 #ifndef CONFIG_LGE_BLUESLEEP
 /**
@@ -820,6 +942,7 @@ static int bluesleep_hci_event(struct notifier_block *this,
 
 
 
+
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
 
@@ -833,6 +956,10 @@ static int bluesleep_hci_event(struct notifier_block *this,
 
 #endif /*                      */
 /*                                                      */
+
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
+
 
 
 /**
@@ -850,6 +977,7 @@ static void bluesleep_tx_timer_expire(unsigned long data)
 
 
 
+
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
 
 /*                                                      */
@@ -859,6 +987,9 @@ static void bluesleep_tx_timer_expire(unsigned long data)
 
 
 /*                                                      */
+
+
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
 
 #ifdef CONFIG_LGE_BLUESLEEP
 	/* already asleep, this is an error case */
@@ -872,6 +1003,7 @@ static void bluesleep_tx_timer_expire(unsigned long data)
 
 
 
+
 #else/*CONFIG_LGE_BLUESLEEP*/
 
 #else/*                    */
@@ -881,6 +1013,9 @@ static void bluesleep_tx_timer_expire(unsigned long data)
 
 
 #else/*                    */
+
+
+#else/*CONFIG_LGE_BLUESLEEP*/
 
 	/* were we silent during the last timeout? */
 	if (!test_bit(BT_TXDATA, &flags)) {
@@ -897,6 +1032,7 @@ static void bluesleep_tx_timer_expire(unsigned long data)
 
 
 
+
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
 
@@ -906,6 +1042,10 @@ static void bluesleep_tx_timer_expire(unsigned long data)
 
 #endif /*                      */
 /*                                                      */
+
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
+
 
 
 #endif /*                      */
@@ -926,6 +1066,7 @@ static irqreturn_t bluesleep_hostwake_isr(int irq, void *dev_id)
 
 
 
+
 /* BEGIN: 0019639 chanha.park@lge.com 2012-09-09 */
 
 /*                                               */
@@ -935,6 +1076,9 @@ static irqreturn_t bluesleep_hostwake_isr(int irq, void *dev_id)
 
 
 /*                                               */
+
+
+/* BEGIN: 0019639 chanha.park@lge.com 2012-09-09 */
 
 /* MOD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifdef CONFIG_LGE_BLUESLEEP
@@ -956,6 +1100,7 @@ static irqreturn_t bluesleep_hostwake_isr(int irq, void *dev_id)
 
 
 
+
 #else /* CONFIG_LGE_BLUESLEEP */
 	tasklet_schedule(&hostwake_task);
 #endif /* CONFIG_LGE_BLUESLEEP */
@@ -970,9 +1115,12 @@ static irqreturn_t bluesleep_hostwake_isr(int irq, void *dev_id)
 
 
 #else /*                      */
+
+#else /* CONFIG_LGE_BLUESLEEP */
+
 	tasklet_schedule(&hostwake_task);
-#endif /*                      */
-/*                                             */
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* END: 0019639 chanha.park@lge.com 2012-09-09 */
 
 
 
@@ -1010,6 +1158,7 @@ static int bluesleep_start(void)
 
 
 
+
 /* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
 
 /*                                               */
@@ -1020,6 +1169,9 @@ static int bluesleep_start(void)
 
 /*                                               */
 
+
+/* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
+
 /* DEL: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifndef CONFIG_LGE_BLUESLEEP
 	/* start the timer */
@@ -1027,6 +1179,7 @@ static int bluesleep_start(void)
 
 	/* assert BT_WAKE */
 	gpio_set_value(bsi->ext_wake, 0);
+
 
 
 
@@ -1039,6 +1192,10 @@ static int bluesleep_start(void)
 
 #endif /*                      */
 /*                                             */
+
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* END: 0019639 chanha.park@lge.com 2012-06-16 */
+
 
 
 #endif /*                      */
@@ -1055,6 +1212,7 @@ static int bluesleep_start(void)
 
 
 
+
 /* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
 
 /*                                               */
@@ -1065,10 +1223,14 @@ static int bluesleep_start(void)
 
 /*                                               */
 
+
+/* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
+
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifdef CONFIG_LGE_BLUESLEEP
 	BT_DBG("bluesleep_start");
 	hsuart_power(1);
+
 
 
 
@@ -1092,11 +1254,18 @@ static int bluesleep_start(void)
 
 
 
+
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* END: 0019639 chanha.park@lge.com 2012-06-16 */
+
+/* BEGIN: 0019639 chanha.park@lge.com 2012-09-09 */
+
 /* MOD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifdef CONFIG_LGE_BLUESLEEP
 	retval = request_irq(bsi->host_wake_irq, bluesleep_hostwake_isr,
 				IRQF_DISABLED | IRQF_TRIGGER_LOW,
 				"bluetooth hostwake", NULL);
+
 
 
 
@@ -1124,11 +1293,14 @@ static int bluesleep_start(void)
 
 
 #else /*                      */
+
+#else /* CONFIG_LGE_BLUESLEEP */
+
 	retval = request_irq(bsi->host_wake_irq, bluesleep_hostwake_isr,
 				IRQF_DISABLED | IRQF_TRIGGER_FALLING,
 				"bluetooth hostwake", NULL);
-#endif /*                      */
-/*                                             */
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* END: 0019639 chanha.park@lge.com 2012-09-09 */
 
 
 	if (retval  < 0) {
@@ -1144,6 +1316,7 @@ static int bluesleep_start(void)
 	}
 
 	set_bit(BT_PROTO, &flags);
+
 
 
 
@@ -1168,17 +1341,21 @@ fail:
 
 
 /*                                               */
+
+/* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
+
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifdef CONFIG_LGE_BLUESLEEP
 	wake_lock(&bsi->wake_lock);
-#endif /*                      */
-//                                           
+#endif /* CONFIG_LGE_BLUESLEEP */
+//END: 0019639 chanha.park@lge.com 2012-06-16
 	return 0;
 fail:
-/*                                               */
+/* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
 /* DEL: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifndef CONFIG_LGE_BLUESLEEP
 	del_timer(&tx_timer);
+
 #endif /*                      */
 /*                                             */
 
@@ -1187,6 +1364,10 @@ fail:
 
 
 
+
+
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* END: 0019639 chanha.park@lge.com 2012-06-16 */
 
 	atomic_inc(&open_count);
 
@@ -1199,6 +1380,7 @@ fail:
 static void bluesleep_stop(void)
 {
 	unsigned long irq_flags;
+
 
 	BT_INFO("");
 
@@ -1235,15 +1417,17 @@ static void bluesleep_stop(void)
 
 
 
-/*                                                      */
+
+
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[S] */
 #ifdef CONFIG_LGE_BLUESLEEP
 	del_timer(&tx_timer);
-#else /*                      */
+#else /* CONFIG_LGE_BLUESLEEP */
 	/* assert BT_WAKE */
 	gpio_set_value(bsi->ext_wake, 0);
 	del_timer(&tx_timer);
-#endif /*                      */
-/*                                                      */
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* LG_BTUI : chanha.park@lge.com : Enable Bluesleep-[E] */
 
 
 
@@ -1253,6 +1437,7 @@ static void bluesleep_stop(void)
 
 	if (test_bit(BT_ASLEEP, &flags)) {
 		clear_bit(BT_ASLEEP, &flags);
+
 
 
 
@@ -1306,11 +1491,19 @@ static void bluesleep_stop(void)
 /* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-12 */
 
 
+
+/* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
+/* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
+#ifndef CONFIG_LGE_BLUESLEEP
+		hsuart_power(1);
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* END: 0019639 chanha.park@lge.com 2012-06-16 */
+
 	}
-/*                                                                                            */
+/* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-12, Configuration bluesleep for A1 LPM */
 /* To avoid L2 error crash that occurs when 'msm_hs_tx_empty'is executed in clock_off state. */
 #if 0
-/*                                               */
+/* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifdef CONFIG_LGE_BLUESLEEP	
 	else
@@ -1321,10 +1514,15 @@ static void bluesleep_stop(void)
 
 
 
+
 #endif /*                    */
 /*                                             */
+
+#endif /*CONFIG_LGE_BLUESLEEP*/
+/* END: 0019639 chanha.park@lge.com 2012-06-16 */
+
 #endif
-/*                                                        */
+/* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-12 */
 
 
 
@@ -1347,6 +1545,7 @@ static void bluesleep_stop(void)
 	}
 #endif /* BT_DMA_QOS_REQUEST */
 	
+
 
 
 
@@ -1373,6 +1572,14 @@ static void bluesleep_stop(void)
 
 
 
+
+
+/* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
+/* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
+#ifdef CONFIG_LGE_BLUESLEEP
+	wake_lock_timeout(&bsi->wake_lock, HZ / 2);
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* END: 0019639 chanha.park@lge.com 2012-06-16 */
 
 }
 /**
@@ -1429,6 +1636,7 @@ static int bluepower_write_proc_btwake(struct file *file, const char *buffer,
 
 
 
+
 /* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifdef CONFIG_LGE_BLUESLEEP
@@ -1458,14 +1666,18 @@ static int bluepower_write_proc_btwake(struct file *file, const char *buffer,
 		gpio_set_value(bsi->ext_wake, 1);
 
 /*                                               */
+
+/* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
+
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifdef CONFIG_LGE_BLUESLEEP
 		bluesleep_sleep_wakeup();
-#endif /*                      */
-/*                                             */
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* END: 0019639 chanha.park@lge.com 2012-06-16 */
 	} else if (buf[0] == '1') {
 		BT_DBG("BT WAKE Set to Sleep");
 		gpio_set_value(bsi->ext_wake, 1);
+
 
 /*                                               */
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
@@ -1479,6 +1691,14 @@ static int bluepower_write_proc_btwake(struct file *file, const char *buffer,
 
 
 
+
+
+/* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
+/* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
+#ifdef CONFIG_LGE_BLUESLEEP
+		bluesleep_tx_idle();
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* END: 0019639 chanha.park@lge.com 2012-06-16 */
 
 	} else {
 		kfree(buf);
@@ -1592,6 +1812,7 @@ static int bluesleep_write_proc_proto(struct file *file, const char *buffer,
 
 
 
+
 /* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, Configuration bluesleep for A1 LPM */
 
 /*                                                                                            */
@@ -1601,6 +1822,9 @@ static int bluesleep_write_proc_proto(struct file *file, const char *buffer,
 
 
 /*                                                                                            */
+
+
+/* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, Configuration bluesleep for A1 LPM */
 
 #ifdef CONFIG_LGE_BLUESLEEP
 void bluesleep_forced_stop(void) {
@@ -1726,6 +1950,7 @@ static int __init bluesleep_probe(struct platform_device *pdev)
 
 
 
+
 /* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
 
 /*                                               */
@@ -1736,10 +1961,14 @@ static int __init bluesleep_probe(struct platform_device *pdev)
 
 /*                                               */
 
+
+/* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
+
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifdef CONFIG_LGE_BLUESLEEP
 	bsi->uport= msm_hs_get_bt_uport(BT_PORT_ID);
 	wake_lock_init(&bsi->wake_lock, WAKE_LOCK_SUSPEND, "bluesleep");
+
 
 
 
@@ -1756,6 +1985,10 @@ static int __init bluesleep_probe(struct platform_device *pdev)
 
 #endif /*                      */
 /*                                             */
+
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* END: 0019639 chanha.park@lge.com 2012-06-16 */
+
 
 
 #ifdef BT_DMA_QOS_REQUEST
@@ -1779,6 +2012,7 @@ free_bsi:
 
 
 
+
 #else /* CONFIG_LGE_BLUESLEEP */
 
 #else /*                      */
@@ -1788,6 +2022,9 @@ free_bsi:
 
 
 #else /*                      */
+
+#else /* CONFIG_LGE_BLUESLEEP */
+
 
 
 static int __init bluesleep_probe(struct platform_device *pdev)
@@ -1853,6 +2090,7 @@ free_bsi:
 
 
 
+
 #endif /* CONFIG_LGE_BLUESLEEP */
 /* LGE_CHANGE_E, [BT][younghyun.kwon@lge.com], 2013-04-10 */
 
@@ -1866,6 +2104,10 @@ free_bsi:
 
 #endif /*                      */
 /*                                                        */
+
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* LGE_CHANGE_E, [BT][younghyun.kwon@lge.com], 2013-04-10 */
+
 
 
 static int bluesleep_remove(struct platform_device *pdev)
@@ -1885,6 +2127,7 @@ static int bluesleep_remove(struct platform_device *pdev)
 
 	gpio_free(bsi->host_wake);
 	gpio_free(bsi->ext_wake);
+
 
 
 
@@ -1912,6 +2155,14 @@ static int bluesleep_remove(struct platform_device *pdev)
 
 
 
+
+/* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
+/* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
+#ifdef CONFIG_LGE_BLUESLEEP
+	wake_lock_destroy(&bsi->wake_lock);
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* END: 0019639 chanha.park@lge.com 2012-06-16 */
+
 	kfree(bsi);
 	return 0;
 }
@@ -1921,6 +2172,7 @@ static struct platform_driver bluesleep_driver = {
 	.driver = {
 		.name = "bluesleep",
 		.owner = THIS_MODULE,
+
 
 
 
@@ -1945,6 +2197,13 @@ static struct platform_driver bluesleep_driver = {
 
 
 
+
+
+/* LGE_CHANGE_S, [BT][younghyun.kwon@lge.com], 2013-04-10, Configuration bluesleep for A1 LPM */
+#ifdef CONFIG_LGE_BLUESLEEP
+		.of_match_table = bluesleep_match_table,
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* LGE_CHANGE_E, [BT][younghyun.kwon@lge.com], 2013-04-10 */
 
 	},
 };
@@ -2031,6 +2290,7 @@ static int __init bluesleep_init(void)
 
 
 
+
 /* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifndef CONFIG_LGE_BLUESLEEP
@@ -2052,11 +2312,14 @@ static int __init bluesleep_init(void)
 
 
 /*                                               */
+
+/* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
+
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifndef CONFIG_LGE_BLUESLEEP
 	hci_register_notifier(&hci_event_nblock);
-#endif /*                      */
-/*                                             */
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* END: 0019639 chanha.park@lge.com 2012-06-16 */
 
 
 	return 0;
@@ -2081,6 +2344,7 @@ static void __exit bluesleep_exit(void)
 
 
 
+
 /* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
 /* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
 #ifndef CONFIG_LGE_BLUESLEEP
@@ -2104,6 +2368,14 @@ static void __exit bluesleep_exit(void)
 
 
 
+
+
+/* BEGIN: 0019639 chanha.park@lge.com 2012-06-16 */
+/* ADD: 0019639: [F200][BT] Support Bluetooth low power mode */
+#ifndef CONFIG_LGE_BLUESLEEP
+	hci_unregister_notifier(&hci_event_nblock);
+#endif /* CONFIG_LGE_BLUESLEEP */
+/* END: 0019639 chanha.park@lge.com 2012-06-16 */
 
 	platform_driver_unregister(&bluesleep_driver);
 

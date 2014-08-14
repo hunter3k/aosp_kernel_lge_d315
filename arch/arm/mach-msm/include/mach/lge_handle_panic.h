@@ -15,6 +15,7 @@
 
 
 
+
 /* LGE reboot reason for crash handler */
 
 /*                                     */
@@ -24,6 +25,9 @@
 
 
 /*                                     */
+
+
+/* LGE reboot reason for crash handler */
 
 #define LGE_RB_MAGIC    0x6D630000
 

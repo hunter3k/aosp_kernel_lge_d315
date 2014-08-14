@@ -66,6 +66,9 @@
 
 
 
+
+
+
 /* Change History
  *
  * 1.0.0	Funcamental Functions of APDS-9130
@@ -79,6 +82,7 @@
 
 
 
+
 /*               
   
                                            
@@ -87,6 +91,8 @@
                                               
                                                          
   
+
+
 
 
 
@@ -291,6 +297,7 @@ struct apds9130_data {
 
 
 
+
 	int ps_cal_result;  //[LGSI_SP4_BSP][kirankumar.vm@lge.com] Proximity Testmode changes
 
 	int ps_cal_result;  //                                                                
@@ -300,6 +307,9 @@ struct apds9130_data {
 
 
 	int ps_cal_result;  //                                                                
+
+
+	int ps_cal_result;  //[LGSI_SP4_BSP][kirankumar.vm@lge.com] Proximity Testmode changes
 
 #endif
 
@@ -566,6 +576,7 @@ static ssize_t apds9130_show_run_calibration(struct device *dev,
 
 
 
+
 	return sprintf(buf, "%d\n", data->ps_cal_result); //[LGSI_SP4_BSP][kirankumar.vm@lge.com] Proximity Testmode changes
 
 	return sprintf(buf, "%d\n", data->ps_cal_result); //                                                                
@@ -575,6 +586,9 @@ static ssize_t apds9130_show_run_calibration(struct device *dev,
 
 
 	return sprintf(buf, "%d\n", data->ps_cal_result); //                                                                
+
+
+	return sprintf(buf, "%d\n", data->ps_cal_result); //[LGSI_SP4_BSP][kirankumar.vm@lge.com] Proximity Testmode changes
 
 }
 
@@ -1019,6 +1033,7 @@ static int apds9130_enable_ps_sensor(struct i2c_client *client, int val)
 
 
 
+
 			apds9130_set_piht(client, data->ps_threshold); //[LGSI_SP4_BSP][kirankumar.vm@lge.com] add calibrated threshold
 			
 			//[LGSI_SP4_BSP_BEGIN][kirankumar.vm@lge.com] Report the Far Detection evertytime when u enable the sensor 07-11-2012
@@ -1031,10 +1046,14 @@ static int apds9130_enable_ps_sensor(struct i2c_client *client, int val)
 
 
 			apds9130_set_piht(client, data->ps_threshold); //                                                              
+
+			apds9130_set_piht(client, data->ps_threshold); //[LGSI_SP4_BSP][kirankumar.vm@lge.com] add calibrated threshold
+
 			
-			//                                                                                                                   
+			//[LGSI_SP4_BSP_BEGIN][kirankumar.vm@lge.com] Report the Far Detection evertytime when u enable the sensor 07-11-2012
 			input_report_abs(data->input_dev_ps, ABS_DISTANCE, PROX_INPUT_FAR);/* NEAR-to-FAR detection */
 			input_sync(data->input_dev_ps);
+
 			//                                                                                                      
 
 
@@ -1042,6 +1061,9 @@ static int apds9130_enable_ps_sensor(struct i2c_client *client, int val)
 
 
 
+
+
+			//[LGSI_SP4_BSP_END][kirankumar.vm@lge.com] Report the Far Detection evertytime when u enable the sensor
 
 			
 			err = apds9130_set_enable(client, 0x2D);	 /* enable PS interrupt */
@@ -1239,6 +1261,7 @@ static DEVICE_ATTR(ppcount, S_IWUSR | S_IRUGO, apds9130_show_ppcount, apds9130_s
 
 
 
+
 //[LGSI_SP4_BSP_END][kirankumar.vm@lge.com] 31-10-2012 Added sys Fs entry for PPcount
 
 //                                                                                   
@@ -1248,6 +1271,9 @@ static DEVICE_ATTR(ppcount, S_IWUSR | S_IRUGO, apds9130_show_ppcount, apds9130_s
 
 
 //                                                                                   
+
+
+//[LGSI_SP4_BSP_END][kirankumar.vm@lge.com] 31-10-2012 Added sys Fs entry for PPcount
 
 #if defined(APDS9130_PROXIMITY_CAL)
 static ssize_t apds9130_show_control(struct device *dev, struct device_attribute *attr, char *buf)
@@ -1285,6 +1311,7 @@ static DEVICE_ATTR(control,  S_IWUSR | S_IRUGO , apds9130_show_control, apds9130
 
 
 
+
 //[LGSI_SP4_BSP_BEGIN][kirankumar.vm@lge.com] Added Sys Fs access to show proximity status for Testmode
 
 //                                                                                                     
@@ -1294,6 +1321,9 @@ static DEVICE_ATTR(control,  S_IWUSR | S_IRUGO , apds9130_show_control, apds9130
 
 
 //                                                                                                     
+
+
+//[LGSI_SP4_BSP_BEGIN][kirankumar.vm@lge.com] Added Sys Fs access to show proximity status for Testmode
 
 static ssize_t apds9130_show_show(struct device *dev, struct device_attribute *attr, char *buf)
 {
@@ -1316,12 +1346,16 @@ static DEVICE_ATTR(value, S_IWUSR | S_IRUGO , apds9130_show_show, NULL);
 
 
 
+
 //[LGSI_SP4_BSP_END][kirankumar.vm@lge.com]
 
 //                                         
 
 
 //                                         
+
+//[LGSI_SP4_BSP_END][kirankumar.vm@lge.com]
+
 
 
 //                                         
@@ -1510,6 +1544,7 @@ static struct attribute *apds9130_attributes[] = {
 
 
 
+
 	&dev_attr_value.attr, //[LGSI_SP4_BSP][kirankumar.vm@lge.com] Added Sys Fs access to show proximity status for Testmode
 	&dev_attr_ppcount.attr,
 	&dev_attr_pdrive.attr,/*[LGE_BSP][yunmo.yang@lge.com]add pDrive sysfs Entry*/
@@ -1527,6 +1562,11 @@ static struct attribute *apds9130_attributes[] = {
 	&dev_attr_value.attr, //                                                                                               
 	&dev_attr_ppcount.attr,
 	&dev_attr_pdrive.attr,/*                                                   */
+
+
+	&dev_attr_value.attr, //[LGSI_SP4_BSP][kirankumar.vm@lge.com] Added Sys Fs access to show proximity status for Testmode
+	&dev_attr_ppcount.attr,
+	&dev_attr_pdrive.attr,/*[LGE_BSP][yunmo.yang@lge.com]add pDrive sysfs Entry*/
 
 	&dev_attr_pilt.attr,
 	&dev_attr_piht.attr,
@@ -1598,6 +1638,9 @@ static int apds9130_init_client(struct i2c_client *client)
 
 
 
+
+
+
 /* Temp block the below code as no need to set cross talk threshold during proximity OFF state [LGSI_SP4_BSP][kirankumar.vm@lge.com]
 #if defined(APDS9130_PROXIMITY_CAL)
 	err = apds9130_set_enable(client,0);
@@ -1611,6 +1654,7 @@ static int apds9130_init_client(struct i2c_client *client)
 
 
 
+
 /*                                                                                                                                  
                                    
                                      
@@ -1619,6 +1663,8 @@ static int apds9130_init_client(struct i2c_client *client)
              
   
       
+
+
 
 
 

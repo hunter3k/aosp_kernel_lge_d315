@@ -61,10 +61,14 @@ static irqreturn_t earjack_debugger_irq_handler(int irq, void *_dev)
 
 
 
+
+
+
 	/* LGE_CHANGE_S
 	 * add debounce time because accure earjack popup noise
 	 * sangwoo2.park@lge.com 2012/12/20
 	 */
+
 	msleep(400);
 	/* LGE_CHANGE_E */
 
@@ -76,8 +80,10 @@ static irqreturn_t earjack_debugger_irq_handler(int irq, void *_dev)
                                                         
                                     
   */
+
+
 	msleep(400);
-	/*              */
+	/* LGE_CHANGE_E */
 
 
 
